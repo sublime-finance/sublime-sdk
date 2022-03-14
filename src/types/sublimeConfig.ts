@@ -19,4 +19,6 @@ export interface SublimeConfig {
   creditLineEthHelperAddress?: string;
   poolUtilsAddress?: string;
   savingsAccountEthUtilsAddress?: string;
+  lenderPoolAddress: string;
+  pooledCreditLineAddress: string;
 }

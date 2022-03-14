@@ -24,16 +24,21 @@ interface CreditLineActorInterface extends ethers.utils.Interface {
     'acceptRequest(address,uint256)': FunctionFragment;
     'addCollateral(address,uint256,uint256,bool)': FunctionFragment;
     'borrow(address,uint256,uint256)': FunctionFragment;
+    'cancelRequest(address,uint256)': FunctionFragment;
     'close(address,uint256)': FunctionFragment;
     'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,bool)': FunctionFragment;
     'liquidate(address,uint256,bool)': FunctionFragment;
     'repay(address,uint256,uint256)': FunctionFragment;
+    'savingsAccountDeposit(address,address,address,address,uint256)': FunctionFragment;
+    'setAllowance(address,address,uint256)': FunctionFragment;
+    'setAllowanceForSavingsAccount(address,address,address,uint256)': FunctionFragment;
     'withdrawCollateral(address,uint256,uint256,bool)': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'acceptRequest', values: [string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'addCollateral', values: [string, BigNumberish, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'borrow', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'cancelRequest', values: [string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'close', values: [string, BigNumberish]): string;
   encodeFunctionData(
     functionFragment: 'createRequest',
@@ -41,15 +46,22 @@ interface CreditLineActorInterface extends ethers.utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: 'liquidate', values: [string, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'repay', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'savingsAccountDeposit', values: [string, string, string, string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'setAllowance', values: [string, string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'setAllowanceForSavingsAccount', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'withdrawCollateral', values: [string, BigNumberish, BigNumberish, boolean]): string;
 
   decodeFunctionResult(functionFragment: 'acceptRequest', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'addCollateral', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'borrow', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'cancelRequest', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'close', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createRequest', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'liquidate', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'repay', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'savingsAccountDeposit', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setAllowance', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setAllowanceForSavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawCollateral', data: BytesLike): Result;
 
   events: {};
@@ -141,6 +153,18 @@ export class CreditLineActor extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    cancelRequest(
+      creditLineAddress: string,
+      id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'cancelRequest(address,uint256)'(
+      creditLineAddress: string,
+      id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     close(
       creditLineAddress: string,
       id: BigNumberish,
@@ -209,6 +233,54 @@ export class CreditLineActor extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    savingsAccountDeposit(
+      savingsAccount: string,
+      token: string,
+      strategy: string,
+      to: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'savingsAccountDeposit(address,address,address,address,uint256)'(
+      savingsAccount: string,
+      token: string,
+      strategy: string,
+      to: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    setAllowance(
+      spender: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'setAllowance(address,address,uint256)'(
+      spender: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    setAllowanceForSavingsAccount(
+      savingsAccount: string,
+      token: string,
+      spender: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'setAllowanceForSavingsAccount(address,address,address,uint256)'(
+      savingsAccount: string,
+      token: string,
+      spender: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     withdrawCollateral(
       creditLineAddress: string,
       id: BigNumberish,
@@ -265,6 +337,18 @@ export class CreditLineActor extends Contract {
     creditLineAddress: string,
     id: BigNumberish,
     amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  cancelRequest(
+    creditLineAddress: string,
+    id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'cancelRequest(address,uint256)'(
+    creditLineAddress: string,
+    id: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -336,6 +420,54 @@ export class CreditLineActor extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  savingsAccountDeposit(
+    savingsAccount: string,
+    token: string,
+    strategy: string,
+    to: string,
+    amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'savingsAccountDeposit(address,address,address,address,uint256)'(
+    savingsAccount: string,
+    token: string,
+    strategy: string,
+    to: string,
+    amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  setAllowance(
+    spender: string,
+    token: string,
+    amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'setAllowance(address,address,uint256)'(
+    spender: string,
+    token: string,
+    amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  setAllowanceForSavingsAccount(
+    savingsAccount: string,
+    token: string,
+    spender: string,
+    amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'setAllowanceForSavingsAccount(address,address,address,uint256)'(
+    savingsAccount: string,
+    token: string,
+    spender: string,
+    amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   withdrawCollateral(
     creditLineAddress: string,
     id: BigNumberish,
@@ -382,6 +514,10 @@ export class CreditLineActor extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
+    cancelRequest(creditLineAddress: string, id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'cancelRequest(address,uint256)'(creditLineAddress: string, id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
     close(creditLineAddress: string, id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'close(address,uint256)'(creditLineAddress: string, id: BigNumberish, overrides?: CallOverrides): Promise<void>;
@@ -398,7 +534,7 @@ export class CreditLineActor extends Contract {
       collateralStrategy: string,
       requestAsLender: boolean,
       overrides?: CallOverrides
-    ): Promise<void>;
+    ): Promise<BigNumber>;
 
     'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,bool)'(
       creditLineAddress: string,
@@ -412,7 +548,7 @@ export class CreditLineActor extends Contract {
       collateralStrategy: string,
       requestAsLender: boolean,
       overrides?: CallOverrides
-    ): Promise<void>;
+    ): Promise<BigNumber>;
 
     liquidate(creditLineAddress: string, id: BigNumberish, toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
@@ -428,6 +564,44 @@ export class CreditLineActor extends Contract {
     'repay(address,uint256,uint256)'(
       creditLineAddress: string,
       id: BigNumberish,
+      amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    savingsAccountDeposit(
+      savingsAccount: string,
+      token: string,
+      strategy: string,
+      to: string,
+      amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'savingsAccountDeposit(address,address,address,address,uint256)'(
+      savingsAccount: string,
+      token: string,
+      strategy: string,
+      to: string,
+      amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    setAllowance(spender: string, token: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'setAllowance(address,address,uint256)'(spender: string, token: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    setAllowanceForSavingsAccount(
+      savingsAccount: string,
+      token: string,
+      spender: string,
+      amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'setAllowanceForSavingsAccount(address,address,address,uint256)'(
+      savingsAccount: string,
+      token: string,
+      spender: string,
       amount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
@@ -491,6 +665,18 @@ export class CreditLineActor extends Contract {
       creditLineAddress: string,
       id: BigNumberish,
       amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    cancelRequest(
+      creditLineAddress: string,
+      id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'cancelRequest(address,uint256)'(
+      creditLineAddress: string,
+      id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -558,6 +744,54 @@ export class CreditLineActor extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
+    savingsAccountDeposit(
+      savingsAccount: string,
+      token: string,
+      strategy: string,
+      to: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'savingsAccountDeposit(address,address,address,address,uint256)'(
+      savingsAccount: string,
+      token: string,
+      strategy: string,
+      to: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    setAllowance(
+      spender: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'setAllowance(address,address,uint256)'(
+      spender: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    setAllowanceForSavingsAccount(
+      savingsAccount: string,
+      token: string,
+      spender: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'setAllowanceForSavingsAccount(address,address,address,uint256)'(
+      savingsAccount: string,
+      token: string,
+      spender: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     withdrawCollateral(
       creditLineAddress: string,
       id: BigNumberish,
@@ -615,6 +849,18 @@ export class CreditLineActor extends Contract {
       creditLineAddress: string,
       id: BigNumberish,
       amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    cancelRequest(
+      creditLineAddress: string,
+      id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'cancelRequest(address,uint256)'(
+      creditLineAddress: string,
+      id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -682,6 +928,54 @@ export class CreditLineActor extends Contract {
     'repay(address,uint256,uint256)'(
       creditLineAddress: string,
       id: BigNumberish,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    savingsAccountDeposit(
+      savingsAccount: string,
+      token: string,
+      strategy: string,
+      to: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'savingsAccountDeposit(address,address,address,address,uint256)'(
+      savingsAccount: string,
+      token: string,
+      strategy: string,
+      to: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    setAllowance(
+      spender: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'setAllowance(address,address,uint256)'(
+      spender: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    setAllowanceForSavingsAccount(
+      savingsAccount: string,
+      token: string,
+      spender: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'setAllowanceForSavingsAccount(address,address,address,uint256)'(
+      savingsAccount: string,
+      token: string,
+      spender: string,
       amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;

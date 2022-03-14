@@ -9,6 +9,15 @@ export interface Asset {
   pricePerAssetInUSD: string;
 }
 
+export enum CreditLineStatus {
+  NOT_CREATED,
+  REQUESTED,
+  ACTIVE,
+  CLOSED,
+  EXPIRED,
+  LIQUIDATED,
+}
+
 export enum StrategyType {
   NoYield = 'NoYield',
   CompounYield = 'CompoundYield',

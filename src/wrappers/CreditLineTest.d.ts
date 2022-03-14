@@ -39,7 +39,6 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
     'createPoolLenders()': FunctionFragment;
     'createPoolLiquidator()': FunctionFragment;
     'createVerifier()': FunctionFragment;
-    'create_creditLineReqeuest()': FunctionFragment;
     'deployCompoundYield()': FunctionFragment;
     'deployCreditLines()': FunctionFragment;
     'deployNoYield()': FunctionFragment;
@@ -55,14 +54,57 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
     'restrictToRange(uint256,uint256,uint256)': FunctionFragment;
     'setUp()': FunctionFragment;
     'setUpLenderPools()': FunctionFragment;
-    'testFail_invalidBorrower_1()': FunctionFragment;
-    'testFail_invalidBorrower_2()': FunctionFragment;
-    'testFail_invalidCollateralRatio()': FunctionFragment;
-    'testFail_invalidLender_1()': FunctionFragment;
-    'testFail_invalidLender_2()': FunctionFragment;
-    'test_mint()': FunctionFragment;
-    'test_validRequest_asBorrower()': FunctionFragment;
-    'test_validRequest_asLender()': FunctionFragment;
+    'test_CreditLine_UpdateDefaultStrategy()': FunctionFragment;
+    'test_CreditLine_updatePriceOracle()': FunctionFragment;
+    'test_UpdateDefaultStrategy_InvalidActor()': FunctionFragment;
+    'test_UpdateDefaultStrategy_SameAddress()': FunctionFragment;
+    'test_UpdateDefaultStrategy_zeroAddress()': FunctionFragment;
+    'test_creditLineUpdateLiquidatorRewardFraction()': FunctionFragment;
+    'test_creditLineUpdateProtocolFeeCollector()': FunctionFragment;
+    'test_creditLineUpdateProtocolFeeFraction()': FunctionFragment;
+    'test_creditLineUpdateSavingsAccount()': FunctionFragment;
+    'test_creditLineUpdateStrategyRegistry()': FunctionFragment;
+    'test_creditLineupdateBorrowLimitLimits()': FunctionFragment;
+    'test_creditLineupdateBorrowRateLimits()': FunctionFragment;
+    'test_creditLineupdateIdealCollateralRatioLimits()': FunctionFragment;
+    'test_updateBorrowLimitLimits_InvalidActor()': FunctionFragment;
+    'test_updateBorrowLimitLimits_MaxMin()': FunctionFragment;
+    'test_updateBorrowLimitLimits_SameLimits()': FunctionFragment;
+    'test_updateBorrowLimitLimits_SameMax()': FunctionFragment;
+    'test_updateBorrowLimitLimits_SameMin()': FunctionFragment;
+    'test_updateBorrowLimitLimits_zero()': FunctionFragment;
+    'test_updateBorrowRateLimits_InvalidActor()': FunctionFragment;
+    'test_updateBorrowRateLimits_MaxMin()': FunctionFragment;
+    'test_updateBorrowRateLimits_SameLimits()': FunctionFragment;
+    'test_updateBorrowRateLimits_SameMax()': FunctionFragment;
+    'test_updateBorrowRateLimits_SameMin()': FunctionFragment;
+    'test_updateBorrowRateLimits_zero()': FunctionFragment;
+    'test_updateIdealCollateralRatioLimits_InvalidActor()': FunctionFragment;
+    'test_updateIdealCollateralRatioLimits_MaxMin()': FunctionFragment;
+    'test_updateIdealCollateralRatioLimits_SameLimits()': FunctionFragment;
+    'test_updateIdealCollateralRatioLimits_SameMax()': FunctionFragment;
+    'test_updateIdealCollateralRatioLimits_SameMin()': FunctionFragment;
+    'test_updateIdealCollateralRatioLimits_zero()': FunctionFragment;
+    'test_updateLiquidatorRewardFraction_ExceedsValue()': FunctionFragment;
+    'test_updateLiquidatorRewardFraction_InvalidActor()': FunctionFragment;
+    'test_updateLiquidatorRewardFraction_SameValue()': FunctionFragment;
+    'test_updateLiquidatorRewardFraction_zeroValue()': FunctionFragment;
+    'test_updatePriceOracle_InvalidActor()': FunctionFragment;
+    'test_updatePriceOracle_InvalidAddress()': FunctionFragment;
+    'test_updatePriceOracle_SameAddress()': FunctionFragment;
+    'test_updateProtocolFeeCollector_InvalidActor()': FunctionFragment;
+    'test_updateProtocolFeeCollector_SameAddress()': FunctionFragment;
+    'test_updateProtocolFeeCollector_zeroAddress()': FunctionFragment;
+    'test_updateProtocolFeeFraction_InvalidActor()': FunctionFragment;
+    'test_updateProtocolFeeFraction_InvalidFraction()': FunctionFragment;
+    'test_updateProtocolFeeFraction_SameValue()': FunctionFragment;
+    'test_updateProtocolFeeFraction_zeroValue()': FunctionFragment;
+    'test_updateSavingsAccount_InvalidActor()': FunctionFragment;
+    'test_updateSavingsAccount_SameAddress()': FunctionFragment;
+    'test_updateSavingsAccount_zeroAddress()': FunctionFragment;
+    'test_updateStrategyRegistry_InvalidActor()': FunctionFragment;
+    'test_updateStrategyRegistry_SameAddress()': FunctionFragment;
+    'test_updateStrategyRegistry_zeroAddress()': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'IS_TEST', values?: undefined): string;
@@ -83,7 +125,6 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'createPoolLenders', values?: undefined): string;
   encodeFunctionData(functionFragment: 'createPoolLiquidator', values?: undefined): string;
   encodeFunctionData(functionFragment: 'createVerifier', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'create_creditLineReqeuest', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployCompoundYield', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployCreditLines', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployNoYield', values?: undefined): string;
@@ -99,14 +140,57 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'restrictToRange', values: [BigNumberish, BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'setUp', values?: undefined): string;
   encodeFunctionData(functionFragment: 'setUpLenderPools', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'testFail_invalidBorrower_1', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'testFail_invalidBorrower_2', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'testFail_invalidCollateralRatio', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'testFail_invalidLender_1', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'testFail_invalidLender_2', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'test_mint', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'test_validRequest_asBorrower', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'test_validRequest_asLender', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_CreditLine_UpdateDefaultStrategy', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_CreditLine_updatePriceOracle', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_UpdateDefaultStrategy_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_UpdateDefaultStrategy_SameAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_UpdateDefaultStrategy_zeroAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_creditLineUpdateLiquidatorRewardFraction', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_creditLineUpdateProtocolFeeCollector', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_creditLineUpdateProtocolFeeFraction', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_creditLineUpdateSavingsAccount', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_creditLineUpdateStrategyRegistry', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_creditLineupdateBorrowLimitLimits', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_creditLineupdateBorrowRateLimits', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_creditLineupdateIdealCollateralRatioLimits', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowLimitLimits_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowLimitLimits_MaxMin', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowLimitLimits_SameLimits', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowLimitLimits_SameMax', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowLimitLimits_SameMin', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowLimitLimits_zero', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowRateLimits_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowRateLimits_MaxMin', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowRateLimits_SameLimits', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowRateLimits_SameMax', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowRateLimits_SameMin', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateBorrowRateLimits_zero', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateIdealCollateralRatioLimits_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateIdealCollateralRatioLimits_MaxMin', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateIdealCollateralRatioLimits_SameLimits', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateIdealCollateralRatioLimits_SameMax', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateIdealCollateralRatioLimits_SameMin', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateIdealCollateralRatioLimits_zero', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateLiquidatorRewardFraction_ExceedsValue', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateLiquidatorRewardFraction_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateLiquidatorRewardFraction_SameValue', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateLiquidatorRewardFraction_zeroValue', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updatePriceOracle_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updatePriceOracle_InvalidAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updatePriceOracle_SameAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateProtocolFeeCollector_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateProtocolFeeCollector_SameAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateProtocolFeeCollector_zeroAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateProtocolFeeFraction_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateProtocolFeeFraction_InvalidFraction', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateProtocolFeeFraction_SameValue', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateProtocolFeeFraction_zeroValue', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateSavingsAccount_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateSavingsAccount_SameAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateSavingsAccount_zeroAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateStrategyRegistry_InvalidActor', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateStrategyRegistry_SameAddress', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'test_updateStrategyRegistry_zeroAddress', values?: undefined): string;
 
   decodeFunctionResult(functionFragment: 'IS_TEST', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'SetUpAllContracts', data: BytesLike): Result;
@@ -126,7 +210,6 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'createPoolLenders', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createPoolLiquidator', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createVerifier', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'create_creditLineReqeuest', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployCompoundYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployCreditLines', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployNoYield', data: BytesLike): Result;
@@ -142,14 +225,57 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'restrictToRange', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUp', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUpLenderPools', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'testFail_invalidBorrower_1', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'testFail_invalidBorrower_2', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'testFail_invalidCollateralRatio', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'testFail_invalidLender_1', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'testFail_invalidLender_2', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'test_mint', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'test_validRequest_asBorrower', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'test_validRequest_asLender', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_CreditLine_UpdateDefaultStrategy', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_CreditLine_updatePriceOracle', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_UpdateDefaultStrategy_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_UpdateDefaultStrategy_SameAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_UpdateDefaultStrategy_zeroAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_creditLineUpdateLiquidatorRewardFraction', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_creditLineUpdateProtocolFeeCollector', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_creditLineUpdateProtocolFeeFraction', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_creditLineUpdateSavingsAccount', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_creditLineUpdateStrategyRegistry', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_creditLineupdateBorrowLimitLimits', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_creditLineupdateBorrowRateLimits', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_creditLineupdateIdealCollateralRatioLimits', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowLimitLimits_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowLimitLimits_MaxMin', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowLimitLimits_SameLimits', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowLimitLimits_SameMax', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowLimitLimits_SameMin', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowLimitLimits_zero', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowRateLimits_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowRateLimits_MaxMin', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowRateLimits_SameLimits', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowRateLimits_SameMax', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowRateLimits_SameMin', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateBorrowRateLimits_zero', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateIdealCollateralRatioLimits_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateIdealCollateralRatioLimits_MaxMin', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateIdealCollateralRatioLimits_SameLimits', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateIdealCollateralRatioLimits_SameMax', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateIdealCollateralRatioLimits_SameMin', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateIdealCollateralRatioLimits_zero', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateLiquidatorRewardFraction_ExceedsValue', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateLiquidatorRewardFraction_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateLiquidatorRewardFraction_SameValue', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateLiquidatorRewardFraction_zeroValue', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updatePriceOracle_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updatePriceOracle_InvalidAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updatePriceOracle_SameAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateProtocolFeeCollector_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateProtocolFeeCollector_SameAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateProtocolFeeCollector_zeroAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateProtocolFeeFraction_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateProtocolFeeFraction_InvalidFraction', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateProtocolFeeFraction_SameValue', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateProtocolFeeFraction_zeroValue', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateSavingsAccount_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateSavingsAccount_SameAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateSavingsAccount_zeroAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateStrategyRegistry_InvalidActor', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateStrategyRegistry_SameAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_updateStrategyRegistry_zeroAddress', data: BytesLike): Result;
 
   events: {
     'log(string)': EventFragment;
@@ -304,10 +430,6 @@ export class CreditLineTest extends Contract {
 
     'createVerifier()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    create_creditLineReqeuest(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'create_creditLineReqeuest()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
     deployCompoundYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'deployCompoundYield()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
@@ -389,37 +511,269 @@ export class CreditLineTest extends Contract {
 
     'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    testFail_invalidBorrower_1(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    test_CreditLine_UpdateDefaultStrategy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'testFail_invalidBorrower_1()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'test_CreditLine_UpdateDefaultStrategy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    testFail_invalidBorrower_2(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    test_CreditLine_updatePriceOracle(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'testFail_invalidBorrower_2()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'test_CreditLine_updatePriceOracle()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    testFail_invalidCollateralRatio(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    test_UpdateDefaultStrategy_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'testFail_invalidCollateralRatio()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    testFail_invalidLender_1(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    test_UpdateDefaultStrategy_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'testFail_invalidLender_1()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'test_UpdateDefaultStrategy_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    testFail_invalidLender_2(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    test_UpdateDefaultStrategy_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'testFail_invalidLender_2()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    test_mint(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    test_creditLineUpdateLiquidatorRewardFraction(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
-    'test_mint()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'test_creditLineUpdateLiquidatorRewardFraction()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
-    test_validRequest_asBorrower(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    test_creditLineUpdateProtocolFeeCollector(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'test_validRequest_asBorrower()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'test_creditLineUpdateProtocolFeeCollector()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
-    test_validRequest_asLender(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    test_creditLineUpdateProtocolFeeFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'test_validRequest_asLender()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'test_creditLineUpdateProtocolFeeFraction()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_creditLineUpdateSavingsAccount(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_creditLineUpdateSavingsAccount()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_creditLineUpdateStrategyRegistry(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_creditLineUpdateStrategyRegistry()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_creditLineupdateBorrowLimitLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_creditLineupdateBorrowLimitLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_creditLineupdateBorrowRateLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_creditLineupdateBorrowRateLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_creditLineupdateIdealCollateralRatioLimits(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_creditLineupdateIdealCollateralRatioLimits()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateBorrowLimitLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowLimitLimits_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateBorrowLimitLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowLimitLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowLimitLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowLimitLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowLimitLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowLimitLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowLimitLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowLimitLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowLimitLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowLimitLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowRateLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowRateLimits_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowRateLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowRateLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowRateLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowRateLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowRateLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowRateLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowRateLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowRateLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateBorrowRateLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateBorrowRateLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateIdealCollateralRatioLimits_InvalidActor(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateIdealCollateralRatioLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_MaxMin()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateIdealCollateralRatioLimits_SameLimits(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_SameLimits()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateIdealCollateralRatioLimits_SameMax(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_SameMax()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateIdealCollateralRatioLimits_SameMin(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_SameMin()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateIdealCollateralRatioLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_zero()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateLiquidatorRewardFraction_ExceedsValue(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateLiquidatorRewardFraction_ExceedsValue()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateLiquidatorRewardFraction_InvalidActor(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateLiquidatorRewardFraction_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateLiquidatorRewardFraction_SameValue(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateLiquidatorRewardFraction_SameValue()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateLiquidatorRewardFraction_zeroValue(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateLiquidatorRewardFraction_zeroValue()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updatePriceOracle_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updatePriceOracle_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updatePriceOracle_InvalidAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updatePriceOracle_InvalidAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updatePriceOracle_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updatePriceOracle_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateProtocolFeeCollector_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateProtocolFeeCollector_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateProtocolFeeCollector_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateProtocolFeeCollector_SameAddress()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateProtocolFeeCollector_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateProtocolFeeCollector_zeroAddress()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateProtocolFeeFraction_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateProtocolFeeFraction_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateProtocolFeeFraction_InvalidFraction(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'test_updateProtocolFeeFraction_InvalidFraction()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    test_updateProtocolFeeFraction_SameValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateProtocolFeeFraction_SameValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateProtocolFeeFraction_zeroValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateProtocolFeeFraction_zeroValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateSavingsAccount_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateSavingsAccount_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateSavingsAccount_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateSavingsAccount_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateSavingsAccount_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateSavingsAccount_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateStrategyRegistry_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateStrategyRegistry_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateStrategyRegistry_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateStrategyRegistry_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    test_updateStrategyRegistry_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_updateStrategyRegistry_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
   };
 
   IS_TEST(overrides?: CallOverrides): Promise<boolean>;
@@ -493,10 +847,6 @@ export class CreditLineTest extends Contract {
   createVerifier(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'createVerifier()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  create_creditLineReqeuest(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'create_creditLineReqeuest()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   deployCompoundYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -579,37 +929,251 @@ export class CreditLineTest extends Contract {
 
   'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  testFail_invalidBorrower_1(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  test_CreditLine_UpdateDefaultStrategy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'testFail_invalidBorrower_1()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'test_CreditLine_UpdateDefaultStrategy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  testFail_invalidBorrower_2(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  test_CreditLine_updatePriceOracle(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'testFail_invalidBorrower_2()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'test_CreditLine_updatePriceOracle()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  testFail_invalidCollateralRatio(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  test_UpdateDefaultStrategy_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'testFail_invalidCollateralRatio()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  testFail_invalidLender_1(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  test_UpdateDefaultStrategy_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'testFail_invalidLender_1()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'test_UpdateDefaultStrategy_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  testFail_invalidLender_2(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  test_UpdateDefaultStrategy_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'testFail_invalidLender_2()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  test_mint(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  test_creditLineUpdateLiquidatorRewardFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'test_mint()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'test_creditLineUpdateLiquidatorRewardFraction()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
-  test_validRequest_asBorrower(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  test_creditLineUpdateProtocolFeeCollector(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'test_validRequest_asBorrower()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'test_creditLineUpdateProtocolFeeCollector()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  test_validRequest_asLender(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  test_creditLineUpdateProtocolFeeFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'test_validRequest_asLender()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'test_creditLineUpdateProtocolFeeFraction()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_creditLineUpdateSavingsAccount(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_creditLineUpdateSavingsAccount()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_creditLineUpdateStrategyRegistry(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_creditLineUpdateStrategyRegistry()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_creditLineupdateBorrowLimitLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_creditLineupdateBorrowLimitLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_creditLineupdateBorrowRateLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_creditLineupdateBorrowRateLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_creditLineupdateIdealCollateralRatioLimits(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'test_creditLineupdateIdealCollateralRatioLimits()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateBorrowLimitLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowLimitLimits_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowLimitLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowLimitLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowLimitLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowLimitLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowLimitLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowLimitLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowLimitLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowLimitLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowLimitLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowLimitLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowRateLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowRateLimits_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowRateLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowRateLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowRateLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowRateLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowRateLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowRateLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowRateLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowRateLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateBorrowRateLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateBorrowRateLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateIdealCollateralRatioLimits_InvalidActor(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'test_updateIdealCollateralRatioLimits_InvalidActor()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateIdealCollateralRatioLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateIdealCollateralRatioLimits_MaxMin()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateIdealCollateralRatioLimits_SameLimits(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'test_updateIdealCollateralRatioLimits_SameLimits()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateIdealCollateralRatioLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateIdealCollateralRatioLimits_SameMax()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateIdealCollateralRatioLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateIdealCollateralRatioLimits_SameMin()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateIdealCollateralRatioLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateIdealCollateralRatioLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateLiquidatorRewardFraction_ExceedsValue(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'test_updateLiquidatorRewardFraction_ExceedsValue()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateLiquidatorRewardFraction_InvalidActor(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'test_updateLiquidatorRewardFraction_InvalidActor()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateLiquidatorRewardFraction_SameValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateLiquidatorRewardFraction_SameValue()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateLiquidatorRewardFraction_zeroValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateLiquidatorRewardFraction_zeroValue()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updatePriceOracle_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updatePriceOracle_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updatePriceOracle_InvalidAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updatePriceOracle_InvalidAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updatePriceOracle_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updatePriceOracle_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateProtocolFeeCollector_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateProtocolFeeCollector_InvalidActor()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateProtocolFeeCollector_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateProtocolFeeCollector_SameAddress()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateProtocolFeeCollector_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateProtocolFeeCollector_zeroAddress()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateProtocolFeeFraction_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateProtocolFeeFraction_InvalidActor()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateProtocolFeeFraction_InvalidFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateProtocolFeeFraction_InvalidFraction()'(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  test_updateProtocolFeeFraction_SameValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateProtocolFeeFraction_SameValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateProtocolFeeFraction_zeroValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateProtocolFeeFraction_zeroValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateSavingsAccount_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateSavingsAccount_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateSavingsAccount_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateSavingsAccount_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateSavingsAccount_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateSavingsAccount_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateStrategyRegistry_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateStrategyRegistry_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateStrategyRegistry_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateStrategyRegistry_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  test_updateStrategyRegistry_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_updateStrategyRegistry_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   callStatic: {
     IS_TEST(overrides?: CallOverrides): Promise<boolean>;
@@ -684,10 +1248,6 @@ export class CreditLineTest extends Contract {
 
     'createVerifier()'(overrides?: CallOverrides): Promise<void>;
 
-    create_creditLineReqeuest(overrides?: CallOverrides): Promise<void>;
-
-    'create_creditLineReqeuest()'(overrides?: CallOverrides): Promise<void>;
-
     deployCompoundYield(overrides?: CallOverrides): Promise<void>;
 
     'deployCompoundYield()'(overrides?: CallOverrides): Promise<void>;
@@ -759,37 +1319,209 @@ export class CreditLineTest extends Contract {
 
     'setUpLenderPools()'(overrides?: CallOverrides): Promise<void>;
 
-    testFail_invalidBorrower_1(overrides?: CallOverrides): Promise<void>;
+    test_CreditLine_UpdateDefaultStrategy(overrides?: CallOverrides): Promise<void>;
 
-    'testFail_invalidBorrower_1()'(overrides?: CallOverrides): Promise<void>;
+    'test_CreditLine_UpdateDefaultStrategy()'(overrides?: CallOverrides): Promise<void>;
 
-    testFail_invalidBorrower_2(overrides?: CallOverrides): Promise<void>;
+    test_CreditLine_updatePriceOracle(overrides?: CallOverrides): Promise<void>;
 
-    'testFail_invalidBorrower_2()'(overrides?: CallOverrides): Promise<void>;
+    'test_CreditLine_updatePriceOracle()'(overrides?: CallOverrides): Promise<void>;
 
-    testFail_invalidCollateralRatio(overrides?: CallOverrides): Promise<void>;
+    test_UpdateDefaultStrategy_InvalidActor(overrides?: CallOverrides): Promise<void>;
 
-    'testFail_invalidCollateralRatio()'(overrides?: CallOverrides): Promise<void>;
+    'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
 
-    testFail_invalidLender_1(overrides?: CallOverrides): Promise<void>;
+    test_UpdateDefaultStrategy_SameAddress(overrides?: CallOverrides): Promise<void>;
 
-    'testFail_invalidLender_1()'(overrides?: CallOverrides): Promise<void>;
+    'test_UpdateDefaultStrategy_SameAddress()'(overrides?: CallOverrides): Promise<void>;
 
-    testFail_invalidLender_2(overrides?: CallOverrides): Promise<void>;
+    test_UpdateDefaultStrategy_zeroAddress(overrides?: CallOverrides): Promise<void>;
 
-    'testFail_invalidLender_2()'(overrides?: CallOverrides): Promise<void>;
+    'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: CallOverrides): Promise<void>;
 
-    test_mint(overrides?: CallOverrides): Promise<void>;
+    test_creditLineUpdateLiquidatorRewardFraction(overrides?: CallOverrides): Promise<void>;
 
-    'test_mint()'(overrides?: CallOverrides): Promise<void>;
+    'test_creditLineUpdateLiquidatorRewardFraction()'(overrides?: CallOverrides): Promise<void>;
 
-    test_validRequest_asBorrower(overrides?: CallOverrides): Promise<void>;
+    test_creditLineUpdateProtocolFeeCollector(overrides?: CallOverrides): Promise<void>;
 
-    'test_validRequest_asBorrower()'(overrides?: CallOverrides): Promise<void>;
+    'test_creditLineUpdateProtocolFeeCollector()'(overrides?: CallOverrides): Promise<void>;
 
-    test_validRequest_asLender(overrides?: CallOverrides): Promise<void>;
+    test_creditLineUpdateProtocolFeeFraction(overrides?: CallOverrides): Promise<void>;
 
-    'test_validRequest_asLender()'(overrides?: CallOverrides): Promise<void>;
+    'test_creditLineUpdateProtocolFeeFraction()'(overrides?: CallOverrides): Promise<void>;
+
+    test_creditLineUpdateSavingsAccount(overrides?: CallOverrides): Promise<void>;
+
+    'test_creditLineUpdateSavingsAccount()'(overrides?: CallOverrides): Promise<void>;
+
+    test_creditLineUpdateStrategyRegistry(overrides?: CallOverrides): Promise<void>;
+
+    'test_creditLineUpdateStrategyRegistry()'(overrides?: CallOverrides): Promise<void>;
+
+    test_creditLineupdateBorrowLimitLimits(overrides?: CallOverrides): Promise<void>;
+
+    'test_creditLineupdateBorrowLimitLimits()'(overrides?: CallOverrides): Promise<void>;
+
+    test_creditLineupdateBorrowRateLimits(overrides?: CallOverrides): Promise<void>;
+
+    'test_creditLineupdateBorrowRateLimits()'(overrides?: CallOverrides): Promise<void>;
+
+    test_creditLineupdateIdealCollateralRatioLimits(overrides?: CallOverrides): Promise<void>;
+
+    'test_creditLineupdateIdealCollateralRatioLimits()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowLimitLimits_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowLimitLimits_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowLimitLimits_MaxMin(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowLimitLimits_MaxMin()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowLimitLimits_SameLimits(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowLimitLimits_SameLimits()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowLimitLimits_SameMax(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowLimitLimits_SameMax()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowLimitLimits_SameMin(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowLimitLimits_SameMin()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowLimitLimits_zero(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowLimitLimits_zero()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowRateLimits_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowRateLimits_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowRateLimits_MaxMin(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowRateLimits_MaxMin()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowRateLimits_SameLimits(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowRateLimits_SameLimits()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowRateLimits_SameMax(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowRateLimits_SameMax()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowRateLimits_SameMin(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowRateLimits_SameMin()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateBorrowRateLimits_zero(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateBorrowRateLimits_zero()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateIdealCollateralRatioLimits_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateIdealCollateralRatioLimits_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateIdealCollateralRatioLimits_MaxMin(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateIdealCollateralRatioLimits_MaxMin()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateIdealCollateralRatioLimits_SameLimits(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateIdealCollateralRatioLimits_SameLimits()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateIdealCollateralRatioLimits_SameMax(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateIdealCollateralRatioLimits_SameMax()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateIdealCollateralRatioLimits_SameMin(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateIdealCollateralRatioLimits_SameMin()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateIdealCollateralRatioLimits_zero(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateIdealCollateralRatioLimits_zero()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateLiquidatorRewardFraction_ExceedsValue(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateLiquidatorRewardFraction_ExceedsValue()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateLiquidatorRewardFraction_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateLiquidatorRewardFraction_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateLiquidatorRewardFraction_SameValue(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateLiquidatorRewardFraction_SameValue()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateLiquidatorRewardFraction_zeroValue(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateLiquidatorRewardFraction_zeroValue()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updatePriceOracle_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updatePriceOracle_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updatePriceOracle_InvalidAddress(overrides?: CallOverrides): Promise<void>;
+
+    'test_updatePriceOracle_InvalidAddress()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updatePriceOracle_SameAddress(overrides?: CallOverrides): Promise<void>;
+
+    'test_updatePriceOracle_SameAddress()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateProtocolFeeCollector_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateProtocolFeeCollector_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateProtocolFeeCollector_SameAddress(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateProtocolFeeCollector_SameAddress()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateProtocolFeeCollector_zeroAddress(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateProtocolFeeCollector_zeroAddress()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateProtocolFeeFraction_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateProtocolFeeFraction_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateProtocolFeeFraction_InvalidFraction(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateProtocolFeeFraction_InvalidFraction()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateProtocolFeeFraction_SameValue(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateProtocolFeeFraction_SameValue()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateProtocolFeeFraction_zeroValue(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateProtocolFeeFraction_zeroValue()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateSavingsAccount_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateSavingsAccount_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateSavingsAccount_SameAddress(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateSavingsAccount_SameAddress()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateSavingsAccount_zeroAddress(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateSavingsAccount_zeroAddress()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateStrategyRegistry_InvalidActor(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateStrategyRegistry_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateStrategyRegistry_SameAddress(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateStrategyRegistry_SameAddress()'(overrides?: CallOverrides): Promise<void>;
+
+    test_updateStrategyRegistry_zeroAddress(overrides?: CallOverrides): Promise<void>;
+
+    'test_updateStrategyRegistry_zeroAddress()'(overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {
@@ -907,10 +1639,6 @@ export class CreditLineTest extends Contract {
 
     'createVerifier()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    create_creditLineReqeuest(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'create_creditLineReqeuest()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
     deployCompoundYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'deployCompoundYield()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
@@ -992,37 +1720,209 @@ export class CreditLineTest extends Contract {
 
     'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    testFail_invalidBorrower_1(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    test_CreditLine_UpdateDefaultStrategy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'testFail_invalidBorrower_1()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'test_CreditLine_UpdateDefaultStrategy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    testFail_invalidBorrower_2(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    test_CreditLine_updatePriceOracle(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'testFail_invalidBorrower_2()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'test_CreditLine_updatePriceOracle()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    testFail_invalidCollateralRatio(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    test_UpdateDefaultStrategy_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'testFail_invalidCollateralRatio()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    testFail_invalidLender_1(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    test_UpdateDefaultStrategy_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'testFail_invalidLender_1()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'test_UpdateDefaultStrategy_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    testFail_invalidLender_2(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    test_UpdateDefaultStrategy_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'testFail_invalidLender_2()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    test_mint(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    test_creditLineUpdateLiquidatorRewardFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'test_mint()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'test_creditLineUpdateLiquidatorRewardFraction()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    test_validRequest_asBorrower(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    test_creditLineUpdateProtocolFeeCollector(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'test_validRequest_asBorrower()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'test_creditLineUpdateProtocolFeeCollector()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    test_validRequest_asLender(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    test_creditLineUpdateProtocolFeeFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'test_validRequest_asLender()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'test_creditLineUpdateProtocolFeeFraction()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_creditLineUpdateSavingsAccount(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_creditLineUpdateSavingsAccount()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_creditLineUpdateStrategyRegistry(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_creditLineUpdateStrategyRegistry()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_creditLineupdateBorrowLimitLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_creditLineupdateBorrowLimitLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_creditLineupdateBorrowRateLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_creditLineupdateBorrowRateLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_creditLineupdateIdealCollateralRatioLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_creditLineupdateIdealCollateralRatioLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowLimitLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowLimitLimits_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowLimitLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowLimitLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowLimitLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowLimitLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowLimitLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowLimitLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowLimitLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowLimitLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowLimitLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowLimitLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowRateLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowRateLimits_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowRateLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowRateLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowRateLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowRateLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowRateLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowRateLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowRateLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowRateLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateBorrowRateLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateBorrowRateLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateIdealCollateralRatioLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateIdealCollateralRatioLimits_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateIdealCollateralRatioLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateIdealCollateralRatioLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateIdealCollateralRatioLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateIdealCollateralRatioLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateIdealCollateralRatioLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateIdealCollateralRatioLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateIdealCollateralRatioLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateIdealCollateralRatioLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateIdealCollateralRatioLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateIdealCollateralRatioLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateLiquidatorRewardFraction_ExceedsValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateLiquidatorRewardFraction_ExceedsValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateLiquidatorRewardFraction_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateLiquidatorRewardFraction_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateLiquidatorRewardFraction_SameValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateLiquidatorRewardFraction_SameValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateLiquidatorRewardFraction_zeroValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateLiquidatorRewardFraction_zeroValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updatePriceOracle_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updatePriceOracle_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updatePriceOracle_InvalidAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updatePriceOracle_InvalidAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updatePriceOracle_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updatePriceOracle_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateProtocolFeeCollector_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateProtocolFeeCollector_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateProtocolFeeCollector_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateProtocolFeeCollector_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateProtocolFeeCollector_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateProtocolFeeCollector_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateProtocolFeeFraction_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateProtocolFeeFraction_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateProtocolFeeFraction_InvalidFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateProtocolFeeFraction_InvalidFraction()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateProtocolFeeFraction_SameValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateProtocolFeeFraction_SameValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateProtocolFeeFraction_zeroValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateProtocolFeeFraction_zeroValue()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateSavingsAccount_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateSavingsAccount_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateSavingsAccount_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateSavingsAccount_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateSavingsAccount_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateSavingsAccount_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateStrategyRegistry_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateStrategyRegistry_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateStrategyRegistry_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateStrategyRegistry_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    test_updateStrategyRegistry_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_updateStrategyRegistry_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
   };
 
   populateTransaction: {
@@ -1097,10 +1997,6 @@ export class CreditLineTest extends Contract {
     createVerifier(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'createVerifier()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    create_creditLineReqeuest(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'create_creditLineReqeuest()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     deployCompoundYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -1183,36 +2079,282 @@ export class CreditLineTest extends Contract {
 
     'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    testFail_invalidBorrower_1(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    test_CreditLine_UpdateDefaultStrategy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'testFail_invalidBorrower_1()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'test_CreditLine_UpdateDefaultStrategy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    testFail_invalidBorrower_2(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    test_CreditLine_updatePriceOracle(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'testFail_invalidBorrower_2()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'test_CreditLine_updatePriceOracle()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    testFail_invalidCollateralRatio(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    test_UpdateDefaultStrategy_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'testFail_invalidCollateralRatio()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    testFail_invalidLender_1(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    test_UpdateDefaultStrategy_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'testFail_invalidLender_1()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'test_UpdateDefaultStrategy_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    testFail_invalidLender_2(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    test_UpdateDefaultStrategy_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'testFail_invalidLender_2()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    test_mint(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    test_creditLineUpdateLiquidatorRewardFraction(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
-    'test_mint()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'test_creditLineUpdateLiquidatorRewardFraction()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
-    test_validRequest_asBorrower(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    test_creditLineUpdateProtocolFeeCollector(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'test_validRequest_asBorrower()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'test_creditLineUpdateProtocolFeeCollector()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
-    test_validRequest_asLender(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    test_creditLineUpdateProtocolFeeFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'test_validRequest_asLender()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'test_creditLineUpdateProtocolFeeFraction()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_creditLineUpdateSavingsAccount(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_creditLineUpdateSavingsAccount()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_creditLineUpdateStrategyRegistry(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_creditLineUpdateStrategyRegistry()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_creditLineupdateBorrowLimitLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_creditLineupdateBorrowLimitLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_creditLineupdateBorrowRateLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_creditLineupdateBorrowRateLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_creditLineupdateIdealCollateralRatioLimits(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_creditLineupdateIdealCollateralRatioLimits()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateBorrowLimitLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowLimitLimits_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateBorrowLimitLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowLimitLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowLimitLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowLimitLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowLimitLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowLimitLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowLimitLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowLimitLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowLimitLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowLimitLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowRateLimits_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowRateLimits_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateBorrowRateLimits_MaxMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowRateLimits_MaxMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowRateLimits_SameLimits(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowRateLimits_SameLimits()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowRateLimits_SameMax(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowRateLimits_SameMax()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowRateLimits_SameMin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowRateLimits_SameMin()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateBorrowRateLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateBorrowRateLimits_zero()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateIdealCollateralRatioLimits_InvalidActor(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateIdealCollateralRatioLimits_MaxMin(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_MaxMin()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateIdealCollateralRatioLimits_SameLimits(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_SameLimits()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateIdealCollateralRatioLimits_SameMax(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_SameMax()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateIdealCollateralRatioLimits_SameMin(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_SameMin()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateIdealCollateralRatioLimits_zero(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateIdealCollateralRatioLimits_zero()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateLiquidatorRewardFraction_ExceedsValue(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateLiquidatorRewardFraction_ExceedsValue()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateLiquidatorRewardFraction_InvalidActor(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateLiquidatorRewardFraction_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateLiquidatorRewardFraction_SameValue(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateLiquidatorRewardFraction_SameValue()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateLiquidatorRewardFraction_zeroValue(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateLiquidatorRewardFraction_zeroValue()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updatePriceOracle_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updatePriceOracle_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updatePriceOracle_InvalidAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updatePriceOracle_InvalidAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updatePriceOracle_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updatePriceOracle_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateProtocolFeeCollector_InvalidActor(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateProtocolFeeCollector_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateProtocolFeeCollector_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateProtocolFeeCollector_SameAddress()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateProtocolFeeCollector_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateProtocolFeeCollector_zeroAddress()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateProtocolFeeFraction_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateProtocolFeeFraction_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateProtocolFeeFraction_InvalidFraction(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'test_updateProtocolFeeFraction_InvalidFraction()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateProtocolFeeFraction_SameValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateProtocolFeeFraction_SameValue()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateProtocolFeeFraction_zeroValue(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateProtocolFeeFraction_zeroValue()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateSavingsAccount_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateSavingsAccount_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateSavingsAccount_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateSavingsAccount_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateSavingsAccount_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateSavingsAccount_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateStrategyRegistry_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateStrategyRegistry_InvalidActor()'(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    test_updateStrategyRegistry_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateStrategyRegistry_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    test_updateStrategyRegistry_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_updateStrategyRegistry_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
   };
 }

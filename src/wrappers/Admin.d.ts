@@ -27,10 +27,18 @@ interface AdminInterface extends ethers.utils.Interface {
     'setUpChainlinkOracles(address)': FunctionFragment;
     'setUpUniswapOracles(address)': FunctionFragment;
     'setUp_USDC_ETH_oracles(address)': FunctionFragment;
+    'updateBorrowLimitLimits(address,uint256,uint256)': FunctionFragment;
+    'updateBorrowRateLimits(address,uint256,uint256)': FunctionFragment;
     'updateDefaultStrategy(address,address)': FunctionFragment;
+    'updateIdealCollateralRatioLimits(address,uint256,uint256)': FunctionFragment;
+    'updateLiquidatorRewardFraction(address,uint256)': FunctionFragment;
     'updatePooledCLSavingsAccount(address,address)': FunctionFragment;
+    'updatePriceOracle(address,address)': FunctionFragment;
+    'updateProtocolFeeCollector(address,address)': FunctionFragment;
+    'updateProtocolFeeFraction(address,uint256)': FunctionFragment;
     'updateSavingsAccount(address,address)': FunctionFragment;
     'updateStrategy(address,uint256,address,address)': FunctionFragment;
+    'updateStrategyRegistry(address,address)': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'addStrategy', values: [string, string]): string;
@@ -39,10 +47,18 @@ interface AdminInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'setUpChainlinkOracles', values: [string]): string;
   encodeFunctionData(functionFragment: 'setUpUniswapOracles', values: [string]): string;
   encodeFunctionData(functionFragment: 'setUp_USDC_ETH_oracles', values: [string]): string;
+  encodeFunctionData(functionFragment: 'updateBorrowLimitLimits', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'updateBorrowRateLimits', values: [string, BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateDefaultStrategy', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'updateIdealCollateralRatioLimits', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'updateLiquidatorRewardFraction', values: [string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updatePooledCLSavingsAccount', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'updatePriceOracle', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'updateProtocolFeeCollector', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'updateProtocolFeeFraction', values: [string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateSavingsAccount', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'updateStrategy', values: [string, BigNumberish, string, string]): string;
+  encodeFunctionData(functionFragment: 'updateStrategyRegistry', values: [string, string]): string;
 
   decodeFunctionResult(functionFragment: 'addStrategy', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setChainlinkPriceFeed', data: BytesLike): Result;
@@ -50,10 +66,18 @@ interface AdminInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'setUpChainlinkOracles', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUpUniswapOracles', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUp_USDC_ETH_oracles', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateBorrowLimitLimits', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateBorrowRateLimits', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateDefaultStrategy', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateIdealCollateralRatioLimits', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateLiquidatorRewardFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updatePooledCLSavingsAccount', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updatePriceOracle', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateProtocolFeeCollector', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateProtocolFeeFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateSavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateStrategy', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateStrategyRegistry', data: BytesLike): Result;
 
   events: {};
 }
@@ -165,6 +189,34 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    updateBorrowLimitLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updateBorrowLimitLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    updateBorrowRateLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updateBorrowRateLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     updateDefaultStrategy(
       creditLine: string,
       noYield: string,
@@ -177,6 +229,32 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    updateIdealCollateralRatioLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    updateLiquidatorRewardFraction(
+      creditLine: string,
+      rewardFraction: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updateLiquidatorRewardFraction(address,uint256)'(
+      creditLine: string,
+      rewardFraction: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     updatePooledCLSavingsAccount(
       pooledCreditLineAddress: string,
       savingsAccount: string,
@@ -186,6 +264,42 @@ export class Admin extends Contract {
     'updatePooledCLSavingsAccount(address,address)'(
       pooledCreditLineAddress: string,
       savingsAccount: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    updatePriceOracle(
+      creditLine: string,
+      priceOracle: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updatePriceOracle(address,address)'(
+      creditLine: string,
+      priceOracle: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    updateProtocolFeeCollector(
+      creditLine: string,
+      protocolFeeCollector: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updateProtocolFeeCollector(address,address)'(
+      creditLine: string,
+      protocolFeeCollector: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    updateProtocolFeeFraction(
+      creditLine: string,
+      protocolFee: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updateProtocolFeeFraction(address,uint256)'(
+      creditLine: string,
+      protocolFee: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -214,6 +328,18 @@ export class Admin extends Contract {
       index: BigNumberish,
       oldStrategy: string,
       newStrategy: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    updateStrategyRegistry(
+      creditLine: string,
+      strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updateStrategyRegistry(address,address)'(
+      creditLine: string,
+      strategyRegistry: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
   };
@@ -281,6 +407,34 @@ export class Admin extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  updateBorrowLimitLimits(
+    creditLine: string,
+    min: BigNumberish,
+    max: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updateBorrowLimitLimits(address,uint256,uint256)'(
+    creditLine: string,
+    min: BigNumberish,
+    max: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  updateBorrowRateLimits(
+    creditLine: string,
+    min: BigNumberish,
+    max: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updateBorrowRateLimits(address,uint256,uint256)'(
+    creditLine: string,
+    min: BigNumberish,
+    max: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   updateDefaultStrategy(
     creditLine: string,
     noYield: string,
@@ -293,6 +447,32 @@ export class Admin extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  updateIdealCollateralRatioLimits(
+    creditLine: string,
+    min: BigNumberish,
+    max: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
+    creditLine: string,
+    min: BigNumberish,
+    max: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  updateLiquidatorRewardFraction(
+    creditLine: string,
+    rewardFraction: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updateLiquidatorRewardFraction(address,uint256)'(
+    creditLine: string,
+    rewardFraction: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   updatePooledCLSavingsAccount(
     pooledCreditLineAddress: string,
     savingsAccount: string,
@@ -302,6 +482,42 @@ export class Admin extends Contract {
   'updatePooledCLSavingsAccount(address,address)'(
     pooledCreditLineAddress: string,
     savingsAccount: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  updatePriceOracle(
+    creditLine: string,
+    priceOracle: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updatePriceOracle(address,address)'(
+    creditLine: string,
+    priceOracle: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  updateProtocolFeeCollector(
+    creditLine: string,
+    protocolFeeCollector: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updateProtocolFeeCollector(address,address)'(
+    creditLine: string,
+    protocolFeeCollector: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  updateProtocolFeeFraction(
+    creditLine: string,
+    protocolFee: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updateProtocolFeeFraction(address,uint256)'(
+    creditLine: string,
+    protocolFee: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -330,6 +546,18 @@ export class Admin extends Contract {
     index: BigNumberish,
     oldStrategy: string,
     newStrategy: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  updateStrategyRegistry(
+    creditLine: string,
+    strategyRegistry: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updateStrategyRegistry(address,address)'(
+    creditLine: string,
+    strategyRegistry: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -363,9 +591,44 @@ export class Admin extends Contract {
 
     'setUp_USDC_ETH_oracles(address)'(priceOracleAddress: string, overrides?: CallOverrides): Promise<void>;
 
+    updateBorrowLimitLimits(creditLine: string, min: BigNumberish, max: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'updateBorrowLimitLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    updateBorrowRateLimits(creditLine: string, min: BigNumberish, max: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'updateBorrowRateLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
     updateDefaultStrategy(creditLine: string, noYield: string, overrides?: CallOverrides): Promise<void>;
 
     'updateDefaultStrategy(address,address)'(creditLine: string, noYield: string, overrides?: CallOverrides): Promise<void>;
+
+    updateIdealCollateralRatioLimits(creditLine: string, min: BigNumberish, max: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    updateLiquidatorRewardFraction(creditLine: string, rewardFraction: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'updateLiquidatorRewardFraction(address,uint256)'(
+      creditLine: string,
+      rewardFraction: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     updatePooledCLSavingsAccount(pooledCreditLineAddress: string, savingsAccount: string, overrides?: CallOverrides): Promise<void>;
 
@@ -374,6 +637,22 @@ export class Admin extends Contract {
       savingsAccount: string,
       overrides?: CallOverrides
     ): Promise<void>;
+
+    updatePriceOracle(creditLine: string, priceOracle: string, overrides?: CallOverrides): Promise<void>;
+
+    'updatePriceOracle(address,address)'(creditLine: string, priceOracle: string, overrides?: CallOverrides): Promise<void>;
+
+    updateProtocolFeeCollector(creditLine: string, protocolFeeCollector: string, overrides?: CallOverrides): Promise<void>;
+
+    'updateProtocolFeeCollector(address,address)'(
+      creditLine: string,
+      protocolFeeCollector: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    updateProtocolFeeFraction(creditLine: string, protocolFee: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'updateProtocolFeeFraction(address,uint256)'(creditLine: string, protocolFee: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     updateSavingsAccount(creditLine: string, savingsAccount: string, overrides?: CallOverrides): Promise<void>;
 
@@ -394,6 +673,10 @@ export class Admin extends Contract {
       newStrategy: string,
       overrides?: CallOverrides
     ): Promise<void>;
+
+    updateStrategyRegistry(creditLine: string, strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
+
+    'updateStrategyRegistry(address,address)'(creditLine: string, strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {};
@@ -450,6 +733,34 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
+    updateBorrowLimitLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updateBorrowLimitLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    updateBorrowRateLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updateBorrowRateLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     updateDefaultStrategy(
       creditLine: string,
       noYield: string,
@@ -462,6 +773,32 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
+    updateIdealCollateralRatioLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    updateLiquidatorRewardFraction(
+      creditLine: string,
+      rewardFraction: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updateLiquidatorRewardFraction(address,uint256)'(
+      creditLine: string,
+      rewardFraction: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     updatePooledCLSavingsAccount(
       pooledCreditLineAddress: string,
       savingsAccount: string,
@@ -471,6 +808,42 @@ export class Admin extends Contract {
     'updatePooledCLSavingsAccount(address,address)'(
       pooledCreditLineAddress: string,
       savingsAccount: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    updatePriceOracle(
+      creditLine: string,
+      priceOracle: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updatePriceOracle(address,address)'(
+      creditLine: string,
+      priceOracle: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    updateProtocolFeeCollector(
+      creditLine: string,
+      protocolFeeCollector: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updateProtocolFeeCollector(address,address)'(
+      creditLine: string,
+      protocolFeeCollector: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    updateProtocolFeeFraction(
+      creditLine: string,
+      protocolFee: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updateProtocolFeeFraction(address,uint256)'(
+      creditLine: string,
+      protocolFee: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -499,6 +872,18 @@ export class Admin extends Contract {
       index: BigNumberish,
       oldStrategy: string,
       newStrategy: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    updateStrategyRegistry(
+      creditLine: string,
+      strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updateStrategyRegistry(address,address)'(
+      creditLine: string,
+      strategyRegistry: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
   };
@@ -567,6 +952,34 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
+    updateBorrowLimitLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updateBorrowLimitLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    updateBorrowRateLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updateBorrowRateLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
     updateDefaultStrategy(
       creditLine: string,
       noYield: string,
@@ -579,6 +992,32 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
+    updateIdealCollateralRatioLimits(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
+      creditLine: string,
+      min: BigNumberish,
+      max: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    updateLiquidatorRewardFraction(
+      creditLine: string,
+      rewardFraction: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updateLiquidatorRewardFraction(address,uint256)'(
+      creditLine: string,
+      rewardFraction: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
     updatePooledCLSavingsAccount(
       pooledCreditLineAddress: string,
       savingsAccount: string,
@@ -588,6 +1027,42 @@ export class Admin extends Contract {
     'updatePooledCLSavingsAccount(address,address)'(
       pooledCreditLineAddress: string,
       savingsAccount: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    updatePriceOracle(
+      creditLine: string,
+      priceOracle: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updatePriceOracle(address,address)'(
+      creditLine: string,
+      priceOracle: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    updateProtocolFeeCollector(
+      creditLine: string,
+      protocolFeeCollector: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updateProtocolFeeCollector(address,address)'(
+      creditLine: string,
+      protocolFeeCollector: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    updateProtocolFeeFraction(
+      creditLine: string,
+      protocolFee: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updateProtocolFeeFraction(address,uint256)'(
+      creditLine: string,
+      protocolFee: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -616,6 +1091,18 @@ export class Admin extends Contract {
       index: BigNumberish,
       oldStrategy: string,
       newStrategy: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    updateStrategyRegistry(
+      creditLine: string,
+      strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updateStrategyRegistry(address,address)'(
+      creditLine: string,
+      strategyRegistry: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
   };

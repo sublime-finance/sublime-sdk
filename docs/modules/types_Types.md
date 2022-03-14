@@ -12,6 +12,7 @@
 - [CreditLineHistory](types_Types.md#creditlinehistory)
 - [CreditLineOperation](types_Types.md#creditlineoperation)
 - [CreditLineRequest](types_Types.md#creditlinerequest)
+- [CreditLineStatus](types_Types.md#creditlinestatus)
 - [CreditLineUser](types_Types.md#creditlineuser)
 - [CreditLinesOverview](types_Types.md#creditlinesoverview)
 - [DashboardOverview](types_Types.md#dashboardoverview)
@@ -66,6 +67,12 @@ ___
 ### CreditLineRequest
 
 Re-exports [CreditLineRequest](../interfaces/types_Types.CreditLineRequest.md)
+
+___
+
+### CreditLineStatus
+
+Re-exports [CreditLineStatus](../enums/types_Types.CreditLineStatus.md)
 
 ___
 

@@ -11,7 +11,6 @@ import {
   PopulatedTransaction,
   Contract,
   ContractTransaction,
-  Overrides,
   CallOverrides,
 } from 'ethers';
 import { BytesLike } from '@ethersproject/bytes';
@@ -25,7 +24,6 @@ interface MockV3AggregatorInterface extends ethers.utils.Interface {
     'description()': FunctionFragment;
     'getRoundData(uint80)': FunctionFragment;
     'latestRoundData()': FunctionFragment;
-    'setAnswer(int256)': FunctionFragment;
     'version()': FunctionFragment;
   };
 
@@ -33,14 +31,12 @@ interface MockV3AggregatorInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'description', values?: undefined): string;
   encodeFunctionData(functionFragment: 'getRoundData', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'latestRoundData', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'setAnswer', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'version', values?: undefined): string;
 
   decodeFunctionResult(functionFragment: 'decimals', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'description', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getRoundData', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'latestRoundData', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'setAnswer', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'version', data: BytesLike): Result;
 
   events: {};
@@ -144,10 +140,6 @@ export class MockV3Aggregator extends Contract {
       }
     >;
 
-    setAnswer(_temp: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'setAnswer(int256)'(_temp: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
     version(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'version()'(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -206,10 +198,6 @@ export class MockV3Aggregator extends Contract {
       answeredInRound: BigNumber;
     }
   >;
-
-  setAnswer(_temp: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'setAnswer(int256)'(_temp: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   version(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -270,10 +258,6 @@ export class MockV3Aggregator extends Contract {
       }
     >;
 
-    setAnswer(_temp: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'setAnswer(int256)'(_temp: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
     version(overrides?: CallOverrides): Promise<BigNumber>;
 
     'version()'(overrides?: CallOverrides): Promise<BigNumber>;
@@ -298,10 +282,6 @@ export class MockV3Aggregator extends Contract {
 
     'latestRoundData()'(overrides?: CallOverrides): Promise<BigNumber>;
 
-    setAnswer(_temp: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'setAnswer(int256)'(_temp: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
     version(overrides?: CallOverrides): Promise<BigNumber>;
 
     'version()'(overrides?: CallOverrides): Promise<BigNumber>;
@@ -323,10 +303,6 @@ export class MockV3Aggregator extends Contract {
     latestRoundData(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'latestRoundData()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    setAnswer(_temp: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'setAnswer(int256)'(_temp: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     version(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
