@@ -19,7 +19,7 @@ import { LenderPool__factory } from '../wrappers/factories/LenderPool__factory';
 /**
  * @class PooledCreditLines
  */
-export class PooledCreditLines {
+export class PooledCreditLineApi {
   private lenderPool: LenderPool;
   private pooledCreditLine: PooledCreditLine;
 
@@ -33,7 +33,7 @@ export class PooledCreditLines {
     this.signer = signer;
 
     this.lenderPool = new LenderPool__factory(this.signer).attach(config.lenderPoolAddress);
-    this.pooledCreditLine = new PooledCreditLine__factory(this.signer).attach(config.poolFactoryContractAddress);
+    this.pooledCreditLine = new PooledCreditLine__factory(this.signer).attach(config.pooledCreditLineAddress);
   }
 
   /**

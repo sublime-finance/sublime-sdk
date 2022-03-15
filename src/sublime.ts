@@ -13,6 +13,7 @@ import { PriceOracleApi } from './api/priceOracle';
 
 import { ethers } from 'ethers';
 import { TokenManager } from './tokenManager';
+import { PooledCreditLineApi } from 'api/pooledCreditLines';
 
 /**
  * @class SublimeConnector
@@ -68,6 +69,10 @@ export class SublimeConnector {
 
   PriceOracleApi(): PriceOracleApi {
     return new PriceOracleApi(this.signer, this.config);
+  }
+
+  PooledCreditlineApi(): PooledCreditLineApi {
+    return new PooledCreditLineApi(this.signer, this.config, this.tokenManager);
   }
 
   public async getChainId(): Promise<number> {
