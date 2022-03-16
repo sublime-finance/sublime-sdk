@@ -8,6 +8,7 @@
 
 - [api/creditLines](modules/api_creditLines.md)
 - [api/pool](modules/api_pool.md)
+- [api/pooledCreditLines](modules/api_pooledCreditLines.md)
 - [api/priceOracle](modules/api_priceOracle.md)
 - [api/repayments](modules/api_repayments.md)
 - [api/savingsAccount](modules/api_savingsAccount.md)

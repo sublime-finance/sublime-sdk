@@ -10,10 +10,10 @@ import { RepaymentApi } from './api/repayments';
 import { VerificationAPI } from './api/verification';
 import { TokenApi } from './api/tokenApi';
 import { PriceOracleApi } from './api/priceOracle';
+import { PooledCreditLineApi } from './api/pooledCreditLines';
+import { TokenManager } from './tokenManager';
 
 import { ethers } from 'ethers';
-import { TokenManager } from './tokenManager';
-import { PooledCreditLineApi } from 'api/pooledCreditLines';
 
 /**
  * @class SublimeConnector
