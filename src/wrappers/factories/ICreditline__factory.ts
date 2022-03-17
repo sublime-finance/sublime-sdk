@@ -22,11 +22,6 @@ const _abi = [
         type: 'uint256',
       },
       {
-        internalType: 'address',
-        name: '_strategy',
-        type: 'address',
-      },
-      {
         internalType: 'uint256',
         name: '_amount',
         type: 'uint256',
@@ -53,11 +48,6 @@ const _abi = [
         internalType: 'uint256',
         name: '_amount',
         type: 'uint256',
-      },
-      {
-        internalType: 'bool',
-        name: '_fromSavingsAccount',
-        type: 'bool',
       },
     ],
     name: 'repay',

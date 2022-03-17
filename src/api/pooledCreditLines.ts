@@ -202,6 +202,7 @@ export class PooledCreditLineApi {
    * @param defaultGracePeriodInSeconds
    * @param gracePenaltyRate
    * @param collectionPeriod
+   * @param minBorrowAmount
    * @param _borrowLimit
    * @param _borrowRate
    * @param collateralAsset
@@ -219,6 +220,7 @@ export class PooledCreditLineApi {
     defaultGracePeriodInSeconds: string,
     gracePenaltyRate: string,
     collectionPeriod: string,
+    minBorrowAmount: string,
     _borrowLimit: string,
     _borrowRate: string,
     collateralAsset: string,
@@ -228,6 +230,9 @@ export class PooledCreditLineApi {
     areTokensTransferable: boolean,
     options?: Overrides
   ): Promise<ContractTransaction> {
+    await this.tokenManager.updateAll(borrowAsset);
+    let borrowTokenDecimal = this.tokenManager.getTokenDecimals(borrowAsset);
+
     const collateralRatio = new BigNumber(colRatio);
     if (collateralRatio.isNaN() || collateralRatio.isZero() || collateralRatio.isNegative()) {
       throw new Error('collateralRatio should be a valid number');
@@ -263,6 +268,11 @@ export class PooledCreditLineApi {
       throw new Error('borrowRate should be a valid number');
     }
 
+    const _minBorrowAmount = new BigNumber(minBorrowAmount);
+    if (_minBorrowAmount.isNaN() || _minBorrowAmount.isZero() || _minBorrowAmount.isNegative()) {
+      throw new Error('_minBorrowAmount should be a valid number');
+    }
+
     let strategyAddress: string;
     if (collateralStrategy == StrategyType.NoYield) {
       strategyAddress = this.config.noStrategyAddress;
@@ -289,7 +299,8 @@ export class PooledCreditLineApi {
         defaultGracePeriod: defaultGracePeriod.toFixed(0),
         gracePenaltyRate: gpr.toFixed(0),
         collectionPeriod: _collectionPeriod.toFixed(0),
-        borrowLimit: borrowLimit.toFixed(0),
+        minBorrowAmount: _minBorrowAmount.multipliedBy(new BigNumber(10).pow(borrowTokenDecimal)).toFixed(0),
+        borrowLimit: borrowLimit.multipliedBy(new BigNumber(10).pow(borrowTokenDecimal)).toFixed(0),
         borrowRate: borrowRate.toFixed(0),
         collateralAsset,
         lenderStrategy: lenderS,

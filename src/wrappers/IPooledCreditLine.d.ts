@@ -21,13 +21,13 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface IPooledCreditLineInterface extends ethers.utils.Interface {
   functions: {
-    'accept(uint256)': FunctionFragment;
+    'accept(uint256,uint256)': FunctionFragment;
     'getCreditLineStatus(uint256)': FunctionFragment;
     'getPrincipal(uint256)': FunctionFragment;
     'liquidate(uint256)': FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: 'accept', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'accept', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getCreditLineStatus', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getPrincipal', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'liquidate', values: [BigNumberish]): string;
@@ -84,9 +84,17 @@ export class IPooledCreditLine extends Contract {
   interface: IPooledCreditLineInterface;
 
   functions: {
-    accept(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    accept(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
-    'accept(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'accept(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
     getCreditLineStatus(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
@@ -101,9 +109,17 @@ export class IPooledCreditLine extends Contract {
     'liquidate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
   };
 
-  accept(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  accept(
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
-  'accept(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'accept(uint256,uint256)'(
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   getCreditLineStatus(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -118,9 +134,9 @@ export class IPooledCreditLine extends Contract {
   'liquidate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   callStatic: {
-    accept(arg0: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    accept(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'accept(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    'accept(uint256,uint256)'(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     getCreditLineStatus(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -138,9 +154,13 @@ export class IPooledCreditLine extends Contract {
   filters: {};
 
   estimateGas: {
-    accept(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    accept(_id: BigNumberish, _amount: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'accept(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'accept(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
     getCreditLineStatus(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -156,9 +176,17 @@ export class IPooledCreditLine extends Contract {
   };
 
   populateTransaction: {
-    accept(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    accept(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
-    'accept(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'accept(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     getCreditLineStatus(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

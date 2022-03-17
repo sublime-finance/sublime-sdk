@@ -11,6 +11,7 @@ import {
   PopulatedTransaction,
   Contract,
   ContractTransaction,
+  Overrides,
   CallOverrides,
 } from 'ethers';
 import { BytesLike } from '@ethersproject/bytes';
@@ -22,21 +23,42 @@ interface MockV3AggregatorInterface extends ethers.utils.Interface {
   functions: {
     'decimals()': FunctionFragment;
     'description()': FunctionFragment;
+    'getAnswer(uint256)': FunctionFragment;
     'getRoundData(uint80)': FunctionFragment;
+    'getTimestamp(uint256)': FunctionFragment;
+    'latestAnswer()': FunctionFragment;
+    'latestRound()': FunctionFragment;
     'latestRoundData()': FunctionFragment;
+    'latestTimestamp()': FunctionFragment;
+    'updateAnswer(int256)': FunctionFragment;
+    'updateRoundData(uint80,int256,uint256,uint256)': FunctionFragment;
     'version()': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'decimals', values?: undefined): string;
   encodeFunctionData(functionFragment: 'description', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'getAnswer', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getRoundData', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'getTimestamp', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'latestAnswer', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'latestRound', values?: undefined): string;
   encodeFunctionData(functionFragment: 'latestRoundData', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'latestTimestamp', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'updateAnswer', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'updateRoundData', values: [BigNumberish, BigNumberish, BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'version', values?: undefined): string;
 
   decodeFunctionResult(functionFragment: 'decimals', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'description', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getAnswer', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getRoundData', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getTimestamp', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'latestAnswer', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'latestRound', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'latestRoundData', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'latestTimestamp', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateAnswer', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'updateRoundData', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'version', data: BytesLike): Result;
 
   events: {};
@@ -94,6 +116,10 @@ export class MockV3Aggregator extends Contract {
 
     'description()'(overrides?: CallOverrides): Promise<[string]>;
 
+    getAnswer(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'getAnswer(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
     getRoundData(
       _roundId: BigNumberish,
       overrides?: CallOverrides
@@ -120,6 +146,18 @@ export class MockV3Aggregator extends Contract {
       }
     >;
 
+    getTimestamp(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'getTimestamp(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    latestAnswer(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'latestAnswer()'(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    latestRound(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'latestRound()'(overrides?: CallOverrides): Promise<[BigNumber]>;
+
     latestRoundData(overrides?: CallOverrides): Promise<
       [BigNumber, BigNumber, BigNumber, BigNumber, BigNumber] & {
         roundId: BigNumber;
@@ -140,6 +178,33 @@ export class MockV3Aggregator extends Contract {
       }
     >;
 
+    latestTimestamp(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'latestTimestamp()'(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    updateAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'updateAnswer(int256)'(
+      _answer: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    updateRoundData(
+      _roundId: BigNumberish,
+      _answer: BigNumberish,
+      _timestamp: BigNumberish,
+      _startedAt: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'updateRoundData(uint80,int256,uint256,uint256)'(
+      _roundId: BigNumberish,
+      _answer: BigNumberish,
+      _timestamp: BigNumberish,
+      _startedAt: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     version(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'version()'(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -152,6 +217,10 @@ export class MockV3Aggregator extends Contract {
   description(overrides?: CallOverrides): Promise<string>;
 
   'description()'(overrides?: CallOverrides): Promise<string>;
+
+  getAnswer(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+  'getAnswer(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
   getRoundData(
     _roundId: BigNumberish,
@@ -179,6 +248,18 @@ export class MockV3Aggregator extends Contract {
     }
   >;
 
+  getTimestamp(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+  'getTimestamp(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+  latestAnswer(overrides?: CallOverrides): Promise<BigNumber>;
+
+  'latestAnswer()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+  latestRound(overrides?: CallOverrides): Promise<BigNumber>;
+
+  'latestRound()'(overrides?: CallOverrides): Promise<BigNumber>;
+
   latestRoundData(overrides?: CallOverrides): Promise<
     [BigNumber, BigNumber, BigNumber, BigNumber, BigNumber] & {
       roundId: BigNumber;
@@ -199,6 +280,30 @@ export class MockV3Aggregator extends Contract {
     }
   >;
 
+  latestTimestamp(overrides?: CallOverrides): Promise<BigNumber>;
+
+  'latestTimestamp()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+  updateAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'updateAnswer(int256)'(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  updateRoundData(
+    _roundId: BigNumberish,
+    _answer: BigNumberish,
+    _timestamp: BigNumberish,
+    _startedAt: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'updateRoundData(uint80,int256,uint256,uint256)'(
+    _roundId: BigNumberish,
+    _answer: BigNumberish,
+    _timestamp: BigNumberish,
+    _startedAt: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   version(overrides?: CallOverrides): Promise<BigNumber>;
 
   'version()'(overrides?: CallOverrides): Promise<BigNumber>;
@@ -211,6 +316,10 @@ export class MockV3Aggregator extends Contract {
     description(overrides?: CallOverrides): Promise<string>;
 
     'description()'(overrides?: CallOverrides): Promise<string>;
+
+    getAnswer(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getAnswer(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     getRoundData(
       _roundId: BigNumberish,
@@ -238,6 +347,18 @@ export class MockV3Aggregator extends Contract {
       }
     >;
 
+    getTimestamp(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getTimestamp(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    latestAnswer(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'latestAnswer()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    latestRound(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'latestRound()'(overrides?: CallOverrides): Promise<BigNumber>;
+
     latestRoundData(overrides?: CallOverrides): Promise<
       [BigNumber, BigNumber, BigNumber, BigNumber, BigNumber] & {
         roundId: BigNumber;
@@ -258,6 +379,30 @@ export class MockV3Aggregator extends Contract {
       }
     >;
 
+    latestTimestamp(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'latestTimestamp()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    updateAnswer(_answer: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'updateAnswer(int256)'(_answer: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    updateRoundData(
+      _roundId: BigNumberish,
+      _answer: BigNumberish,
+      _timestamp: BigNumberish,
+      _startedAt: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'updateRoundData(uint80,int256,uint256,uint256)'(
+      _roundId: BigNumberish,
+      _answer: BigNumberish,
+      _timestamp: BigNumberish,
+      _startedAt: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
     version(overrides?: CallOverrides): Promise<BigNumber>;
 
     'version()'(overrides?: CallOverrides): Promise<BigNumber>;
@@ -274,13 +419,53 @@ export class MockV3Aggregator extends Contract {
 
     'description()'(overrides?: CallOverrides): Promise<BigNumber>;
 
+    getAnswer(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getAnswer(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
     getRoundData(_roundId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'getRoundData(uint80)'(_roundId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
+    getTimestamp(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getTimestamp(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    latestAnswer(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'latestAnswer()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    latestRound(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'latestRound()'(overrides?: CallOverrides): Promise<BigNumber>;
+
     latestRoundData(overrides?: CallOverrides): Promise<BigNumber>;
 
     'latestRoundData()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    latestTimestamp(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'latestTimestamp()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    updateAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'updateAnswer(int256)'(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    updateRoundData(
+      _roundId: BigNumberish,
+      _answer: BigNumberish,
+      _timestamp: BigNumberish,
+      _startedAt: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'updateRoundData(uint80,int256,uint256,uint256)'(
+      _roundId: BigNumberish,
+      _answer: BigNumberish,
+      _timestamp: BigNumberish,
+      _startedAt: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
     version(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -296,13 +481,56 @@ export class MockV3Aggregator extends Contract {
 
     'description()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    getAnswer(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'getAnswer(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     getRoundData(_roundId: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'getRoundData(uint80)'(_roundId: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    getTimestamp(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'getTimestamp(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    latestAnswer(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'latestAnswer()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    latestRound(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'latestRound()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     latestRoundData(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'latestRoundData()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    latestTimestamp(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'latestTimestamp()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    updateAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'updateAnswer(int256)'(
+      _answer: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    updateRoundData(
+      _roundId: BigNumberish,
+      _answer: BigNumberish,
+      _timestamp: BigNumberish,
+      _startedAt: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'updateRoundData(uint80,int256,uint256,uint256)'(
+      _roundId: BigNumberish,
+      _answer: BigNumberish,
+      _timestamp: BigNumberish,
+      _startedAt: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     version(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

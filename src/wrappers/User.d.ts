@@ -88,6 +88,7 @@ interface UserInterface extends ethers.utils.Interface {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -454,6 +455,7 @@ export class User extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -465,7 +467,7 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
       pcl: string,
       _request: {
         collateralRatio: BigNumberish;
@@ -474,6 +476,7 @@ export class User extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -937,6 +940,7 @@ export class User extends Contract {
       defaultGracePeriod: BigNumberish;
       gracePenaltyRate: BigNumberish;
       collectionPeriod: BigNumberish;
+      minBorrowAmount: BigNumberish;
       borrowLimit: BigNumberish;
       borrowRate: BigNumberish;
       collateralAsset: string;
@@ -948,7 +952,7 @@ export class User extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+  'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
     pcl: string,
     _request: {
       collateralRatio: BigNumberish;
@@ -957,6 +961,7 @@ export class User extends Contract {
       defaultGracePeriod: BigNumberish;
       gracePenaltyRate: BigNumberish;
       collectionPeriod: BigNumberish;
+      minBorrowAmount: BigNumberish;
       borrowLimit: BigNumberish;
       borrowRate: BigNumberish;
       collateralAsset: string;
@@ -1353,6 +1358,7 @@ export class User extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -1364,7 +1370,7 @@ export class User extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
       pcl: string,
       _request: {
         collateralRatio: BigNumberish;
@@ -1373,6 +1379,7 @@ export class User extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -1805,6 +1812,7 @@ export class User extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -1816,7 +1824,7 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
       pcl: string,
       _request: {
         collateralRatio: BigNumberish;
@@ -1825,6 +1833,7 @@ export class User extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -2289,6 +2298,7 @@ export class User extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -2300,7 +2310,7 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
       pcl: string,
       _request: {
         collateralRatio: BigNumberish;
@@ -2309,6 +2319,7 @@ export class User extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;

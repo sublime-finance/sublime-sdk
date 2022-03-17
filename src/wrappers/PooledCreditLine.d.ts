@@ -21,7 +21,7 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface PooledCreditLineInterface extends ethers.utils.Interface {
   functions: {
-    'accept(uint256)': FunctionFragment;
+    'accept(uint256,uint256)': FunctionFragment;
     'borrow(uint256,uint256)': FunctionFragment;
     'borrowerVerifier()': FunctionFragment;
     'calculateBorrowableAmount(uint256)': FunctionFragment;
@@ -30,6 +30,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
     'calculateInterest(uint256,uint256,uint256)': FunctionFragment;
     'calculateInterestAccrued(uint256)': FunctionFragment;
     'calculateTotalCollateralTokens(uint256)': FunctionFragment;
+    'cancelRequest(uint256)': FunctionFragment;
     'close(uint256)': FunctionFragment;
     'collateralShareInStrategy(uint256,address)': FunctionFragment;
     'collateralTokensToLiquidate(uint256,uint256)': FunctionFragment;
@@ -50,6 +51,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
     'repay(uint256,uint256)': FunctionFragment;
     'request(tuple)': FunctionFragment;
     'savingsAccount()': FunctionFragment;
+    'startAndBorrow(uint256,uint256)': FunctionFragment;
     'strategyRegistry()': FunctionFragment;
     'transferOwnership(address)': FunctionFragment;
     'updateBorrowLimitLimits(uint256,uint256)': FunctionFragment;
@@ -71,7 +73,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
     'withdrawableCollateral(uint256)': FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: 'accept', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'accept', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'borrow', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'borrowerVerifier', values?: undefined): string;
   encodeFunctionData(functionFragment: 'calculateBorrowableAmount', values: [BigNumberish]): string;
@@ -80,6 +82,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'calculateInterest', values: [BigNumberish, BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'calculateInterestAccrued', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'calculateTotalCollateralTokens', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'cancelRequest', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'close', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'collateralShareInStrategy', values: [BigNumberish, string]): string;
   encodeFunctionData(functionFragment: 'collateralTokensToLiquidate', values: [BigNumberish, BigNumberish]): string;
@@ -111,6 +114,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -122,6 +126,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
     ]
   ): string;
   encodeFunctionData(functionFragment: 'savingsAccount', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'startAndBorrow', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'strategyRegistry', values?: undefined): string;
   encodeFunctionData(functionFragment: 'transferOwnership', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateBorrowLimitLimits', values: [BigNumberish, BigNumberish]): string;
@@ -151,6 +156,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'calculateInterest', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'calculateInterestAccrued', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'calculateTotalCollateralTokens', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'cancelRequest', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'close', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'collateralShareInStrategy', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'collateralTokensToLiquidate', data: BytesLike): Result;
@@ -171,6 +177,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'repay', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'request', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'savingsAccount', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'startAndBorrow', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'strategyRegistry', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferOwnership', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateBorrowLimitLimits', data: BytesLike): Result;
@@ -198,10 +205,10 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
     'CollateralWithdrawn(uint256,uint256)': EventFragment;
     'CompleteCreditLineRepaid(uint256,address,uint256)': EventFragment;
     'CreditLineAccepted(uint256)': EventFragment;
+    'CreditLineCancelled(uint256)': EventFragment;
     'CreditLineClosed(uint256)': EventFragment;
     'CreditLineLiquidated(uint256,address)': EventFragment;
     'CreditLineRequested(uint256,address)': EventFragment;
-    'CreditLineReset(uint256)': EventFragment;
     'LimitsUpdated(string,uint256,uint256)': EventFragment;
     'OwnershipTransferred(address,address)': EventFragment;
     'PartialCreditLineRepaid(uint256,address,uint256)': EventFragment;
@@ -219,10 +226,10 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: 'CollateralWithdrawn'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'CompleteCreditLineRepaid'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'CreditLineAccepted'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'CreditLineCancelled'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'CreditLineClosed'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'CreditLineLiquidated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'CreditLineRequested'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'CreditLineReset'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'LimitsUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'OwnershipTransferred'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'PartialCreditLineRepaid'): EventFragment;
@@ -278,9 +285,17 @@ export class PooledCreditLine extends Contract {
   interface: PooledCreditLineInterface;
 
   functions: {
-    accept(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    accept(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
-    'accept(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'accept(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
     borrow(
       _id: BigNumberish,
@@ -346,6 +361,10 @@ export class PooledCreditLine extends Contract {
       _id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
+
+    cancelRequest(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'cancelRequest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     close(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -530,6 +549,7 @@ export class PooledCreditLine extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -541,7 +561,7 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'request((uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'request((uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
@@ -549,6 +569,7 @@ export class PooledCreditLine extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -563,6 +584,18 @@ export class PooledCreditLine extends Contract {
     savingsAccount(overrides?: CallOverrides): Promise<[string]>;
 
     'savingsAccount()'(overrides?: CallOverrides): Promise<[string]>;
+
+    startAndBorrow(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'startAndBorrow(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
     strategyRegistry(overrides?: CallOverrides): Promise<[string]>;
 
@@ -748,9 +781,17 @@ export class PooledCreditLine extends Contract {
     ): Promise<ContractTransaction>;
   };
 
-  accept(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  accept(
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
-  'accept(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'accept(uint256,uint256)'(
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   borrow(
     _id: BigNumberish,
@@ -816,6 +857,10 @@ export class PooledCreditLine extends Contract {
     _id: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
+
+  cancelRequest(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'cancelRequest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   close(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -1000,6 +1045,7 @@ export class PooledCreditLine extends Contract {
       defaultGracePeriod: BigNumberish;
       gracePenaltyRate: BigNumberish;
       collectionPeriod: BigNumberish;
+      minBorrowAmount: BigNumberish;
       borrowLimit: BigNumberish;
       borrowRate: BigNumberish;
       collateralAsset: string;
@@ -1011,7 +1057,7 @@ export class PooledCreditLine extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'request((uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+  'request((uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
     _request: {
       collateralRatio: BigNumberish;
       duration: BigNumberish;
@@ -1019,6 +1065,7 @@ export class PooledCreditLine extends Contract {
       defaultGracePeriod: BigNumberish;
       gracePenaltyRate: BigNumberish;
       collectionPeriod: BigNumberish;
+      minBorrowAmount: BigNumberish;
       borrowLimit: BigNumberish;
       borrowRate: BigNumberish;
       collateralAsset: string;
@@ -1033,6 +1080,18 @@ export class PooledCreditLine extends Contract {
   savingsAccount(overrides?: CallOverrides): Promise<string>;
 
   'savingsAccount()'(overrides?: CallOverrides): Promise<string>;
+
+  startAndBorrow(
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'startAndBorrow(uint256,uint256)'(
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   strategyRegistry(overrides?: CallOverrides): Promise<string>;
 
@@ -1212,9 +1271,9 @@ export class PooledCreditLine extends Contract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
-    accept(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    accept(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'accept(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    'accept(uint256,uint256)'(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     borrow(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
@@ -1257,6 +1316,10 @@ export class PooledCreditLine extends Contract {
     calculateTotalCollateralTokens(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'calculateTotalCollateralTokens(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    cancelRequest(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'cancelRequest(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     close(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
@@ -1425,6 +1488,7 @@ export class PooledCreditLine extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -1436,7 +1500,7 @@ export class PooledCreditLine extends Contract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    'request((uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'request((uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
@@ -1444,6 +1508,7 @@ export class PooledCreditLine extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -1458,6 +1523,10 @@ export class PooledCreditLine extends Contract {
     savingsAccount(overrides?: CallOverrides): Promise<string>;
 
     'savingsAccount()'(overrides?: CallOverrides): Promise<string>;
+
+    startAndBorrow(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'startAndBorrow(uint256,uint256)'(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     strategyRegistry(overrides?: CallOverrides): Promise<string>;
 
@@ -1568,6 +1637,8 @@ export class PooledCreditLine extends Contract {
 
     CreditLineAccepted(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
 
+    CreditLineCancelled(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
+
     CreditLineClosed(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
 
     CreditLineLiquidated(
@@ -1579,8 +1650,6 @@ export class PooledCreditLine extends Contract {
       id: BigNumberish | null,
       borrower: string | null
     ): TypedEventFilter<[BigNumber, string], { id: BigNumber; borrower: string }>;
-
-    CreditLineReset(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
 
     LimitsUpdated(
       limitType: string | null,
@@ -1615,9 +1684,13 @@ export class PooledCreditLine extends Contract {
   };
 
   estimateGas: {
-    accept(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    accept(_id: BigNumberish, _amount: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'accept(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'accept(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
     borrow(_id: BigNumberish, _amount: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -1673,6 +1746,10 @@ export class PooledCreditLine extends Contract {
       _id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
+
+    cancelRequest(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'cancelRequest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     close(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -1792,6 +1869,7 @@ export class PooledCreditLine extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -1803,7 +1881,7 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'request((uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'request((uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
@@ -1811,6 +1889,7 @@ export class PooledCreditLine extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -1825,6 +1904,18 @@ export class PooledCreditLine extends Contract {
     savingsAccount(overrides?: CallOverrides): Promise<BigNumber>;
 
     'savingsAccount()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    startAndBorrow(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'startAndBorrow(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
     strategyRegistry(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1987,9 +2078,17 @@ export class PooledCreditLine extends Contract {
   };
 
   populateTransaction: {
-    accept(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    accept(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
-    'accept(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'accept(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     borrow(
       _id: BigNumberish,
@@ -2058,6 +2157,10 @@ export class PooledCreditLine extends Contract {
       _id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    cancelRequest(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'cancelRequest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     close(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -2188,6 +2291,7 @@ export class PooledCreditLine extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -2199,7 +2303,7 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'request((uint256,uint256,address,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'request((uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
@@ -2207,6 +2311,7 @@ export class PooledCreditLine extends Contract {
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
+        minBorrowAmount: BigNumberish;
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
@@ -2221,6 +2326,18 @@ export class PooledCreditLine extends Contract {
     savingsAccount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'savingsAccount()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    startAndBorrow(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'startAndBorrow(uint256,uint256)'(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     strategyRegistry(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

@@ -80,6 +80,11 @@ const _abi = [
       },
       {
         internalType: 'uint256',
+        name: '_minBorrowAmount',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
         name: '_collectionPeriod',
         type: 'uint256',
       },
@@ -113,6 +118,32 @@ const _abi = [
       },
     ],
     name: 'repaid',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '_id',
+        type: 'uint256',
+      },
+    ],
+    name: 'requestCancelled',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '_id',
+        type: 'uint256',
+      },
+    ],
+    name: 'start',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',

@@ -22,20 +22,26 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 interface ILenderPoolInterface extends ethers.utils.Interface {
   functions: {
     'borrowed(uint256,uint256)': FunctionFragment;
-    'create(uint256,address,address,address,uint256,uint256,bool)': FunctionFragment;
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)': FunctionFragment;
     'repaid(uint256,uint256,uint256)': FunctionFragment;
+    'requestCancelled(uint256)': FunctionFragment;
+    'start(uint256)': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'borrowed', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(
     functionFragment: 'create',
-    values: [BigNumberish, string, string, string, BigNumberish, BigNumberish, boolean]
+    values: [BigNumberish, string, string, string, BigNumberish, BigNumberish, BigNumberish, boolean]
   ): string;
   encodeFunctionData(functionFragment: 'repaid', values: [BigNumberish, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'requestCancelled', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'start', values: [BigNumberish]): string;
 
   decodeFunctionResult(functionFragment: 'borrowed', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'create', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'repaid', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'requestCancelled', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'start', data: BytesLike): Result;
 
   events: {
     'LiquidityWithdrawn(uint256,address)': EventFragment;
@@ -106,17 +112,19 @@ export class ILenderPool extends Contract {
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'create(uint256,address,address,address,uint256,uint256,bool)'(
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
       _verifier: string,
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -135,6 +143,17 @@ export class ILenderPool extends Contract {
       _interestShares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
+
+    requestCancelled(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'requestCancelled(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
   };
 
   borrowed(
@@ -155,17 +174,19 @@ export class ILenderPool extends Contract {
     _token: string,
     _strategy: string,
     _borrowLimit: BigNumberish,
+    _minBorrowAmount: BigNumberish,
     _collectionPeriod: BigNumberish,
     _areTokensTransferable: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'create(uint256,address,address,address,uint256,uint256,bool)'(
+  'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
     _id: BigNumberish,
     _verifier: string,
     _token: string,
     _strategy: string,
     _borrowLimit: BigNumberish,
+    _minBorrowAmount: BigNumberish,
     _collectionPeriod: BigNumberish,
     _areTokensTransferable: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
@@ -185,6 +206,14 @@ export class ILenderPool extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  requestCancelled(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'requestCancelled(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
   callStatic: {
     borrowed(_id: BigNumberish, _sharesBorrowed: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
@@ -196,17 +225,19 @@ export class ILenderPool extends Contract {
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'create(uint256,address,address,address,uint256,uint256,bool)'(
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
       _verifier: string,
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: CallOverrides
@@ -220,6 +251,14 @@ export class ILenderPool extends Contract {
       _interestShares: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
+
+    requestCancelled(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'requestCancelled(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    start(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'start(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {
@@ -248,17 +287,19 @@ export class ILenderPool extends Contract {
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'create(uint256,address,address,address,uint256,uint256,bool)'(
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
       _verifier: string,
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -277,6 +318,14 @@ export class ILenderPool extends Contract {
       _interestShares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
+
+    requestCancelled(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'requestCancelled(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
   };
 
   populateTransaction: {
@@ -298,17 +347,19 @@ export class ILenderPool extends Contract {
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'create(uint256,address,address,address,uint256,uint256,bool)'(
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
       _verifier: string,
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -327,5 +378,16 @@ export class ILenderPool extends Contract {
       _interestShares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    requestCancelled(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'requestCancelled(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
   };
 }

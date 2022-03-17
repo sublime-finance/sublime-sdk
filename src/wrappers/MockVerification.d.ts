@@ -11,6 +11,7 @@ import {
   PopulatedTransaction,
   Contract,
   ContractTransaction,
+  Overrides,
   CallOverrides,
 } from 'ethers';
 import { BytesLike } from '@ethersproject/bytes';
@@ -20,12 +21,18 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface MockVerificationInterface extends ethers.utils.Interface {
   functions: {
+    'addUser(address,address)': FunctionFragment;
     'isUser(address,address)': FunctionFragment;
+    'removeUser(address,address)': FunctionFragment;
   };
 
+  encodeFunctionData(functionFragment: 'addUser', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'isUser', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'removeUser', values: [string, string]): string;
 
+  decodeFunctionResult(functionFragment: 'addUser', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'isUser', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'removeUser', data: BytesLike): Result;
 
   events: {};
 }
@@ -74,32 +81,108 @@ export class MockVerification extends Contract {
   interface: MockVerificationInterface;
 
   functions: {
-    'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<[boolean]>;
+    addUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'isUser(address)'(_user: string, overrides?: CallOverrides): Promise<[boolean]>;
+    'addUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<[boolean]>;
+
+    'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<[boolean]>;
+
+    removeUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'removeUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
   };
 
-  'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<boolean>;
+  addUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'isUser(address)'(_user: string, overrides?: CallOverrides): Promise<boolean>;
+  'addUser(address,address)'(
+    _user: string,
+    _verifier: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+
+  'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+
+  removeUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'removeUser(address,address)'(
+    _user: string,
+    _verifier: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   callStatic: {
-    'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<boolean>;
+    addUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
 
-    'isUser(address)'(_user: string, overrides?: CallOverrides): Promise<boolean>;
+    'addUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
+
+    isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+
+    'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+
+    removeUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
+
+    'removeUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {};
 
   estimateGas: {
-    'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<BigNumber>;
+    addUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'isUser(address)'(_user: string, overrides?: CallOverrides): Promise<BigNumber>;
+    'addUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    removeUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'removeUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    addUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'isUser(address)'(_user: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    'addUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    removeUser(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'removeUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
   };
 }

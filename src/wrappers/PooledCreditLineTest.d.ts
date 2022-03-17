@@ -43,7 +43,7 @@ interface PooledCreditLineTestInterface extends ethers.utils.Interface {
     'randomAddress()': FunctionFragment;
     'setUp()': FunctionFragment;
     'test_checkSetup(uint256)': FunctionFragment;
-    'test_depositCollateral(uint256,uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256,bool)': FunctionFragment;
+    'test_depositCollateral(uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256)': FunctionFragment;
     'test_placeRequest(uint256,uint256,uint256,uint256,uint256,uint128,uint128,bool)': FunctionFragment;
   };
 
@@ -71,18 +71,7 @@ interface PooledCreditLineTestInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'test_checkSetup', values: [BigNumberish]): string;
   encodeFunctionData(
     functionFragment: 'test_depositCollateral',
-    values: [
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      boolean
-    ]
+    values: [BigNumberish, BigNumberish, BigNumberish, BigNumberish, BigNumberish, BigNumberish, BigNumberish, BigNumberish]
   ): string;
   encodeFunctionData(
     functionFragment: 'test_placeRequest',
@@ -287,7 +276,6 @@ export class PooledCreditLineTest extends Contract {
     ): Promise<ContractTransaction>;
 
     test_depositCollateral(
-      _colRatio: BigNumberish,
       _duration: BigNumberish,
       _defaultGraceDuration: BigNumberish,
       _gracePenaltyRate: BigNumberish,
@@ -296,12 +284,10 @@ export class PooledCreditLineTest extends Contract {
       _borrowRate: BigNumberish,
       _lender1Amount: BigNumberish,
       _lender2Amount: BigNumberish,
-      _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'test_depositCollateral(uint256,uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256,bool)'(
-      _colRatio: BigNumberish,
+    'test_depositCollateral(uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256)'(
       _duration: BigNumberish,
       _defaultGraceDuration: BigNumberish,
       _gracePenaltyRate: BigNumberish,
@@ -310,7 +296,6 @@ export class PooledCreditLineTest extends Contract {
       _borrowRate: BigNumberish,
       _lender1Amount: BigNumberish,
       _lender2Amount: BigNumberish,
-      _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -428,7 +413,6 @@ export class PooledCreditLineTest extends Contract {
   'test_checkSetup(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   test_depositCollateral(
-    _colRatio: BigNumberish,
     _duration: BigNumberish,
     _defaultGraceDuration: BigNumberish,
     _gracePenaltyRate: BigNumberish,
@@ -437,12 +421,10 @@ export class PooledCreditLineTest extends Contract {
     _borrowRate: BigNumberish,
     _lender1Amount: BigNumberish,
     _lender2Amount: BigNumberish,
-    _areTokensTransferable: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'test_depositCollateral(uint256,uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256,bool)'(
-    _colRatio: BigNumberish,
+  'test_depositCollateral(uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256)'(
     _duration: BigNumberish,
     _defaultGraceDuration: BigNumberish,
     _gracePenaltyRate: BigNumberish,
@@ -451,7 +433,6 @@ export class PooledCreditLineTest extends Contract {
     _borrowRate: BigNumberish,
     _lender1Amount: BigNumberish,
     _lender2Amount: BigNumberish,
-    _areTokensTransferable: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -569,7 +550,6 @@ export class PooledCreditLineTest extends Contract {
     'test_checkSetup(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     test_depositCollateral(
-      _colRatio: BigNumberish,
       _duration: BigNumberish,
       _defaultGraceDuration: BigNumberish,
       _gracePenaltyRate: BigNumberish,
@@ -578,12 +558,10 @@ export class PooledCreditLineTest extends Contract {
       _borrowRate: BigNumberish,
       _lender1Amount: BigNumberish,
       _lender2Amount: BigNumberish,
-      _areTokensTransferable: boolean,
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'test_depositCollateral(uint256,uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256,bool)'(
-      _colRatio: BigNumberish,
+    'test_depositCollateral(uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256)'(
       _duration: BigNumberish,
       _defaultGraceDuration: BigNumberish,
       _gracePenaltyRate: BigNumberish,
@@ -592,7 +570,6 @@ export class PooledCreditLineTest extends Contract {
       _borrowRate: BigNumberish,
       _lender1Amount: BigNumberish,
       _lender2Amount: BigNumberish,
-      _areTokensTransferable: boolean,
       overrides?: CallOverrides
     ): Promise<void>;
 
@@ -753,7 +730,6 @@ export class PooledCreditLineTest extends Contract {
     'test_checkSetup(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     test_depositCollateral(
-      _colRatio: BigNumberish,
       _duration: BigNumberish,
       _defaultGraceDuration: BigNumberish,
       _gracePenaltyRate: BigNumberish,
@@ -762,12 +738,10 @@ export class PooledCreditLineTest extends Contract {
       _borrowRate: BigNumberish,
       _lender1Amount: BigNumberish,
       _lender2Amount: BigNumberish,
-      _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'test_depositCollateral(uint256,uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256,bool)'(
-      _colRatio: BigNumberish,
+    'test_depositCollateral(uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256)'(
       _duration: BigNumberish,
       _defaultGraceDuration: BigNumberish,
       _gracePenaltyRate: BigNumberish,
@@ -776,7 +750,6 @@ export class PooledCreditLineTest extends Contract {
       _borrowRate: BigNumberish,
       _lender1Amount: BigNumberish,
       _lender2Amount: BigNumberish,
-      _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -898,7 +871,6 @@ export class PooledCreditLineTest extends Contract {
     ): Promise<PopulatedTransaction>;
 
     test_depositCollateral(
-      _colRatio: BigNumberish,
       _duration: BigNumberish,
       _defaultGraceDuration: BigNumberish,
       _gracePenaltyRate: BigNumberish,
@@ -907,12 +879,10 @@ export class PooledCreditLineTest extends Contract {
       _borrowRate: BigNumberish,
       _lender1Amount: BigNumberish,
       _lender2Amount: BigNumberish,
-      _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'test_depositCollateral(uint256,uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256,bool)'(
-      _colRatio: BigNumberish,
+    'test_depositCollateral(uint256,uint256,uint256,uint256,uint128,uint128,uint256,uint256)'(
       _duration: BigNumberish,
       _defaultGraceDuration: BigNumberish,
       _gracePenaltyRate: BigNumberish,
@@ -921,7 +891,6 @@ export class PooledCreditLineTest extends Contract {
       _borrowRate: BigNumberish,
       _lender1Amount: BigNumberish,
       _lender2Amount: BigNumberish,
-      _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

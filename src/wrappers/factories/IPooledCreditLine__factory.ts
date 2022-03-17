@@ -18,7 +18,12 @@ const _abi = [
     inputs: [
       {
         internalType: 'uint256',
-        name: '',
+        name: '_id',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: '_amount',
         type: 'uint256',
       },
     ],

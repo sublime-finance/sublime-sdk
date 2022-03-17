@@ -50,7 +50,7 @@ export class CreditLineEthUtils {
     const _amount = new BigNumber(amount);
     let value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
 
-    return this.creditLineUtils.depositEthAsCollateralToCreditLine(creditLineNumber, strategyAddress, { ...options, value });
+    return this.creditLineUtils.depositEthAsCollateralToCreditLine(creditLineNumber, { ...options, value });
   }
 
   /**

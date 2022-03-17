@@ -2,7 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import { Signer, Contract, ContractFactory, Overrides } from 'ethers';
+import { Signer, BigNumberish, Contract, ContractFactory, Overrides } from 'ethers';
 import { Provider, TransactionRequest } from '@ethersproject/providers';
 
 import type { MockV3Aggregator } from '../MockV3Aggregator';
@@ -12,11 +12,19 @@ export class MockV3Aggregator__factory extends ContractFactory {
     super(_abi, _bytecode, signer);
   }
 
-  deploy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<MockV3Aggregator> {
-    return super.deploy(overrides || {}) as Promise<MockV3Aggregator>;
+  deploy(
+    _decimals: BigNumberish,
+    _initialAnswer: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<MockV3Aggregator> {
+    return super.deploy(_decimals, _initialAnswer, overrides || {}) as Promise<MockV3Aggregator>;
   }
-  getDeployTransaction(overrides?: Overrides & { from?: string | Promise<string> }): TransactionRequest {
-    return super.getDeployTransaction(overrides || {});
+  getDeployTransaction(
+    _decimals: BigNumberish,
+    _initialAnswer: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): TransactionRequest {
+    return super.getDeployTransaction(_decimals, _initialAnswer, overrides || {});
   }
   attach(address: string): MockV3Aggregator {
     return super.attach(address) as MockV3Aggregator;
@@ -30,6 +38,22 @@ export class MockV3Aggregator__factory extends ContractFactory {
 }
 
 const _abi = [
+  {
+    inputs: [
+      {
+        internalType: 'uint8',
+        name: '_decimals',
+        type: 'uint8',
+      },
+      {
+        internalType: 'int256',
+        name: '_initialAnswer',
+        type: 'int256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'constructor',
+  },
   {
     inputs: [],
     name: 'decimals',
@@ -51,6 +75,25 @@ const _abi = [
         internalType: 'string',
         name: '',
         type: 'string',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    name: 'getAnswer',
+    outputs: [
+      {
+        internalType: 'int256',
+        name: '',
+        type: 'int256',
       },
     ],
     stateMutability: 'view',
@@ -96,6 +139,51 @@ const _abi = [
     type: 'function',
   },
   {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    name: 'getTimestamp',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'latestAnswer',
+    outputs: [
+      {
+        internalType: 'int256',
+        name: '',
+        type: 'int256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'latestRound',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
     inputs: [],
     name: 'latestRoundData',
     outputs: [
@@ -130,6 +218,60 @@ const _abi = [
   },
   {
     inputs: [],
+    name: 'latestTimestamp',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'int256',
+        name: '_answer',
+        type: 'int256',
+      },
+    ],
+    name: 'updateAnswer',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint80',
+        name: '_roundId',
+        type: 'uint80',
+      },
+      {
+        internalType: 'int256',
+        name: '_answer',
+        type: 'int256',
+      },
+      {
+        internalType: 'uint256',
+        name: '_timestamp',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: '_startedAt',
+        type: 'uint256',
+      },
+    ],
+    name: 'updateRoundData',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [],
     name: 'version',
     outputs: [
       {
@@ -144,4 +286,4 @@ const _abi = [
 ];
 
 const _bytecode =
-  '0x608060405234801561001057600080fd5b506102b5806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063313ce5671461005c57806354fd4d501461007a5780637284e416146100945780639a6fc8f514610111578063feaf968c14610184575b600080fd5b61006461018c565b6040805160ff9092168252519081900360200190f35b610082610191565b60408051918252519081900360200190f35b61009c610196565b6040805160208082528351818301528351919283929083019185019080838360005b838110156100d65781810151838201526020016100be565b50505050905090810190601f1680156101035780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61013a6004803603602081101561012757600080fd5b503569ffffffffffffffffffff166101be565b604051808669ffffffffffffffffffff1681526020018581526020018481526020018381526020018269ffffffffffffffffffff1681526020019550505050505060405180910390f35b61013a61021f565b601290565b600a90565b60408051808201909152600e81526d2737902232b9b1b934b83a34b7b760911b602082015290565b60008060008060008065011eab19d4b442604051602001808281526020019150506040516020818303038152906040528051906020012060001c816101ff57fe5b6001999190079750621e180896506288e3eb95506296a3c3945092505050565b60008060008060008065011eab19d4b442604051602001808281526020019150506040516020818303038152906040528051906020012060001c8161026057fe5b6001989190079650621e180895506288e3eb94506296a3c3935091505056fea26469706673582212202beff04fbca106e569a3a7dd8400df02a245cd0bba84e9d5f53d1127efbde04c64736f6c63430007060033';
+  '0x608060405234801561001057600080fd5b506040516104df3803806104df8339818101604052604081101561003357600080fd5b5080516020909101516000805460ff191660ff84161790556100548161005b565b50506100a2565b600181815542600281905560038054909201808355600090815260046020908152604080832095909555835482526005815284822083905592548152600690925291902055565b61042e806100b16000396000f3fe608060405234801561001057600080fd5b50600436106100b45760003560e01c80638205bf6a116100715780638205bf6a146101b85780639a6fc8f5146101c0578063a87a20ce1461022a578063b5ab58dc14610247578063b633620c14610264578063feaf968c14610281576100b4565b8063313ce567146100b95780634aa2011f146100d757806350d25bcd1461011157806354fd4d501461012b578063668a0f02146101335780637284e4161461013b575b600080fd5b6100c1610289565b6040805160ff9092168252519081900360200190f35b61010f600480360360808110156100ed57600080fd5b506001600160501b038135169060208101359060408101359060600135610292565b005b6101196102dc565b60408051918252519081900360200190f35b6101196102e2565b6101196102e7565b6101436102ed565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561017d578181015183820152602001610165565b50505050905090810190601f1680156101aa5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610119610324565b6101e6600480360360208110156101d657600080fd5b50356001600160501b031661032a565b60405180866001600160501b03168152602001858152602001848152602001838152602001826001600160501b031681526020019550505050505060405180910390f35b61010f6004803603602081101561024057600080fd5b5035610360565b6101196004803603602081101561025d57600080fd5b50356103a7565b6101196004803603602081101561027a57600080fd5b50356103b9565b6101e66103cb565b60005460ff1681565b6001600160501b0390931660038181556001849055600283905560009182526004602090815260408084209590955581548352600581528483209390935554815260069091522055565b60015481565b600081565b60035481565b60408051808201909152601f81527f76302e362f74657374732f4d6f636b563341676772656761746f722e736f6c00602082015290565b60025481565b6001600160501b038116600090815260046020908152604080832054600683528184205460059093529220549293919290918490565b600181815542600281905560038054909201808355600090815260046020908152604080832095909555835482526005815284822083905592548152600690925291902055565b60046020526000908152604090205481565b60056020526000908152604090205481565b6003546000818152600460209081526040808320546006835281842054600590935292205483909192939456fea2646970667358221220a88603fe2fa753a3371110aac626a6c651dc422fe27541c099cd39730f4f9b8164736f6c63430007060033';

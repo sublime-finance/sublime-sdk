@@ -23,20 +23,24 @@ interface LenderPoolInterface extends ethers.utils.Interface {
   functions: {
     'POOLED_CREDIT_LINE()': FunctionFragment;
     'SAVINGS_ACCOUNT()': FunctionFragment;
+    'VERIFICATION()': FunctionFragment;
     'balanceOf(address,uint256)': FunctionFragment;
     'balanceOfBatch(address[],uint256[])': FunctionFragment;
     'borrowed(uint256,uint256)': FunctionFragment;
     'calculatePrincipleWithdrawable(uint256,address)': FunctionFragment;
-    'create(uint256,address,address,address,uint256,uint256,bool)': FunctionFragment;
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)': FunctionFragment;
     'creditLines(uint256)': FunctionFragment;
+    'getCreditLineStartTime(uint256)': FunctionFragment;
     'initialize()': FunctionFragment;
     'isApprovedForAll(address,address)': FunctionFragment;
     'lend(uint256,uint256)': FunctionFragment;
     'liquidate(uint256,bool)': FunctionFragment;
     'repaid(uint256,uint256,uint256)': FunctionFragment;
+    'requestCancelled(uint256)': FunctionFragment;
     'safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)': FunctionFragment;
     'safeTransferFrom(address,address,uint256,uint256,bytes)': FunctionFragment;
     'setApprovalForAll(address,bool)': FunctionFragment;
+    'start(uint256)': FunctionFragment;
     'supportsInterface(bytes4)': FunctionFragment;
     'totalSupply(uint256)': FunctionFragment;
     'uri(uint256)': FunctionFragment;
@@ -47,26 +51,30 @@ interface LenderPoolInterface extends ethers.utils.Interface {
 
   encodeFunctionData(functionFragment: 'POOLED_CREDIT_LINE', values?: undefined): string;
   encodeFunctionData(functionFragment: 'SAVINGS_ACCOUNT', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'VERIFICATION', values?: undefined): string;
   encodeFunctionData(functionFragment: 'balanceOf', values: [string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'balanceOfBatch', values: [string[], BigNumberish[]]): string;
   encodeFunctionData(functionFragment: 'borrowed', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'calculatePrincipleWithdrawable', values: [BigNumberish, string]): string;
   encodeFunctionData(
     functionFragment: 'create',
-    values: [BigNumberish, string, string, string, BigNumberish, BigNumberish, boolean]
+    values: [BigNumberish, string, string, string, BigNumberish, BigNumberish, BigNumberish, boolean]
   ): string;
   encodeFunctionData(functionFragment: 'creditLines', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'getCreditLineStartTime', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'initialize', values?: undefined): string;
   encodeFunctionData(functionFragment: 'isApprovedForAll', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'lend', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'liquidate', values: [BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'repaid', values: [BigNumberish, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'requestCancelled', values: [BigNumberish]): string;
   encodeFunctionData(
     functionFragment: 'safeBatchTransferFrom',
     values: [string, string, BigNumberish[], BigNumberish[], BytesLike]
   ): string;
   encodeFunctionData(functionFragment: 'safeTransferFrom', values: [string, string, BigNumberish, BigNumberish, BytesLike]): string;
   encodeFunctionData(functionFragment: 'setApprovalForAll', values: [string, boolean]): string;
+  encodeFunctionData(functionFragment: 'start', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'supportsInterface', values: [BytesLike]): string;
   encodeFunctionData(functionFragment: 'totalSupply', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'uri', values: [BigNumberish]): string;
@@ -76,20 +84,24 @@ interface LenderPoolInterface extends ethers.utils.Interface {
 
   decodeFunctionResult(functionFragment: 'POOLED_CREDIT_LINE', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'SAVINGS_ACCOUNT', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'VERIFICATION', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'balanceOf', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'balanceOfBatch', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'borrowed', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'calculatePrincipleWithdrawable', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'create', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'creditLines', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getCreditLineStartTime', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'isApprovedForAll', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'lend', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'liquidate', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'repaid', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'requestCancelled', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'safeBatchTransferFrom', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'safeTransferFrom', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setApprovalForAll', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'start', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'supportsInterface', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'totalSupply', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'uri', data: BytesLike): Result;
@@ -99,15 +111,29 @@ interface LenderPoolInterface extends ethers.utils.Interface {
 
   events: {
     'ApprovalForAll(address,address,bool)': EventFragment;
+    'InterestWithdrawn(uint256,address,uint256)': EventFragment;
+    'Lend(uint256,address,uint256)': EventFragment;
+    'Liquidated(uint256,uint256)': EventFragment;
+    'LiquidationWithdrawn(uint256,address,uint256)': EventFragment;
+    'PooledCreditLineAccepted(uint256,uint256)': EventFragment;
     'TransferBatch(address,address,address,uint256[],uint256[])': EventFragment;
     'TransferSingle(address,address,address,uint256,uint256)': EventFragment;
     'URI(string,uint256)': EventFragment;
+    'WithdrawLiquidity(uint256,address,uint256)': EventFragment;
+    'WithdrawLiquidityOnCancel(uint256,address,uint256)': EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: 'ApprovalForAll'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'InterestWithdrawn'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Lend'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Liquidated'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'LiquidationWithdrawn'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'PooledCreditLineAccepted'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'TransferBatch'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'TransferSingle'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'URI'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'WithdrawLiquidity'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'WithdrawLiquidityOnCancel'): EventFragment;
 }
 
 export class LenderPool extends Contract {
@@ -162,6 +188,10 @@ export class LenderPool extends Contract {
 
     'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<[string]>;
 
+    VERIFICATION(overrides?: CallOverrides): Promise<[string]>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<[string]>;
+
     balanceOf(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'balanceOf(address,uint256)'(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -192,17 +222,19 @@ export class LenderPool extends Contract {
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'create(uint256,address,address,address,uint256,uint256,bool)'(
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
       _verifier: string,
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -212,11 +244,12 @@ export class LenderPool extends Contract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<
-      [BigNumber, string, string, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
+      [BigNumber, string, string, BigNumber, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
         startTime: BigNumber;
         token: string;
         collateralToken: string;
         borrowLimit: BigNumber;
+        minBorrowAmount: BigNumber;
         verifier: string;
         strategy: string;
         sharesHeld: BigNumber;
@@ -232,11 +265,12 @@ export class LenderPool extends Contract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<
-      [BigNumber, string, string, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
+      [BigNumber, string, string, BigNumber, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
         startTime: BigNumber;
         token: string;
         collateralToken: string;
         borrowLimit: BigNumber;
+        minBorrowAmount: BigNumber;
         verifier: string;
         strategy: string;
         sharesHeld: BigNumber;
@@ -247,6 +281,10 @@ export class LenderPool extends Contract {
         areTokensTransferable: boolean;
       }
     >;
+
+    getCreditLineStartTime(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'getCreditLineStartTime(uint256)'(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     initialize(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -291,6 +329,13 @@ export class LenderPool extends Contract {
       _id: BigNumberish,
       _sharesRepaid: BigNumberish,
       _interestShares: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    requestCancelled(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'requestCancelled(uint256)'(
+      _id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -341,6 +386,10 @@ export class LenderPool extends Contract {
       approved: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
+
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<[boolean]>;
 
@@ -394,6 +443,10 @@ export class LenderPool extends Contract {
 
   'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<string>;
 
+  VERIFICATION(overrides?: CallOverrides): Promise<string>;
+
+  'VERIFICATION()'(overrides?: CallOverrides): Promise<string>;
+
   balanceOf(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
   'balanceOf(address,uint256)'(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
@@ -424,17 +477,19 @@ export class LenderPool extends Contract {
     _token: string,
     _strategy: string,
     _borrowLimit: BigNumberish,
+    _minBorrowAmount: BigNumberish,
     _collectionPeriod: BigNumberish,
     _areTokensTransferable: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'create(uint256,address,address,address,uint256,uint256,bool)'(
+  'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
     _id: BigNumberish,
     _verifier: string,
     _token: string,
     _strategy: string,
     _borrowLimit: BigNumberish,
+    _minBorrowAmount: BigNumberish,
     _collectionPeriod: BigNumberish,
     _areTokensTransferable: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
@@ -444,11 +499,12 @@ export class LenderPool extends Contract {
     arg0: BigNumberish,
     overrides?: CallOverrides
   ): Promise<
-    [BigNumber, string, string, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
+    [BigNumber, string, string, BigNumber, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
       startTime: BigNumber;
       token: string;
       collateralToken: string;
       borrowLimit: BigNumber;
+      minBorrowAmount: BigNumber;
       verifier: string;
       strategy: string;
       sharesHeld: BigNumber;
@@ -464,11 +520,12 @@ export class LenderPool extends Contract {
     arg0: BigNumberish,
     overrides?: CallOverrides
   ): Promise<
-    [BigNumber, string, string, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
+    [BigNumber, string, string, BigNumber, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
       startTime: BigNumber;
       token: string;
       collateralToken: string;
       borrowLimit: BigNumber;
+      minBorrowAmount: BigNumber;
       verifier: string;
       strategy: string;
       sharesHeld: BigNumber;
@@ -479,6 +536,10 @@ export class LenderPool extends Contract {
       areTokensTransferable: boolean;
     }
   >;
+
+  getCreditLineStartTime(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+  'getCreditLineStartTime(uint256)'(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
   initialize(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -521,6 +582,10 @@ export class LenderPool extends Contract {
     _interestShares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
+
+  requestCancelled(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'requestCancelled(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   safeBatchTransferFrom(
     from: string,
@@ -569,6 +634,10 @@ export class LenderPool extends Contract {
     approved: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
+
+  start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
 
@@ -622,6 +691,10 @@ export class LenderPool extends Contract {
 
     'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<string>;
 
+    VERIFICATION(overrides?: CallOverrides): Promise<string>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<string>;
+
     balanceOf(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'balanceOf(address,uint256)'(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
@@ -644,17 +717,19 @@ export class LenderPool extends Contract {
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'create(uint256,address,address,address,uint256,uint256,bool)'(
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
       _verifier: string,
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: CallOverrides
@@ -664,11 +739,12 @@ export class LenderPool extends Contract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<
-      [BigNumber, string, string, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
+      [BigNumber, string, string, BigNumber, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
         startTime: BigNumber;
         token: string;
         collateralToken: string;
         borrowLimit: BigNumber;
+        minBorrowAmount: BigNumber;
         verifier: string;
         strategy: string;
         sharesHeld: BigNumber;
@@ -684,11 +760,12 @@ export class LenderPool extends Contract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<
-      [BigNumber, string, string, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
+      [BigNumber, string, string, BigNumber, BigNumber, string, string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, boolean] & {
         startTime: BigNumber;
         token: string;
         collateralToken: string;
         borrowLimit: BigNumber;
+        minBorrowAmount: BigNumber;
         verifier: string;
         strategy: string;
         sharesHeld: BigNumber;
@@ -699,6 +776,10 @@ export class LenderPool extends Contract {
         areTokensTransferable: boolean;
       }
     >;
+
+    getCreditLineStartTime(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getCreditLineStartTime(uint256)'(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     initialize(overrides?: CallOverrides): Promise<void>;
 
@@ -724,6 +805,10 @@ export class LenderPool extends Contract {
       _interestShares: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
+
+    requestCancelled(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'requestCancelled(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     safeBatchTransferFrom(
       from: string,
@@ -765,6 +850,10 @@ export class LenderPool extends Contract {
 
     'setApprovalForAll(address,bool)'(operator: string, approved: boolean, overrides?: CallOverrides): Promise<void>;
 
+    start(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'start(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
     supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
 
     'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
@@ -796,6 +885,34 @@ export class LenderPool extends Contract {
       operator: string | null,
       approved: null
     ): TypedEventFilter<[string, string, boolean], { account: string; operator: string; approved: boolean }>;
+
+    InterestWithdrawn(
+      id: BigNumberish | null,
+      user: string | null,
+      shares: null
+    ): TypedEventFilter<[BigNumber, string, BigNumber], { id: BigNumber; user: string; shares: BigNumber }>;
+
+    Lend(
+      id: BigNumberish | null,
+      user: string | null,
+      amount: null
+    ): TypedEventFilter<[BigNumber, string, BigNumber], { id: BigNumber; user: string; amount: BigNumber }>;
+
+    Liquidated(
+      id: BigNumberish | null,
+      collateralLiquidated: null
+    ): TypedEventFilter<[BigNumber, BigNumber], { id: BigNumber; collateralLiquidated: BigNumber }>;
+
+    LiquidationWithdrawn(
+      id: BigNumberish | null,
+      user: string | null,
+      collateralShare: null
+    ): TypedEventFilter<[BigNumber, string, BigNumber], { id: BigNumber; user: string; collateralShare: BigNumber }>;
+
+    PooledCreditLineAccepted(
+      id: BigNumberish | null,
+      amount: null
+    ): TypedEventFilter<[BigNumber, BigNumber], { id: BigNumber; amount: BigNumber }>;
 
     TransferBatch(
       operator: string | null,
@@ -832,6 +949,18 @@ export class LenderPool extends Contract {
     >;
 
     URI(value: null, id: BigNumberish | null): TypedEventFilter<[string, BigNumber], { value: string; id: BigNumber }>;
+
+    WithdrawLiquidity(
+      id: BigNumberish | null,
+      user: string | null,
+      shares: null
+    ): TypedEventFilter<[BigNumber, string, BigNumber], { id: BigNumber; user: string; shares: BigNumber }>;
+
+    WithdrawLiquidityOnCancel(
+      id: BigNumberish | null,
+      user: string | null,
+      amount: null
+    ): TypedEventFilter<[BigNumber, string, BigNumber], { id: BigNumber; user: string; amount: BigNumber }>;
   };
 
   estimateGas: {
@@ -842,6 +971,10 @@ export class LenderPool extends Contract {
     SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<BigNumber>;
 
     'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    VERIFICATION(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     balanceOf(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -873,17 +1006,19 @@ export class LenderPool extends Contract {
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'create(uint256,address,address,address,uint256,uint256,bool)'(
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
       _verifier: string,
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -892,6 +1027,10 @@ export class LenderPool extends Contract {
     creditLines(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'creditLines(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    getCreditLineStartTime(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getCreditLineStartTime(uint256)'(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     initialize(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -930,6 +1069,10 @@ export class LenderPool extends Contract {
       _interestShares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
+
+    requestCancelled(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'requestCancelled(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     safeBatchTransferFrom(
       from: string,
@@ -974,6 +1117,10 @@ export class LenderPool extends Contract {
       approved: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
+
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1021,6 +1168,10 @@ export class LenderPool extends Contract {
 
     'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    VERIFICATION(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     balanceOf(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'balanceOf(address,uint256)'(account: string, id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1059,17 +1210,19 @@ export class LenderPool extends Contract {
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'create(uint256,address,address,address,uint256,uint256,bool)'(
+    'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
       _verifier: string,
       _token: string,
       _strategy: string,
       _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
       _collectionPeriod: BigNumberish,
       _areTokensTransferable: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -1078,6 +1231,10 @@ export class LenderPool extends Contract {
     creditLines(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'creditLines(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    getCreditLineStartTime(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'getCreditLineStartTime(uint256)'(creditLineId: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     initialize(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -1122,6 +1279,13 @@ export class LenderPool extends Contract {
       _id: BigNumberish,
       _sharesRepaid: BigNumberish,
       _interestShares: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    requestCancelled(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'requestCancelled(uint256)'(
+      _id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -1172,6 +1336,10 @@ export class LenderPool extends Contract {
       approved: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

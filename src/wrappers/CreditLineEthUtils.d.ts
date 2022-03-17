@@ -22,13 +22,13 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 interface CreditLineEthUtilsInterface extends ethers.utils.Interface {
   functions: {
     'creditlines()': FunctionFragment;
-    'depositEthAsCollateralToCreditLine(uint256,address)': FunctionFragment;
+    'depositEthAsCollateralToCreditLine(uint256)': FunctionFragment;
     'repayEthToCreditLines(uint256)': FunctionFragment;
     'weth()': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'creditlines', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'depositEthAsCollateralToCreditLine', values: [BigNumberish, string]): string;
+  encodeFunctionData(functionFragment: 'depositEthAsCollateralToCreditLine', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'repayEthToCreditLines', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'weth', values?: undefined): string;
 
@@ -90,13 +90,11 @@ export class CreditLineEthUtils extends Contract {
 
     depositEthAsCollateralToCreditLine(
       _id: BigNumberish,
-      _strategy: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'depositEthAsCollateralToCreditLine(uint256,address)'(
+    'depositEthAsCollateralToCreditLine(uint256)'(
       _id: BigNumberish,
-      _strategy: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -121,13 +119,11 @@ export class CreditLineEthUtils extends Contract {
 
   depositEthAsCollateralToCreditLine(
     _id: BigNumberish,
-    _strategy: string,
     overrides?: PayableOverrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'depositEthAsCollateralToCreditLine(uint256,address)'(
+  'depositEthAsCollateralToCreditLine(uint256)'(
     _id: BigNumberish,
-    _strategy: string,
     overrides?: PayableOverrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -150,9 +146,9 @@ export class CreditLineEthUtils extends Contract {
 
     'creditlines()'(overrides?: CallOverrides): Promise<string>;
 
-    depositEthAsCollateralToCreditLine(_id: BigNumberish, _strategy: string, overrides?: CallOverrides): Promise<void>;
+    depositEthAsCollateralToCreditLine(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'depositEthAsCollateralToCreditLine(uint256,address)'(_id: BigNumberish, _strategy: string, overrides?: CallOverrides): Promise<void>;
+    'depositEthAsCollateralToCreditLine(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     repayEthToCreditLines(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
@@ -172,13 +168,11 @@ export class CreditLineEthUtils extends Contract {
 
     depositEthAsCollateralToCreditLine(
       _id: BigNumberish,
-      _strategy: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'depositEthAsCollateralToCreditLine(uint256,address)'(
+    'depositEthAsCollateralToCreditLine(uint256)'(
       _id: BigNumberish,
-      _strategy: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -201,13 +195,11 @@ export class CreditLineEthUtils extends Contract {
 
     depositEthAsCollateralToCreditLine(
       _id: BigNumberish,
-      _strategy: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'depositEthAsCollateralToCreditLine(uint256,address)'(
+    'depositEthAsCollateralToCreditLine(uint256)'(
       _id: BigNumberish,
-      _strategy: string,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
