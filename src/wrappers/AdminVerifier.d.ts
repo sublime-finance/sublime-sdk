@@ -19,16 +19,15 @@ import { Listener, Provider } from '@ethersproject/providers';
 import { FunctionFragment, EventFragment, Result } from '@ethersproject/abi';
 import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
-interface TwitterVerifierInterface extends ethers.utils.Interface {
+interface AdminVerifierInterface extends ethers.utils.Interface {
   functions: {
     'initialize(address,address,address,uint256,string,string)': FunctionFragment;
     'owner()': FunctionFragment;
-    'registerSelf(bool,uint8,bytes32,bytes32,string,string,uint256)': FunctionFragment;
+    'registerSelf(bool,uint8,bytes32,bytes32,string,uint256)': FunctionFragment;
     'renounceOwnership()': FunctionFragment;
     'signValidity()': FunctionFragment;
     'signerAddress()': FunctionFragment;
     'transferOwnership(address)': FunctionFragment;
-    'twitterIdMap(string)': FunctionFragment;
     'unregisterSelf()': FunctionFragment;
     'unregisterUser(address)': FunctionFragment;
     'updateSignValidity(uint256)': FunctionFragment;
@@ -40,15 +39,11 @@ interface TwitterVerifierInterface extends ethers.utils.Interface {
 
   encodeFunctionData(functionFragment: 'initialize', values: [string, string, string, BigNumberish, string, string]): string;
   encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'registerSelf',
-    values: [boolean, BigNumberish, BytesLike, BytesLike, string, string, BigNumberish]
-  ): string;
+  encodeFunctionData(functionFragment: 'registerSelf', values: [boolean, BigNumberish, BytesLike, BytesLike, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'renounceOwnership', values?: undefined): string;
   encodeFunctionData(functionFragment: 'signValidity', values?: undefined): string;
   encodeFunctionData(functionFragment: 'signerAddress', values?: undefined): string;
   encodeFunctionData(functionFragment: 'transferOwnership', values: [string]): string;
-  encodeFunctionData(functionFragment: 'twitterIdMap', values: [string]): string;
   encodeFunctionData(functionFragment: 'unregisterSelf', values?: undefined): string;
   encodeFunctionData(functionFragment: 'unregisterUser', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateSignValidity', values: [BigNumberish]): string;
@@ -64,7 +59,6 @@ interface TwitterVerifierInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'signValidity', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'signerAddress', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferOwnership', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'twitterIdMap', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'unregisterSelf', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'unregisterUser', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateSignValidity', data: BytesLike): Result;
@@ -90,7 +84,7 @@ interface TwitterVerifierInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: 'VerificationUpdated'): EventFragment;
 }
 
-export class TwitterVerifier extends Contract {
+export class AdminVerifier extends Contract {
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
@@ -131,7 +125,7 @@ export class TwitterVerifier extends Contract {
     toBlock?: string | number | undefined
   ): Promise<Array<TypedEvent<EventArgsArray & EventArgsObject>>>;
 
-  interface: TwitterVerifierInterface;
+  interface: AdminVerifierInterface;
 
   functions: {
     initialize(
@@ -163,19 +157,17 @@ export class TwitterVerifier extends Contract {
       _v: BigNumberish,
       _r: BytesLike,
       _s: BytesLike,
-      _twitterId: string,
-      _tweetId: string,
+      _userData: string,
       _timestamp: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'registerSelf(bool,uint8,bytes32,bytes32,string,string,uint256)'(
+    'registerSelf(bool,uint8,bytes32,bytes32,string,uint256)'(
       _isMasterLinked: boolean,
       _v: BigNumberish,
       _r: BytesLike,
       _s: BytesLike,
-      _twitterId: string,
-      _tweetId: string,
+      _userData: string,
       _timestamp: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
@@ -198,10 +190,6 @@ export class TwitterVerifier extends Contract {
       newOwner: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
-
-    twitterIdMap(arg0: string, overrides?: CallOverrides): Promise<[string]>;
-
-    'twitterIdMap(string)'(arg0: string, overrides?: CallOverrides): Promise<[string]>;
 
     unregisterSelf(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -235,9 +223,9 @@ export class TwitterVerifier extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    userData(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
+    userData(arg0: string, overrides?: CallOverrides): Promise<[string]>;
 
-    'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
+    'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<[string]>;
 
     verification(overrides?: CallOverrides): Promise<[string]>;
 
@@ -273,19 +261,17 @@ export class TwitterVerifier extends Contract {
     _v: BigNumberish,
     _r: BytesLike,
     _s: BytesLike,
-    _twitterId: string,
-    _tweetId: string,
+    _userData: string,
     _timestamp: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'registerSelf(bool,uint8,bytes32,bytes32,string,string,uint256)'(
+  'registerSelf(bool,uint8,bytes32,bytes32,string,uint256)'(
     _isMasterLinked: boolean,
     _v: BigNumberish,
     _r: BytesLike,
     _s: BytesLike,
-    _twitterId: string,
-    _tweetId: string,
+    _userData: string,
     _timestamp: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
@@ -305,10 +291,6 @@ export class TwitterVerifier extends Contract {
   transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'transferOwnership(address)'(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  twitterIdMap(arg0: string, overrides?: CallOverrides): Promise<string>;
-
-  'twitterIdMap(string)'(arg0: string, overrides?: CallOverrides): Promise<string>;
 
   unregisterSelf(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -342,9 +324,9 @@ export class TwitterVerifier extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  userData(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
+  userData(arg0: string, overrides?: CallOverrides): Promise<string>;
 
-  'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
+  'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<string>;
 
   verification(overrides?: CallOverrides): Promise<string>;
 
@@ -380,19 +362,17 @@ export class TwitterVerifier extends Contract {
       _v: BigNumberish,
       _r: BytesLike,
       _s: BytesLike,
-      _twitterId: string,
-      _tweetId: string,
+      _userData: string,
       _timestamp: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'registerSelf(bool,uint8,bytes32,bytes32,string,string,uint256)'(
+    'registerSelf(bool,uint8,bytes32,bytes32,string,uint256)'(
       _isMasterLinked: boolean,
       _v: BigNumberish,
       _r: BytesLike,
       _s: BytesLike,
-      _twitterId: string,
-      _tweetId: string,
+      _userData: string,
       _timestamp: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
@@ -412,10 +392,6 @@ export class TwitterVerifier extends Contract {
     transferOwnership(newOwner: string, overrides?: CallOverrides): Promise<void>;
 
     'transferOwnership(address)'(newOwner: string, overrides?: CallOverrides): Promise<void>;
-
-    twitterIdMap(arg0: string, overrides?: CallOverrides): Promise<string>;
-
-    'twitterIdMap(string)'(arg0: string, overrides?: CallOverrides): Promise<string>;
 
     unregisterSelf(overrides?: CallOverrides): Promise<void>;
 
@@ -437,9 +413,9 @@ export class TwitterVerifier extends Contract {
 
     'updateVerification(address)'(_verification: string, overrides?: CallOverrides): Promise<void>;
 
-    userData(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
+    userData(arg0: string, overrides?: CallOverrides): Promise<string>;
 
-    'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
+    'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<string>;
 
     verification(overrides?: CallOverrides): Promise<string>;
 
@@ -497,19 +473,17 @@ export class TwitterVerifier extends Contract {
       _v: BigNumberish,
       _r: BytesLike,
       _s: BytesLike,
-      _twitterId: string,
-      _tweetId: string,
+      _userData: string,
       _timestamp: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'registerSelf(bool,uint8,bytes32,bytes32,string,string,uint256)'(
+    'registerSelf(bool,uint8,bytes32,bytes32,string,uint256)'(
       _isMasterLinked: boolean,
       _v: BigNumberish,
       _r: BytesLike,
       _s: BytesLike,
-      _twitterId: string,
-      _tweetId: string,
+      _userData: string,
       _timestamp: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
@@ -529,10 +503,6 @@ export class TwitterVerifier extends Contract {
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'transferOwnership(address)'(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    twitterIdMap(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    'twitterIdMap(string)'(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     unregisterSelf(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -596,19 +566,17 @@ export class TwitterVerifier extends Contract {
       _v: BigNumberish,
       _r: BytesLike,
       _s: BytesLike,
-      _twitterId: string,
-      _tweetId: string,
+      _userData: string,
       _timestamp: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'registerSelf(bool,uint8,bytes32,bytes32,string,string,uint256)'(
+    'registerSelf(bool,uint8,bytes32,bytes32,string,uint256)'(
       _isMasterLinked: boolean,
       _v: BigNumberish,
       _r: BytesLike,
       _s: BytesLike,
-      _twitterId: string,
-      _tweetId: string,
+      _userData: string,
       _timestamp: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
@@ -631,10 +599,6 @@ export class TwitterVerifier extends Contract {
       newOwner: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
-
-    twitterIdMap(arg0: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'twitterIdMap(string)'(arg0: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     unregisterSelf(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 

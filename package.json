@@ -1,11 +1,11 @@
 {
   "name": "sublime-sdk",
-  "version": "1.0.47",
+  "version": "1.0.48",
   "description": "SDK to interact with set of sublime smart contracts",
   "main": "./dist/index.js",
   "bin": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ts-node example.ts",
     "prettier": "prettier --write .",
     "build": "echo 'building'; rm -rf dist; sleep 1;  tsc",
     "prepublish": "npm run build",

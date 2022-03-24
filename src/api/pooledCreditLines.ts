@@ -1,7 +1,7 @@
 import { SublimeConfig } from '../types/sublimeConfig';
 import { ContractTransaction, Signer } from 'ethers';
 
-import { CreditLineRequest, StrategyType, CreditLineStatus } from '../types/Types';
+import { StrategyType, CreditLineStatus, VerifierType } from '../types/Types';
 import { BigNumberish } from '@ethersproject/bignumber';
 import { BigNumber } from 'bignumber.js';
 
@@ -134,7 +134,7 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
-    const status = await this.pooledCreditLine.callStatic.getCreditLineStatus(_id);
+    const status = await (await this.pooledCreditLine.pooledCreditLineVariables(_id)).status;
     if (status == 0) {
       return CreditLineStatus.NOT_CREATED;
     } else if (status == 1) {
@@ -147,6 +147,8 @@ export class PooledCreditLineApi {
       return CreditLineStatus.EXPIRED;
     } else if (status == 5) {
       return CreditLineStatus.LIQUIDATED;
+    } else if (status == 6) {
+      return CreditLineStatus.CANCELLED;
     } else {
       throw new Error('invalid state ');
     }
@@ -194,29 +196,10 @@ export class PooledCreditLineApi {
     return { value: value.toString(), decimals };
   }
 
-  /**
-   * @description Request
-   * @param colRatio
-   * @param durationInSeconds
-   * @param verifier
-   * @param defaultGracePeriodInSeconds
-   * @param gracePenaltyRate
-   * @param collectionPeriod
-   * @param minBorrowAmount
-   * @param _borrowLimit
-   * @param _borrowRate
-   * @param collateralAsset
-   * @param lenderStrategy
-   * @param collateralStrategy
-   * @param borrowAsset
-   * @param areTokensTransferable
-   * @param options
-   * @returns
-   */
   public async request(
     colRatio: string,
     durationInSeconds: string,
-    verifier: string,
+    verifier: VerifierType,
     defaultGracePeriodInSeconds: string,
     gracePenaltyRate: string,
     collectionPeriod: string,
@@ -224,14 +207,15 @@ export class PooledCreditLineApi {
     _borrowLimit: string,
     _borrowRate: string,
     collateralAsset: string,
-    lenderStrategy: string,
-    collateralStrategy: StrategyType,
+    borrowAssetStrategy: StrategyType,
+    collateralAssetStrategy: StrategyType,
     borrowAsset: string,
+    borrowerVerifier: VerifierType,
     areTokensTransferable: boolean,
     options?: Overrides
   ): Promise<ContractTransaction> {
     await this.tokenManager.updateAll(borrowAsset);
-    let borrowTokenDecimal = this.tokenManager.getTokenDecimals(borrowAsset);
+    const borrowTokenDecimal = this.tokenManager.getTokenDecimals(borrowAsset);
 
     const collateralRatio = new BigNumber(colRatio);
     if (collateralRatio.isNaN() || collateralRatio.isZero() || collateralRatio.isNegative()) {
@@ -273,29 +257,47 @@ export class PooledCreditLineApi {
       throw new Error('_minBorrowAmount should be a valid number');
     }
 
+    let verifierAddress: string;
+    if (verifier === VerifierType.AdminVerifier) {
+      verifierAddress = this.config.adminVerifierContractAddress;
+    } else if (verifier === VerifierType.TwitterVerifier) {
+      verifierAddress = this.config.twitterVerifierContractAddress;
+    } else {
+      throw new Error('Unsupported verifier');
+    }
+
     let strategyAddress: string;
-    if (collateralStrategy == StrategyType.NoYield) {
+    if (collateralAssetStrategy === StrategyType.NoYield) {
       strategyAddress = this.config.noStrategyAddress;
-    } else if (collateralStrategy == StrategyType.CompounYield) {
+    } else if (collateralAssetStrategy === StrategyType.CompounYield) {
       strategyAddress = this.config.compoundStrategyContractAddress;
     } else {
       throw new Error('Unsupported strategy');
     }
 
     let lenderS: string;
-    if (lenderStrategy == StrategyType.NoYield) {
+    if (borrowAssetStrategy == StrategyType.NoYield) {
       lenderS = this.config.noStrategyAddress;
-    } else if (lenderStrategy == StrategyType.CompounYield) {
+    } else if (borrowAssetStrategy == StrategyType.CompounYield) {
       lenderS = this.config.compoundStrategyContractAddress;
     } else {
       throw new Error('Unsupported strategy');
+    }
+
+    let borrowerVerifierAddress: string;
+    if (borrowerVerifier == VerifierType.AdminVerifier) {
+      borrowerVerifierAddress = this.config.adminVerifierContractAddress;
+    } else if (borrowerVerifier == VerifierType.TwitterVerifier) {
+      borrowerVerifierAddress = this.config.twitterVerifierContractAddress;
+    } else {
+      throw new Error('Unsupported verifier');
     }
 
     return this.pooledCreditLine.request(
       {
         collateralRatio: collateralRatio.multipliedBy(new BigNumber(10).pow(16)).toFixed(0),
         duration: duration.toFixed(0),
-        verifier,
+        verifier: verifierAddress,
         defaultGracePeriod: defaultGracePeriod.toFixed(0),
         gracePenaltyRate: gpr.toFixed(0),
         collectionPeriod: _collectionPeriod.toFixed(0),
@@ -303,9 +305,10 @@ export class PooledCreditLineApi {
         borrowLimit: borrowLimit.multipliedBy(new BigNumber(10).pow(borrowTokenDecimal)).toFixed(0),
         borrowRate: borrowRate.toFixed(0),
         collateralAsset,
-        lenderStrategy: lenderS,
-        collateralStrategy: strategyAddress,
+        borrowAssetStrategy: lenderS,
+        collateralAssetStrategy: strategyAddress,
         borrowAsset,
+        borrowerVerifier: borrowerVerifierAddress,
         areTokensTransferable,
       },
       { ...options }

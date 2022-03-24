@@ -30,6 +30,7 @@ interface MockV3AggregatorInterface extends ethers.utils.Interface {
     'latestRound()': FunctionFragment;
     'latestRoundData()': FunctionFragment;
     'latestTimestamp()': FunctionFragment;
+    'setAnswer(int256)': FunctionFragment;
     'updateAnswer(int256)': FunctionFragment;
     'updateRoundData(uint80,int256,uint256,uint256)': FunctionFragment;
     'version()': FunctionFragment;
@@ -44,6 +45,7 @@ interface MockV3AggregatorInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'latestRound', values?: undefined): string;
   encodeFunctionData(functionFragment: 'latestRoundData', values?: undefined): string;
   encodeFunctionData(functionFragment: 'latestTimestamp', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'setAnswer', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateAnswer', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateRoundData', values: [BigNumberish, BigNumberish, BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'version', values?: undefined): string;
@@ -57,6 +59,7 @@ interface MockV3AggregatorInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'latestRound', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'latestRoundData', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'latestTimestamp', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setAnswer', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateAnswer', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateRoundData', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'version', data: BytesLike): Result;
@@ -182,6 +185,10 @@ export class MockV3Aggregator extends Contract {
 
     'latestTimestamp()'(overrides?: CallOverrides): Promise<[BigNumber]>;
 
+    setAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'setAnswer(int256)'(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
     updateAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'updateAnswer(int256)'(
@@ -284,6 +291,10 @@ export class MockV3Aggregator extends Contract {
 
   'latestTimestamp()'(overrides?: CallOverrides): Promise<BigNumber>;
 
+  setAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'setAnswer(int256)'(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
   updateAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'updateAnswer(int256)'(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
@@ -383,6 +394,10 @@ export class MockV3Aggregator extends Contract {
 
     'latestTimestamp()'(overrides?: CallOverrides): Promise<BigNumber>;
 
+    setAnswer(_answer: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'setAnswer(int256)'(_answer: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
     updateAnswer(_answer: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'updateAnswer(int256)'(_answer: BigNumberish, overrides?: CallOverrides): Promise<void>;
@@ -447,6 +462,10 @@ export class MockV3Aggregator extends Contract {
 
     'latestTimestamp()'(overrides?: CallOverrides): Promise<BigNumber>;
 
+    setAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'setAnswer(int256)'(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
     updateAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'updateAnswer(int256)'(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
@@ -508,6 +527,10 @@ export class MockV3Aggregator extends Contract {
     latestTimestamp(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'latestTimestamp()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    setAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'setAnswer(int256)'(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     updateAnswer(_answer: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 

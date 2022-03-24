@@ -92,9 +92,10 @@ interface UserInterface extends ethers.utils.Interface {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       }
     ]
@@ -459,15 +460,16 @@ export class User extends Contract {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       },
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
       pcl: string,
       _request: {
         collateralRatio: BigNumberish;
@@ -480,9 +482,10 @@ export class User extends Contract {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       },
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -944,15 +947,16 @@ export class User extends Contract {
       borrowLimit: BigNumberish;
       borrowRate: BigNumberish;
       collateralAsset: string;
-      lenderStrategy: string;
-      collateralStrategy: string;
+      borrowAssetStrategy: string;
+      collateralAssetStrategy: string;
       borrowAsset: string;
+      borrowerVerifier: string;
       areTokensTransferable: boolean;
     },
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+  'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
     pcl: string,
     _request: {
       collateralRatio: BigNumberish;
@@ -965,9 +969,10 @@ export class User extends Contract {
       borrowLimit: BigNumberish;
       borrowRate: BigNumberish;
       collateralAsset: string;
-      lenderStrategy: string;
-      collateralStrategy: string;
+      borrowAssetStrategy: string;
+      collateralAssetStrategy: string;
       borrowAsset: string;
+      borrowerVerifier: string;
       areTokensTransferable: boolean;
     },
     overrides?: Overrides & { from?: string | Promise<string> }
@@ -1362,15 +1367,16 @@ export class User extends Contract {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       },
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
       pcl: string,
       _request: {
         collateralRatio: BigNumberish;
@@ -1383,9 +1389,10 @@ export class User extends Contract {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       },
       overrides?: CallOverrides
@@ -1816,15 +1823,16 @@ export class User extends Contract {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       },
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
       pcl: string,
       _request: {
         collateralRatio: BigNumberish;
@@ -1837,9 +1845,10 @@ export class User extends Contract {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       },
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -2302,15 +2311,16 @@ export class User extends Contract {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       },
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,bool))'(
+    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
       pcl: string,
       _request: {
         collateralRatio: BigNumberish;
@@ -2323,9 +2333,10 @@ export class User extends Contract {
         borrowLimit: BigNumberish;
         borrowRate: BigNumberish;
         collateralAsset: string;
-        lenderStrategy: string;
-        collateralStrategy: string;
+        borrowAssetStrategy: string;
+        collateralAssetStrategy: string;
         borrowAsset: string;
+        borrowerVerifier: string;
         areTokensTransferable: boolean;
       },
       overrides?: Overrides & { from?: string | Promise<string> }

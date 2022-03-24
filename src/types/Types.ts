@@ -16,6 +16,7 @@ export enum CreditLineStatus {
   CLOSED,
   EXPIRED,
   LIQUIDATED,
+  CANCELLED,
 }
 
 export enum StrategyType {
@@ -23,6 +24,11 @@ export enum StrategyType {
   CompounYield = 'CompoundYield',
   YearnYield = 'YearnYield',
   AaveYield = 'AaveYield',
+}
+
+export enum VerifierType {
+  TwitterVerifier = 'TwitterVerifier',
+  AdminVerifier = 'AdminVerifier',
 }
 
 export enum Operation {

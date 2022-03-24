@@ -40,7 +40,7 @@ const _abi = [
         type: 'uint256',
       },
     ],
-    name: 'getCreditLineStatus',
+    name: 'getPrincipal',
     outputs: [
       {
         internalType: 'uint256',
@@ -59,15 +59,15 @@ const _abi = [
         type: 'uint256',
       },
     ],
-    name: 'getPrincipal',
+    name: 'getStatus',
     outputs: [
       {
-        internalType: 'uint256',
+        internalType: 'enum IPooledCreditLineDeclarations.PooledCreditLineStatus',
         name: '',
-        type: 'uint256',
+        type: 'uint8',
       },
     ],
-    stateMutability: 'view',
+    stateMutability: 'nonpayable',
     type: 'function',
   },
   {

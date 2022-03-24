@@ -14,7 +14,6 @@
       "*": ["node_modules/*", "src/*"],
       "@src/*": ["src/*"]
     },
-    "declarationDir": "dist/types",
     "esModuleInterop": true,
     "skipLibCheck": true
   },

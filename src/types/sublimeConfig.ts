@@ -13,8 +13,8 @@ export interface SublimeConfig {
   yearnStrategyContractAddress: string;
   noStrategyAddress: string;
   repaymentContractAddress: string;
-  extensionContractAddress: string;
   twitterVerifierContractAddress: string;
+  adminVerifierContractAddress: string;
   priceOracleContractAddress: string;
   creditLineEthHelperAddress?: string;
   poolUtilsAddress?: string;

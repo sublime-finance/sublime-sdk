@@ -31,6 +31,7 @@
 - [Strategy](types_Types.md#strategy)
 - [StrategyType](types_Types.md#strategytype)
 - [TwitterDetails](types_Types.md#twitterdetails)
+- [VerifierType](types_Types.md#verifiertype)
 
 ## References
 
@@ -181,3 +182,9 @@ ___
 ### TwitterDetails
 
 Re-exports [TwitterDetails](../interfaces/types_Types.TwitterDetails.md)
+
+___
+
+### VerifierType
+
+Re-exports [VerifierType](../enums/types_Types.VerifierType.md)
