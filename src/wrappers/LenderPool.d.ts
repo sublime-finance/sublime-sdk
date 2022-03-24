@@ -261,7 +261,7 @@ export class LenderPool extends Contract {
 
     create(
       _id: BigNumberish,
-      _verifier: string,
+      _lenderVerifier: string,
       _borrowAsset: string,
       _borrowAssetStrategy: string,
       _borrowLimit: BigNumberish,
@@ -273,7 +273,7 @@ export class LenderPool extends Contract {
 
     'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
-      _verifier: string,
+      _lenderVerifier: string,
       _borrowAsset: string,
       _borrowAssetStrategy: string,
       _borrowLimit: BigNumberish,
@@ -369,7 +369,7 @@ export class LenderPool extends Contract {
         collateralAsset: string;
         borrowLimit: BigNumber;
         minBorrowAmount: BigNumber;
-        verifier: string;
+        lenderVerifier: string;
         borrowAssetStrategy: string;
         areTokensTransferable: boolean;
       }
@@ -385,7 +385,7 @@ export class LenderPool extends Contract {
         collateralAsset: string;
         borrowLimit: BigNumber;
         minBorrowAmount: BigNumber;
-        verifier: string;
+        lenderVerifier: string;
         borrowAssetStrategy: string;
         areTokensTransferable: boolean;
       }
@@ -623,7 +623,7 @@ export class LenderPool extends Contract {
 
   create(
     _id: BigNumberish,
-    _verifier: string,
+    _lenderVerifier: string,
     _borrowAsset: string,
     _borrowAssetStrategy: string,
     _borrowLimit: BigNumberish,
@@ -635,7 +635,7 @@ export class LenderPool extends Contract {
 
   'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
     _id: BigNumberish,
-    _verifier: string,
+    _lenderVerifier: string,
     _borrowAsset: string,
     _borrowAssetStrategy: string,
     _borrowLimit: BigNumberish,
@@ -723,7 +723,7 @@ export class LenderPool extends Contract {
       collateralAsset: string;
       borrowLimit: BigNumber;
       minBorrowAmount: BigNumber;
-      verifier: string;
+      lenderVerifier: string;
       borrowAssetStrategy: string;
       areTokensTransferable: boolean;
     }
@@ -739,7 +739,7 @@ export class LenderPool extends Contract {
       collateralAsset: string;
       borrowLimit: BigNumber;
       minBorrowAmount: BigNumber;
-      verifier: string;
+      lenderVerifier: string;
       borrowAssetStrategy: string;
       areTokensTransferable: boolean;
     }
@@ -952,7 +952,7 @@ export class LenderPool extends Contract {
 
     create(
       _id: BigNumberish,
-      _verifier: string,
+      _lenderVerifier: string,
       _borrowAsset: string,
       _borrowAssetStrategy: string,
       _borrowLimit: BigNumberish,
@@ -964,7 +964,7 @@ export class LenderPool extends Contract {
 
     'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
-      _verifier: string,
+      _lenderVerifier: string,
       _borrowAsset: string,
       _borrowAssetStrategy: string,
       _borrowLimit: BigNumberish,
@@ -1035,7 +1035,7 @@ export class LenderPool extends Contract {
         collateralAsset: string;
         borrowLimit: BigNumber;
         minBorrowAmount: BigNumber;
-        verifier: string;
+        lenderVerifier: string;
         borrowAssetStrategy: string;
         areTokensTransferable: boolean;
       }
@@ -1051,7 +1051,7 @@ export class LenderPool extends Contract {
         collateralAsset: string;
         borrowLimit: BigNumber;
         minBorrowAmount: BigNumber;
-        verifier: string;
+        lenderVerifier: string;
         borrowAssetStrategy: string;
         areTokensTransferable: boolean;
       }
@@ -1324,7 +1324,7 @@ export class LenderPool extends Contract {
 
     create(
       _id: BigNumberish,
-      _verifier: string,
+      _lenderVerifier: string,
       _borrowAsset: string,
       _borrowAssetStrategy: string,
       _borrowLimit: BigNumberish,
@@ -1336,7 +1336,7 @@ export class LenderPool extends Contract {
 
     'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
-      _verifier: string,
+      _lenderVerifier: string,
       _borrowAsset: string,
       _borrowAssetStrategy: string,
       _borrowLimit: BigNumberish,
@@ -1591,7 +1591,7 @@ export class LenderPool extends Contract {
 
     create(
       _id: BigNumberish,
-      _verifier: string,
+      _lenderVerifier: string,
       _borrowAsset: string,
       _borrowAssetStrategy: string,
       _borrowLimit: BigNumberish,
@@ -1603,7 +1603,7 @@ export class LenderPool extends Contract {
 
     'create(uint256,address,address,address,uint256,uint256,uint256,bool)'(
       _id: BigNumberish,
-      _verifier: string,
+      _lenderVerifier: string,
       _borrowAsset: string,
       _borrowAssetStrategy: string,
       _borrowLimit: BigNumberish,

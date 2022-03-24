@@ -84,7 +84,7 @@ interface UserInterface extends ethers.utils.Interface {
       {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
@@ -452,7 +452,7 @@ export class User extends Contract {
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
@@ -474,7 +474,7 @@ export class User extends Contract {
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
@@ -939,7 +939,7 @@ export class User extends Contract {
     _request: {
       collateralRatio: BigNumberish;
       duration: BigNumberish;
-      verifier: string;
+      lenderVerifier: string;
       defaultGracePeriod: BigNumberish;
       gracePenaltyRate: BigNumberish;
       collectionPeriod: BigNumberish;
@@ -961,7 +961,7 @@ export class User extends Contract {
     _request: {
       collateralRatio: BigNumberish;
       duration: BigNumberish;
-      verifier: string;
+      lenderVerifier: string;
       defaultGracePeriod: BigNumberish;
       gracePenaltyRate: BigNumberish;
       collectionPeriod: BigNumberish;
@@ -1359,7 +1359,7 @@ export class User extends Contract {
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
@@ -1381,7 +1381,7 @@ export class User extends Contract {
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
@@ -1815,7 +1815,7 @@ export class User extends Contract {
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
@@ -1837,7 +1837,7 @@ export class User extends Contract {
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
@@ -2303,7 +2303,7 @@ export class User extends Contract {
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;
@@ -2325,7 +2325,7 @@ export class User extends Contract {
       _request: {
         collateralRatio: BigNumberish;
         duration: BigNumberish;
-        verifier: string;
+        lenderVerifier: string;
         defaultGracePeriod: BigNumberish;
         gracePenaltyRate: BigNumberish;
         collectionPeriod: BigNumberish;

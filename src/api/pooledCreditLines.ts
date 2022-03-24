@@ -199,7 +199,7 @@ export class PooledCreditLineApi {
   public async request(
     colRatio: string,
     durationInSeconds: string,
-    verifier: VerifierType,
+    lenderVerifier: VerifierType,
     defaultGracePeriodInSeconds: string,
     gracePenaltyRate: string,
     collectionPeriod: string,
@@ -257,11 +257,11 @@ export class PooledCreditLineApi {
       throw new Error('_minBorrowAmount should be a valid number');
     }
 
-    let verifierAddress: string;
-    if (verifier === VerifierType.AdminVerifier) {
-      verifierAddress = this.config.adminVerifierContractAddress;
-    } else if (verifier === VerifierType.TwitterVerifier) {
-      verifierAddress = this.config.twitterVerifierContractAddress;
+    let lenderVerifierAddress: string;
+    if (lenderVerifier === VerifierType.AdminVerifier) {
+      lenderVerifierAddress = this.config.adminVerifierContractAddress;
+    } else if (lenderVerifier === VerifierType.TwitterVerifier) {
+      lenderVerifierAddress = this.config.twitterVerifierContractAddress;
     } else {
       throw new Error('Unsupported verifier');
     }
@@ -297,7 +297,7 @@ export class PooledCreditLineApi {
       {
         collateralRatio: collateralRatio.multipliedBy(new BigNumber(10).pow(16)).toFixed(0),
         duration: duration.toFixed(0),
-        verifier: verifierAddress,
+        lenderVerifier: lenderVerifierAddress,
         defaultGracePeriod: defaultGracePeriod.toFixed(0),
         gracePenaltyRate: gpr.toFixed(0),
         collectionPeriod: _collectionPeriod.toFixed(0),
