@@ -21,6 +21,8 @@
 - [Options](types_Types.md#options)
 - [PoolDetail](types_Types.md#pooldetail)
 - [PoolLender](types_Types.md#poollender)
+- [PooledCreditLineDetail](types_Types.md#pooledcreditlinedetail)
+- [PooledCreditLineOperation](types_Types.md#pooledcreditlineoperation)
 - [ProfileOverview](types_Types.md#profileoverview)
 - [SavingAccountUserDetailDisplay](types_Types.md#savingaccountuserdetaildisplay)
 - [SavingsAccountBalance](types_Types.md#savingsaccountbalance)
@@ -122,6 +124,18 @@ ___
 ### PoolLender
 
 Re-exports [PoolLender](../interfaces/types_Types.PoolLender.md)
+
+___
+
+### PooledCreditLineDetail
+
+Re-exports [PooledCreditLineDetail](../interfaces/types_Types.PooledCreditLineDetail.md)
+
+___
+
+### PooledCreditLineOperation
+
+Re-exports [PooledCreditLineOperation](../interfaces/types_Types.PooledCreditLineOperation.md)
 
 ___
 

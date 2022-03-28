@@ -52,6 +52,14 @@ export interface CreditLineOperation {
   timestamp: string;
   id: string;
 }
+
+export interface PooledCreditLineOperation {
+  pooledCreditLineOperation: string;
+  timestamp: string;
+  amount?: string;
+  strategy?: string;
+}
+
 export interface Strategy {
   type: StrategyType;
   address: string;
@@ -184,6 +192,28 @@ export interface CreditLineDetail {
   id: string;
   requestByLender: boolean;
 }
+
+export interface PooledCreditLineDetail {
+  id: string;
+  borrowerAddress: string;
+  borrowLimit: Balance;
+  borrowRate: string;
+  idealCollateralRatio: string;
+  borrowAsset: Asset;
+  collateralAsset: Asset;
+  startsAt: string;
+  endsAt: string;
+  defaultsAt: string;
+  lenderStrategy: string;
+  collateralStrategy: string;
+  gracePenaltyRate: string;
+  status: string;
+  principal: Balance;
+  totalInterestRepaid: Balance;
+  lastPrincipalUpdateTime: string;
+  interestAccruedTillLastPrincipalUpdate: string;
+}
+
 export interface CreditLineUser {
   address: string;
   name?: string;

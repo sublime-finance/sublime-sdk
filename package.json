@@ -1,6 +1,6 @@
 {
   "name": "sublime-sdk",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "SDK to interact with set of sublime smart contracts",
   "main": "./dist/index.js",
   "bin": {},

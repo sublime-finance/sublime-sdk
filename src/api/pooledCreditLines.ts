@@ -266,20 +266,20 @@ export class PooledCreditLineApi {
       throw new Error('Unsupported verifier');
     }
 
-    let strategyAddress: string;
+    let collateralStrategyAddress: string;
     if (collateralAssetStrategy === StrategyType.NoYield) {
-      strategyAddress = this.config.noStrategyAddress;
+      collateralStrategyAddress = this.config.noStrategyAddress;
     } else if (collateralAssetStrategy === StrategyType.CompounYield) {
-      strategyAddress = this.config.compoundStrategyContractAddress;
+      collateralStrategyAddress = this.config.compoundStrategyContractAddress;
     } else {
       throw new Error('Unsupported strategy');
     }
 
-    let lenderS: string;
+    let borrowerStrategyAddress: string;
     if (borrowAssetStrategy == StrategyType.NoYield) {
-      lenderS = this.config.noStrategyAddress;
+      borrowerStrategyAddress = this.config.noStrategyAddress;
     } else if (borrowAssetStrategy == StrategyType.CompounYield) {
-      lenderS = this.config.compoundStrategyContractAddress;
+      borrowerStrategyAddress = this.config.compoundStrategyContractAddress;
     } else {
       throw new Error('Unsupported strategy');
     }
@@ -299,14 +299,14 @@ export class PooledCreditLineApi {
         duration: duration.toFixed(0),
         lenderVerifier: lenderVerifierAddress,
         defaultGracePeriod: defaultGracePeriod.toFixed(0),
-        gracePenaltyRate: gpr.toFixed(0),
+        gracePenaltyRate: gpr.multipliedBy(new BigNumber(10).pow(16)).toFixed(0),
         collectionPeriod: _collectionPeriod.toFixed(0),
         minBorrowAmount: _minBorrowAmount.multipliedBy(new BigNumber(10).pow(borrowTokenDecimal)).toFixed(0),
         borrowLimit: borrowLimit.multipliedBy(new BigNumber(10).pow(borrowTokenDecimal)).toFixed(0),
-        borrowRate: borrowRate.toFixed(0),
+        borrowRate: borrowRate.multipliedBy(new BigNumber(10).pow(16)).toFixed(0),
         collateralAsset,
-        borrowAssetStrategy: lenderS,
-        collateralAssetStrategy: strategyAddress,
+        borrowAssetStrategy: borrowerStrategyAddress,
+        collateralAssetStrategy: collateralStrategyAddress,
         borrowAsset,
         borrowerVerifier: borrowerVerifierAddress,
         areTokensTransferable,

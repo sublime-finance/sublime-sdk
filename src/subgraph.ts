@@ -10,6 +10,8 @@ import {
   SavingsAccountStrategyBalanceDisplay,
   CreditLineOperation,
   TwitterDetails,
+  PooledCreditLineDetail,
+  PooledCreditLineOperation,
 } from './types/Types';
 import {
   getAllPools,
@@ -30,6 +32,9 @@ import {
   getBalances,
   getAllowances,
   getTwitterId,
+  getPooledCreditLinesOfBorrower,
+  getPooledCreditLinesOfLender,
+  getPooledCreditLineTimeline,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -185,6 +190,79 @@ export class SublimeSubgraph {
     return lenders;
   }
 
+  async getAllPooledCreditLinesOfBorrower(address: string): Promise<PooledCreditLineDetail[]> {
+    let result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address);
+    return this.transformToPooledCreditLine(result);
+  }
+
+  async getAllPooledCreditLinesOfLender(lender: string): Promise<PooledCreditLineDetail[]> {
+    let result = await getPooledCreditLinesOfLender(this.subgraphUrl, lender);
+    return this.transformToPooledCreditLine(result);
+  }
+
+  async getAllPooledCreditLinesOfUser(user: string): Promise<PooledCreditLineDetail[]> {
+    return [...(await this.getAllPooledCreditLinesOfBorrower(user)), ...(await this.getAllPooledCreditLinesOfBorrower(user))];
+  }
+
+  async getPooledCreditLineTimeline(pooledCreditLineId: string): Promise<PooledCreditLineOperation[]> {
+    let result = await getPooledCreditLineTimeline(this.subgraphUrl, pooledCreditLineId);
+    return this.transformToPooledCreditLineOperation(result);
+  }
+
+  private async transformToPooledCreditLineOperation(data: any[]): Promise<PooledCreditLineOperation[]> {
+    return data.map((a) => {
+      return {
+        pooledCreditLineOperation: a.pooledCreditLineOperation,
+        timestamp: a.timestamp,
+        amount: a.amount,
+        strategy: a.strategy,
+      };
+    });
+  }
+
+  private async transformToPooledCreditLine(data: any[]): Promise<PooledCreditLineDetail[]> {
+    let borrowTokens: string[] = data.map((a) => a.collateralAsset);
+    let collateralTokens: string[] = data.map((a) => a.borrowAsset);
+    let allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
+    for (let index = 0; index < allTokens.length; index++) {
+      const element = allTokens[index];
+      await this.tokenManager.updateAll(element);
+    }
+
+    return data.map((a) => {
+      return {
+        id: a.id,
+        borrowerAddress: a.borrowerAddress,
+        borrowLimit: { value: a.borrowLimt, decimals: this.tokenManager.getTokenDecimals(a.borrowerAddress) },
+        borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
+        idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
+        borrowAsset: {
+          name: this.tokenManager.getTokenName(a.borrowAsset),
+          address: a.borrowAsset,
+          logo: this.tokenManager.getLogo(a.borrowAsset),
+          pricePerAssetInUSD: '3823',
+        },
+        collateralAsset: {
+          name: this.tokenManager.getTokenName(a.collateralAsset),
+          address: a.collateralAsset,
+          logo: this.tokenManager.getLogo(a.collateralAsset),
+          pricePerAssetInUSD: '2342',
+        },
+        startsAt: a.startsAt,
+        endsAt: a.endsAt,
+        defaultsAt: a.defaultsAt,
+        lenderStrategy: a.lenderStrategy,
+        collateralStrategy: a.collateralStrategy,
+        gracePenaltyRate: new BigNumber(a.gracePenaltyRate).div(new BigNumber(10).pow(16)).toFixed(2),
+        status: a.status,
+        principal: { value: a.principal, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        totalInterestRepaid: { value: a.totalInterestRepaid, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
+        interestAccruedTillLastPrincipalUpdate: a.interestAccruedTillLastPrincipalUpdate,
+      };
+    });
+  }
+
   /**
    *
    * @param data
@@ -239,8 +317,8 @@ export class SublimeSubgraph {
         interestAccrued: { value: interestAccrued.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         collateralRatio: collateralRatio.toFixed(2),
         creditLimit: new BigNumber(a.borrowLimit).div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.borrowAsset))).toFixed(2),
-        interestRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(28)).toFixed(2),
-        idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(28)).toFixed(2),
+        interestRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
+        idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
         borrowAsset: {
           address: a.borrowAsset,
           name: this.tokenManager.getTokenName(a.borrowAsset),
@@ -287,7 +365,7 @@ export class SublimeSubgraph {
           decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
         lentAmount: { value: new BigNumber(a.lentAmount).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
-        borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(28)).toFixed(2),
+        borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
         nextPayment: new BigNumber(a.nextRepayTime).toString(),
         repaymentProgress: new BigNumber(this.getRandomInt(10000)).div(100).toFixed(2),
         borrowAsset: {
