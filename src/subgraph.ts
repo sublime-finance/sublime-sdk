@@ -364,9 +364,9 @@ export class SublimeSubgraph {
           value: new BigNumber(a.borrowAmountRequested).toFixed(0),
           decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
-        lentAmount: { value: new BigNumber(a.lentAmount).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
+        lentAmount: { value: new BigNumber(a.amountBorrowed).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
-        nextPayment: new BigNumber(a.nextRepayTime).toString(),
+        nextPayment: new BigNumber(a.nextPaymentDeadline).toString(),
         repaymentProgress: new BigNumber(this.getRandomInt(10000)).div(100).toFixed(2),
         borrowAsset: {
           address: a.borrowAsset,
