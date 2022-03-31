@@ -35,6 +35,7 @@ import {
   getPooledCreditLinesOfBorrower,
   getPooledCreditLinesOfLender,
   getPooledCreditLineTimeline,
+  getPooledCreditLineById,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -209,6 +210,11 @@ export class SublimeSubgraph {
     return this.transformToPooledCreditLineOperation(result);
   }
 
+  async getAllPooledCreditLineById(id: number): Promise<PooledCreditLineDetail[]> {
+    let result = await getPooledCreditLineById(this.subgraphUrl, id);
+    return this.transformToPooledCreditLine(result);
+  }
+
   private async transformToPooledCreditLineOperation(data: any[]): Promise<PooledCreditLineOperation[]> {
     return data.map((a) => {
       return {
@@ -233,7 +239,7 @@ export class SublimeSubgraph {
       return {
         id: a.id,
         borrowerAddress: a.borrowerAddress,
-        borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowerAddress) },
+        borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
         idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
         borrowAsset: {

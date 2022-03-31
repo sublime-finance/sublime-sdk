@@ -112,3 +112,43 @@ export async function getPooledCreditLinesOfBorrower(url: string, borrower: stri
   // console.log({allData})
   return allData;
 }
+
+export async function getPooledCreditLineById(url: string, id: number): Promise<any[]> {
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+        pooledCreditLines(where:{id:"${id}"}){
+          id
+          borrowerAddress
+          borrowLimit
+          borrowRate
+          idealCollateralRatio
+          borrowAsset
+          collateralAsset
+          startsAt
+          endsAt
+          defaultsAt
+          lenderStrategy
+          collateralStrategy
+          gracePenaltyRate
+          status
+          principal
+          totalInterestRepaid
+          lastPrincipalUpdateTime
+          interestAccruedTillLastPrincipalUpdate
+        }
+      }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  // print({result});
+  allData.push(...result.data.pooledCreditLines);
+  // console.log({allData})
+  return allData;
+}

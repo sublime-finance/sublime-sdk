@@ -43,6 +43,13 @@ export const tokenData: InternalTokenMap[] = [
     iconMapping: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
   },
   {
+    address: '0xe22da380ee6B445bb8273C81944ADEB6E8450422',
+    name: 'USD Coin',
+    symbol: 'USDC',
+    decimals: 6,
+    iconMapping: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+  },
+  {
     address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
     name: 'Compound USD Coin',
     symbol: 'cUSDC',
