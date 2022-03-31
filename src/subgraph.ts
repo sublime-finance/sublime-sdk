@@ -233,7 +233,7 @@ export class SublimeSubgraph {
       return {
         id: a.id,
         borrowerAddress: a.borrowerAddress,
-        borrowLimit: { value: a.borrowLimt, decimals: this.tokenManager.getTokenDecimals(a.borrowerAddress) },
+        borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowerAddress) },
         borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
         idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
         borrowAsset: {

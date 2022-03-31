@@ -14,6 +14,12 @@ export const tokenData: InternalTokenMap[] = [
     symbol: 'cETH',
     decimals: 8,
     iconMapping: '0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5',
+  },{
+    address: '0x0327b4837D59101Cf729a25104d99D9D3B003eF2',
+    name: 'DAI',
+    symbol: 'DAI',
+    decimals: 18,
+    iconMapping: '0x6b175474e89094c44da98b954eedeac495271d0f',
   },
   {
     address: '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa',
