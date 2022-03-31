@@ -16,6 +16,13 @@ export const tokenData: InternalTokenMap[] = [
     iconMapping: '0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5',
   },
   {
+    address: '0x0327b4837D59101Cf729a25104d99D9D3B003eF2',
+    name: 'DAI',
+    symbol: 'DAI',
+    decimals: 18,
+    iconMapping: '0x6b175474e89094c44da98b954eedeac495271d0f',
+  },
+  {
     address: '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa',
     name: 'DAI',
     symbol: 'DAI',
@@ -31,6 +38,13 @@ export const tokenData: InternalTokenMap[] = [
   },
   {
     address: '0x7079f3762805CFf9C979a5bDC6f5648bCFEE76C8',
+    name: 'USD Coin',
+    symbol: 'USDC',
+    decimals: 6,
+    iconMapping: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+  },
+  {
+    address: '0xe22da380ee6B445bb8273C81944ADEB6E8450422',
     name: 'USD Coin',
     symbol: 'USDC',
     decimals: 6,
