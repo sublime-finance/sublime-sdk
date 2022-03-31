@@ -24,7 +24,8 @@ export class PoolEthUtils {
   }
 
   /**
-   * @description Use this function call to deposit ETH directly to a pool. The function call will automatically convert ETH to WETH and deposit to the pool
+   * @description Use this function call to deposit ETH directly to a pool.
+   * @description The function call will automatically convert ETH to WETH and deposit to the pool
    * @param poolAddress Address of the pool
    * @param amount Amount of ETH to deposit
    * @param options transaction options
@@ -33,7 +34,7 @@ export class PoolEthUtils {
   public async depositEthAsCollateralToPool(poolAddress: string, amount: string, options?: Overrides): Promise<ContractTransaction> {
     const decimals = 18;
     const _amount = new BigNumber(amount);
-    let value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
+    const value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
     return this.poolUtils.depositEthAsCollateralToPool(poolAddress, { ...options, value });
   }
 
@@ -52,7 +53,7 @@ export class PoolEthUtils {
   ): Promise<ContractTransaction> {
     const decimals = 18;
     const _amount = new BigNumber(amount);
-    let value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
+    const value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
 
     return this.poolUtils.addEthCollateralInMarginCall(poolAddress, lender, { ...options, value });
   }
@@ -60,7 +61,7 @@ export class PoolEthUtils {
   /**
    * @description Use this function to lend ETH to the pool
    * @param poolAddress Address of the pool
-   * @param lender Address of the lender to deposit on behalf of. (pass your own address if you want to deposit on behalf of your own address)
+   * @param lender Address deposit on behalf of (pass your own address if you want to deposit on behalf of your own address)
    * @param amount Amount of ETH to deposit
    * @param strategy Strategy to which the collateral is deposit
    * @param options transaction options
@@ -75,7 +76,7 @@ export class PoolEthUtils {
   ): Promise<ContractTransaction> {
     const decimals = 18;
     const _amount = new BigNumber(amount);
-    let value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
+    const value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
     let strategyAddress: string;
     if (strategy == StrategyType.NoYield) {
       strategyAddress = this.config.noStrategyAddress;

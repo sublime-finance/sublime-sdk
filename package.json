@@ -1,6 +1,6 @@
 {
   "name": "sublime-sdk",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "description": "SDK to interact with set of sublime smart contracts",
   "main": "./dist/index.js",
   "bin": {},
@@ -9,7 +9,7 @@
     "prettier": "prettier --write .",
     "build": "echo 'building'; rm -rf dist; sleep 1;  tsc",
     "prepublish": "npm run build",
-    "tslint": "tslint -c tslint.json -p tsconfig.json src/**/*.ts",
+    "tslint": "tslint -c tslint.json -p tsconfig.json './src/**/*.ts'",
     "ts-node": "ts-node",
     "updateDocs": "npm run build; sleep 1; typedoc"
   },

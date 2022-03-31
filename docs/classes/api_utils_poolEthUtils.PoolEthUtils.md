@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/7d2cb2d/src/api/utils/poolEthUtils.ts#L16)
+[src/api/utils/poolEthUtils.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/ef1911d/src/api/utils/poolEthUtils.ts#L16)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/7d2cb2d/src/api/utils/poolEthUtils.ts#L14)
+[src/api/utils/poolEthUtils.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ef1911d/src/api/utils/poolEthUtils.ts#L14)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/7d2cb2d/src/api/utils/poolEthUtils.ts#L12)
+[src/api/utils/poolEthUtils.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/ef1911d/src/api/utils/poolEthUtils.ts#L12)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/7d2cb2d/src/api/utils/poolEthUtils.ts#L13)
+[src/api/utils/poolEthUtils.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/ef1911d/src/api/utils/poolEthUtils.ts#L13)
 
 ## Methods
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/7d2cb2d/src/api/utils/poolEthUtils.ts#L47)
+[src/api/utils/poolEthUtils.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/ef1911d/src/api/utils/poolEthUtils.ts#L48)
 
 ___
 
@@ -101,7 +101,9 @@ ___
 
 ▸ **depositEthAsCollateralToPool**(`poolAddress`, `amount`, `options?`): `Promise`<`ContractTransaction`\>
 
-**`description`** Use this function call to deposit ETH directly to a pool. The function call will automatically convert ETH to WETH and deposit to the pool
+**`description`** Use this function call to deposit ETH directly to a pool.
+
+**`description`** The function call will automatically convert ETH to WETH and deposit to the pool
 
 #### Parameters
 
@@ -117,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/7d2cb2d/src/api/utils/poolEthUtils.ts#L33)
+[src/api/utils/poolEthUtils.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/ef1911d/src/api/utils/poolEthUtils.ts#L34)
 
 ___
 
@@ -132,7 +134,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `poolAddress` | `string` | Address of the pool |
-| `lender` | `string` | Address of the lender to deposit on behalf of. (pass your own address if you want to deposit on behalf of your own address) |
+| `lender` | `string` | Address deposit on behalf of (pass your own address if you want to deposit on behalf of your own address) |
 | `amount` | `string` | Amount of ETH to deposit |
 | `strategy` | [`StrategyType`](../enums/types_Types.StrategyType.md) | Strategy to which the collateral is deposit |
 | `options?` | [`Options`](../interfaces/types_Types.Options.md) | transaction options |
@@ -143,4 +145,4 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/7d2cb2d/src/api/utils/poolEthUtils.ts#L69)
+[src/api/utils/poolEthUtils.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/ef1911d/src/api/utils/poolEthUtils.ts#L70)

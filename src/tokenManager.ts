@@ -99,7 +99,7 @@ export class TokenManager {
     if (tokenAddress in this.decimals) {
       return;
     } else {
-      let token: Token = await new Token__factory(this.signer).attach(tokenAddress);
+      const token: Token = await new Token__factory(this.signer).attach(tokenAddress);
       this.decimals[tokenAddress] = await token.decimals();
       return;
     }
@@ -115,7 +115,7 @@ export class TokenManager {
     if (tokenAddress in this.names) {
       return;
     } else {
-      let token: Token = await new Token__factory(this.signer).attach(tokenAddress);
+      const token: Token = await new Token__factory(this.signer).attach(tokenAddress);
       this.names[tokenAddress] = await token.name();
       return;
     }

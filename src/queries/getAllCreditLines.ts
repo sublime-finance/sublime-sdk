@@ -30,13 +30,65 @@ export async function getCreditLineTimeline(url: string, creditLineNumber: strin
   return result;
 }
 
+export async function getAllCreditLinesFromSubgraph(url: string, count: number, skip: number): Promise<any[]> {
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+        creditLines (first:${count}, skip:${skip}){
+          id
+          status
+          lender
+          lenderWalletDetails {
+            wallet {
+              user {
+                userMetadataPerVerifier {
+                  metadata
+                }
+              }
+            }
+          }
+          borrower
+          borrowerWalletDetails {
+            wallet {
+              user {
+                userMetadataPerVerifier {
+                  metadata
+                }
+              }
+            }
+          }
+          requestByLender
+          principal
+          collateralAsset
+          borrowLimit
+          borrowRate
+          idealCollateralRatio
+          borrowAsset
+          autoLiquidation
+          lastPrincipalUpdateTime
+        }
+    }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  //   console.log(result);
+  allData.push(...result.data.creditLines);
+  return allData;
+}
+
 async function _getCreditLinesOfBorrower(
   url: string,
   status: string[],
   requestByLender: boolean[],
   borrower: string,
-  count,
-  skip
+  count: number,
+  skip: number
 ): Promise<any[]> {
   borrower = borrower.toLowerCase();
   const allData = [];
@@ -148,8 +200,8 @@ async function _getCreditLinesOfLender(
   status: string[],
   requestByLender: boolean[],
   lender: string,
-  count,
-  skip
+  count: number,
+  skip: number
 ): Promise<any[]> {
   lender = lender.toLowerCase();
   const allData = [];
@@ -205,7 +257,7 @@ async function _getCreditLinesOfLender(
 }
 
 // creditLineTypes ACTIVE, CLOSED, LIQUIDATED, NOT_CREATED, REQUESTED, CANCELLED
-export async function getConfirmedCreditLinesOfBorrower(url: string, borrower, count, skip): Promise<any[]> {
+export async function getConfirmedCreditLinesOfBorrower(url: string, borrower: string, count: number, skip: number): Promise<any[]> {
   let data = [];
   const status = ['ACTIVE', 'CLOSED', 'LIQUIDATED', 'NOT_CREATED'];
   const requestByLender = [true, false];
@@ -214,7 +266,7 @@ export async function getConfirmedCreditLinesOfBorrower(url: string, borrower, c
   return data;
 }
 
-export async function getConfirmedCreditLinesOfLender(url: string, lender, count, skip): Promise<any[]> {
+export async function getConfirmedCreditLinesOfLender(url: string, lender: string, count: number, skip: number): Promise<any[]> {
   let data = [];
   const status = ['ACTIVE', 'CLOSED', 'LIQUIDATED', 'NOT_CREATED'];
   const requestByLender = [true, false];
@@ -223,7 +275,7 @@ export async function getConfirmedCreditLinesOfLender(url: string, lender, count
   return data;
 }
 
-export async function getPendingCreditlinesRequestedByLender(url: string, lender, count, skip): Promise<any[]> {
+export async function getPendingCreditlinesRequestedByLender(url: string, lender: string, count: number, skip: number): Promise<any[]> {
   let data = [];
   const status = ['REQUESTED'];
   const requestByLender = [true];
@@ -232,7 +284,7 @@ export async function getPendingCreditlinesRequestedByLender(url: string, lender
   return data;
 }
 
-export async function getPendingCreditLinesRequestedToLender(url: string, lender, count, skip): Promise<any[]> {
+export async function getPendingCreditLinesRequestedToLender(url: string, lender: string, count: number, skip: number): Promise<any[]> {
   let data = [];
   const status = ['REQUESTED'];
   const requestByLender = [false];
@@ -241,7 +293,7 @@ export async function getPendingCreditLinesRequestedToLender(url: string, lender
   return data;
 }
 
-export async function getPendingCreditLinesRequestedByBorrower(url: string, borrower, count, skip): Promise<any[]> {
+export async function getPendingCreditLinesRequestedByBorrower(url: string, borrower: string, count: number, skip: number): Promise<any[]> {
   let data = [];
   const status = ['REQUESTED'];
   const requestByLender = [false];
@@ -250,7 +302,7 @@ export async function getPendingCreditLinesRequestedByBorrower(url: string, borr
   return data;
 }
 
-export async function getPendingCreditLinesRequestedToBorrower(url: string, borrower, count, skip): Promise<any[]> {
+export async function getPendingCreditLinesRequestedToBorrower(url: string, borrower: string, count: number, skip: number): Promise<any[]> {
   let data = [];
   const status = ['REQUESTED'];
   const requestByLender = [true];

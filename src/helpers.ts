@@ -12,6 +12,6 @@ export async function fetchData(requestData: any) {
 export const countPerQuery = 999;
 
 export function print(data: any): void {
-  console.log(JSON.stringify(data, null, 4));
+  console.log(JSON.stringify(data, undefined, 4));
   return;
 }

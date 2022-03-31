@@ -44,7 +44,7 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async lend(_id: string, _amount: string, options?: Overrides): Promise<ContractTransaction> {
-    const token = await (await this.lenderPool.creditLines(_id)).token;
+    const token = await (await this.lenderPool.pooledCLConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -68,12 +68,12 @@ export class PooledCreditLineApi {
       lender = await this.signer.getAddress();
     }
 
-    const token = await (await this.lenderPool.creditLines(_id)).token;
+    const token = await (await this.lenderPool.pooledCLConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
 
-    const value = await this.lenderPool.calculatePrincipleWithdrawable(_id, lender);
+    const value: BigNumberish = await this.lenderPool.callStatic.calculatePrincipalWithdrawable(_id, lender);
     return { value: value.toString(), decimals };
   }
 
@@ -119,7 +119,7 @@ export class PooledCreditLineApi {
    * @returns Balance
    */
   public async getPrinciple(_id: string): Promise<Balance> {
-    const token = await (await this.pooledCreditLine.creditLineConstants(_id)).borrowAsset;
+    const token = await (await this.pooledCreditLine.pooledCreditLineConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -160,7 +160,7 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async calculateInterestAccured(_id: string): Promise<Balance> {
-    const token = await (await this.pooledCreditLine.creditLineConstants(_id)).borrowAsset;
+    const token = await (await this.pooledCreditLine.pooledCreditLineConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -174,7 +174,7 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async calculateCurrentDebt(_id: string): Promise<Balance> {
-    const token = await (await this.pooledCreditLine.creditLineConstants(_id)).borrowAsset;
+    const token = await (await this.pooledCreditLine.pooledCreditLineConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -188,7 +188,7 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async calculateBorrowableAmount(_id: string): Promise<Balance> {
-    const token = await (await this.pooledCreditLine.creditLineConstants(_id)).borrowAsset;
+    const token = await (await this.pooledCreditLine.pooledCreditLineConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -329,7 +329,7 @@ export class PooledCreditLineApi {
     _fromSavingsAccount: boolean,
     options?: Overrides
   ): Promise<ContractTransaction> {
-    const token = await (await this.pooledCreditLine.creditLineConstants(_id)).collateralAsset;
+    const token = await (await this.pooledCreditLine.pooledCreditLineConstants(_id)).collateralAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -338,7 +338,12 @@ export class PooledCreditLineApi {
     if (amount.isNaN() || amount.isZero() || amount.isNegative()) {
       throw new Error('amount should be a valid number');
     }
-    return this.pooledCreditLine.depositCollateral(_id, amount.toFixed(0), _fromSavingsAccount, { ...options });
+    return this.pooledCreditLine.depositCollateral(
+      _id,
+      amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0),
+      _fromSavingsAccount,
+      { ...options }
+    );
   }
 
   /**
@@ -349,7 +354,7 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async borrow(_id: string, _amount: string, options?: Overrides): Promise<ContractTransaction> {
-    const token = await (await this.lenderPool.creditLines(_id)).token;
+    const token = await (await this.lenderPool.pooledCLConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -358,7 +363,7 @@ export class PooledCreditLineApi {
     if (amount.isNaN() || amount.isZero() || amount.isNegative()) {
       throw new Error('amount should be a valid number');
     }
-    return this.pooledCreditLine.borrow(_id, amount.toFixed(0), { ...options });
+    return this.pooledCreditLine.borrow(_id, amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0), { ...options });
   }
 
   /**
@@ -369,7 +374,7 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async refund(_id: string, _amount: string, options?: Overrides): Promise<ContractTransaction> {
-    const token = await (await this.lenderPool.creditLines(_id)).token;
+    const token = await (await this.lenderPool.pooledCLConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -378,7 +383,7 @@ export class PooledCreditLineApi {
     if (amount.isNaN() || amount.isZero() || amount.isNegative()) {
       throw new Error('amount should be a valid number');
     }
-    return this.pooledCreditLine.repay(_id, amount.toFixed(0), { ...options });
+    return this.pooledCreditLine.repay(_id, amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0), { ...options });
   }
 
   /**
@@ -409,7 +414,7 @@ export class PooledCreditLineApi {
   public async calculateTokenCollateralTokens(_id: string): Promise<Balance> {
     const value = await this.pooledCreditLine.callStatic.calculateTotalCollateralTokens(_id);
 
-    const token = await (await this.pooledCreditLine.creditLineConstants(_id)).collateralAsset;
+    const token = await (await this.pooledCreditLine.pooledCreditLineConstants(_id)).collateralAsset;
     await this.tokenManager.updateAll(token);
     return { value: value.toString(), decimals: this.tokenManager.getTokenDecimals(token) };
   }
@@ -428,7 +433,7 @@ export class PooledCreditLineApi {
     toSavingsAccount: boolean,
     options?: Overrides
   ): Promise<ContractTransaction> {
-    const token = await (await this.pooledCreditLine.creditLineConstants(_id)).collateralAsset;
+    const token = await (await this.pooledCreditLine.pooledCreditLineConstants(_id)).collateralAsset;
     await this.tokenManager.updateAll(token);
 
     const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
@@ -438,7 +443,12 @@ export class PooledCreditLineApi {
       throw new Error('amount should be a valid number');
     }
 
-    return this.pooledCreditLine['withdrawCollateral(uint256,uint256,bool)'](_id, amount.toFixed(0), toSavingsAccount, { ...options });
+    return this.pooledCreditLine['withdrawCollateral(uint256,uint256,bool)'](
+      _id,
+      amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0),
+      toSavingsAccount,
+      { ...options }
+    );
   }
 
   /**

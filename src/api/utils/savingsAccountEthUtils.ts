@@ -43,7 +43,7 @@ export class SavingAccountsEthUtils {
   ): Promise<ContractTransaction> {
     const decimals = 18;
     const _amount = new BigNumber(amount);
-    let value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
+    const value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
     let strategyAddress: string;
     if (strategy == StrategyType.NoYield) {
       strategyAddress = this.config.noStrategyAddress;

@@ -21,12 +21,18 @@ export class SublimeSdk {
     this.sublimeSubgraph = new SublimeSubgraph(subgraphUrl, signer, tokenManager, config);
   }
 
-  /**@returns Instance of SublimeConnector */
+  /**
+   *
+   * @returns Instance of Sublime Connector
+   */
   Connector(): SublimeConnector {
     return this.sublimeConnector;
   }
 
-  /**@returns Instance of SublimeSubgraph */
+  /**
+   *
+   * @returns Instance of Subgraph Class used for querying
+   */
   Subgraph(): SublimeSubgraph {
     return this.sublimeSubgraph;
   }

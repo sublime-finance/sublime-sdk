@@ -33,8 +33,10 @@ import {
   getAllowances,
   getTwitterId,
   getPooledCreditLinesOfBorrower,
+  getAllPooledCreditLines,
   getPooledCreditLinesOfLender,
   getPooledCreditLineTimeline,
+  getAllCreditLinesFromSubgraph,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -95,7 +97,7 @@ export class SublimeSubgraph {
    * @returns Array of all pools created on sublime
    */
   async getPools(): Promise<PoolDetail[]> {
-    let result = await getAllPools(this.subgraphUrl);
+    const result = await getAllPools(this.subgraphUrl);
     return this.transformToPoolDetail(result);
   }
 
@@ -105,7 +107,7 @@ export class SublimeSubgraph {
    * @returns Array of specific pool types
    */
   async getAllPoolsByPoolType(poolType: string): Promise<PoolDetail[]> {
-    let result = await getAllPoolsByPoolType(this.subgraphUrl, poolType);
+    const result = await getAllPoolsByPoolType(this.subgraphUrl, poolType);
     return this.transformToPoolDetail(result);
   }
 
@@ -114,8 +116,8 @@ export class SublimeSubgraph {
    * @returns pool data if the pool exists, else null
    */
   async getPool(poolId: string): Promise<PoolDetail> {
-    let result = await getPool(this.subgraphUrl, poolId);
-    let poolDetails: PoolDetail[] = await this.transformToPoolDetail(result);
+    const result = await getPool(this.subgraphUrl, poolId);
+    const poolDetails: PoolDetail[] = await this.transformToPoolDetail(result);
     return poolDetails[0];
   }
 
@@ -124,7 +126,7 @@ export class SublimeSubgraph {
    * @returns Array of pools for the corresponding borrower
    */
   async getPoolByBorrower(borrower: string): Promise<PoolDetail[]> {
-    let result = await getAllPoolsByBorrower(this.subgraphUrl, borrower);
+    const result = await getAllPoolsByBorrower(this.subgraphUrl, borrower);
     return this.transformToPoolDetail(result);
   }
 
@@ -133,7 +135,7 @@ export class SublimeSubgraph {
    * @returns Array of pool for the lender
    */
   async getPoolByLender(lender: string): Promise<PoolDetail[]> {
-    let result = await getAllPoolsByLender(this.subgraphUrl, lender);
+    const result = await getAllPoolsByLender(this.subgraphUrl, lender);
     return this.transformToPoolDetail(result);
   }
 
@@ -143,7 +145,7 @@ export class SublimeSubgraph {
    * @returns Array of pool
    */
   async getPoolByLenderByType(lender: string, poolType: string): Promise<PoolDetail[]> {
-    let result = await getAllPoolsByLenderByType(this.subgraphUrl, lender, poolType);
+    const result = await getAllPoolsByLenderByType(this.subgraphUrl, lender, poolType);
     return this.transformToPoolDetail(result);
   }
 
@@ -153,7 +155,7 @@ export class SublimeSubgraph {
    * @returns Array of pool
    */
   async getPoolByBorrowerByType(borrower: string, poolType: string): Promise<PoolDetail[]> {
-    let result = await getAllPoolsByBorrowerByType(this.subgraphUrl, borrower, poolType);
+    const result = await getAllPoolsByBorrowerByType(this.subgraphUrl, borrower, poolType);
     return this.transformToPoolDetail(result);
   }
 
@@ -161,12 +163,12 @@ export class SublimeSubgraph {
    * @param poolAddress
    * @returns All the lenders of a given pool
    */
-  async getAllLendersOfPool(poolAddress: string): Promise<PoolLender[]> {
-    let totalNumberOfLenders = 1 + this.getRandomInt(100);
-    let lenders: PoolLender[] = [];
-    let date = new Date().valueOf();
-    let poolToken = sha256(Buffer.from(date + 'poolToken')).slice(0, 40);
-    let suppliedToken = sha256(Buffer.from(date + 'suppliedToken')).slice(0, 40);
+  async getAllLendersOfPool(): Promise<PoolLender[]> {
+    const totalNumberOfLenders = 1 + this.getRandomInt(100);
+    const lenders: PoolLender[] = [];
+    const date = new Date().valueOf();
+    const poolToken = sha256(Buffer.from(date + 'poolToken')).slice(0, 40);
+    const suppliedToken = sha256(Buffer.from(date + 'suppliedToken')).slice(0, 40);
 
     for (let index = 0; index < totalNumberOfLenders; index++) {
       lenders.push({
@@ -190,13 +192,18 @@ export class SublimeSubgraph {
     return lenders;
   }
 
+  async getAllPooledCreditLines(count: number = 999, skip: number = 0): Promise<PooledCreditLineDetail[]> {
+    const result = await getAllPooledCreditLines(this.subgraphUrl, count, skip);
+    return this.transformToPooledCreditLine(result);
+  }
+
   async getAllPooledCreditLinesOfBorrower(address: string): Promise<PooledCreditLineDetail[]> {
-    let result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address);
+    const result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address);
     return this.transformToPooledCreditLine(result);
   }
 
   async getAllPooledCreditLinesOfLender(lender: string): Promise<PooledCreditLineDetail[]> {
-    let result = await getPooledCreditLinesOfLender(this.subgraphUrl, lender);
+    const result = await getPooledCreditLinesOfLender(this.subgraphUrl, lender);
     return this.transformToPooledCreditLine(result);
   }
 
@@ -205,7 +212,7 @@ export class SublimeSubgraph {
   }
 
   async getPooledCreditLineTimeline(pooledCreditLineId: string): Promise<PooledCreditLineOperation[]> {
-    let result = await getPooledCreditLineTimeline(this.subgraphUrl, pooledCreditLineId);
+    const result = await getPooledCreditLineTimeline(this.subgraphUrl, pooledCreditLineId);
     return this.transformToPooledCreditLineOperation(result);
   }
 
@@ -221,32 +228,38 @@ export class SublimeSubgraph {
   }
 
   private async transformToPooledCreditLine(data: any[]): Promise<PooledCreditLineDetail[]> {
-    let borrowTokens: string[] = data.map((a) => a.collateralAsset);
-    let collateralTokens: string[] = data.map((a) => a.borrowAsset);
-    let allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
+    const borrowTokens: string[] = data.map((a) => a.collateralAsset);
+    const collateralTokens: string[] = data.map((a) => a.borrowAsset);
+    const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
     for (let index = 0; index < allTokens.length; index++) {
       const element = allTokens[index];
       await this.tokenManager.updateAll(element);
+    }
+
+    const prices = {};
+    for (let index = 0; index < allTokens.length; index++) {
+      const element = allTokens[index];
+      prices[element] = await (await this.tokenManager.getPricePerAsset(element)).toString();
     }
 
     return data.map((a) => {
       return {
         id: a.id,
         borrowerAddress: a.borrowerAddress,
-        borrowLimit: { value: a.borrowLimt, decimals: this.tokenManager.getTokenDecimals(a.borrowerAddress) },
+        borrowLimit: { value: a.borrowLimt, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
         idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
         borrowAsset: {
           name: this.tokenManager.getTokenName(a.borrowAsset),
           address: a.borrowAsset,
           logo: this.tokenManager.getLogo(a.borrowAsset),
-          pricePerAssetInUSD: '3823',
+          pricePerAssetInUSD: prices[a.borrowAsset],
         },
         collateralAsset: {
           name: this.tokenManager.getTokenName(a.collateralAsset),
           address: a.collateralAsset,
           logo: this.tokenManager.getLogo(a.collateralAsset),
-          pricePerAssetInUSD: '2342',
+          pricePerAssetInUSD: prices[a.collateralAsset],
         },
         startsAt: a.startsAt,
         endsAt: a.endsAt,
@@ -269,16 +282,16 @@ export class SublimeSubgraph {
    * @description transaform the data recevied from the subgraph to type
    */
   private async transformToCreditLine(data: any[]): Promise<CreditLineDetail[]> {
-    let borrowTokens: string[] = data.map((a) => a.collateralAsset);
-    let collateralTokens: string[] = data.map((a) => a.borrowAsset);
-    let allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
+    const borrowTokens: string[] = data.map((a) => a.collateralAsset);
+    const collateralTokens: string[] = data.map((a) => a.borrowAsset);
+    const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
 
     for (let index = 0; index < allTokens.length; index++) {
       const element = allTokens[index];
       await this.tokenManager.updateAll(element);
     }
 
-    let creditLineTotalCollateralTokens = {};
+    const creditLineTotalCollateralTokens = {};
 
     for (let index = 0; index < data.length; index++) {
       const element = data[index];
@@ -288,13 +301,13 @@ export class SublimeSubgraph {
       // console.log({tc: creditLineTotalCollateralTokens[element.id], id: element.id})
     }
 
-    let creditLineDetails: Promise<CreditLineDetail>[] = data.map(async (a) => {
+    const creditLineDetails: Promise<CreditLineDetail>[] = data.map(async (a) => {
       let interestAccrued: BigNumber = new BigNumber(0);
       let currentDebt: BigNumber = new BigNumber(0);
       let collateralRatio: BigNumber = new BigNumber(0);
 
       if (a.lastPrincipalUpdateTime != 0) {
-        let timeElapsed: number = Date.now() / 1000 - a.lastPrincipalUpdateTime;
+        const timeElapsed: number = Date.now() / 1000 - a.lastPrincipalUpdateTime;
         interestAccrued = new BigNumber(a.principal)
           .multipliedBy(new BigNumber(a.borrowRate))
           .times(timeElapsed)
@@ -311,6 +324,7 @@ export class SublimeSubgraph {
           .div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.collateralAsset)))
           .div(currentDebt);
       }
+
       return {
         currentDebt: { value: currentDebt.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         principal: { value: new BigNumber(a.principal).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
@@ -332,8 +346,8 @@ export class SublimeSubgraph {
           logo: this.tokenManager.getLogo(a.collateralAsset),
         },
         autoLiquidate: a.autoLiquidation,
-        lender: { address: a.lender, otherData: a.lenderWalletDetails },
-        borrower: { address: a.borrower, otherData: a.borrowerWalletDetails },
+        lender: { address: a.lender, otherData: a.lenderWalconstDetails },
+        borrower: { address: a.borrower, otherData: a.borrowerWalconstDetails },
         type: a.status,
         lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
         id: a.id,
@@ -348,15 +362,15 @@ export class SublimeSubgraph {
    * @@description transforms the data received from the subgraph to pool detail
    */
   private async transformToPoolDetail(data: any[]): Promise<PoolDetail[]> {
-    let borrowTokens: string[] = data.map((a) => a.collateralAsset);
-    let collateralTokens: string[] = data.map((a) => a.borrowAsset);
-    let allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
+    const borrowTokens: string[] = data.map((a) => a.collateralAsset);
+    const collateralTokens: string[] = data.map((a) => a.borrowAsset);
+    const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
 
     for (let index = 0; index < allTokens.length; index++) {
       const element = allTokens[index];
       await this.tokenManager.updateAll(element);
     }
-    let transformedData: Promise<PoolDetail>[] = data.map(async (a) => {
+    const transformedData: Promise<PoolDetail>[] = data.map(async (a) => {
       return {
         address: a.id,
         poolType: a.loanStatus,
@@ -401,10 +415,10 @@ export class SublimeSubgraph {
     const DAYS_PER_YEAR = 365;
     if (strategy == this.sublimeAddresses.compoundStrategyContractAddress) {
       // Ref - "Calculating the APY Using Rate Per Block" section in https://compound.finance/docs
-      let cTokenContract: ICToken = ICToken__factory.connect(strategy, this.signer);
-      let supplyRatePerBlock = new BigNumber((await cTokenContract.callStatic.supplyRatePerBlock()).toString());
-      let perDaySupplyRate = supplyRatePerBlock.div(new BigNumber(10).pow(18)).multipliedBy(BLOCKS_PER_DAY).plus(1);
-      let perYearSupplyRate = perDaySupplyRate.pow(DAYS_PER_YEAR).minus(1).multipliedBy(100);
+      const cTokenContract: ICToken = ICToken__factory.connect(strategy, this.signer);
+      const supplyRatePerBlock = new BigNumber((await cTokenContract.callStatic.supplyRatePerBlock()).toString());
+      const perDaySupplyRate = supplyRatePerBlock.div(new BigNumber(10).pow(18)).multipliedBy(BLOCKS_PER_DAY).plus(1);
+      const perYearSupplyRate = perDaySupplyRate.pow(DAYS_PER_YEAR).minus(1).multipliedBy(100);
       return perYearSupplyRate;
     } else if (strategy == this.sublimeAddresses.noStrategyAddress) {
       return new BigNumber(0);
@@ -418,36 +432,36 @@ export class SublimeSubgraph {
    * @description Tranforms the data received from the subgraph to type
    */
   private async transformToSavingsAccountUserDetails(address: string, data: any[]): Promise<SavingAccountUserDetailDisplay> {
-    let allowances = await getAllowances(this.subgraphUrl, address, this.sublimeAddresses.creditLineContractAddress);
-    let savingsAccountUserDetails: SavingsAccountUserDetails = {
+    const allowances = await getAllowances(this.subgraphUrl, address, this.sublimeAddresses.creditLineContractAddress);
+    const savingsAccountUserDetails: SavingsAccountUserDetails = {
       user: address,
       totalBalance: new BigNumber(0),
       balances: [],
     };
 
-    let tokenIndex = {};
-    let strategyIndex = {};
+    const tokenIndex = {};
+    const strategyIndex = {};
 
-    let tokenPrice = {};
+    const tokenPrice = {};
 
     let yieldContract: IYield = IYield__factory.connect(zeroAddress, this.signer);
 
     for (let i = 0; i < data.length; i++) {
-      let strategy = data[i].strategy.address;
-      let token = data[i].token;
-      let shares = data[i].shares;
+      const strategy = data[i].strategy.address;
+      const token = data[i].token;
+      const shares = data[i].shares;
       if (!strategyIndex[token]) {
         strategyIndex[token] = {};
       }
 
       yieldContract = await yieldContract.attach(strategy);
       await this.tokenManager.updateTokenDecimals(token);
-      let tokenDecimals = new BigNumber(10).pow(this.tokenManager.getTokenDecimals(token));
-      let rawAmountInTokens = (await yieldContract.callStatic.getTokensForShares(shares, token)).toString();
-      let amountInTokens = new BigNumber(rawAmountInTokens).div(tokenDecimals);
+      const tokenDecimals = new BigNumber(10).pow(this.tokenManager.getTokenDecimals(token));
+      const rawAmountInTokens = (await yieldContract.callStatic.getTokensForShares(shares, token)).toString();
+      const amountInTokens = new BigNumber(rawAmountInTokens).div(tokenDecimals);
       let allocatedAmountToCreditLines = new BigNumber(0);
 
-      let filteredAllowancesByToken = allowances.filter((a) => a.token == token);
+      const filteredAllowancesByToken = allowances.filter((a) => a.token == token);
       if (filteredAllowancesByToken.length > 0) {
         allocatedAmountToCreditLines = new BigNumber(filteredAllowancesByToken[0].amount);
         allocatedAmountToCreditLines = allocatedAmountToCreditLines.div(tokenDecimals);
@@ -458,9 +472,9 @@ export class SublimeSubgraph {
         price = await this.tokenManager.getPricePerAsset(token);
         tokenPrice[token] = price;
       }
-      let amount = new BigNumber(amountInTokens).multipliedBy(price);
+      const amount = new BigNumber(amountInTokens).multipliedBy(price);
 
-      let apr = await this.getAPR(strategy);
+      const apr = await this.getAPR(strategy);
 
       if (savingsAccountUserDetails.balances[tokenIndex[token]]?.token != token) {
         tokenIndex[token] = savingsAccountUserDetails.balances.length;
@@ -499,14 +513,14 @@ export class SublimeSubgraph {
       savingsAccountUserDetails.totalBalance = savingsAccountUserDetails.totalBalance.plus(amount);
     }
 
-    let savingAccountsUserDetailsDisplay = {} as SavingAccountUserDetailDisplay;
+    const savingAccountsUserDetailsDisplay = {} as SavingAccountUserDetailDisplay;
     // return savingsAccountUserDetails;
 
     savingAccountsUserDetailsDisplay.user = savingsAccountUserDetails.user;
     savingAccountsUserDetailsDisplay.totalBalance = { value: savingsAccountUserDetails.totalBalance.toFixed(2), decimals: 0 };
     savingAccountsUserDetailsDisplay.balances = [];
     savingsAccountUserDetails.balances.forEach((a) => {
-      let strategyBalance: [SavingsAccountStrategyBalanceDisplay?] = [];
+      const strategyBalance: [SavingsAccountStrategyBalanceDisplay?] = [];
       a.strategyBalance.forEach((b) => {
         strategyBalance.push({
           strategy: { address: b.strategy, type: this.yieldApi.getStrategy(b.strategy) },
@@ -535,8 +549,8 @@ export class SublimeSubgraph {
    * @description Returns savings account overview for a user address
    */
   async getSavingsAccountOverview(address: string): Promise<SavingAccountUserDetailDisplay> {
-    let balances = await getBalances(this.subgraphUrl, address);
-    let savingsAccountUserDetails = await this.transformToSavingsAccountUserDetails(address, balances);
+    const balances = await getBalances(this.subgraphUrl, address);
+    const savingsAccountUserDetails = await this.transformToSavingsAccountUserDetails(address, balances);
 
     return savingsAccountUserDetails;
   }
@@ -559,30 +573,30 @@ export class SublimeSubgraph {
    * @description Returns the credit lines overview of the user
    */
   async getCreditLinesOverview(address: string): Promise<CreditLinesOverview> {
-    let creditLineAsborrower = await this.getConfirmedCreditLinesOfBorrower(address, 10, 0);
-    let creditLineAsLender = await this.getConfirmedCreditLinesOfLender(address, 10, 0);
+    const creditLineAsborrower = await this.getConfirmedCreditLinesOfBorrower(address, 10, 0);
+    const creditLineAsLender = await this.getConfirmedCreditLinesOfLender(address, 10, 0);
 
     let creditGranted = new BigNumber(0);
     let interestAccrued = new BigNumber(0);
     let activeCredit = new BigNumber(0);
     let interestRate = new BigNumber(0);
 
-    let borrowedCreditLines = creditLineAsborrower.length;
+    const borrowedCreditLines = creditLineAsborrower.length;
 
     for (let i = 0; i < creditLineAsLender.length; i++) {
-      let borrowAsset = creditLineAsLender[i].borrowAsset;
-      let principal = new BigNumber(creditLineAsLender[i].principal.value.toString());
-      let assetPrice = await this.tokenManager.getPricePerAsset(borrowAsset.toString());
+      const borrowAsset = creditLineAsLender[i].borrowAsset;
+      const principal = new BigNumber(creditLineAsLender[i].principal.value.toString());
+      const assetPrice = await this.tokenManager.getPricePerAsset(borrowAsset.toString());
       creditGranted = creditGranted.plus(principal.multipliedBy(assetPrice));
     }
 
     for (let i = 0; i < creditLineAsborrower.length; i++) {
-      let interest = creditLineAsborrower[i].interestRate;
-      let accruedInterest = creditLineAsborrower[i].interestAccrued.value;
+      const interest = creditLineAsborrower[i].interestRate;
+      const accruedInterest = creditLineAsborrower[i].interestAccrued.value;
 
       if (creditLineAsborrower[i].type == 'ACTIVE') {
-        let credit = new BigNumber(creditLineAsborrower[i].principal.value.toString());
-        let price = await this.tokenManager.getPricePerAsset(creditLineAsLender[i].borrowAsset.toString());
+        const credit = new BigNumber(creditLineAsborrower[i].principal.value.toString());
+        const price = await this.tokenManager.getPricePerAsset(creditLineAsLender[i].borrowAsset.toString());
         activeCredit = activeCredit.plus(credit.multipliedBy(price));
       }
 
@@ -609,11 +623,11 @@ export class SublimeSubgraph {
    * @description Return the profiel overview of the user
    */
   async getProfileOverview(address: string): Promise<ProfileOverview> {
-    let pools = await this.getPoolByBorrower(address);
-    let poolsCreated = pools.length;
-    let activePools = pools.filter((a) => a.poolType === 'Active').length;
-    let timesDefaulted = pools.filter((a) => a.poolType === 'Defaulted').length;
-    let totalAmountInBorrow = new BigNumber(this.getRandomInt(100000000)).div(100).toFixed(2);
+    const pools = await this.getPoolByBorrower(address);
+    const poolsCreated = pools.length;
+    const activePools = pools.filter((a) => a.poolType === 'Active').length;
+    const timesDefaulted = pools.filter((a) => a.poolType === 'Defaulted').length;
+    const totalAmountInBorrow = new BigNumber(this.getRandomInt(100000000)).div(100).toFixed(2);
 
     return {
       poolsCreated: poolsCreated.toString(),
@@ -624,13 +638,25 @@ export class SublimeSubgraph {
   }
 
   /**
+   * @description use to fetch all the credit lines in the system
+   * @description don't use in production. It will be a 😰 (only for debugging)
+   * @param count: number of credit lines to query
+   * @param skip: number to credit lines to skip
+   * @returns
+   */
+  async getAllCreditLines(count: number = 999, skip: number = 0): Promise<CreditLineDetail[]> {
+    const result = await getAllCreditLinesFromSubgraph(this.subgraphUrl, count, skip);
+    return await this.transformToCreditLine(result);
+  }
+
+  /**
    * @param borrower: address of the borrower
    * @param count: number of credit lines to query
    * @param skip: number to credit lines to skip
    * @description Returns the confirmed credit lines of a borrower
    */
-  async getConfirmedCreditLinesOfBorrower(borrower: string, count: Number, skip: Number): Promise<CreditLineDetail[]> {
-    let result = await getConfirmedCreditLinesOfBorrower(this.subgraphUrl, borrower, count, skip);
+  async getConfirmedCreditLinesOfBorrower(borrower: string, count: number = 999, skip: number = 0): Promise<CreditLineDetail[]> {
+    const result = await getConfirmedCreditLinesOfBorrower(this.subgraphUrl, borrower, count, skip);
     return await this.transformToCreditLine(result);
   }
 
@@ -640,8 +666,8 @@ export class SublimeSubgraph {
    * @param skip: number to credit lines to skip
    * @description Returns the confirmed credit lines of a lender
    */
-  async getConfirmedCreditLinesOfLender(lender: string, count: Number, skip: Number): Promise<CreditLineDetail[]> {
-    let result = await getConfirmedCreditLinesOfLender(this.subgraphUrl, lender, count, skip);
+  async getConfirmedCreditLinesOfLender(lender: string, count: number, skip: number): Promise<CreditLineDetail[]> {
+    const result = await getConfirmedCreditLinesOfLender(this.subgraphUrl, lender, count, skip);
     return await this.transformToCreditLine(result);
   }
 
@@ -651,8 +677,8 @@ export class SublimeSubgraph {
    * @param skip: number to credit lines to skip
    * @description Returns the list of credit lines which have been requested by the lender but not accepted by any borrower
    */
-  async getPendingCreditlinesRequestedByLender(lender: string, count: Number, skip: Number): Promise<CreditLineDetail[]> {
-    let result = await getPendingCreditlinesRequestedByLender(this.subgraphUrl, lender, count, skip);
+  async getPendingCreditlinesRequestedByLender(lender: string, count: number, skip: number): Promise<CreditLineDetail[]> {
+    const result = await getPendingCreditlinesRequestedByLender(this.subgraphUrl, lender, count, skip);
     return await this.transformToCreditLine(result);
   }
 
@@ -662,8 +688,8 @@ export class SublimeSubgraph {
    * @param skip: number to credit lines to skip
    * @description Returns the list of credit lines which have been requests by the borrower but not accpeted by any lender
    */
-  async getPendingCreditLinesRequestedByBorrower(borrower: string, count: Number, skip: Number): Promise<CreditLineDetail[]> {
-    let result = await getPendingCreditLinesRequestedByBorrower(this.subgraphUrl, borrower, count, skip);
+  async getPendingCreditLinesRequestedByBorrower(borrower: string, count: number, skip: number): Promise<CreditLineDetail[]> {
+    const result = await getPendingCreditLinesRequestedByBorrower(this.subgraphUrl, borrower, count, skip);
     return await this.transformToCreditLine(result);
   }
 
@@ -673,8 +699,8 @@ export class SublimeSubgraph {
    * @param skip: number to credit lines to skip
    * @description Returns the list of poending credit lines which have requested to a lender by all other borrowers
    */
-  async getPendingCreditLinesRequestedToLender(lender: string, count: Number, skip: Number): Promise<CreditLineDetail[]> {
-    let result = await getPendingCreditLinesRequestedToLender(this.subgraphUrl, lender, count, skip);
+  async getPendingCreditLinesRequestedToLender(lender: string, count: number, skip: number): Promise<CreditLineDetail[]> {
+    const result = await getPendingCreditLinesRequestedToLender(this.subgraphUrl, lender, count, skip);
     return await this.transformToCreditLine(result);
   }
 
@@ -684,8 +710,8 @@ export class SublimeSubgraph {
    * @param skip: number to credit lines to skip
    * @description Returns the list of poending credit lines which have requested to a borrower by all other lenders
    */
-  async getPendingCreditLinesRequestedToBorrower(borrower: string, count: Number, skip: Number): Promise<CreditLineDetail[]> {
-    let result = await getPendingCreditLinesRequestedToBorrower(this.subgraphUrl, borrower, count, skip);
+  async getPendingCreditLinesRequestedToBorrower(borrower: string, count: number, skip: number): Promise<CreditLineDetail[]> {
+    const result = await getPendingCreditLinesRequestedToBorrower(this.subgraphUrl, borrower, count, skip);
     return await this.transformToCreditLine(result);
   }
 
@@ -694,10 +720,10 @@ export class SublimeSubgraph {
    * @description returns a detailed information of a single credit line.
    */
   async getCreditLine(id: string): Promise<CreditLineDetail> {
-    let result = await getCreditLine(this.subgraphUrl, id);
-    let data = await this.transformToCreditLine(result);
+    const result = await getCreditLine(this.subgraphUrl, id);
+    const data = await this.transformToCreditLine(result);
     if (data.length == 0) {
-      return null;
+      return undefined;
     } else {
       return data[0];
     }
@@ -708,17 +734,17 @@ export class SublimeSubgraph {
    * @description returns the operations made on a credit line in time-wise order
    */
   async getCreditLineTimeline(creditLine: string): Promise<CreditLineOperation[]> {
-    let result = await getCreditLineTimeline(this.subgraphUrl, creditLine);
+    const result = await getCreditLineTimeline(this.subgraphUrl, creditLine);
     if (result.data.creditLines.length == 0) {
       return [];
     } else {
-      let cl = result.data.creditLines[0];
+      const cl = result.data.creditLines[0];
       return await this.transformToCreditLineOperations(cl);
     }
   }
 
   async getAllowances(): Promise<any[]> {
-    let result = await getAllowances(this.subgraphUrl, await this.signer.getAddress(), this.sublimeAddresses.creditLineContractAddress);
+    const result = await getAllowances(this.subgraphUrl, await this.signer.getAddress(), this.sublimeAddresses.creditLineContractAddress);
     return result;
   }
   /**
@@ -728,11 +754,11 @@ export class SublimeSubgraph {
    */
   private async transformToCreditLineOperations(cl: any): Promise<CreditLineOperation[]> {
     await this.tokenManager.updateAll(cl.borrowAsset);
-    let operations: CreditLineOperation[] = cl.creditLineTimeline.map((a) => {
+    const operations: CreditLineOperation[] = cl.creditLineTimeline.map((a) => {
       return {
         amount: a.amount
           ? new BigNumber(a.amount).div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(cl.borrowAsset))).toFixed(2)
-          : null,
+          : undefined,
         creditLineOperation: a.creditLineOperation,
         liquidator: a.liquidator,
         strategy: a.strategy,
@@ -758,7 +784,7 @@ export class SublimeSubgraph {
    */
   async getVerifiedTwitterId(address: string): Promise<TwitterDetails[]> {
     const addr = address.toLocaleLowerCase();
-    let result = await getTwitterId(this.subgraphUrl, addr);
+    const result = await getTwitterId(this.subgraphUrl, addr);
     return [...result].map((a) => {
       return {
         id: a.id,

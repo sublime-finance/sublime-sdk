@@ -37,7 +37,7 @@ export class CreditLineEthUtils {
     strategy: StrategyType,
     options?: Overrides
   ): Promise<ContractTransaction> {
-    let decimals = 18;
+    const decimals = 18;
     let strategyAddress: string;
     if (strategy == StrategyType.NoYield) {
       strategyAddress = this.config.noStrategyAddress;
@@ -48,7 +48,7 @@ export class CreditLineEthUtils {
     }
 
     const _amount = new BigNumber(amount);
-    let value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
+    const value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
 
     return this.creditLineUtils.depositEthAsCollateralToCreditLine(creditLineNumber, { ...options, value });
   }
@@ -61,9 +61,9 @@ export class CreditLineEthUtils {
    * @returns Contract Transaction
    */
   public async repayEthToCreditLine(creditLineNumber: BigNumberish, amount: string, options?: Overrides): Promise<ContractTransaction> {
-    let decimals = 18;
+    const decimals = 18;
     const _amount = new BigNumber(amount);
-    let value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
+    const value: BigNumberish = _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0);
 
     return this.creditLineUtils.repayEthToCreditLines(creditLineNumber, { ...options, value });
   }
