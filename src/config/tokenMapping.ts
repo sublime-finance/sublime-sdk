@@ -72,6 +72,20 @@ export const tokenData: InternalTokenMap[] = [
     iconMapping: '0xf650C3d88D12dB855b8bf7D11Be6C55A4e07dCC9',
   },
   {
+    address: '0x459C1dA86eDB02B9a3CCF2BF53aa9aad5B8D9546',
+    name: 'Mock Wrapped BTC',
+    symbol: 'M-WBTC',
+    decimals: 18,
+    iconMapping: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
+  },
+  {
+    address: '0xfC5F30663d710Ff5040c50A32F693073a4f0C157',
+    name: 'Mock DAI',
+    symbol: 'M-DAI',
+    decimals: 18,
+    iconMapping: '0x6b175474e89094c44da98b954eedeac495271d0f',
+  },
+  {
     address: '0x7afe7373126eb5ef766caad2072c4a87810fbfa3',
     name: 'Wrapped BTC',
     symbol: 'WBTC',
