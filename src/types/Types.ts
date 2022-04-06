@@ -243,3 +243,28 @@ export interface Balance {
   value: BigNumberish;
   decimals: number;
 }
+
+export interface LenderPoolDetail {
+  id: string;
+  startTime: string;
+  borrowAsset: string;
+  collateralAsset: string;
+  borrowLimit: Balance;
+  minBorrowAmount: Balance;
+  borrowAssetStrategy: string;
+  sharesHeld: Balance;
+  borrowerInterestShares: Balance;
+  yieldInterestWithdrawnShares: Balance;
+  collateralHeld: Balance;
+  areTokensTransferable: boolean;
+  verifier: object;
+  lenders: LenderPerPoolDetail[];
+}
+
+export interface LenderPerPoolDetail {
+  lenderAddress: string;
+  amountLent: Balance;
+  amountWithdrawn: Balance;
+  sharesWithdrawn: Balance;
+  strategy: string;
+}

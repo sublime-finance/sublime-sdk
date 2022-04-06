@@ -12,6 +12,8 @@ import {
   TwitterDetails,
   PooledCreditLineDetail,
   PooledCreditLineOperation,
+  LenderPoolDetail,
+  LenderPerPoolDetail,
 } from './types/Types';
 import {
   getAllPools,
@@ -38,6 +40,7 @@ import {
   getPooledCreditLineTimeline,
   getAllCreditLinesFromSubgraph,
   getPooledCreditLineById,
+  getLenderPerPool,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -193,9 +196,35 @@ export class SublimeSubgraph {
     return lenders;
   }
 
+  /**
+   * @description Returns pooled credit lines in random order
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getAllPooledCreditLines(count: number = 999, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getAllPooledCreditLines(this.subgraphUrl, count, skip);
     return this.transformToPooledCreditLine(result);
+  }
+
+  /**
+   * @description Returns pooled credit lines in order created latest. Preferable don't use
+   * @returns
+   */
+  async getAllPooledCreditLinesCreatedLatest(): Promise<PooledCreditLineDetail[]> {
+    const pooledCreditLines: PooledCreditLineDetail[] = [];
+    const count: number = 999;
+    let skip: number = 0;
+
+    for (;;) {
+      const lines = await this.getAllPooledCreditLines(count, skip);
+      if (lines.length == 0) {
+        break;
+      }
+      pooledCreditLines.push(...lines);
+      skip = skip + count;
+    }
+    return pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
   }
 
   async getPooledCreditLineById(id: number): Promise<PooledCreditLineDetail[]> {
@@ -220,6 +249,59 @@ export class SublimeSubgraph {
   async getPooledCreditLineTimeline(pooledCreditLineId: string): Promise<PooledCreditLineOperation[]> {
     const result = await getPooledCreditLineTimeline(this.subgraphUrl, pooledCreditLineId);
     return this.transformToPooledCreditLineOperation(result);
+  }
+
+  async getLendersPerPool(id: string): Promise<LenderPoolDetail> {
+    const result = await getLenderPerPool(this.subgraphUrl, id);
+    if (result.length == 0) {
+      throw new Error('No such pooled credit line');
+    }
+    const returnData = await this.transformToLenderPoolDetail(result);
+    return returnData[0];
+  }
+
+  private async transformToLenderPoolDetail(data: any[]): Promise<LenderPoolDetail[]> {
+    const borrowTokens: string[] = data.map((a) => a.collateralAsset);
+    const collateralTokens: string[] = data.map((a) => a.borrowAsset);
+    const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
+    for (let index = 0; index < allTokens.length; index++) {
+      const element = allTokens[index];
+      await this.tokenManager.updateAll(element);
+    }
+
+    return data.map((a) => {
+      return {
+        id: a.id,
+        startTime: a.startTime,
+        borrowAsset: a.borrowAsset,
+        collateralAsset: a.collateralAsset,
+        borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        borrowAssetStrategy: a.borrowAssetStrategy,
+        sharesHeld: { value: a.sharesHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
+        borrowerInterestShares: { value: a.borrowerInterestShares, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
+        yieldInterestWithdrawnShares: {
+          value: a.yieldInterestWithdrawnShares,
+          decimals: this.tokenManager.getTokenDecimals(a.collateralAsset),
+        },
+        collateralHeld: { value: a.collateralHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
+        areTokensTransferable: a.areTokensTransferable,
+        verifier: a.verifier,
+        lenders: this.transformToLenderPerPoolDetail(a.lender, this.tokenManager.getTokenDecimals(a.collateralAsset)),
+      };
+    });
+  }
+
+  private transformToLenderPerPoolDetail(data: any[], collateralDecimal: number): LenderPerPoolDetail[] {
+    return data.map((a) => {
+      return {
+        lenderAddress: a.lenderAddress,
+        amountLent: { value: a.amountLent, decimals: collateralDecimal },
+        amountWithdrawn: { value: a.amountWithdrawn, decimals: collateralDecimal },
+        sharesWithdrawn: { value: a.sharesWithdrawn, decimals: collateralDecimal },
+        strategy: a.strategy,
+      };
+    });
   }
 
   private async transformToPooledCreditLineOperation(data: any[]): Promise<PooledCreditLineOperation[]> {

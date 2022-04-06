@@ -397,6 +397,47 @@ export class PooledCreditLineApi {
   }
 
   /**
+   * @description Cancels the credit lines
+   * @param _id ID of the pooled credit line
+   * @param options
+   * @returns
+   */
+  public async cancel(_id: string, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.cancelRequest(_id, { ...options });
+  }
+
+  /**
+   * @description function withdraw partial collateral
+   * @param _id
+   * @param amount
+   * @param toSavingsAccount
+   * @param options
+   */
+  public async withdrawPartialCollateral(
+    _id: string,
+    _amount: string,
+    toSavingsAccount: boolean,
+    options?: Overrides
+  ): Promise<ContractTransaction> {
+    const token = await (await this.lenderPool.pooledCLConstants(_id)).collateralAsset;
+    await this.tokenManager.updateAll(token);
+
+    const decimals: BigNumberish = this.tokenManager.getTokenDecimals(token);
+
+    const amount = new BigNumber(_amount);
+    if (amount.isNaN() || amount.isZero() || amount.isNegative()) {
+      throw new Error('amount should be a valid number');
+    }
+
+    return this.pooledCreditLine['withdrawCollateral(uint256,uint256,bool)'](
+      _id,
+      amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0),
+      toSavingsAccount,
+      { ...options }
+    );
+  }
+
+  /**
    * @description calculate current collateral ratio
    * @param _id
    * @returns
@@ -458,7 +499,7 @@ export class PooledCreditLineApi {
    * @param options
    * @returns
    */
-  public async withdrawAllCollateal(_id: string, toSavingsAccount: boolean, options?: Overrides): Promise<ContractTransaction> {
+  public async withdrawAllCollateral(_id: string, toSavingsAccount: boolean, options?: Overrides): Promise<ContractTransaction> {
     return this.pooledCreditLine['withdrawCollateral(uint256,bool)'](_id, toSavingsAccount, { ...options });
   }
 }

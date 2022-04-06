@@ -192,3 +192,51 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
   // console.log({allData})
   return allData;
 }
+
+export async function getLenderPerPool(url: string, id: string): Promise<any[]> {
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+      lenderPools(where:{id:"${id}"}){
+        id
+        startTime
+        borrowAsset
+        collateralAsset
+        borrowLimit
+        minBorrowAmount
+        borrowAssetStrategy
+        sharesHeld
+        borrowerInterestShares
+        yieldInterestWithdrawnShares
+        collateralHeld
+        areTokensTransferable
+        verifier{
+          id
+          status
+          usersVerified{
+            metadata
+          }
+        }
+        lender{
+          lenderAddress
+          amountLent
+          amountWithdrawn
+          sharesWithdrawn
+          strategy
+        }
+      }
+    }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  // print({result});
+  allData.push(...result.data.lenderPools);
+  // console.log({allData})
+  return allData;
+}
