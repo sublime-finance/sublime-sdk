@@ -42,6 +42,7 @@ export async function getPooledCreditLinesOfLender(url: string, lenderAddress: s
                 idealCollateralRatio
                 borrowAsset
                 collateralAsset
+                createdAt
                 startsAt
                 endsAt
                 defaultsAt
@@ -85,6 +86,7 @@ export async function getPooledCreditLinesOfBorrower(url: string, borrower: stri
           idealCollateralRatio
           borrowAsset
           collateralAsset
+          createdAt
           startsAt
           endsAt
           defaultsAt
@@ -125,6 +127,7 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           idealCollateralRatio
           borrowAsset
           collateralAsset
+          createdAt
           startsAt
           endsAt
           defaultsAt
@@ -165,6 +168,7 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
           idealCollateralRatio
           borrowAsset
           collateralAsset
+          createdAt
           startsAt
           endsAt
           defaultsAt
