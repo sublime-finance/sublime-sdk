@@ -349,6 +349,7 @@ export class SublimeSubgraph {
           logo: this.tokenManager.getLogo(a.collateralAsset),
           pricePerAssetInUSD: prices[a.collateralAsset],
         },
+        createdAt: a.createdAt,
         startsAt: a.startsAt,
         endsAt: a.endsAt,
         defaultsAt: a.defaultsAt,

@@ -201,6 +201,7 @@ export interface PooledCreditLineDetail {
   idealCollateralRatio: string;
   borrowAsset: Asset;
   collateralAsset: Asset;
+  createdAt: string;
   startsAt: string;
   endsAt: string;
   defaultsAt: string;
