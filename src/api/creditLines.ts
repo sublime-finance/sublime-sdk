@@ -51,11 +51,11 @@ export class CreditLineApi {
       throw new Error('borrowLimit should be a valid number');
     }
     const borrowRate = new BigNumber(request.borrowRate);
-    if (borrowRate.isNaN() || borrowRate.isZero() || borrowRate.isNegative()) {
+    if (borrowRate.isNaN() || borrowRate.isNegative()) {
       throw new Error('borrowRate should be a valid number');
     }
     const collateralRatio = new BigNumber(request.collateralRatio);
-    if (collateralRatio.isNaN() || collateralRatio.isZero() || collateralRatio.isNegative()) {
+    if (collateralRatio.isNaN() || collateralRatio.isNegative()) {
       throw new Error('collateralRatio should be a valid number');
     }
 
@@ -96,11 +96,11 @@ export class CreditLineApi {
       throw new Error('borrowLimit should be a valid number');
     }
     const borrowRate = new BigNumber(request.borrowRate);
-    if (borrowRate.isNaN() || borrowRate.isZero() || borrowRate.isNegative()) {
+    if (borrowRate.isNaN() || borrowRate.isNegative()) {
       throw new Error('borrowRate should be a valid number');
     }
     const collateralRatio = new BigNumber(request.collateralRatio);
-    if (collateralRatio.isNaN() || collateralRatio.isZero() || collateralRatio.isNegative()) {
+    if (collateralRatio.isNaN() || collateralRatio.isNegative()) {
       throw new Error('collateralRatio should be a valid number');
     }
 

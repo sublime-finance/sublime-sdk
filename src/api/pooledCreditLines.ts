@@ -218,7 +218,7 @@ export class PooledCreditLineApi {
     const borrowTokenDecimal = this.tokenManager.getTokenDecimals(borrowAsset);
 
     const collateralRatio = new BigNumber(colRatio);
-    if (collateralRatio.isNaN() || collateralRatio.isZero() || collateralRatio.isNegative()) {
+    if (collateralRatio.isNaN() || collateralRatio.isNegative()) {
       throw new Error('collateralRatio should be a valid number');
     }
 
@@ -233,7 +233,7 @@ export class PooledCreditLineApi {
     }
 
     const gpr = new BigNumber(gracePenaltyRate);
-    if (gpr.isNaN() || gpr.isZero() || gpr.isNegative()) {
+    if (gpr.isNaN() || gpr.isNegative()) {
       throw new Error('gracePenaltyRate should be a valid number');
     }
 
@@ -248,7 +248,7 @@ export class PooledCreditLineApi {
     }
 
     const borrowRate = new BigNumber(_borrowRate);
-    if (borrowRate.isNaN() || borrowRate.isZero() || borrowRate.isNegative()) {
+    if (borrowRate.isNaN() || borrowRate.isNegative()) {
       throw new Error('borrowRate should be a valid number');
     }
 
@@ -373,7 +373,7 @@ export class PooledCreditLineApi {
    * @param options
    * @returns
    */
-  public async refund(_id: string, _amount: string, options?: Overrides): Promise<ContractTransaction> {
+  public async repay(_id: string, _amount: string, options?: Overrides): Promise<ContractTransaction> {
     const token = await (await this.lenderPool.pooledCLConstants(_id)).borrowAsset;
     await this.tokenManager.updateAll(token);
 
