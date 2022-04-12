@@ -269,3 +269,9 @@ export interface LenderPerPoolDetail {
   sharesWithdrawn: Balance;
   strategy: string;
 }
+
+export interface LenderContributionToPooledCreditLines {
+  amountLent: Balance;
+  amountWithdrawn: Balance;
+  sharesWithdrawn: Balance;
+}

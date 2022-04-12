@@ -26,13 +26,17 @@ export async function getPooledCreditLineTimeline(url: string, pooledCreditLineI
   return allData;
 }
 
-export async function getPooledCreditLinesOfLender(url: string, lenderAddress: string): Promise<any[]> {
+export async function getPooledCreditLinesOfLender(url: string, lenderAddress: string): Promise<[any[], any[]]> {
   lenderAddress = lenderAddress.toString();
   const allData = [];
+  const poolContributions = [];
   const data = JSON.stringify({
     query: `{
         lenderPerLenderPools(where:{lenderAddress:"${lenderAddress}"}){
           lenderAddress
+          amountLent
+          amountWithdrawn
+          sharesWithdrawn
           lenderPool{
             pooledCreditLine{
                 id
@@ -69,8 +73,17 @@ export async function getPooledCreditLinesOfLender(url: string, lenderAddress: s
   const result = await fetchData(options);
   // print({result});
   allData.push(...result.data.lenderPerLenderPools.map((a) => a.lenderPool.pooledCreditLine));
+  poolContributions.push(
+    ...result.data.lenderPerLenderPools.map((a) => {
+      return {
+        amountLent: a.amountLent,
+        amountWithdrawn: a.amountWithdrawn,
+        sharesWithdrawn: a.sharesWithdrawn,
+      };
+    })
+  );
   // console.log({allData})
-  return allData;
+  return [allData, poolContributions];
 }
 
 export async function getPooledCreditLinesOfBorrower(url: string, borrower: string): Promise<any[]> {

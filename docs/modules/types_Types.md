@@ -17,6 +17,7 @@
 - [CreditLinesOverview](types_Types.md#creditlinesoverview)
 - [DashboardOverview](types_Types.md#dashboardoverview)
 - [InternalTokenMap](types_Types.md#internaltokenmap)
+- [LenderContributionToPooledCreditLines](types_Types.md#lendercontributiontopooledcreditlines)
 - [LenderPerPoolDetail](types_Types.md#lenderperpooldetail)
 - [LenderPoolDetail](types_Types.md#lenderpooldetail)
 - [Operation](types_Types.md#operation)
@@ -102,6 +103,12 @@ ___
 ### InternalTokenMap
 
 Re-exports [InternalTokenMap](../interfaces/types_Types.InternalTokenMap.md)
+
+___
+
+### LenderContributionToPooledCreditLines
+
+Re-exports [LenderContributionToPooledCreditLines](../interfaces/types_Types.LenderContributionToPooledCreditLines.md)
 
 ___
 

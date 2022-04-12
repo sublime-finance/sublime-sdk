@@ -14,6 +14,7 @@ import {
   PooledCreditLineOperation,
   LenderPoolDetail,
   LenderPerPoolDetail,
+  LenderContributionToPooledCreditLines,
 } from './types/Types';
 import {
   getAllPools,
@@ -237,9 +238,11 @@ export class SublimeSubgraph {
     return this.transformToPooledCreditLine(result);
   }
 
-  async getAllPooledCreditLinesOfLender(lender: string): Promise<PooledCreditLineDetail[]> {
-    const result = await getPooledCreditLinesOfLender(this.subgraphUrl, lender);
-    return this.transformToPooledCreditLine(result);
+  async getAllPooledCreditLinesOfLender(lender: string): Promise<[PooledCreditLineDetail[], LenderContributionToPooledCreditLines[]]> {
+    const [result, contributionsData] = await getPooledCreditLinesOfLender(this.subgraphUrl, lender);
+    const pooledCreditLines = await this.transformToPooledCreditLine(result);
+    const contributions = await this.transformToLenderContributionToPooledCreditLines(pooledCreditLines, contributionsData);
+    return [pooledCreditLines, contributions];
   }
 
   async getAllPooledCreditLinesOfUser(user: string): Promise<PooledCreditLineDetail[]> {
@@ -856,6 +859,23 @@ export class SublimeSubgraph {
       };
     });
     return operations;
+  }
+
+  private async transformToLenderContributionToPooledCreditLines(
+    pooledCreditLines: PooledCreditLineDetail[],
+    data: any[]
+  ): Promise<LenderContributionToPooledCreditLines[]> {
+    return data.map((a, index) => {
+      const borrowToken = pooledCreditLines[index].borrowAsset;
+      const collateralToken = pooledCreditLines[index].collateralAsset;
+      const borrowDecimals = this.tokenManager.getTokenDecimals(borrowToken.address);
+      const collateralDecimals = this.tokenManager.getTokenDecimals(collateralToken.address);
+      return {
+        amountLent: { value: a.amountLent, decimals: borrowDecimals },
+        amountWithdrawn: { value: a.amountWithdrawn, decimals: borrowDecimals },
+        sharesWithdrawn: { value: a.sharesWithdrawn, decimals: collateralDecimals },
+      };
+    });
   }
 
   /**
