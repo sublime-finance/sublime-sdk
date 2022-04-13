@@ -240,12 +240,27 @@ export class CreditLineApi {
       throw new Error('amount should be a valid number');
     }
 
-    return this.creditLineContract.withdrawCollateral(
+    return this.creditLineContract['withdrawCollateral(uint256,uint256,bool)'](
       creditLineNumber,
       _amount.multipliedBy(new BigNumber(10).pow(collateralDecimal)).toFixed(0),
       toSavingsAccount,
       { ...options }
     );
+  }
+
+  /**
+   * @description Withdraws all possible collateral from the credit line
+   * @param creditLineNumber
+   * @param toSavingsAccount
+   * @param options
+   * @returns
+   */
+  public async withdrawAllCollateralFromCreditLine(
+    creditLineNumber: BigNumberish,
+    toSavingsAccount: boolean = false,
+    options?: Overrides
+  ): Promise<ContractTransaction> {
+    return this.creditLineContract['withdrawCollateral(uint256,bool)'](creditLineNumber, toSavingsAccount, { ...options });
   }
 
   /**
