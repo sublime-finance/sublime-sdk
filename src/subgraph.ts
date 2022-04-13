@@ -440,7 +440,7 @@ export class SublimeSubgraph {
         principal: { value: new BigNumber(a.principal).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         interestAccrued: { value: interestAccrued.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         collateralRatio: { value: collateralRatio.toFixed(0), decimals: 18 },
-        creditLimit: { value: new BigNumber(a.creditLimit).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        creditLimit: { value: new BigNumber(a.borrowLimit).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         interestRate: { value: a.borrowRate, decimals: 18 },
         idealCollateralRatio: { value: a.idealCollateralRatio, decimals: 18 },
         borrowAsset: {
