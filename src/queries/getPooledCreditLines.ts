@@ -37,6 +37,7 @@ export async function getPooledCreditLinesOfLender(url: string, lenderAddress: s
           amountLent
           amountWithdrawn
           sharesWithdrawn
+          interestWithdrawn
           lenderPool{
             pooledCreditLine{
                 id

@@ -10,6 +10,7 @@
 
 - [amountLent](types_Types.LenderContributionToPooledCreditLines.md#amountlent)
 - [amountWithdrawn](types_Types.LenderContributionToPooledCreditLines.md#amountwithdrawn)
+- [interestWithdrawn](types_Types.LenderContributionToPooledCreditLines.md#interestwithdrawn)
 - [sharesWithdrawn](types_Types.LenderContributionToPooledCreditLines.md#shareswithdrawn)
 
 ## Properties
@@ -20,7 +21,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:274](https://github.com/sublime-finance/sublime-sdk/blob/b925d72/src/types/Types.ts#L274)
+[src/types/Types.ts:274](https://github.com/sublime-finance/sublime-sdk/blob/9131acc/src/types/Types.ts#L274)
 
 ___
 
@@ -30,7 +31,17 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/b925d72/src/types/Types.ts#L275)
+[src/types/Types.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/9131acc/src/types/Types.ts#L275)
+
+___
+
+### interestWithdrawn
+
+• **interestWithdrawn**: [`Balance`](types_Types.Balance.md)
+
+#### Defined in
+
+[src/types/Types.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/9131acc/src/types/Types.ts#L277)
 
 ___
 
@@ -40,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:276](https://github.com/sublime-finance/sublime-sdk/blob/b925d72/src/types/Types.ts#L276)
+[src/types/Types.ts:276](https://github.com/sublime-finance/sublime-sdk/blob/9131acc/src/types/Types.ts#L276)

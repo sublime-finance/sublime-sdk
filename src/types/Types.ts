@@ -179,9 +179,9 @@ export interface CreditLineDetail {
   principal: Balance;
   interestAccrued: Balance;
   collateralRatio: string;
-  creditLimit: string;
-  interestRate: string;
-  idealCollateralRatio: string;
+  creditLimit: Balance;
+  interestRate: Balance;
+  idealCollateralRatio: Balance;
   collateralAsset: Asset;
   borrowAsset: Asset;
   autoLiquidate: boolean;
@@ -274,4 +274,5 @@ export interface LenderContributionToPooledCreditLines {
   amountLent: Balance;
   amountWithdrawn: Balance;
   sharesWithdrawn: Balance;
+  interestWithdrawn: Balance;
 }

@@ -228,6 +228,17 @@ export class SublimeSubgraph {
     return pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
   }
 
+  async getAllPooledCreditLinesLenderCanLendTo(lender?: string): Promise<PooledCreditLineDetail[]> {
+    let lines = await this.getAllPooledCreditLinesCreatedLatest();
+    if (!lender) {
+      lender = await this.signer.getAddress();
+    }
+    lender = lender.toLowerCase();
+    lines = lines.filter((a) => a.borrowerAddress != lender);
+    lines = lines.filter((a) => a.status === 'ACTIVE');
+    return lines;
+  }
+
   async getPooledCreditLineById(id: number): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLineById(this.subgraphUrl, id);
     return this.transformToPooledCreditLine(result);
@@ -422,9 +433,9 @@ export class SublimeSubgraph {
         principal: { value: new BigNumber(a.principal).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         interestAccrued: { value: interestAccrued.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         collateralRatio: collateralRatio.toFixed(2),
-        creditLimit: new BigNumber(a.borrowLimit).div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.borrowAsset))).toFixed(2),
-        interestRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
-        idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
+        creditLimit: { value: new BigNumber(a.creditLimit).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        interestRate: { value: a.borrowRate, decimals: 18 },
+        idealCollateralRatio: { value: a.idealCollateralRatio, decimals: 18 },
         borrowAsset: {
           address: a.borrowAsset,
           name: this.tokenManager.getTokenName(a.borrowAsset),
@@ -693,7 +704,7 @@ export class SublimeSubgraph {
       }
 
       interestAccrued = interestAccrued.plus(accruedInterest.toString());
-      interestRate = interestRate.plus(interest);
+      interestRate = interestRate.plus(new BigNumber(interest.value.toString()).dividedBy('1000000000000000000'));
     }
 
     if (borrowedCreditLines > 0) {
@@ -871,9 +882,10 @@ export class SublimeSubgraph {
       const borrowDecimals = this.tokenManager.getTokenDecimals(borrowToken.address);
       const collateralDecimals = this.tokenManager.getTokenDecimals(collateralToken.address);
       return {
-        amountLent: { value: a.amountLent, decimals: borrowDecimals },
-        amountWithdrawn: { value: a.amountWithdrawn, decimals: borrowDecimals },
-        sharesWithdrawn: { value: a.sharesWithdrawn, decimals: collateralDecimals },
+        amountLent: { value: a.amountLent || '0', decimals: borrowDecimals },
+        amountWithdrawn: { value: a.amountWithdrawn || '0', decimals: borrowDecimals },
+        sharesWithdrawn: { value: a.sharesWithdrawn || '0', decimals: collateralDecimals },
+        interestWithdrawn: { value: a.interestWithdrawn || '0', decimals: borrowDecimals },
       };
     });
   }
