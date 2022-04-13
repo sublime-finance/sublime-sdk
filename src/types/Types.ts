@@ -45,7 +45,7 @@ export enum Operation {
   LIQUIDATED = 'LIQUIDATED',
 }
 export interface CreditLineOperation {
-  amount: string;
+  amount: Balance;
   creditLineOperation: Operation;
   liquidator?: string;
   strategy?: string;

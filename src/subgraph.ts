@@ -379,6 +379,15 @@ export class SublimeSubgraph {
     });
   }
 
+  private async calculateTotalCollateralTokens(creditlineId: string): Promise<BigNumber> {
+    let amount = new BigNumber(0);
+    try {
+      amount = new BigNumber(
+        await (await this.creditLineContract.connect(this.signer).callStatic.calculateTotalCollateralTokens(creditlineId)).toString()
+      );
+    } catch (ex) {}
+    return amount;
+  }
   /**
    *
    * @param data
@@ -398,9 +407,7 @@ export class SublimeSubgraph {
 
     for (let index = 0; index < data.length; index++) {
       const element = data[index];
-      creditLineTotalCollateralTokens[element.id] = (
-        await this.creditLineContract.connect(this.signer).callStatic.calculateTotalCollateralTokens(element.id)
-      ).toString();
+      creditLineTotalCollateralTokens[element.id] = this.calculateTotalCollateralTokens(element.id).toString();
       // console.log({tc: creditLineTotalCollateralTokens[element.id], id: element.id})
     }
 
@@ -859,9 +866,7 @@ export class SublimeSubgraph {
     await this.tokenManager.updateAll(cl.borrowAsset);
     const operations: CreditLineOperation[] = cl.creditLineTimeline.map((a) => {
       return {
-        amount: a.amount
-          ? new BigNumber(a.amount).div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(cl.borrowAsset))).toFixed(2)
-          : undefined,
+        amount: { value: a.amount || '0', decimals: this.tokenManager.getTokenDecimals(cl.borrowAsset) },
         creditLineOperation: a.creditLineOperation,
         liquidator: a.liquidator,
         strategy: a.strategy,
