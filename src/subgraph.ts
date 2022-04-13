@@ -407,7 +407,7 @@ export class SublimeSubgraph {
 
     for (let index = 0; index < data.length; index++) {
       const element = data[index];
-      creditLineTotalCollateralTokens[element.id] = this.calculateTotalCollateralTokens(element.id).toString();
+      creditLineTotalCollateralTokens[element.id] = await (await this.calculateTotalCollateralTokens(element.id)).toString();
       // console.log({tc: creditLineTotalCollateralTokens[element.id], id: element.id})
     }
 
@@ -421,18 +421,20 @@ export class SublimeSubgraph {
         interestAccrued = new BigNumber(a.principal)
           .multipliedBy(new BigNumber(a.borrowRate))
           .times(timeElapsed)
-          .div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.borrowAsset)))
-          .div(new BigNumber(10).pow(30))
+          .div(new BigNumber(10).pow(18))
           .div(24 * 60 * 60 * 365);
 
         currentDebt = new BigNumber(a.principal).plus(interestAccrued);
 
-        collateralRatio = new BigNumber(creditLineTotalCollateralTokens[a.id])
-          .multipliedBy('1000000000000000000')
-          .multipliedBy(await this.tokenManager.getPricePerAsset(a.collateralAsset))
-          .div(await this.tokenManager.getPricePerAsset(a.borrowAsset))
-          .div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.collateralAsset)))
-          .div(currentDebt);
+        const priceOfCollateral = new BigNumber(creditLineTotalCollateralTokens[a.id])
+          .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.collateralAsset)))
+          .multipliedBy(await this.tokenManager.getPricePerAsset(a.collateralAsset));
+
+        const priceOfDebt = new BigNumber(currentDebt)
+          .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.borrowAsset)))
+          .multipliedBy(await this.tokenManager.getPricePerAsset(a.borrowAsset));
+
+        collateralRatio = priceOfCollateral.multipliedBy(new BigNumber(10).pow(18)).dividedBy(priceOfDebt);
       }
 
       return {
