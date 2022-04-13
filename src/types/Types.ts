@@ -178,7 +178,7 @@ export interface CreditLineDetail {
   currentDebt: Balance;
   principal: Balance;
   interestAccrued: Balance;
-  collateralRatio: string;
+  collateralRatio: Balance;
   creditLimit: Balance;
   interestRate: Balance;
   idealCollateralRatio: Balance;

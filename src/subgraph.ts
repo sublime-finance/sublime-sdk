@@ -428,7 +428,7 @@ export class SublimeSubgraph {
         currentDebt = new BigNumber(a.principal).plus(interestAccrued);
 
         collateralRatio = new BigNumber(creditLineTotalCollateralTokens[a.id])
-          .multipliedBy(100)
+          .multipliedBy('1000000000000000000')
           .multipliedBy(await this.tokenManager.getPricePerAsset(a.collateralAsset))
           .div(await this.tokenManager.getPricePerAsset(a.borrowAsset))
           .div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.collateralAsset)))
@@ -439,7 +439,7 @@ export class SublimeSubgraph {
         currentDebt: { value: currentDebt.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         principal: { value: new BigNumber(a.principal).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         interestAccrued: { value: interestAccrued.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        collateralRatio: collateralRatio.toFixed(2),
+        collateralRatio: { value: collateralRatio.toFixed(0), decimals: 18 },
         creditLimit: { value: new BigNumber(a.creditLimit).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         interestRate: { value: a.borrowRate, decimals: 18 },
         idealCollateralRatio: { value: a.idealCollateralRatio, decimals: 18 },
