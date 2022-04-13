@@ -866,9 +866,16 @@ export class SublimeSubgraph {
    */
   private async transformToCreditLineOperations(cl: any): Promise<CreditLineOperation[]> {
     await this.tokenManager.updateAll(cl.borrowAsset);
+    await this.tokenManager.updateAll(cl.collateralAsset);
+
     const operations: CreditLineOperation[] = cl.creditLineTimeline.map((a) => {
       return {
-        amount: { value: a.amount || '0', decimals: this.tokenManager.getTokenDecimals(cl.borrowAsset) },
+        amount: {
+          value: a.amount || '0',
+          decimals: this.tokenManager.getTokenDecimals(
+            a.creditLineOperation === 'WITHDRAW_COLLATERAL' ? cl.collateralAsset : cl.borrowAsset
+          ),
+        },
         creditLineOperation: a.creditLineOperation,
         liquidator: a.liquidator,
         strategy: a.strategy,

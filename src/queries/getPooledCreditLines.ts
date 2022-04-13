@@ -27,7 +27,7 @@ export async function getPooledCreditLineTimeline(url: string, pooledCreditLineI
 }
 
 export async function getPooledCreditLinesOfLender(url: string, lenderAddress: string): Promise<[any[], any[]]> {
-  lenderAddress = lenderAddress.toString();
+  lenderAddress = lenderAddress.toLowerCase();
   const allData = [];
   const poolContributions = [];
   const data = JSON.stringify({
@@ -80,6 +80,7 @@ export async function getPooledCreditLinesOfLender(url: string, lenderAddress: s
         amountLent: a.amountLent,
         amountWithdrawn: a.amountWithdrawn,
         sharesWithdrawn: a.sharesWithdrawn,
+        interestWithdrawn: a.interestWithdrawn,
       };
     })
   );
