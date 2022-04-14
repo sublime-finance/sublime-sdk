@@ -213,7 +213,7 @@ export interface PooledCreditLineDetail {
   principal: Balance;
   totalInterestRepaid: Balance;
   lastPrincipalUpdateTime: string;
-  interestAccruedTillLastPrincipalUpdate: string;
+  interestAccruedTillLastPrincipalUpdate: Balance;
 }
 
 export interface CreditLineUser {

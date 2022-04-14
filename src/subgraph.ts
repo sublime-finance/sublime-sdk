@@ -414,7 +414,10 @@ export class SublimeSubgraph {
         principal: { value: a.principal, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         totalInterestRepaid: { value: a.totalInterestRepaid, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
-        interestAccruedTillLastPrincipalUpdate: a.interestAccruedTillLastPrincipalUpdate,
+        interestAccruedTillLastPrincipalUpdate: {
+          value: a.interestAccruedTillLastPrincipalUpdate || '0',
+          decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
+        },
       };
     });
   }
