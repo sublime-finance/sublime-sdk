@@ -54,6 +54,10 @@ import { YieldAndStrategyApi } from './api/yieldAndStrategy';
 
 import { CreditLine } from './wrappers/CreditLine';
 import { CreditLine__factory } from './wrappers/factories/CreditLine__factory';
+
+import { PooledCreditLine } from './wrappers/PooledCreditLine';
+import { PooledCreditLine__factory } from './wrappers/factories/PooledCreditLine__factory';
+
 import { SublimeConfig } from './types/sublimeConfig';
 import { ICToken, ICToken__factory, IYield, IYield__factory } from './wrappers';
 import { zeroAddress } from './config/constants';
@@ -82,6 +86,8 @@ export class SublimeSubgraph {
    */
   private creditLineContract: CreditLine;
 
+  private pooledCreditLineContract: PooledCreditLine;
+
   private yieldApi: YieldAndStrategyApi;
   /**
    * @description sublime config. (Contains all addresses relevant to sublime ecosystem)
@@ -90,6 +96,8 @@ export class SublimeSubgraph {
 
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
     this.creditLineContract = new CreditLine__factory(signer).attach(config.creditLineContractAddress);
+    this.pooledCreditLineContract = new PooledCreditLine__factory(signer).attach(config.poolFactoryContractAddress);
+
     this.subgraphUrl = url;
     this.signer = signer;
     this.tokenManager = tokenManager;
@@ -283,12 +291,27 @@ export class SublimeSubgraph {
       await this.tokenManager.updateAll(element);
     }
 
+    const prices = {};
+    for (let index = 0; index < allTokens.length; index++) {
+      prices[allTokens[index]] = await this.tokenManager.getPricePerAsset(allTokens[index]);
+    }
     return data.map((a) => {
+      console.log({ a });
       return {
         id: a.id,
         startTime: a.startTime,
-        borrowAsset: a.borrowAsset,
-        collateralAsset: a.collateralAsset,
+        borrowAsset: {
+          name: this.tokenManager.getTokenName(a.borrowAsset),
+          address: a.borrowAsset,
+          logo: this.tokenManager.getLogo(a.borrowAsset),
+          pricePerAssetInUSD: prices[a.borrowAsset],
+        },
+        collateralAsset: {
+          name: this.tokenManager.getTokenName(a.collateralAsset),
+          address: a.collateralAsset,
+          logo: this.tokenManager.getLogo(a.collateralAsset),
+          pricePerAssetInUSD: prices[a.collateralAsset],
+        },
         borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         borrowAssetStrategy: a.borrowAssetStrategy,
@@ -301,7 +324,7 @@ export class SublimeSubgraph {
         collateralHeld: { value: a.collateralHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         areTokensTransferable: a.areTokensTransferable,
         verifier: a.verifier,
-        lenders: this.transformToLenderPerPoolDetail(a.lender, this.tokenManager.getTokenDecimals(a.collateralAsset)),
+        lenders: this.transformToLenderPerPoolDetail(a.lender, this.tokenManager.getTokenDecimals(a.borrowAsset)),
       };
     });
   }
@@ -329,6 +352,15 @@ export class SublimeSubgraph {
     });
   }
 
+  private async getTotalCollateralTokensInPooledCreditlines(id: string): Promise<BigNumber> {
+    let tokens = new BigNumber(0);
+
+    try {
+      tokens = await this.pooledCreditLineContract.callstatic.calculateTotalCollateralTokens(id);
+    } catch (ex) {}
+    return tokens;
+  }
+
   private async transformToPooledCreditLine(data: any[]): Promise<PooledCreditLineDetail[]> {
     const borrowTokens: string[] = data.map((a) => a.collateralAsset);
     const collateralTokens: string[] = data.map((a) => a.borrowAsset);
@@ -344,6 +376,13 @@ export class SublimeSubgraph {
       prices[element] = await (await this.tokenManager.getPricePerAsset(element)).toString();
     }
 
+    const numberOfCollateralTokens = {};
+    const allId = data.map((a) => a.id);
+    for (let index = 0; index < allId.length; index++) {
+      const element = allId[index];
+      numberOfCollateralTokens[allId[index]] = await (await this.getTotalCollateralTokensInPooledCreditlines(element)).toString();
+    }
+
     return data.map((a) => {
       return {
         id: a.id,
@@ -351,6 +390,7 @@ export class SublimeSubgraph {
         borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
         idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
+        collateralTokens: { value: numberOfCollateralTokens[a.id], decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         borrowAsset: {
           name: this.tokenManager.getTokenName(a.borrowAsset),
           address: a.borrowAsset,

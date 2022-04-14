@@ -199,6 +199,7 @@ export interface PooledCreditLineDetail {
   borrowLimit: Balance;
   borrowRate: string;
   idealCollateralRatio: string;
+  collateralTokens: Balance;
   borrowAsset: Asset;
   collateralAsset: Asset;
   createdAt: string;
@@ -248,8 +249,8 @@ export interface Balance {
 export interface LenderPoolDetail {
   id: string;
   startTime: string;
-  borrowAsset: string;
-  collateralAsset: string;
+  borrowAsset: Asset;
+  collateralAsset: Asset;
   borrowLimit: Balance;
   minBorrowAmount: Balance;
   borrowAssetStrategy: string;
