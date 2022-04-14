@@ -96,7 +96,7 @@ export class SublimeSubgraph {
 
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
     this.creditLineContract = new CreditLine__factory(signer).attach(config.creditLineContractAddress);
-    this.pooledCreditLineContract = new PooledCreditLine__factory(signer).attach(config.poolFactoryContractAddress);
+    this.pooledCreditLineContract = new PooledCreditLine__factory(signer).attach(config.pooledCreditLineAddress);
 
     this.subgraphUrl = url;
     this.signer = signer;
@@ -356,8 +356,11 @@ export class SublimeSubgraph {
     let tokens = new BigNumber(0);
 
     try {
-      tokens = await this.pooledCreditLineContract.callstatic.calculateTotalCollateralTokens(id);
-    } catch (ex) {}
+      let totalCollateralTokens = await (await this.pooledCreditLineContract.callStatic.calculateTotalCollateralTokens(id)).toString();
+      tokens = new BigNumber(totalCollateralTokens);
+    } catch (ex) {
+      console.log(ex);
+    }
     return tokens;
   }
 
