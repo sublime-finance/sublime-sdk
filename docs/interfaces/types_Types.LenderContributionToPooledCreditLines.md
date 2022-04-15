@@ -10,6 +10,7 @@
 
 - [amountLent](types_Types.LenderContributionToPooledCreditLines.md#amountlent)
 - [amountWithdrawn](types_Types.LenderContributionToPooledCreditLines.md#amountwithdrawn)
+- [id](types_Types.LenderContributionToPooledCreditLines.md#id)
 - [interestWithdrawn](types_Types.LenderContributionToPooledCreditLines.md#interestwithdrawn)
 - [sharesWithdrawn](types_Types.LenderContributionToPooledCreditLines.md#shareswithdrawn)
 
@@ -21,7 +22,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/0a8be5b/src/types/Types.ts#L275)
+[src/types/Types.ts:276](https://github.com/sublime-finance/sublime-sdk/blob/9fe20a6/src/types/Types.ts#L276)
 
 ___
 
@@ -31,7 +32,17 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:276](https://github.com/sublime-finance/sublime-sdk/blob/0a8be5b/src/types/Types.ts#L276)
+[src/types/Types.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/9fe20a6/src/types/Types.ts#L277)
+
+___
+
+### id
+
+• `Optional` **id**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/9fe20a6/src/types/Types.ts#L275)
 
 ___
 
@@ -41,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:278](https://github.com/sublime-finance/sublime-sdk/blob/0a8be5b/src/types/Types.ts#L278)
+[src/types/Types.ts:279](https://github.com/sublime-finance/sublime-sdk/blob/9fe20a6/src/types/Types.ts#L279)
 
 ___
 
@@ -51,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/0a8be5b/src/types/Types.ts#L277)
+[src/types/Types.ts:278](https://github.com/sublime-finance/sublime-sdk/blob/9fe20a6/src/types/Types.ts#L278)
