@@ -42,6 +42,7 @@ import {
   getAllCreditLinesFromSubgraph,
   getPooledCreditLineById,
   getLenderPerPool,
+  getPooledCreditLinesOfLenderCanLendTo,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -216,52 +217,29 @@ export class SublimeSubgraph {
     return this.transformToPooledCreditLine(result);
   }
 
-  /**
-   * @description Returns pooled credit lines in order created latest. Preferable don't use
-   * @returns
-   */
-  async getAllPooledCreditLinesCreatedLatest(): Promise<PooledCreditLineDetail[]> {
-    const pooledCreditLines: PooledCreditLineDetail[] = [];
-    const count: number = 99;
-    let skip: number = 0;
-
-    for (;;) {
-      const lines = await this.getAllPooledCreditLines(count, skip);
-      if (lines.length == 0) {
-        break;
-      }
-      pooledCreditLines.push(...lines);
-      skip = skip + count;
-    }
-    return pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
-  }
-
-  async getAllPooledCreditLinesLenderCanLendTo(lender?: string): Promise<PooledCreditLineDetail[]> {
-    let lines = await this.getAllPooledCreditLinesCreatedLatest();
-    if (!lender) {
-      lender = await this.signer.getAddress();
-    }
-    lender = lender.toLowerCase();
-    lines = lines.filter((a) => a.borrowerAddress != lender);
-    lines = lines.filter((a) => a.status === 'ACTIVE');
-    lines = lines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
-    return lines;
-  }
-
   async getPooledCreditLineById(id: number): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLineById(this.subgraphUrl, id);
     return this.transformToPooledCreditLine(result);
   }
 
-  async getAllPooledCreditLinesOfBorrower(address: string): Promise<PooledCreditLineDetail[]> {
-    const result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address);
+  async getAllPooledCreditLinesOfBorrower(address: string, count: number = 99, skip: number = 0): Promise<PooledCreditLineDetail[]> {
+    const result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address, count, skip);
     let lines = await this.transformToPooledCreditLine(result);
     lines = lines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
     return lines;
   }
 
-  async getAllPooledCreditLinesOfLender(lender: string): Promise<[PooledCreditLineDetail[], LenderContributionToPooledCreditLines[]]> {
-    const [result, contributionsData] = await getPooledCreditLinesOfLender(this.subgraphUrl, lender);
+  async getAllPooledCreditLinesLenderCanLendTo(lender: string, count: number = 99, skip: number = 0): Promise<PooledCreditLineDetail[]> {
+    const result = await getPooledCreditLinesOfLenderCanLendTo(this.subgraphUrl, lender, count, skip);
+    return await this.transformToPooledCreditLine(result);
+  }
+
+  async getAllPooledCreditLinesOfLender(
+    lender: string,
+    count: number = 99,
+    skip: number = 0
+  ): Promise<[PooledCreditLineDetail[], LenderContributionToPooledCreditLines[]]> {
+    const [result, contributionsData] = await getPooledCreditLinesOfLender(this.subgraphUrl, lender, count, skip);
     let pooledCreditLines = await this.transformToPooledCreditLine(result);
     let contributions = await this.transformToLenderContributionToPooledCreditLines(pooledCreditLines, contributionsData);
     pooledCreditLines = pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());

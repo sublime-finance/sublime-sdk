@@ -35,7 +35,7 @@ export async function getAllCreditLinesFromSubgraph(url: string, count: number, 
   const allData = [];
   const data = JSON.stringify({
     query: `{
-        creditLines (first:${count}, skip:${skip}){
+        creditLines (orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}){
           id
           status
           lender
@@ -95,7 +95,7 @@ async function _getCreditLinesOfBorrower(
   const allData = [];
   const data = JSON.stringify({
     query: `{
-        creditLines (first:${count}, skip:${skip},where:{borrower:"${borrower}",requestByLender_in:[${requestByLender}], status_in:[${status}]}){
+        creditLines (orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip},where:{borrower:"${borrower}",requestByLender_in:[${requestByLender}], status_in:[${status}]}){
           id
           status
           lender
@@ -208,7 +208,7 @@ async function _getCreditLinesOfLender(
   const allData = [];
   const data = JSON.stringify({
     query: `{
-          creditLines (first:${count}, skip:${skip},where:{lender:"${lender}",requestByLender_in:[${requestByLender}], status_in:[${status}]}){
+          creditLines (orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip},where:{lender:"${lender}",requestByLender_in:[${requestByLender}], status_in:[${status}]}){
             id
             status
             lender
@@ -257,6 +257,75 @@ async function _getCreditLinesOfLender(
   return allData;
 }
 
+async function _getCreditLinesNotOfLender(
+  url: string,
+  status: string[],
+  requestByLender: boolean[],
+  lender: string,
+  count: number,
+  skip: number
+): Promise<any[]> {
+  lender = lender.toLowerCase();
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+          creditLines (orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip},where:{borrower_not:"${lender}",requestByLender_in:[${requestByLender}], status_in:[${status}]}){
+            id
+            status
+            lender
+            borrower
+            lenderWalletDetails {
+              wallet {
+                user {
+                  userMetadataPerVerifier {
+                    metadata
+                  }
+                }
+              }
+            }
+            borrower
+            borrowerWalletDetails {
+              wallet {
+                user {
+                  userMetadataPerVerifier {
+                    metadata
+                  }
+                }
+              }
+            }
+            requestByLender
+            principal
+            collateralAsset
+            borrowLimit
+            borrowRate
+            idealCollateralRatio
+            borrowAsset
+            autoLiquidation
+            lastPrincipalUpdateTime
+          }
+      }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  // console.log(result);
+  allData.push(...result.data.creditLines);
+  return allData;
+}
+
+export async function getCreditLinesLenderCanLenderTo(url: string, lender: string, count: number, skip: number) {
+  let data = [];
+  const status = ['ACTIVE'];
+  const requestByLender = [true, false];
+  const lines = await _getCreditLinesNotOfLender(url, status, requestByLender, lender, count, skip);
+  data = [...lines];
+  return data;
+}
 // creditLineTypes ACTIVE, CLOSED, LIQUIDATED, NOT_CREATED, REQUESTED, CANCELLED
 export async function getConfirmedCreditLinesOfBorrower(url: string, borrower: string, count: number, skip: number): Promise<any[]> {
   let data = [];

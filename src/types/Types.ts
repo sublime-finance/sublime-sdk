@@ -17,6 +17,8 @@ export enum CreditLineStatus {
   EXPIRED,
   LIQUIDATED,
   CANCELLED,
+  START_CALLABLE,
+  LIQUIDATE_CALLABLE,
 }
 
 export enum StrategyType {

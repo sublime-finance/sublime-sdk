@@ -134,12 +134,32 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
-    const status = await (await this.pooledCreditLine.pooledCreditLineVariables(_id)).status;
+    const pooledCreditLineVariables = await this.pooledCreditLine.pooledCreditLineVariables(_id);
+    const status = pooledCreditLineVariables.status;
+
     if (status == 0) {
       return CreditLineStatus.NOT_CREATED;
     } else if (status == 1) {
+      const pooledCLConstants = await this.lenderPool.pooledCLConstants(_id);
+      const amountLent = await this.lenderPool.totalSupply(_id);
+      if (amountLent.gte(pooledCLConstants.minBorrowAmount)) {
+        return CreditLineStatus.START_CALLABLE;
+      }
       return CreditLineStatus.REQUESTED;
     } else if (status == 2) {
+      const pooledCLConstants = await this.pooledCreditLine.pooledCreditLineConstants(_id);
+      if (
+        new BigNumber(new Date().valueOf()).div(1000).gt(pooledCLConstants.endsAt.toString()) &&
+        pooledCreditLineVariables.principal.gt(0)
+      ) {
+        return CreditLineStatus.EXPIRED;
+      }
+
+      const colRatio = await this.pooledCreditLine.callStatic.calculateCurrentCollateralRatio(_id);
+      if (pooledCLConstants.idealCollateralRatio.gt(colRatio)) {
+        return CreditLineStatus.LIQUIDATE_CALLABLE;
+      }
+
       return CreditLineStatus.ACTIVE;
     } else if (status == 3) {
       return CreditLineStatus.CLOSED;
