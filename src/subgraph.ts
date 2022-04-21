@@ -15,6 +15,7 @@ import {
   LenderPoolDetail,
   LenderPerPoolDetail,
   LenderContributionToPooledCreditLines,
+  CreditLineStatus,
 } from './types/Types';
 import {
   getAllPools,
@@ -60,7 +61,7 @@ import { PooledCreditLine } from './wrappers/PooledCreditLine';
 import { PooledCreditLine__factory } from './wrappers/factories/PooledCreditLine__factory';
 
 import { SublimeConfig } from './types/sublimeConfig';
-import { ICToken, ICToken__factory, IYield, IYield__factory } from './wrappers';
+import { ICToken, ICToken__factory, IYield, IYield__factory, LenderPool, LenderPool__factory } from './wrappers';
 import { zeroAddress } from './config/constants';
 
 /**
@@ -89,6 +90,8 @@ export class SublimeSubgraph {
 
   private pooledCreditLineContract: PooledCreditLine;
 
+  private lenderPoolContract: LenderPool;
+
   private yieldApi: YieldAndStrategyApi;
   /**
    * @description sublime config. (Contains all addresses relevant to sublime ecosystem)
@@ -98,6 +101,7 @@ export class SublimeSubgraph {
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
     this.creditLineContract = new CreditLine__factory(signer).attach(config.creditLineContractAddress);
     this.pooledCreditLineContract = new PooledCreditLine__factory(signer).attach(config.pooledCreditLineAddress);
+    this.lenderPoolContract = new LenderPool__factory(signer).attach(config.lenderPoolAddress);
 
     this.subgraphUrl = url;
     this.signer = signer;
@@ -343,7 +347,7 @@ export class SublimeSubgraph {
     let tokens = new BigNumber(0);
 
     try {
-      let totalCollateralTokens = await (await this.pooledCreditLineContract.callStatic.calculateTotalCollateralTokens(id)).toString();
+      const totalCollateralTokens = await (await this.pooledCreditLineContract.callStatic.calculateTotalCollateralTokens(id)).toString();
       tokens = new BigNumber(totalCollateralTokens);
     } catch (ex) {
       console.log(ex);
@@ -373,7 +377,7 @@ export class SublimeSubgraph {
       numberOfCollateralTokens[allId[index]] = await (await this.getTotalCollateralTokensInPooledCreditlines(element)).toString();
     }
 
-    return data.map((a) => {
+    const all = data.map(async (a) => {
       return {
         id: a.id,
         borrowerAddress: a.borrowerAddress,
@@ -400,7 +404,7 @@ export class SublimeSubgraph {
         lenderStrategy: a.lenderStrategy,
         collateralStrategy: a.collateralStrategy,
         gracePenaltyRate: new BigNumber(a.gracePenaltyRate).div(new BigNumber(10).pow(16)).toFixed(2),
-        status: a.status,
+        status: await this.getCreditLineStatus(a.id),
         principal: { value: a.principal, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         totalInterestRepaid: { value: a.totalInterestRepaid, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
@@ -410,6 +414,8 @@ export class SublimeSubgraph {
         },
       };
     });
+
+    return Promise.all(all);
   }
 
   private async calculateTotalCollateralTokens(creditlineId: string): Promise<BigNumber> {
@@ -952,5 +958,46 @@ export class SublimeSubgraph {
         metadata: a.metadata,
       };
     });
+  }
+
+  public async getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
+    const pooledCreditLineVariables = await this.pooledCreditLineContract.pooledCreditLineVariables(_id);
+    const status = pooledCreditLineVariables.status;
+
+    if (status == 0) {
+      return CreditLineStatus.NOT_CREATED;
+    } else if (status == 1) {
+      const pooledCLConstants = await this.lenderPoolContract.pooledCLConstants(_id);
+      const amountLent = await this.lenderPoolContract.totalSupply(_id);
+      if (amountLent.gte(pooledCLConstants.minBorrowAmount)) {
+        return CreditLineStatus.START_CALLABLE;
+      }
+      return CreditLineStatus.REQUESTED;
+    } else if (status == 2) {
+      const pooledCLConstants = await this.pooledCreditLineContract.pooledCreditLineConstants(_id);
+      if (
+        new BigNumber(new Date().valueOf()).div(1000).gt(pooledCLConstants.endsAt.toString()) &&
+        pooledCreditLineVariables.principal.gt(0)
+      ) {
+        return CreditLineStatus.EXPIRED;
+      }
+
+      const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(_id);
+      if (pooledCLConstants.idealCollateralRatio.gt(colRatio)) {
+        return CreditLineStatus.LIQUIDATE_CALLABLE;
+      }
+
+      return CreditLineStatus.ACTIVE;
+    } else if (status == 3) {
+      return CreditLineStatus.CLOSED;
+    } else if (status == 4) {
+      return CreditLineStatus.EXPIRED;
+    } else if (status == 5) {
+      return CreditLineStatus.LIQUIDATED;
+    } else if (status == 6) {
+      return CreditLineStatus.CANCELLED;
+    } else {
+      throw new Error('invalid state ');
+    }
   }
 }

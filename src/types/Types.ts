@@ -211,7 +211,7 @@ export interface PooledCreditLineDetail {
   lenderStrategy: string;
   collateralStrategy: string;
   gracePenaltyRate: string;
-  status: string;
+  status: CreditLineStatus;
   principal: Balance;
   totalInterestRepaid: Balance;
   lastPrincipalUpdateTime: string;
