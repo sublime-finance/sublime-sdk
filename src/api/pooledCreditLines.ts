@@ -37,6 +37,16 @@ export class PooledCreditLineApi {
   }
 
   /**
+   * @description Start a pooled credit line
+   * @param _id
+   * @param options
+   * @returns
+   */
+  public async start(_id: string, options?: Overrides): Promise<ContractTransaction> {
+    return this.lenderPool.start(_id, await this.signer.getAddress(), { ...options });
+  }
+
+  /**
    * @description Function to lend token to credit lines
    * @param _id
    * @param _amount
@@ -147,8 +157,8 @@ export class PooledCreditLineApi {
       } else {
         const pooledCLConstantsOfPCL = await this.pooledCreditLine.pooledCreditLineConstants(_id);
         const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
-        if (dateBigNumber.gt(pooledCLConstantsOfPCL.endsAt.toString())) {
-          return CreditLineStatus.EXPIRED;
+        if (dateBigNumber.gt(pooledCLConstantsOfPCL.startsAt.toString())) {
+          return CreditLineStatus.CANCELLED;
         }
       }
       return CreditLineStatus.REQUESTED;

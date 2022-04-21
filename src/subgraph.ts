@@ -974,8 +974,8 @@ export class SublimeSubgraph {
       } else {
         const pooledCLConstantsOfPCL = await this.pooledCreditLineContract.pooledCreditLineConstants(_id);
         const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
-        if (dateBigNumber.gt(pooledCLConstantsOfPCL.endsAt.toString())) {
-          return CreditLineStatus.EXPIRED;
+        if (dateBigNumber.gt(pooledCLConstantsOfPCL.startsAt.toString())) {
+          return CreditLineStatus.CANCELLED;
         }
       }
       return CreditLineStatus.REQUESTED;
