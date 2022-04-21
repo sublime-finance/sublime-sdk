@@ -46,6 +46,11 @@ export enum Operation {
   RESET = 'RESET',
   LIQUIDATED = 'LIQUIDATED',
 }
+
+export interface LenderWithdrawableAmount {
+  principal: Balance;
+  interest: Balance;
+}
 export interface CreditLineOperation {
   amount: Balance;
   creditLineOperation: Operation;

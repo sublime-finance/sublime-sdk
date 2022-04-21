@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/0613ad3/src/types/Types.ts#L225)
+[src/types/Types.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/e1f085d/src/types/Types.ts#L230)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:226](https://github.com/sublime-finance/sublime-sdk/blob/0613ad3/src/types/Types.ts#L226)
+[src/types/Types.ts:231](https://github.com/sublime-finance/sublime-sdk/blob/e1f085d/src/types/Types.ts#L231)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:228](https://github.com/sublime-finance/sublime-sdk/blob/0613ad3/src/types/Types.ts#L228)
+[src/types/Types.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/e1f085d/src/types/Types.ts#L233)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/0613ad3/src/types/Types.ts#L227)
+[src/types/Types.ts:232](https://github.com/sublime-finance/sublime-sdk/blob/e1f085d/src/types/Types.ts#L232)

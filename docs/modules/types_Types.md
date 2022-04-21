@@ -20,6 +20,7 @@
 - [LenderContributionToPooledCreditLines](types_Types.md#lendercontributiontopooledcreditlines)
 - [LenderPerPoolDetail](types_Types.md#lenderperpooldetail)
 - [LenderPoolDetail](types_Types.md#lenderpooldetail)
+- [LenderWithdrawableAmount](types_Types.md#lenderwithdrawableamount)
 - [Operation](types_Types.md#operation)
 - [Options](types_Types.md#options)
 - [PoolDetail](types_Types.md#pooldetail)
@@ -121,6 +122,12 @@ ___
 ### LenderPoolDetail
 
 Re-exports [LenderPoolDetail](../interfaces/types_Types.LenderPoolDetail.md)
+
+___
+
+### LenderWithdrawableAmount
+
+Re-exports [LenderWithdrawableAmount](../interfaces/types_Types.LenderWithdrawableAmount.md)
 
 ___
 

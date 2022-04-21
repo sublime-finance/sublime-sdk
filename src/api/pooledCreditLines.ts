@@ -1,7 +1,7 @@
 import { SublimeConfig } from '../types/sublimeConfig';
 import { ContractTransaction, Signer } from 'ethers';
 
-import { StrategyType, CreditLineStatus, VerifierType } from '../types/Types';
+import { StrategyType, CreditLineStatus, VerifierType, LenderWithdrawableAmount } from '../types/Types';
 import { BigNumberish } from '@ethersproject/bignumber';
 import { BigNumber } from 'bignumber.js';
 
@@ -15,6 +15,9 @@ import { PooledCreditLine__factory } from '../wrappers/factories/PooledCreditLin
 
 import { LenderPool } from '../wrappers/LenderPool';
 import { LenderPool__factory } from '../wrappers/factories/LenderPool__factory';
+
+import { IYield } from '../wrappers/IYield';
+import { IYield__factory } from '../wrappers/factories/IYield__factory';
 
 /**
  * @class PooledCreditLines
@@ -537,5 +540,82 @@ export class PooledCreditLineApi {
    */
   public async withdrawAllCollateral(_id: string, toSavingsAccount: boolean, options?: Overrides): Promise<ContractTransaction> {
     return this.pooledCreditLine['withdrawCollateral(uint256,bool)'](_id, toSavingsAccount, { ...options });
+  }
+
+  public async calculateLenderWithdrawableAmount(_id: string, lender?: string): Promise<LenderWithdrawableAmount> {
+    if (!lender) {
+      lender = await this.signer.getAddress();
+    }
+    const pclConstants = await this.pooledCreditLine.pooledCreditLineConstants(_id);
+    const pclVariables = await this.pooledCreditLine.pooledCreditLineVariables(_id);
+    const pclVariables2 = await this.lenderPool.pooledCLVariables(_id);
+    const lenderInfo = await this.lenderPool.getLenderInfo(_id, lender);
+    const lenderBalance = await this.lenderPool.balanceOf(lender, _id);
+    await this.tokenManager.updateAll(pclConstants.borrowAsset);
+
+    const decimals: BigNumberish = this.tokenManager.getTokenDecimals(pclConstants.borrowAsset);
+
+    const principal = await this.lenderPool.callStatic.calculatePrincipalWithdrawable(_id, lender);
+    const interest = await this.calculateLenderInterest(
+      _id,
+      pclConstants.borrowLimit,
+      pclVariables.principal,
+      pclConstants.borrowAssetStrategy,
+      pclConstants.borrowAsset,
+      pclVariables2.sharesHeld,
+      pclVariables2.borrowerInterestShares,
+      lenderBalance,
+      lenderInfo.borrowerInterestSharesWithdrawn,
+      pclVariables2.borrowerInterestSharesWithdrawn,
+      lenderInfo.yieldInterestWithdrawnShares
+    );
+
+    return {
+      principal: { value: principal.toString(), decimals: decimals },
+      interest: { value: interest.toString(), decimals: decimals },
+    };
+  }
+
+  private async calculateLenderInterest(
+    _id: string,
+    borrowLimit: BigNumberish,
+    principal: BigNumberish,
+    strategy: string,
+    borrowAsset: string,
+    sharesHeld: BigNumberish,
+    borrowerInterestShares: BigNumberish,
+    lenderBalance: BigNumberish,
+    lendersBorrowerInterestSharesWithdrawn: BigNumberish,
+    borrowerInterestSharesWithdrawn: BigNumberish,
+    yieldInterestWithdrawnShares: BigNumberish
+  ): Promise<BigNumber> {
+    const amountNotBorrowed = new BigNumber(borrowLimit.toString()).minus(principal.toString());
+    const yieldContract = IYield__factory.connect(strategy, this.signer);
+
+    const notBorrowedInShares = await yieldContract.callStatic.getSharesForTokens(amountNotBorrowed.toFixed(0), borrowAsset);
+    const totalInterestInShares = new BigNumber(sharesHeld.toString()).minus(notBorrowedInShares.toString());
+
+    if (new BigNumber(sharesHeld.toString()).eq(0)) {
+      return new BigNumber(0);
+    }
+    const borrowerInterestForLender = new BigNumber(borrowerInterestShares.toString())
+      .multipliedBy(lenderBalance.toString())
+      .div(borrowLimit.toString())
+      .minus(lendersBorrowerInterestSharesWithdrawn.toString());
+
+    const borrowerInterestSharesAfterWithdrawal = new BigNumber(borrowerInterestShares.toString()).minus(
+      borrowerInterestSharesWithdrawn.toString()
+    );
+
+    const totalYieldInterest = totalInterestInShares
+      .minus(borrowerInterestSharesAfterWithdrawal)
+      .plus(yieldInterestWithdrawnShares.toString());
+
+    const yieldInterestForLender = totalYieldInterest
+      .multipliedBy(lenderBalance.toString())
+      .dividedBy(borrowLimit.toString())
+      .minus(yieldInterestWithdrawnShares.toString());
+
+    return yieldInterestForLender.plus(borrowerInterestForLender);
   }
 }
