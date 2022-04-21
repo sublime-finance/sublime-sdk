@@ -971,6 +971,12 @@ export class SublimeSubgraph {
       const amountLent = await this.lenderPoolContract.totalSupply(_id);
       if (amountLent.gte(pooledCLConstants.minBorrowAmount)) {
         return CreditLineStatus.START_CALLABLE;
+      } else {
+        const pooledCLConstantsOfPCL = await this.pooledCreditLineContract.pooledCreditLineConstants(_id);
+        const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
+        if (dateBigNumber.gt(pooledCLConstantsOfPCL.endsAt.toString())) {
+          return CreditLineStatus.EXPIRED;
+        }
       }
       return CreditLineStatus.REQUESTED;
     } else if (status == 2) {
