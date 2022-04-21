@@ -22,88 +22,88 @@
 
 ### ACTIVE
 
-• **ACTIVE** = `2`
+• **ACTIVE** = `"ACTIVE"`
 
 #### Defined in
 
-[src/types/Types.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L15)
+[src/types/Types.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L15)
 
 ___
 
 ### CANCELLED
 
-• **CANCELLED** = `6`
+• **CANCELLED** = `"CANCELLED"`
 
 #### Defined in
 
-[src/types/Types.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L19)
+[src/types/Types.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L19)
 
 ___
 
 ### CLOSED
 
-• **CLOSED** = `3`
+• **CLOSED** = `"CLOSED"`
 
 #### Defined in
 
-[src/types/Types.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L16)
+[src/types/Types.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L16)
 
 ___
 
 ### EXPIRED
 
-• **EXPIRED** = `4`
+• **EXPIRED** = `"EXPIRED"`
 
 #### Defined in
 
-[src/types/Types.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L17)
+[src/types/Types.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L17)
 
 ___
 
 ### LIQUIDATED
 
-• **LIQUIDATED** = `5`
+• **LIQUIDATED** = `"LIQUIDATED"`
 
 #### Defined in
 
-[src/types/Types.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L18)
+[src/types/Types.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L18)
 
 ___
 
 ### LIQUIDATE\_CALLABLE
 
-• **LIQUIDATE\_CALLABLE** = `8`
+• **LIQUIDATE\_CALLABLE** = `"LIQUIDATE_CALLABLE"`
 
 #### Defined in
 
-[src/types/Types.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L21)
+[src/types/Types.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L21)
 
 ___
 
 ### NOT\_CREATED
 
-• **NOT\_CREATED** = `0`
+• **NOT\_CREATED** = `"NOT_CREATED"`
 
 #### Defined in
 
-[src/types/Types.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L13)
+[src/types/Types.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L13)
 
 ___
 
 ### REQUESTED
 
-• **REQUESTED** = `1`
+• **REQUESTED** = `"REQUESTED"`
 
 #### Defined in
 
-[src/types/Types.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L14)
+[src/types/Types.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L14)
 
 ___
 
 ### START\_CALLABLE
 
-• **START\_CALLABLE** = `7`
+• **START\_CALLABLE** = `"START_CALLABLE"`
 
 #### Defined in
 
-[src/types/Types.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/fcf21bd/src/types/Types.ts#L20)
+[src/types/Types.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/36fa62a/src/types/Types.ts#L20)
