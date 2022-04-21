@@ -56,6 +56,9 @@ export interface CreditLineOperation {
 }
 
 export interface PooledCreditLineOperation {
+  id: string;
+  transactionHash: string;
+  eventIndex: string;
   pooledCreditLineOperation: string;
   timestamp: string;
   amount?: string;

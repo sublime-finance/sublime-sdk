@@ -44,6 +44,10 @@ import {
   getPooledCreditLineById,
   getLenderPerPool,
   getPooledCreditLinesOfLenderCanLendTo,
+  getAllPooledCreditLinesWithState,
+  getAllPooledCreditLinesWithNotState,
+  getPooledCreditLinesOfBorrowerWithState,
+  getPooledCreditLinesOfBorrowerWithNotState,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -221,6 +225,34 @@ export class SublimeSubgraph {
     return this.transformToPooledCreditLine(result);
   }
 
+  async getAllPoolCreditLinesWithStateIn(
+    state: CreditLineStatus[],
+    count: number = 99,
+    skip: number = 0
+  ): Promise<PooledCreditLineDetail[]> {
+    const result = await getAllPooledCreditLinesWithState(
+      this.subgraphUrl,
+      count,
+      skip,
+      state.map((a) => a.toString())
+    );
+    return this.transformToPooledCreditLine(result);
+  }
+
+  async getAllPoolCreditLinesWithStateNotIn(
+    state: CreditLineStatus[],
+    count: number = 99,
+    skip: number = 0
+  ): Promise<PooledCreditLineDetail[]> {
+    const result = await getAllPooledCreditLinesWithNotState(
+      this.subgraphUrl,
+      count,
+      skip,
+      state.map((a) => a.toString())
+    );
+    return this.transformToPooledCreditLine(result);
+  }
+
   async getPooledCreditLineById(id: number): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLineById(this.subgraphUrl, id);
     return this.transformToPooledCreditLine(result);
@@ -228,9 +260,42 @@ export class SublimeSubgraph {
 
   async getAllPooledCreditLinesOfBorrower(address: string, count: number = 99, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address, count, skip);
+    console.log({ result });
     let lines = await this.transformToPooledCreditLine(result);
     lines = lines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
     return lines;
+  }
+
+  async getAllPooledCreditLinesOfBorrowerWithStateIn(
+    borrower: string,
+    status: CreditLineStatus[],
+    count: number = 99,
+    skip: number = 0
+  ): Promise<PooledCreditLineDetail[]> {
+    const result = await getPooledCreditLinesOfBorrowerWithState(
+      this.subgraphUrl,
+      borrower,
+      count,
+      skip,
+      status.map((a) => a.toString())
+    );
+    return await this.transformToPooledCreditLine(result);
+  }
+
+  async getAllPooledCreditLinesOfBorrowerWithStateNotIn(
+    borrower: string,
+    status: CreditLineStatus[],
+    count: number = 99,
+    skip: number = 0
+  ): Promise<PooledCreditLineDetail[]> {
+    const result = await getPooledCreditLinesOfBorrowerWithNotState(
+      this.subgraphUrl,
+      borrower,
+      count,
+      skip,
+      status.map((a) => a.toString())
+    );
+    return await this.transformToPooledCreditLine(result);
   }
 
   async getAllPooledCreditLinesLenderCanLendTo(lender: string, count: number = 99, skip: number = 0): Promise<PooledCreditLineDetail[]> {
@@ -259,8 +324,12 @@ export class SublimeSubgraph {
     return lines;
   }
 
-  async getPooledCreditLineTimeline(pooledCreditLineId: string): Promise<PooledCreditLineOperation[]> {
-    const result = await getPooledCreditLineTimeline(this.subgraphUrl, pooledCreditLineId);
+  async getPooledCreditLineTimeline(
+    pooledCreditLineId: string,
+    count: number = 99,
+    skip: number = 0
+  ): Promise<PooledCreditLineOperation[]> {
+    const result = await getPooledCreditLineTimeline(this.subgraphUrl, pooledCreditLineId, count, skip);
     return this.transformToPooledCreditLineOperation(result);
   }
 
@@ -335,6 +404,9 @@ export class SublimeSubgraph {
   private async transformToPooledCreditLineOperation(data: any[]): Promise<PooledCreditLineOperation[]> {
     return data.map((a) => {
       return {
+        id: a.id,
+        transactionHash: String(a.id).split('#')[0],
+        eventIndex: String(a.id).split('#')[1],
         pooledCreditLineOperation: a.pooledCreditLineOperation,
         timestamp: a.timestamp,
         amount: a.amount,

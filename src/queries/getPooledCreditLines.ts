@@ -1,10 +1,11 @@
 import { fetchData, print } from '../helpers';
 
-export async function getPooledCreditLineTimeline(url: string, pooledCreditLineId: string): Promise<any[]> {
+export async function getPooledCreditLineTimeline(url: string, pooledCreditLineId: string, count: number, skip: number): Promise<any[]> {
   const allData = [];
   const data = JSON.stringify({
     query: `{
-        pooledCreditLineTimeLines(where:{pooledCreditLine:"${pooledCreditLineId}"}){
+        pooledCreditLineTimeLines(first:${count}, skip:${skip}, orderBy: timestamp, orderDirection: desc, where:{pooledCreditLine:"${pooledCreditLineId}"}){
+        id
         pooledCreditLineOperation
         timestamp
         amount
@@ -135,6 +136,101 @@ export async function getPooledCreditLinesOfBorrower(url: string, borrower: stri
   return allData;
 }
 
+export async function getPooledCreditLinesOfBorrowerWithState(
+  url: string,
+  borrower: string,
+  count: number,
+  skip: number,
+  status: string[]
+): Promise<any[]> {
+  borrower = borrower.toLowerCase();
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+        pooledCreditLines(first:${count}, skip:${skip}, orderBy:createdAt, orderDirection:desc, where:{borrowerAddress:"${borrower}",status_in:[${status}]}){
+          id
+          borrowerAddress
+          borrowLimit
+          borrowRate
+          idealCollateralRatio
+          borrowAsset
+          collateralAsset
+          createdAt
+          startsAt
+          endsAt
+          defaultsAt
+          lenderStrategy
+          collateralStrategy
+          gracePenaltyRate
+          status
+          principal
+          totalInterestRepaid
+          lastPrincipalUpdateTime
+          interestAccruedTillLastPrincipalUpdate
+        }
+      }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  allData.push(...result.data.pooledCreditLines);
+  // console.log({allData})
+  return allData;
+}
+
+export async function getPooledCreditLinesOfBorrowerWithNotState(
+  url: string,
+  borrower: string,
+  count: number,
+  skip: number,
+  status: string[]
+): Promise<any[]> {
+  borrower = borrower.toLowerCase();
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+        pooledCreditLines(first:${count}, skip:${skip}, orderBy:createdAt, orderDirection:desc, where:{borrowerAddress:"${borrower}",status_not_in:[${status}]}){
+          id
+          borrowerAddress
+          borrowLimit
+          borrowRate
+          idealCollateralRatio
+          borrowAsset
+          collateralAsset
+          createdAt
+          startsAt
+          endsAt
+          defaultsAt
+          lenderStrategy
+          collateralStrategy
+          gracePenaltyRate
+          status
+          principal
+          totalInterestRepaid
+          lastPrincipalUpdateTime
+          interestAccruedTillLastPrincipalUpdate
+        }
+      }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  // print({result});
+  allData.push(...result.data.pooledCreditLines);
+  // console.log({allData})
+  return allData;
+}
+
 export async function getPooledCreditLinesOfLenderCanLendTo(url: string, lender: string, count: number, skip: number): Promise<any[]> {
   lender = lender.toLowerCase();
   const allData = [];
@@ -223,6 +319,88 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
   const data = JSON.stringify({
     query: `{
         pooledCreditLines(orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}){
+          id
+          borrowerAddress
+          borrowLimit
+          borrowRate
+          idealCollateralRatio
+          borrowAsset
+          collateralAsset
+          createdAt
+          startsAt
+          endsAt
+          defaultsAt
+          lenderStrategy
+          collateralStrategy
+          gracePenaltyRate
+          status
+          principal
+          totalInterestRepaid
+          lastPrincipalUpdateTime
+          interestAccruedTillLastPrincipalUpdate
+        }
+      }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  // print({result});
+  allData.push(...result.data.pooledCreditLines);
+  // console.log({allData})
+  return allData;
+}
+
+export async function getAllPooledCreditLinesWithState(url: string, count: number, skip: number, status: string[]): Promise<any[]> {
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+        pooledCreditLines(orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}, where:{status_in:[${status}]}){
+          id
+          borrowerAddress
+          borrowLimit
+          borrowRate
+          idealCollateralRatio
+          borrowAsset
+          collateralAsset
+          createdAt
+          startsAt
+          endsAt
+          defaultsAt
+          lenderStrategy
+          collateralStrategy
+          gracePenaltyRate
+          status
+          principal
+          totalInterestRepaid
+          lastPrincipalUpdateTime
+          interestAccruedTillLastPrincipalUpdate
+        }
+      }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  // print({result});
+  allData.push(...result.data.pooledCreditLines);
+  // console.log({allData})
+  return allData;
+}
+
+export async function getAllPooledCreditLinesWithNotState(url: string, count: number, skip: number, status: string[]): Promise<any[]> {
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+        pooledCreditLines(orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}, where:{s}){
           id
           borrowerAddress
           borrowLimit
