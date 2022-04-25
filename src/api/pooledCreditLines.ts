@@ -149,13 +149,13 @@ export class PooledCreditLineApi {
   public async getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
     const pooledCreditLineVariables = await this.pooledCreditLine.pooledCreditLineVariables(_id);
     const status = pooledCreditLineVariables.status;
-
+    const currentTime = Date.now()/1000
     if (status == 0) {
       return CreditLineStatus.NOT_CREATED;
     } else if (status == 1) {
       const pooledCLConstants = await this.lenderPool.pooledCLConstants(_id);
       const amountLent = await this.lenderPool.totalSupply(_id);
-      if (amountLent.gte(pooledCLConstants.minBorrowAmount)) {
+      if (amountLent.gte(pooledCLConstants.minBorrowAmount) && pooledCLConstants.startTime.lte(currentTime)) {
         return CreditLineStatus.START_CALLABLE;
       } else {
         const pooledCLConstantsOfPCL = await this.pooledCreditLine.pooledCreditLineConstants(_id);
