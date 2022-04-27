@@ -16,6 +16,7 @@ import {
   LenderPerPoolDetail,
   LenderContributionToPooledCreditLines,
   CreditLineStatus,
+  Balance,
 } from './types/Types';
 import {
   getAllPools,
@@ -330,7 +331,14 @@ export class SublimeSubgraph {
     skip: number = 0
   ): Promise<PooledCreditLineOperation[]> {
     const result = await getPooledCreditLineTimeline(this.subgraphUrl, pooledCreditLineId, count, skip);
-    return this.transformToPooledCreditLineOperation(result);
+    const cl = await this.getPooledCreditLineById(parseInt(pooledCreditLineId));
+    if (cl.length > 0) {
+      const borrowTokenDecimal = this.tokenManager.getTokenDecimals(cl[0].borrowAsset.address);
+      const collateralTokenDecimal = this.tokenManager.getTokenDecimals(cl[0].collateralAsset.address);
+      return this.transformToPooledCreditLineOperation(result, borrowTokenDecimal, collateralTokenDecimal);
+    } else {
+      return [];
+    }
   }
 
   async getLendersPerPool(id: string): Promise<LenderPoolDetail> {
@@ -401,15 +409,42 @@ export class SublimeSubgraph {
     });
   }
 
-  private async transformToPooledCreditLineOperation(data: any[]): Promise<PooledCreditLineOperation[]> {
+  private async transformToPooledCreditLineOperation(
+    data: any[],
+    borrowTokenDecimal,
+    collateralTokenDecimal
+  ): Promise<PooledCreditLineOperation[]> {
     return data.map((a) => {
+      //     CREATED
+      // COLLATERAL_ADDED
+      // LIQUIDITY_SUPPLIED
+      // BORROW
+      // CLOSE
+      // EXTENSION_REPAID
+      // GRACE_PENALTY_REPAID
+      // INTEREST_REPAID
+      // COMPLETE_INTEREST_REPAID
+      // PRINCIPLE_REPAID
+      // COLLATERAL_WITHDRAWN
+      let amount: Balance;
+      if (['COLLATERAL_ADDED', 'COLLATERAL_WITHDRAWN'].includes(a.pooledCreditLineOperation)) {
+        amount = { value: a.amount, decimals: collateralTokenDecimal };
+      }
+      if (
+        ['BORROW', 'EXTENSION_REPAID', 'INTEREST_REPAID', 'COMPLETE_INTEREST_REPAID', 'PRINCIPLE_REPAID'].includes(
+          a.pooledCreditLineOperation
+        )
+      ) {
+        amount = { value: a.amount, decimals: borrowTokenDecimal };
+      }
+
       return {
         id: a.id,
         transactionHash: String(a.id).split('#')[0],
         eventIndex: String(a.id).split('#')[1],
         pooledCreditLineOperation: a.pooledCreditLineOperation,
         timestamp: a.timestamp,
-        amount: a.amount,
+        amount,
         strategy: a.strategy,
       };
     });
