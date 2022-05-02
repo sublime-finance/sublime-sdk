@@ -49,6 +49,11 @@ import {
   getAllPooledCreditLinesWithNotState,
   getPooledCreditLinesOfBorrowerWithState,
   getPooledCreditLinesOfBorrowerWithNotState,
+  getAllPooledCreditLinesForCount,
+  getAllPooledCreditLinesForCountWithState,
+  getAllPooledCreditLinesOfBorrowerWithState,
+  getAllPooledCreditLinesOfLenderWithState,
+  getLendersOfPooledCreditLines,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -522,6 +527,7 @@ export class SublimeSubgraph {
           value: a.interestAccruedTillLastPrincipalUpdate || '0',
           decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
+        totalLentAmount: { value: a.totalLentAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
       };
     });
 
@@ -1000,6 +1006,43 @@ export class SublimeSubgraph {
     const result = await getAllowances(this.subgraphUrl, await this.signer.getAddress(), this.sublimeAddresses.creditLineContractAddress);
     return result;
   }
+
+  async countAllPooledCreditLines(): Promise<number> {
+    const result = await getAllPooledCreditLinesForCount(this.subgraphUrl);
+    return result.length;
+  }
+
+  async countAllPooledCreditLinesWithStates(state: CreditLineStatus[]): Promise<number> {
+    const result = await getAllPooledCreditLinesForCountWithState(
+      this.subgraphUrl,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllPooledCreditLinesOfBorrowerWithState(borrower: string, state: CreditLineStatus[]): Promise<number> {
+    const result = await getAllPooledCreditLinesOfBorrowerWithState(
+      this.subgraphUrl,
+      borrower,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllPooledCreditLinesOfLenderWithState(lender: string, state: CreditLineStatus[]): Promise<number> {
+    const result = await getAllPooledCreditLinesOfLenderWithState(
+      this.subgraphUrl,
+      lender,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllLendersOfPool(id: number): Promise<number> {
+    const result = await getLendersOfPooledCreditLines(this.subgraphUrl, id.toString());
+    return result.length;
+  }
+
   /**
    *
    * @param cl

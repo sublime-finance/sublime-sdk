@@ -1,4 +1,4 @@
-import { fetchData, print } from '../helpers';
+import { fetchData, print, countPerQuery } from '../helpers';
 
 export async function getPooledCreditLineTimeline(url: string, pooledCreditLineId: string, count: number, skip: number): Promise<any[]> {
   const allData = [];
@@ -38,14 +38,14 @@ export async function getPooledCreditLinesOfLender(
   const poolContributions = [];
   const data = JSON.stringify({
     query: `{
-        lenderPerLenderPools(where:{lenderAddress:"${lenderAddress}"}){
+        lenderPerLenderPools(first:${count}, skip:${skip}, where:{lenderAddress:"${lenderAddress}"}){
           lenderAddress
           amountLent
           amountWithdrawn
           sharesWithdrawn
           interestWithdrawn
           lenderPool{
-            pooledCreditLine(first:${count}, skip:${skip}, orderBy:createdAt, orderDirection:desc){
+            pooledCreditLine{
                 id
                 borrowerAddress
                 borrowLimit
@@ -119,6 +119,7 @@ export async function getPooledCreditLinesOfBorrower(url: string, borrower: stri
           totalInterestRepaid
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
+          totalLentAmount
         }
       }`,
   });
@@ -167,6 +168,7 @@ export async function getPooledCreditLinesOfBorrowerWithState(
           totalInterestRepaid
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
+          totalLentAmount
         }
       }`,
   });
@@ -214,6 +216,7 @@ export async function getPooledCreditLinesOfBorrowerWithNotState(
           totalInterestRepaid
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
+          totalLentAmount
         }
       }`,
   });
@@ -256,6 +259,7 @@ export async function getPooledCreditLinesOfLenderCanLendTo(url: string, lender:
           totalInterestRepaid
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
+          totalLentAmount
         }
       }`,
   });
@@ -297,6 +301,7 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           totalInterestRepaid
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
+          totalLentAmount
         }
       }`,
   });
@@ -338,6 +343,7 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
           totalInterestRepaid
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
+          totalLentAmount
         }
       }`,
   });
@@ -379,6 +385,7 @@ export async function getAllPooledCreditLinesWithState(url: string, count: numbe
           totalInterestRepaid
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
+          totalLentAmount
         }
       }`,
   });
@@ -420,6 +427,7 @@ export async function getAllPooledCreditLinesWithNotState(url: string, count: nu
           totalInterestRepaid
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
+          totalLentAmount
         }
       }`,
   });
@@ -483,4 +491,186 @@ export async function getLenderPerPool(url: string, id: string): Promise<any[]> 
   allData.push(...result.data.lenderPools);
   // console.log({allData})
   return allData;
+}
+
+export async function getAllPooledCreditLinesForCount(url: string): Promise<any[]> {
+  let skip = 0;
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        pooledCreditLines(first: ${countPerQuery}, skip:${skip * countPerQuery}, orderBy: createdAt, orderDirection: desc){
+          id
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.pooledCreditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.pooledCreditLines);
+    }
+  }
+}
+
+export async function getAllPooledCreditLinesForCountWithState(url: string, status: string[]): Promise<any[]> {
+  let skip = 0;
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        pooledCreditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{status_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.pooledCreditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.pooledCreditLines);
+    }
+  }
+}
+
+export async function getAllPooledCreditLinesOfLenderWithState(url: string, lenderAddress: string, status: string[]): Promise<any[]> {
+  let skip = 0;
+  lenderAddress = lenderAddress.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        lenderSharesBalancePCLs(where:{user:"${lenderAddress}"}){
+          user
+          pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}, where:{status_in:[${status}]}){
+            id
+            status
+          }
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    // print({ result });
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.lenderSharesBalancePCLs.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      const linesInThisIteration: any[] = [];
+      for (let index = 0; index < result.data.lenderSharesBalancePCLs.length; index++) {
+        const element = result.data.lenderSharesBalancePCLs[index];
+        allData.push(...element.pooledCreditLines);
+        linesInThisIteration.push(...element.pooledCreditLines);
+      }
+      if (linesInThisIteration.length == 0) {
+        return allData;
+      }
+    }
+  }
+}
+
+export async function getAllPooledCreditLinesOfBorrowerWithState(url: string, borrowerAddress: string, status: string[]): Promise<any[]> {
+  let skip = 0;
+  borrowerAddress = borrowerAddress.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        pooledCreditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{borrowerAddress:"${borrowerAddress}",status_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.pooledCreditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.pooledCreditLines);
+    }
+  }
+}
+
+export async function getLendersOfPooledCreditLines(url: string, id: string): Promise<any[]> {
+  let skip = 0;
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        lenderPools(where:{id:${id}}){
+          id
+          lender(first: ${countPerQuery}, skip: ${countPerQuery * skip}){
+            id
+          }
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    // print({result});
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.lenderPools.length == 0) {
+      return allData;
+    } else if (result.data.lenderPools[0].lender.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.lenderPools[0].lender);
+    }
+  }
 }
