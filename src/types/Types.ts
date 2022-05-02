@@ -66,7 +66,7 @@ export interface PooledCreditLineOperation {
   eventIndex: string;
   pooledCreditLineOperation: string;
   timestamp: string;
-  amount?: Balance;
+  amount: Balance;
   strategy?: string;
 }
 
