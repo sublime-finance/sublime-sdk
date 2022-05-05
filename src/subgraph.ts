@@ -432,14 +432,15 @@ export class SublimeSubgraph {
       // PRINCIPLE_REPAID
       // COLLATERAL_WITHDRAWN
       // DEPOSIT_COLLATERAL
-
+      // REPAY
+      // console.log({a});
       let amount: Balance = { value: '0', decimals: 18 };
 
       if (['DEPOSIT_COLLATERAL', 'COLLATERAL_ADDED', 'COLLATERAL_WITHDRAWN'].includes(a.pooledCreditLineOperation)) {
         amount = { value: a.amount, decimals: collateralTokenDecimal };
       }
       if (
-        ['BORROW', 'EXTENSION_REPAID', 'INTEREST_REPAID', 'COMPLETE_INTEREST_REPAID', 'PRINCIPLE_REPAID'].includes(
+        ['BORROW', 'EXTENSION_REPAID', 'INTEREST_REPAID', 'COMPLETE_INTEREST_REPAID', 'PRINCIPLE_REPAID', 'REPAY'].includes(
           a.pooledCreditLineOperation
         )
       ) {

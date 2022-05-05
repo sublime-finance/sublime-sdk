@@ -141,56 +141,83 @@ export class PooledCreditLineApi {
     return { value: value.toString(), decimals };
   }
 
-  /**
-   * @description Credit line status
-   * @param _id
-   * @returns
-   */
-  public async getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
+  public async _getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
+    //   NOT_CREATED = 'NOT_CREATED',
+    // REQUESTED = 'REQUESTED',
+    // ACTIVE = 'ACTIVE',
+    // CLOSED = 'CLOSED',
+    // EXPIRED = 'EXPIRED',
+    // LIQUIDATED = 'LIQUIDATED',
+    // CANCELLED = 'CANCELLED',
+    // START_CALLABLE = 'START_CALLABLE',
+    // LIQUIDATE_CALLABLE = 'LIQUIDATE_CALLABLE',
     const pooledCreditLineVariables = await this.pooledCreditLine.pooledCreditLineVariables(_id);
     const status = pooledCreditLineVariables.status;
-
     if (status == 0) {
       return CreditLineStatus.NOT_CREATED;
     } else if (status == 1) {
       const pooledCLConstants = await this.lenderPool.pooledCLConstants(_id);
       const amountLent = await this.lenderPool.totalSupply(_id);
-      if (amountLent.gte(pooledCLConstants.minBorrowAmount)) {
+
+      const pooledCLConstantsOfPCL = await this.pooledCreditLine.pooledCreditLineConstants(_id);
+      const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
+
+      if (dateBigNumber.gte(pooledCLConstantsOfPCL.startsAt.toString()) && amountLent.gte(pooledCLConstants.minBorrowAmount.toString())) {
         return CreditLineStatus.START_CALLABLE;
-      } else {
-        const pooledCLConstantsOfPCL = await this.pooledCreditLine.pooledCreditLineConstants(_id);
-        const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
-        if (dateBigNumber.gt(pooledCLConstantsOfPCL.startsAt.toString())) {
-          return CreditLineStatus.CANCELLED;
-        }
       }
+
+      if (dateBigNumber.gte(pooledCLConstantsOfPCL.startsAt.toString()) && amountLent.lt(pooledCLConstants.minBorrowAmount.toString())) {
+        return CreditLineStatus.CANCELLED;
+      }
+
       return CreditLineStatus.REQUESTED;
     } else if (status == 2) {
       const pooledCLConstants = await this.pooledCreditLine.pooledCreditLineConstants(_id);
-      if (
-        new BigNumber(new Date().valueOf()).div(1000).gt(pooledCLConstants.endsAt.toString()) &&
-        pooledCreditLineVariables.principal.gt(0)
-      ) {
-        return CreditLineStatus.EXPIRED;
-      }
-
       const colRatio = await this.pooledCreditLine.callStatic.calculateCurrentCollateralRatio(_id);
       if (pooledCLConstants.idealCollateralRatio.gt(colRatio)) {
         return CreditLineStatus.LIQUIDATE_CALLABLE;
+      }
+
+      const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
+      const pooledCLVariables = await this.pooledCreditLine.pooledCreditLineVariables(_id);
+
+      if (
+        dateBigNumber.gt(pooledCLConstants.endsAt.toString()) &&
+        dateBigNumber.lt(pooledCLConstants.defaultsAt.toString()) &&
+        pooledCLVariables.principal.gt(0)
+      ) {
+        return CreditLineStatus.EXPIRED;
       }
 
       return CreditLineStatus.ACTIVE;
     } else if (status == 3) {
       return CreditLineStatus.CLOSED;
     } else if (status == 4) {
+      const pooledCLConstants = await this.pooledCreditLine.pooledCreditLineConstants(_id);
+      const colRatio = await this.pooledCreditLine.callStatic.calculateCurrentCollateralRatio(_id);
+      if (pooledCLConstants.idealCollateralRatio.gt(colRatio)) {
+        return CreditLineStatus.LIQUIDATE_CALLABLE;
+      }
       return CreditLineStatus.EXPIRED;
     } else if (status == 5) {
       return CreditLineStatus.LIQUIDATED;
     } else if (status == 6) {
       return CreditLineStatus.CANCELLED;
+    } else if (status == 7) {
+      return CreditLineStatus.START_CALLABLE;
+    } else if (status == 8) {
+      return CreditLineStatus.LIQUIDATE_CALLABLE;
     } else {
-      throw new Error('invalid state ');
+      throw new Error('Invalid State');
     }
+  }
+  /**
+   * @description Credit line status
+   * @param _id
+   * @returns
+   */
+  public async getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
+    return this._getCreditLineStatus(_id);
   }
 
   /**
