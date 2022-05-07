@@ -17,6 +17,7 @@ import {
   LenderContributionToPooledCreditLines,
   CreditLineStatus,
   Balance,
+  UserMetaData,
 } from './types/Types';
 import {
   getAllPools,
@@ -54,6 +55,7 @@ import {
   getAllPooledCreditLinesOfBorrowerWithState,
   getAllPooledCreditLinesOfLenderWithState,
   getLendersOfPooledCreditLines,
+  getUserMetadata,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -71,7 +73,7 @@ import { PooledCreditLine } from './wrappers/PooledCreditLine';
 import { PooledCreditLine__factory } from './wrappers/factories/PooledCreditLine__factory';
 
 import { SublimeConfig } from './types/sublimeConfig';
-import { ICToken, ICToken__factory, IYield, IYield__factory, LenderPool, LenderPool__factory } from './wrappers';
+import { ICToken, ICToken__factory, IYield, IYield__factory, LenderPool, LenderPool__factory, User } from './wrappers';
 import { zeroAddress } from './config/constants';
 
 /**
@@ -353,6 +355,15 @@ export class SublimeSubgraph {
     }
     const returnData = await this.transformToLenderPoolDetail(result);
     return returnData[0];
+  }
+
+  async getUserMetadata(user: string): Promise<UserMetaData[]> {
+    const result = await getUserMetadata(this.subgraphUrl, user);
+    return this.transformToUserMetaData(result);
+  }
+
+  private transformToUserMetaData(data: any[]): UserMetaData[] {
+    return data.map((a) => a as UserMetaData);
   }
 
   private async transformToLenderPoolDetail(data: any[]): Promise<LenderPoolDetail[]> {

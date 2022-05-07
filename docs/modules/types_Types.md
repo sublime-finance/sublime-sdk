@@ -37,6 +37,7 @@
 - [Strategy](types_Types.md#strategy)
 - [StrategyType](types_Types.md#strategytype)
 - [TwitterDetails](types_Types.md#twitterdetails)
+- [UserMetaData](types_Types.md#usermetadata)
 - [VerifierType](types_Types.md#verifiertype)
 
 ## References
@@ -224,6 +225,12 @@ ___
 ### TwitterDetails
 
 Re-exports [TwitterDetails](../interfaces/types_Types.TwitterDetails.md)
+
+___
+
+### UserMetaData
+
+Re-exports [UserMetaData](../interfaces/types_Types.UserMetaData.md)
 
 ___
 

@@ -67,6 +67,7 @@
 - [getRandomInt](subgraph.SublimeSubgraph.md#getrandomint)
 - [getSavingsAccountOverview](subgraph.SublimeSubgraph.md#getsavingsaccountoverview)
 - [getTotalCollateralTokensInPooledCreditlines](subgraph.SublimeSubgraph.md#gettotalcollateraltokensinpooledcreditlines)
+- [getUserMetadata](subgraph.SublimeSubgraph.md#getusermetadata)
 - [getVerifiedTwitterId](subgraph.SublimeSubgraph.md#getverifiedtwitterid)
 - [transformToCreditLine](subgraph.SublimeSubgraph.md#transformtocreditline)
 - [transformToCreditLineOperations](subgraph.SublimeSubgraph.md#transformtocreditlineoperations)
@@ -77,6 +78,7 @@
 - [transformToPooledCreditLine](subgraph.SublimeSubgraph.md#transformtopooledcreditline)
 - [transformToPooledCreditLineOperation](subgraph.SublimeSubgraph.md#transformtopooledcreditlineoperation)
 - [transformToSavingsAccountUserDetails](subgraph.SublimeSubgraph.md#transformtosavingsaccountuserdetails)
+- [transformToUserMetaData](subgraph.SublimeSubgraph.md#transformtousermetadata)
 
 ## Constructors
 
@@ -95,7 +97,7 @@
 
 #### Defined in
 
-[src/subgraph.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L111)
+[src/subgraph.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L113)
 
 ## Properties
 
@@ -107,7 +109,7 @@
 
 #### Defined in
 
-[src/subgraph.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L99)
+[src/subgraph.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L101)
 
 ___
 
@@ -117,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L103)
+[src/subgraph.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L105)
 
 ___
 
@@ -127,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L101)
+[src/subgraph.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L103)
 
 ___
 
@@ -139,7 +141,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L89)
+[src/subgraph.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L91)
 
 ___
 
@@ -151,7 +153,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L84)
+[src/subgraph.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L86)
 
 ___
 
@@ -163,7 +165,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L109)
+[src/subgraph.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L111)
 
 ___
 
@@ -175,7 +177,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L94)
+[src/subgraph.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L96)
 
 ___
 
@@ -185,7 +187,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L105)
+[src/subgraph.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L107)
 
 ## Methods
 
@@ -205,7 +207,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:538](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L538)
+[src/subgraph.ts:549](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L549)
 
 ___
 
@@ -225,7 +227,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1042](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1042)
+[src/subgraph.ts:1053](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1053)
 
 ___
 
@@ -239,7 +241,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1011](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1011)
+[src/subgraph.ts:1022](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1022)
 
 ___
 
@@ -260,7 +262,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1024](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1024)
+[src/subgraph.ts:1035](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1035)
 
 ___
 
@@ -281,7 +283,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1033](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1033)
+[src/subgraph.ts:1044](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1044)
 
 ___
 
@@ -301,7 +303,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1016](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1016)
+[src/subgraph.ts:1027](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1027)
 
 ___
 
@@ -323,7 +325,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:673](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L673)
+[src/subgraph.ts:684](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L684)
 
 ___
 
@@ -348,7 +350,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:907](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L907)
+[src/subgraph.ts:918](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L918)
 
 ___
 
@@ -364,7 +366,7 @@ All the lenders of a given pool
 
 #### Defined in
 
-[src/subgraph.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L194)
+[src/subgraph.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L196)
 
 ___
 
@@ -386,7 +388,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:234](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L234)
+[src/subgraph.ts:236](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L236)
 
 ___
 
@@ -408,7 +410,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:248](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L248)
+[src/subgraph.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L250)
 
 ___
 
@@ -431,7 +433,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L229)
+[src/subgraph.ts:231](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L231)
 
 ___
 
@@ -453,7 +455,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:307](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L307)
+[src/subgraph.ts:309](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L309)
 
 ___
 
@@ -475,7 +477,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:267](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L267)
+[src/subgraph.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L269)
 
 ___
 
@@ -498,7 +500,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L275)
+[src/subgraph.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L277)
 
 ___
 
@@ -521,7 +523,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:291](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L291)
+[src/subgraph.ts:293](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L293)
 
 ___
 
@@ -543,7 +545,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L312)
+[src/subgraph.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L314)
 
 ___
 
@@ -563,7 +565,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:325](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L325)
+[src/subgraph.ts:327](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L327)
 
 ___
 
@@ -585,7 +587,7 @@ Array of specific pool types
 
 #### Defined in
 
-[src/subgraph.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L137)
+[src/subgraph.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L139)
 
 ___
 
@@ -599,7 +601,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1006](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1006)
+[src/subgraph.ts:1017](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1017)
 
 ___
 
@@ -623,7 +625,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:918](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L918)
+[src/subgraph.ts:929](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L929)
 
 ___
 
@@ -647,7 +649,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:929](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L929)
+[src/subgraph.ts:940](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L940)
 
 ___
 
@@ -669,7 +671,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:982](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L982)
+[src/subgraph.ts:993](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L993)
 
 ___
 
@@ -689,7 +691,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1117](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1117)
+[src/subgraph.ts:1128](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1128)
 
 ___
 
@@ -711,7 +713,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:996](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L996)
+[src/subgraph.ts:1007](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1007)
 
 ___
 
@@ -733,7 +735,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:835](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L835)
+[src/subgraph.ts:846](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L846)
 
 ___
 
@@ -755,7 +757,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:822](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L822)
+[src/subgraph.ts:833](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L833)
 
 ___
 
@@ -775,7 +777,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:349](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L349)
+[src/subgraph.ts:351](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L351)
 
 ___
 
@@ -799,7 +801,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:951](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L951)
+[src/subgraph.ts:962](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L962)
 
 ___
 
@@ -823,7 +825,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:973](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L973)
+[src/subgraph.ts:984](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L984)
 
 ___
 
@@ -847,7 +849,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:962](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L962)
+[src/subgraph.ts:973](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L973)
 
 ___
 
@@ -871,7 +873,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:940](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L940)
+[src/subgraph.ts:951](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L951)
 
 ___
 
@@ -893,7 +895,7 @@ pool data if the pool exists, else null
 
 #### Defined in
 
-[src/subgraph.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L146)
+[src/subgraph.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L148)
 
 ___
 
@@ -915,7 +917,7 @@ Array of pools for the corresponding borrower
 
 #### Defined in
 
-[src/subgraph.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L156)
+[src/subgraph.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L158)
 
 ___
 
@@ -938,7 +940,7 @@ Array of pool
 
 #### Defined in
 
-[src/subgraph.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L185)
+[src/subgraph.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L187)
 
 ___
 
@@ -960,7 +962,7 @@ Array of pool for the lender
 
 #### Defined in
 
-[src/subgraph.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L165)
+[src/subgraph.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L167)
 
 ___
 
@@ -983,7 +985,7 @@ Array of pool
 
 #### Defined in
 
-[src/subgraph.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L175)
+[src/subgraph.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L177)
 
 ___
 
@@ -1003,7 +1005,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L262)
+[src/subgraph.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L264)
 
 ___
 
@@ -1025,7 +1027,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:333](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L333)
+[src/subgraph.ts:335](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L335)
 
 ___
 
@@ -1041,7 +1043,7 @@ Array of all pools created on sublime
 
 #### Defined in
 
-[src/subgraph.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L127)
+[src/subgraph.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L129)
 
 ___
 
@@ -1063,7 +1065,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:885](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L885)
+[src/subgraph.ts:896](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L896)
 
 ___
 
@@ -1085,7 +1087,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1097](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1097)
+[src/subgraph.ts:1108](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1108)
 
 ___
 
@@ -1107,7 +1109,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:811](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L811)
+[src/subgraph.ts:822](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L822)
 
 ___
 
@@ -1127,7 +1129,27 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:462](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L462)
+[src/subgraph.ts:473](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L473)
+
+___
+
+### getUserMetadata
+
+▸ **getUserMetadata**(`user`): `Promise`<[`UserMetaData`](../interfaces/types_Types.UserMetaData.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `user` | `string` |
+
+#### Returns
+
+`Promise`<[`UserMetaData`](../interfaces/types_Types.UserMetaData.md)[]\>
+
+#### Defined in
+
+[src/subgraph.ts:360](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L360)
 
 ___
 
@@ -1147,7 +1169,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1106](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1106)
+[src/subgraph.ts:1117](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1117)
 
 ___
 
@@ -1169,7 +1191,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:552](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L552)
+[src/subgraph.ts:563](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L563)
 
 ___
 
@@ -1191,7 +1213,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1052](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1052)
+[src/subgraph.ts:1063](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1063)
 
 ___
 
@@ -1212,7 +1234,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:1074](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L1074)
+[src/subgraph.ts:1085](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L1085)
 
 ___
 
@@ -1233,7 +1255,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:405](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L405)
+[src/subgraph.ts:416](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L416)
 
 ___
 
@@ -1253,7 +1275,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:358](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L358)
+[src/subgraph.ts:369](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L369)
 
 ___
 
@@ -1275,7 +1297,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:624](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L624)
+[src/subgraph.ts:635](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L635)
 
 ___
 
@@ -1295,7 +1317,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:474](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L474)
+[src/subgraph.ts:485](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L485)
 
 ___
 
@@ -1317,7 +1339,7 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:417](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L417)
+[src/subgraph.ts:428](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L428)
 
 ___
 
@@ -1340,4 +1362,24 @@ ___
 
 #### Defined in
 
-[src/subgraph.ts:694](https://github.com/sublime-finance/sublime-sdk/blob/e07ad52/src/subgraph.ts#L694)
+[src/subgraph.ts:705](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L705)
+
+___
+
+### transformToUserMetaData
+
+▸ `Private` **transformToUserMetaData**(`data`): [`UserMetaData`](../interfaces/types_Types.UserMetaData.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+[`UserMetaData`](../interfaces/types_Types.UserMetaData.md)[]
+
+#### Defined in
+
+[src/subgraph.ts:365](https://github.com/sublime-finance/sublime-sdk/blob/4ead012/src/subgraph.ts#L365)

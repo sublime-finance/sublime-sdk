@@ -9,6 +9,16 @@ export interface Asset {
   pricePerAssetInUSD: string;
 }
 
+export interface UserMetaData {
+  id: string;
+  verifier: string;
+  metadata: string;
+  verifiedBy: {
+    id: string;
+    status: string;
+  };
+}
+
 export enum CreditLineStatus {
   NOT_CREATED = 'NOT_CREATED',
   REQUESTED = 'REQUESTED',
