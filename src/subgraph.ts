@@ -228,14 +228,14 @@ export class SublimeSubgraph {
    * @param skip
    * @returns
    */
-  async getAllPooledCreditLines(count: number = 99, skip: number = 0): Promise<PooledCreditLineDetail[]> {
+  async getAllPooledCreditLines(count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getAllPooledCreditLines(this.subgraphUrl, count, skip);
     return this.transformToPooledCreditLine(result);
   }
 
   async getAllPoolCreditLinesWithStateIn(
     state: CreditLineStatus[],
-    count: number = 99,
+    count: number = 13,
     skip: number = 0
   ): Promise<PooledCreditLineDetail[]> {
     const result = await getAllPooledCreditLinesWithState(
@@ -249,7 +249,7 @@ export class SublimeSubgraph {
 
   async getAllPoolCreditLinesWithStateNotIn(
     state: CreditLineStatus[],
-    count: number = 99,
+    count: number = 13,
     skip: number = 0
   ): Promise<PooledCreditLineDetail[]> {
     const result = await getAllPooledCreditLinesWithNotState(
@@ -266,7 +266,7 @@ export class SublimeSubgraph {
     return this.transformToPooledCreditLine(result);
   }
 
-  async getAllPooledCreditLinesOfBorrower(address: string, count: number = 99, skip: number = 0): Promise<PooledCreditLineDetail[]> {
+  async getAllPooledCreditLinesOfBorrower(address: string, count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address, count, skip);
     console.log({ result });
     let lines = await this.transformToPooledCreditLine(result);
@@ -277,7 +277,7 @@ export class SublimeSubgraph {
   async getAllPooledCreditLinesOfBorrowerWithStateIn(
     borrower: string,
     status: CreditLineStatus[],
-    count: number = 99,
+    count: number = 13,
     skip: number = 0
   ): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfBorrowerWithState(
@@ -293,7 +293,7 @@ export class SublimeSubgraph {
   async getAllPooledCreditLinesOfBorrowerWithStateNotIn(
     borrower: string,
     status: CreditLineStatus[],
-    count: number = 99,
+    count: number = 13,
     skip: number = 0
   ): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfBorrowerWithNotState(
@@ -306,14 +306,14 @@ export class SublimeSubgraph {
     return await this.transformToPooledCreditLine(result);
   }
 
-  async getAllPooledCreditLinesLenderCanLendTo(lender: string, count: number = 99, skip: number = 0): Promise<PooledCreditLineDetail[]> {
+  async getAllPooledCreditLinesLenderCanLendTo(lender: string, count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfLenderCanLendTo(this.subgraphUrl, lender, count, skip);
     return await this.transformToPooledCreditLine(result);
   }
 
   async getAllPooledCreditLinesOfLender(
     lender: string,
-    count: number = 99,
+    count: number = 13,
     skip: number = 0
   ): Promise<[PooledCreditLineDetail[], LenderContributionToPooledCreditLines[]]> {
     const [result, contributionsData] = await getPooledCreditLinesOfLender(this.subgraphUrl, lender, count, skip);
@@ -334,7 +334,7 @@ export class SublimeSubgraph {
 
   async getPooledCreditLineTimeline(
     pooledCreditLineId: string,
-    count: number = 99,
+    count: number = 13,
     skip: number = 0
   ): Promise<PooledCreditLineOperation[]> {
     const result = await getPooledCreditLineTimeline(this.subgraphUrl, pooledCreditLineId, count, skip);
@@ -505,6 +505,7 @@ export class SublimeSubgraph {
     }
 
     const all = data.map(async (a) => {
+      const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(a.id);
       return {
         id: a.id,
         borrowerAddress: a.borrowerAddress,
@@ -540,6 +541,10 @@ export class SublimeSubgraph {
           decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
         totalLentAmount: { value: a.totalLentAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        currentCollateralRatio: {
+          value: colRatio.toString(),
+          decimals: 18,
+        },
       };
     });
 
@@ -915,7 +920,7 @@ export class SublimeSubgraph {
    * @param skip: number to credit lines to skip
    * @returns
    */
-  async getAllCreditLines(count: number = 99, skip: number = 0): Promise<CreditLineDetail[]> {
+  async getAllCreditLines(count: number = 13, skip: number = 0): Promise<CreditLineDetail[]> {
     const result = await getAllCreditLinesFromSubgraph(this.subgraphUrl, count, skip);
     return await this.transformToCreditLine(result);
   }
@@ -926,7 +931,7 @@ export class SublimeSubgraph {
    * @param skip: number to credit lines to skip
    * @description Returns the confirmed credit lines of a borrower
    */
-  async getConfirmedCreditLinesOfBorrower(borrower: string, count: number = 99, skip: number = 0): Promise<CreditLineDetail[]> {
+  async getConfirmedCreditLinesOfBorrower(borrower: string, count: number = 13, skip: number = 0): Promise<CreditLineDetail[]> {
     const result = await getConfirmedCreditLinesOfBorrower(this.subgraphUrl, borrower, count, skip);
     return await this.transformToCreditLine(result);
   }

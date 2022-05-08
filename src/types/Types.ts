@@ -235,6 +235,7 @@ export interface PooledCreditLineDetail {
   lastPrincipalUpdateTime: string;
   interestAccruedTillLastPrincipalUpdate: Balance;
   totalLentAmount: Balance;
+  currentCollateralRatio: Balance;
 }
 
 export interface CreditLineUser {
