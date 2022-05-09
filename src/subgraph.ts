@@ -56,6 +56,7 @@ import {
   getAllPooledCreditLinesOfLenderWithState,
   getLendersOfPooledCreditLines,
   getUserMetadata,
+  getPooledCreditLinesForLenderById,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -309,6 +310,21 @@ export class SublimeSubgraph {
   async getAllPooledCreditLinesLenderCanLendTo(lender: string, count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfLenderCanLendTo(this.subgraphUrl, lender, count, skip);
     return await this.transformToPooledCreditLine(result);
+  }
+
+  async getLendersViewOfPooledCredit(
+    id: string
+  ): Promise<[PooledCreditLineDetail | undefined, LenderContributionToPooledCreditLines | undefined]> {
+    const [result, contributionsData] = await getPooledCreditLinesForLenderById(this.subgraphUrl, id);
+    if (result.length == 0) {
+      return [undefined, undefined];
+    }
+    let pooledCreditLines = await this.transformToPooledCreditLine(result);
+    let contributions = await this.transformToLenderContributionToPooledCreditLines(pooledCreditLines, contributionsData);
+    pooledCreditLines = pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
+    contributions = contributions.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
+
+    return [pooledCreditLines[0], contributions[0]];
   }
 
   async getAllPooledCreditLinesOfLender(

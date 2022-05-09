@@ -94,6 +94,67 @@ export async function getPooledCreditLinesOfLender(
   return [allData, poolContributions];
 }
 
+export async function getPooledCreditLinesForLenderById(url: string, id: string): Promise<[any[], any[]]> {
+  const allData = [];
+  const poolContributions = [];
+  const data = JSON.stringify({
+    query: `{
+        lenderPerLenderPools(where:{id:"${id}"}){
+          lenderAddress
+          amountLent
+          amountWithdrawn
+          sharesWithdrawn
+          interestWithdrawn
+          lenderPool{
+            pooledCreditLine{
+                id
+                borrowerAddress
+                borrowLimit
+                borrowRate
+                idealCollateralRatio
+                borrowAsset
+                collateralAsset
+                createdAt
+                startsAt
+                endsAt
+                defaultsAt
+                lenderStrategy
+                collateralStrategy
+                gracePenaltyRate
+                status
+                principal
+                totalInterestRepaid
+                lastPrincipalUpdateTime
+                interestAccruedTillLastPrincipalUpdate
+            }
+          }
+        }
+      }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  // print({result});
+  allData.push(...result.data.lenderPerLenderPools.map((a) => a.lenderPool.pooledCreditLine));
+  poolContributions.push(
+    ...result.data.lenderPerLenderPools.map((a) => {
+      return {
+        amountLent: a.amountLent,
+        amountWithdrawn: a.amountWithdrawn,
+        sharesWithdrawn: a.sharesWithdrawn,
+        interestWithdrawn: a.interestWithdrawn,
+      };
+    })
+  );
+  // console.log({allData})
+  return [allData, poolContributions];
+}
+
 export async function getPooledCreditLinesOfBorrower(url: string, borrower: string, count: number, skip: number): Promise<any[]> {
   borrower = borrower.toLowerCase();
   const allData = [];
