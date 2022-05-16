@@ -72,6 +72,7 @@ import {
   getCreditLinesOfLenderWithStateNotIn_requestByLender,
   getCreditLinesOfBorrowerWithStateNotIn_requestByLender,
   getTwitterDetails as getTwitterDetailsQuery,
+  getAllPooledCreditLinesForCountWithStateNotIn,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -1205,6 +1206,14 @@ export class SublimeSubgraph {
 
   async countAllPooledCreditLinesWithStates(state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesForCountWithState(
+      this.subgraphUrl,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllPooledCreditLinesWithStatesNotIn(state: CreditLineStatus[]): Promise<number> {
+    const result = await getAllPooledCreditLinesForCountWithStateNotIn(
       this.subgraphUrl,
       state.map((a) => a.toString())
     );

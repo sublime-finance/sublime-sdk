@@ -650,6 +650,40 @@ export async function getAllPooledCreditLinesForCountWithState(url: string, stat
   }
 }
 
+export async function getAllPooledCreditLinesForCountWithStateNotIn(url: string, status: string[]): Promise<any[]> {
+  let skip = 0;
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        pooledCreditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{status_not_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.pooledCreditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.pooledCreditLines);
+    }
+  }
+}
+
 export async function getAllPooledCreditLinesOfLenderWithState(url: string, lenderAddress: string, status: string[]): Promise<any[]> {
   let skip = 0;
   lenderAddress = lenderAddress.toLowerCase();
