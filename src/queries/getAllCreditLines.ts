@@ -1,4 +1,4 @@
-import { fetchData } from '../helpers';
+import { fetchData, print, countPerQuery } from '../helpers';
 
 export async function getCreditLineTimeline(url: string, creditLineNumber: string): Promise<any> {
   const data = JSON.stringify({
@@ -6,6 +6,7 @@ export async function getCreditLineTimeline(url: string, creditLineNumber: strin
       creditLines(where:{id:"${creditLineNumber}"}) {
         id
         borrowAsset
+        createdAt
         collateralAsset
         creditLineTimeline(orderBy:timestamp, orderDirection:desc) {
           id
@@ -67,6 +68,7 @@ export async function getAllCreditLinesFromSubgraph(url: string, count: number, 
           borrowAsset
           autoLiquidation
           lastPrincipalUpdateTime
+          createdAt
         }
     }`,
   });
@@ -99,6 +101,7 @@ async function _getCreditLinesOfBorrower(
           id
           status
           lender
+          createdAt
           lenderWalletDetails {
             wallet {
               user {
@@ -152,6 +155,7 @@ export async function getCreditLine(url: string, id: string): Promise<any[]> {
             status
             lender
             borrower
+            createdAt
             lenderWalletDetails {
               wallet {
                 user {
@@ -213,6 +217,7 @@ async function _getCreditLinesOfLender(
             status
             lender
             borrower
+            createdAt
             lenderWalletDetails {
               wallet {
                 user {
@@ -274,6 +279,7 @@ async function _getCreditLinesNotOfLender(
             status
             lender
             borrower
+            createdAt
             lenderWalletDetails {
               wallet {
                 user {
@@ -379,4 +385,74 @@ export async function getPendingCreditLinesRequestedToBorrower(url: string, borr
   const lines = await _getCreditLinesOfBorrower(url, status, requestByLender, borrower, count, skip);
   data = [...lines];
   return data;
+}
+
+export async function getCreditLinesOfBorrowerWithState(url: string, address: string, status: string[]): Promise<any[]> {
+  let skip = 0;
+  address = address.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        creditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{borrower:"${address}",status_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.creditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.creditLines);
+    }
+  }
+}
+
+export async function getCreditLinesOfLenderWithState(url: string, address: string, status: string[]): Promise<any[]> {
+  let skip = 0;
+  address = address.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        creditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{lender:"${address}",status_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.creditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.creditLines);
+    }
+  }
 }

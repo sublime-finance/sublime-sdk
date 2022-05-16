@@ -1,5 +1,8 @@
 import { query } from '../utils/subgraph';
-import { fetchData, countPerQuery, print } from '../helpers';
+import axios from 'axios';
+import { UserTwitterDetails } from 'types/Types';
+
+const sublimeVerifierUrl = 'https://sublime-twitter-fetch-userinfobyid.saxenism.workers.dev/?twitterID=';
 
 export async function getTwitterId(url, address: string): Promise<any[]> {
   // TODO: Update queries to use graphql variables instead
@@ -57,3 +60,25 @@ export async function getUserMetadata(url, address: string): Promise<any[]> {
     return [];
   }
 }
+
+export default async function twitterDp(twtID: string): Promise<UserTwitterDetails> {
+  try {
+    const response = await axios.get(sublimeVerifierUrl + twtID);
+    const data = JSON.parse(response.data);
+    return {
+      profilePic: data.profilePic,
+      name: data.name,
+      twitterId: data.twitterId,
+      tweetId: twtID,
+    };
+  } catch (ex) {
+    console.log(ex);
+    return {
+      profilePic: undefined,
+      name: undefined,
+      twitterId: undefined,
+      tweetId: twtID,
+    };
+  }
+}
+// twitterDp('a tweet id').then(console.log);

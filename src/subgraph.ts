@@ -57,6 +57,10 @@ import {
   getLendersOfPooledCreditLines,
   getUserMetadata,
   getPooledCreditLinesForLenderById,
+  getAllCreditLinesForCount,
+  getCreditLinesOfBorrowerWithState,
+  getCreditLinesOfLenderWithState,
+  getAllPooledCreditLinesOfLenderWithStateNotIn,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -192,6 +196,7 @@ export class SublimeSubgraph {
 
   /**
    * @param poolAddress
+   * @description To-Do
    * @returns All the lenders of a given pool
    */
   async getAllLendersOfPool(): Promise<PoolLender[]> {
@@ -520,6 +525,13 @@ export class SublimeSubgraph {
       numberOfCollateralTokens[allId[index]] = await (await this.getTotalCollateralTokensInPooledCreditlines(element)).toString();
     }
 
+    for (let index = 0; index < data.length; index++) {
+      const a = data[index];
+      console.log(`Fetching data for PCL ${a.id}`);
+      const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(a.id);
+      console.log(`Fetched data for PCL ${a.id}`);
+    }
+
     const all = data.map(async (a) => {
       const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(a.id);
       return {
@@ -618,6 +630,7 @@ export class SublimeSubgraph {
       }
 
       return {
+        createdAt: a.createdAt,
         currentDebt: { value: currentDebt.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         principal: { value: new BigNumber(a.principal).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         interestAccrued: { value: interestAccrued.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
@@ -1045,6 +1058,29 @@ export class SublimeSubgraph {
     return result.length;
   }
 
+  async countAllCreditLines(): Promise<number> {
+    const result = await getAllCreditLinesForCount(this.subgraphUrl);
+    return result.length;
+  }
+
+  async countAllCreditLinesOfBorrowerWithStateIn(borrower: string, state: CreditLineStatus[]): Promise<number> {
+    const result = await getCreditLinesOfBorrowerWithState(
+      this.subgraphUrl,
+      borrower,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllCreditLinesOfLenderWithStateIn(lender: string, state: CreditLineStatus[]): Promise<number> {
+    const result = await getCreditLinesOfLenderWithState(
+      this.subgraphUrl,
+      lender,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
   async countAllPooledCreditLinesWithStates(state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesForCountWithState(
       this.subgraphUrl,
@@ -1064,6 +1100,16 @@ export class SublimeSubgraph {
 
   async countAllPooledCreditLinesOfLenderWithState(lender: string, state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesOfLenderWithState(
+      this.subgraphUrl,
+      lender,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllPooledCreditLinesOfLenderWithStateNotIn(lender: string, state: CreditLineStatus[]): Promise<number> {
+    getAllPooledCreditLinesOfLenderWithStateNotIn;
+    const result = await getAllPooledCreditLinesOfLenderWithStateNotIn(
       this.subgraphUrl,
       lender,
       state.map((a) => a.toString())

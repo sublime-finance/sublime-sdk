@@ -163,7 +163,6 @@ export class CreditLineApi {
 
     return { value: _value.toString(), decimals: borrowDecimal };
   }
-
   /**
    * @description Calculate the total amount that can be borrowed from the credit line
    * @param creditLineNumber
@@ -176,6 +175,15 @@ export class CreditLineApi {
     const borrowDecimal: BigNumberish = this.tokenManager.getTokenDecimals(borrowAsset);
 
     return { value: _value.toString(), decimals: borrowDecimal };
+  }
+
+  /**
+   * @description Cancel a credit line
+   * @param id ID of the credit line
+   * @param options
+   */
+  public async cancelCreditLine(id: string, options?: Overrides): Promise<ContractTransaction> {
+    return this.creditLineContract.cancel(id, { ...options });
   }
 
   /**

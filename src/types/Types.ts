@@ -18,6 +18,12 @@ export interface UserMetaData {
     status: string;
   };
 }
+export interface UserTwitterDetails {
+  profilePic: string;
+  name: string;
+  twitterId: string;
+  tweetId: string;
+}
 
 export enum CreditLineStatus {
   NOT_CREATED = 'NOT_CREATED',
@@ -211,6 +217,7 @@ export interface CreditLineDetail {
   lastPrincipalUpdateTime: string;
   id: string;
   requestByLender: boolean;
+  createdAt: string;
 }
 
 export interface PooledCreditLineDetail {

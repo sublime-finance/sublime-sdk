@@ -127,6 +127,16 @@ export class PooledCreditLineApi {
   }
 
   /**
+   * @description to-do
+   * @param lenderAddress
+   * @returns
+   */
+  public async getLenderInterest(lenderAddress: string): Promise<Balance> {
+    {
+      return { value: 278873283781212, decimals: 18 };
+    }
+  }
+  /**
    * @description get principle
    * @param _id
    * @returns Balance
