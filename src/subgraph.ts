@@ -63,6 +63,12 @@ import {
   getAllPooledCreditLinesOfLenderWithStateNotIn,
   getAllPooledCreditLinesOfBorrowerWithStateNotIn,
   getAllPooledCreditLinesOfBorrower,
+  getCreditLinesOfBorrowerWithStateNotIn,
+  getCreditLinesOfLenderWithStateNotIn,
+  getCreditLinesOfLenderWithState_requestByLender,
+  getCreditLinesOfBorrowerWithState_requestByLender,
+  getCreditLinesOfLenderWithStateNotIn_requestByLender,
+  getCreditLinesOfBorrowerWithStateNotIn_requestByLender,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -1079,10 +1085,84 @@ export class SublimeSubgraph {
     return result.length;
   }
 
+  async countAllCreditLinesOfBorrowerWithStateIn_requestByLender(
+    borrower: string,
+    requestByLender: boolean,
+    state: CreditLineStatus[]
+  ): Promise<number> {
+    const result = await getCreditLinesOfBorrowerWithState_requestByLender(
+      this.subgraphUrl,
+      borrower,
+      requestByLender,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllCreditLinesOfBorrowerWithStateNotIn(borrower: string, state: CreditLineStatus[]): Promise<number> {
+    const result = await getCreditLinesOfBorrowerWithStateNotIn(
+      this.subgraphUrl,
+      borrower,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllCreditLinesOfBorrowerWithStateNotIn_requestByLender(
+    borrower: string,
+    requestByLender: boolean,
+    state: CreditLineStatus[]
+  ): Promise<number> {
+    const result = await getCreditLinesOfBorrowerWithStateNotIn_requestByLender(
+      this.subgraphUrl,
+      borrower,
+      requestByLender,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllCreditLinesOfLenderWithStateNotIn(lender: string, state: CreditLineStatus[]): Promise<number> {
+    const result = await getCreditLinesOfLenderWithStateNotIn(
+      this.subgraphUrl,
+      lender,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllCreditLinesOfLenderWithStateNotIn_requestByLender(
+    lender: string,
+    requestByLender: boolean,
+    state: CreditLineStatus[]
+  ): Promise<number> {
+    const result = await getCreditLinesOfLenderWithStateNotIn_requestByLender(
+      this.subgraphUrl,
+      lender,
+      requestByLender,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
   async countAllCreditLinesOfLenderWithStateIn(lender: string, state: CreditLineStatus[]): Promise<number> {
     const result = await getCreditLinesOfLenderWithState(
       this.subgraphUrl,
       lender,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllCreditLinesOfLenderWithStateIn_requestByLender(
+    lender: string,
+    requestByLender: boolean,
+    state: CreditLineStatus[]
+  ): Promise<number> {
+    const result = await getCreditLinesOfLenderWithState_requestByLender(
+      this.subgraphUrl,
+      lender,
+      requestByLender,
       state.map((a) => a.toString())
     );
     return result.length;

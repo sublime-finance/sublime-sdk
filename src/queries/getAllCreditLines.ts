@@ -456,3 +456,235 @@ export async function getCreditLinesOfLenderWithState(url: string, address: stri
     }
   }
 }
+
+export async function getCreditLinesOfBorrowerWithStateNotIn(url: string, address: string, status: string[]): Promise<any[]> {
+  let skip = 0;
+  address = address.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        creditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{borrower:"${address}",status_not_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.creditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.creditLines);
+    }
+  }
+}
+
+export async function getCreditLinesOfLenderWithStateNotIn(url: string, address: string, status: string[]): Promise<any[]> {
+  let skip = 0;
+  address = address.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        creditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{lender:"${address}",status_not_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.creditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.creditLines);
+    }
+  }
+}
+
+// /----- request by lender used
+
+export async function getCreditLinesOfBorrowerWithState_requestByLender(
+  url: string,
+  address: string,
+  requestByLender: boolean,
+  status: string[]
+): Promise<any[]> {
+  let skip = 0;
+  address = address.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        creditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{requestByLender:${requestByLender}, borrower:"${address}",status_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.creditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.creditLines);
+    }
+  }
+}
+
+export async function getCreditLinesOfLenderWithState_requestByLender(
+  url: string,
+  address: string,
+  requestByLender: boolean,
+  status: string[]
+): Promise<any[]> {
+  let skip = 0;
+  address = address.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        creditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{requestByLender:${requestByLender}, lender:"${address}",status_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.creditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.creditLines);
+    }
+  }
+}
+
+export async function getCreditLinesOfBorrowerWithStateNotIn_requestByLender(
+  url: string,
+  address: string,
+  requestByLender: boolean,
+  status: string[]
+): Promise<any[]> {
+  let skip = 0;
+  address = address.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        creditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{requestByLender:${requestByLender}, borrower:"${address}",status_not_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.creditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.creditLines);
+    }
+  }
+}
+
+export async function getCreditLinesOfLenderWithStateNotIn_requestByLender(
+  url: string,
+  address: string,
+  requestByLender: boolean,
+  status: string[]
+): Promise<any[]> {
+  let skip = 0;
+  address = address.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        creditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{requestByLender:${requestByLender},lender:"${address}",status_not_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.creditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.creditLines);
+    }
+  }
+}
