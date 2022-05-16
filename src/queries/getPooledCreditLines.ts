@@ -775,6 +775,80 @@ export async function getAllPooledCreditLinesOfBorrowerWithState(url: string, bo
   }
 }
 
+export async function getAllPooledCreditLinesOfBorrowerWithStateNotIn(
+  url: string,
+  borrowerAddress: string,
+  status: string[]
+): Promise<any[]> {
+  let skip = 0;
+  borrowerAddress = borrowerAddress.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        pooledCreditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{borrowerAddress:"${borrowerAddress}",status_not_in:[${status}]}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.pooledCreditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.pooledCreditLines);
+    }
+  }
+}
+
+export async function getAllPooledCreditLinesOfBorrower(url: string, borrowerAddress: string): Promise<any[]> {
+  let skip = 0;
+  borrowerAddress = borrowerAddress.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        pooledCreditLines(first: ${countPerQuery}, skip:${
+        skip * countPerQuery
+      }, orderBy: createdAt, orderDirection: desc, where:{borrowerAddress:"${borrowerAddress}"}){
+          id
+          status
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.pooledCreditLines.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.pooledCreditLines);
+    }
+  }
+}
+
 export async function getLendersOfPooledCreditLines(url: string, id: string): Promise<any[]> {
   let skip = 0;
   const allData = [];

@@ -61,6 +61,8 @@ import {
   getCreditLinesOfBorrowerWithState,
   getCreditLinesOfLenderWithState,
   getAllPooledCreditLinesOfLenderWithStateNotIn,
+  getAllPooledCreditLinesOfBorrowerWithStateNotIn,
+  getAllPooledCreditLinesOfBorrower,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -1058,6 +1060,11 @@ export class SublimeSubgraph {
     return result.length;
   }
 
+  async countAllPooledCreditLinesOfBorrower(borrower: string): Promise<number> {
+    const result = await getAllPooledCreditLinesOfBorrower(this.subgraphUrl, borrower);
+    return result.length;
+  }
+
   async countAllCreditLines(): Promise<number> {
     const result = await getAllCreditLinesForCount(this.subgraphUrl);
     return result.length;
@@ -1091,6 +1098,15 @@ export class SublimeSubgraph {
 
   async countAllPooledCreditLinesOfBorrowerWithState(borrower: string, state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesOfBorrowerWithState(
+      this.subgraphUrl,
+      borrower,
+      state.map((a) => a.toString())
+    );
+    return result.length;
+  }
+
+  async countAllPooledCreditLinesOfBorrowerWithStateNotIn(borrower: string, state: CreditLineStatus[]): Promise<number> {
+    const result = await getAllPooledCreditLinesOfBorrowerWithStateNotIn(
       this.subgraphUrl,
       borrower,
       state.map((a) => a.toString())
