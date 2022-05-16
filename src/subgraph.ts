@@ -1347,21 +1347,20 @@ export class SublimeSubgraph {
       const pooledCLConstants = await this.pooledCreditLineContract.pooledCreditLineConstants(_id);
       const now = new Date().valueOf();
 
-      console.log({now, endAt: pooledCLConstants.endsAt.toString(), defaultAt: pooledCLConstants.defaultsAt.toString(), nowDiv1000: now/1000});
-      if (
-        new BigNumber(now).div(1000).gt(pooledCLConstants.endsAt.toString()) &&
-        new BigNumber(now).div(1000).lt(pooledCLConstants.defaultsAt.toString()) &&
-        pooledCreditLineVariables.principal.gt(0)
-      ) {
-        return CreditLineStatus.EXPIRED;
-      }
-
       const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(_id);
       if (
         pooledCLConstants.idealCollateralRatio.gt(colRatio) ||
         (new BigNumber(now).gt(pooledCLConstants.defaultsAt.toString()) && pooledCreditLineVariables.principal.gt(0))
       ) {
         return CreditLineStatus.LIQUIDATE_CALLABLE;
+      }
+
+      if (
+        new BigNumber(now).div(1000).gt(pooledCLConstants.endsAt.toString()) &&
+        new BigNumber(now).div(1000).lt(pooledCLConstants.defaultsAt.toString()) &&
+        pooledCreditLineVariables.principal.gt(0)
+      ) {
+        return CreditLineStatus.EXPIRED;
       }
 
       return CreditLineStatus.ACTIVE;
