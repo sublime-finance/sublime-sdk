@@ -201,6 +201,7 @@ export interface ProfileOverview {
 }
 
 export interface CreditLineDetail {
+  collateralTokens: Balance;
   currentDebt: Balance;
   principal: Balance;
   interestAccrued: Balance;
