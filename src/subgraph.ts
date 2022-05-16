@@ -533,9 +533,21 @@ export class SublimeSubgraph {
       const totalCollateralTokens = await (await this.pooledCreditLineContract.callStatic.calculateTotalCollateralTokens(id)).toString();
       tokens = new BigNumber(totalCollateralTokens);
     } catch (ex) {
-      console.log(ex);
+      // console.log(ex);
+      console.log(`Error while fetching total collateral tokens for pcl ${id}`);
     }
     return tokens;
+  }
+
+  private async getCurrentColRatioOfPcl(id: string): Promise<BigNumber> {
+    let ratio = new BigNumber(0);
+    try {
+      const _ratio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(id);
+      ratio = new BigNumber(_ratio.toString());
+    } catch (ex) {
+      console.log(`Error while fetching current col ratio of pcl ${id}`);
+    }
+    return ratio;
   }
 
   private async transformToPooledCreditLine(data: any[]): Promise<PooledCreditLineDetail[]> {
@@ -560,13 +572,8 @@ export class SublimeSubgraph {
       numberOfCollateralTokens[allId[index]] = await (await this.getTotalCollateralTokensInPooledCreditlines(element)).toString();
     }
 
-    for (let index = 0; index < data.length; index++) {
-      const a = data[index];
-      const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(a.id);
-    }
-
     const all = data.map(async (a) => {
-      const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(a.id);
+      const colRatio = await this.getCurrentColRatioOfPcl(a.id);
       return {
         id: a.id,
         borrowerAddress: a.borrowerAddress,
