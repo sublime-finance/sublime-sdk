@@ -8,12 +8,22 @@
 
 ### Properties
 
+- [details](types_Types.UserMetaData.md#details)
 - [id](types_Types.UserMetaData.md#id)
-- [metadata](types_Types.UserMetaData.md#metadata)
 - [verifiedBy](types_Types.UserMetaData.md#verifiedby)
 - [verifier](types_Types.UserMetaData.md#verifier)
 
 ## Properties
+
+### details
+
+• **details**: [`UserTwitterDetails`](types_Types.UserTwitterDetails.md) \| [`UserKycDetails`](types_Types.UserKycDetails.md)
+
+#### Defined in
+
+[src/types/Types.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L22)
+
+___
 
 ### id
 
@@ -21,17 +31,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/fffae06/src/types/Types.ts#L13)
-
-___
-
-### metadata
-
-• **metadata**: `string`
-
-#### Defined in
-
-[src/types/Types.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/fffae06/src/types/Types.ts#L15)
+[src/types/Types.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L20)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/fffae06/src/types/Types.ts#L16)
+[src/types/Types.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L23)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/fffae06/src/types/Types.ts#L14)
+[src/types/Types.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L21)

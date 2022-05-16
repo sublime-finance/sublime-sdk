@@ -10,8 +10,8 @@
 
 - [name](types_Types.UserTwitterDetails.md#name)
 - [profilePic](types_Types.UserTwitterDetails.md#profilepic)
-- [tweetId](types_Types.UserTwitterDetails.md#tweetid)
 - [twitterId](types_Types.UserTwitterDetails.md#twitterid)
+- [userName](types_Types.UserTwitterDetails.md#username)
 
 ## Properties
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/fffae06/src/types/Types.ts#L23)
+[src/types/Types.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L35)
 
 ___
 
@@ -31,17 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/fffae06/src/types/Types.ts#L22)
-
-___
-
-### tweetId
-
-• **tweetId**: `string`
-
-#### Defined in
-
-[src/types/Types.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/fffae06/src/types/Types.ts#L25)
+[src/types/Types.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L34)
 
 ___
 
@@ -51,4 +41,14 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/fffae06/src/types/Types.ts#L24)
+[src/types/Types.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L36)
+
+___
+
+### userName
+
+• **userName**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L37)

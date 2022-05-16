@@ -1,6 +1,6 @@
 import { query } from '../utils/subgraph';
 import axios from 'axios';
-import { UserTwitterDetails } from 'types/Types';
+import { UserTwitterDetails, TempTwitterResponse } from 'types/Types';
 
 const sublimeVerifierUrl = 'https://sublime-twitter-fetch-userinfobyid.saxenism.workers.dev/?twitterID=';
 
@@ -61,24 +61,31 @@ export async function getUserMetadata(url, address: string): Promise<any[]> {
   }
 }
 
-export default async function twitterDp(twtID: string): Promise<UserTwitterDetails> {
+/**
+ *
+ * @param twtID This is twitter id
+ * @returns
+ */
+export async function getTwitterDetails(twtID: string): Promise<UserTwitterDetails> {
   try {
-    const response = await axios.get(sublimeVerifierUrl + twtID);
-    const data = JSON.parse(response.data);
-    return {
-      profilePic: data.profilePic,
-      name: data.name,
-      twitterId: data.twitterId,
-      tweetId: twtID,
-    };
+    const { data, status } = await axios.get<TempTwitterResponse>(sublimeVerifierUrl + twtID);
+
+    if (status >= 200 && status < 400) {
+      return {
+        profilePic: data.account_dp_url,
+        name: data.account_name,
+        twitterId: data.account_id,
+        userName: data.account_username,
+      };
+    } else {
+      throw new Error('invalid status');
+    }
   } catch (ex) {
-    console.log(ex);
     return {
       profilePic: undefined,
       name: undefined,
-      twitterId: undefined,
-      tweetId: twtID,
+      twitterId: twtID,
+      userName: undefined,
     };
   }
 }
-// twitterDp('a tweet id').then(console.log);

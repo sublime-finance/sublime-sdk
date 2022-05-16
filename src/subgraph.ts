@@ -18,6 +18,8 @@ import {
   CreditLineStatus,
   Balance,
   UserMetaData,
+  UserTwitterDetails,
+  UserKycDetails,
 } from './types/Types';
 import {
   getAllPools,
@@ -69,6 +71,7 @@ import {
   getCreditLinesOfBorrowerWithState_requestByLender,
   getCreditLinesOfLenderWithStateNotIn_requestByLender,
   getCreditLinesOfBorrowerWithStateNotIn_requestByLender,
+  getTwitterDetails as getTwitterDetailsQuery,
 } from './queries';
 
 import { Signer } from '@ethersproject/abstract-signer';
@@ -391,8 +394,33 @@ export class SublimeSubgraph {
     return this.transformToUserMetaData(result);
   }
 
-  private transformToUserMetaData(data: any[]): UserMetaData[] {
-    return data.map((a) => a as UserMetaData);
+  private transformToUserMetaData(data: any[]): Promise<UserMetaData[]> {
+    const _data = data.map(async (a) => {
+      let userDetails: TwitterDetails | UserKycDetails;
+
+      if (a.verifier == 'Twitter Verifier') {
+        userDetails = await this.getTwitterDetails(a.metadata);
+      } else {
+        userDetails = await this.getKycDetails(a.metadata);
+      }
+      return {
+        id: a.id,
+        verifier: a.verifier,
+        details: userDetails,
+        verifiedBy: a.verifiedBy,
+      };
+    });
+
+    return Promise.all(_data);
+  }
+
+  private async getTwitterDetails(twitterMetaData: string): Promise<UserTwitterDetails> {
+    const result = await getTwitterDetailsQuery(twitterMetaData);
+    return result;
+  }
+
+  private async getKycDetails(kycMetaData: string): Promise<UserKycDetails> {
+    return { name: kycMetaData };
   }
 
   private async transformToLenderPoolDetail(data: any[]): Promise<LenderPoolDetail[]> {
@@ -409,7 +437,6 @@ export class SublimeSubgraph {
       prices[allTokens[index]] = await this.tokenManager.getPricePerAsset(allTokens[index]);
     }
     return data.map((a) => {
-      console.log({ a });
       return {
         id: a.id,
         startTime: a.startTime,
@@ -535,9 +562,7 @@ export class SublimeSubgraph {
 
     for (let index = 0; index < data.length; index++) {
       const a = data[index];
-      console.log(`Fetching data for PCL ${a.id}`);
       const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(a.id);
-      console.log(`Fetched data for PCL ${a.id}`);
     }
 
     const all = data.map(async (a) => {

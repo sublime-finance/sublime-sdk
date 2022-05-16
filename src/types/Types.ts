@@ -1,6 +1,13 @@
 import { BigNumber } from 'bignumber.js';
 import { BigNumberish, Overrides } from 'ethers';
 
+export interface TempTwitterResponse {
+  account_name: string;
+  account_username: string;
+  account_id: string;
+  account_dp_url: string;
+}
+
 export interface Options extends Overrides {}
 export interface Asset {
   name: string;
@@ -12,17 +19,22 @@ export interface Asset {
 export interface UserMetaData {
   id: string;
   verifier: string;
-  metadata: string;
+  details: UserTwitterDetails | UserKycDetails;
   verifiedBy: {
     id: string;
     status: string;
   };
 }
+
+export interface UserKycDetails {
+  name: string;
+}
+
 export interface UserTwitterDetails {
   profilePic: string;
   name: string;
   twitterId: string;
-  tweetId: string;
+  userName: string;
 }
 
 export enum CreditLineStatus {

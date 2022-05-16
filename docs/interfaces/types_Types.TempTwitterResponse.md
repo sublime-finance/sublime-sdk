@@ -1,0 +1,54 @@
+[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / TempTwitterResponse
+
+# Interface: TempTwitterResponse
+
+[types/Types](../modules/types_Types.md).TempTwitterResponse
+
+## Table of contents
+
+### Properties
+
+- [account\_dp\_url](types_Types.TempTwitterResponse.md#account_dp_url)
+- [account\_id](types_Types.TempTwitterResponse.md#account_id)
+- [account\_name](types_Types.TempTwitterResponse.md#account_name)
+- [account\_username](types_Types.TempTwitterResponse.md#account_username)
+
+## Properties
+
+### account\_dp\_url
+
+• **account\_dp\_url**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:8](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L8)
+
+___
+
+### account\_id
+
+• **account\_id**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:7](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L7)
+
+___
+
+### account\_name
+
+• **account\_name**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:5](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L5)
+
+___
+
+### account\_username
+
+• **account\_username**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/2c16188/src/types/Types.ts#L6)

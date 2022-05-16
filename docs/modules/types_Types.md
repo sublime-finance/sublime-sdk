@@ -36,7 +36,9 @@
 - [SavingsAccountUserDetails](types_Types.md#savingsaccountuserdetails)
 - [Strategy](types_Types.md#strategy)
 - [StrategyType](types_Types.md#strategytype)
+- [TempTwitterResponse](types_Types.md#temptwitterresponse)
 - [TwitterDetails](types_Types.md#twitterdetails)
+- [UserKycDetails](types_Types.md#userkycdetails)
 - [UserMetaData](types_Types.md#usermetadata)
 - [UserTwitterDetails](types_Types.md#usertwitterdetails)
 - [VerifierType](types_Types.md#verifiertype)
@@ -223,9 +225,21 @@ Re-exports [StrategyType](../enums/types_Types.StrategyType.md)
 
 ___
 
+### TempTwitterResponse
+
+Re-exports [TempTwitterResponse](../interfaces/types_Types.TempTwitterResponse.md)
+
+___
+
 ### TwitterDetails
 
 Re-exports [TwitterDetails](../interfaces/types_Types.TwitterDetails.md)
+
+___
+
+### UserKycDetails
+
+Re-exports [UserKycDetails](../interfaces/types_Types.UserKycDetails.md)
 
 ___
 
