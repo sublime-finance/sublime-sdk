@@ -45,6 +45,7 @@ export enum CreditLineStatus {
   EXPIRED = 'EXPIRED',
   LIQUIDATED = 'LIQUIDATED',
   CANCELLED = 'CANCELLED',
+  // intermediate -- from here
   START_CALLABLE = 'START_CALLABLE',
   LIQUIDATE_CALLABLE = 'LIQUIDATE_CALLABLE',
 }
