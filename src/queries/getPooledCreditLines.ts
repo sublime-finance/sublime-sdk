@@ -468,7 +468,7 @@ export async function getAllPooledCreditLinesWithNotState(url: string, count: nu
   const allData = [];
   const data = JSON.stringify({
     query: `{
-        pooledCreditLines(orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}, where:{s}){
+        pooledCreditLines(orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}, where:{status_in:[${status}]}){
           id
           borrowerAddress
           borrowLimit
