@@ -729,6 +729,51 @@ export async function getAllPooledCreditLinesOfLenderWithState(url: string, lend
   }
 }
 
+export async function getAllPooledCreditLinesOfLender(url: string, lenderAddress: string): Promise<any[]> {
+  let skip = 0;
+  lenderAddress = lenderAddress.toLowerCase();
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        lenderSharesBalancePCLs(where:{user:"${lenderAddress}"}){
+          user
+          pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}}){
+            id
+            status
+          }
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    // print({ result });
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.lenderSharesBalancePCLs.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      const linesInThisIteration: any[] = [];
+      for (let index = 0; index < result.data.lenderSharesBalancePCLs.length; index++) {
+        const element = result.data.lenderSharesBalancePCLs[index];
+        allData.push(...element.pooledCreditLines);
+        linesInThisIteration.push(...element.pooledCreditLines);
+      }
+      if (linesInThisIteration.length == 0) {
+        return allData;
+      }
+    }
+  }
+}
+
 export async function getAllPooledCreditLinesOfLenderWithStateNotIn(url: string, lenderAddress: string, status: string[]): Promise<any[]> {
   let skip = 0;
   lenderAddress = lenderAddress.toLowerCase();
