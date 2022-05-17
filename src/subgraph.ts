@@ -650,6 +650,8 @@ export class SublimeSubgraph {
       let currentDebt: BigNumber = new BigNumber(0);
       let collateralRatio: BigNumber = new BigNumber(0);
 
+      const totalCollateralTokens = await this.calculateTotalCollateralTokens(a.id);
+
       if (a.lastPrincipalUpdateTime != 0) {
         const timeElapsed: number = Date.now() / 1000 - a.lastPrincipalUpdateTime;
         interestAccrued = new BigNumber(a.principal)
@@ -660,8 +662,7 @@ export class SublimeSubgraph {
 
         currentDebt = new BigNumber(a.principal).plus(interestAccrued);
 
-        const collateralTokens = await this.calculateTotalCollateralTokens(a.id);
-        const priceOfCollateral = new BigNumber(collateralTokens.toString())
+        const priceOfCollateral = new BigNumber(totalCollateralTokens.toString())
           .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.collateralAsset)))
           .multipliedBy(await this.tokenManager.getPricePerAsset(a.collateralAsset));
 
@@ -687,7 +688,10 @@ export class SublimeSubgraph {
           pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(a.borrowAsset)).toString(),
           logo: this.tokenManager.getLogo(a.borrowAsset),
         },
-        collateralTokens: { value: collateralTokens.toString(), decimals: await this.tokenManager.getTokenDecimals(a.collateralAsset) },
+        collateralTokens: {
+          value: totalCollateralTokens.toString(),
+          decimals: await this.tokenManager.getTokenDecimals(a.collateralAsset),
+        },
         collateralAsset: {
           address: a.collateralAsset,
           name: this.tokenManager.getTokenName(a.collateralAsset),
