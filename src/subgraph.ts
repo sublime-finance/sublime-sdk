@@ -287,7 +287,6 @@ export class SublimeSubgraph {
 
   async getAllPooledCreditLinesOfBorrower(address: string, count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address, count, skip);
-    console.log({ result });
     let lines = await this.transformToPooledCreditLine(result);
     lines = lines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
     return lines;
@@ -502,7 +501,6 @@ export class SublimeSubgraph {
       // COLLATERAL_WITHDRAWN
       // DEPOSIT_COLLATERAL
       // REPAY
-      // console.log({a});
       let amount: Balance = { value: '0', decimals: 18 };
 
       if (['DEPOSIT_COLLATERAL', 'COLLATERAL_ADDED', 'COLLATERAL_WITHDRAWN'].includes(a.pooledCreditLineOperation)) {
@@ -535,7 +533,6 @@ export class SublimeSubgraph {
       const totalCollateralTokens = await (await this.pooledCreditLineContract.callStatic.calculateTotalCollateralTokens(id)).toString();
       tokens = new BigNumber(totalCollateralTokens);
     } catch (ex) {
-      // console.log(ex);
       console.log(`Error while fetching total collateral tokens for pcl ${id}`);
     }
     return tokens;
@@ -581,12 +578,6 @@ export class SublimeSubgraph {
       const element = allId[index];
       numberOfCollateralTokens[allId[index]] = await (await this.getTotalCollateralTokensInPooledCreditlines(element)).toString();
     }
-
-    console.log(
-      data.map((a) => {
-        return { id: a.id, status: a.status };
-      })
-    );
 
     const all = data.map(async (a) => {
       const colRatio = await this.getCurrentColRatioOfPcl(a.id);
@@ -788,7 +779,6 @@ export class SublimeSubgraph {
         endedOn: new BigNumber(this.getRandomInt(1000000)).multipliedBy(1000).toString(),
       };
     });
-    // console.log({transformedData});
     return Promise.all(transformedData);
   }
 

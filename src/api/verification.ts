@@ -7,6 +7,9 @@ import { Verification__factory } from '../wrappers/factories/Verification__facto
 import { TwitterVerifier } from '../wrappers/TwitterVerifier';
 import { TwitterVerifier__factory } from '../wrappers/factories/TwitterVerifier__factory';
 
+import { AdminVerifier } from '../wrappers';
+import { AdminVerifier__factory } from '../wrappers/factories/AdminVerifier__factory';
+
 import { BigNumberish } from '@ethersproject/bignumber';
 import { Options as Overrides } from '../types/Types';
 
@@ -17,6 +20,7 @@ export class VerificationAPI {
   private signer: Signer;
   private verification: Verification;
   private twitterVerifier: TwitterVerifier;
+  private adminVerifier: AdminVerifier;
 
   /**
    * @param signer Signer
@@ -26,6 +30,7 @@ export class VerificationAPI {
     this.signer = signer;
     this.verification = new Verification__factory(this.signer).attach(config.verificationContractAddress);
     this.twitterVerifier = new TwitterVerifier__factory(this.signer).attach(config.twitterVerifierContractAddress);
+    this.adminVerifier = new AdminVerifier__factory(this.signer).attach(config.adminVerifierContractAddress);
   }
 
   /**
@@ -71,7 +76,7 @@ export class VerificationAPI {
    * @param _deadline Deadline for the registration
    * @returns
    */
-  public registerSelfUsingAdminVerifier(
+  public registerSelfUsingTwitterVerifier(
     _isMasterLinked: boolean,
     _v: BigNumberish,
     _r: BytesLike,
@@ -87,8 +92,24 @@ export class VerificationAPI {
   /**
    * @returns
    */
-  public unregisterSelfUsingAdminVerifier(options?: Overrides): Promise<ContractTransaction> {
+  public unregisterSelfUsingTwitterVerifier(options?: Overrides): Promise<ContractTransaction> {
     return this.twitterVerifier.unregisterSelf({ ...options });
+  }
+
+  public registerUsingAdminVerifier(
+    _isMasterLinked: boolean,
+    _v: BigNumberish,
+    _r: BytesLike,
+    _s: BytesLike,
+    _userData: string,
+    _deadline: BigNumberish,
+    options?: Overrides
+  ): Promise<ContractTransaction> {
+    return this.adminVerifier.registerSelf(_isMasterLinked, _v, _r, _s, _userData, _deadline, { ...options });
+  }
+
+  public unregisterSelfUsingAdminVerifier(options?: Overrides): Promise<ContractTransaction> {
+    return this.adminVerifier.unregisterSelf({ ...options });
   }
 
   /**
