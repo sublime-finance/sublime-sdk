@@ -19,7 +19,6 @@
 - [api/verification](modules/api_verification.md)
 - [api/yieldAndStrategy](modules/api_yieldAndStrategy.md)
 - [index](modules/index.md)
-- [subgraph](modules/subgraph.md)
 - [sublime](modules/sublime.md)
 - [tokenManager](modules/tokenManager.md)
 - [types/Types](modules/types_Types.md)

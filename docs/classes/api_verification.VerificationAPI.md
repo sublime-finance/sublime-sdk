@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[src/api/verification.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L29)
+[src/api/verification.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L29)
 
 ## Properties
 
@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[src/api/verification.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L23)
+[src/api/verification.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L23)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L20)
+[src/api/verification.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L20)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L22)
+[src/api/verification.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L22)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L21)
+[src/api/verification.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L21)
 
 ## Methods
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L57)
+[src/api/verification.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L57)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L40)
+[src/api/verification.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L40)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L49)
+[src/api/verification.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L49)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L66)
+[src/api/verification.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L66)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L79)
+[src/api/verification.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L79)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L99)
+[src/api/verification.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L99)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L111)
+[src/api/verification.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L111)
 
 ___
 
@@ -261,7 +261,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L95)
+[src/api/verification.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L95)
 
 ___
 
@@ -282,7 +282,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L129)
+[src/api/verification.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L129)
 
 ___
 
@@ -303,4 +303,4 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/e6983bc/src/api/verification.ts#L120)
+[src/api/verification.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/5a71cb4/src/api/verification.ts#L120)

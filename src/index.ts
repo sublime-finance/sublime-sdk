@@ -2,7 +2,7 @@ import { SublimeConnector } from './sublime';
 import { SublimeSubgraph } from './subgraph';
 import { TokenManager } from './tokenManager';
 
-import { Provider, TransactionReceipt } from '@ethersproject/providers';
+import { Provider } from '@ethersproject/providers';
 import { Signer } from '@ethersproject/abstract-signer';
 import { SublimeConfig } from './types/sublimeConfig';
 
