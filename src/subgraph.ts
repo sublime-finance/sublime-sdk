@@ -630,6 +630,32 @@ export class SublimeSubgraph {
     } catch (ex) {}
     return amount;
   }
+
+  private async calculateInterestAccruedForCreditLines(creditLineId: string): Promise<BigNumber> {
+    let interest = new BigNumber(0);
+    try {
+      interest = new BigNumber((await this.creditLineContract.calculateInterestAccrued(creditLineId)).toString());
+    } catch (ex) {}
+    return interest;
+  }
+
+  private async calculateCurrentDebtForCreditLines(creditLineId: string): Promise<BigNumber> {
+    let debt = new BigNumber(0);
+    try {
+      debt = new BigNumber(await (await this.creditLineContract.calculateCurrentDebt(creditLineId)).toString());
+    } catch (ex) {}
+    return debt;
+  }
+
+  private async calculateCollateralRatioForCreditLines(creditLineId: string): Promise<[BigNumber, BigNumber]> {
+    let ratio = new BigNumber(0);
+    let totalCollateralTokens = new BigNumber(0);
+    try {
+      const data = await this.creditLineContract.callStatic.calculateCurrentCollateralRatio(creditLineId);
+      [ratio, totalCollateralTokens] = data.map((a) => new BigNumber(a.toString()));
+    } catch (ex) {}
+    return [ratio, totalCollateralTokens];
+  }
   /**
    *
    * @param data
@@ -646,32 +672,30 @@ export class SublimeSubgraph {
     }
 
     const creditLineDetails: Promise<CreditLineDetail>[] = data.map(async (a) => {
-      let interestAccrued: BigNumber = new BigNumber(0);
-      let currentDebt: BigNumber = new BigNumber(0);
-      let collateralRatio: BigNumber = new BigNumber(0);
+      const interestAccrued = await this.calculateInterestAccruedForCreditLines(a.id);
+      const currentDebt = await this.calculateCurrentDebtForCreditLines(a.id);
+      const [collateralRatio, totalCollateralTokens] = await this.calculateCollateralRatioForCreditLines(a.id);
 
-      const totalCollateralTokens = await this.calculateTotalCollateralTokens(a.id);
+      // if (a.lastPrincipalUpdateTime != 0) {
+      //   const timeElapsed: number = Date.now() / 1000 - a.lastPrincipalUpdateTime;
+      //   interestAccrued = new BigNumber(a.principal)
+      //     .multipliedBy(new BigNumber(a.borrowRate))
+      //     .times(timeElapsed)
+      //     .div(new BigNumber(10).pow(18))
+      //     .div(24 * 60 * 60 * 365);
 
-      if (a.lastPrincipalUpdateTime != 0) {
-        const timeElapsed: number = Date.now() / 1000 - a.lastPrincipalUpdateTime;
-        interestAccrued = new BigNumber(a.principal)
-          .multipliedBy(new BigNumber(a.borrowRate))
-          .times(timeElapsed)
-          .div(new BigNumber(10).pow(18))
-          .div(24 * 60 * 60 * 365);
+      //   currentDebt = new BigNumber(a.principal).plus(interestAccrued);
 
-        currentDebt = new BigNumber(a.principal).plus(interestAccrued);
+      //   const priceOfCollateral = new BigNumber(totalCollateralTokens.toString())
+      //     .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.collateralAsset)))
+      //     .multipliedBy(await this.tokenManager.getPricePerAsset(a.collateralAsset));
 
-        const priceOfCollateral = new BigNumber(totalCollateralTokens.toString())
-          .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.collateralAsset)))
-          .multipliedBy(await this.tokenManager.getPricePerAsset(a.collateralAsset));
+      //   const priceOfDebt = new BigNumber(currentDebt)
+      //     .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.borrowAsset)))
+      //     .multipliedBy(await this.tokenManager.getPricePerAsset(a.borrowAsset));
 
-        const priceOfDebt = new BigNumber(currentDebt)
-          .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.borrowAsset)))
-          .multipliedBy(await this.tokenManager.getPricePerAsset(a.borrowAsset));
-
-        collateralRatio = priceOfCollateral.multipliedBy(new BigNumber(10).pow(18)).dividedBy(priceOfDebt);
-      }
+      //   collateralRatio = priceOfCollateral.multipliedBy(new BigNumber(10).pow(18)).dividedBy(priceOfDebt);
+      // }
 
       return {
         createdAt: a.createdAt,
