@@ -86,7 +86,7 @@ export interface CreditLineOperation {
   amount: Balance;
   creditLineOperation: Operation;
   liquidator?: string;
-  strategy?: string;
+  strategy?: Strategy;
   timestamp: string;
   id: string;
 }
@@ -98,7 +98,7 @@ export interface PooledCreditLineOperation {
   pooledCreditLineOperation: string;
   timestamp: string;
   amount: Balance;
-  strategy?: string;
+  strategy?: Strategy;
 }
 
 export interface Strategy {
@@ -119,7 +119,7 @@ export interface CreditLineRequest {
 }
 
 export interface SavingsAccountStrategyBalance {
-  strategy: string;
+  strategy: Strategy;
   balance: BigNumber;
   balanceUSD: BigNumber;
   APR: BigNumber;
@@ -249,8 +249,8 @@ export interface PooledCreditLineDetail {
   startsAt: string;
   endsAt: string;
   defaultsAt: string;
-  lenderStrategy: string;
-  collateralStrategy: string;
+  lenderStrategy: Strategy;
+  collateralStrategy: Strategy;
   gracePenaltyRate: string;
   status: CreditLineStatus;
   principal: Balance;
@@ -299,7 +299,7 @@ export interface LenderPoolDetail {
   collateralAsset: Asset;
   borrowLimit: Balance;
   minBorrowAmount: Balance;
-  borrowAssetStrategy: string;
+  borrowAssetStrategy: Strategy;
   sharesHeld: Balance;
   borrowerInterestShares: Balance;
   yieldInterestWithdrawnShares: Balance;
@@ -314,7 +314,7 @@ export interface LenderPerPoolDetail {
   amountLent: Balance;
   amountWithdrawn: Balance;
   sharesWithdrawn: Balance;
-  strategy: string;
+  strategy: Strategy;
 }
 
 export interface LenderContributionToPooledCreditLines {

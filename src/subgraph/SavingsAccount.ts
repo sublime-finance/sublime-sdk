@@ -129,7 +129,7 @@ export class SavingsAccountCalls extends PoolCalls {
       const strategyBalance: [SavingsAccountStrategyBalanceDisplay?] = [];
       a.strategyBalance.forEach((b) => {
         strategyBalance.push({
-          strategy: { address: b.strategy, type: this.yieldApi.getStrategy(b.strategy) },
+          strategy: { address: b.strategy.address, type: this.yieldApi.getStrategy(b.strategy.address) },
           balance: { value: b.balance.toFixed(2), decimals: 0 },
           balanceUSD: { value: b.balanceUSD.toFixed(2), decimals: 0 },
           APR: b.APR.toFixed(2),

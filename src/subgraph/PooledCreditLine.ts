@@ -223,8 +223,8 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         startsAt: a.startsAt,
         endsAt: a.endsAt,
         defaultsAt: a.defaultsAt,
-        lenderStrategy: a.lenderStrategy,
-        collateralStrategy: a.collateralStrategy,
+        lenderStrategy: { type: this.yieldApi.getStrategy(a.lenderStrategy), address: a.lenderStrategy },
+        collateralStrategy: { type: this.yieldApi.getStrategy(a.collateralStrategy), address: a.collateralStrategy },
         gracePenaltyRate: new BigNumber(a.gracePenaltyRate).div(new BigNumber(10).pow(16)).toFixed(2),
         status: await this.getCreditLineStatus(a.id),
         principal: { value: a.principal, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
@@ -432,7 +432,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         pooledCreditLineOperation: a.pooledCreditLineOperation,
         timestamp: a.timestamp,
         amount,
-        strategy: a.strategy,
+        strategy: a.strategy ? { type: this.yieldApi.getStrategy(a.strategy), address: a.strategy } : undefined,
       };
     });
   }
@@ -477,7 +477,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         },
         borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        borrowAssetStrategy: a.borrowAssetStrategy,
+        borrowAssetStrategy: { address: a.borrowAssetStrategy, type: this.yieldApi.getStrategy(a.borrowAssetStrategy) },
         sharesHeld: { value: a.sharesHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         borrowerInterestShares: { value: a.borrowerInterestShares, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         yieldInterestWithdrawnShares: {
@@ -499,7 +499,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         amountLent: { value: a.amountLent, decimals: collateralDecimal },
         amountWithdrawn: { value: a.amountWithdrawn, decimals: collateralDecimal },
         sharesWithdrawn: { value: a.sharesWithdrawn, decimals: collateralDecimal },
-        strategy: a.strategy,
+        strategy: { address: a.strategy, type: this.yieldApi.getStrategy(a.strategy) },
       };
     });
   }

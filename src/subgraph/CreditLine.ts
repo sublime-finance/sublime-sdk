@@ -322,7 +322,7 @@ export class CreditLineCalls extends Base {
         },
         creditLineOperation: a.creditLineOperation,
         liquidator: a.liquidator,
-        strategy: a.strategy,
+        strategy: a.strategy ? { type: this.yieldApi.getStrategy(a.strategy), address: a.strategy } : undefined,
         timestamp: a.timestamp,
         id: a.id,
       };
