@@ -552,6 +552,14 @@ export class SublimeSubgraph {
     return ratio;
   }
 
+  private async getCurrentDebtForPooledCreditLines(id: string): Promise<BigNumber> {
+    let debt = new BigNumber(0);
+    try {
+      debt = new BigNumber((await this.pooledCreditLineContract.calculateCurrentDebt(id)).toString());
+    } catch (ex) {}
+    return debt;
+  }
+
   private async transformToPooledCreditLine(data: any[]): Promise<PooledCreditLineDetail[]> {
     const borrowTokens: string[] = data.map((a) => a.collateralAsset);
     const collateralTokens: string[] = data.map((a) => a.borrowAsset);
@@ -573,6 +581,12 @@ export class SublimeSubgraph {
       const element = allId[index];
       numberOfCollateralTokens[allId[index]] = await (await this.getTotalCollateralTokensInPooledCreditlines(element)).toString();
     }
+
+    console.log(
+      data.map((a) => {
+        return { id: a.id, status: a.status };
+      })
+    );
 
     const all = data.map(async (a) => {
       const colRatio = await this.getCurrentColRatioOfPcl(a.id);
@@ -615,20 +629,14 @@ export class SublimeSubgraph {
           value: colRatio.toString(),
           decimals: 18,
         },
+        currentDebt: {
+          value: await (await this.getCurrentDebtForPooledCreditLines(a.id)).toString(),
+          decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
+        },
       };
     });
 
     return Promise.all(all);
-  }
-
-  private async calculateTotalCollateralTokens(creditlineId: string): Promise<BigNumber> {
-    let amount = new BigNumber(0);
-    try {
-      amount = new BigNumber(
-        await (await this.creditLineContract.connect(this.signer).callStatic.calculateTotalCollateralTokens(creditlineId)).toString()
-      );
-    } catch (ex) {}
-    return amount;
   }
 
   private async calculateInterestAccruedForCreditLines(creditLineId: string): Promise<BigNumber> {
@@ -1373,6 +1381,7 @@ export class SublimeSubgraph {
     if (status == 0) {
       return CreditLineStatus.NOT_CREATED;
     } else if (status == 1) {
+      // request on sc
       const pooledCLConstants = await this.lenderPoolContract.pooledCLConstants(_id);
       const amountLent = await this.lenderPoolContract.totalSupply(_id);
       if (amountLent.gte(pooledCLConstants.minBorrowAmount)) {
@@ -1381,7 +1390,7 @@ export class SublimeSubgraph {
         const pooledCLConstantsOfPCL = await this.pooledCreditLineContract.pooledCreditLineConstants(_id);
         const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
         if (dateBigNumber.gt(pooledCLConstantsOfPCL.startsAt.toString())) {
-          return CreditLineStatus.CANCELLED;
+          return CreditLineStatus.INTERMEDIATE_CANCELLED;
         }
       }
       return CreditLineStatus.REQUESTED;
@@ -1403,7 +1412,7 @@ export class SublimeSubgraph {
         new BigNumber(now).div(1000).lt(pooledCLConstants.defaultsAt.toString()) &&
         pooledCreditLineVariables.principal.gt(0)
       ) {
-        return CreditLineStatus.EXPIRED;
+        return CreditLineStatus.INTERMEDIATE_EXPIRED;
       }
 
       return CreditLineStatus.ACTIVE;

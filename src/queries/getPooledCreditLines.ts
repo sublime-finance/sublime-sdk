@@ -230,6 +230,7 @@ export async function getPooledCreditLinesOfBorrowerWithState(
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
+          status
         }
       }`,
   });
@@ -278,6 +279,7 @@ export async function getPooledCreditLinesOfBorrowerWithNotState(
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
+          status
         }
       }`,
   });
@@ -321,6 +323,7 @@ export async function getPooledCreditLinesOfLenderCanLendTo(url: string, lender:
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
+          status
         }
       }`,
   });
@@ -363,6 +366,7 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
+          status
         }
       }`,
   });
@@ -405,6 +409,7 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
+          status
         }
       }`,
   });
@@ -447,6 +452,7 @@ export async function getAllPooledCreditLinesWithState(url: string, count: numbe
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
+          status
         }
       }`,
   });
@@ -489,6 +495,7 @@ export async function getAllPooledCreditLinesWithNotState(url: string, count: nu
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
+          status
         }
       }`,
   });

@@ -48,6 +48,8 @@ export enum CreditLineStatus {
   // intermediate -- from here
   START_CALLABLE = 'START_CALLABLE',
   LIQUIDATE_CALLABLE = 'LIQUIDATE_CALLABLE',
+  INTERMEDIATE_CANCELLED = 'INTERMEDIATE_CANCELLED',
+  INTERMEDIATE_EXPIRED = 'INTERMEDIATE_EXPIRED',
 }
 
 export enum StrategyType {
@@ -257,6 +259,7 @@ export interface PooledCreditLineDetail {
   interestAccruedTillLastPrincipalUpdate: Balance;
   totalLentAmount: Balance;
   currentCollateralRatio: Balance;
+  currentDebt: Balance;
 }
 
 export interface CreditLineUser {
