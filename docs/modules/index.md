@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [SublimeSdk](../classes/index.SublimeSdk.md)
+- [SublimeSdk](index.md#sublimesdk)
+
+## References
+
+### SublimeSdk
+
+Re-exports [SublimeSdk](../classes/index.SublimeSdk.md)

@@ -1,8 +1,8 @@
 {
   "entryPoints": [
     "./src",
+    "./src/index.ts",
     "./src/sublime.ts",
-    "./src/subgraph.ts",
     "./src/tokenManager.ts",
     "./src/types/Types.ts",
     "./src/types/poolGenerateParam.ts",
@@ -24,7 +24,14 @@
     "./src/api/utils/creditLineEthUtils.ts",
     "./src/api/utils/poolEthUtils.ts",
     "./src/api/utils/savingsAccountEthUtils.ts",
-    "./src/api/pooledCreditLines.ts"
+    "./src/api/pooledCreditLines.ts",
+    "./src/subgraph/index.ts",
+    "./src/subgraph/Base.ts",
+    "./src/subgraph/CreditLine.ts",
+    "./src/subgraph/PooledCreditLine.ts",
+    "./src/subgraph/Pools.ts",
+    "./src/subgraph/SavingsAccount.ts",
+    "./src/subgraph/UserMeta.ts"
   ],
   "out": "docs"
 }
