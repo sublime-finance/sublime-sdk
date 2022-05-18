@@ -367,11 +367,15 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const pooledCLConstantsOfPCL = await this.pooledCreditLineContract.pooledCreditLineConstants(_id);
 
       const amountLent = await this.lenderPoolContract.totalSupply(_id);
-      if (amountLent.gte(pooledCLConstants.minBorrowAmount) && new BigNumber(now).div(1000).gt(pooledCLConstantsOfPCL.endsAt.toString())) {
+      if (
+        amountLent.gte(pooledCLConstants.minBorrowAmount) &&
+        new BigNumber(now).div(1000).gt(pooledCLConstantsOfPCL.startsAt.toString()) &&
+        new BigNumber(now).div(1000).lt(pooledCLConstantsOfPCL.endsAt.toString())
+      ) {
         return CreditLineStatus.START_CALLABLE;
       } else {
         const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
-        if (dateBigNumber.gt(pooledCLConstantsOfPCL.startsAt.toString())) {
+        if (dateBigNumber.gt(pooledCLConstantsOfPCL.startsAt.toString()) && amountLent.lt(pooledCLConstants.minBorrowAmount)) {
           return CreditLineStatus.INTERMEDIATE_CANCELLED;
         }
       }
