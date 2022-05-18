@@ -41,6 +41,7 @@
 - [UserKycDetails](types_Types.md#userkycdetails)
 - [UserMetaData](types_Types.md#usermetadata)
 - [UserTwitterDetails](types_Types.md#usertwitterdetails)
+- [Verifier](types_Types.md#verifier)
 - [VerifierType](types_Types.md#verifiertype)
 
 ## References
@@ -252,6 +253,12 @@ ___
 ### UserTwitterDetails
 
 Re-exports [UserTwitterDetails](../interfaces/types_Types.UserTwitterDetails.md)
+
+___
+
+### Verifier
+
+Re-exports [Verifier](../interfaces/types_Types.Verifier.md)
 
 ___
 

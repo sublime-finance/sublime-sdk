@@ -5,6 +5,7 @@ import { SublimeConfig } from '../types/sublimeConfig';
 import { YieldAndStrategyApi } from '../api/yieldAndStrategy';
 import { DashboardOverview } from '../types/Types';
 import BigNumber from 'bignumber.js';
+import { VerificationAPI } from '../api/verification';
 
 export class Base {
   /**
@@ -24,6 +25,8 @@ export class Base {
 
   protected yieldApi: YieldAndStrategyApi;
 
+  protected verificationApi: VerificationAPI;
+
   /**
    * @description sublime config. (Contains all addresses relevant to sublime ecosystem)
    */
@@ -37,6 +40,7 @@ export class Base {
     this.sublimeAddresses = config;
 
     this.yieldApi = new YieldAndStrategyApi(this.signer, config, this.tokenManager);
+    this.verificationApi = new VerificationAPI(this.signer, config);
   }
 
   /**

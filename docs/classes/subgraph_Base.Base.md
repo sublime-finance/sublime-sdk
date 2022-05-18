@@ -22,6 +22,7 @@
 - [subgraphUrl](subgraph_Base.Base.md#subgraphurl)
 - [sublimeAddresses](subgraph_Base.Base.md#sublimeaddresses)
 - [tokenManager](subgraph_Base.Base.md#tokenmanager)
+- [verificationApi](subgraph_Base.Base.md#verificationapi)
 - [yieldApi](subgraph_Base.Base.md#yieldapi)
 
 ### Methods
@@ -46,7 +47,7 @@
 
 #### Defined in
 
-[src/subgraph/Base.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/subgraph/Base.ts#L32)
+[src/subgraph/Base.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L35)
 
 ## Properties
 
@@ -58,7 +59,7 @@
 
 #### Defined in
 
-[src/subgraph/Base.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/subgraph/Base.ts#L18)
+[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L19)
 
 ___
 
@@ -70,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/subgraph/Base.ts#L13)
+[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L14)
 
 ___
 
@@ -82,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/subgraph/Base.ts#L30)
+[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L33)
 
 ___
 
@@ -94,7 +95,17 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/subgraph/Base.ts#L23)
+[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L24)
+
+___
+
+### verificationApi
+
+• `Protected` **verificationApi**: [`VerificationAPI`](api_verification.VerificationAPI.md)
+
+#### Defined in
+
+[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L28)
 
 ___
 
@@ -104,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/subgraph/Base.ts#L25)
+[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L26)
 
 ## Methods
 
@@ -126,7 +137,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/subgraph/Base.ts#L54)
+[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L58)
 
 ___
 
@@ -148,4 +159,4 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/subgraph/Base.ts#L46)
+[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/subgraph/Base.ts#L50)

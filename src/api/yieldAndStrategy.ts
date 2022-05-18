@@ -126,6 +126,9 @@ export class YieldAndStrategyApi {
    * @returns null if invalid strategy address is given in input
    */
   public getStrategy(address: string): StrategyType | undefined {
+    if (!address) {
+      return undefined;
+    }
     address = address.toLowerCase();
     if (address == this.config.noStrategyAddress.toLowerCase()) {
       return StrategyType.NoYield;

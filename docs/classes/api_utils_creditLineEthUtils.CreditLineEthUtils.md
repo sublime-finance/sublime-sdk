@@ -4,6 +4,8 @@
 
 [api/utils/creditLineEthUtils](../modules/api_utils_creditLineEthUtils.md).CreditLineEthUtils
 
+**`description`** For handling credit line operations that use ETH
+
 ## Table of contents
 
 ### Constructors
@@ -37,7 +39,7 @@
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/api/utils/creditLineEthUtils.ts#L16)
+[src/api/utils/creditLineEthUtils.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/api/utils/creditLineEthUtils.ts#L19)
 
 ## Properties
 
@@ -47,7 +49,7 @@
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/api/utils/creditLineEthUtils.ts#L14)
+[src/api/utils/creditLineEthUtils.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/api/utils/creditLineEthUtils.ts#L17)
 
 ___
 
@@ -57,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/api/utils/creditLineEthUtils.ts#L12)
+[src/api/utils/creditLineEthUtils.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/api/utils/creditLineEthUtils.ts#L15)
 
 ___
 
@@ -67,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/api/utils/creditLineEthUtils.ts#L13)
+[src/api/utils/creditLineEthUtils.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/api/utils/creditLineEthUtils.ts#L16)
 
 ## Methods
 
@@ -75,7 +77,7 @@ ___
 
 ▸ **depositEthAsCollateralToTheCreditLine**(`creditLineNumber`, `amount`, `strategy`, `options?`): `Promise`<`ContractTransaction`\>
 
-**`description`** The function should only be used when native ETH is used deposit collateral to a credit line
+**`description`** convert ETH to WETH and deposit to credit line
 
 #### Parameters
 
@@ -94,7 +96,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/api/utils/creditLineEthUtils.ts#L34)
+[src/api/utils/creditLineEthUtils.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/api/utils/creditLineEthUtils.ts#L37)
 
 ___
 
@@ -102,7 +104,7 @@ ___
 
 ▸ **repayEthToCreditLine**(`creditLineNumber`, `amount`, `options?`): `Promise`<`ContractTransaction`\>
 
-**`description`** The function should be used
+**`description`** Convert ETH to WETH and repay to credit line
 
 #### Parameters
 
@@ -120,4 +122,4 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/0de1592/src/api/utils/creditLineEthUtils.ts#L63)
+[src/api/utils/creditLineEthUtils.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/c6c97bd/src/api/utils/creditLineEthUtils.ts#L66)

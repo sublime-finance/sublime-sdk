@@ -8,6 +8,9 @@ import { CreditLineEthUtils__factory as CreditLineUtils__factory } from '../../w
 import { TokenManager } from '../../tokenManager';
 import { StrategyType, Options as Overrides } from '../../types/Types';
 
+/**
+ * @description For handling credit line operations that use ETH
+ */
 export class CreditLineEthUtils {
   private creditLineUtils: CreditLineUtils;
   private tokenManager: TokenManager;
@@ -24,7 +27,7 @@ export class CreditLineEthUtils {
   }
 
   /**
-   * @description The function should only be used when native ETH is used deposit collateral to a credit line
+   * @description convert ETH to WETH and deposit to credit line
    * @param creditLineNumber credit line ID
    * @param amount amount of ETH to be deposited as collateral
    * @param strategy strategy to which the collateral must be deposited
@@ -54,7 +57,7 @@ export class CreditLineEthUtils {
   }
 
   /**
-   * @description The function should be used
+   * @description Convert ETH to WETH and repay to credit line
    * @param creditLineNumber id of the credit line
    * @param amount amount of ETH that needs to be repaid to the credit line
    * @param options transaction parameters

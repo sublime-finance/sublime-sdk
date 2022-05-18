@@ -3,7 +3,7 @@ import { Signer } from '@ethersproject/abstract-signer';
 import { TokenManager } from '../tokenManager';
 import { SublimeConfig } from '../types/sublimeConfig';
 
-import { UserMetaData, TwitterDetails, UserKycDetails, UserTwitterDetails } from '../types/Types';
+import { UserMetaData, TwitterDetails, UserKycDetails, UserTwitterDetails, Verifier } from '../types/Types';
 import { getUserMetadata, getTwitterDetails as getTwitterDetailsQuery, getTwitterId } from '../queries';
 
 export class UserMetaCalls extends SavingsAccountCalls {
@@ -27,7 +27,7 @@ export class UserMetaCalls extends SavingsAccountCalls {
       }
       return {
         id: a.id,
-        verifier: a.verifier,
+        verifier: { address: a.verifier, type: this.verificationApi.getVerifierType(a.verifier) },
         details: userDetails,
         verifiedBy: a.verifiedBy,
       };

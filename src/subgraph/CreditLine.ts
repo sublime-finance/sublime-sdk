@@ -128,6 +128,7 @@ export class CreditLineCalls extends Base {
         lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
         id: a.id,
         requestByLender: a.requestByLender,
+        strategy: { address: a.strategy, type: this.yieldApi.getStrategy(a.strategy) },
       };
     });
     return Promise.all(creditLineDetails);

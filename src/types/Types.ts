@@ -18,7 +18,7 @@ export interface Asset {
 
 export interface UserMetaData {
   id: string;
-  verifier: string;
+  verifier: Verifier;
   details: UserTwitterDetails | UserKycDetails;
   verifiedBy: {
     id: string;
@@ -99,6 +99,11 @@ export interface PooledCreditLineOperation {
   timestamp: string;
   amount: Balance;
   strategy?: Strategy;
+}
+
+export interface Verifier {
+  type: VerifierType;
+  address: string;
 }
 
 export interface Strategy {
@@ -234,6 +239,7 @@ export interface CreditLineDetail {
   id: string;
   requestByLender: boolean;
   createdAt: string;
+  strategy: Strategy;
 }
 
 export interface PooledCreditLineDetail {
@@ -305,7 +311,7 @@ export interface LenderPoolDetail {
   yieldInterestWithdrawnShares: Balance;
   collateralHeld: Balance;
   areTokensTransferable: boolean;
-  verifier: object;
+  verifier: Verifier;
   lenders: LenderPerPoolDetail[];
 }
 

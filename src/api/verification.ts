@@ -11,7 +11,7 @@ import { AdminVerifier } from '../wrappers';
 import { AdminVerifier__factory } from '../wrappers/factories/AdminVerifier__factory';
 
 import { BigNumberish } from '@ethersproject/bignumber';
-import { Options as Overrides } from '../types/Types';
+import { Options as Overrides, VerifierType } from '../types/Types';
 
 /**
  * @class VerificationAPI
@@ -22,6 +22,7 @@ export class VerificationAPI {
   private twitterVerifier: TwitterVerifier;
   private adminVerifier: AdminVerifier;
 
+  private config: SublimeConfig;
   /**
    * @param signer Signer
    * @param config SublimeConfig
@@ -31,6 +32,7 @@ export class VerificationAPI {
     this.verification = new Verification__factory(this.signer).attach(config.verificationContractAddress);
     this.twitterVerifier = new TwitterVerifier__factory(this.signer).attach(config.twitterVerifierContractAddress);
     this.adminVerifier = new AdminVerifier__factory(this.signer).attach(config.adminVerifierContractAddress);
+    this.config = config;
   }
 
   /**
@@ -128,5 +130,28 @@ export class VerificationAPI {
    */
   public updateSignerAddress(_signerAddress: string, options?: Overrides): Promise<ContractTransaction> {
     return this.twitterVerifier.updateSignerAddress(_signerAddress, { ...options });
+  }
+
+  public getVerifierAddress(type: VerifierType): string {
+    if (type == VerifierType.AdminVerifier) {
+      return this.config.adminVerifierContractAddress;
+    } else if (type == VerifierType.TwitterVerifier) {
+      return this.config.twitterVerifierContractAddress;
+    } else {
+      return undefined;
+    }
+  }
+
+  public getVerifierType(address: string): VerifierType {
+    if (!address) {
+      return undefined;
+    }
+    if (address.toLowerCase() == this.config.adminVerifierContractAddress.toLowerCase()) {
+      return VerifierType.AdminVerifier;
+    } else if (address.toLowerCase() == this.config.twitterVerifierContractAddress.toLowerCase()) {
+      return VerifierType.TwitterVerifier;
+    } else {
+      return undefined;
+    }
   }
 }

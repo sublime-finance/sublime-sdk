@@ -58,23 +58,37 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     this.lenderPoolContract = new LenderPool__factory(signer).attach(config.lenderPoolAddress);
   }
 
+  /**
+   * @description Count all the pooled credit lines
+   * @returns
+   */
   async countAllPooledCreditLines(): Promise<number> {
     const result = await getAllPooledCreditLinesForCount(this.subgraphUrl);
     return result.length;
   }
 
+  /**
+   * @description Count all pooled credit lines of a borrower
+   * @param borrower
+   * @returns
+   */
   async countAllPooledCreditLinesOfBorrower(borrower: string): Promise<number> {
     const result = await getAllPooledCreditLinesOfBorrower(this.subgraphUrl, borrower);
     return result.length;
   }
 
+  /**
+   * @description Count all Pooled Credit Lines of a lender
+   * @param lender
+   * @returns
+   */
   async countAllPooledCreditLinesOfLender(lender: string): Promise<number> {
     const result = await getAllPooledCreditLinesOfLender(this.subgraphUrl, lender);
     return result.length;
   }
 
   /**
-   * @description Returns pooled credit lines in random order
+   * @description Returns pooled credit ordered by latest created
    * @param count
    * @param skip
    * @returns
@@ -84,6 +98,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return this.transformToPooledCreditLine(result);
   }
 
+  /**
+   * @description Returns all PCL which have state
+   * @param state
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getAllPoolCreditLinesWithStateIn(
     state: CreditLineStatus[],
     count: number = 13,
@@ -98,6 +119,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return this.transformToPooledCreditLine(result);
   }
 
+  /**
+   * @description Returns all PCL which do not have state
+   * @param state
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getAllPoolCreditLinesWithStateNotIn(
     state: CreditLineStatus[],
     count: number = 13,
@@ -112,11 +140,23 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return this.transformToPooledCreditLine(result);
   }
 
+  /**
+   * @description Returns specific PCL details
+   * @param id
+   * @returns
+   */
   async getPooledCreditLineById(id: number): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLineById(this.subgraphUrl, id);
     return this.transformToPooledCreditLine(result);
   }
 
+  /**
+   * @description Returns all PCL of borrower
+   * @param address
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getAllPooledCreditLinesOfBorrower(address: string, count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address, count, skip);
     let lines = await this.transformToPooledCreditLine(result);
@@ -124,6 +164,14 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return lines;
   }
 
+  /**
+   * @description Returns all the PCL of borrower with state in
+   * @param borrower
+   * @param status
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getAllPooledCreditLinesOfBorrowerWithStateIn(
     borrower: string,
     status: CreditLineStatus[],
@@ -140,6 +188,14 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return await this.transformToPooledCreditLine(result);
   }
 
+  /**
+   * @description Returns all the PCL of borrower with state not in
+   * @param borrower
+   * @param status
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getAllPooledCreditLinesOfBorrowerWithStateNotIn(
     borrower: string,
     status: CreditLineStatus[],
@@ -156,11 +212,23 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return await this.transformToPooledCreditLine(result);
   }
 
+  /**
+   * @description Returns all the PCL which a lender can lend to
+   * @param lender
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getAllPooledCreditLinesLenderCanLendTo(lender: string, count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfLenderCanLendTo(this.subgraphUrl, lender, count, skip);
     return await this.transformToPooledCreditLine(result);
   }
 
+  /**
+   * @description Returns PCL detail and lender contribution of the same
+   * @param id
+   * @returns
+   */
   async getLendersViewOfPooledCredit(
     id: string
   ): Promise<[PooledCreditLineDetail | undefined, LenderContributionToPooledCreditLines | undefined]> {
@@ -280,6 +348,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return debt;
   }
 
+  /**
+   * @description Computed the latest state of PCL as subgraph doesn't return the exact state
+   * @param _id
+   * @returns
+   */
   public async getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
     const pooledCreditLineVariables = await this.pooledCreditLineContract.pooledCreditLineVariables(_id);
     const status = pooledCreditLineVariables.status;
@@ -356,6 +429,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     });
   }
 
+  /**
+   * @description Get All pooled credit lines of lender
+   * @param lender
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getAllPooledCreditLinesOfLender(
     lender: string,
     count: number = 13,
@@ -369,6 +449,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return [pooledCreditLines, contributions];
   }
 
+  /**
+   * @deprecated Will be removed in future
+   * @param user
+   * @returns
+   */
   async getAllPooledCreditLinesOfUser(user: string): Promise<PooledCreditLineDetail[]> {
     const borrowerLines = await this.getAllPooledCreditLinesOfBorrower(user);
     const [lenderLines] = await this.getAllPooledCreditLinesOfLender(user);
@@ -377,6 +462,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return lines;
   }
 
+  /**
+   * @description Fetch PCL timeline
+   * @param pooledCreditLineId
+   * @param count
+   * @param skip
+   * @returns
+   */
   async getPooledCreditLineTimeline(
     pooledCreditLineId: string,
     count: number = 13,
@@ -437,6 +529,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     });
   }
 
+  /**
+   * @description Get Lenders Per Pool
+   * @todo Add pagination to LendersPerPool query
+   * @param id
+   * @returns
+   */
   async getLendersPerPool(id: string): Promise<LenderPoolDetail> {
     const result = await getLenderPerPool(this.subgraphUrl, id);
     if (result.length == 0) {
@@ -486,7 +584,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         },
         collateralHeld: { value: a.collateralHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         areTokensTransferable: a.areTokensTransferable,
-        verifier: a.verifier,
+        verifier: { type: this.verificationApi.getVerifierType(a.verifier), address: a.verifier },
         lenders: this.transformToLenderPerPoolDetail(a.lender, this.tokenManager.getTokenDecimals(a.borrowAsset)),
       };
     });
@@ -504,6 +602,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     });
   }
 
+  /**
+   * @description Count all PCL with states in
+   * @param state
+   * @returns
+   */
   async countAllPooledCreditLinesWithStates(state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesForCountWithState(
       this.subgraphUrl,
@@ -512,6 +615,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return result.length;
   }
 
+  /**
+   * @description Count all PCL with states not in
+   * @param state
+   * @returns
+   */
   async countAllPooledCreditLinesWithStatesNotIn(state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesForCountWithStateNotIn(
       this.subgraphUrl,
@@ -520,6 +628,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return result.length;
   }
 
+  /**
+   * @description Count all PCL of borrower with state in
+   * @param borrower
+   * @param state
+   * @returns
+   */
   async countAllPooledCreditLinesOfBorrowerWithState(borrower: string, state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesOfBorrowerWithState(
       this.subgraphUrl,
@@ -529,6 +643,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return result.length;
   }
 
+  /**
+   * @description Count all PCL of borrower with state not in
+   * @param borrower
+   * @param state
+   * @returns
+   */
   async countAllPooledCreditLinesOfBorrowerWithStateNotIn(borrower: string, state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesOfBorrowerWithStateNotIn(
       this.subgraphUrl,
@@ -538,6 +658,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return result.length;
   }
 
+  /**
+   * @description Count all PCL of lender with state in
+   * @param borrower
+   * @param state
+   * @returns
+   */
   async countAllPooledCreditLinesOfLenderWithState(lender: string, state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesOfLenderWithState(
       this.subgraphUrl,
@@ -547,6 +673,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return result.length;
   }
 
+  /**
+   * @description Count all PCL of lender with state not in
+   * @param borrower
+   * @param state
+   * @returns
+   */
   async countAllPooledCreditLinesOfLenderWithStateNotIn(lender: string, state: CreditLineStatus[]): Promise<number> {
     const result = await getAllPooledCreditLinesOfLenderWithStateNotIn(
       this.subgraphUrl,
@@ -556,7 +688,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return result.length;
   }
 
-  async countAllLendersOfPool(id: number): Promise<number> {
+  /**
+   * @description Count all Lenders of PooledCreditLine
+   * @param id
+   * @returns
+   */
+  async countAllLendersOfPooledCreditLine(id: number): Promise<number> {
     const result = await getLendersOfPooledCreditLines(this.subgraphUrl, id.toString());
     return result.length;
   }
