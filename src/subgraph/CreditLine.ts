@@ -177,7 +177,7 @@ export class CreditLineCalls extends Base {
    * @param skip: number to credit lines to skip
    * @description Returns the confirmed credit lines of a lender
    */
-  async getConfirmedCreditLinesOfLender(lender: string, count: number, skip: number): Promise<CreditLineDetail[]> {
+  async getConfirmedCreditLinesOfLender(lender: string, count: number = 13, skip: number = 0): Promise<CreditLineDetail[]> {
     const result = await getConfirmedCreditLinesOfLender(this.subgraphUrl, lender, count, skip);
     return await this.transformToCreditLine(result);
   }
@@ -309,7 +309,7 @@ export class CreditLineCalls extends Base {
    * @param cl
    * @description Transforms the data received from the subgraph into type
    */
-  private async transformToCreditLineOperations(cl: any): Promise<CreditLineOperation[]> {
+  protected async transformToCreditLineOperations(cl: any): Promise<CreditLineOperation[]> {
     await this.tokenManager.updateAll(cl.borrowAsset);
     await this.tokenManager.updateAll(cl.collateralAsset);
 

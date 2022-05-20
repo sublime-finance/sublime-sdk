@@ -414,7 +414,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     }
   }
 
-  private async transformToLenderContributionToPooledCreditLines(
+  protected async transformToLenderContributionToPooledCreditLines(
     pooledCreditLines: PooledCreditLineDetail[],
     data: any[]
   ): Promise<LenderContributionToPooledCreditLines[]> {
@@ -489,7 +489,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     }
   }
 
-  private async transformToPooledCreditLineOperation(
+  protected async transformToPooledCreditLineOperation(
     data: any[],
     borrowTokenDecimal,
     collateralTokenDecimal
@@ -548,7 +548,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return returnData[0];
   }
 
-  private async transformToLenderPoolDetail(data: any[]): Promise<LenderPoolDetail[]> {
+  protected async transformToLenderPoolDetail(data: any[]): Promise<LenderPoolDetail[]> {
     const borrowTokens: string[] = data.map((a) => a.collateralAsset);
     const collateralTokens: string[] = data.map((a) => a.borrowAsset);
     const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
@@ -561,6 +561,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     for (let index = 0; index < allTokens.length; index++) {
       prices[allTokens[index]] = await this.tokenManager.getPricePerAsset(allTokens[index]);
     }
+
     return data.map((a) => {
       return {
         id: a.id,
@@ -588,13 +589,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         },
         collateralHeld: { value: a.collateralHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         areTokensTransferable: a.areTokensTransferable,
-        verifier: { type: this.verificationApi.getVerifierType(a.verifier), address: a.verifier },
+        verifier: { type: this.verificationApi.getVerifierType(a.verifier.id), address: a.verifier.id },
         lenders: this.transformToLenderPerPoolDetail(a.lender, this.tokenManager.getTokenDecimals(a.borrowAsset)),
       };
     });
   }
 
-  private transformToLenderPerPoolDetail(data: any[], collateralDecimal: number): LenderPerPoolDetail[] {
+  protected transformToLenderPerPoolDetail(data: any[], collateralDecimal: number): LenderPerPoolDetail[] {
     return data.map((a) => {
       return {
         lenderAddress: a.lenderAddress,

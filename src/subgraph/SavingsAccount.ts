@@ -37,7 +37,7 @@ export class SavingsAccountCalls extends PoolCalls {
    * @param data
    * @description Tranforms the data received from the subgraph to type
    */
-  private async transformToSavingsAccountUserDetails(address: string, data: any[]): Promise<SavingAccountUserDetailDisplay> {
+  protected async transformToSavingsAccountUserDetails(address: string, data: any[]): Promise<SavingAccountUserDetailDisplay> {
     const allowances = await getAllowances(this.subgraphUrl, address, this.sublimeAddresses.creditLineContractAddress);
     const savingsAccountUserDetails: SavingsAccountUserDetails = {
       user: address,

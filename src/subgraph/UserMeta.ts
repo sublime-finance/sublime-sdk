@@ -16,7 +16,7 @@ export class UserMetaCalls extends SavingsAccountCalls {
     return this.transformToUserMetaData(result);
   }
 
-  private transformToUserMetaData(data: any[]): Promise<UserMetaData[]> {
+  protected transformToUserMetaData(data: any[]): Promise<UserMetaData[]> {
     const _data = data.map(async (a) => {
       let userDetails: TwitterDetails | UserKycDetails;
 
