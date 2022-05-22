@@ -4,3 +4,4 @@ export * from './savingsAccount';
 export * from './getAllCreditLines';
 export * from './verification';
 export * from './getPooledCreditLines';
+export * from './creditLineCollective';

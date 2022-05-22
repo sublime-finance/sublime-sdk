@@ -9,6 +9,7 @@ export async function getCreditLineTimeline(url: string, creditLineNumber: strin
         createdAt
         collateralAsset
         strategy
+        totalInterestRepaid
         creditLineTimeline(orderBy:timestamp, orderDirection:desc) {
           id
           timestamp
@@ -42,6 +43,7 @@ export async function getAllCreditLinesFromSubgraph(url: string, count: number, 
           status
           lender
           strategy
+          totalInterestRepaid
           lenderWalletDetails {
             wallet {
               user {
@@ -105,6 +107,7 @@ async function _getCreditLinesOfBorrower(
           lender
           createdAt
           strategy
+          totalInterestRepaid
           lenderWalletDetails {
             wallet {
               user {
@@ -160,6 +163,7 @@ export async function getCreditLine(url: string, id: string): Promise<any[]> {
             borrower
             createdAt
             strategy
+            totalInterestRepaid
             lenderWalletDetails {
               wallet {
                 user {
@@ -223,6 +227,7 @@ async function _getCreditLinesOfLender(
             borrower
             createdAt
             strategy
+            totalInterestRepaid
             lenderWalletDetails {
               wallet {
                 user {
@@ -286,6 +291,7 @@ async function _getCreditLinesNotOfLender(
             borrower
             createdAt
             strategy
+            totalInterestRepaid
             lenderWalletDetails {
               wallet {
                 user {

@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:298](https://github.com/sublime-finance/sublime-sdk/blob/79e1c95/src/types/Types.ts#L298)
+[src/types/Types.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/2b2a7e7/src/types/Types.ts#L302)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:297](https://github.com/sublime-finance/sublime-sdk/blob/79e1c95/src/types/Types.ts#L297)
+[src/types/Types.ts:301](https://github.com/sublime-finance/sublime-sdk/blob/2b2a7e7/src/types/Types.ts#L301)

@@ -1,0 +1,54 @@
+[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderCollectiveData
+
+# Interface: LenderCollectiveData
+
+[types/Types](../modules/types_Types.md).LenderCollectiveData
+
+## Table of contents
+
+### Properties
+
+- [lenderCollective](types_Types.LenderCollectiveData.md#lendercollective)
+- [lenderCollectivePerStrategy](types_Types.LenderCollectiveData.md#lendercollectiveperstrategy)
+- [lenderCollectivePerToken](types_Types.LenderCollectiveData.md#lendercollectivepertoken)
+- [lenderCollectivePerTokenPerStrategy](types_Types.LenderCollectiveData.md#lendercollectivepertokenperstrategy)
+
+## Properties
+
+### lenderCollective
+
+• **lenderCollective**: [`LenderCollective`](types_Types.LenderCollective.md)
+
+#### Defined in
+
+src/types/overview/CreditLineOverview.ts:42
+
+___
+
+### lenderCollectivePerStrategy
+
+• **lenderCollectivePerStrategy**: [`LenderCollectivePerStrategy`](types_Types.LenderCollectivePerStrategy.md)[]
+
+#### Defined in
+
+src/types/overview/CreditLineOverview.ts:43
+
+___
+
+### lenderCollectivePerToken
+
+• **lenderCollectivePerToken**: [`LenderCollectivePerToken`](types_Types.LenderCollectivePerToken.md)[]
+
+#### Defined in
+
+src/types/overview/CreditLineOverview.ts:44
+
+___
+
+### lenderCollectivePerTokenPerStrategy
+
+• **lenderCollectivePerTokenPerStrategy**: [`LenderCollectivePerTokenPerStrategy`](types_Types.LenderCollectivePerTokenPerStrategy.md)[]
+
+#### Defined in
+
+src/types/overview/CreditLineOverview.ts:45

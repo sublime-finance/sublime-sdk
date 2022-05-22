@@ -8,6 +8,13 @@
 
 - [Asset](types_Types.md#asset)
 - [Balance](types_Types.md#balance)
+- [BorrowerAvailableCredit](types_Types.md#borroweravailablecredit)
+- [BorrowerAvailableCreditPerToken](types_Types.md#borroweravailablecreditpertoken)
+- [BorrowerCollective](types_Types.md#borrowercollective)
+- [BorrowerCollectiveData](types_Types.md#borrowercollectivedata)
+- [BorrowerCollectivePerStrategy](types_Types.md#borrowercollectiveperstrategy)
+- [BorrowerCollectivePerToken](types_Types.md#borrowercollectivepertoken)
+- [BorrowerCollectivePerTokenPerStrategy](types_Types.md#borrowercollectivepertokenperstrategy)
 - [CreditLineDetail](types_Types.md#creditlinedetail)
 - [CreditLineHistory](types_Types.md#creditlinehistory)
 - [CreditLineOperation](types_Types.md#creditlineoperation)
@@ -16,10 +23,21 @@
 - [CreditLineUser](types_Types.md#creditlineuser)
 - [CreditLinesOverview](types_Types.md#creditlinesoverview)
 - [DashboardOverview](types_Types.md#dashboardoverview)
+- [InterestCollectedByLender](types_Types.md#interestcollectedbylender)
+- [InterestCollectedByLenderPerToken](types_Types.md#interestcollectedbylenderpertoken)
 - [InternalTokenMap](types_Types.md#internaltokenmap)
+- [LenderCollective](types_Types.md#lendercollective)
+- [LenderCollectiveData](types_Types.md#lendercollectivedata)
+- [LenderCollectivePerStrategy](types_Types.md#lendercollectiveperstrategy)
+- [LenderCollectivePerToken](types_Types.md#lendercollectivepertoken)
+- [LenderCollectivePerTokenPerStrategy](types_Types.md#lendercollectivepertokenperstrategy)
 - [LenderContributionToPooledCreditLines](types_Types.md#lendercontributiontopooledcreditlines)
 - [LenderPerPoolDetail](types_Types.md#lenderperpooldetail)
 - [LenderPoolDetail](types_Types.md#lenderpooldetail)
+- [LenderTotalCredit](types_Types.md#lendertotalcredit)
+- [LenderTotalCreditCommited](types_Types.md#lendertotalcreditcommited)
+- [LenderTotalCreditPerStrategy](types_Types.md#lendertotalcreditperstrategy)
+- [LenderTotalCreditPerToken](types_Types.md#lendertotalcreditpertoken)
 - [LenderWithdrawableAmount](types_Types.md#lenderwithdrawableamount)
 - [Operation](types_Types.md#operation)
 - [Options](types_Types.md#options)
@@ -55,6 +73,48 @@ ___
 ### Balance
 
 Re-exports [Balance](../interfaces/types_Types.Balance.md)
+
+___
+
+### BorrowerAvailableCredit
+
+Re-exports [BorrowerAvailableCredit](../interfaces/types_Types.BorrowerAvailableCredit.md)
+
+___
+
+### BorrowerAvailableCreditPerToken
+
+Re-exports [BorrowerAvailableCreditPerToken](../interfaces/types_Types.BorrowerAvailableCreditPerToken.md)
+
+___
+
+### BorrowerCollective
+
+Re-exports [BorrowerCollective](../interfaces/types_Types.BorrowerCollective.md)
+
+___
+
+### BorrowerCollectiveData
+
+Re-exports [BorrowerCollectiveData](../interfaces/types_Types.BorrowerCollectiveData.md)
+
+___
+
+### BorrowerCollectivePerStrategy
+
+Re-exports [BorrowerCollectivePerStrategy](../interfaces/types_Types.BorrowerCollectivePerStrategy.md)
+
+___
+
+### BorrowerCollectivePerToken
+
+Re-exports [BorrowerCollectivePerToken](../interfaces/types_Types.BorrowerCollectivePerToken.md)
+
+___
+
+### BorrowerCollectivePerTokenPerStrategy
+
+Re-exports [BorrowerCollectivePerTokenPerStrategy](../interfaces/types_Types.BorrowerCollectivePerTokenPerStrategy.md)
 
 ___
 
@@ -106,9 +166,51 @@ Re-exports [DashboardOverview](../interfaces/types_Types.DashboardOverview.md)
 
 ___
 
+### InterestCollectedByLender
+
+Re-exports [InterestCollectedByLender](../interfaces/types_Types.InterestCollectedByLender.md)
+
+___
+
+### InterestCollectedByLenderPerToken
+
+Re-exports [InterestCollectedByLenderPerToken](../interfaces/types_Types.InterestCollectedByLenderPerToken.md)
+
+___
+
 ### InternalTokenMap
 
 Re-exports [InternalTokenMap](../interfaces/types_Types.InternalTokenMap.md)
+
+___
+
+### LenderCollective
+
+Re-exports [LenderCollective](../interfaces/types_Types.LenderCollective.md)
+
+___
+
+### LenderCollectiveData
+
+Re-exports [LenderCollectiveData](../interfaces/types_Types.LenderCollectiveData.md)
+
+___
+
+### LenderCollectivePerStrategy
+
+Re-exports [LenderCollectivePerStrategy](../interfaces/types_Types.LenderCollectivePerStrategy.md)
+
+___
+
+### LenderCollectivePerToken
+
+Re-exports [LenderCollectivePerToken](../interfaces/types_Types.LenderCollectivePerToken.md)
+
+___
+
+### LenderCollectivePerTokenPerStrategy
+
+Re-exports [LenderCollectivePerTokenPerStrategy](../interfaces/types_Types.LenderCollectivePerTokenPerStrategy.md)
 
 ___
 
@@ -127,6 +229,30 @@ ___
 ### LenderPoolDetail
 
 Re-exports [LenderPoolDetail](../interfaces/types_Types.LenderPoolDetail.md)
+
+___
+
+### LenderTotalCredit
+
+Re-exports [LenderTotalCredit](../interfaces/types_Types.LenderTotalCredit.md)
+
+___
+
+### LenderTotalCreditCommited
+
+Re-exports [LenderTotalCreditCommited](../interfaces/types_Types.LenderTotalCreditCommited.md)
+
+___
+
+### LenderTotalCreditPerStrategy
+
+Re-exports [LenderTotalCreditPerStrategy](../interfaces/types_Types.LenderTotalCreditPerStrategy.md)
+
+___
+
+### LenderTotalCreditPerToken
+
+Re-exports [LenderTotalCreditPerToken](../interfaces/types_Types.LenderTotalCreditPerToken.md)
 
 ___
 

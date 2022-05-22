@@ -1,6 +1,10 @@
 import { BigNumber } from 'bignumber.js';
 import { BigNumberish, Overrides } from 'ethers';
 
+export * from './overview/CreditLineOverview';
+export * from './overview/LenderTotalCredit';
+export * from './overview/BorrowerCreditLimit';
+
 export interface TempTwitterResponse {
   account_name: string;
   account_username: string;
@@ -321,12 +325,4 @@ export interface LenderPerPoolDetail {
   amountWithdrawn: Balance;
   sharesWithdrawn: Balance;
   strategy: Strategy;
-}
-
-export interface LenderContributionToPooledCreditLines {
-  id?: string;
-  amountLent: Balance;
-  amountWithdrawn: Balance;
-  sharesWithdrawn: Balance;
-  interestWithdrawn: Balance;
 }

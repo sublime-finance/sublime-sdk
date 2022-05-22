@@ -5,7 +5,7 @@ import { Signer } from 'ethers';
 import { BigNumber } from 'bignumber.js';
 import { getPrice } from './queries/prices';
 import { SublimeSubgraph } from './subgraph';
-import { CreditLinesOverview, SavingAccountUserDetailDisplay } from './types/Types';
+import { Asset } from './types/Types';
 import { tokenData } from './config/tokenMapping';
 
 /**
@@ -210,5 +210,15 @@ export class TokenManager {
     } else {
       throw new Error('Error in class TokenManager');
     }
+  }
+
+  async getAssetMeta(tokenAddress: string): Promise<Asset> {
+    tokenAddress = tokenAddress.toLowerCase();
+    return {
+      name: this.getTokenName(tokenAddress),
+      address: tokenAddress,
+      logo: this.getLogo(tokenAddress),
+      pricePerAssetInUSD: (await this.getPricePerAsset(tokenAddress)).toString(),
+    };
   }
 }
