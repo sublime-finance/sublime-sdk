@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[src/index.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/2b2a7e7/src/index.ts#L18)
+[src/index.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/index.ts#L18)
 
 ## Properties
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[src/index.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/2b2a7e7/src/index.ts#L15)
+[src/index.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/index.ts#L15)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/2b2a7e7/src/index.ts#L16)
+[src/index.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/index.ts#L16)
 
 ## Methods
 
@@ -75,7 +75,7 @@ Instance of Sublime Connector
 
 #### Defined in
 
-[src/index.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/2b2a7e7/src/index.ts#L28)
+[src/index.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/index.ts#L28)
 
 ___
 
@@ -91,7 +91,7 @@ Instance of Subgraph Class used for querying
 
 #### Defined in
 
-[src/index.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/2b2a7e7/src/index.ts#L36)
+[src/index.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/index.ts#L36)
 
 ___
 
@@ -107,4 +107,4 @@ types used in the SDK
 
 #### Defined in
 
-[src/index.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/2b2a7e7/src/index.ts#L43)
+[src/index.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/index.ts#L43)

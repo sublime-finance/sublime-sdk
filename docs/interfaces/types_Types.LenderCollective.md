@@ -20,7 +20,7 @@
 
 #### Defined in
 
-src/types/overview/CreditLineOverview.ts:37
+[src/types/overview/CreditLineOverview.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/types/overview/CreditLineOverview.ts#L37)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-src/types/overview/CreditLineOverview.ts:35
+[src/types/overview/CreditLineOverview.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/types/overview/CreditLineOverview.ts#L35)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-src/types/overview/CreditLineOverview.ts:38
+[src/types/overview/CreditLineOverview.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/types/overview/CreditLineOverview.ts#L38)

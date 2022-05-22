@@ -414,7 +414,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     }
   }
 
-  protected async transformToLenderContributionToPooledCreditLines(
+  private async transformToLenderContributionToPooledCreditLines(
     pooledCreditLines: PooledCreditLineDetail[],
     data: any[]
   ): Promise<LenderContributionToPooledCreditLines[]> {
@@ -489,7 +489,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     }
   }
 
-  protected async transformToPooledCreditLineOperation(
+  private async transformToPooledCreditLineOperation(
     data: any[],
     borrowTokenDecimal,
     collateralTokenDecimal
@@ -548,7 +548,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return returnData[0];
   }
 
-  protected async transformToLenderPoolDetail(data: any[]): Promise<LenderPoolDetail[]> {
+  private async transformToLenderPoolDetail(data: any[]): Promise<LenderPoolDetail[]> {
     const borrowTokens: string[] = data.map((a) => a.collateralAsset);
     const collateralTokens: string[] = data.map((a) => a.borrowAsset);
     const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
@@ -595,7 +595,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     });
   }
 
-  protected transformToLenderPerPoolDetail(data: any[], collateralDecimal: number): LenderPerPoolDetail[] {
+  private transformToLenderPerPoolDetail(data: any[], collateralDecimal: number): LenderPerPoolDetail[] {
     return data.map((a) => {
       return {
         lenderAddress: a.lenderAddress,

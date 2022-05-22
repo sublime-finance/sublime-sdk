@@ -309,7 +309,7 @@ export class CreditLineCalls extends Base {
    * @param cl
    * @description Transforms the data received from the subgraph into type
    */
-  protected async transformToCreditLineOperations(cl: any): Promise<CreditLineOperation[]> {
+  private async transformToCreditLineOperations(cl: any): Promise<CreditLineOperation[]> {
     await this.tokenManager.updateAll(cl.borrowAsset);
     await this.tokenManager.updateAll(cl.collateralAsset);
 
