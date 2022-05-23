@@ -138,4 +138,19 @@ export class YieldAndStrategyApi {
       return undefined;
     }
   }
+
+  public getStrategyLogo(address: string): string | undefined {
+    if (!address) {
+      return undefined;
+    }
+    address = address.toLowerCase();
+
+    if (address == this.config.noStrategyAddress.toLowerCase()) {
+      return 'pending no yield logo';
+    } else if (address == this.config.compoundStrategyContractAddress.toLowerCase()) {
+      return 'https://cryptologos.cc/logos/compound-comp-logo.png';
+    } else {
+      return undefined;
+    }
+  }
 }

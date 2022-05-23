@@ -4,6 +4,16 @@
 
 [types/Types](../modules/types_Types.md).LenderCollective
 
+## Hierarchy
+
+- **`LenderCollective`**
+
+  ↳ [`LenderCollectivePerTokenPerStrategy`](types_Types.LenderCollectivePerTokenPerStrategy.md)
+
+  ↳ [`LenderCollectivePerToken`](types_Types.LenderCollectivePerToken.md)
+
+  ↳ [`LenderCollectivePerStrategy`](types_Types.LenderCollectivePerStrategy.md)
+
 ## Table of contents
 
 ### Properties
@@ -20,7 +30,7 @@
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/types/overview/CreditLineOverview.ts#L37)
+[src/types/overview/CreditLineOverview.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/types/overview/CreditLineOverview.ts#L28)
 
 ___
 
@@ -30,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/types/overview/CreditLineOverview.ts#L35)
+[src/types/overview/CreditLineOverview.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/types/overview/CreditLineOverview.ts#L26)
 
 ___
 
@@ -40,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/types/overview/CreditLineOverview.ts#L38)
+[src/types/overview/CreditLineOverview.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/types/overview/CreditLineOverview.ts#L29)

@@ -8,27 +8,18 @@ export interface LenderContributionToPooledCreditLines {
   interestWithdrawn: Balance;
 }
 
-export interface LenderCollectivePerTokenPerStrategy {
-  id: string;
+export interface LenderCollectivePerTokenPerStrategy extends LenderCollective {
   token: Asset;
   strategy: Strategy;
-  amountLent: Balance;
-  interestReceived: Balance;
 }
 
-export interface LenderCollectivePerToken {
-  id: string;
+export interface LenderCollectivePerToken extends LenderCollective {
   token: Asset;
-  amountLent: Balance;
-  interestReceived: Balance;
 }
 
-export interface LenderCollectivePerStrategy {
-  id: string;
+export interface LenderCollectivePerStrategy extends LenderCollective {
   strategy: Strategy;
   // amountLent is in USD
-  amountLent: Balance;
-  interestReceived: Balance;
 }
 
 export interface LenderCollective {

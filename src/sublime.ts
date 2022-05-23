@@ -10,6 +10,12 @@ import { RepaymentApi } from './api/repayments';
 import { VerificationAPI } from './api/verification';
 import { TokenApi } from './api/tokenApi';
 import { PriceOracleApi } from './api/priceOracle';
+
+import { CreditLineEthUtils } from './api/utils/creditLineEthUtils';
+import { PoolEthUtils } from './api/utils/poolEthUtils';
+import { SavingAccountsEthUtils } from './api/utils/savingsAccountEthUtils';
+import { WrappedEth } from './api/utils/wrappedEth';
+
 import { PooledCreditLineApi } from './api/pooledCreditLines';
 import { TokenManager } from './tokenManager';
 
@@ -73,6 +79,22 @@ export class SublimeConnector {
 
   PooledCreditlineApi(): PooledCreditLineApi {
     return new PooledCreditLineApi(this.signer, this.config, this.tokenManager);
+  }
+
+  CreditLineEthUtils(): CreditLineEthUtils {
+    return new CreditLineEthUtils(this.signer, this.config, this.tokenManager);
+  }
+
+  PoolEthUtils(): PoolEthUtils {
+    return new PoolEthUtils(this.signer, this.config, this.tokenManager);
+  }
+
+  SavingAccountsEthUtils(): SavingAccountsEthUtils {
+    return new SavingAccountsEthUtils(this.signer, this.config, this.tokenManager);
+  }
+
+  WrappedEth(): WrappedEth {
+    return new WrappedEth(this.signer);
   }
 
   public async getChainId(): Promise<number> {

@@ -24,6 +24,7 @@
     "./src/api/utils/creditLineEthUtils.ts",
     "./src/api/utils/poolEthUtils.ts",
     "./src/api/utils/savingsAccountEthUtils.ts",
+    "./src/api/utils/wrappedEth.ts",
     "./src/api/pooledCreditLines.ts",
     "./src/subgraph/index.ts",
     "./src/subgraph/Base.ts",

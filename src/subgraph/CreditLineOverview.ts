@@ -35,6 +35,11 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     super(url, signer, tokenManager, config);
   }
 
+  /**
+   * @description Total Amount put by a lender in all credit lines
+   * @param user
+   * @returns
+   */
   async getLenderCreditLineCollective(user: string): Promise<LenderCollectiveData> {
     const data = await getLenderCreditLineCollective(this.subgraphUrl, user);
     const lenderCollectivePerTokenPerStrategy = await this.tranformToLenderCollectivePerTokenPerStrategy(data);
@@ -46,6 +51,12 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     };
   }
 
+  /**
+   * @description Amount borrowed and repaid by a borrower accross all credit lines
+   * @summary Time based interest calculation is pending. (amountRepaid + outstandingInterest)
+   * @param user
+   * @returns
+   */
   async getBorrowerCreditLineCollective(user: string): Promise<BorrowerCollectiveData> {
     const data = await getBorrowerCreditLineCollective(this.subgraphUrl, user);
     const borrowerCollectivePerTokenPerStrategy = await this.tranformToBorrowerCollectivePerTokenPerStrategy(data);

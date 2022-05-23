@@ -16,6 +16,7 @@
 - [api/utils/creditLineEthUtils](modules/api_utils_creditLineEthUtils.md)
 - [api/utils/poolEthUtils](modules/api_utils_poolEthUtils.md)
 - [api/utils/savingsAccountEthUtils](modules/api_utils_savingsAccountEthUtils.md)
+- [api/utils/wrappedEth](modules/api_utils_wrappedEth.md)
 - [api/verification](modules/api_verification.md)
 - [api/yieldAndStrategy](modules/api_yieldAndStrategy.md)
 - [index](modules/index.md)

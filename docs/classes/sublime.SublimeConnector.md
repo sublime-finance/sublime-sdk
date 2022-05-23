@@ -20,14 +20,18 @@
 ### Methods
 
 - [Address](sublime.SublimeConnector.md#address)
+- [CreditLineEthUtils](sublime.SublimeConnector.md#creditlineethutils)
 - [CreditLinesApi](sublime.SublimeConnector.md#creditlinesapi)
 - [PoolApi](sublime.SublimeConnector.md#poolapi)
+- [PoolEthUtils](sublime.SublimeConnector.md#poolethutils)
 - [PooledCreditlineApi](sublime.SublimeConnector.md#pooledcreditlineapi)
 - [PriceOracleApi](sublime.SublimeConnector.md#priceoracleapi)
 - [RepaymentApi](sublime.SublimeConnector.md#repaymentapi)
+- [SavingAccountsEthUtils](sublime.SublimeConnector.md#savingaccountsethutils)
 - [SavingsAccountApi](sublime.SublimeConnector.md#savingsaccountapi)
 - [TokenApi](sublime.SublimeConnector.md#tokenapi)
 - [VerificationApi](sublime.SublimeConnector.md#verificationapi)
+- [WrappedEth](sublime.SublimeConnector.md#wrappedeth)
 - [YieldAndStrategyApi](sublime.SublimeConnector.md#yieldandstrategyapi)
 - [getBalance](sublime.SublimeConnector.md#getbalance)
 - [getChainId](sublime.SublimeConnector.md#getchainid)
@@ -50,7 +54,7 @@
 
 #### Defined in
 
-[src/sublime.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L27)
+[src/sublime.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L33)
 
 ## Properties
 
@@ -60,7 +64,7 @@
 
 #### Defined in
 
-[src/sublime.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L24)
+[src/sublime.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L30)
 
 ___
 
@@ -70,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L22)
+[src/sublime.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L28)
 
 ___
 
@@ -80,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L23)
+[src/sublime.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L29)
 
 ___
 
@@ -90,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L25)
+[src/sublime.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L31)
 
 ## Methods
 
@@ -106,7 +110,21 @@ The current address of the signer
 
 #### Defined in
 
-[src/sublime.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L50)
+[src/sublime.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L56)
+
+___
+
+### CreditLineEthUtils
+
+▸ **CreditLineEthUtils**(): [`CreditLineEthUtils`](api_utils_creditLineEthUtils.CreditLineEthUtils.md)
+
+#### Returns
+
+[`CreditLineEthUtils`](api_utils_creditLineEthUtils.CreditLineEthUtils.md)
+
+#### Defined in
+
+[src/sublime.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L84)
 
 ___
 
@@ -120,7 +138,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L38)
+[src/sublime.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L44)
 
 ___
 
@@ -134,7 +152,21 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L34)
+[src/sublime.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L40)
+
+___
+
+### PoolEthUtils
+
+▸ **PoolEthUtils**(): [`PoolEthUtils`](api_utils_poolEthUtils.PoolEthUtils.md)
+
+#### Returns
+
+[`PoolEthUtils`](api_utils_poolEthUtils.PoolEthUtils.md)
+
+#### Defined in
+
+[src/sublime.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L88)
 
 ___
 
@@ -148,7 +180,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L74)
+[src/sublime.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L80)
 
 ___
 
@@ -162,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L70)
+[src/sublime.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L76)
 
 ___
 
@@ -176,7 +208,21 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L54)
+[src/sublime.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L60)
+
+___
+
+### SavingAccountsEthUtils
+
+▸ **SavingAccountsEthUtils**(): [`SavingAccountsEthUtils`](api_utils_savingsAccountEthUtils.SavingAccountsEthUtils.md)
+
+#### Returns
+
+[`SavingAccountsEthUtils`](api_utils_savingsAccountEthUtils.SavingAccountsEthUtils.md)
+
+#### Defined in
+
+[src/sublime.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L92)
 
 ___
 
@@ -190,7 +236,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L42)
+[src/sublime.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L48)
 
 ___
 
@@ -210,7 +256,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L66)
+[src/sublime.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L72)
 
 ___
 
@@ -224,7 +270,21 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L58)
+[src/sublime.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L64)
+
+___
+
+### WrappedEth
+
+▸ **WrappedEth**(): [`WrappedEth`](api_utils_wrappedEth.WrappedEth.md)
+
+#### Returns
+
+[`WrappedEth`](api_utils_wrappedEth.WrappedEth.md)
+
+#### Defined in
+
+[src/sublime.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L96)
 
 ___
 
@@ -238,7 +298,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L62)
+[src/sublime.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L68)
 
 ___
 
@@ -260,7 +320,7 @@ balance in ethers (decimals included)
 
 #### Defined in
 
-[src/sublime.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L87)
+[src/sublime.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L109)
 
 ___
 
@@ -274,7 +334,7 @@ ___
 
 #### Defined in
 
-[src/sublime.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L78)
+[src/sublime.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L100)
 
 ___
 
@@ -298,4 +358,4 @@ transaction receipt after waiting for the specified number oif blocks
 
 #### Defined in
 
-[src/sublime.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/0f888b9/src/sublime.ts#L99)
+[src/sublime.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/sublime.ts#L121)

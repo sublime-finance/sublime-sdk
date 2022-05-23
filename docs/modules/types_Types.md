@@ -43,7 +43,17 @@
 - [Options](types_Types.md#options)
 - [PoolDetail](types_Types.md#pooldetail)
 - [PoolLender](types_Types.md#poollender)
+- [PooledCreditLineBorrowerCollective](types_Types.md#pooledcreditlineborrowercollective)
+- [PooledCreditLineBorrowerCollectivePerStrategy](types_Types.md#pooledcreditlineborrowercollectiveperstrategy)
+- [PooledCreditLineBorrowerCollectivePerToken](types_Types.md#pooledcreditlineborrowercollectivepertoken)
+- [PooledCreditLineBorrowerCollectivePerTokenPerStrategy](types_Types.md#pooledcreditlineborrowercollectivepertokenperstrategy)
+- [PooledCreditLineBorrowerData](types_Types.md#pooledcreditlineborrowerdata)
+- [PooledCreditLineCollective](types_Types.md#pooledcreditlinecollective)
 - [PooledCreditLineDetail](types_Types.md#pooledcreditlinedetail)
+- [PooledCreditLineLenderCollectivePerStrategy](types_Types.md#pooledcreditlinelendercollectiveperstrategy)
+- [PooledCreditLineLenderCollectivePerToken](types_Types.md#pooledcreditlinelendercollectivepertoken)
+- [PooledCreditLineLenderCollectivePerTokenPerStrategy](types_Types.md#pooledcreditlinelendercollectivepertokenperstrategy)
+- [PooledCreditLineLenderData](types_Types.md#pooledcreditlinelenderdata)
 - [PooledCreditLineOperation](types_Types.md#pooledcreditlineoperation)
 - [ProfileOverview](types_Types.md#profileoverview)
 - [SavingAccountUserDetailDisplay](types_Types.md#savingaccountuserdetaildisplay)
@@ -286,9 +296,69 @@ Re-exports [PoolLender](../interfaces/types_Types.PoolLender.md)
 
 ___
 
+### PooledCreditLineBorrowerCollective
+
+Re-exports [PooledCreditLineBorrowerCollective](../interfaces/types_Types.PooledCreditLineBorrowerCollective.md)
+
+___
+
+### PooledCreditLineBorrowerCollectivePerStrategy
+
+Re-exports [PooledCreditLineBorrowerCollectivePerStrategy](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerStrategy.md)
+
+___
+
+### PooledCreditLineBorrowerCollectivePerToken
+
+Re-exports [PooledCreditLineBorrowerCollectivePerToken](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerToken.md)
+
+___
+
+### PooledCreditLineBorrowerCollectivePerTokenPerStrategy
+
+Re-exports [PooledCreditLineBorrowerCollectivePerTokenPerStrategy](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerTokenPerStrategy.md)
+
+___
+
+### PooledCreditLineBorrowerData
+
+Re-exports [PooledCreditLineBorrowerData](../interfaces/types_Types.PooledCreditLineBorrowerData.md)
+
+___
+
+### PooledCreditLineCollective
+
+Re-exports [PooledCreditLineCollective](../interfaces/types_Types.PooledCreditLineCollective.md)
+
+___
+
 ### PooledCreditLineDetail
 
 Re-exports [PooledCreditLineDetail](../interfaces/types_Types.PooledCreditLineDetail.md)
+
+___
+
+### PooledCreditLineLenderCollectivePerStrategy
+
+Re-exports [PooledCreditLineLenderCollectivePerStrategy](../interfaces/types_Types.PooledCreditLineLenderCollectivePerStrategy.md)
+
+___
+
+### PooledCreditLineLenderCollectivePerToken
+
+Re-exports [PooledCreditLineLenderCollectivePerToken](../interfaces/types_Types.PooledCreditLineLenderCollectivePerToken.md)
+
+___
+
+### PooledCreditLineLenderCollectivePerTokenPerStrategy
+
+Re-exports [PooledCreditLineLenderCollectivePerTokenPerStrategy](../interfaces/types_Types.PooledCreditLineLenderCollectivePerTokenPerStrategy.md)
+
+___
+
+### PooledCreditLineLenderData
+
+Re-exports [PooledCreditLineLenderData](../interfaces/types_Types.PooledCreditLineLenderData.md)
 
 ___
 

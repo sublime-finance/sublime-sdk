@@ -61,7 +61,7 @@ export class SavingsAccountCalls extends PoolCalls {
       }
 
       yieldContract = await yieldContract.attach(strategy);
-      await this.tokenManager.updateTokenDecimals(token);
+      await this.tokenManager.updateAll(token);
       const tokenDecimals = new BigNumber(10).pow(this.tokenManager.getTokenDecimals(token));
       const rawAmountInTokens = (await yieldContract.callStatic.getTokensForShares(shares, token)).toString();
       const amountInTokens = new BigNumber(rawAmountInTokens).div(tokenDecimals);
@@ -85,7 +85,12 @@ export class SavingsAccountCalls extends PoolCalls {
       if (savingsAccountUserDetails.balances[tokenIndex[token]]?.token != token) {
         tokenIndex[token] = savingsAccountUserDetails.balances.length;
         savingsAccountUserDetails.balances.push({
-          token,
+          token: {
+            address: token,
+            name: this.tokenManager.getTokenName(token),
+            logo: this.tokenManager.getLogo(token),
+            pricePerAssetInUSD: tokenPrice[token],
+          },
           balanceUSD: new BigNumber(0),
           balance: new BigNumber(0),
           amountAllocatedToCreditLines: new BigNumber(allocatedAmountToCreditLines),
@@ -99,9 +104,10 @@ export class SavingsAccountCalls extends PoolCalls {
         console.log(savingsAccountUserDetails.balances[tokenIndex[token]].strategyBalance[strategyIndex[token][strategy]]);
         throw new Error('2 entities in subgraph for same token and strategy');
       }
+
       strategyIndex[token][strategy] = savingsAccountUserDetails.balances[tokenIndex[token]].strategyBalance.length;
       savingsAccountUserDetails.balances[tokenIndex[token]].strategyBalance[strategyIndex[token][strategy]] = {
-        strategy,
+        strategy: { type: this.yieldApi.getStrategy(strategy), address: strategy },
         balanceUSD: new BigNumber(amount),
         balance: new BigNumber(amountInTokens),
         APR: apr,
