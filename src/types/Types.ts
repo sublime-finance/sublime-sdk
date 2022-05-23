@@ -116,8 +116,8 @@ export interface Strategy {
   address: string;
   token?: Asset;
   liquidityToken?: Asset;
-  displayName?: string;
-  logo?: string;
+  displayName: string;
+  logo: string;
 }
 
 export interface CreditLineRequest {

@@ -218,7 +218,12 @@ export class PooledCreditLinesBorrowerOverviewCall extends CreditLinesOverviewCa
           logo: this.tokenManager.getLogo(a.token),
           pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(a.token)).toString(),
         },
-        strategy: { type: this.yieldApi.getStrategy(a.strategy), address: a.strategy },
+        strategy: {
+          type: this.yieldApi.getStrategy(a.strategy),
+          address: a.strategy,
+          displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
+          logo: this.yieldApi.getStrategyLogo(a.strategy)
+        },
         collateralDeposited: { value: a.collateralDeposited, decimals: this.tokenManager.getTokenDecimals(a.token) },
         amountRepaid: { value: a.amountRepaid, decimals: this.tokenManager.getTokenDecimals(a.token) },
         amountBorrowed: { value: a.amountBorrowed, decimals: this.tokenManager.getTokenDecimals(a.token) },
@@ -227,4 +232,3 @@ export class PooledCreditLinesBorrowerOverviewCall extends CreditLinesOverviewCa
     return Promise.all(all);
   }
 }
-

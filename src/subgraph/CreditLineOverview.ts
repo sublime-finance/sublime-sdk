@@ -230,7 +230,12 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
         );
         lenderTotalCreditPerStrategy.push({
           amount: { value: totalCredit.toString(), decimals: 0 },
-          strategy: { address: requiredEntries[0].strategy, type: this.yieldApi.getStrategy(requiredEntries[0].strategy) },
+          strategy: {
+            address: requiredEntries[0].strategy,
+            type: this.yieldApi.getStrategy(requiredEntries[0].strategy),
+            displayName: this.yieldApi.getStrategyDisplayName(requiredEntries[0].strategy),
+            logo: this.yieldApi.getStrategyLogo(requiredEntries[0].strategy)
+          },
         });
       }
     }
@@ -464,6 +469,8 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
         strategy: {
           type: this.yieldApi.getStrategy(a.strategy),
           address: a.strategy,
+          displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
+          logo: this.yieldApi.getStrategyLogo(a.strategy)
         },
         amountLent: { value: a.amountLent, decimals: this.tokenManager.getTokenDecimals(a.token) },
         interestReceived: { value: a.interestReceived, decimals: this.tokenManager.getTokenDecimals(a.token) },
@@ -493,6 +500,8 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
         strategy: {
           type: this.yieldApi.getStrategy(a.strategy),
           address: a.strategy,
+          displayName: this.yieldApi.getStrategy(a.strategy),
+          logo: this.yieldApi.getStrategyLogo(a.strategy)
         },
         amountBorrowed: { value: a.amountBorrowed, decimals: this.tokenManager.getTokenDecimals(a.token) },
         amountRepaid: { value: a.amountRepaid, decimals: this.tokenManager.getTokenDecimals(a.token) },

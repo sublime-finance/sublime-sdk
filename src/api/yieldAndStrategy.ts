@@ -16,10 +16,18 @@ export class YieldAndStrategyApi {
   config: SublimeConfig;
   private tokenManager: TokenManager;
 
+  private displayName: Record<string, string> = {};
+  private logo: Record<string, string> = {};
+
   constructor(signer: Signer, config: SublimeConfig, tokenManger: TokenManager) {
     this.signer = signer;
     this.config = config;
     this.tokenManager = tokenManger;
+    this.displayName[config.compoundStrategyContractAddress.toLowerCase()] = 'Added to Compound Protocol';
+    this.displayName[config.noStrategyAddress.toLowerCase()] = 'Locked in Sublime';
+
+    this.logo[config.compoundStrategyContractAddress.toLowerCase()] = 'https://cryptologos.cc/logos/compound-comp-logo.png';
+    this.logo[config.noStrategyAddress.toLowerCase()] = 'logo pending ...';
   }
 
   /**
@@ -97,10 +105,14 @@ export class YieldAndStrategyApi {
       {
         address: this.config.noStrategyAddress,
         type: StrategyType.NoYield,
+        displayName: this.displayName[this.config.noStrategyAddress.toLowerCase()],
+        logo: this.logo[this.config.noStrategyAddress.toLowerCase()]
       },
       {
         address: this.config.compoundStrategyContractAddress,
         type: StrategyType.CompounYield,
+        displayName: this.displayName[this.config.compoundStrategyContractAddress.toLowerCase()],
+        logo: this.logo[this.config.compoundStrategyContractAddress.toLowerCase()]
       },
     ];
   }
@@ -145,12 +157,15 @@ export class YieldAndStrategyApi {
     }
     address = address.toLowerCase();
 
-    if (address == this.config.noStrategyAddress.toLowerCase()) {
-      return 'pending no yield logo';
-    } else if (address == this.config.compoundStrategyContractAddress.toLowerCase()) {
-      return 'https://cryptologos.cc/logos/compound-comp-logo.png';
-    } else {
+    return this.logo[address];
+  }
+
+  public getStrategyDisplayName(address: string): string | undefined {
+    if (!address) {
       return undefined;
     }
+    address = address.toLowerCase();
+
+    return this.displayName[address];
   }
 }

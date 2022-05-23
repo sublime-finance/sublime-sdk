@@ -78,7 +78,7 @@
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L40)
+[src/subgraph/CreditLine.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L40)
 
 ## Properties
 
@@ -90,7 +90,7 @@
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L38)
+[src/subgraph/CreditLine.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L38)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/Base.ts#L19)
+[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/Base.ts#L19)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/Base.ts#L14)
+[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/Base.ts#L14)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/Base.ts#L33)
+[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/Base.ts#L33)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/Base.ts#L24)
+[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/Base.ts#L24)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/Base.ts#L28)
+[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/Base.ts#L28)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/Base.ts#L26)
+[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/Base.ts#L26)
 
 ## Methods
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L153)
+[src/subgraph/CreditLine.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L158)
 
 ___
 
@@ -222,7 +222,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L145)
+[src/subgraph/CreditLine.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L150)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L137)
+[src/subgraph/CreditLine.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L142)
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:334](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L334)
+[src/subgraph/CreditLine.ts:339](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L339)
 
 ___
 
@@ -277,7 +277,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:339](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L339)
+[src/subgraph/CreditLine.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L344)
 
 ___
 
@@ -299,7 +299,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:348](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L348)
+[src/subgraph/CreditLine.ts:353](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L353)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:362](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L362)
+[src/subgraph/CreditLine.ts:367](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L367)
 
 ___
 
@@ -342,7 +342,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:371](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L371)
+[src/subgraph/CreditLine.ts:376](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L376)
 
 ___
 
@@ -363,7 +363,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:408](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L408)
+[src/subgraph/CreditLine.ts:413](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L413)
 
 ___
 
@@ -385,7 +385,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:417](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L417)
+[src/subgraph/CreditLine.ts:422](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L422)
 
 ___
 
@@ -406,7 +406,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:385](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L385)
+[src/subgraph/CreditLine.ts:390](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L390)
 
 ___
 
@@ -428,7 +428,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:394](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L394)
+[src/subgraph/CreditLine.ts:399](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L399)
 
 ___
 
@@ -453,7 +453,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L52)
+[src/subgraph/CreditLine.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L52)
 
 ___
 
@@ -477,7 +477,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L169)
+[src/subgraph/CreditLine.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L174)
 
 ___
 
@@ -501,7 +501,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:180](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L180)
+[src/subgraph/CreditLine.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L185)
 
 ___
 
@@ -523,7 +523,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L233)
+[src/subgraph/CreditLine.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L238)
 
 ___
 
@@ -545,7 +545,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:297](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L297)
+[src/subgraph/CreditLine.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L302)
 
 ___
 
@@ -567,7 +567,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L247)
+[src/subgraph/CreditLine.ts:252](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L252)
 
 ___
 
@@ -593,7 +593,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/Base.ts#L58)
+[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/Base.ts#L58)
 
 ___
 
@@ -617,7 +617,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L202)
+[src/subgraph/CreditLine.ts:207](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L207)
 
 ___
 
@@ -641,7 +641,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:224](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L224)
+[src/subgraph/CreditLine.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L229)
 
 ___
 
@@ -665,7 +665,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:213](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L213)
+[src/subgraph/CreditLine.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L218)
 
 ___
 
@@ -689,7 +689,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L191)
+[src/subgraph/CreditLine.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L196)
 
 ___
 
@@ -715,7 +715,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/Base.ts#L50)
+[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/Base.ts#L50)
 
 ___
 
@@ -737,7 +737,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L62)
+[src/subgraph/CreditLine.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L62)
 
 ___
 
@@ -759,4 +759,4 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/2e61ff0/src/subgraph/CreditLine.ts#L312)
+[src/subgraph/CreditLine.ts:317](https://github.com/sublime-finance/sublime-sdk/blob/578d736/src/subgraph/CreditLine.ts#L317)

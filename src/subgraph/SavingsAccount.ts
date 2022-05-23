@@ -107,7 +107,12 @@ export class SavingsAccountCalls extends PoolCalls {
 
       strategyIndex[token][strategy] = savingsAccountUserDetails.balances[tokenIndex[token]].strategyBalance.length;
       savingsAccountUserDetails.balances[tokenIndex[token]].strategyBalance[strategyIndex[token][strategy]] = {
-        strategy: { type: this.yieldApi.getStrategy(strategy), address: strategy },
+        strategy: {
+          type: this.yieldApi.getStrategy(strategy),
+          address: strategy,
+          displayName: this.yieldApi.getStrategyDisplayName(strategy),
+          logo: this.yieldApi.getStrategyLogo(strategy)
+        },
         balanceUSD: new BigNumber(amount),
         balance: new BigNumber(amountInTokens),
         APR: apr,
@@ -135,7 +140,12 @@ export class SavingsAccountCalls extends PoolCalls {
       const strategyBalance: [SavingsAccountStrategyBalanceDisplay?] = [];
       a.strategyBalance.forEach((b) => {
         strategyBalance.push({
-          strategy: { address: b.strategy.address, type: this.yieldApi.getStrategy(b.strategy.address) },
+          strategy: {
+            address: b.strategy.address,
+            type: this.yieldApi.getStrategy(b.strategy.address),
+            displayName: this.yieldApi.getStrategyDisplayName(b.strategy.address),
+            logo: this.yieldApi.getStrategyLogo(b.strategy.address)
+          },
           balance: { value: b.balance.toFixed(2), decimals: 0 },
           balanceUSD: { value: b.balanceUSD.toFixed(2), decimals: 0 },
           APR: b.APR.toFixed(2),

@@ -23,8 +23,8 @@ export class SavingAccountsEthUtils {
       this.savingsAccountEthUtils = new SavingsAccountEthUtils__factory(signer).attach(config.savingsAccountEthUtilsAddress);
       this.tokenManager = tokenManager;
       this.config = config;
-      throw new Error('savingsAccountEthUtilsAddress is not defined in the sublime config');
     } else {
+      throw new Error('savingsAccountEthUtilsAddress is not defined in the sublime config');
     }
   }
 

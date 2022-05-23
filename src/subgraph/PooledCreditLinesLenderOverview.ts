@@ -233,7 +233,12 @@ export class PooledCreditLinesLenderOverview extends PooledCreditLinesBorrowerOv
           logo: this.tokenManager.getLogo(a.token),
           pricePerAssetInUSD: await (await this.tokenManager.getPricePerAsset(a.token)).toString(),
         },
-        strategy: { type: this.yieldApi.getStrategy(a.strategy), address: a.strategy },
+        strategy: {
+          type: this.yieldApi.getStrategy(a.strategy),
+          address: a.strategy,
+          displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
+          logo: this.yieldApi.getStrategyLogo(a.strategy)
+        },
         amountLent: { value: a.amountLent, decimals: this.tokenManager.getTokenDecimals(a.token) },
         amountWithdrawn: { value: a.amountWithdrawn, decimals: this.tokenManager.getTokenDecimals(a.token) },
         sharesWithdrawn: { value: a.sharesWithdrawn, decimals: 0 },

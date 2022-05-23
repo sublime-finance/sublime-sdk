@@ -291,8 +291,18 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         startsAt: a.startsAt,
         endsAt: a.endsAt,
         defaultsAt: a.defaultsAt,
-        lenderStrategy: { type: this.yieldApi.getStrategy(a.lenderStrategy), address: a.lenderStrategy },
-        collateralStrategy: { type: this.yieldApi.getStrategy(a.collateralStrategy), address: a.collateralStrategy },
+        lenderStrategy: {
+          type: this.yieldApi.getStrategy(a.lenderStrategy),
+          address: a.lenderStrategy,
+          displayName: this.yieldApi.getStrategyDisplayName(a.lenderStrategy),
+          logo: this.yieldApi.getStrategyLogo(a.lenderStrategy)
+        },
+        collateralStrategy: {
+          type: this.yieldApi.getStrategy(a.collateralStrategy),
+          address: a.collateralStrategy,
+          displayName: this.yieldApi.getStrategyDisplayName(a.collateralStrategy),
+          logo: this.yieldApi.getStrategyLogo(a.collateralStrategy)
+        },
         gracePenaltyRate: new BigNumber(a.gracePenaltyRate).div(new BigNumber(10).pow(16)).toFixed(2),
         status: await this.getCreditLineStatus(a.id),
         principal: { value: a.principal, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
@@ -528,7 +538,14 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         pooledCreditLineOperation: a.pooledCreditLineOperation,
         timestamp: a.timestamp,
         amount,
-        strategy: a.strategy ? { type: this.yieldApi.getStrategy(a.strategy), address: a.strategy } : undefined,
+        strategy: a.strategy
+          ? {
+              type: this.yieldApi.getStrategy(a.strategy),
+              address: a.strategy,
+              displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
+              logo: this.yieldApi.getStrategyLogo(a.strategy)
+            }
+          : undefined,
       };
     });
   }
@@ -580,7 +597,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         },
         borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        borrowAssetStrategy: { address: a.borrowAssetStrategy, type: this.yieldApi.getStrategy(a.borrowAssetStrategy) },
+        borrowAssetStrategy: {
+          address: a.borrowAssetStrategy,
+          type: this.yieldApi.getStrategy(a.borrowAssetStrategy),
+          displayName: this.yieldApi.getStrategyDisplayName(a.borrowAssetStrategy),
+          logo: this.yieldApi.getStrategyLogo(a.borrowAssetStrategy)
+        },
         sharesHeld: { value: a.sharesHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         borrowerInterestShares: { value: a.borrowerInterestShares, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         yieldInterestWithdrawnShares: {
@@ -602,7 +624,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         amountLent: { value: a.amountLent, decimals: collateralDecimal },
         amountWithdrawn: { value: a.amountWithdrawn, decimals: collateralDecimal },
         sharesWithdrawn: { value: a.sharesWithdrawn, decimals: collateralDecimal },
-        strategy: { address: a.strategy, type: this.yieldApi.getStrategy(a.strategy) },
+        strategy: { address: a.strategy, type: this.yieldApi.getStrategy(a.strategy), displayName: this.yieldApi.getStrategy(a.strategy), logo: this.yieldApi.getStrategyLogo(a.strategy) },
       };
     });
   }
