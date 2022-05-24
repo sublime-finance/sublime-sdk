@@ -107,7 +107,10 @@ export class SublimeConnector {
    * @returns balance in ethers (decimals included)
    */
   public async getBalance(address: string): Promise<string> {
-    const balance = await this.provider.getBalance(address);
+    let balance: ethers.BigNumber = ethers.BigNumber.from(0);
+    try {
+      balance = await this.provider.getBalance(address);
+    } catch (ex) {}
     return ethers.utils.formatEther(balance);
   }
 

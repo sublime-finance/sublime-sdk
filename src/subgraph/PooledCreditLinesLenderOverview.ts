@@ -237,7 +237,7 @@ export class PooledCreditLinesLenderOverview extends PooledCreditLinesBorrowerOv
           type: this.yieldApi.getStrategy(a.strategy),
           address: a.strategy,
           displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
-          logo: this.yieldApi.getStrategyLogo(a.strategy)
+          logo: this.yieldApi.getStrategyLogo(a.strategy),
         },
         amountLent: { value: a.amountLent, decimals: this.tokenManager.getTokenDecimals(a.token) },
         amountWithdrawn: { value: a.amountWithdrawn, decimals: this.tokenManager.getTokenDecimals(a.token) },

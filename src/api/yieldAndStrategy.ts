@@ -106,13 +106,13 @@ export class YieldAndStrategyApi {
         address: this.config.noStrategyAddress,
         type: StrategyType.NoYield,
         displayName: this.displayName[this.config.noStrategyAddress.toLowerCase()],
-        logo: this.logo[this.config.noStrategyAddress.toLowerCase()]
+        logo: this.logo[this.config.noStrategyAddress.toLowerCase()],
       },
       {
         address: this.config.compoundStrategyContractAddress,
         type: StrategyType.CompounYield,
         displayName: this.displayName[this.config.compoundStrategyContractAddress.toLowerCase()],
-        logo: this.logo[this.config.compoundStrategyContractAddress.toLowerCase()]
+        logo: this.logo[this.config.compoundStrategyContractAddress.toLowerCase()],
       },
     ];
   }

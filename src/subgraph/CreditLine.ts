@@ -132,7 +132,7 @@ export class CreditLineCalls extends Base {
           address: a.strategy,
           type: this.yieldApi.getStrategy(a.strategy),
           displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
-          logo: this.yieldApi.getStrategyLogo(a.strategy)
+          logo: this.yieldApi.getStrategyLogo(a.strategy),
         },
       };
     });

@@ -13,6 +13,13 @@ export interface TempTwitterResponse {
   account_dp_url: string;
 }
 
+export interface Allowances {
+  amount: Balance;
+  from: string;
+  to: string;
+  token: Asset;
+}
+
 export interface Options extends Overrides {}
 export interface Asset {
   name: string;

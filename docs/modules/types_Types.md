@@ -6,6 +6,7 @@
 
 ### References
 
+- [Allowances](types_Types.md#allowances)
 - [Asset](types_Types.md#asset)
 - [Balance](types_Types.md#balance)
 - [BorrowerAvailableCredit](types_Types.md#borroweravailablecredit)
@@ -73,6 +74,12 @@
 - [VerifierType](types_Types.md#verifiertype)
 
 ## References
+
+### Allowances
+
+Re-exports [Allowances](../interfaces/types_Types.Allowances.md)
+
+___
 
 ### Asset
 

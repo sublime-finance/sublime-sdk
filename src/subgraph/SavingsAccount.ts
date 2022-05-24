@@ -3,7 +3,12 @@ import { Signer } from '@ethersproject/abstract-signer';
 import { TokenManager } from '../tokenManager';
 import { SublimeConfig } from '../types/sublimeConfig';
 
-import { SavingsAccountUserDetails, SavingAccountUserDetailDisplay, SavingsAccountStrategyBalanceDisplay } from '../types/Types';
+import {
+  SavingsAccountUserDetails,
+  SavingAccountUserDetailDisplay,
+  SavingsAccountStrategyBalanceDisplay,
+  Allowances,
+} from '../types/Types';
 import { getAllowances, getBalances } from '../queries';
 import BigNumber from 'bignumber.js';
 
@@ -15,9 +20,39 @@ export class SavingsAccountCalls extends PoolCalls {
     super(url, signer, tokenManager, config);
   }
 
-  async getAllowances(): Promise<any[]> {
+  async getAllowances(address?: string): Promise<Allowances[]> {
+    if (!address) {
+      address = await this.signer.getAddress();
+    }
     const result = await getAllowances(this.subgraphUrl, await this.signer.getAddress(), this.sublimeAddresses.creditLineContractAddress);
-    return result;
+    return this.transformToAllowances(result);
+  }
+
+  private async transformToAllowances(data: any[]): Promise<Allowances[]> {
+    const allTokens = data.map((a) => a.token).filter((value, index, array) => array.indexOf(value) === index);
+    for (let index = 0; index < allTokens.length; index++) {
+      const element = allTokens[index];
+      await this.tokenManager.updateAll(element);
+    }
+
+    const prices = {};
+    for (let index = 0; index < allTokens.length; index++) {
+      prices[allTokens[index]] = await this.tokenManager.getPricePerAsset(allTokens[index]);
+    }
+
+    return data.map((a) => {
+      return {
+        amount: { value: a.amount, decimals: this.tokenManager.getTokenDecimals(a.token) },
+        from: a.from,
+        to: a.to,
+        token: {
+          address: a.token,
+          name: this.tokenManager.getTokenName(a.token),
+          logo: this.tokenManager.getLogo(a.token),
+          pricePerAssetInUSD: prices[a.token],
+        },
+      };
+    });
   }
 
   /**
@@ -28,10 +63,23 @@ export class SavingsAccountCalls extends PoolCalls {
   async getSavingsAccountOverview(address: string): Promise<SavingAccountUserDetailDisplay> {
     const balances = await getBalances(this.subgraphUrl, address);
     const savingsAccountUserDetails = await this.transformToSavingsAccountUserDetails(address, balances);
-
+    // await this.newTransformToSavingsAccountUserDetails(address, balances);
     return savingsAccountUserDetails;
   }
 
+  // private async newTransformToSavingsAccountUserDetails(address: string, data: any[]): Promise<any>{
+  //   const allowances = await this.getAllowances(address);
+  //   const savingsAccountUserDetails: SavingsAccountUserDetails = {
+  //     user: address,
+  //     totalBalance: new BigNumber(0),
+  //     balances: [],
+  //   };
+  //   let yieldContract: IYield = IYield__factory.connect(zeroAddress, this.signer);
+  //   for (let index = 0; index < data.length; index++) {
+  //     const element = data[index];
+  //     console.log({element});
+  //   }
+  // }
   /**
    * @param address
    * @param data
@@ -111,7 +159,7 @@ export class SavingsAccountCalls extends PoolCalls {
           type: this.yieldApi.getStrategy(strategy),
           address: strategy,
           displayName: this.yieldApi.getStrategyDisplayName(strategy),
-          logo: this.yieldApi.getStrategyLogo(strategy)
+          logo: this.yieldApi.getStrategyLogo(strategy),
         },
         balanceUSD: new BigNumber(amount),
         balance: new BigNumber(amountInTokens),
@@ -144,7 +192,7 @@ export class SavingsAccountCalls extends PoolCalls {
             address: b.strategy.address,
             type: this.yieldApi.getStrategy(b.strategy.address),
             displayName: this.yieldApi.getStrategyDisplayName(b.strategy.address),
-            logo: this.yieldApi.getStrategyLogo(b.strategy.address)
+            logo: this.yieldApi.getStrategyLogo(b.strategy.address),
           },
           balance: { value: b.balance.toFixed(2), decimals: 0 },
           balanceUSD: { value: b.balanceUSD.toFixed(2), decimals: 0 },

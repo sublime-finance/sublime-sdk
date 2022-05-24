@@ -348,8 +348,8 @@ export class CreditLineApi {
    * @param creditLineNumber
    * @returns Contract Transaction
    */
-  public async closeCreditLine(creditLineNumber: BigNumberish): Promise<ContractTransaction> {
-    return this.creditLineContract.close(creditLineNumber);
+  public async closeCreditLine(creditLineNumber: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.creditLineContract.close(creditLineNumber, { ...options });
   }
 
   /**

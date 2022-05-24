@@ -222,7 +222,7 @@ export class PooledCreditLinesBorrowerOverviewCall extends CreditLinesOverviewCa
           type: this.yieldApi.getStrategy(a.strategy),
           address: a.strategy,
           displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
-          logo: this.yieldApi.getStrategyLogo(a.strategy)
+          logo: this.yieldApi.getStrategyLogo(a.strategy),
         },
         collateralDeposited: { value: a.collateralDeposited, decimals: this.tokenManager.getTokenDecimals(a.token) },
         amountRepaid: { value: a.amountRepaid, decimals: this.tokenManager.getTokenDecimals(a.token) },
