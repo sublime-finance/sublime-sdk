@@ -58,11 +58,8 @@
 - [PooledCreditLineOperation](types_Types.md#pooledcreditlineoperation)
 - [ProfileOverview](types_Types.md#profileoverview)
 - [SavingAccountUserDetailDisplay](types_Types.md#savingaccountuserdetaildisplay)
-- [SavingsAccountBalance](types_Types.md#savingsaccountbalance)
 - [SavingsAccountBalanceDisplay](types_Types.md#savingsaccountbalancedisplay)
-- [SavingsAccountStrategyBalance](types_Types.md#savingsaccountstrategybalance)
 - [SavingsAccountStrategyBalanceDisplay](types_Types.md#savingsaccountstrategybalancedisplay)
-- [SavingsAccountUserDetails](types_Types.md#savingsaccountuserdetails)
 - [Strategy](types_Types.md#strategy)
 - [StrategyType](types_Types.md#strategytype)
 - [TempTwitterResponse](types_Types.md#temptwitterresponse)
@@ -387,33 +384,15 @@ Re-exports [SavingAccountUserDetailDisplay](../interfaces/types_Types.SavingAcco
 
 ___
 
-### SavingsAccountBalance
-
-Re-exports [SavingsAccountBalance](../interfaces/types_Types.SavingsAccountBalance.md)
-
-___
-
 ### SavingsAccountBalanceDisplay
 
 Re-exports [SavingsAccountBalanceDisplay](../interfaces/types_Types.SavingsAccountBalanceDisplay.md)
 
 ___
 
-### SavingsAccountStrategyBalance
-
-Re-exports [SavingsAccountStrategyBalance](../interfaces/types_Types.SavingsAccountStrategyBalance.md)
-
-___
-
 ### SavingsAccountStrategyBalanceDisplay
 
 Re-exports [SavingsAccountStrategyBalanceDisplay](../interfaces/types_Types.SavingsAccountStrategyBalanceDisplay.md)
-
-___
-
-### SavingsAccountUserDetails
-
-Re-exports [SavingsAccountUserDetails](../interfaces/types_Types.SavingsAccountUserDetails.md)
 
 ___
 

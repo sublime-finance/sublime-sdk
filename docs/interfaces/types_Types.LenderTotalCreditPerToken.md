@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/overview/LenderTotalCredit.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/836620e/src/types/overview/LenderTotalCredit.ts#L13)
+[src/types/overview/LenderTotalCredit.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/4260f24/src/types/overview/LenderTotalCredit.ts#L13)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/LenderTotalCredit.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/836620e/src/types/overview/LenderTotalCredit.ts#L14)
+[src/types/overview/LenderTotalCredit.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/4260f24/src/types/overview/LenderTotalCredit.ts#L14)

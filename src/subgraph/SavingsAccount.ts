@@ -4,16 +4,25 @@ import { TokenManager } from '../tokenManager';
 import { SublimeConfig } from '../types/sublimeConfig';
 
 import {
-  SavingsAccountUserDetails,
   SavingAccountUserDetailDisplay,
   SavingsAccountStrategyBalanceDisplay,
   Allowances,
+  Asset,
+  Strategy,
+  Balance,
+  SavingsAccountBalanceDisplay,
 } from '../types/Types';
 import { getAllowances, getBalances } from '../queries';
 import BigNumber from 'bignumber.js';
 
-import { IYield, IYield__factory, ICToken, ICToken__factory } from '../wrappers';
-import { zeroAddress } from '../config/constants';
+import {  IYield__factory, ICToken, ICToken__factory } from '../wrappers';
+
+interface InternalBalancePerTokenStrategy {
+  token: Asset;
+  strategy: Strategy;
+  shares: Balance;
+  amount: Balance;
+}
 
 export class SavingsAccountCalls extends PoolCalls {
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
@@ -62,155 +71,148 @@ export class SavingsAccountCalls extends PoolCalls {
    */
   async getSavingsAccountOverview(address: string): Promise<SavingAccountUserDetailDisplay> {
     const balances = await getBalances(this.subgraphUrl, address);
-    const savingsAccountUserDetails = await this.transformToSavingsAccountUserDetails(address, balances);
-    // await this.newTransformToSavingsAccountUserDetails(address, balances);
+    const savingsAccountUserDetails = await this.newTransformToSavingsAccountUserDetails(address, balances);
     return savingsAccountUserDetails;
   }
 
-  // private async newTransformToSavingsAccountUserDetails(address: string, data: any[]): Promise<any>{
-  //   const allowances = await this.getAllowances(address);
-  //   const savingsAccountUserDetails: SavingsAccountUserDetails = {
-  //     user: address,
-  //     totalBalance: new BigNumber(0),
-  //     balances: [],
-  //   };
-  //   let yieldContract: IYield = IYield__factory.connect(zeroAddress, this.signer);
-  //   for (let index = 0; index < data.length; index++) {
-  //     const element = data[index];
-  //     console.log({element});
-  //   }
-  // }
-  /**
-   * @param address
-   * @param data
-   * @description Tranforms the data received from the subgraph to type
-   */
-  private async transformToSavingsAccountUserDetails(address: string, data: any[]): Promise<SavingAccountUserDetailDisplay> {
-    const allowances = await getAllowances(this.subgraphUrl, address, this.sublimeAddresses.creditLineContractAddress);
-    const savingsAccountUserDetails: SavingsAccountUserDetails = {
+  private async newTransformToSavingsAccountUserDetails(address: string, data: any[]): Promise<SavingAccountUserDetailDisplay> {
+    const allowances = await this.getAllowances(address);
+    const savingsAccountUserDetails: SavingAccountUserDetailDisplay = {
       user: address,
-      totalBalance: new BigNumber(0),
+      totalBalance: { value: '0', decimals: 0 },
       balances: [],
     };
 
-    const tokenIndex = {};
-    const strategyIndex = {};
+    const result = await this.transformToInternalBalancePerTokenStrategy(data);
+    const stackedBalancesByToken = await this.stackInternalBalanceByToken(result);
+    savingsAccountUserDetails.balances.push(...stackedBalancesByToken);
+    return savingsAccountUserDetails;
+  }
 
-    const tokenPrice = {};
+  private async stackInternalBalanceByToken(internalBalances: InternalBalancePerTokenStrategy[]): Promise<SavingsAccountBalanceDisplay[]> {
+    let stackedBalanceByToken: SavingsAccountBalanceDisplay[] = [];
+    const uniqueTokens = internalBalances.map((a) => a.token.address).filter((value, index, self) => self.indexOf(value) === index);
 
-    let yieldContract: IYield = IYield__factory.connect(zeroAddress, this.signer);
+    const prices: Record<string, BigNumber> = {};
 
-    for (let i = 0; i < data.length; i++) {
-      const strategy = data[i].strategy.address;
-      const token = data[i].token;
-      const shares = data[i].shares;
-      if (!strategyIndex[token]) {
-        strategyIndex[token] = {};
-      }
-
-      yieldContract = await yieldContract.attach(strategy);
-      await this.tokenManager.updateAll(token);
-      const tokenDecimals = new BigNumber(10).pow(this.tokenManager.getTokenDecimals(token));
-      const rawAmountInTokens = (await yieldContract.callStatic.getTokensForShares(shares, token)).toString();
-      const amountInTokens = new BigNumber(rawAmountInTokens).div(tokenDecimals);
-      let allocatedAmountToCreditLines = new BigNumber(0);
-
-      const filteredAllowancesByToken = allowances.filter((a) => a.token == token);
-      if (filteredAllowancesByToken.length > 0) {
-        allocatedAmountToCreditLines = new BigNumber(filteredAllowancesByToken[0].amount);
-        allocatedAmountToCreditLines = allocatedAmountToCreditLines.div(tokenDecimals);
-      }
-
-      let price = tokenPrice[token];
-      if (!price) {
-        price = await this.tokenManager.getPricePerAsset(token);
-        tokenPrice[token] = price;
-      }
-      const amount = new BigNumber(amountInTokens).multipliedBy(price);
-
-      const apr = await this.getAPR(strategy);
-
-      if (savingsAccountUserDetails.balances[tokenIndex[token]]?.token != token) {
-        tokenIndex[token] = savingsAccountUserDetails.balances.length;
-        savingsAccountUserDetails.balances.push({
-          token: {
-            address: token,
-            name: this.tokenManager.getTokenName(token),
-            logo: this.tokenManager.getLogo(token),
-            pricePerAssetInUSD: tokenPrice[token],
-          },
-          balanceUSD: new BigNumber(0),
-          balance: new BigNumber(0),
-          amountAllocatedToCreditLines: new BigNumber(allocatedAmountToCreditLines),
-          strategyBalance: [],
-          APR: new BigNumber(0),
-        });
-      }
-
-      // 2 elemets with same strategy and token can't exist
-      if (strategyIndex[token][strategy]) {
-        console.log(savingsAccountUserDetails.balances[tokenIndex[token]].strategyBalance[strategyIndex[token][strategy]]);
-        throw new Error('2 entities in subgraph for same token and strategy');
-      }
-
-      strategyIndex[token][strategy] = savingsAccountUserDetails.balances[tokenIndex[token]].strategyBalance.length;
-      savingsAccountUserDetails.balances[tokenIndex[token]].strategyBalance[strategyIndex[token][strategy]] = {
-        strategy: {
-          type: this.yieldApi.getStrategy(strategy),
-          address: strategy,
-          displayName: this.yieldApi.getStrategyDisplayName(strategy),
-          logo: this.yieldApi.getStrategyLogo(strategy),
-        },
-        balanceUSD: new BigNumber(amount),
-        balance: new BigNumber(amountInTokens),
-        APR: apr,
-      };
-
-      savingsAccountUserDetails.balances[tokenIndex[token]].APR = savingsAccountUserDetails.balances[tokenIndex[token]].APR.multipliedBy(
-        savingsAccountUserDetails.totalBalance
-      )
-        .plus(apr.multipliedBy(new BigNumber(amount)))
-        .div(savingsAccountUserDetails.totalBalance.plus(amount));
-      savingsAccountUserDetails.balances[tokenIndex[token]].balance =
-        savingsAccountUserDetails.balances[tokenIndex[token]].balance.plus(amountInTokens);
-      savingsAccountUserDetails.balances[tokenIndex[token]].balanceUSD =
-        savingsAccountUserDetails.balances[tokenIndex[token]].balanceUSD.plus(amount);
-      savingsAccountUserDetails.totalBalance = savingsAccountUserDetails.totalBalance.plus(amount);
+    for (let index = 0; index < uniqueTokens.length; index++) {
+      const element = uniqueTokens[index];
+      await this.tokenManager.updateAll(element);
+      prices[element] = await this.tokenManager.getPricePerAsset(element);
     }
 
-    const savingAccountsUserDetailsDisplay = {} as SavingAccountUserDetailDisplay;
-    // return savingsAccountUserDetails;
+    const uniqueStrategies = internalBalances.map((a) => a.strategy.address).filter((value, index, self) => self.indexOf(value) === index);
+    const aprs: Record<string, BigNumber> = {};
 
-    savingAccountsUserDetailsDisplay.user = savingsAccountUserDetails.user;
-    savingAccountsUserDetailsDisplay.totalBalance = { value: savingsAccountUserDetails.totalBalance.toFixed(2), decimals: 0 };
-    savingAccountsUserDetailsDisplay.balances = [];
-    savingsAccountUserDetails.balances.forEach((a) => {
-      const strategyBalance: [SavingsAccountStrategyBalanceDisplay?] = [];
-      a.strategyBalance.forEach((b) => {
-        strategyBalance.push({
-          strategy: {
-            address: b.strategy.address,
-            type: this.yieldApi.getStrategy(b.strategy.address),
-            displayName: this.yieldApi.getStrategyDisplayName(b.strategy.address),
-            logo: this.yieldApi.getStrategyLogo(b.strategy.address),
-          },
-          balance: { value: b.balance.toFixed(2), decimals: 0 },
-          balanceUSD: { value: b.balanceUSD.toFixed(2), decimals: 0 },
-          APR: b.APR.toFixed(2),
+    for (let index = 0; index < uniqueStrategies.length; index++) {
+      const element = uniqueStrategies[index];
+      aprs[element] = await this.getAPR(element);
+    }
+
+    for (let index = 0; index < uniqueTokens.length; index++) {
+      const element = uniqueTokens[index];
+      const requiredElements = internalBalances.filter((a) => a.token.address === element);
+      if (requiredElements.length > 0) {
+        const totalBalance = requiredElements.reduce((total, current) => total.plus(current.amount.value.toString()), new BigNumber(0));
+        const totalBalanceUSD = requiredElements.reduce(
+          (total, current) =>
+            total.plus(
+              new BigNumber(current.amount.value.toString())
+                .multipliedBy(prices[current.token.address])
+                .div(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(current.token.address)))
+            ),
+          new BigNumber(0)
+        );
+
+        const totalAprWeight = requiredElements.reduce(
+          (total, current) => total.plus(new BigNumber(current.amount.value.toString()).multipliedBy(aprs[current.strategy.address])),
+          new BigNumber(0)
+        );
+
+        stackedBalanceByToken.push({
+          token: requiredElements[0].token,
+          balance: { value: totalBalance.toString(), decimals: this.tokenManager.getTokenDecimals(requiredElements[0].token.address) },
+          amountAllocatedToCreditLines: '',
+          balanceUSD: { value: totalBalanceUSD.toString(), decimals: 0 },
+          strategyBalance: [...this.transformToSavingsAccountStrategyBalanceDisplay(requiredElements, aprs, prices)],
+          APR: totalAprWeight.dividedBy(totalBalance).toString(),
         });
-      });
+      }
+    }
 
-      savingAccountsUserDetailsDisplay.balances.push({
-        token: a.token,
-        balance: { value: a.balance.toFixed(2), decimals: 0 },
-        amountAllocatedToCreditLines: a.amountAllocatedToCreditLines.toFixed(2),
-        balanceUSD: { value: a.balanceUSD.toFixed(2), decimals: 0 },
-        APR: a.APR.toFixed(2),
-        strategyBalance,
-      });
+    return stackedBalanceByToken;
+  }
+
+  private transformToSavingsAccountStrategyBalanceDisplay(
+    internalBalances: InternalBalancePerTokenStrategy[],
+    aprs: Record<string, BigNumber>,
+    prices: Record<string, BigNumber>
+  ): SavingsAccountStrategyBalanceDisplay[] {
+    return internalBalances.map((a) => {
+      return {
+        strategy: a.strategy,
+        balance: a.amount,
+        balanceUSD: {
+          value: new BigNumber(a.amount.value.toString())
+            .multipliedBy(prices[a.token.address])
+            .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.token.address)))
+            .toString(),
+          decimals: 0,
+        },
+        APR: aprs[a.strategy.address].toString(),
+      };
     });
+  }
 
-    return savingAccountsUserDetailsDisplay;
+  private async transformToInternalBalancePerTokenStrategy(data: any[]): Promise<InternalBalancePerTokenStrategy[]> {
+    const allTokens = data.map((a) => a.token).filter((value, index, self) => self.indexOf(value) === index);
+    for (let index = 0; index < allTokens.length; index++) {
+      const element = allTokens[index];
+      await this.tokenManager.updateAll(element);
+    }
+
+    const prices = {};
+
+    for (let index = 0; index < allTokens.length; index++) {
+      const element = allTokens[index];
+      await this.tokenManager.updateAll(element);
+      prices[element] = await this.tokenManager.getPricePerAsset(element);
+    }
+
+    const all = data.map(async (a) => {
+      return {
+        token: {
+          address: a.token,
+          name: this.tokenManager.getTokenName(a.token),
+          logo: this.tokenManager.getLogo(a.token),
+          pricePerAssetInUSD: prices[a.token],
+        },
+        strategy: {
+          address: a.strategy.address,
+          type: this.yieldApi.getStrategy(a.strategy.address),
+          displayName: this.yieldApi.getStrategyDisplayName(a.strategy.address),
+          logo: this.yieldApi.getStrategyLogo(a.strategy.address),
+        },
+        shares: { value: a.shares, decimals: 0 },
+        amount: {
+          value: await (await this.getTokensForShares(a.strategy.address, new BigNumber(a.shares), a.token)).toString(),
+          decimals: this.tokenManager.getTokenDecimals(a.token),
+        },
+      };
+    });
+    return Promise.all(all);
+  }
+
+  private async getTokensForShares(yieldContract: string, shares: BigNumber, asset: string): Promise<BigNumber> {
+    let amount = new BigNumber(0);
+
+    try {
+      const result = (
+        await IYield__factory.connect(yieldContract, this.signer).callStatic.getTokensForShares(shares.toFixed(0), asset)
+      ).toString();
+      amount = new BigNumber(result);
+    } catch (ex) {}
+    return amount;
   }
 
   /**

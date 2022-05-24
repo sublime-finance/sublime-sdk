@@ -138,29 +138,6 @@ export interface CreditLineRequest {
   strategyType: StrategyType;
 }
 
-export interface SavingsAccountStrategyBalance {
-  strategy: Strategy;
-  balance: BigNumber;
-  balanceUSD: BigNumber;
-  APR: BigNumber;
-}
-
-export interface SavingsAccountBalance {
-  token: Asset;
-  balance: BigNumber;
-  amountAllocatedToCreditLines: BigNumber;
-  balanceUSD: BigNumber;
-  strategyBalance: [SavingsAccountStrategyBalance?];
-  APR: BigNumber; // weighted average of all strategy APRs
-}
-
-export interface SavingsAccountUserDetails {
-  user: string;
-  balances: [SavingsAccountBalance?];
-  totalBalance: BigNumber;
-}
-
-// ---------only for disaply ----------- removeLatter
 export interface SavingsAccountStrategyBalanceDisplay {
   strategy: Strategy;
   balance: Balance;
@@ -172,7 +149,7 @@ export interface SavingsAccountBalanceDisplay {
   balance: Balance;
   amountAllocatedToCreditLines: string;
   balanceUSD: Balance;
-  strategyBalance: [SavingsAccountStrategyBalanceDisplay?];
+  strategyBalance: SavingsAccountStrategyBalanceDisplay[];
   APR: string; // weighted average of all strategy APRs
 }
 export interface SavingAccountUserDetailDisplay {
