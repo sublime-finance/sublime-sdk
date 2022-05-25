@@ -33,6 +33,8 @@
 - [LenderCollectivePerToken](types_Types.md#lendercollectivepertoken)
 - [LenderCollectivePerTokenPerStrategy](types_Types.md#lendercollectivepertokenperstrategy)
 - [LenderContributionToPooledCreditLines](types_Types.md#lendercontributiontopooledcreditlines)
+- [LenderCreditLimit](types_Types.md#lendercreditlimit)
+- [LenderCreditLimitPerToken](types_Types.md#lendercreditlimitpertoken)
 - [LenderPerPoolDetail](types_Types.md#lenderperpooldetail)
 - [LenderPoolDetail](types_Types.md#lenderpooldetail)
 - [LenderTotalCredit](types_Types.md#lendertotalcredit)
@@ -231,6 +233,18 @@ ___
 ### LenderContributionToPooledCreditLines
 
 Re-exports [LenderContributionToPooledCreditLines](../interfaces/types_Types.LenderContributionToPooledCreditLines.md)
+
+___
+
+### LenderCreditLimit
+
+Re-exports [LenderCreditLimit](../interfaces/types_Types.LenderCreditLimit.md)
+
+___
+
+### LenderCreditLimitPerToken
+
+Re-exports [LenderCreditLimitPerToken](../interfaces/types_Types.LenderCreditLimitPerToken.md)
 
 ___
 

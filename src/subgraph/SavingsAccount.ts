@@ -15,7 +15,7 @@ import {
 import { getAllowances, getBalances } from '../queries';
 import BigNumber from 'bignumber.js';
 
-import {  IYield__factory, ICToken, ICToken__factory } from '../wrappers';
+import { IYield__factory, ICToken, ICToken__factory } from '../wrappers';
 
 interface InternalBalancePerTokenStrategy {
   token: Asset;
@@ -90,7 +90,7 @@ export class SavingsAccountCalls extends PoolCalls {
   }
 
   private async stackInternalBalanceByToken(internalBalances: InternalBalancePerTokenStrategy[]): Promise<SavingsAccountBalanceDisplay[]> {
-    let stackedBalanceByToken: SavingsAccountBalanceDisplay[] = [];
+    const stackedBalanceByToken: SavingsAccountBalanceDisplay[] = [];
     const uniqueTokens = internalBalances.map((a) => a.token.address).filter((value, index, self) => self.indexOf(value) === index);
 
     const prices: Record<string, BigNumber> = {};

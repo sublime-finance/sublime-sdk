@@ -94,12 +94,13 @@ export async function getPooledCreditLinesOfLender(
   return [allData, poolContributions];
 }
 
-export async function getPooledCreditLinesForLenderById(url: string, id: string): Promise<[any[], any[]]> {
+export async function getPooledCreditLinesForLenderById(url: string, lenderAddress: string, id: string): Promise<[any[], any[]]> {
+  lenderAddress = lenderAddress.toString();
   const allData = [];
   const poolContributions = [];
   const data = JSON.stringify({
     query: `{
-        lenderPerLenderPools(where:{id:"${id}"}){
+        lenderPerLenderPools(where:{lenderPool:"${id}", lenderAddress:"${lenderAddress}"}){
           lenderAddress
           amountLent
           amountWithdrawn
@@ -126,6 +127,7 @@ export async function getPooledCreditLinesForLenderById(url: string, id: string)
                 totalInterestRepaid
                 lastPrincipalUpdateTime
                 interestAccruedTillLastPrincipalUpdate
+                totalLentAmount
             }
           }
         }

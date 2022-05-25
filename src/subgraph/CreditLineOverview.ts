@@ -110,6 +110,27 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     return this.transformToInterestCollectedByLender(result);
   }
 
+  async getAvaialbleBorrowLimitOfBorrower(borrower: string): Promise<BorrowerAvailableCredit> {
+    const result: any[] = [];
+    const count = 999;
+    let skip = 0;
+    for (;;) {
+      const _temp = await getConfirmedCreditLinesOfBorrower(this.subgraphUrl, borrower, count, skip);
+      skip += count;
+      if (_temp.length == 0) {
+        break;
+      } else {
+        result.push(..._temp);
+      }
+    }
+    const allBorrowAsset: string[] = result.map((a) => a.borrowAsset);
+    for (let index = 0; index < allBorrowAsset.length; index++) {
+      const element = allBorrowAsset[index];
+      await this.tokenManager.updateAll(element);
+    }
+    return this.transformToBorrowerAvailableCredit(result);
+  }
+
   private async transformToInterestCollectedByLender(data: any[]): Promise<InterestCollectedByLender> {
     const prices = {};
     const allTokens: string[] = data.map((a) => a.borrowAsset);
@@ -507,27 +528,6 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
         amountRepaid: { value: a.amountRepaid, decimals: this.tokenManager.getTokenDecimals(a.token) },
       };
     });
-  }
-
-  async getAvaialbleBorrowLimitOfBorrower(borrower: string): Promise<BorrowerAvailableCredit> {
-    const result: any[] = [];
-    const count = 999;
-    let skip = 0;
-    for (;;) {
-      const _temp = await getConfirmedCreditLinesOfBorrower(this.subgraphUrl, borrower, count, skip);
-      skip += count;
-      if (_temp.length == 0) {
-        break;
-      } else {
-        result.push(..._temp);
-      }
-    }
-    const allBorrowAsset: string[] = result.map((a) => a.borrowAsset);
-    for (let index = 0; index < allBorrowAsset.length; index++) {
-      const element = allBorrowAsset[index];
-      await this.tokenManager.updateAll(element);
-    }
-    return this.transformToBorrowerAvailableCredit(result);
   }
 
   private async transformToBorrowerAvailableCredit(data: any[]): Promise<BorrowerAvailableCredit> {

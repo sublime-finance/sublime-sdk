@@ -142,7 +142,10 @@ export class CreditLineApi {
    * @returns debt in borrow tokens (easy readable)
    */
   public async calculateInterestAccrued(creditLineNumber: BigNumberish): Promise<Balance> {
-    const _value = await this.creditLineContract.calculateInterestAccrued(creditLineNumber);
+    let _value: string = '0';
+    try {
+      _value = await (await this.creditLineContract.calculateInterestAccrued(creditLineNumber)).toString();
+    } catch (ex) {}
     const borrowAsset: string = await (await this.creditLineContract.creditLineConstants(creditLineNumber)).borrowAsset;
     await this.tokenManager.updateTokenDecimals(borrowAsset);
     const borrowDecimal: BigNumberish = this.tokenManager.getTokenDecimals(borrowAsset);
@@ -156,7 +159,10 @@ export class CreditLineApi {
    * @returns debt in borrow tokens
    */
   public async calculateCurrentDebt(creditLineNumber: BigNumberish): Promise<Balance> {
-    const _value = await this.creditLineContract.calculateCurrentDebt(creditLineNumber);
+    let _value: string = '0';
+    try {
+      _value = await (await this.creditLineContract.calculateCurrentDebt(creditLineNumber)).toString();
+    } catch (ex) {}
     const borrowAsset: string = await (await this.creditLineContract.creditLineConstants(creditLineNumber)).borrowAsset;
     await this.tokenManager.updateTokenDecimals(borrowAsset);
     const borrowDecimal: BigNumberish = this.tokenManager.getTokenDecimals(borrowAsset);
@@ -169,7 +175,10 @@ export class CreditLineApi {
    * @returns borrowable amount in borrow tokens (easy readable)
    */
   public async calculateBorrowableAmount(creditLineNumber: BigNumberish): Promise<Balance> {
-    const _value: BigNumberish = await this.creditLineContract.callStatic.calculateBorrowableAmount(creditLineNumber);
+    let _value: string = '0';
+    try {
+      _value = await (await this.creditLineContract.callStatic.calculateBorrowableAmount(creditLineNumber)).toString();
+    } catch (ex) {}
     const borrowAsset: string = await (await this.creditLineContract.creditLineConstants(creditLineNumber)).borrowAsset;
     await this.tokenManager.updateTokenDecimals(borrowAsset);
     const borrowDecimal: BigNumberish = this.tokenManager.getTokenDecimals(borrowAsset);

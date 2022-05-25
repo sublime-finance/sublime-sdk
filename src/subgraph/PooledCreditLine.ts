@@ -224,26 +224,6 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return await this.transformToPooledCreditLine(result);
   }
 
-  /**
-   * @description Returns PCL detail and lender contribution of the same
-   * @param id
-   * @returns
-   */
-  async getLendersViewOfPooledCredit(
-    id: string
-  ): Promise<[PooledCreditLineDetail | undefined, LenderContributionToPooledCreditLines | undefined]> {
-    const [result, contributionsData] = await getPooledCreditLinesForLenderById(this.subgraphUrl, id);
-    if (result.length == 0) {
-      return [undefined, undefined];
-    }
-    let pooledCreditLines = await this.transformToPooledCreditLine(result);
-    let contributions = await this.transformToLenderContributionToPooledCreditLines(pooledCreditLines, contributionsData);
-    pooledCreditLines = pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
-    contributions = contributions.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
-
-    return [pooledCreditLines[0], contributions[0]];
-  }
-
   private async transformToPooledCreditLine(data: any[]): Promise<PooledCreditLineDetail[]> {
     const borrowTokens: string[] = data.map((a) => a.collateralAsset);
     const collateralTokens: string[] = data.map((a) => a.borrowAsset);
@@ -461,6 +441,20 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     pooledCreditLines = pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
     contributions = contributions.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
     return [pooledCreditLines, contributions];
+  }
+
+  async getSpecificPooledCreditLineOfLender(
+    lender: string,
+    id: string
+  ): Promise<[PooledCreditLineDetail | undefined, LenderContributionToPooledCreditLines | undefined]> {
+    const [poolData, contributionData] = await getPooledCreditLinesForLenderById(this.subgraphUrl, lender, id);
+    if (poolData.length == 0) {
+      return [undefined, undefined];
+    }
+
+    const poolDataDetail = await this.transformToPooledCreditLine(poolData);
+    const lenderContribution = await this.transformToLenderContributionToPooledCreditLines(poolDataDetail, contributionData);
+    return [poolDataDetail[0], lenderContribution[0]];
   }
 
   /**
