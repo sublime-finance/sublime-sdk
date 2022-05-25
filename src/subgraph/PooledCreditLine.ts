@@ -73,7 +73,8 @@ export class PooledCreditLineCalls extends CreditLineCalls {
    * @returns
    */
   async countAllPooledCreditLinesOfBorrower(borrower: string): Promise<number> {
-    const result = await getAllPooledCreditLinesOfBorrower(this.subgraphUrl, borrower);
+    const borrowerAddress = borrower.toLocaleLowerCase()
+    const result = await getAllPooledCreditLinesOfBorrower(this.subgraphUrl, borrowerAddress);
     return result.length;
   }
 
@@ -83,7 +84,8 @@ export class PooledCreditLineCalls extends CreditLineCalls {
    * @returns
    */
   async countAllPooledCreditLinesOfLender(lender: string): Promise<number> {
-    const result = await getAllPooledCreditLinesOfLender(this.subgraphUrl, lender);
+    const lenderAddress = lender.toLocaleLowerCase()
+    const result = await getAllPooledCreditLinesOfLender(this.subgraphUrl, lenderAddress);
     return result.length;
   }
 
