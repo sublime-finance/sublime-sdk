@@ -1,106 +1,114 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [subgraph](../modules/subgraph.md) / SublimeSubgraph
+[sublime-sdk](../README.md) / [Modules](../modules.md) / [subgraph/PooledCreditLineInterestCalculator](../modules/subgraph_PooledCreditLineInterestCalculator.md) / PooledCreditLineInterestCalculator
 
-# Class: SublimeSubgraph
+# Class: PooledCreditLineInterestCalculator
 
-[subgraph](../modules/subgraph.md).SublimeSubgraph
+[subgraph/PooledCreditLineInterestCalculator](../modules/subgraph_PooledCreditLineInterestCalculator.md).PooledCreditLineInterestCalculator
 
 ## Hierarchy
 
-- [`PooledCreditLineInterestCalculator`](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md)
+- [`CreditLineInterestCalculator`](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md)
 
-  ↳ **`SublimeSubgraph`**
+  ↳ **`PooledCreditLineInterestCalculator`**
+
+  ↳↳ [`SublimeSubgraph`](subgraph.SublimeSubgraph.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](subgraph.SublimeSubgraph.md#constructor)
+- [constructor](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#constructor)
 
 ### Properties
 
-- [signer](subgraph.SublimeSubgraph.md#signer)
-- [subgraphUrl](subgraph.SublimeSubgraph.md#subgraphurl)
-- [sublimeAddresses](subgraph.SublimeSubgraph.md#sublimeaddresses)
-- [tokenManager](subgraph.SublimeSubgraph.md#tokenmanager)
-- [verificationApi](subgraph.SublimeSubgraph.md#verificationapi)
-- [yieldApi](subgraph.SublimeSubgraph.md#yieldapi)
+- [signer](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#signer)
+- [subgraphUrl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#subgraphurl)
+- [sublimeAddresses](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#sublimeaddresses)
+- [tokenManager](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#tokenmanager)
+- [verificationApi](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#verificationapi)
+- [yieldApi](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#yieldapi)
 
 ### Methods
 
-- [countAllCreditLines](subgraph.SublimeSubgraph.md#countallcreditlines)
-- [countAllCreditLinesOfBorrowerWithStateIn](subgraph.SublimeSubgraph.md#countallcreditlinesofborrowerwithstatein)
-- [countAllCreditLinesOfBorrowerWithStateIn\_requestByLender](subgraph.SublimeSubgraph.md#countallcreditlinesofborrowerwithstatein_requestbylender)
-- [countAllCreditLinesOfBorrowerWithStateNotIn](subgraph.SublimeSubgraph.md#countallcreditlinesofborrowerwithstatenotin)
-- [countAllCreditLinesOfBorrowerWithStateNotIn\_requestByLender](subgraph.SublimeSubgraph.md#countallcreditlinesofborrowerwithstatenotin_requestbylender)
-- [countAllCreditLinesOfLenderWithStateIn](subgraph.SublimeSubgraph.md#countallcreditlinesoflenderwithstatein)
-- [countAllCreditLinesOfLenderWithStateIn\_requestByLender](subgraph.SublimeSubgraph.md#countallcreditlinesoflenderwithstatein_requestbylender)
-- [countAllCreditLinesOfLenderWithStateNotIn](subgraph.SublimeSubgraph.md#countallcreditlinesoflenderwithstatenotin)
-- [countAllCreditLinesOfLenderWithStateNotIn\_requestByLender](subgraph.SublimeSubgraph.md#countallcreditlinesoflenderwithstatenotin_requestbylender)
-- [countAllLendersOfPooledCreditLine](subgraph.SublimeSubgraph.md#countalllendersofpooledcreditline)
-- [countAllPooledCreditLines](subgraph.SublimeSubgraph.md#countallpooledcreditlines)
-- [countAllPooledCreditLinesOfBorrower](subgraph.SublimeSubgraph.md#countallpooledcreditlinesofborrower)
-- [countAllPooledCreditLinesOfBorrowerWithState](subgraph.SublimeSubgraph.md#countallpooledcreditlinesofborrowerwithstate)
-- [countAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph.SublimeSubgraph.md#countallpooledcreditlinesofborrowerwithstatenotin)
-- [countAllPooledCreditLinesOfLender](subgraph.SublimeSubgraph.md#countallpooledcreditlinesoflender)
-- [countAllPooledCreditLinesOfLenderWithState](subgraph.SublimeSubgraph.md#countallpooledcreditlinesoflenderwithstate)
-- [countAllPooledCreditLinesOfLenderWithStateNotIn](subgraph.SublimeSubgraph.md#countallpooledcreditlinesoflenderwithstatenotin)
-- [countAllPooledCreditLinesWithStates](subgraph.SublimeSubgraph.md#countallpooledcreditlineswithstates)
-- [countAllPooledCreditLinesWithStatesNotIn](subgraph.SublimeSubgraph.md#countallpooledcreditlineswithstatesnotin)
-- [getAllCreditLines](subgraph.SublimeSubgraph.md#getallcreditlines)
-- [getAllLendersOfPool](subgraph.SublimeSubgraph.md#getalllendersofpool)
-- [getAllPoolCreditLinesWithStateIn](subgraph.SublimeSubgraph.md#getallpoolcreditlineswithstatein)
-- [getAllPoolCreditLinesWithStateNotIn](subgraph.SublimeSubgraph.md#getallpoolcreditlineswithstatenotin)
-- [getAllPooledCreditLines](subgraph.SublimeSubgraph.md#getallpooledcreditlines)
-- [getAllPooledCreditLinesLenderCanLendTo](subgraph.SublimeSubgraph.md#getallpooledcreditlineslendercanlendto)
-- [getAllPooledCreditLinesOfBorrower](subgraph.SublimeSubgraph.md#getallpooledcreditlinesofborrower)
-- [getAllPooledCreditLinesOfBorrowerWithStateIn](subgraph.SublimeSubgraph.md#getallpooledcreditlinesofborrowerwithstatein)
-- [getAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph.SublimeSubgraph.md#getallpooledcreditlinesofborrowerwithstatenotin)
-- [getAllPooledCreditLinesOfLender](subgraph.SublimeSubgraph.md#getallpooledcreditlinesoflender)
-- [getAllPooledCreditLinesOfUser](subgraph.SublimeSubgraph.md#getallpooledcreditlinesofuser)
-- [getAllPoolsByPoolType](subgraph.SublimeSubgraph.md#getallpoolsbypooltype)
-- [getAllowances](subgraph.SublimeSubgraph.md#getallowances)
-- [getAvaialbleBorrowLimitOfBorrower](subgraph.SublimeSubgraph.md#getavaialbleborrowlimitofborrower)
-- [getBorrowerCreditLineCollective](subgraph.SublimeSubgraph.md#getborrowercreditlinecollective)
-- [getBorrowerInterestDueForAllCreditLines](subgraph.SublimeSubgraph.md#getborrowerinterestdueforallcreditlines)
-- [getBorrowerInterestDueForAllPooledCreditLines](subgraph.SublimeSubgraph.md#getborrowerinterestdueforallpooledcreditlines)
-- [getBorrowerInterestDueForSpecificCreditLines](subgraph.SublimeSubgraph.md#getborrowerinterestdueforspecificcreditlines)
-- [getConfirmedCreditLinesOfBorrower](subgraph.SublimeSubgraph.md#getconfirmedcreditlinesofborrower)
-- [getConfirmedCreditLinesOfLender](subgraph.SublimeSubgraph.md#getconfirmedcreditlinesoflender)
-- [getCreditLine](subgraph.SublimeSubgraph.md#getcreditline)
-- [getCreditLineStatus](subgraph.SublimeSubgraph.md#getcreditlinestatus)
-- [getCreditLineTimeline](subgraph.SublimeSubgraph.md#getcreditlinetimeline)
-- [getCreditLinesOverview](subgraph.SublimeSubgraph.md#getcreditlinesoverview)
-- [getDashboardOverview](subgraph.SublimeSubgraph.md#getdashboardoverview)
-- [getInterestCollectedByLender](subgraph.SublimeSubgraph.md#getinterestcollectedbylender)
-- [getLenderCreditLineCollective](subgraph.SublimeSubgraph.md#getlendercreditlinecollective)
-- [getLendersPerPool](subgraph.SublimeSubgraph.md#getlendersperpool)
-- [getPendingCreditLinesRequestedByBorrower](subgraph.SublimeSubgraph.md#getpendingcreditlinesrequestedbyborrower)
-- [getPendingCreditLinesRequestedToBorrower](subgraph.SublimeSubgraph.md#getpendingcreditlinesrequestedtoborrower)
-- [getPendingCreditLinesRequestedToLender](subgraph.SublimeSubgraph.md#getpendingcreditlinesrequestedtolender)
-- [getPendingCreditlinesRequestedByLender](subgraph.SublimeSubgraph.md#getpendingcreditlinesrequestedbylender)
-- [getPool](subgraph.SublimeSubgraph.md#getpool)
-- [getPoolByBorrower](subgraph.SublimeSubgraph.md#getpoolbyborrower)
-- [getPoolByBorrowerByType](subgraph.SublimeSubgraph.md#getpoolbyborrowerbytype)
-- [getPoolByLender](subgraph.SublimeSubgraph.md#getpoolbylender)
-- [getPoolByLenderByType](subgraph.SublimeSubgraph.md#getpoolbylenderbytype)
-- [getPooledCreditLineById](subgraph.SublimeSubgraph.md#getpooledcreditlinebyid)
-- [getPooledCreditLineCollectiveOfBorrower](subgraph.SublimeSubgraph.md#getpooledcreditlinecollectiveofborrower)
-- [getPooledCreditLineCollectiveOfLender](subgraph.SublimeSubgraph.md#getpooledcreditlinecollectiveoflender)
-- [getPooledCreditLineTimeline](subgraph.SublimeSubgraph.md#getpooledcreditlinetimeline)
-- [getPools](subgraph.SublimeSubgraph.md#getpools)
-- [getProfileOverview](subgraph.SublimeSubgraph.md#getprofileoverview)
-- [getRandomInt](subgraph.SublimeSubgraph.md#getrandomint)
-- [getSavingsAccountOverview](subgraph.SublimeSubgraph.md#getsavingsaccountoverview)
-- [getSpecificPooledCreditLineOfLender](subgraph.SublimeSubgraph.md#getspecificpooledcreditlineoflender)
-- [getTotalAmountCommitedByLender](subgraph.SublimeSubgraph.md#gettotalamountcommitedbylender)
-- [getUserMetadata](subgraph.SublimeSubgraph.md#getusermetadata)
-- [getVerifiedTwitterId](subgraph.SublimeSubgraph.md#getverifiedtwitterid)
+- [calculateInterestForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#calculateinterestforpcl)
+- [countAllCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlines)
+- [countAllCreditLinesOfBorrowerWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatein)
+- [countAllCreditLinesOfBorrowerWithStateIn\_requestByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatein_requestbylender)
+- [countAllCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatenotin)
+- [countAllCreditLinesOfBorrowerWithStateNotIn\_requestByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatenotin_requestbylender)
+- [countAllCreditLinesOfLenderWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatein)
+- [countAllCreditLinesOfLenderWithStateIn\_requestByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatein_requestbylender)
+- [countAllCreditLinesOfLenderWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatenotin)
+- [countAllCreditLinesOfLenderWithStateNotIn\_requestByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatenotin_requestbylender)
+- [countAllLendersOfPooledCreditLine](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countalllendersofpooledcreditline)
+- [countAllPooledCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlines)
+- [countAllPooledCreditLinesOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesofborrower)
+- [countAllPooledCreditLinesOfBorrowerWithState](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesofborrowerwithstate)
+- [countAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesofborrowerwithstatenotin)
+- [countAllPooledCreditLinesOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesoflender)
+- [countAllPooledCreditLinesOfLenderWithState](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesoflenderwithstate)
+- [countAllPooledCreditLinesOfLenderWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesoflenderwithstatenotin)
+- [countAllPooledCreditLinesWithStates](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlineswithstates)
+- [countAllPooledCreditLinesWithStatesNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlineswithstatesnotin)
+- [getAllCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallcreditlines)
+- [getAllLendersOfPool](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getalllendersofpool)
+- [getAllPoolCreditLinesWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpoolcreditlineswithstatein)
+- [getAllPoolCreditLinesWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpoolcreditlineswithstatenotin)
+- [getAllPooledCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlines)
+- [getAllPooledCreditLinesLenderCanLendTo](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlineslendercanlendto)
+- [getAllPooledCreditLinesOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesofborrower)
+- [getAllPooledCreditLinesOfBorrowerWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesofborrowerwithstatein)
+- [getAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesofborrowerwithstatenotin)
+- [getAllPooledCreditLinesOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesoflender)
+- [getAllPooledCreditLinesOfUser](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesofuser)
+- [getAllPoolsByPoolType](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpoolsbypooltype)
+- [getAllowances](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallowances)
+- [getAvaialbleBorrowLimitOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getavaialbleborrowlimitofborrower)
+- [getBorrowerCreditLineCollective](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getborrowercreditlinecollective)
+- [getBorrowerInterestDueForAllCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getborrowerinterestdueforallcreditlines)
+- [getBorrowerInterestDueForAllPooledCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getborrowerinterestdueforallpooledcreditlines)
+- [getBorrowerInterestDueForSpecificCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getborrowerinterestdueforspecificcreditlines)
+- [getConfirmedCreditLinesOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getconfirmedcreditlinesofborrower)
+- [getConfirmedCreditLinesOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getconfirmedcreditlinesoflender)
+- [getCreditLine](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditline)
+- [getCreditLineStatus](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinestatus)
+- [getCreditLineTimeline](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinetimeline)
+- [getCreditLinesOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinesoverview)
+- [getDashboardOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getdashboardoverview)
+- [getInterestCollectedByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getinterestcollectedbylender)
+- [getLenderCreditLineCollective](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getlendercreditlinecollective)
+- [getLendersPerPool](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getlendersperpool)
+- [getPendingCreditLinesRequestedByBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpendingcreditlinesrequestedbyborrower)
+- [getPendingCreditLinesRequestedToBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpendingcreditlinesrequestedtoborrower)
+- [getPendingCreditLinesRequestedToLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpendingcreditlinesrequestedtolender)
+- [getPendingCreditlinesRequestedByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpendingcreditlinesrequestedbylender)
+- [getPool](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpool)
+- [getPoolByBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpoolbyborrower)
+- [getPoolByBorrowerByType](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpoolbyborrowerbytype)
+- [getPoolByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpoolbylender)
+- [getPoolByLenderByType](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpoolbylenderbytype)
+- [getPooledCreditLineById](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpooledcreditlinebyid)
+- [getPooledCreditLineCollectiveOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpooledcreditlinecollectiveofborrower)
+- [getPooledCreditLineCollectiveOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpooledcreditlinecollectiveoflender)
+- [getPooledCreditLineTimeline](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpooledcreditlinetimeline)
+- [getPools](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpools)
+- [getProfileOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getprofileoverview)
+- [getRandomInt](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getrandomint)
+- [getSavingsAccountOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getsavingsaccountoverview)
+- [getSpecificPooledCreditLineOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getspecificpooledcreditlineoflender)
+- [getTotalAmountCommitedByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#gettotalamountcommitedbylender)
+- [getUserMetadata](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getusermetadata)
+- [getVerifiedTwitterId](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getverifiedtwitterid)
+- [transformToInterestDueDetailsForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#transformtointerestduedetailsforpcl)
+- [transformToInterestDueForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#transformtointerestdueforpcl)
+- [transformToInterestDuePerStrategyForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#transformtointerestdueperstrategyforpcl)
+- [transformToInterestDuePerTokenPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#transformtointerestduepertokenpcl)
+- [transformToInterestDuePerTokenPerStrategyForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#transformtointerestduepertokenperstrategyforpcl)
 
 ## Constructors
 
 ### constructor
 
-• **new SublimeSubgraph**(`url`, `signer`, `tokenManager`, `config`)
+• **new PooledCreditLineInterestCalculator**(`url`, `signer`, `tokenManager`, `config`)
 
 #### Parameters
 
@@ -113,11 +121,11 @@
 
 #### Overrides
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[constructor](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#constructor)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[constructor](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#constructor)
 
 #### Defined in
 
-[src/subgraph/index.ts:7](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/index.ts#L7)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineInterestCalculator.ts#L23)
 
 ## Properties
 
@@ -129,7 +137,7 @@
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[signer](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#signer)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[signer](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#signer)
 
 #### Defined in
 
@@ -145,7 +153,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[subgraphUrl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#subgraphurl)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[subgraphUrl](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#subgraphurl)
 
 #### Defined in
 
@@ -161,7 +169,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[sublimeAddresses](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#sublimeaddresses)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[sublimeAddresses](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#sublimeaddresses)
 
 #### Defined in
 
@@ -177,7 +185,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[tokenManager](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#tokenmanager)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[tokenManager](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#tokenmanager)
 
 #### Defined in
 
@@ -191,7 +199,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[verificationApi](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#verificationapi)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[verificationApi](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#verificationapi)
 
 #### Defined in
 
@@ -205,13 +213,35 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[yieldApi](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#yieldapi)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[yieldApi](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#yieldapi)
 
 #### Defined in
 
 [src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/Base.ts#L26)
 
 ## Methods
+
+### calculateInterestForPcl
+
+▸ `Private` **calculateInterestForPcl**(`principal`, `borrowRate`, `lastPrincipalUpdateTime`): `BigNumber`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `principal` | `string` |
+| `borrowRate` | `string` |
+| `lastPrincipalUpdateTime` | `string` |
+
+#### Returns
+
+`BigNumber`
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineInterestCalculator.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineInterestCalculator.ts#L178)
+
+___
 
 ### countAllCreditLines
 
@@ -223,7 +253,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlines)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLines](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlines)
 
 #### Defined in
 
@@ -248,7 +278,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLinesOfBorrowerWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatein)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLinesOfBorrowerWithStateIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatein)
 
 #### Defined in
 
@@ -274,7 +304,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLinesOfBorrowerWithStateIn_requestByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatein_requestbylender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLinesOfBorrowerWithStateIn_requestByLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatein_requestbylender)
 
 #### Defined in
 
@@ -299,7 +329,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatenotin)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLinesOfBorrowerWithStateNotIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatenotin)
 
 #### Defined in
 
@@ -325,7 +355,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLinesOfBorrowerWithStateNotIn_requestByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatenotin_requestbylender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLinesOfBorrowerWithStateNotIn_requestByLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlinesofborrowerwithstatenotin_requestbylender)
 
 #### Defined in
 
@@ -350,7 +380,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLinesOfLenderWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatein)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLinesOfLenderWithStateIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatein)
 
 #### Defined in
 
@@ -376,7 +406,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLinesOfLenderWithStateIn_requestByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatein_requestbylender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLinesOfLenderWithStateIn_requestByLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatein_requestbylender)
 
 #### Defined in
 
@@ -401,7 +431,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLinesOfLenderWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatenotin)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLinesOfLenderWithStateNotIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatenotin)
 
 #### Defined in
 
@@ -427,7 +457,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllCreditLinesOfLenderWithStateNotIn_requestByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatenotin_requestbylender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllCreditLinesOfLenderWithStateNotIn_requestByLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallcreditlinesoflenderwithstatenotin_requestbylender)
 
 #### Defined in
 
@@ -453,7 +483,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllLendersOfPooledCreditLine](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countalllendersofpooledcreditline)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllLendersOfPooledCreditLine](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countalllendersofpooledcreditline)
 
 #### Defined in
 
@@ -473,7 +503,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlines)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLines](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlines)
 
 #### Defined in
 
@@ -499,7 +529,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLinesOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesofborrower)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLinesOfBorrower](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlinesofborrower)
 
 #### Defined in
 
@@ -526,7 +556,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLinesOfBorrowerWithState](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesofborrowerwithstate)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLinesOfBorrowerWithState](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlinesofborrowerwithstate)
 
 #### Defined in
 
@@ -553,7 +583,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesofborrowerwithstatenotin)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlinesofborrowerwithstatenotin)
 
 #### Defined in
 
@@ -579,7 +609,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLinesOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesoflender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLinesOfLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlinesoflender)
 
 #### Defined in
 
@@ -606,7 +636,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLinesOfLenderWithState](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesoflenderwithstate)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLinesOfLenderWithState](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlinesoflenderwithstate)
 
 #### Defined in
 
@@ -633,7 +663,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLinesOfLenderWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlinesoflenderwithstatenotin)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLinesOfLenderWithStateNotIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlinesoflenderwithstatenotin)
 
 #### Defined in
 
@@ -659,7 +689,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLinesWithStates](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlineswithstates)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLinesWithStates](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlineswithstates)
 
 #### Defined in
 
@@ -685,7 +715,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[countAllPooledCreditLinesWithStatesNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlineswithstatesnotin)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[countAllPooledCreditLinesWithStatesNotIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#countallpooledcreditlineswithstatesnotin)
 
 #### Defined in
 
@@ -714,7 +744,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallcreditlines)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllCreditLines](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallcreditlines)
 
 #### Defined in
 
@@ -736,7 +766,7 @@ All the lenders of a given pool
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllLendersOfPool](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getalllendersofpool)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllLendersOfPool](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getalllendersofpool)
 
 #### Defined in
 
@@ -764,7 +794,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPoolCreditLinesWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpoolcreditlineswithstatein)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPoolCreditLinesWithStateIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpoolcreditlineswithstatein)
 
 #### Defined in
 
@@ -792,7 +822,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPoolCreditLinesWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpoolcreditlineswithstatenotin)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPoolCreditLinesWithStateNotIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpoolcreditlineswithstatenotin)
 
 #### Defined in
 
@@ -819,7 +849,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPooledCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlines)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPooledCreditLines](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpooledcreditlines)
 
 #### Defined in
 
@@ -847,7 +877,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPooledCreditLinesLenderCanLendTo](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlineslendercanlendto)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPooledCreditLinesLenderCanLendTo](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpooledcreditlineslendercanlendto)
 
 #### Defined in
 
@@ -875,7 +905,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPooledCreditLinesOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesofborrower)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPooledCreditLinesOfBorrower](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpooledcreditlinesofborrower)
 
 #### Defined in
 
@@ -904,7 +934,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPooledCreditLinesOfBorrowerWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesofborrowerwithstatein)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPooledCreditLinesOfBorrowerWithStateIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpooledcreditlinesofborrowerwithstatein)
 
 #### Defined in
 
@@ -933,7 +963,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesofborrowerwithstatenotin)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpooledcreditlinesofborrowerwithstatenotin)
 
 #### Defined in
 
@@ -961,7 +991,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPooledCreditLinesOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesoflender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPooledCreditLinesOfLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpooledcreditlinesoflender)
 
 #### Defined in
 
@@ -987,7 +1017,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPooledCreditLinesOfUser](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlinesofuser)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPooledCreditLinesOfUser](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpooledcreditlinesofuser)
 
 #### Defined in
 
@@ -1013,7 +1043,7 @@ Array of specific pool types
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllPoolsByPoolType](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpoolsbypooltype)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllPoolsByPoolType](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallpoolsbypooltype)
 
 #### Defined in
 
@@ -1037,7 +1067,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAllowances](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallowances)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllowances](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getallowances)
 
 #### Defined in
 
@@ -1061,7 +1091,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getAvaialbleBorrowLimitOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getavaialbleborrowlimitofborrower)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAvaialbleBorrowLimitOfBorrower](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getavaialbleborrowlimitofborrower)
 
 #### Defined in
 
@@ -1089,7 +1119,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getBorrowerCreditLineCollective](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getborrowercreditlinecollective)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getBorrowerCreditLineCollective](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getborrowercreditlinecollective)
 
 #### Defined in
 
@@ -1113,7 +1143,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getBorrowerInterestDueForAllCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getborrowerinterestdueforallcreditlines)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getBorrowerInterestDueForAllCreditLines](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getborrowerinterestdueforallcreditlines)
 
 #### Defined in
 
@@ -1134,10 +1164,6 @@ ___
 #### Returns
 
 `Promise`<[`InterestDueDetails`](../interfaces/types_Types.InterestDueDetails.md)\>
-
-#### Inherited from
-
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getBorrowerInterestDueForAllPooledCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getborrowerinterestdueforallpooledcreditlines)
 
 #### Defined in
 
@@ -1162,7 +1188,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getBorrowerInterestDueForSpecificCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getborrowerinterestdueforspecificcreditlines)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getBorrowerInterestDueForSpecificCreditLines](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getborrowerinterestdueforspecificcreditlines)
 
 #### Defined in
 
@@ -1190,7 +1216,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getConfirmedCreditLinesOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getconfirmedcreditlinesofborrower)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getConfirmedCreditLinesOfBorrower](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getconfirmedcreditlinesofborrower)
 
 #### Defined in
 
@@ -1218,7 +1244,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getConfirmedCreditLinesOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getconfirmedcreditlinesoflender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getConfirmedCreditLinesOfLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getconfirmedcreditlinesoflender)
 
 #### Defined in
 
@@ -1244,7 +1270,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getCreditLine](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditline)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getCreditLine](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getcreditline)
 
 #### Defined in
 
@@ -1270,7 +1296,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getCreditLineStatus](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinestatus)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getCreditLineStatus](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getcreditlinestatus)
 
 #### Defined in
 
@@ -1296,7 +1322,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getCreditLineTimeline](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinetimeline)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getCreditLineTimeline](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getcreditlinetimeline)
 
 #### Defined in
 
@@ -1322,7 +1348,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getCreditLinesOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinesoverview)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getCreditLinesOverview](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getcreditlinesoverview)
 
 #### Defined in
 
@@ -1348,7 +1374,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getDashboardOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getdashboardoverview)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getDashboardOverview](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getdashboardoverview)
 
 #### Defined in
 
@@ -1372,7 +1398,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getInterestCollectedByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getinterestcollectedbylender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getInterestCollectedByLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getinterestcollectedbylender)
 
 #### Defined in
 
@@ -1398,7 +1424,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getLenderCreditLineCollective](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getlendercreditlinecollective)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getLenderCreditLineCollective](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getlendercreditlinecollective)
 
 #### Defined in
 
@@ -1426,7 +1452,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getLendersPerPool](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getlendersperpool)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getLendersPerPool](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getlendersperpool)
 
 #### Defined in
 
@@ -1454,7 +1480,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPendingCreditLinesRequestedByBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpendingcreditlinesrequestedbyborrower)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPendingCreditLinesRequestedByBorrower](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpendingcreditlinesrequestedbyborrower)
 
 #### Defined in
 
@@ -1482,7 +1508,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPendingCreditLinesRequestedToBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpendingcreditlinesrequestedtoborrower)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPendingCreditLinesRequestedToBorrower](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpendingcreditlinesrequestedtoborrower)
 
 #### Defined in
 
@@ -1510,7 +1536,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPendingCreditLinesRequestedToLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpendingcreditlinesrequestedtolender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPendingCreditLinesRequestedToLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpendingcreditlinesrequestedtolender)
 
 #### Defined in
 
@@ -1538,7 +1564,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPendingCreditlinesRequestedByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpendingcreditlinesrequestedbylender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPendingCreditlinesRequestedByLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpendingcreditlinesrequestedbylender)
 
 #### Defined in
 
@@ -1564,7 +1590,7 @@ pool data if the pool exists, else null
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPool](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpool)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPool](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpool)
 
 #### Defined in
 
@@ -1590,7 +1616,7 @@ Array of pools for the corresponding borrower
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPoolByBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpoolbyborrower)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPoolByBorrower](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpoolbyborrower)
 
 #### Defined in
 
@@ -1617,7 +1643,7 @@ Array of pool
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPoolByBorrowerByType](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpoolbyborrowerbytype)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPoolByBorrowerByType](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpoolbyborrowerbytype)
 
 #### Defined in
 
@@ -1643,7 +1669,7 @@ Array of pool for the lender
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPoolByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpoolbylender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPoolByLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpoolbylender)
 
 #### Defined in
 
@@ -1670,7 +1696,7 @@ Array of pool
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPoolByLenderByType](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpoolbylenderbytype)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPoolByLenderByType](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpoolbylenderbytype)
 
 #### Defined in
 
@@ -1696,7 +1722,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPooledCreditLineById](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpooledcreditlinebyid)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPooledCreditLineById](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpooledcreditlinebyid)
 
 #### Defined in
 
@@ -1720,7 +1746,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPooledCreditLineCollectiveOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpooledcreditlinecollectiveofborrower)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPooledCreditLineCollectiveOfBorrower](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpooledcreditlinecollectiveofborrower)
 
 #### Defined in
 
@@ -1746,7 +1772,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPooledCreditLineCollectiveOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpooledcreditlinecollectiveoflender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPooledCreditLineCollectiveOfLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpooledcreditlinecollectiveoflender)
 
 #### Defined in
 
@@ -1774,7 +1800,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPooledCreditLineTimeline](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpooledcreditlinetimeline)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPooledCreditLineTimeline](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpooledcreditlinetimeline)
 
 #### Defined in
 
@@ -1794,7 +1820,7 @@ Array of all pools created on sublime
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getPools](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getpools)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getPools](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getpools)
 
 #### Defined in
 
@@ -1820,7 +1846,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getProfileOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getprofileoverview)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getProfileOverview](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getprofileoverview)
 
 #### Defined in
 
@@ -1846,7 +1872,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getRandomInt](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getrandomint)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getRandomInt](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getrandomint)
 
 #### Defined in
 
@@ -1872,7 +1898,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getSavingsAccountOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getsavingsaccountoverview)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getSavingsAccountOverview](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getsavingsaccountoverview)
 
 #### Defined in
 
@@ -1897,7 +1923,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getSpecificPooledCreditLineOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getspecificpooledcreditlineoflender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getSpecificPooledCreditLineOfLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getspecificpooledcreditlineoflender)
 
 #### Defined in
 
@@ -1921,7 +1947,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getTotalAmountCommitedByLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#gettotalamountcommitedbylender)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getTotalAmountCommitedByLender](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#gettotalamountcommitedbylender)
 
 #### Defined in
 
@@ -1945,7 +1971,7 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getUserMetadata](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getusermetadata)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getUserMetadata](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getusermetadata)
 
 #### Defined in
 
@@ -1969,8 +1995,111 @@ ___
 
 #### Inherited from
 
-[PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md).[getVerifiedTwitterId](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getverifiedtwitterid)
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getVerifiedTwitterId](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getverifiedtwitterid)
 
 #### Defined in
 
 [src/subgraph/UserMeta.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/UserMeta.ts#L53)
+
+___
+
+### transformToInterestDueDetailsForPcl
+
+▸ `Private` **transformToInterestDueDetailsForPcl**(`data`): `Promise`<[`InterestDueDetails`](../interfaces/types_Types.InterestDueDetails.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<[`InterestDueDetails`](../interfaces/types_Types.InterestDueDetails.md)\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineInterestCalculator.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineInterestCalculator.ts#L50)
+
+___
+
+### transformToInterestDueForPcl
+
+▸ `Private` **transformToInterestDueForPcl**(`interestDuePerTokenPerStrategy`, `prices`): `Promise`<[`InterestDue`](../interfaces/types_Types.InterestDue.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `interestDuePerTokenPerStrategy` | [`InterestDuePerTokenPerStrategy`](../interfaces/types_Types.InterestDuePerTokenPerStrategy.md)[] |
+| `prices` | `Record`<`string`, `BigNumber`\> |
+
+#### Returns
+
+`Promise`<[`InterestDue`](../interfaces/types_Types.InterestDue.md)\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineInterestCalculator.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineInterestCalculator.ts#L134)
+
+___
+
+### transformToInterestDuePerStrategyForPcl
+
+▸ `Private` **transformToInterestDuePerStrategyForPcl**(`interestDuePerTokenPerStrategy`, `prices`): `Promise`<[`InterestDuePerStrategy`](../interfaces/types_Types.InterestDuePerStrategy.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `interestDuePerTokenPerStrategy` | [`InterestDuePerTokenPerStrategy`](../interfaces/types_Types.InterestDuePerTokenPerStrategy.md)[] |
+| `prices` | `Record`<`string`, `BigNumber`\> |
+
+#### Returns
+
+`Promise`<[`InterestDuePerStrategy`](../interfaces/types_Types.InterestDuePerStrategy.md)[]\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineInterestCalculator.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineInterestCalculator.ts#L78)
+
+___
+
+### transformToInterestDuePerTokenPcl
+
+▸ `Private` **transformToInterestDuePerTokenPcl**(`interestDuePerTokenPerStrategy`): `Promise`<[`InterestDuePerToken`](../interfaces/types_Types.InterestDuePerToken.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `interestDuePerTokenPerStrategy` | [`InterestDuePerTokenPerStrategy`](../interfaces/types_Types.InterestDuePerTokenPerStrategy.md)[] |
+
+#### Returns
+
+`Promise`<[`InterestDuePerToken`](../interfaces/types_Types.InterestDuePerToken.md)[]\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineInterestCalculator.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineInterestCalculator.ts#L110)
+
+___
+
+### transformToInterestDuePerTokenPerStrategyForPcl
+
+▸ `Private` **transformToInterestDuePerTokenPerStrategyForPcl**(`data`, `prices`): `Promise`<[`InterestDuePerTokenPerStrategy`](../interfaces/types_Types.InterestDuePerTokenPerStrategy.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+| `prices` | `Record`<`string`, `BigNumber`\> |
+
+#### Returns
+
+`Promise`<[`InterestDuePerTokenPerStrategy`](../interfaces/types_Types.InterestDuePerTokenPerStrategy.md)[]\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineInterestCalculator.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineInterestCalculator.ts#L151)

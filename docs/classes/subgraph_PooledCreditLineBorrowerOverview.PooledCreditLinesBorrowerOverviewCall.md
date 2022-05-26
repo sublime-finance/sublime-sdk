@@ -1,101 +1,109 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [subgraph/UserMeta](../modules/subgraph_UserMeta.md) / UserMetaCalls
+[sublime-sdk](../README.md) / [Modules](../modules.md) / [subgraph/PooledCreditLineBorrowerOverview](../modules/subgraph_PooledCreditLineBorrowerOverview.md) / PooledCreditLinesBorrowerOverviewCall
 
-# Class: UserMetaCalls
+# Class: PooledCreditLinesBorrowerOverviewCall
 
-[subgraph/UserMeta](../modules/subgraph_UserMeta.md).UserMetaCalls
+[subgraph/PooledCreditLineBorrowerOverview](../modules/subgraph_PooledCreditLineBorrowerOverview.md).PooledCreditLinesBorrowerOverviewCall
 
 ## Hierarchy
 
-- [`SavingsAccountCalls`](subgraph_SavingsAccount.SavingsAccountCalls.md)
+- [`CreditLinesOverviewCall`](subgraph_CreditLineOverview.CreditLinesOverviewCall.md)
 
-  ↳ **`UserMetaCalls`**
+  ↳ **`PooledCreditLinesBorrowerOverviewCall`**
 
-  ↳↳ [`CreditLinesOverviewCall`](subgraph_CreditLineOverview.CreditLinesOverviewCall.md)
+  ↳↳ [`PooledCreditLinesLenderOverview`](subgraph_PooledCreditLinesLenderOverview.PooledCreditLinesLenderOverview.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](subgraph_UserMeta.UserMetaCalls.md#constructor)
+- [constructor](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#constructor)
 
 ### Properties
 
-- [signer](subgraph_UserMeta.UserMetaCalls.md#signer)
-- [subgraphUrl](subgraph_UserMeta.UserMetaCalls.md#subgraphurl)
-- [sublimeAddresses](subgraph_UserMeta.UserMetaCalls.md#sublimeaddresses)
-- [tokenManager](subgraph_UserMeta.UserMetaCalls.md#tokenmanager)
-- [verificationApi](subgraph_UserMeta.UserMetaCalls.md#verificationapi)
-- [yieldApi](subgraph_UserMeta.UserMetaCalls.md#yieldapi)
+- [signer](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#signer)
+- [subgraphUrl](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#subgraphurl)
+- [sublimeAddresses](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#sublimeaddresses)
+- [tokenManager](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#tokenmanager)
+- [verificationApi](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#verificationapi)
+- [yieldApi](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#yieldapi)
 
 ### Methods
 
-- [countAllCreditLines](subgraph_UserMeta.UserMetaCalls.md#countallcreditlines)
-- [countAllCreditLinesOfBorrowerWithStateIn](subgraph_UserMeta.UserMetaCalls.md#countallcreditlinesofborrowerwithstatein)
-- [countAllCreditLinesOfBorrowerWithStateIn\_requestByLender](subgraph_UserMeta.UserMetaCalls.md#countallcreditlinesofborrowerwithstatein_requestbylender)
-- [countAllCreditLinesOfBorrowerWithStateNotIn](subgraph_UserMeta.UserMetaCalls.md#countallcreditlinesofborrowerwithstatenotin)
-- [countAllCreditLinesOfBorrowerWithStateNotIn\_requestByLender](subgraph_UserMeta.UserMetaCalls.md#countallcreditlinesofborrowerwithstatenotin_requestbylender)
-- [countAllCreditLinesOfLenderWithStateIn](subgraph_UserMeta.UserMetaCalls.md#countallcreditlinesoflenderwithstatein)
-- [countAllCreditLinesOfLenderWithStateIn\_requestByLender](subgraph_UserMeta.UserMetaCalls.md#countallcreditlinesoflenderwithstatein_requestbylender)
-- [countAllCreditLinesOfLenderWithStateNotIn](subgraph_UserMeta.UserMetaCalls.md#countallcreditlinesoflenderwithstatenotin)
-- [countAllCreditLinesOfLenderWithStateNotIn\_requestByLender](subgraph_UserMeta.UserMetaCalls.md#countallcreditlinesoflenderwithstatenotin_requestbylender)
-- [countAllLendersOfPooledCreditLine](subgraph_UserMeta.UserMetaCalls.md#countalllendersofpooledcreditline)
-- [countAllPooledCreditLines](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlines)
-- [countAllPooledCreditLinesOfBorrower](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlinesofborrower)
-- [countAllPooledCreditLinesOfBorrowerWithState](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlinesofborrowerwithstate)
-- [countAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlinesofborrowerwithstatenotin)
-- [countAllPooledCreditLinesOfLender](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlinesoflender)
-- [countAllPooledCreditLinesOfLenderWithState](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlinesoflenderwithstate)
-- [countAllPooledCreditLinesOfLenderWithStateNotIn](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlinesoflenderwithstatenotin)
-- [countAllPooledCreditLinesWithStates](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlineswithstates)
-- [countAllPooledCreditLinesWithStatesNotIn](subgraph_UserMeta.UserMetaCalls.md#countallpooledcreditlineswithstatesnotin)
-- [getAllCreditLines](subgraph_UserMeta.UserMetaCalls.md#getallcreditlines)
-- [getAllLendersOfPool](subgraph_UserMeta.UserMetaCalls.md#getalllendersofpool)
-- [getAllPoolCreditLinesWithStateIn](subgraph_UserMeta.UserMetaCalls.md#getallpoolcreditlineswithstatein)
-- [getAllPoolCreditLinesWithStateNotIn](subgraph_UserMeta.UserMetaCalls.md#getallpoolcreditlineswithstatenotin)
-- [getAllPooledCreditLines](subgraph_UserMeta.UserMetaCalls.md#getallpooledcreditlines)
-- [getAllPooledCreditLinesLenderCanLendTo](subgraph_UserMeta.UserMetaCalls.md#getallpooledcreditlineslendercanlendto)
-- [getAllPooledCreditLinesOfBorrower](subgraph_UserMeta.UserMetaCalls.md#getallpooledcreditlinesofborrower)
-- [getAllPooledCreditLinesOfBorrowerWithStateIn](subgraph_UserMeta.UserMetaCalls.md#getallpooledcreditlinesofborrowerwithstatein)
-- [getAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_UserMeta.UserMetaCalls.md#getallpooledcreditlinesofborrowerwithstatenotin)
-- [getAllPooledCreditLinesOfLender](subgraph_UserMeta.UserMetaCalls.md#getallpooledcreditlinesoflender)
-- [getAllPooledCreditLinesOfUser](subgraph_UserMeta.UserMetaCalls.md#getallpooledcreditlinesofuser)
-- [getAllPoolsByPoolType](subgraph_UserMeta.UserMetaCalls.md#getallpoolsbypooltype)
-- [getAllowances](subgraph_UserMeta.UserMetaCalls.md#getallowances)
-- [getConfirmedCreditLinesOfBorrower](subgraph_UserMeta.UserMetaCalls.md#getconfirmedcreditlinesofborrower)
-- [getConfirmedCreditLinesOfLender](subgraph_UserMeta.UserMetaCalls.md#getconfirmedcreditlinesoflender)
-- [getCreditLine](subgraph_UserMeta.UserMetaCalls.md#getcreditline)
-- [getCreditLineStatus](subgraph_UserMeta.UserMetaCalls.md#getcreditlinestatus)
-- [getCreditLineTimeline](subgraph_UserMeta.UserMetaCalls.md#getcreditlinetimeline)
-- [getCreditLinesOverview](subgraph_UserMeta.UserMetaCalls.md#getcreditlinesoverview)
-- [getDashboardOverview](subgraph_UserMeta.UserMetaCalls.md#getdashboardoverview)
-- [getKycDetails](subgraph_UserMeta.UserMetaCalls.md#getkycdetails)
-- [getLendersPerPool](subgraph_UserMeta.UserMetaCalls.md#getlendersperpool)
-- [getPendingCreditLinesRequestedByBorrower](subgraph_UserMeta.UserMetaCalls.md#getpendingcreditlinesrequestedbyborrower)
-- [getPendingCreditLinesRequestedToBorrower](subgraph_UserMeta.UserMetaCalls.md#getpendingcreditlinesrequestedtoborrower)
-- [getPendingCreditLinesRequestedToLender](subgraph_UserMeta.UserMetaCalls.md#getpendingcreditlinesrequestedtolender)
-- [getPendingCreditlinesRequestedByLender](subgraph_UserMeta.UserMetaCalls.md#getpendingcreditlinesrequestedbylender)
-- [getPool](subgraph_UserMeta.UserMetaCalls.md#getpool)
-- [getPoolByBorrower](subgraph_UserMeta.UserMetaCalls.md#getpoolbyborrower)
-- [getPoolByBorrowerByType](subgraph_UserMeta.UserMetaCalls.md#getpoolbyborrowerbytype)
-- [getPoolByLender](subgraph_UserMeta.UserMetaCalls.md#getpoolbylender)
-- [getPoolByLenderByType](subgraph_UserMeta.UserMetaCalls.md#getpoolbylenderbytype)
-- [getPooledCreditLineById](subgraph_UserMeta.UserMetaCalls.md#getpooledcreditlinebyid)
-- [getPooledCreditLineTimeline](subgraph_UserMeta.UserMetaCalls.md#getpooledcreditlinetimeline)
-- [getPools](subgraph_UserMeta.UserMetaCalls.md#getpools)
-- [getProfileOverview](subgraph_UserMeta.UserMetaCalls.md#getprofileoverview)
-- [getRandomInt](subgraph_UserMeta.UserMetaCalls.md#getrandomint)
-- [getSavingsAccountOverview](subgraph_UserMeta.UserMetaCalls.md#getsavingsaccountoverview)
-- [getSpecificPooledCreditLineOfLender](subgraph_UserMeta.UserMetaCalls.md#getspecificpooledcreditlineoflender)
-- [getTwitterDetails](subgraph_UserMeta.UserMetaCalls.md#gettwitterdetails)
-- [getUserMetadata](subgraph_UserMeta.UserMetaCalls.md#getusermetadata)
-- [getVerifiedTwitterId](subgraph_UserMeta.UserMetaCalls.md#getverifiedtwitterid)
-- [transformToUserMetaData](subgraph_UserMeta.UserMetaCalls.md#transformtousermetadata)
+- [countAllCreditLines](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlines)
+- [countAllCreditLinesOfBorrowerWithStateIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlinesofborrowerwithstatein)
+- [countAllCreditLinesOfBorrowerWithStateIn\_requestByLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlinesofborrowerwithstatein_requestbylender)
+- [countAllCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlinesofborrowerwithstatenotin)
+- [countAllCreditLinesOfBorrowerWithStateNotIn\_requestByLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlinesofborrowerwithstatenotin_requestbylender)
+- [countAllCreditLinesOfLenderWithStateIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlinesoflenderwithstatein)
+- [countAllCreditLinesOfLenderWithStateIn\_requestByLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlinesoflenderwithstatein_requestbylender)
+- [countAllCreditLinesOfLenderWithStateNotIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlinesoflenderwithstatenotin)
+- [countAllCreditLinesOfLenderWithStateNotIn\_requestByLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallcreditlinesoflenderwithstatenotin_requestbylender)
+- [countAllLendersOfPooledCreditLine](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countalllendersofpooledcreditline)
+- [countAllPooledCreditLines](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlines)
+- [countAllPooledCreditLinesOfBorrower](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlinesofborrower)
+- [countAllPooledCreditLinesOfBorrowerWithState](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlinesofborrowerwithstate)
+- [countAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlinesofborrowerwithstatenotin)
+- [countAllPooledCreditLinesOfLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlinesoflender)
+- [countAllPooledCreditLinesOfLenderWithState](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlinesoflenderwithstate)
+- [countAllPooledCreditLinesOfLenderWithStateNotIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlinesoflenderwithstatenotin)
+- [countAllPooledCreditLinesWithStates](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlineswithstates)
+- [countAllPooledCreditLinesWithStatesNotIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#countallpooledcreditlineswithstatesnotin)
+- [getAllCreditLines](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallcreditlines)
+- [getAllLendersOfPool](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getalllendersofpool)
+- [getAllPoolCreditLinesWithStateIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpoolcreditlineswithstatein)
+- [getAllPoolCreditLinesWithStateNotIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpoolcreditlineswithstatenotin)
+- [getAllPooledCreditLines](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpooledcreditlines)
+- [getAllPooledCreditLinesLenderCanLendTo](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpooledcreditlineslendercanlendto)
+- [getAllPooledCreditLinesOfBorrower](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpooledcreditlinesofborrower)
+- [getAllPooledCreditLinesOfBorrowerWithStateIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpooledcreditlinesofborrowerwithstatein)
+- [getAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpooledcreditlinesofborrowerwithstatenotin)
+- [getAllPooledCreditLinesOfLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpooledcreditlinesoflender)
+- [getAllPooledCreditLinesOfUser](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpooledcreditlinesofuser)
+- [getAllPoolsByPoolType](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallpoolsbypooltype)
+- [getAllowances](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getallowances)
+- [getAvaialbleBorrowLimitOfBorrower](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getavaialbleborrowlimitofborrower)
+- [getBorrowerCreditLineCollective](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getborrowercreditlinecollective)
+- [getConfirmedCreditLinesOfBorrower](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getconfirmedcreditlinesofborrower)
+- [getConfirmedCreditLinesOfLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getconfirmedcreditlinesoflender)
+- [getCreditLine](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getcreditline)
+- [getCreditLineStatus](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getcreditlinestatus)
+- [getCreditLineTimeline](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getcreditlinetimeline)
+- [getCreditLinesOverview](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getcreditlinesoverview)
+- [getDashboardOverview](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getdashboardoverview)
+- [getInterestCollectedByLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getinterestcollectedbylender)
+- [getLenderCreditLineCollective](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getlendercreditlinecollective)
+- [getLendersPerPool](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getlendersperpool)
+- [getPendingCreditLinesRequestedByBorrower](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpendingcreditlinesrequestedbyborrower)
+- [getPendingCreditLinesRequestedToBorrower](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpendingcreditlinesrequestedtoborrower)
+- [getPendingCreditLinesRequestedToLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpendingcreditlinesrequestedtolender)
+- [getPendingCreditlinesRequestedByLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpendingcreditlinesrequestedbylender)
+- [getPool](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpool)
+- [getPoolByBorrower](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpoolbyborrower)
+- [getPoolByBorrowerByType](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpoolbyborrowerbytype)
+- [getPoolByLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpoolbylender)
+- [getPoolByLenderByType](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpoolbylenderbytype)
+- [getPooledCreditLineById](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpooledcreditlinebyid)
+- [getPooledCreditLineCollectiveOfBorrower](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpooledcreditlinecollectiveofborrower)
+- [getPooledCreditLineTimeline](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpooledcreditlinetimeline)
+- [getPools](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getpools)
+- [getProfileOverview](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getprofileoverview)
+- [getRandomInt](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getrandomint)
+- [getSavingsAccountOverview](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getsavingsaccountoverview)
+- [getSpecificPooledCreditLineOfLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getspecificpooledcreditlineoflender)
+- [getTotalAmountCommitedByLender](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#gettotalamountcommitedbylender)
+- [getUserMetadata](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getusermetadata)
+- [getVerifiedTwitterId](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#getverifiedtwitterid)
+- [transformToPooledCreditLineBorrowerCollective](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#transformtopooledcreditlineborrowercollective)
+- [transformToPooledCreditLineBorrowerCollectivePerStrategy](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#transformtopooledcreditlineborrowercollectiveperstrategy)
+- [transformToPooledCreditLineBorrowerCollectivePerToken](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#transformtopooledcreditlineborrowercollectivepertoken)
+- [transformToPooledCreditLineBorrowerCollectivePerTokenPerStrategy](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#transformtopooledcreditlineborrowercollectivepertokenperstrategy)
+- [transformToPooledCreditLineBorrowerData](subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md#transformtopooledcreditlineborrowerdata)
 
 ## Constructors
 
 ### constructor
 
-• **new UserMetaCalls**(`url`, `signer`, `tokenManager`, `config`)
+• **new PooledCreditLinesBorrowerOverviewCall**(`url`, `signer`, `tokenManager`, `config`)
 
 #### Parameters
 
@@ -108,11 +116,11 @@
 
 #### Overrides
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[constructor](subgraph_SavingsAccount.SavingsAccountCalls.md#constructor)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[constructor](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#constructor)
 
 #### Defined in
 
-[src/subgraph/UserMeta.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/UserMeta.ts#L10)
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineBorrowerOverview.ts#L17)
 
 ## Properties
 
@@ -124,7 +132,7 @@
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[signer](subgraph_SavingsAccount.SavingsAccountCalls.md#signer)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[signer](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#signer)
 
 #### Defined in
 
@@ -140,7 +148,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[subgraphUrl](subgraph_SavingsAccount.SavingsAccountCalls.md#subgraphurl)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[subgraphUrl](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#subgraphurl)
 
 #### Defined in
 
@@ -156,7 +164,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[sublimeAddresses](subgraph_SavingsAccount.SavingsAccountCalls.md#sublimeaddresses)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[sublimeAddresses](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#sublimeaddresses)
 
 #### Defined in
 
@@ -172,7 +180,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[tokenManager](subgraph_SavingsAccount.SavingsAccountCalls.md#tokenmanager)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[tokenManager](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#tokenmanager)
 
 #### Defined in
 
@@ -186,7 +194,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[verificationApi](subgraph_SavingsAccount.SavingsAccountCalls.md#verificationapi)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[verificationApi](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#verificationapi)
 
 #### Defined in
 
@@ -200,7 +208,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[yieldApi](subgraph_SavingsAccount.SavingsAccountCalls.md#yieldapi)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[yieldApi](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#yieldapi)
 
 #### Defined in
 
@@ -218,7 +226,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLines](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlines)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLines](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlines)
 
 #### Defined in
 
@@ -243,7 +251,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLinesOfBorrowerWithStateIn](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlinesofborrowerwithstatein)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLinesOfBorrowerWithStateIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlinesofborrowerwithstatein)
 
 #### Defined in
 
@@ -269,7 +277,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLinesOfBorrowerWithStateIn_requestByLender](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlinesofborrowerwithstatein_requestbylender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLinesOfBorrowerWithStateIn_requestByLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlinesofborrowerwithstatein_requestbylender)
 
 #### Defined in
 
@@ -294,7 +302,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLinesOfBorrowerWithStateNotIn](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlinesofborrowerwithstatenotin)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLinesOfBorrowerWithStateNotIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlinesofborrowerwithstatenotin)
 
 #### Defined in
 
@@ -320,7 +328,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLinesOfBorrowerWithStateNotIn_requestByLender](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlinesofborrowerwithstatenotin_requestbylender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLinesOfBorrowerWithStateNotIn_requestByLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlinesofborrowerwithstatenotin_requestbylender)
 
 #### Defined in
 
@@ -345,7 +353,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLinesOfLenderWithStateIn](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlinesoflenderwithstatein)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLinesOfLenderWithStateIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlinesoflenderwithstatein)
 
 #### Defined in
 
@@ -371,7 +379,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLinesOfLenderWithStateIn_requestByLender](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlinesoflenderwithstatein_requestbylender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLinesOfLenderWithStateIn_requestByLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlinesoflenderwithstatein_requestbylender)
 
 #### Defined in
 
@@ -396,7 +404,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLinesOfLenderWithStateNotIn](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlinesoflenderwithstatenotin)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLinesOfLenderWithStateNotIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlinesoflenderwithstatenotin)
 
 #### Defined in
 
@@ -422,7 +430,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllCreditLinesOfLenderWithStateNotIn_requestByLender](subgraph_SavingsAccount.SavingsAccountCalls.md#countallcreditlinesoflenderwithstatenotin_requestbylender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllCreditLinesOfLenderWithStateNotIn_requestByLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallcreditlinesoflenderwithstatenotin_requestbylender)
 
 #### Defined in
 
@@ -448,7 +456,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllLendersOfPooledCreditLine](subgraph_SavingsAccount.SavingsAccountCalls.md#countalllendersofpooledcreditline)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllLendersOfPooledCreditLine](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countalllendersofpooledcreditline)
 
 #### Defined in
 
@@ -468,7 +476,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLines](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlines)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLines](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlines)
 
 #### Defined in
 
@@ -494,7 +502,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLinesOfBorrower](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlinesofborrower)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLinesOfBorrower](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlinesofborrower)
 
 #### Defined in
 
@@ -521,7 +529,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLinesOfBorrowerWithState](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlinesofborrowerwithstate)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLinesOfBorrowerWithState](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlinesofborrowerwithstate)
 
 #### Defined in
 
@@ -548,7 +556,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlinesofborrowerwithstatenotin)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlinesofborrowerwithstatenotin)
 
 #### Defined in
 
@@ -574,7 +582,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLinesOfLender](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlinesoflender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLinesOfLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlinesoflender)
 
 #### Defined in
 
@@ -601,7 +609,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLinesOfLenderWithState](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlinesoflenderwithstate)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLinesOfLenderWithState](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlinesoflenderwithstate)
 
 #### Defined in
 
@@ -628,7 +636,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLinesOfLenderWithStateNotIn](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlinesoflenderwithstatenotin)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLinesOfLenderWithStateNotIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlinesoflenderwithstatenotin)
 
 #### Defined in
 
@@ -654,7 +662,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLinesWithStates](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlineswithstates)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLinesWithStates](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlineswithstates)
 
 #### Defined in
 
@@ -680,7 +688,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[countAllPooledCreditLinesWithStatesNotIn](subgraph_SavingsAccount.SavingsAccountCalls.md#countallpooledcreditlineswithstatesnotin)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[countAllPooledCreditLinesWithStatesNotIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#countallpooledcreditlineswithstatesnotin)
 
 #### Defined in
 
@@ -709,7 +717,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllCreditLines](subgraph_SavingsAccount.SavingsAccountCalls.md#getallcreditlines)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllCreditLines](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallcreditlines)
 
 #### Defined in
 
@@ -731,7 +739,7 @@ All the lenders of a given pool
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllLendersOfPool](subgraph_SavingsAccount.SavingsAccountCalls.md#getalllendersofpool)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllLendersOfPool](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getalllendersofpool)
 
 #### Defined in
 
@@ -759,7 +767,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPoolCreditLinesWithStateIn](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpoolcreditlineswithstatein)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPoolCreditLinesWithStateIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpoolcreditlineswithstatein)
 
 #### Defined in
 
@@ -787,7 +795,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPoolCreditLinesWithStateNotIn](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpoolcreditlineswithstatenotin)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPoolCreditLinesWithStateNotIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpoolcreditlineswithstatenotin)
 
 #### Defined in
 
@@ -814,7 +822,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPooledCreditLines](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpooledcreditlines)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPooledCreditLines](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpooledcreditlines)
 
 #### Defined in
 
@@ -842,7 +850,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPooledCreditLinesLenderCanLendTo](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpooledcreditlineslendercanlendto)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPooledCreditLinesLenderCanLendTo](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpooledcreditlineslendercanlendto)
 
 #### Defined in
 
@@ -870,7 +878,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPooledCreditLinesOfBorrower](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpooledcreditlinesofborrower)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPooledCreditLinesOfBorrower](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpooledcreditlinesofborrower)
 
 #### Defined in
 
@@ -899,7 +907,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPooledCreditLinesOfBorrowerWithStateIn](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpooledcreditlinesofborrowerwithstatein)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPooledCreditLinesOfBorrowerWithStateIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpooledcreditlinesofborrowerwithstatein)
 
 #### Defined in
 
@@ -928,7 +936,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpooledcreditlinesofborrowerwithstatenotin)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPooledCreditLinesOfBorrowerWithStateNotIn](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpooledcreditlinesofborrowerwithstatenotin)
 
 #### Defined in
 
@@ -956,7 +964,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPooledCreditLinesOfLender](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpooledcreditlinesoflender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPooledCreditLinesOfLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpooledcreditlinesoflender)
 
 #### Defined in
 
@@ -982,7 +990,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPooledCreditLinesOfUser](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpooledcreditlinesofuser)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPooledCreditLinesOfUser](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpooledcreditlinesofuser)
 
 #### Defined in
 
@@ -1008,7 +1016,7 @@ Array of specific pool types
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllPoolsByPoolType](subgraph_SavingsAccount.SavingsAccountCalls.md#getallpoolsbypooltype)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllPoolsByPoolType](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallpoolsbypooltype)
 
 #### Defined in
 
@@ -1032,11 +1040,63 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getAllowances](subgraph_SavingsAccount.SavingsAccountCalls.md#getallowances)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAllowances](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getallowances)
 
 #### Defined in
 
 [src/subgraph/SavingsAccount.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/SavingsAccount.ts#L32)
+
+___
+
+### getAvaialbleBorrowLimitOfBorrower
+
+▸ **getAvaialbleBorrowLimitOfBorrower**(`borrower`): `Promise`<[`BorrowerAvailableCredit`](../interfaces/types_Types.BorrowerAvailableCredit.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `borrower` | `string` |
+
+#### Returns
+
+`Promise`<[`BorrowerAvailableCredit`](../interfaces/types_Types.BorrowerAvailableCredit.md)\>
+
+#### Inherited from
+
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getAvaialbleBorrowLimitOfBorrower](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getavaialbleborrowlimitofborrower)
+
+#### Defined in
+
+[src/subgraph/CreditLineOverview.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/CreditLineOverview.ts#L113)
+
+___
+
+### getBorrowerCreditLineCollective
+
+▸ **getBorrowerCreditLineCollective**(`user`): `Promise`<[`BorrowerCollectiveData`](../interfaces/types_Types.BorrowerCollectiveData.md)\>
+
+**`description`** Amount borrowed and repaid by a borrower accross all credit lines
+
+**`summary`** Time based interest calculation is pending. (amountRepaid + outstandingInterest)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `user` | `string` |
+
+#### Returns
+
+`Promise`<[`BorrowerCollectiveData`](../interfaces/types_Types.BorrowerCollectiveData.md)\>
+
+#### Inherited from
+
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getBorrowerCreditLineCollective](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getborrowercreditlinecollective)
+
+#### Defined in
+
+[src/subgraph/CreditLineOverview.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/CreditLineOverview.ts#L60)
 
 ___
 
@@ -1060,7 +1120,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getConfirmedCreditLinesOfBorrower](subgraph_SavingsAccount.SavingsAccountCalls.md#getconfirmedcreditlinesofborrower)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getConfirmedCreditLinesOfBorrower](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getconfirmedcreditlinesofborrower)
 
 #### Defined in
 
@@ -1088,7 +1148,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getConfirmedCreditLinesOfLender](subgraph_SavingsAccount.SavingsAccountCalls.md#getconfirmedcreditlinesoflender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getConfirmedCreditLinesOfLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getconfirmedcreditlinesoflender)
 
 #### Defined in
 
@@ -1114,7 +1174,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getCreditLine](subgraph_SavingsAccount.SavingsAccountCalls.md#getcreditline)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getCreditLine](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getcreditline)
 
 #### Defined in
 
@@ -1140,7 +1200,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getCreditLineStatus](subgraph_SavingsAccount.SavingsAccountCalls.md#getcreditlinestatus)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getCreditLineStatus](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getcreditlinestatus)
 
 #### Defined in
 
@@ -1166,7 +1226,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getCreditLineTimeline](subgraph_SavingsAccount.SavingsAccountCalls.md#getcreditlinetimeline)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getCreditLineTimeline](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getcreditlinetimeline)
 
 #### Defined in
 
@@ -1192,7 +1252,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getCreditLinesOverview](subgraph_SavingsAccount.SavingsAccountCalls.md#getcreditlinesoverview)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getCreditLinesOverview](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getcreditlinesoverview)
 
 #### Defined in
 
@@ -1218,7 +1278,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getDashboardOverview](subgraph_SavingsAccount.SavingsAccountCalls.md#getdashboardoverview)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getDashboardOverview](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getdashboardoverview)
 
 #### Defined in
 
@@ -1226,23 +1286,53 @@ ___
 
 ___
 
-### getKycDetails
+### getInterestCollectedByLender
 
-▸ `Private` **getKycDetails**(`kycMetaData`): `Promise`<[`UserKycDetails`](../interfaces/types_Types.UserKycDetails.md)\>
+▸ **getInterestCollectedByLender**(`lender`): `Promise`<[`InterestCollectedByLender`](../interfaces/types_Types.InterestCollectedByLender.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `kycMetaData` | `string` |
+| `lender` | `string` |
 
 #### Returns
 
-`Promise`<[`UserKycDetails`](../interfaces/types_Types.UserKycDetails.md)\>
+`Promise`<[`InterestCollectedByLender`](../interfaces/types_Types.InterestCollectedByLender.md)\>
+
+#### Inherited from
+
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getInterestCollectedByLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getinterestcollectedbylender)
 
 #### Defined in
 
-[src/subgraph/UserMeta.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/UserMeta.ts#L44)
+[src/subgraph/CreditLineOverview.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/CreditLineOverview.ts#L92)
+
+___
+
+### getLenderCreditLineCollective
+
+▸ **getLenderCreditLineCollective**(`user`): `Promise`<[`LenderCollectiveData`](../interfaces/types_Types.LenderCollectiveData.md)\>
+
+**`description`** Total Amount put by a lender in all credit lines
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `user` | `string` |
+
+#### Returns
+
+`Promise`<[`LenderCollectiveData`](../interfaces/types_Types.LenderCollectiveData.md)\>
+
+#### Inherited from
+
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getLenderCreditLineCollective](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getlendercreditlinecollective)
+
+#### Defined in
+
+[src/subgraph/CreditLineOverview.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/CreditLineOverview.ts#L43)
 
 ___
 
@@ -1266,7 +1356,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getLendersPerPool](subgraph_SavingsAccount.SavingsAccountCalls.md#getlendersperpool)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getLendersPerPool](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getlendersperpool)
 
 #### Defined in
 
@@ -1294,7 +1384,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPendingCreditLinesRequestedByBorrower](subgraph_SavingsAccount.SavingsAccountCalls.md#getpendingcreditlinesrequestedbyborrower)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPendingCreditLinesRequestedByBorrower](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpendingcreditlinesrequestedbyborrower)
 
 #### Defined in
 
@@ -1322,7 +1412,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPendingCreditLinesRequestedToBorrower](subgraph_SavingsAccount.SavingsAccountCalls.md#getpendingcreditlinesrequestedtoborrower)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPendingCreditLinesRequestedToBorrower](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpendingcreditlinesrequestedtoborrower)
 
 #### Defined in
 
@@ -1350,7 +1440,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPendingCreditLinesRequestedToLender](subgraph_SavingsAccount.SavingsAccountCalls.md#getpendingcreditlinesrequestedtolender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPendingCreditLinesRequestedToLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpendingcreditlinesrequestedtolender)
 
 #### Defined in
 
@@ -1378,7 +1468,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPendingCreditlinesRequestedByLender](subgraph_SavingsAccount.SavingsAccountCalls.md#getpendingcreditlinesrequestedbylender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPendingCreditlinesRequestedByLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpendingcreditlinesrequestedbylender)
 
 #### Defined in
 
@@ -1404,7 +1494,7 @@ pool data if the pool exists, else null
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPool](subgraph_SavingsAccount.SavingsAccountCalls.md#getpool)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPool](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpool)
 
 #### Defined in
 
@@ -1430,7 +1520,7 @@ Array of pools for the corresponding borrower
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPoolByBorrower](subgraph_SavingsAccount.SavingsAccountCalls.md#getpoolbyborrower)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPoolByBorrower](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpoolbyborrower)
 
 #### Defined in
 
@@ -1457,7 +1547,7 @@ Array of pool
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPoolByBorrowerByType](subgraph_SavingsAccount.SavingsAccountCalls.md#getpoolbyborrowerbytype)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPoolByBorrowerByType](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpoolbyborrowerbytype)
 
 #### Defined in
 
@@ -1483,7 +1573,7 @@ Array of pool for the lender
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPoolByLender](subgraph_SavingsAccount.SavingsAccountCalls.md#getpoolbylender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPoolByLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpoolbylender)
 
 #### Defined in
 
@@ -1510,7 +1600,7 @@ Array of pool
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPoolByLenderByType](subgraph_SavingsAccount.SavingsAccountCalls.md#getpoolbylenderbytype)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPoolByLenderByType](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpoolbylenderbytype)
 
 #### Defined in
 
@@ -1536,11 +1626,31 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPooledCreditLineById](subgraph_SavingsAccount.SavingsAccountCalls.md#getpooledcreditlinebyid)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPooledCreditLineById](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpooledcreditlinebyid)
 
 #### Defined in
 
 [src/subgraph/PooledCreditLine.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLine.ts#L148)
+
+___
+
+### getPooledCreditLineCollectiveOfBorrower
+
+▸ **getPooledCreditLineCollectiveOfBorrower**(`borrower`): `Promise`<[`PooledCreditLineBorrowerData`](../interfaces/types_Types.PooledCreditLineBorrowerData.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `borrower` | `string` |
+
+#### Returns
+
+`Promise`<[`PooledCreditLineBorrowerData`](../interfaces/types_Types.PooledCreditLineBorrowerData.md)\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineBorrowerOverview.ts#L21)
 
 ___
 
@@ -1564,7 +1674,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPooledCreditLineTimeline](subgraph_SavingsAccount.SavingsAccountCalls.md#getpooledcreditlinetimeline)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPooledCreditLineTimeline](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpooledcreditlinetimeline)
 
 #### Defined in
 
@@ -1584,7 +1694,7 @@ Array of all pools created on sublime
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getPools](subgraph_SavingsAccount.SavingsAccountCalls.md#getpools)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getPools](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getpools)
 
 #### Defined in
 
@@ -1610,7 +1720,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getProfileOverview](subgraph_SavingsAccount.SavingsAccountCalls.md#getprofileoverview)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getProfileOverview](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getprofileoverview)
 
 #### Defined in
 
@@ -1636,7 +1746,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getRandomInt](subgraph_SavingsAccount.SavingsAccountCalls.md#getrandomint)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getRandomInt](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getrandomint)
 
 #### Defined in
 
@@ -1662,7 +1772,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getSavingsAccountOverview](subgraph_SavingsAccount.SavingsAccountCalls.md#getsavingsaccountoverview)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getSavingsAccountOverview](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getsavingsaccountoverview)
 
 #### Defined in
 
@@ -1687,7 +1797,7 @@ ___
 
 #### Inherited from
 
-[SavingsAccountCalls](subgraph_SavingsAccount.SavingsAccountCalls.md).[getSpecificPooledCreditLineOfLender](subgraph_SavingsAccount.SavingsAccountCalls.md#getspecificpooledcreditlineoflender)
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getSpecificPooledCreditLineOfLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getspecificpooledcreditlineoflender)
 
 #### Defined in
 
@@ -1695,23 +1805,27 @@ ___
 
 ___
 
-### getTwitterDetails
+### getTotalAmountCommitedByLender
 
-▸ `Private` **getTwitterDetails**(`twitterMetaData`): `Promise`<[`UserTwitterDetails`](../interfaces/types_Types.UserTwitterDetails.md)\>
+▸ **getTotalAmountCommitedByLender**(`lender`): `Promise`<[`LenderTotalCreditCommited`](../interfaces/types_Types.LenderTotalCreditCommited.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `twitterMetaData` | `string` |
+| `lender` | `string` |
 
 #### Returns
 
-`Promise`<[`UserTwitterDetails`](../interfaces/types_Types.UserTwitterDetails.md)\>
+`Promise`<[`LenderTotalCreditCommited`](../interfaces/types_Types.LenderTotalCreditCommited.md)\>
+
+#### Inherited from
+
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getTotalAmountCommitedByLender](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#gettotalamountcommitedbylender)
 
 #### Defined in
 
-[src/subgraph/UserMeta.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/UserMeta.ts#L39)
+[src/subgraph/CreditLineOverview.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/CreditLineOverview.ts#L71)
 
 ___
 
@@ -1728,6 +1842,10 @@ ___
 #### Returns
 
 `Promise`<[`UserMetaData`](../interfaces/types_Types.UserMetaData.md)[]\>
+
+#### Inherited from
+
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getUserMetadata](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getusermetadata)
 
 #### Defined in
 
@@ -1749,15 +1867,79 @@ ___
 
 `Promise`<[`TwitterDetails`](../interfaces/types_Types.TwitterDetails.md)[]\>
 
+#### Inherited from
+
+[CreditLinesOverviewCall](subgraph_CreditLineOverview.CreditLinesOverviewCall.md).[getVerifiedTwitterId](subgraph_CreditLineOverview.CreditLinesOverviewCall.md#getverifiedtwitterid)
+
 #### Defined in
 
 [src/subgraph/UserMeta.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/UserMeta.ts#L53)
 
 ___
 
-### transformToUserMetaData
+### transformToPooledCreditLineBorrowerCollective
 
-▸ `Private` **transformToUserMetaData**(`data`): `Promise`<[`UserMetaData`](../interfaces/types_Types.UserMetaData.md)[]\>
+▸ `Private` **transformToPooledCreditLineBorrowerCollective**(`pooledCreditLineBorrowerCollectivePerTokenPerStrategy`): `Promise`<[`PooledCreditLineBorrowerCollective`](../interfaces/types_Types.PooledCreditLineBorrowerCollective.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pooledCreditLineBorrowerCollectivePerTokenPerStrategy` | [`PooledCreditLineBorrowerCollectivePerTokenPerStrategy`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerTokenPerStrategy.md)[] |
+
+#### Returns
+
+`Promise`<[`PooledCreditLineBorrowerCollective`](../interfaces/types_Types.PooledCreditLineBorrowerCollective.md)\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineBorrowerOverview.ts#L163)
+
+___
+
+### transformToPooledCreditLineBorrowerCollectivePerStrategy
+
+▸ `Private` **transformToPooledCreditLineBorrowerCollectivePerStrategy**(`pooledCreditLineBorrowerCollectivePerTokenPerStrategy`): `Promise`<[`PooledCreditLineBorrowerCollectivePerStrategy`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerStrategy.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pooledCreditLineBorrowerCollectivePerTokenPerStrategy` | [`PooledCreditLineBorrowerCollectivePerTokenPerStrategy`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerTokenPerStrategy.md)[] |
+
+#### Returns
+
+`Promise`<[`PooledCreditLineBorrowerCollectivePerStrategy`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerStrategy.md)[]\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineBorrowerOverview.ts#L53)
+
+___
+
+### transformToPooledCreditLineBorrowerCollectivePerToken
+
+▸ `Private` **transformToPooledCreditLineBorrowerCollectivePerToken**(`pooledCreditLineBorrowerCollectivePerTokenPerStrategy`): `Promise`<[`PooledCreditLineBorrowerCollectivePerToken`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerToken.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pooledCreditLineBorrowerCollectivePerTokenPerStrategy` | [`PooledCreditLineBorrowerCollectivePerTokenPerStrategy`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerTokenPerStrategy.md)[] |
+
+#### Returns
+
+`Promise`<[`PooledCreditLineBorrowerCollectivePerToken`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerToken.md)[]\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineBorrowerOverview.ts#L116)
+
+___
+
+### transformToPooledCreditLineBorrowerCollectivePerTokenPerStrategy
+
+▸ `Private` **transformToPooledCreditLineBorrowerCollectivePerTokenPerStrategy**(`data`): `Promise`<[`PooledCreditLineBorrowerCollectivePerTokenPerStrategy`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerTokenPerStrategy.md)[]\>
 
 #### Parameters
 
@@ -1767,8 +1949,28 @@ ___
 
 #### Returns
 
-`Promise`<[`UserMetaData`](../interfaces/types_Types.UserMetaData.md)[]\>
+`Promise`<[`PooledCreditLineBorrowerCollectivePerTokenPerStrategy`](../interfaces/types_Types.PooledCreditLineBorrowerCollectivePerTokenPerStrategy.md)[]\>
 
 #### Defined in
 
-[src/subgraph/UserMeta.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/UserMeta.ts#L19)
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:209](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineBorrowerOverview.ts#L209)
+
+___
+
+### transformToPooledCreditLineBorrowerData
+
+▸ `Private` **transformToPooledCreditLineBorrowerData**(`data`): `Promise`<[`PooledCreditLineBorrowerData`](../interfaces/types_Types.PooledCreditLineBorrowerData.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<[`PooledCreditLineBorrowerData`](../interfaces/types_Types.PooledCreditLineBorrowerData.md)\>
+
+#### Defined in
+
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/subgraph/PooledCreditLineBorrowerOverview.ts#L26)

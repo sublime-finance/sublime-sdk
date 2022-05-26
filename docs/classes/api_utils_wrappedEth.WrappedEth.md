@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/api/utils/wrappedEth.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/api/utils/wrappedEth.ts#L12)
+[src/api/utils/wrappedEth.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/api/utils/wrappedEth.ts#L12)
 
 ## Properties
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[src/api/utils/wrappedEth.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/api/utils/wrappedEth.ts#L10)
+[src/api/utils/wrappedEth.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/api/utils/wrappedEth.ts#L10)
 
 ## Methods
 
@@ -65,7 +65,7 @@
 
 #### Defined in
 
-[src/api/utils/wrappedEth.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/api/utils/wrappedEth.ts#L16)
+[src/api/utils/wrappedEth.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/api/utils/wrappedEth.ts#L16)
 
 ___
 
@@ -87,4 +87,4 @@ ___
 
 #### Defined in
 
-[src/api/utils/wrappedEth.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/api/utils/wrappedEth.ts#L21)
+[src/api/utils/wrappedEth.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/242041c/src/api/utils/wrappedEth.ts#L21)

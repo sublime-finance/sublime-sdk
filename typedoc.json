@@ -29,7 +29,12 @@
     "./src/subgraph/index.ts",
     "./src/subgraph/Base.ts",
     "./src/subgraph/CreditLine.ts",
+    "./src/subgraph/CreditLineInterestCalculator.ts",
+    "./src/subgraph/CreditLineOverview.ts",
     "./src/subgraph/PooledCreditLine.ts",
+    "./src/subgraph/PooledCreditLineBorrowerOverview.ts",
+    "./src/subgraph/PooledCreditLineInterestCalculator.ts",
+    "./src/subgraph/PooledCreditLinesLenderOverview.ts",
     "./src/subgraph/Pools.ts",
     "./src/subgraph/SavingsAccount.ts",
     "./src/subgraph/UserMeta.ts"
