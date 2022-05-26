@@ -148,7 +148,7 @@ export interface SavingsAccountStrategyBalanceDisplay {
 export interface SavingsAccountBalanceDisplay {
   token: Asset;
   balance: Balance;
-  amountAllocatedToCreditLines: string;
+  amountAllocatedToCreditLines: Balance;
   balanceUSD: Balance;
   strategyBalance: SavingsAccountStrategyBalanceDisplay[];
   APR: string; // weighted average of all strategy APRs

@@ -76,9 +76,10 @@ export class SavingsAccountCalls extends PoolCalls {
   }
 
   private async newTransformToSavingsAccountUserDetails(address: string, data: any[]): Promise<SavingAccountUserDetailDisplay> {
-    const allowances = await this.getAllowances(address);
-    let savingsAccountUserDetails: SavingAccountUserDetailDisplay = {
-      user: address,
+    // const allowances = await this.getAllowances(address);
+    // console.log({allowances});
+    const savingsAccountUserDetails: SavingAccountUserDetailDisplay = {
+      user: address.toLowerCase(),
       totalBalance: { value: '0', decimals: 0 },
       balances: [],
     };
@@ -86,11 +87,12 @@ export class SavingsAccountCalls extends PoolCalls {
     const result = await this.transformToInternalBalancePerTokenStrategy(data);
     const stackedBalancesByToken = await this.stackInternalBalanceByToken(result);
     savingsAccountUserDetails.balances.push(...stackedBalancesByToken);
-    let cumulativeBalanceUSD = new BigNumber(0);
-    for (let index = 0; index < savingsAccountUserDetails.balances.length; index++) {
-      cumulativeBalanceUSD = cumulativeBalanceUSD.plus(new BigNumber(savingsAccountUserDetails.balances[index].balanceUSD.value.toString()));
-    }
-    savingsAccountUserDetails.totalBalance = { value: cumulativeBalanceUSD.toString(), decimals: 0};
+    const totalBalance = stackedBalancesByToken.reduce(
+      (total, current) => total.plus(current.balanceUSD.value.toString()),
+      new BigNumber(0)
+    );
+    savingsAccountUserDetails.totalBalance = { value: totalBalance.toString(), decimals: 0 };
+
     return savingsAccountUserDetails;
   }
 
@@ -137,7 +139,7 @@ export class SavingsAccountCalls extends PoolCalls {
         stackedBalanceByToken.push({
           token: requiredElements[0].token,
           balance: { value: totalBalance.toString(), decimals: this.tokenManager.getTokenDecimals(requiredElements[0].token.address) },
-          amountAllocatedToCreditLines: '',
+          amountAllocatedToCreditLines: { value: '0', decimals: this.tokenManager.getTokenDecimals(requiredElements[0].token.address) },
           balanceUSD: { value: totalBalanceUSD.toString(), decimals: 0 },
           strategyBalance: [...this.transformToSavingsAccountStrategyBalanceDisplay(requiredElements, aprs, prices)],
           APR: totalAprWeight.dividedBy(totalBalance).toString(),
