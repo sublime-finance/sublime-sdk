@@ -371,6 +371,7 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
           status
+          minBorrowAmount
         }
       }`,
   });
@@ -749,7 +750,7 @@ export async function getAllPooledCreditLinesOfLender(url: string, lenderAddress
       query: `{
         lenderSharesBalancePCLs(where:{user:"${lenderAddress}"}){
           user
-          pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}}){
+          pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}){
             id
             status
           }
