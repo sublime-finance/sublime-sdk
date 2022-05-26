@@ -371,6 +371,7 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
           status
+          minBorrowAmount
         }
       }`,
   });
