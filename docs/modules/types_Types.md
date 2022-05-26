@@ -26,6 +26,11 @@
 - [DashboardOverview](types_Types.md#dashboardoverview)
 - [InterestCollectedByLender](types_Types.md#interestcollectedbylender)
 - [InterestCollectedByLenderPerToken](types_Types.md#interestcollectedbylenderpertoken)
+- [InterestDue](types_Types.md#interestdue)
+- [InterestDueDetails](types_Types.md#interestduedetails)
+- [InterestDuePerStrategy](types_Types.md#interestdueperstrategy)
+- [InterestDuePerToken](types_Types.md#interestduepertoken)
+- [InterestDuePerTokenPerStrategy](types_Types.md#interestduepertokenperstrategy)
 - [InternalTokenMap](types_Types.md#internaltokenmap)
 - [LenderCollective](types_Types.md#lendercollective)
 - [LenderCollectiveData](types_Types.md#lendercollectivedata)
@@ -191,6 +196,36 @@ ___
 ### InterestCollectedByLenderPerToken
 
 Re-exports [InterestCollectedByLenderPerToken](../interfaces/types_Types.InterestCollectedByLenderPerToken.md)
+
+___
+
+### InterestDue
+
+Re-exports [InterestDue](../interfaces/types_Types.InterestDue.md)
+
+___
+
+### InterestDueDetails
+
+Re-exports [InterestDueDetails](../interfaces/types_Types.InterestDueDetails.md)
+
+___
+
+### InterestDuePerStrategy
+
+Re-exports [InterestDuePerStrategy](../interfaces/types_Types.InterestDuePerStrategy.md)
+
+___
+
+### InterestDuePerToken
+
+Re-exports [InterestDuePerToken](../interfaces/types_Types.InterestDuePerToken.md)
+
+___
+
+### InterestDuePerTokenPerStrategy
+
+Re-exports [InterestDuePerTokenPerStrategy](../interfaces/types_Types.InterestDuePerTokenPerStrategy.md)
 
 ___
 

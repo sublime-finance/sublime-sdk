@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/79a97f8/src/types/overview/PooledCreditLineOverview.ts#L33)
+[src/types/overview/PooledCreditLineOverview.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/types/overview/PooledCreditLineOverview.ts#L33)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/79a97f8/src/types/overview/PooledCreditLineOverview.ts#L34)
+[src/types/overview/PooledCreditLineOverview.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/types/overview/PooledCreditLineOverview.ts#L34)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/79a97f8/src/types/overview/PooledCreditLineOverview.ts#L36)
+[src/types/overview/PooledCreditLineOverview.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/types/overview/PooledCreditLineOverview.ts#L36)
 
 ___
 
@@ -61,4 +61,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/79a97f8/src/types/overview/PooledCreditLineOverview.ts#L35)
+[src/types/overview/PooledCreditLineOverview.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/types/overview/PooledCreditLineOverview.ts#L35)

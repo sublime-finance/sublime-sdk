@@ -4,6 +4,16 @@
 
 [types/Types](../modules/types_Types.md).BorrowerCollective
 
+## Hierarchy
+
+- **`BorrowerCollective`**
+
+  ↳ [`BorrowerCollectivePerTokenPerStrategy`](types_Types.BorrowerCollectivePerTokenPerStrategy.md)
+
+  ↳ [`BorrowerCollectivePerToken`](types_Types.BorrowerCollectivePerToken.md)
+
+  ↳ [`BorrowerCollectivePerStrategy`](types_Types.BorrowerCollectivePerStrategy.md)
+
 ## Table of contents
 
 ### Properties
@@ -20,7 +30,7 @@
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/79a97f8/src/types/overview/CreditLineOverview.ts#L65)
+[src/types/overview/CreditLineOverview.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/types/overview/CreditLineOverview.ts#L56)
 
 ___
 
@@ -30,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/79a97f8/src/types/overview/CreditLineOverview.ts#L66)
+[src/types/overview/CreditLineOverview.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/types/overview/CreditLineOverview.ts#L57)
 
 ___
 
@@ -40,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/79a97f8/src/types/overview/CreditLineOverview.ts#L63)
+[src/types/overview/CreditLineOverview.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/5bcc6fc/src/types/overview/CreditLineOverview.ts#L54)

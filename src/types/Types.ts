@@ -5,6 +5,7 @@ export * from './overview/CreditLineOverview';
 export * from './overview/LenderTotalCredit';
 export * from './overview/BorrowerCreditLimit';
 export * from './overview/PooledCreditLineOverview';
+export * from './overview/InterestDetails';
 
 export interface TempTwitterResponse {
   account_name: string;

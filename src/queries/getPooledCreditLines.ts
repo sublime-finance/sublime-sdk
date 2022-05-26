@@ -95,7 +95,9 @@ export async function getPooledCreditLinesOfLender(
 }
 
 export async function getPooledCreditLinesForLenderById(url: string, lenderAddress: string, id: string): Promise<[any[], any[]]> {
-  lenderAddress = lenderAddress.toString();
+  lenderAddress = lenderAddress.toLowerCase();
+  id = id.toLowerCase();
+
   const allData = [];
   const poolContributions = [];
   const data = JSON.stringify({

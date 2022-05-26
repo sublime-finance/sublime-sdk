@@ -36,27 +36,18 @@ export interface LenderCollectiveData {
   lenderCollectivePerTokenPerStrategy: LenderCollectivePerTokenPerStrategy[];
 }
 
-export interface BorrowerCollectivePerTokenPerStrategy {
-  id: string;
+export interface BorrowerCollectivePerTokenPerStrategy extends BorrowerCollective {
   token: Asset;
   strategy: Strategy;
-  amountBorrowed: Balance;
-  amountRepaid: Balance;
 }
 
-export interface BorrowerCollectivePerToken {
-  id: string;
+export interface BorrowerCollectivePerToken extends BorrowerCollective {
   token: Asset;
-  amountBorrowed: Balance;
-  amountRepaid: Balance;
 }
 
-export interface BorrowerCollectivePerStrategy {
-  id: string;
+export interface BorrowerCollectivePerStrategy extends BorrowerCollective {
   strategy: Strategy;
   // amountBorrowed is in USD
-  amountBorrowed: Balance;
-  amountRepaid: Balance;
 }
 
 export interface BorrowerCollective {

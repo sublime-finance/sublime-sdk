@@ -510,6 +510,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     }
 
     return data.map((a) => {
+      console.log(a);
       return {
         id: a.id,
         token: {
