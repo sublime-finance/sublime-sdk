@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/d55c3c0/src/api/utils/poolEthUtils.ts#L16)
+[src/api/utils/poolEthUtils.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/api/utils/poolEthUtils.ts#L16)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/d55c3c0/src/api/utils/poolEthUtils.ts#L14)
+[src/api/utils/poolEthUtils.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/api/utils/poolEthUtils.ts#L14)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/d55c3c0/src/api/utils/poolEthUtils.ts#L12)
+[src/api/utils/poolEthUtils.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/api/utils/poolEthUtils.ts#L12)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/d55c3c0/src/api/utils/poolEthUtils.ts#L13)
+[src/api/utils/poolEthUtils.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/api/utils/poolEthUtils.ts#L13)
 
 ## Methods
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/d55c3c0/src/api/utils/poolEthUtils.ts#L48)
+[src/api/utils/poolEthUtils.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/api/utils/poolEthUtils.ts#L48)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/d55c3c0/src/api/utils/poolEthUtils.ts#L34)
+[src/api/utils/poolEthUtils.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/api/utils/poolEthUtils.ts#L34)
 
 ___
 
@@ -145,4 +145,4 @@ ___
 
 #### Defined in
 
-[src/api/utils/poolEthUtils.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/d55c3c0/src/api/utils/poolEthUtils.ts#L70)
+[src/api/utils/poolEthUtils.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/api/utils/poolEthUtils.ts#L70)

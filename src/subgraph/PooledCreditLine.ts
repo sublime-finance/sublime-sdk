@@ -301,7 +301,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
           value: await (await this.getCurrentDebtForPooledCreditLines(a.id)).toString(),
           decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
-        minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) }
+        minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
       };
     });
 
