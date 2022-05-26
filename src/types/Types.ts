@@ -1,4 +1,3 @@
-import { BigNumber } from 'bignumber.js';
 import { BigNumberish, Overrides } from 'ethers';
 
 export * from './overview/CreditLineOverview';
@@ -7,6 +6,19 @@ export * from './overview/BorrowerCreditLimit';
 export * from './overview/PooledCreditLineOverview';
 export * from './overview/InterestDetails';
 
+export enum PclUpcomingState {
+  ABOUT_TO_EXPIRE = 'PCL is about to cross endsAt time',
+  ABOUT_TO_DEFAULT = 'PCL is about to cross defaultsAt time',
+}
+
+export interface PclsToTakeAction {
+  id: string;
+  status: string;
+  endsAt: string;
+  defaultsAt: string;
+  upcomingAction: PclUpcomingState;
+  timeRemaining: string;
+}
 export interface TempTwitterResponse {
   account_name: string;
   account_username: string;

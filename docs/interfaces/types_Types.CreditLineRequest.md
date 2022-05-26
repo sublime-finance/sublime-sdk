@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/types/Types.ts#L132)
+[src/types/Types.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/types/Types.ts#L144)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/types/Types.ts#L135)
+[src/types/Types.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/types/Types.ts#L147)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/types/Types.ts#L137)
+[src/types/Types.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/types/Types.ts#L149)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/types/Types.ts#L133)
+[src/types/Types.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/types/Types.ts#L145)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/types/Types.ts#L134)
+[src/types/Types.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/types/Types.ts#L146)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/types/Types.ts#L138)
+[src/types/Types.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/types/Types.ts#L150)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/types/Types.ts#L136)
+[src/types/Types.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/types/Types.ts#L148)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/35af988/src/types/Types.ts#L139)
+[src/types/Types.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/types/Types.ts#L151)

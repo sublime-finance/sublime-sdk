@@ -49,6 +49,8 @@
 - [LenderWithdrawableAmount](types_Types.md#lenderwithdrawableamount)
 - [Operation](types_Types.md#operation)
 - [Options](types_Types.md#options)
+- [PclUpcomingState](types_Types.md#pclupcomingstate)
+- [PclsToTakeAction](types_Types.md#pclstotakeaction)
 - [PoolDetail](types_Types.md#pooldetail)
 - [PoolLender](types_Types.md#poollender)
 - [PooledCreditLineBorrowerCollective](types_Types.md#pooledcreditlineborrowercollective)
@@ -334,6 +336,18 @@ ___
 ### Options
 
 Re-exports [Options](../interfaces/types_Types.Options.md)
+
+___
+
+### PclUpcomingState
+
+Re-exports [PclUpcomingState](../enums/types_Types.PclUpcomingState.md)
+
+___
+
+### PclsToTakeAction
+
+Re-exports [PclsToTakeAction](../interfaces/types_Types.PclsToTakeAction.md)
 
 ___
 

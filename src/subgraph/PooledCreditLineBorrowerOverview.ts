@@ -3,14 +3,18 @@ import { TokenManager } from '../tokenManager';
 import { SublimeConfig } from '../types/sublimeConfig';
 import { CreditLinesOverviewCall } from './CreditLineOverview';
 
-import { getBorrowerPooledCreditLineCollective } from '../queries';
+import { getBorrowerPooledCreditLineCollective, getAllPooledCreditLinesOfBorrowerWithState } from '../queries';
 import {
+  CreditLineStatus,
   PooledCreditLineBorrowerCollective,
   PooledCreditLineBorrowerCollectivePerStrategy,
   PooledCreditLineBorrowerCollectivePerToken,
   PooledCreditLineBorrowerCollectivePerTokenPerStrategy,
   PooledCreditLineBorrowerData,
+  PclUpcomingState,
+  PclsToTakeAction,
 } from '../types/Types';
+
 import BigNumber from 'bignumber.js';
 
 export class PooledCreditLinesBorrowerOverviewCall extends CreditLinesOverviewCall {
@@ -21,6 +25,30 @@ export class PooledCreditLinesBorrowerOverviewCall extends CreditLinesOverviewCa
   async getPooledCreditLineCollectiveOfBorrower(borrower: string): Promise<PooledCreditLineBorrowerData> {
     const result = await getBorrowerPooledCreditLineCollective(this.subgraphUrl, borrower);
     return this.transformToPooledCreditLineBorrowerData(result);
+  }
+
+  async getLatestActionablePooledCreditLinesOfBorrower(borrower: string): Promise<PclsToTakeAction[]> {
+    const result = await getAllPooledCreditLinesOfBorrowerWithState(this.subgraphUrl, borrower, [
+      CreditLineStatus.ACTIVE,
+      CreditLineStatus.REQUESTED,
+    ]);
+    const now = new BigNumber(new Date().valueOf()).div(1000);
+
+    const gtEndedAtAndLtDefaultsAt: PclsToTakeAction[] = result
+      .filter((a) => now.gte(a.endsAt) && now.lt(a.defaultsAt))
+      .map((a) => {
+        return { ...a, upcomingAction: PclUpcomingState.ABOUT_TO_DEFAULT, timeRemaining: new BigNumber(a.defaultsAt).minus(now).toFixed() };
+      });
+    const ltEndedAt: PclsToTakeAction[] = result
+      .filter((a) => now.lt(a.endsAt))
+      .map((a) => {
+        return { ...a, upcomingAction: PclUpcomingState.ABOUT_TO_EXPIRE, timeRemaining: new BigNumber(a.endsAt).minus(now).toFixed() };
+      });
+
+    const actionablePcls: PclsToTakeAction[] = [...gtEndedAtAndLtDefaultsAt, ...ltEndedAt].sort((a, b) =>
+      new BigNumber(a.timeRemaining).minus(b.timeRemaining).toNumber()
+    );
+    return actionablePcls;
   }
 
   private async transformToPooledCreditLineBorrowerData(data: any[]): Promise<PooledCreditLineBorrowerData> {

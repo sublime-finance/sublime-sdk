@@ -843,6 +843,8 @@ export async function getAllPooledCreditLinesOfBorrowerWithState(url: string, bo
       }, orderBy: createdAt, orderDirection: desc, where:{borrowerAddress:"${borrowerAddress}",status_in:[${status}]}){
           id
           status
+          endsAt
+          defaultsAt
         }
       }`,
     });
