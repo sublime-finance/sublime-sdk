@@ -377,7 +377,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(_id);
       if (
         pooledCLConstants.idealCollateralRatio.gt(colRatio) ||
-        (new BigNumber(now).gt(pooledCLConstants.defaultsAt.toString()) && pooledCreditLineVariables.principal.gt(0))
+        (new BigNumber(now).div(1000).gt(pooledCLConstants.defaultsAt.toString()) && pooledCreditLineVariables.principal.gt(0))
       ) {
         return CreditLineStatus.LIQUIDATE_CALLABLE;
       }

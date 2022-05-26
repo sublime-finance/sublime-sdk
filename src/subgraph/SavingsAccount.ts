@@ -77,7 +77,7 @@ export class SavingsAccountCalls extends PoolCalls {
 
   private async newTransformToSavingsAccountUserDetails(address: string, data: any[]): Promise<SavingAccountUserDetailDisplay> {
     const allowances = await this.getAllowances(address);
-    const savingsAccountUserDetails: SavingAccountUserDetailDisplay = {
+    let savingsAccountUserDetails: SavingAccountUserDetailDisplay = {
       user: address,
       totalBalance: { value: '0', decimals: 0 },
       balances: [],
@@ -86,6 +86,11 @@ export class SavingsAccountCalls extends PoolCalls {
     const result = await this.transformToInternalBalancePerTokenStrategy(data);
     const stackedBalancesByToken = await this.stackInternalBalanceByToken(result);
     savingsAccountUserDetails.balances.push(...stackedBalancesByToken);
+    let cumulativeBalanceUSD = new BigNumber(0);
+    for (let index = 0; index < savingsAccountUserDetails.balances.length; index++) {
+      cumulativeBalanceUSD = cumulativeBalanceUSD.plus(new BigNumber(savingsAccountUserDetails.balances[index].balanceUSD.value.toString()));
+    }
+    savingsAccountUserDetails.totalBalance = { value: cumulativeBalanceUSD.toString(), decimals: 0};
     return savingsAccountUserDetails;
   }
 

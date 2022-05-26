@@ -749,7 +749,7 @@ export async function getAllPooledCreditLinesOfLender(url: string, lenderAddress
       query: `{
         lenderSharesBalancePCLs(where:{user:"${lenderAddress}"}){
           user
-          pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}}){
+          pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}){
             id
             status
           }
