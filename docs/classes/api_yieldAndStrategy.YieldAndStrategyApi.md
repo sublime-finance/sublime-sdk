@@ -44,17 +44,19 @@
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L22)
+[src/api/yieldAndStrategy.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L40)
 
 ## Properties
 
 ### config
 
-• **config**: [`SublimeConfig`](../interfaces/types_sublimeConfig.SublimeConfig.md)
+• `Private` **config**: [`SublimeConfig`](../interfaces/types_sublimeConfig.SublimeConfig.md)
+
+**`description`** Internal store for all sublime contracts addresses
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L16)
+[src/api/yieldAndStrategy.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L23)
 
 ___
 
@@ -62,9 +64,11 @@ ___
 
 • `Private` **displayName**: `Record`<`string`, `string`\> = `{}`
 
+**`description`** Display names of all strategies
+
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L19)
+[src/api/yieldAndStrategy.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L33)
 
 ___
 
@@ -72,9 +76,11 @@ ___
 
 • `Private` **logo**: `Record`<`string`, `string`\> = `{}`
 
+**`description`** Logo for all strategies
+
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L20)
+[src/api/yieldAndStrategy.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L38)
 
 ___
 
@@ -82,9 +88,11 @@ ___
 
 • `Private` **signer**: `Signer`
 
+**`description`** Signer Object
+
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L15)
+[src/api/yieldAndStrategy.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L18)
 
 ___
 
@@ -92,33 +100,35 @@ ___
 
 • `Private` **tokenManager**: [`TokenManager`](tokenManager.TokenManager.md)
 
+**`description`** Object to update and fetch token meta data
+
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L17)
+[src/api/yieldAndStrategy.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L28)
 
 ## Methods
 
 ### getSharesForTokens
 
-▸ **getSharesForTokens**(`yieldAddress`, `asset`, `amount`): `Promise`<`string`\>
-
-**`description`** returns the number shares that will be generated for given number of tokens
+▸ **getSharesForTokens**(`yieldType`, `asset`, `amount`): `Promise`<`string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `yieldAddress` | `string` |
-| `asset` | `string` |
-| `amount` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `yieldType` | [`StrategyType`](../enums/types_Types.StrategyType.md) | Type of yield/strategy |
+| `asset` | `string` | Address of the asset/token |
+| `amount` | `string` | Number of tokens |
 
 #### Returns
 
 `Promise`<`string`\>
 
+Number of shares that will be generated for given number of tokens and strategy
+
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L78)
+[src/api/yieldAndStrategy.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L95)
 
 ___
 
@@ -126,7 +136,7 @@ ___
 
 ▸ **getStrategies**(): [`Strategy`](../interfaces/types_Types.Strategy.md)[]
 
-**`description`** returns strategies supported sublime-sdk
+**`description`** returns all strategies supported sublime-sdk
 
 #### Returns
 
@@ -134,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L103)
+[src/api/yieldAndStrategy.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L121)
 
 ___
 
@@ -158,7 +168,7 @@ null if invalid strategy address is given in input
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L140)
+[src/api/yieldAndStrategy.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L158)
 
 ___
 
@@ -182,7 +192,7 @@ null if invalid strategy name is given
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L125)
+[src/api/yieldAndStrategy.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L143)
 
 ___
 
@@ -192,17 +202,19 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `address` | `string` | yield/strategy address |
 
 #### Returns
 
 `string`
 
+Display Name/Info for the strategy
+
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L163)
+[src/api/yieldAndStrategy.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L189)
 
 ___
 
@@ -212,39 +224,41 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `address` | `string` | yield/strategy address |
 
 #### Returns
 
 `string`
 
+URL of the strategy logo
+
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L154)
+[src/api/yieldAndStrategy.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L176)
 
 ___
 
 ### getTokensForShares
 
-▸ **getTokensForShares**(`yieldAddress`, `asset`, `shares`, `sharesInLowestUnits?`): `Promise`<`BigNumber`\>
-
-**`description`** Returns the number of tokens that will be redeemed for given number of shares
+▸ **getTokensForShares**(`yieldType`, `asset`, `shares`, `sharesInLowestUnits?`): `Promise`<`BigNumber`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `yieldAddress` | `string` |
-| `asset` | `string` |
-| `shares` | `BigNumber` |
-| `sharesInLowestUnits?` | `boolean` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `yieldType` | [`StrategyType`](../enums/types_Types.StrategyType.md) | Type of yield/strategy |
+| `asset` | `string` | Address of the asset/token |
+| `shares` | `BigNumber` | Number of shares |
+| `sharesInLowestUnits?` | `boolean` | If true, token decimals for shares are ignored |
 
 #### Returns
 
 `Promise`<`BigNumber`\>
 
+Total number of underlying tokens for a given asset and strategy
+
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/yieldAndStrategy.ts#L41)
+[src/api/yieldAndStrategy.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/yieldAndStrategy.ts#L58)

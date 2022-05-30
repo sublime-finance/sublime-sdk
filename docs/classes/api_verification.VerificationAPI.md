@@ -21,6 +21,7 @@
 ### Methods
 
 - [addVerifier](api_verification.VerificationAPI.md#addverifier)
+- [blacklistDigest](api_verification.VerificationAPI.md#blacklistdigest)
 - [getVerifierAddress](api_verification.VerificationAPI.md#getverifieraddress)
 - [getVerifierType](api_verification.VerificationAPI.md#getverifiertype)
 - [isUser](api_verification.VerificationAPI.md#isuser)
@@ -31,7 +32,6 @@
 - [unregisterSelfUsingAdminVerifier](api_verification.VerificationAPI.md#unregisterselfusingadminverifier)
 - [unregisterSelfUsingTwitterVerifier](api_verification.VerificationAPI.md#unregisterselfusingtwitterverifier)
 - [updateSignerAddress](api_verification.VerificationAPI.md#updatesigneraddress)
-- [updateVerification](api_verification.VerificationAPI.md#updateverification)
 
 ## Constructors
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[src/api/verification.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L30)
+[src/api/verification.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L49)
 
 ## Properties
 
@@ -56,9 +56,11 @@
 
 • `Private` **adminVerifier**: `AdminVerifier`
 
+**`description`** Admin Verifier contract instance
+
 #### Defined in
 
-[src/api/verification.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L23)
+[src/api/verification.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L38)
 
 ___
 
@@ -66,9 +68,11 @@ ___
 
 • `Private` **config**: [`SublimeConfig`](../interfaces/types_sublimeConfig.SublimeConfig.md)
 
+**`description`** Internal store for all sublime contracts addresses
+
 #### Defined in
 
-[src/api/verification.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L25)
+[src/api/verification.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L43)
 
 ___
 
@@ -76,9 +80,11 @@ ___
 
 • `Private` **signer**: `Signer`
 
+**`description`** Signer Object
+
 #### Defined in
 
-[src/api/verification.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L20)
+[src/api/verification.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L23)
 
 ___
 
@@ -86,9 +92,11 @@ ___
 
 • `Private` **twitterVerifier**: `TwitterVerifier`
 
+**`description`** Twitter Verifier contract instance
+
 #### Defined in
 
-[src/api/verification.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L22)
+[src/api/verification.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L33)
 
 ___
 
@@ -96,21 +104,25 @@ ___
 
 • `Private` **verification**: `Verification`
 
+**`description`** verification contract instance
+
 #### Defined in
 
-[src/api/verification.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L21)
+[src/api/verification.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L28)
 
 ## Methods
 
 ### addVerifier
 
-▸ **addVerifier**(`verifier?`, `options?`): `Promise`<`ContractTransaction`\>
+▸ **addVerifier**(`verifier`, `options?`): `Promise`<`ContractTransaction`\>
+
+**`description`** Only Verification Admin can call this function
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `verifier` | `string` | Address of the verifier contract. (Default is the admin verifier) |
+| `verifier` | `string` | address of the new verifier contract |
 | `options?` | [`Options`](../interfaces/types_Types.Options.md) | - |
 
 #### Returns
@@ -119,7 +131,28 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L59)
+[src/api/verification.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L81)
+
+___
+
+### blacklistDigest
+
+▸ **blacklistDigest**(`hash`, `options?`): `Promise`<`ContractTransaction`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `hash` | `BytesLike` | Hash to blacklist |
+| `options?` | [`Options`](../interfaces/types_Types.Options.md) |  |
+
+#### Returns
+
+`Promise`<`ContractTransaction`\>
+
+#### Defined in
+
+[src/api/verification.ts:171](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L171)
 
 ___
 
@@ -129,17 +162,19 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | [`VerifierType`](../enums/types_Types.VerifierType.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `type` | [`VerifierType`](../enums/types_Types.VerifierType.md) | Type of verifier |
 
 #### Returns
 
 `string`
 
+Contract address of the given verifier
+
 #### Defined in
 
-[src/api/verification.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L135)
+[src/api/verification.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L179)
 
 ___
 
@@ -149,37 +184,42 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `address` | `string` | Contract address of the verifier |
 
 #### Returns
 
 [`VerifierType`](../enums/types_Types.VerifierType.md)
 
+Type of verifier
+
 #### Defined in
 
-[src/api/verification.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L145)
+[src/api/verification.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L194)
 
 ___
 
 ### isUser
 
-▸ **isUser**(`user`): `Promise`<`boolean`\>
+▸ **isUser**(`user`, `verifierType`): `Promise`<`boolean`\>
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `user` | `string` | Address to check |
+| `user` | `string` | Address of the user to be verifier |
+| `verifierType` | [`VerifierType`](../enums/types_Types.VerifierType.md) | Type of Verifier |
 
 #### Returns
 
 `Promise`<`boolean`\>
 
+true if the address is verified by a given verifier
+
 #### Defined in
 
-[src/api/verification.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L42)
+[src/api/verification.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L62)
 
 ___
 
@@ -197,9 +237,11 @@ ___
 
 `Promise`<`boolean`\>
 
+true if the given address is a verifier
+
 #### Defined in
 
-[src/api/verification.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L51)
+[src/api/verification.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L72)
 
 ___
 
@@ -221,7 +263,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L68)
+[src/api/verification.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L90)
 
 ___
 
@@ -248,7 +290,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L81)
+[src/api/verification.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L103)
 
 ___
 
@@ -258,15 +300,15 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_isMasterLinked` | `boolean` |
-| `_v` | `BigNumberish` |
-| `_r` | `BytesLike` |
-| `_s` | `BytesLike` |
-| `_userData` | `string` |
-| `_deadline` | `BigNumberish` |
-| `options?` | [`Options`](../interfaces/types_Types.Options.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `_isMasterLinked` | `boolean` | True if master address is linked |
+| `_v` | `BigNumberish` | V component of the signature |
+| `_r` | `BytesLike` | R component of the signature |
+| `_s` | `BytesLike` | S component of the signature |
+| `_userData` | `string` | Any use metadata that is associated with the address |
+| `_deadline` | `BigNumberish` | deadline for the transaction to be mined |
+| `options?` | [`Options`](../interfaces/types_Types.Options.md) |  |
 
 #### Returns
 
@@ -274,7 +316,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L101)
+[src/api/verification.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L136)
 
 ___
 
@@ -282,6 +324,8 @@ ___
 
 ▸ **unregisterSelfUsingAdminVerifier**(`options?`): `Promise`<`ContractTransaction`\>
 
+**`description`** user should call this function from his wallet if he wants to unregister from admin verifier
+
 #### Parameters
 
 | Name | Type |
@@ -294,7 +338,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L113)
+[src/api/verification.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L153)
 
 ___
 
@@ -302,6 +346,8 @@ ___
 
 ▸ **unregisterSelfUsingTwitterVerifier**(`options?`): `Promise`<`ContractTransaction`\>
 
+**`description`** user should call this function from his wallet if he wants to unregister from twitter verifier
+
 #### Parameters
 
 | Name | Type |
@@ -314,7 +360,7 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L97)
+[src/api/verification.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L121)
 
 ___
 
@@ -335,25 +381,4 @@ ___
 
 #### Defined in
 
-[src/api/verification.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L131)
-
-___
-
-### updateVerification
-
-▸ **updateVerification**(`_verification`, `options?`): `Promise`<`ContractTransaction`\>
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_verification` | `string` | Address of the verification contract |
-| `options?` | [`Options`](../interfaces/types_Types.Options.md) | - |
-
-#### Returns
-
-`Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-[src/api/verification.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/verification.ts#L122)
+[src/api/verification.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/verification.ts#L162)

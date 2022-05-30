@@ -4,6 +4,8 @@
 
 [api/pool](../modules/api_pool.md).PoolApi
 
+**`todo`** Pools are not let released
+
 ## Table of contents
 
 ### Constructors
@@ -52,7 +54,7 @@
 
 #### Defined in
 
-[src/api/pool.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L31)
+[src/api/pool.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L34)
 
 ## Properties
 
@@ -62,7 +64,7 @@
 
 #### Defined in
 
-[src/api/pool.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L26)
+[src/api/pool.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L29)
 
 ___
 
@@ -72,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L29)
+[src/api/pool.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L32)
 
 ___
 
@@ -82,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L25)
+[src/api/pool.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L28)
 
 ___
 
@@ -92,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L27)
+[src/api/pool.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L30)
 
 ## Methods
 
@@ -106,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L38)
+[src/api/pool.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L41)
 
 ___
 
@@ -126,7 +128,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L199)
+[src/api/pool.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L202)
 
 ___
 
@@ -147,7 +149,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L42)
+[src/api/pool.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L45)
 
 ___
 
@@ -170,7 +172,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L108)
+[src/api/pool.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L111)
 
 ___
 
@@ -191,7 +193,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L104)
+[src/api/pool.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L107)
 
 ___
 
@@ -212,7 +214,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L215)
+[src/api/pool.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L218)
 
 ___
 
@@ -232,7 +234,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L143)
+[src/api/pool.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L146)
 
 ___
 
@@ -252,7 +254,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:209](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L209)
+[src/api/pool.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L212)
 
 ___
 
@@ -273,7 +275,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L204)
+[src/api/pool.ts:207](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L207)
 
 ___
 
@@ -293,7 +295,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:237](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L237)
+[src/api/pool.ts:240](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L240)
 
 ___
 
@@ -313,7 +315,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L227)
+[src/api/pool.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L230)
 
 ___
 
@@ -334,7 +336,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L172)
+[src/api/pool.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L175)
 
 ___
 
@@ -355,7 +357,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L185)
+[src/api/pool.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L188)
 
 ___
 
@@ -375,7 +377,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L132)
+[src/api/pool.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L135)
 
 ___
 
@@ -400,7 +402,7 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L160)
+[src/api/pool.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L163)
 
 ___
 
@@ -424,4 +426,4 @@ ___
 
 #### Defined in
 
-[src/api/pool.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/pool.ts#L149)
+[src/api/pool.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/pool.ts#L152)

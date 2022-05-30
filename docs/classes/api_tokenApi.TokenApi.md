@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[src/api/tokenApi.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L22)
+[src/api/tokenApi.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L33)
 
 ## Properties
 
@@ -51,9 +51,11 @@
 
 • `Private` **signer**: `Signer`
 
+**`description`** Signer Object
+
 #### Defined in
 
-[src/api/tokenApi.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L12)
+[src/api/tokenApi.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L15)
 
 ___
 
@@ -61,9 +63,11 @@ ___
 
 • `Private` **tokenContract**: `Token`
 
+**`description`** Contract instance for the given token
+
 #### Defined in
 
-[src/api/tokenApi.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L13)
+[src/api/tokenApi.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L20)
 
 ___
 
@@ -71,9 +75,11 @@ ___
 
 • `Private` **tokenManager**: [`TokenManager`](tokenManager.TokenManager.md)
 
+**`description`** Instance to update and fetch token metadata
+
 #### Defined in
 
-[src/api/tokenApi.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L14)
+[src/api/tokenApi.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L25)
 
 ## Methods
 
@@ -99,7 +105,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/tokenApi.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L34)
+[src/api/tokenApi.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L45)
 
 ___
 
@@ -109,18 +115,20 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `user` | `string` |
-| `prettified` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `user` | `string` | address whose balance needs to be fetched |
+| `prettified` | `any` |  |
 
 #### Returns
 
 `Promise`<`string`\>
 
+Balance of the given address
+
 #### Defined in
 
-[src/api/tokenApi.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L104)
+[src/api/tokenApi.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L121)
 
 ___
 
@@ -146,7 +154,7 @@ number
 
 #### Defined in
 
-[src/api/tokenApi.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L73)
+[src/api/tokenApi.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L84)
 
 ___
 
@@ -172,7 +180,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/tokenApi.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L53)
+[src/api/tokenApi.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L64)
 
 ___
 
@@ -194,7 +202,7 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L90)
+[src/api/tokenApi.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L101)
 
 ___
 
@@ -217,4 +225,4 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/ca0c759/src/api/tokenApi.ts#L100)
+[src/api/tokenApi.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/1cc42d8/src/api/tokenApi.ts#L111)
