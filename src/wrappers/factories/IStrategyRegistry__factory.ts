@@ -124,6 +124,11 @@ const _abi = [
         name: 'strategyIndex',
         type: 'uint256',
       },
+      {
+        internalType: 'address',
+        name: 'strategyAddress',
+        type: 'address',
+      },
     ],
     name: 'removeStrategy',
     outputs: [],

@@ -24,7 +24,6 @@ interface ISavingsAccountInterface extends ethers.utils.Interface {
     'allowance(address,address,address)': FunctionFragment;
     'approve(address,address,uint256)': FunctionFragment;
     'balanceInShares(address,address,address)': FunctionFragment;
-    'burn(uint256,address,address)': FunctionFragment;
     'decreaseAllowance(address,address,uint256)': FunctionFragment;
     'deposit(address,address,address,uint256)': FunctionFragment;
     'getTotalTokens(address,address)': FunctionFragment;
@@ -32,8 +31,8 @@ interface ISavingsAccountInterface extends ethers.utils.Interface {
     'switchStrategy(address,address,address,uint256)': FunctionFragment;
     'transfer(address,address,address,uint256)': FunctionFragment;
     'transferFrom(address,address,address,address,uint256)': FunctionFragment;
-    'transferShares(uint256,address,address,address)': FunctionFragment;
-    'transferSharesFrom(uint256,address,address,address,address)': FunctionFragment;
+    'transferShares(address,address,address,uint256)': FunctionFragment;
+    'transferSharesFrom(address,address,address,address,uint256)': FunctionFragment;
     'withdraw(address,address,address,uint256,bool)': FunctionFragment;
     'withdrawAll(address,address)': FunctionFragment;
     'withdrawFrom(address,address,address,address,uint256,bool)': FunctionFragment;
@@ -44,7 +43,6 @@ interface ISavingsAccountInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'allowance', values: [string, string, string]): string;
   encodeFunctionData(functionFragment: 'approve', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'balanceInShares', values: [string, string, string]): string;
-  encodeFunctionData(functionFragment: 'burn', values: [BigNumberish, string, string]): string;
   encodeFunctionData(functionFragment: 'decreaseAllowance', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'deposit', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getTotalTokens', values: [string, string]): string;
@@ -52,8 +50,8 @@ interface ISavingsAccountInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'switchStrategy', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'transfer', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'transferFrom', values: [string, string, string, string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'transferShares', values: [BigNumberish, string, string, string]): string;
-  encodeFunctionData(functionFragment: 'transferSharesFrom', values: [BigNumberish, string, string, string, string]): string;
+  encodeFunctionData(functionFragment: 'transferShares', values: [string, string, string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'transferSharesFrom', values: [string, string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'withdraw', values: [string, string, string, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'withdrawAll', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'withdrawFrom', values: [string, string, string, string, BigNumberish, boolean]): string;
@@ -63,7 +61,6 @@ interface ISavingsAccountInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'allowance', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'approve', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'balanceInShares', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'burn', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'decreaseAllowance', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deposit', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getTotalTokens', data: BytesLike): Result;
@@ -81,7 +78,6 @@ interface ISavingsAccountInterface extends ethers.utils.Interface {
 
   events: {
     'Approved(address,address,address,uint256)': EventFragment;
-    'Burned(address,address,address,uint256)': EventFragment;
     'Deposited(address,uint256,address,address)': EventFragment;
     'StrategyRegistryUpdated(address)': EventFragment;
     'StrategySwitched(address,address,uint256,uint256,address,address)': EventFragment;
@@ -92,7 +88,6 @@ interface ISavingsAccountInterface extends ethers.utils.Interface {
   };
 
   getEvent(nameOrSignatureOrTopic: 'Approved'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'Burned'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'Deposited'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'StrategyRegistryUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'StrategySwitched'): EventFragment;
@@ -187,20 +182,6 @@ export class ISavingsAccount extends Contract {
       strategy: string,
       overrides?: CallOverrides
     ): Promise<[BigNumber] & { shareBalance: BigNumber }>;
-
-    burn(
-      amount: BigNumberish,
-      token: string,
-      poolSavingsStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'burn(uint256,address,address)'(
-      amount: BigNumberish,
-      token: string,
-      poolSavingsStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
 
     decreaseAllowance(
       token: string,
@@ -309,36 +290,36 @@ export class ISavingsAccount extends Contract {
     ): Promise<ContractTransaction>;
 
     transferShares(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'transferShares(uint256,address,address,address)'(
-      _shares: BigNumberish,
+    'transferShares(address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     transferSharesFrom(
-      shares: BigNumberish,
       token: string,
       strategy: string,
       from: string,
       to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'transferSharesFrom(uint256,address,address,address,address)'(
-      shares: BigNumberish,
+    'transferSharesFrom(address,address,address,address,uint256)'(
       token: string,
       strategy: string,
       from: string,
       to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -459,20 +440,6 @@ export class ISavingsAccount extends Contract {
 
   'balanceInShares(address,address,address)'(user: string, token: string, strategy: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-  burn(
-    amount: BigNumberish,
-    token: string,
-    poolSavingsStrategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'burn(uint256,address,address)'(
-    amount: BigNumberish,
-    token: string,
-    poolSavingsStrategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
   decreaseAllowance(
     token: string,
     to: string,
@@ -576,36 +543,36 @@ export class ISavingsAccount extends Contract {
   ): Promise<ContractTransaction>;
 
   transferShares(
-    _shares: BigNumberish,
     _token: string,
     _strategy: string,
     _to: string,
+    _shares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'transferShares(uint256,address,address,address)'(
-    _shares: BigNumberish,
+  'transferShares(address,address,address,uint256)'(
     _token: string,
     _strategy: string,
     _to: string,
+    _shares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   transferSharesFrom(
-    shares: BigNumberish,
     token: string,
     strategy: string,
     from: string,
     to: string,
+    _shares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'transferSharesFrom(uint256,address,address,address,address)'(
-    shares: BigNumberish,
+  'transferSharesFrom(address,address,address,address,uint256)'(
     token: string,
     strategy: string,
     from: string,
     to: string,
+    _shares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -711,15 +678,6 @@ export class ISavingsAccount extends Contract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    burn(amount: BigNumberish, token: string, poolSavingsStrategy: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    'burn(uint256,address,address)'(
-      amount: BigNumberish,
-      token: string,
-      poolSavingsStrategy: string,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
     decreaseAllowance(token: string, to: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'decreaseAllowance(address,address,uint256)'(token: string, to: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
@@ -786,31 +744,31 @@ export class ISavingsAccount extends Contract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    transferShares(_shares: BigNumberish, _token: string, _strategy: string, _to: string, overrides?: CallOverrides): Promise<BigNumber>;
+    transferShares(_token: string, _strategy: string, _to: string, _shares: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'transferShares(uint256,address,address,address)'(
-      _shares: BigNumberish,
+    'transferShares(address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     transferSharesFrom(
-      shares: BigNumberish,
       token: string,
       strategy: string,
       from: string,
       to: string,
+      _shares: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    'transferSharesFrom(uint256,address,address,address,address)'(
-      shares: BigNumberish,
+    'transferSharesFrom(address,address,address,address,uint256)'(
       token: string,
       strategy: string,
       from: string,
       to: string,
+      _shares: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
@@ -902,13 +860,6 @@ export class ISavingsAccount extends Contract {
       to: string | null,
       amount: null
     ): TypedEventFilter<[string, string, string, BigNumber], { token: string; from: string; to: string; amount: BigNumber }>;
-
-    Burned(
-      token: string | null,
-      strategy: null,
-      from: string | null,
-      amount: null
-    ): TypedEventFilter<[string, string, string, BigNumber], { token: string; strategy: string; from: string; amount: BigNumber }>;
 
     Deposited(
       user: string | null,
@@ -1039,20 +990,6 @@ export class ISavingsAccount extends Contract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    burn(
-      amount: BigNumberish,
-      token: string,
-      poolSavingsStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'burn(uint256,address,address)'(
-      amount: BigNumberish,
-      token: string,
-      poolSavingsStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
     decreaseAllowance(
       token: string,
       to: string,
@@ -1156,36 +1093,36 @@ export class ISavingsAccount extends Contract {
     ): Promise<BigNumber>;
 
     transferShares(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'transferShares(uint256,address,address,address)'(
-      _shares: BigNumberish,
+    'transferShares(address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     transferSharesFrom(
-      shares: BigNumberish,
       token: string,
       strategy: string,
       from: string,
       to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'transferSharesFrom(uint256,address,address,address,address)'(
-      shares: BigNumberish,
+    'transferSharesFrom(address,address,address,address,uint256)'(
       token: string,
       strategy: string,
       from: string,
       to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -1312,20 +1249,6 @@ export class ISavingsAccount extends Contract {
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
-    burn(
-      amount: BigNumberish,
-      token: string,
-      poolSavingsStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'burn(uint256,address,address)'(
-      amount: BigNumberish,
-      token: string,
-      poolSavingsStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
     decreaseAllowance(
       token: string,
       to: string,
@@ -1433,36 +1356,36 @@ export class ISavingsAccount extends Contract {
     ): Promise<PopulatedTransaction>;
 
     transferShares(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'transferShares(uint256,address,address,address)'(
-      _shares: BigNumberish,
+    'transferShares(address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     transferSharesFrom(
-      shares: BigNumberish,
       token: string,
       strategy: string,
       from: string,
       to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'transferSharesFrom(uint256,address,address,address,address)'(
-      shares: BigNumberish,
+    'transferSharesFrom(address,address,address,address,uint256)'(
       token: string,
       strategy: string,
       from: string,
       to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

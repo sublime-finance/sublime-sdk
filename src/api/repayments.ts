@@ -9,7 +9,7 @@ import { TokenManager } from '../tokenManager';
 import { Options as Overrides } from '../types/Types';
 
 /**
- * @class RepaymentApi
+ * @todo Repayment are part of pools and yet to be released
  */
 export class RepaymentApi {
   private signer: Signer;

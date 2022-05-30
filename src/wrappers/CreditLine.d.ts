@@ -21,6 +21,9 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface CreditLineInterface extends ethers.utils.Interface {
   functions: {
+    'PRICE_ORACLE()': FunctionFragment;
+    'SAVINGS_ACCOUNT()': FunctionFragment;
+    'STRATEGY_REGISTRY()': FunctionFragment;
     'accept(uint256)': FunctionFragment;
     'borrow(uint256,uint256)': FunctionFragment;
     'borrowLimitLimits()': FunctionFragment;
@@ -38,38 +41,34 @@ interface CreditLineInterface extends ethers.utils.Interface {
     'creditLineConstants(uint256)': FunctionFragment;
     'creditLineCounter()': FunctionFragment;
     'creditLineVariables(uint256)': FunctionFragment;
-    'defaultStrategy()': FunctionFragment;
     'depositCollateral(uint256,uint256,bool)': FunctionFragment;
     'getCreditLineStatus(uint256)': FunctionFragment;
     'idealCollateralRatioLimits()': FunctionFragment;
-    'initialize(address,address,address,address,address,uint256,address,uint256)': FunctionFragment;
+    'initialize(address,uint256,address,uint256)': FunctionFragment;
     'liquidate(uint256,bool)': FunctionFragment;
     'liquidatorRewardFraction()': FunctionFragment;
     'owner()': FunctionFragment;
-    'priceOracle()': FunctionFragment;
     'protocolFeeCollector()': FunctionFragment;
     'protocolFeeFraction()': FunctionFragment;
     'renounceOwnership()': FunctionFragment;
     'repay(uint256,uint256)': FunctionFragment;
-    'request(address,uint128,uint128,bool,uint256,address,address,address,bool)': FunctionFragment;
-    'savingsAccount()': FunctionFragment;
-    'strategyRegistry()': FunctionFragment;
+    'request(address,uint128,uint128,bool,uint256,address,address,address,address,bool)': FunctionFragment;
     'transferOwnership(address)': FunctionFragment;
     'updateBorrowLimit(uint256,uint128)': FunctionFragment;
     'updateBorrowLimitLimits(uint256,uint256)': FunctionFragment;
     'updateBorrowRateLimits(uint256,uint256)': FunctionFragment;
-    'updateDefaultStrategy(address)': FunctionFragment;
     'updateIdealCollateralRatioLimits(uint256,uint256)': FunctionFragment;
     'updateLiquidatorRewardFraction(uint256)': FunctionFragment;
-    'updatePriceOracle(address)': FunctionFragment;
     'updateProtocolFeeCollector(address)': FunctionFragment;
     'updateProtocolFeeFraction(uint256)': FunctionFragment;
-    'updateSavingsAccount(address)': FunctionFragment;
-    'updateStrategyRegistry(address)': FunctionFragment;
+    'withdrawAllCollateral(uint256,bool)': FunctionFragment;
     'withdrawCollateral(uint256,uint256,bool)': FunctionFragment;
     'withdrawableCollateral(uint256)': FunctionFragment;
   };
 
+  encodeFunctionData(functionFragment: 'PRICE_ORACLE', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'SAVINGS_ACCOUNT', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'STRATEGY_REGISTRY', values?: undefined): string;
   encodeFunctionData(functionFragment: 'accept', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'borrow', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'borrowLimitLimits', values?: undefined): string;
@@ -87,43 +86,36 @@ interface CreditLineInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'creditLineConstants', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'creditLineCounter', values?: undefined): string;
   encodeFunctionData(functionFragment: 'creditLineVariables', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'defaultStrategy', values?: undefined): string;
   encodeFunctionData(functionFragment: 'depositCollateral', values: [BigNumberish, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'getCreditLineStatus', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'idealCollateralRatioLimits', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'initialize',
-    values: [string, string, string, string, string, BigNumberish, string, BigNumberish]
-  ): string;
+  encodeFunctionData(functionFragment: 'initialize', values: [string, BigNumberish, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'liquidate', values: [BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'liquidatorRewardFraction', values?: undefined): string;
   encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'priceOracle', values?: undefined): string;
   encodeFunctionData(functionFragment: 'protocolFeeCollector', values?: undefined): string;
   encodeFunctionData(functionFragment: 'protocolFeeFraction', values?: undefined): string;
   encodeFunctionData(functionFragment: 'renounceOwnership', values?: undefined): string;
   encodeFunctionData(functionFragment: 'repay', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(
     functionFragment: 'request',
-    values: [string, BigNumberish, BigNumberish, boolean, BigNumberish, string, string, string, boolean]
+    values: [string, BigNumberish, BigNumberish, boolean, BigNumberish, string, string, string, string, boolean]
   ): string;
-  encodeFunctionData(functionFragment: 'savingsAccount', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'strategyRegistry', values?: undefined): string;
   encodeFunctionData(functionFragment: 'transferOwnership', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateBorrowLimit', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateBorrowLimitLimits', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateBorrowRateLimits', values: [BigNumberish, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateDefaultStrategy', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateIdealCollateralRatioLimits', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateLiquidatorRewardFraction', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updatePriceOracle', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateProtocolFeeCollector', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateProtocolFeeFraction', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateSavingsAccount', values: [string]): string;
-  encodeFunctionData(functionFragment: 'updateStrategyRegistry', values: [string]): string;
+  encodeFunctionData(functionFragment: 'withdrawAllCollateral', values: [BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'withdrawCollateral', values: [BigNumberish, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'withdrawableCollateral', values: [BigNumberish]): string;
 
+  decodeFunctionResult(functionFragment: 'PRICE_ORACLE', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'SAVINGS_ACCOUNT', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'STRATEGY_REGISTRY', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'accept', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'borrow', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'borrowLimitLimits', data: BytesLike): Result;
@@ -141,7 +133,6 @@ interface CreditLineInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'creditLineConstants', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'creditLineCounter', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'creditLineVariables', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'defaultStrategy', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'depositCollateral', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getCreditLineStatus', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'idealCollateralRatioLimits', data: BytesLike): Result;
@@ -149,26 +140,20 @@ interface CreditLineInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'liquidate', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'liquidatorRewardFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'owner', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'priceOracle', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'protocolFeeCollector', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'protocolFeeFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'renounceOwnership', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'repay', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'request', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'savingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'strategyRegistry', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferOwnership', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateBorrowLimit', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateBorrowLimitLimits', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateBorrowRateLimits', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateDefaultStrategy', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateIdealCollateralRatioLimits', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateLiquidatorRewardFraction', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updatePriceOracle', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateProtocolFeeCollector', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateProtocolFeeFraction', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateSavingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateStrategyRegistry', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'withdrawAllCollateral', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawCollateral', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawableCollateral', data: BytesLike): Result;
 
@@ -184,16 +169,12 @@ interface CreditLineInterface extends ethers.utils.Interface {
     'CreditLineLiquidated(uint256,address)': EventFragment;
     'CreditLineRequested(uint256,address,address,bool)': EventFragment;
     'CreditLineReset(uint256)': EventFragment;
-    'DefaultStrategyUpdated(address)': EventFragment;
     'LimitsUpdated(string,uint256,uint256)': EventFragment;
     'LiquidationRewardFractionUpdated(uint256)': EventFragment;
     'OwnershipTransferred(address,address)': EventFragment;
     'PartialCreditLineRepaid(uint256,address,uint256)': EventFragment;
-    'PriceOracleUpdated(address)': EventFragment;
     'ProtocolFeeCollectorUpdated(address)': EventFragment;
     'ProtocolFeeFractionUpdated(uint256)': EventFragment;
-    'SavingsAccountUpdated(address)': EventFragment;
-    'StrategyRegistryUpdated(address)': EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: 'BorrowLimitUpdated'): EventFragment;
@@ -207,16 +188,12 @@ interface CreditLineInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: 'CreditLineLiquidated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'CreditLineRequested'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'CreditLineReset'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'DefaultStrategyUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'LimitsUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'LiquidationRewardFractionUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'OwnershipTransferred'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'PartialCreditLineRepaid'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'PriceOracleUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'ProtocolFeeCollectorUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'ProtocolFeeFractionUpdated'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SavingsAccountUpdated'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'StrategyRegistryUpdated'): EventFragment;
 }
 
 export class CreditLine extends Contract {
@@ -263,6 +240,18 @@ export class CreditLine extends Contract {
   interface: CreditLineInterface;
 
   functions: {
+    PRICE_ORACLE(overrides?: CallOverrides): Promise<[string]>;
+
+    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<[string]>;
+
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<[string]>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<[string]>;
+
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<[string]>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<[string]>;
+
     accept(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'accept(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
@@ -359,7 +348,7 @@ export class CreditLine extends Contract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<
-      [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string] & {
+      [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string, string] & {
         autoLiquidation: boolean;
         requestByLender: boolean;
         borrowLimit: BigNumber;
@@ -368,6 +357,7 @@ export class CreditLine extends Contract {
         lender: string;
         borrower: string;
         borrowAsset: string;
+        borrowAssetStrategy: string;
         collateralAsset: string;
         collateralStrategy: string;
       }
@@ -377,7 +367,7 @@ export class CreditLine extends Contract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<
-      [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string] & {
+      [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string, string] & {
         autoLiquidation: boolean;
         requestByLender: boolean;
         borrowLimit: BigNumber;
@@ -386,6 +376,7 @@ export class CreditLine extends Contract {
         lender: string;
         borrower: string;
         borrowAsset: string;
+        borrowAssetStrategy: string;
         collateralAsset: string;
         collateralStrategy: string;
       }
@@ -421,10 +412,6 @@ export class CreditLine extends Contract {
       }
     >;
 
-    defaultStrategy(overrides?: CallOverrides): Promise<[string]>;
-
-    'defaultStrategy()'(overrides?: CallOverrides): Promise<[string]>;
-
     depositCollateral(
       _id: BigNumberish,
       _amount: BigNumberish,
@@ -448,10 +435,6 @@ export class CreditLine extends Contract {
     'idealCollateralRatioLimits()'(overrides?: CallOverrides): Promise<[BigNumber, BigNumber] & { min: BigNumber; max: BigNumber }>;
 
     initialize(
-      _defaultStrategy: string,
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
@@ -459,11 +442,7 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'initialize(address,address,address,address,address,uint256,address,uint256)'(
-      _defaultStrategy: string,
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
+    'initialize(address,uint256,address,uint256)'(
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
@@ -490,10 +469,6 @@ export class CreditLine extends Contract {
     owner(overrides?: CallOverrides): Promise<[string]>;
 
     'owner()'(overrides?: CallOverrides): Promise<[string]>;
-
-    priceOracle(overrides?: CallOverrides): Promise<[string]>;
-
-    'priceOracle()'(overrides?: CallOverrides): Promise<[string]>;
 
     protocolFeeCollector(overrides?: CallOverrides): Promise<[string]>;
 
@@ -526,32 +501,26 @@ export class CreditLine extends Contract {
       _autoLiquidation: boolean,
       _collateralRatio: BigNumberish,
       _borrowAsset: string,
+      _borrowAssetStrategy: string,
       _collateralAsset: string,
       _collateralStrategy: string,
       _requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'request(address,uint128,uint128,bool,uint256,address,address,address,bool)'(
+    'request(address,uint128,uint128,bool,uint256,address,address,address,address,bool)'(
       _requestTo: string,
       _borrowLimit: BigNumberish,
       _borrowRate: BigNumberish,
       _autoLiquidation: boolean,
       _collateralRatio: BigNumberish,
       _borrowAsset: string,
+      _borrowAssetStrategy: string,
       _collateralAsset: string,
       _collateralStrategy: string,
       _requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
-
-    savingsAccount(overrides?: CallOverrides): Promise<[string]>;
-
-    'savingsAccount()'(overrides?: CallOverrides): Promise<[string]>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<[string]>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<[string]>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -596,16 +565,6 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateDefaultStrategy(
-      _defaultStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateDefaultStrategy(address)'(
-      _defaultStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
     updateIdealCollateralRatioLimits(
       _min: BigNumberish,
       _max: BigNumberish,
@@ -625,13 +584,6 @@ export class CreditLine extends Contract {
 
     'updateLiquidatorRewardFraction(uint256)'(
       _rewardFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updatePriceOracle(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'updatePriceOracle(address)'(
-      _priceOracle: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -655,35 +607,28 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateSavingsAccount(
-      _savingsAccount: string,
+    withdrawAllCollateral(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
+    'withdrawAllCollateral(uint256,bool)'(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateStrategyRegistry(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'withdrawCollateral(uint256,uint256,bool)'(
+    withdrawCollateral(
       _id: BigNumberish,
       _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'withdrawCollateral(uint256,bool)'(
+    'withdrawCollateral(uint256,uint256,bool)'(
       _id: BigNumberish,
+      _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
@@ -695,6 +640,18 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
   };
+
+  PRICE_ORACLE(overrides?: CallOverrides): Promise<string>;
+
+  'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<string>;
+
+  SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<string>;
+
+  'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<string>;
+
+  STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<string>;
+
+  'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<string>;
 
   accept(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -792,7 +749,7 @@ export class CreditLine extends Contract {
     arg0: BigNumberish,
     overrides?: CallOverrides
   ): Promise<
-    [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string] & {
+    [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string, string] & {
       autoLiquidation: boolean;
       requestByLender: boolean;
       borrowLimit: BigNumber;
@@ -801,6 +758,7 @@ export class CreditLine extends Contract {
       lender: string;
       borrower: string;
       borrowAsset: string;
+      borrowAssetStrategy: string;
       collateralAsset: string;
       collateralStrategy: string;
     }
@@ -810,7 +768,7 @@ export class CreditLine extends Contract {
     arg0: BigNumberish,
     overrides?: CallOverrides
   ): Promise<
-    [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string] & {
+    [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string, string] & {
       autoLiquidation: boolean;
       requestByLender: boolean;
       borrowLimit: BigNumber;
@@ -819,6 +777,7 @@ export class CreditLine extends Contract {
       lender: string;
       borrower: string;
       borrowAsset: string;
+      borrowAssetStrategy: string;
       collateralAsset: string;
       collateralStrategy: string;
     }
@@ -854,10 +813,6 @@ export class CreditLine extends Contract {
     }
   >;
 
-  defaultStrategy(overrides?: CallOverrides): Promise<string>;
-
-  'defaultStrategy()'(overrides?: CallOverrides): Promise<string>;
-
   depositCollateral(
     _id: BigNumberish,
     _amount: BigNumberish,
@@ -881,10 +836,6 @@ export class CreditLine extends Contract {
   'idealCollateralRatioLimits()'(overrides?: CallOverrides): Promise<[BigNumber, BigNumber] & { min: BigNumber; max: BigNumber }>;
 
   initialize(
-    _defaultStrategy: string,
-    _priceOracle: string,
-    _savingsAccount: string,
-    _strategyRegistry: string,
     _owner: string,
     _protocolFeeFraction: BigNumberish,
     _protocolFeeCollector: string,
@@ -892,11 +843,7 @@ export class CreditLine extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'initialize(address,address,address,address,address,uint256,address,uint256)'(
-    _defaultStrategy: string,
-    _priceOracle: string,
-    _savingsAccount: string,
-    _strategyRegistry: string,
+  'initialize(address,uint256,address,uint256)'(
     _owner: string,
     _protocolFeeFraction: BigNumberish,
     _protocolFeeCollector: string,
@@ -923,10 +870,6 @@ export class CreditLine extends Contract {
   owner(overrides?: CallOverrides): Promise<string>;
 
   'owner()'(overrides?: CallOverrides): Promise<string>;
-
-  priceOracle(overrides?: CallOverrides): Promise<string>;
-
-  'priceOracle()'(overrides?: CallOverrides): Promise<string>;
 
   protocolFeeCollector(overrides?: CallOverrides): Promise<string>;
 
@@ -959,32 +902,26 @@ export class CreditLine extends Contract {
     _autoLiquidation: boolean,
     _collateralRatio: BigNumberish,
     _borrowAsset: string,
+    _borrowAssetStrategy: string,
     _collateralAsset: string,
     _collateralStrategy: string,
     _requestAsLender: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'request(address,uint128,uint128,bool,uint256,address,address,address,bool)'(
+  'request(address,uint128,uint128,bool,uint256,address,address,address,address,bool)'(
     _requestTo: string,
     _borrowLimit: BigNumberish,
     _borrowRate: BigNumberish,
     _autoLiquidation: boolean,
     _collateralRatio: BigNumberish,
     _borrowAsset: string,
+    _borrowAssetStrategy: string,
     _collateralAsset: string,
     _collateralStrategy: string,
     _requestAsLender: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
-
-  savingsAccount(overrides?: CallOverrides): Promise<string>;
-
-  'savingsAccount()'(overrides?: CallOverrides): Promise<string>;
-
-  strategyRegistry(overrides?: CallOverrides): Promise<string>;
-
-  'strategyRegistry()'(overrides?: CallOverrides): Promise<string>;
 
   transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -1026,16 +963,6 @@ export class CreditLine extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateDefaultStrategy(
-    _defaultStrategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateDefaultStrategy(address)'(
-    _defaultStrategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
   updateIdealCollateralRatioLimits(
     _min: BigNumberish,
     _max: BigNumberish,
@@ -1055,13 +982,6 @@ export class CreditLine extends Contract {
 
   'updateLiquidatorRewardFraction(uint256)'(
     _rewardFraction: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updatePriceOracle(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'updatePriceOracle(address)'(
-    _priceOracle: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -1085,32 +1005,28 @@ export class CreditLine extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateSavingsAccount(_savingsAccount: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'updateSavingsAccount(address)'(
-    _savingsAccount: string,
+  withdrawAllCollateral(
+    _id: BigNumberish,
+    _toSavingsAccount: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateStrategyRegistry(
-    _strategyRegistry: string,
+  'withdrawAllCollateral(uint256,bool)'(
+    _id: BigNumberish,
+    _toSavingsAccount: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'updateStrategyRegistry(address)'(
-    _strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'withdrawCollateral(uint256,uint256,bool)'(
+  withdrawCollateral(
     _id: BigNumberish,
     _amount: BigNumberish,
     _toSavingsAccount: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'withdrawCollateral(uint256,bool)'(
+  'withdrawCollateral(uint256,uint256,bool)'(
     _id: BigNumberish,
+    _amount: BigNumberish,
     _toSavingsAccount: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
@@ -1123,6 +1039,18 @@ export class CreditLine extends Contract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
+    PRICE_ORACLE(overrides?: CallOverrides): Promise<string>;
+
+    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<string>;
+
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<string>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<string>;
+
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<string>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<string>;
+
     accept(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'accept(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
@@ -1193,7 +1121,7 @@ export class CreditLine extends Contract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<
-      [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string] & {
+      [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string, string] & {
         autoLiquidation: boolean;
         requestByLender: boolean;
         borrowLimit: BigNumber;
@@ -1202,6 +1130,7 @@ export class CreditLine extends Contract {
         lender: string;
         borrower: string;
         borrowAsset: string;
+        borrowAssetStrategy: string;
         collateralAsset: string;
         collateralStrategy: string;
       }
@@ -1211,7 +1140,7 @@ export class CreditLine extends Contract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<
-      [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string] & {
+      [boolean, boolean, BigNumber, BigNumber, BigNumber, string, string, string, string, string, string] & {
         autoLiquidation: boolean;
         requestByLender: boolean;
         borrowLimit: BigNumber;
@@ -1220,6 +1149,7 @@ export class CreditLine extends Contract {
         lender: string;
         borrower: string;
         borrowAsset: string;
+        borrowAssetStrategy: string;
         collateralAsset: string;
         collateralStrategy: string;
       }
@@ -1255,10 +1185,6 @@ export class CreditLine extends Contract {
       }
     >;
 
-    defaultStrategy(overrides?: CallOverrides): Promise<string>;
-
-    'defaultStrategy()'(overrides?: CallOverrides): Promise<string>;
-
     depositCollateral(_id: BigNumberish, _amount: BigNumberish, _fromSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
     'depositCollateral(uint256,uint256,bool)'(
@@ -1277,10 +1203,6 @@ export class CreditLine extends Contract {
     'idealCollateralRatioLimits()'(overrides?: CallOverrides): Promise<[BigNumber, BigNumber] & { min: BigNumber; max: BigNumber }>;
 
     initialize(
-      _defaultStrategy: string,
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
@@ -1288,11 +1210,7 @@ export class CreditLine extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'initialize(address,address,address,address,address,uint256,address,uint256)'(
-      _defaultStrategy: string,
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
+    'initialize(address,uint256,address,uint256)'(
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
@@ -1311,10 +1229,6 @@ export class CreditLine extends Contract {
     owner(overrides?: CallOverrides): Promise<string>;
 
     'owner()'(overrides?: CallOverrides): Promise<string>;
-
-    priceOracle(overrides?: CallOverrides): Promise<string>;
-
-    'priceOracle()'(overrides?: CallOverrides): Promise<string>;
 
     protocolFeeCollector(overrides?: CallOverrides): Promise<string>;
 
@@ -1339,32 +1253,26 @@ export class CreditLine extends Contract {
       _autoLiquidation: boolean,
       _collateralRatio: BigNumberish,
       _borrowAsset: string,
+      _borrowAssetStrategy: string,
       _collateralAsset: string,
       _collateralStrategy: string,
       _requestAsLender: boolean,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    'request(address,uint128,uint128,bool,uint256,address,address,address,bool)'(
+    'request(address,uint128,uint128,bool,uint256,address,address,address,address,bool)'(
       _requestTo: string,
       _borrowLimit: BigNumberish,
       _borrowRate: BigNumberish,
       _autoLiquidation: boolean,
       _collateralRatio: BigNumberish,
       _borrowAsset: string,
+      _borrowAssetStrategy: string,
       _collateralAsset: string,
       _collateralStrategy: string,
       _requestAsLender: boolean,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
-
-    savingsAccount(overrides?: CallOverrides): Promise<string>;
-
-    'savingsAccount()'(overrides?: CallOverrides): Promise<string>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<string>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<string>;
 
     transferOwnership(newOwner: string, overrides?: CallOverrides): Promise<void>;
 
@@ -1382,10 +1290,6 @@ export class CreditLine extends Contract {
 
     'updateBorrowRateLimits(uint256,uint256)'(_min: BigNumberish, _max: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    updateDefaultStrategy(_defaultStrategy: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateDefaultStrategy(address)'(_defaultStrategy: string, overrides?: CallOverrides): Promise<void>;
-
     updateIdealCollateralRatioLimits(_min: BigNumberish, _max: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'updateIdealCollateralRatioLimits(uint256,uint256)'(_min: BigNumberish, _max: BigNumberish, overrides?: CallOverrides): Promise<void>;
@@ -1393,10 +1297,6 @@ export class CreditLine extends Contract {
     updateLiquidatorRewardFraction(_rewardFraction: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'updateLiquidatorRewardFraction(uint256)'(_rewardFraction: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    updatePriceOracle(_priceOracle: string, overrides?: CallOverrides): Promise<void>;
-
-    'updatePriceOracle(address)'(_priceOracle: string, overrides?: CallOverrides): Promise<void>;
 
     updateProtocolFeeCollector(_protocolFeeCollector: string, overrides?: CallOverrides): Promise<void>;
 
@@ -1406,13 +1306,11 @@ export class CreditLine extends Contract {
 
     'updateProtocolFeeFraction(uint256)'(_protocolFee: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    updateSavingsAccount(_savingsAccount: string, overrides?: CallOverrides): Promise<void>;
+    withdrawAllCollateral(_id: BigNumberish, _toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
-    'updateSavingsAccount(address)'(_savingsAccount: string, overrides?: CallOverrides): Promise<void>;
+    'withdrawAllCollateral(uint256,bool)'(_id: BigNumberish, _toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
-    updateStrategyRegistry(_strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateStrategyRegistry(address)'(_strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
+    withdrawCollateral(_id: BigNumberish, _amount: BigNumberish, _toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
     'withdrawCollateral(uint256,uint256,bool)'(
       _id: BigNumberish,
@@ -1421,8 +1319,6 @@ export class CreditLine extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'withdrawCollateral(uint256,bool)'(_id: BigNumberish, _toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
-
     withdrawableCollateral(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'withdrawableCollateral(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
@@ -1430,7 +1326,7 @@ export class CreditLine extends Contract {
 
   filters: {
     BorrowLimitUpdated(
-      id: null,
+      id: BigNumberish | null,
       updatedBorrowLimit: null
     ): TypedEventFilter<[BigNumber, BigNumber], { id: BigNumber; updatedBorrowLimit: BigNumber }>;
 
@@ -1441,14 +1337,14 @@ export class CreditLine extends Contract {
 
     CollateralDeposited(
       id: BigNumberish | null,
-      amount: null,
+      shares: null,
       strategy: string | null
-    ): TypedEventFilter<[BigNumber, BigNumber, string], { id: BigNumber; amount: BigNumber; strategy: string }>;
+    ): TypedEventFilter<[BigNumber, BigNumber, string], { id: BigNumber; shares: BigNumber; strategy: string }>;
 
     CollateralWithdrawn(
       id: BigNumberish | null,
-      amount: null
-    ): TypedEventFilter<[BigNumber, BigNumber], { id: BigNumber; amount: BigNumber }>;
+      shares: null
+    ): TypedEventFilter<[BigNumber, BigNumber], { id: BigNumber; shares: BigNumber }>;
 
     CompleteCreditLineRepaid(
       id: BigNumberish | null,
@@ -1487,8 +1383,6 @@ export class CreditLine extends Contract {
 
     CreditLineReset(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
 
-    DefaultStrategyUpdated(defaultStrategy: string | null): TypedEventFilter<[string], { defaultStrategy: string }>;
-
     LimitsUpdated(
       limitType: string | null,
       max: null,
@@ -1510,20 +1404,26 @@ export class CreditLine extends Contract {
       repayAmount: null
     ): TypedEventFilter<[BigNumber, string, BigNumber], { id: BigNumber; repayer: string; repayAmount: BigNumber }>;
 
-    PriceOracleUpdated(priceOracle: string | null): TypedEventFilter<[string], { priceOracle: string }>;
-
     ProtocolFeeCollectorUpdated(
       updatedProtocolFeeCollector: string | null
     ): TypedEventFilter<[string], { updatedProtocolFeeCollector: string }>;
 
     ProtocolFeeFractionUpdated(updatedProtocolFee: null): TypedEventFilter<[BigNumber], { updatedProtocolFee: BigNumber }>;
-
-    SavingsAccountUpdated(savingsAccount: string | null): TypedEventFilter<[string], { savingsAccount: string }>;
-
-    StrategyRegistryUpdated(strategyRegistry: string | null): TypedEventFilter<[string], { strategyRegistry: string }>;
   };
 
   estimateGas: {
+    PRICE_ORACLE(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<BigNumber>;
+
     accept(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'accept(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
@@ -1615,10 +1515,6 @@ export class CreditLine extends Contract {
 
     'creditLineVariables(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    defaultStrategy(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'defaultStrategy()'(overrides?: CallOverrides): Promise<BigNumber>;
-
     depositCollateral(
       _id: BigNumberish,
       _amount: BigNumberish,
@@ -1642,10 +1538,6 @@ export class CreditLine extends Contract {
     'idealCollateralRatioLimits()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     initialize(
-      _defaultStrategy: string,
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
@@ -1653,11 +1545,7 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'initialize(address,address,address,address,address,uint256,address,uint256)'(
-      _defaultStrategy: string,
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
+    'initialize(address,uint256,address,uint256)'(
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
@@ -1684,10 +1572,6 @@ export class CreditLine extends Contract {
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
     'owner()'(overrides?: CallOverrides): Promise<BigNumber>;
-
-    priceOracle(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'priceOracle()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     protocolFeeCollector(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1716,32 +1600,26 @@ export class CreditLine extends Contract {
       _autoLiquidation: boolean,
       _collateralRatio: BigNumberish,
       _borrowAsset: string,
+      _borrowAssetStrategy: string,
       _collateralAsset: string,
       _collateralStrategy: string,
       _requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'request(address,uint128,uint128,bool,uint256,address,address,address,bool)'(
+    'request(address,uint128,uint128,bool,uint256,address,address,address,address,bool)'(
       _requestTo: string,
       _borrowLimit: BigNumberish,
       _borrowRate: BigNumberish,
       _autoLiquidation: boolean,
       _collateralRatio: BigNumberish,
       _borrowAsset: string,
+      _borrowAssetStrategy: string,
       _collateralAsset: string,
       _collateralStrategy: string,
       _requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
-
-    savingsAccount(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'savingsAccount()'(overrides?: CallOverrides): Promise<BigNumber>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -1783,13 +1661,6 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateDefaultStrategy(_defaultStrategy: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updateDefaultStrategy(address)'(
-      _defaultStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
     updateIdealCollateralRatioLimits(
       _min: BigNumberish,
       _max: BigNumberish,
@@ -1812,10 +1683,6 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updatePriceOracle(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updatePriceOracle(address)'(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
     updateProtocolFeeCollector(
       _protocolFeeCollector: string,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -1833,17 +1700,22 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateSavingsAccount(_savingsAccount: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
+    withdrawAllCollateral(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateStrategyRegistry(_strategyRegistry: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'withdrawAllCollateral(uint256,bool)'(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
+    withdrawCollateral(
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -1854,18 +1726,24 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'withdrawCollateral(uint256,bool)'(
-      _id: BigNumberish,
-      _toSavingsAccount: boolean,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
     withdrawableCollateral(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'withdrawableCollateral(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
   };
 
   populateTransaction: {
+    PRICE_ORACLE(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     accept(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'accept(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
@@ -1973,10 +1851,6 @@ export class CreditLine extends Contract {
 
     'creditLineVariables(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    defaultStrategy(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'defaultStrategy()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
     depositCollateral(
       _id: BigNumberish,
       _amount: BigNumberish,
@@ -2000,10 +1874,6 @@ export class CreditLine extends Contract {
     'idealCollateralRatioLimits()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     initialize(
-      _defaultStrategy: string,
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
@@ -2011,11 +1881,7 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'initialize(address,address,address,address,address,uint256,address,uint256)'(
-      _defaultStrategy: string,
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
+    'initialize(address,uint256,address,uint256)'(
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
@@ -2042,10 +1908,6 @@ export class CreditLine extends Contract {
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'owner()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    priceOracle(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'priceOracle()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     protocolFeeCollector(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -2078,32 +1940,26 @@ export class CreditLine extends Contract {
       _autoLiquidation: boolean,
       _collateralRatio: BigNumberish,
       _borrowAsset: string,
+      _borrowAssetStrategy: string,
       _collateralAsset: string,
       _collateralStrategy: string,
       _requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'request(address,uint128,uint128,bool,uint256,address,address,address,bool)'(
+    'request(address,uint128,uint128,bool,uint256,address,address,address,address,bool)'(
       _requestTo: string,
       _borrowLimit: BigNumberish,
       _borrowRate: BigNumberish,
       _autoLiquidation: boolean,
       _collateralRatio: BigNumberish,
       _borrowAsset: string,
+      _borrowAssetStrategy: string,
       _collateralAsset: string,
       _collateralStrategy: string,
       _requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
-
-    savingsAccount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'savingsAccount()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -2148,16 +2004,6 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateDefaultStrategy(
-      _defaultStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateDefaultStrategy(address)'(
-      _defaultStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
     updateIdealCollateralRatioLimits(
       _min: BigNumberish,
       _max: BigNumberish,
@@ -2177,13 +2023,6 @@ export class CreditLine extends Contract {
 
     'updateLiquidatorRewardFraction(uint256)'(
       _rewardFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updatePriceOracle(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'updatePriceOracle(address)'(
-      _priceOracle: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -2207,35 +2046,28 @@ export class CreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateSavingsAccount(
-      _savingsAccount: string,
+    withdrawAllCollateral(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
+    'withdrawAllCollateral(uint256,bool)'(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateStrategyRegistry(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'withdrawCollateral(uint256,uint256,bool)'(
+    withdrawCollateral(
       _id: BigNumberish,
       _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'withdrawCollateral(uint256,bool)'(
+    'withdrawCollateral(uint256,uint256,bool)'(
       _id: BigNumberish,
+      _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;

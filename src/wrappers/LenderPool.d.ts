@@ -22,7 +22,6 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 interface LenderPoolInterface extends ethers.utils.Interface {
   functions: {
     'POOLED_CREDIT_LINE()': FunctionFragment;
-    'PRICE_ORACLE()': FunctionFragment;
     'SAVINGS_ACCOUNT()': FunctionFragment;
     'VERIFICATION()': FunctionFragment;
     'balanceOf(address,uint256)': FunctionFragment;
@@ -31,35 +30,29 @@ interface LenderPoolInterface extends ethers.utils.Interface {
     'calculatePrincipalWithdrawable(uint256,address)': FunctionFragment;
     'create(uint256,address,address,address,uint256,uint256,uint256,bool)': FunctionFragment;
     'getLenderInfo(uint256,address)': FunctionFragment;
-    'initialize(address,uint256,uint256)': FunctionFragment;
+    'getLenderInterest(uint256,address)': FunctionFragment;
+    'initialize()': FunctionFragment;
     'isApprovedForAll(address,address)': FunctionFragment;
     'lend(uint256,uint256)': FunctionFragment;
     'liquidate(uint256,bool)': FunctionFragment;
-    'maxStartFee()': FunctionFragment;
-    'owner()': FunctionFragment;
     'pooledCLConstants(uint256)': FunctionFragment;
     'pooledCLVariables(uint256)': FunctionFragment;
-    'renounceOwnership()': FunctionFragment;
     'repaid(uint256,uint256,uint256)': FunctionFragment;
     'requestCancelled(uint256)': FunctionFragment;
     'safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)': FunctionFragment;
     'safeTransferFrom(address,address,uint256,uint256,bytes)': FunctionFragment;
     'setApprovalForAll(address,bool)': FunctionFragment;
-    'start(uint256,address)': FunctionFragment;
-    'startFeeFraction()': FunctionFragment;
+    'start(uint256)': FunctionFragment;
     'supportsInterface(bytes4)': FunctionFragment;
+    'terminate(uint256,address)': FunctionFragment;
     'totalSupply(uint256)': FunctionFragment;
-    'transferOwnership(address)': FunctionFragment;
-    'updateMaxStartFee(uint256)': FunctionFragment;
-    'updateStartFeeFraction(uint256)': FunctionFragment;
     'uri(uint256)': FunctionFragment;
-    'withdrawInterest(uint256,address)': FunctionFragment;
-    'withdrawLiquidation(uint256,address)': FunctionFragment;
+    'withdrawInterest(uint256)': FunctionFragment;
+    'withdrawLiquidatedCollateral(uint256)': FunctionFragment;
     'withdrawLiquidity(uint256)': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'POOLED_CREDIT_LINE', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'PRICE_ORACLE', values?: undefined): string;
   encodeFunctionData(functionFragment: 'SAVINGS_ACCOUNT', values?: undefined): string;
   encodeFunctionData(functionFragment: 'VERIFICATION', values?: undefined): string;
   encodeFunctionData(functionFragment: 'balanceOf', values: [string, BigNumberish]): string;
@@ -71,15 +64,13 @@ interface LenderPoolInterface extends ethers.utils.Interface {
     values: [BigNumberish, string, string, string, BigNumberish, BigNumberish, BigNumberish, boolean]
   ): string;
   encodeFunctionData(functionFragment: 'getLenderInfo', values: [BigNumberish, string]): string;
-  encodeFunctionData(functionFragment: 'initialize', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'getLenderInterest', values: [BigNumberish, string]): string;
+  encodeFunctionData(functionFragment: 'initialize', values?: undefined): string;
   encodeFunctionData(functionFragment: 'isApprovedForAll', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'lend', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'liquidate', values: [BigNumberish, boolean]): string;
-  encodeFunctionData(functionFragment: 'maxStartFee', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
   encodeFunctionData(functionFragment: 'pooledCLConstants', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'pooledCLVariables', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'renounceOwnership', values?: undefined): string;
   encodeFunctionData(functionFragment: 'repaid', values: [BigNumberish, BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'requestCancelled', values: [BigNumberish]): string;
   encodeFunctionData(
@@ -88,20 +79,16 @@ interface LenderPoolInterface extends ethers.utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: 'safeTransferFrom', values: [string, string, BigNumberish, BigNumberish, BytesLike]): string;
   encodeFunctionData(functionFragment: 'setApprovalForAll', values: [string, boolean]): string;
-  encodeFunctionData(functionFragment: 'start', values: [BigNumberish, string]): string;
-  encodeFunctionData(functionFragment: 'startFeeFraction', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'start', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'supportsInterface', values: [BytesLike]): string;
+  encodeFunctionData(functionFragment: 'terminate', values: [BigNumberish, string]): string;
   encodeFunctionData(functionFragment: 'totalSupply', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'transferOwnership', values: [string]): string;
-  encodeFunctionData(functionFragment: 'updateMaxStartFee', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateStartFeeFraction', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'uri', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'withdrawInterest', values: [BigNumberish, string]): string;
-  encodeFunctionData(functionFragment: 'withdrawLiquidation', values: [BigNumberish, string]): string;
+  encodeFunctionData(functionFragment: 'withdrawInterest', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'withdrawLiquidatedCollateral', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'withdrawLiquidity', values: [BigNumberish]): string;
 
   decodeFunctionResult(functionFragment: 'POOLED_CREDIT_LINE', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'PRICE_ORACLE', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'SAVINGS_ACCOUNT', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'VERIFICATION', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'balanceOf', data: BytesLike): Result;
@@ -110,30 +97,25 @@ interface LenderPoolInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'calculatePrincipalWithdrawable', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'create', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getLenderInfo', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getLenderInterest', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'isApprovedForAll', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'lend', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'liquidate', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'maxStartFee', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'owner', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'pooledCLConstants', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'pooledCLVariables', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'renounceOwnership', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'repaid', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'requestCancelled', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'safeBatchTransferFrom', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'safeTransferFrom', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setApprovalForAll', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'start', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'startFeeFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'supportsInterface', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'terminate', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'totalSupply', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'transferOwnership', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateMaxStartFee', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateStartFeeFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'uri', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawInterest', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'withdrawLiquidation', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'withdrawLiquidatedCollateral', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawLiquidity', data: BytesLike): Result;
 
   events: {
@@ -142,9 +124,7 @@ interface LenderPoolInterface extends ethers.utils.Interface {
     'Lend(uint256,address,uint256)': EventFragment;
     'Liquidated(uint256,uint256)': EventFragment;
     'LiquidationWithdrawn(uint256,address,uint256)': EventFragment;
-    'MaxStartFeeUpdated(uint256)': EventFragment;
-    'OwnershipTransferred(address,address)': EventFragment;
-    'StartFeeFractionUpdated(uint256)': EventFragment;
+    'LiquidityWithdrawn(uint256,address)': EventFragment;
     'TransferBatch(address,address,address,uint256[],uint256[])': EventFragment;
     'TransferSingle(address,address,address,uint256,uint256)': EventFragment;
     'URI(string,uint256)': EventFragment;
@@ -157,9 +137,7 @@ interface LenderPoolInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: 'Lend'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'Liquidated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'LiquidationWithdrawn'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'MaxStartFeeUpdated'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'OwnershipTransferred'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'StartFeeFractionUpdated'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'LiquidityWithdrawn'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'TransferBatch'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'TransferSingle'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'URI'): EventFragment;
@@ -214,10 +192,6 @@ export class LenderPool extends Contract {
     POOLED_CREDIT_LINE(overrides?: CallOverrides): Promise<[string]>;
 
     'POOLED_CREDIT_LINE()'(overrides?: CallOverrides): Promise<[string]>;
-
-    PRICE_ORACLE(overrides?: CallOverrides): Promise<[string]>;
-
-    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<[string]>;
 
     SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<[string]>;
 
@@ -309,19 +283,21 @@ export class LenderPool extends Contract {
       ]
     >;
 
-    initialize(
-      _owner: string,
-      _startFeeFraction: BigNumberish,
-      _maxStartFee: BigNumberish,
+    getLenderInterest(
+      _id: BigNumberish,
+      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'initialize(address,uint256,uint256)'(
-      _owner: string,
-      _startFeeFraction: BigNumberish,
-      _maxStartFee: BigNumberish,
+    'getLenderInterest(uint256,address)'(
+      _id: BigNumberish,
+      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
+
+    initialize(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'initialize()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     isApprovedForAll(account: string, operator: string, overrides?: CallOverrides): Promise<[boolean]>;
 
@@ -350,14 +326,6 @@ export class LenderPool extends Contract {
       _withdraw: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
-
-    maxStartFee(overrides?: CallOverrides): Promise<[BigNumber]>;
-
-    'maxStartFee()'(overrides?: CallOverrides): Promise<[BigNumber]>;
-
-    owner(overrides?: CallOverrides): Promise<[string]>;
-
-    'owner()'(overrides?: CallOverrides): Promise<[string]>;
 
     pooledCLConstants(
       arg0: BigNumberish,
@@ -416,10 +384,6 @@ export class LenderPool extends Contract {
         collateralHeld: BigNumber;
       }
     >;
-
-    renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     repaid(
       _id: BigNumberish,
@@ -490,78 +454,44 @@ export class LenderPool extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    start(_id: BigNumberish, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'start(uint256,address)'(
-      _id: BigNumberish,
-      _to: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    startFeeFraction(overrides?: CallOverrides): Promise<[BigNumber]>;
-
-    'startFeeFraction()'(overrides?: CallOverrides): Promise<[BigNumber]>;
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<[boolean]>;
 
     'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<[boolean]>;
 
+    terminate(_id: BigNumberish, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'terminate(uint256,address)'(
+      _id: BigNumberish,
+      _to: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     totalSupply(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'totalSupply(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
-
-    transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'transferOwnership(address)'(
-      newOwner: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateMaxStartFee(
-      _maxStartFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateMaxStartFee(uint256)'(
-      _maxStartFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateStartFeeFraction(
-      _startFeeFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateStartFeeFraction(uint256)'(
-      _startFeeFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
 
     uri(arg0: BigNumberish, overrides?: CallOverrides): Promise<[string]>;
 
     'uri(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<[string]>;
 
-    withdrawInterest(
+    withdrawInterest(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'withdrawInterest(uint256)'(
       _id: BigNumberish,
-      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'withdrawInterest(uint256,address)'(
+    withdrawLiquidatedCollateral(
       _id: BigNumberish,
-      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    withdrawLiquidation(
+    'withdrawLiquidatedCollateral(uint256)'(
       _id: BigNumberish,
-      _lender: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'withdrawLiquidation(uint256,address)'(
-      _id: BigNumberish,
-      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -576,10 +506,6 @@ export class LenderPool extends Contract {
   POOLED_CREDIT_LINE(overrides?: CallOverrides): Promise<string>;
 
   'POOLED_CREDIT_LINE()'(overrides?: CallOverrides): Promise<string>;
-
-  PRICE_ORACLE(overrides?: CallOverrides): Promise<string>;
-
-  'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<string>;
 
   SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<string>;
 
@@ -667,19 +593,21 @@ export class LenderPool extends Contract {
     }
   >;
 
-  initialize(
-    _owner: string,
-    _startFeeFraction: BigNumberish,
-    _maxStartFee: BigNumberish,
+  getLenderInterest(
+    _id: BigNumberish,
+    _lender: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'initialize(address,uint256,uint256)'(
-    _owner: string,
-    _startFeeFraction: BigNumberish,
-    _maxStartFee: BigNumberish,
+  'getLenderInterest(uint256,address)'(
+    _id: BigNumberish,
+    _lender: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
+
+  initialize(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'initialize()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   isApprovedForAll(account: string, operator: string, overrides?: CallOverrides): Promise<boolean>;
 
@@ -704,14 +632,6 @@ export class LenderPool extends Contract {
     _withdraw: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
-
-  maxStartFee(overrides?: CallOverrides): Promise<BigNumber>;
-
-  'maxStartFee()'(overrides?: CallOverrides): Promise<BigNumber>;
-
-  owner(overrides?: CallOverrides): Promise<string>;
-
-  'owner()'(overrides?: CallOverrides): Promise<string>;
 
   pooledCLConstants(
     arg0: BigNumberish,
@@ -770,10 +690,6 @@ export class LenderPool extends Contract {
       collateralHeld: BigNumber;
     }
   >;
-
-  renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   repaid(
     _id: BigNumberish,
@@ -841,72 +757,41 @@ export class LenderPool extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  start(_id: BigNumberish, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'start(uint256,address)'(
-    _id: BigNumberish,
-    _to: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  startFeeFraction(overrides?: CallOverrides): Promise<BigNumber>;
-
-  'startFeeFraction()'(overrides?: CallOverrides): Promise<BigNumber>;
+  'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
 
   'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
 
+  terminate(_id: BigNumberish, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'terminate(uint256,address)'(
+    _id: BigNumberish,
+    _to: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   totalSupply(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
   'totalSupply(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
-
-  transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'transferOwnership(address)'(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  updateMaxStartFee(_maxStartFee: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'updateMaxStartFee(uint256)'(
-    _maxStartFee: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateStartFeeFraction(
-    _startFeeFraction: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateStartFeeFraction(uint256)'(
-    _startFeeFraction: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
 
   uri(arg0: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
   'uri(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
-  withdrawInterest(
+  withdrawInterest(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'withdrawInterest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  withdrawLiquidatedCollateral(
     _id: BigNumberish,
-    _lender: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'withdrawInterest(uint256,address)'(
+  'withdrawLiquidatedCollateral(uint256)'(
     _id: BigNumberish,
-    _lender: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  withdrawLiquidation(
-    _id: BigNumberish,
-    _lender: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'withdrawLiquidation(uint256,address)'(
-    _id: BigNumberish,
-    _lender: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -921,10 +806,6 @@ export class LenderPool extends Contract {
     POOLED_CREDIT_LINE(overrides?: CallOverrides): Promise<string>;
 
     'POOLED_CREDIT_LINE()'(overrides?: CallOverrides): Promise<string>;
-
-    PRICE_ORACLE(overrides?: CallOverrides): Promise<string>;
-
-    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<string>;
 
     SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<string>;
 
@@ -996,14 +877,13 @@ export class LenderPool extends Contract {
       }
     >;
 
-    initialize(_owner: string, _startFeeFraction: BigNumberish, _maxStartFee: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    getLenderInterest(_id: BigNumberish, _lender: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'initialize(address,uint256,uint256)'(
-      _owner: string,
-      _startFeeFraction: BigNumberish,
-      _maxStartFee: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
+    'getLenderInterest(uint256,address)'(_id: BigNumberish, _lender: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    initialize(overrides?: CallOverrides): Promise<void>;
+
+    'initialize()'(overrides?: CallOverrides): Promise<void>;
 
     isApprovedForAll(account: string, operator: string, overrides?: CallOverrides): Promise<boolean>;
 
@@ -1016,14 +896,6 @@ export class LenderPool extends Contract {
     liquidate(_id: BigNumberish, _withdraw: boolean, overrides?: CallOverrides): Promise<void>;
 
     'liquidate(uint256,bool)'(_id: BigNumberish, _withdraw: boolean, overrides?: CallOverrides): Promise<void>;
-
-    maxStartFee(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'maxStartFee()'(overrides?: CallOverrides): Promise<BigNumber>;
-
-    owner(overrides?: CallOverrides): Promise<string>;
-
-    'owner()'(overrides?: CallOverrides): Promise<string>;
 
     pooledCLConstants(
       arg0: BigNumberish,
@@ -1083,10 +955,6 @@ export class LenderPool extends Contract {
       }
     >;
 
-    renounceOwnership(overrides?: CallOverrides): Promise<void>;
-
-    'renounceOwnership()'(overrides?: CallOverrides): Promise<void>;
-
     repaid(_id: BigNumberish, _sharesRepaid: BigNumberish, _interestShares: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'repaid(uint256,uint256,uint256)'(
@@ -1140,45 +1008,33 @@ export class LenderPool extends Contract {
 
     'setApprovalForAll(address,bool)'(operator: string, approved: boolean, overrides?: CallOverrides): Promise<void>;
 
-    start(_id: BigNumberish, _to: string, overrides?: CallOverrides): Promise<void>;
+    start(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'start(uint256,address)'(_id: BigNumberish, _to: string, overrides?: CallOverrides): Promise<void>;
-
-    startFeeFraction(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'startFeeFraction()'(overrides?: CallOverrides): Promise<BigNumber>;
+    'start(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
 
     'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
 
+    terminate(_id: BigNumberish, _to: string, overrides?: CallOverrides): Promise<void>;
+
+    'terminate(uint256,address)'(_id: BigNumberish, _to: string, overrides?: CallOverrides): Promise<void>;
+
     totalSupply(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'totalSupply(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
-
-    transferOwnership(newOwner: string, overrides?: CallOverrides): Promise<void>;
-
-    'transferOwnership(address)'(newOwner: string, overrides?: CallOverrides): Promise<void>;
-
-    updateMaxStartFee(_maxStartFee: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'updateMaxStartFee(uint256)'(_maxStartFee: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    updateStartFeeFraction(_startFeeFraction: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'updateStartFeeFraction(uint256)'(_startFeeFraction: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     uri(arg0: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
     'uri(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
-    withdrawInterest(_id: BigNumberish, _lender: string, overrides?: CallOverrides): Promise<void>;
+    withdrawInterest(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'withdrawInterest(uint256,address)'(_id: BigNumberish, _lender: string, overrides?: CallOverrides): Promise<void>;
+    'withdrawInterest(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    withdrawLiquidation(_id: BigNumberish, _lender: string, overrides?: CallOverrides): Promise<void>;
+    withdrawLiquidatedCollateral(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'withdrawLiquidation(uint256,address)'(_id: BigNumberish, _lender: string, overrides?: CallOverrides): Promise<void>;
+    'withdrawLiquidatedCollateral(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     withdrawLiquidity(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
@@ -1215,14 +1071,10 @@ export class LenderPool extends Contract {
       collateralShare: null
     ): TypedEventFilter<[BigNumber, string, BigNumber], { id: BigNumber; user: string; collateralShare: BigNumber }>;
 
-    MaxStartFeeUpdated(updatedMaxStartFee: null): TypedEventFilter<[BigNumber], { updatedMaxStartFee: BigNumber }>;
-
-    OwnershipTransferred(
-      previousOwner: string | null,
-      newOwner: string | null
-    ): TypedEventFilter<[string, string], { previousOwner: string; newOwner: string }>;
-
-    StartFeeFractionUpdated(updatedStartFeeFraction: null): TypedEventFilter<[BigNumber], { updatedStartFeeFraction: BigNumber }>;
+    LiquidityWithdrawn(
+      amount: null,
+      lenderAddress: string | null
+    ): TypedEventFilter<[BigNumber, string], { amount: BigNumber; lenderAddress: string }>;
 
     TransferBatch(
       operator: string | null,
@@ -1277,10 +1129,6 @@ export class LenderPool extends Contract {
     POOLED_CREDIT_LINE(overrides?: CallOverrides): Promise<BigNumber>;
 
     'POOLED_CREDIT_LINE()'(overrides?: CallOverrides): Promise<BigNumber>;
-
-    PRICE_ORACLE(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1350,19 +1198,17 @@ export class LenderPool extends Contract {
 
     'getLenderInfo(uint256,address)'(_id: BigNumberish, _lender: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    initialize(
-      _owner: string,
-      _startFeeFraction: BigNumberish,
-      _maxStartFee: BigNumberish,
+    getLenderInterest(_id: BigNumberish, _lender: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'getLenderInterest(uint256,address)'(
+      _id: BigNumberish,
+      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'initialize(address,uint256,uint256)'(
-      _owner: string,
-      _startFeeFraction: BigNumberish,
-      _maxStartFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
+    initialize(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'initialize()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     isApprovedForAll(account: string, operator: string, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1384,14 +1230,6 @@ export class LenderPool extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    maxStartFee(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'maxStartFee()'(overrides?: CallOverrides): Promise<BigNumber>;
-
-    owner(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'owner()'(overrides?: CallOverrides): Promise<BigNumber>;
-
     pooledCLConstants(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'pooledCLConstants(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
@@ -1399,10 +1237,6 @@ export class LenderPool extends Contract {
     pooledCLVariables(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'pooledCLVariables(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
-
-    renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     repaid(
       _id: BigNumberish,
@@ -1466,68 +1300,38 @@ export class LenderPool extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    start(_id: BigNumberish, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'start(uint256,address)'(
-      _id: BigNumberish,
-      _to: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    startFeeFraction(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'startFeeFraction()'(overrides?: CallOverrides): Promise<BigNumber>;
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
     'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
+    terminate(_id: BigNumberish, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'terminate(uint256,address)'(
+      _id: BigNumberish,
+      _to: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     totalSupply(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'totalSupply(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
-
-    transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'transferOwnership(address)'(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    updateMaxStartFee(_maxStartFee: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updateMaxStartFee(uint256)'(
-      _maxStartFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateStartFeeFraction(
-      _startFeeFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateStartFeeFraction(uint256)'(
-      _startFeeFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
 
     uri(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'uri(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    withdrawInterest(_id: BigNumberish, _lender: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    withdrawInterest(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'withdrawInterest(uint256,address)'(
-      _id: BigNumberish,
-      _lender: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
+    'withdrawInterest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    withdrawLiquidation(
-      _id: BigNumberish,
-      _lender: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
+    withdrawLiquidatedCollateral(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'withdrawLiquidation(uint256,address)'(
+    'withdrawLiquidatedCollateral(uint256)'(
       _id: BigNumberish,
-      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -1540,10 +1344,6 @@ export class LenderPool extends Contract {
     POOLED_CREDIT_LINE(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'POOLED_CREDIT_LINE()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    PRICE_ORACLE(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -1617,19 +1417,21 @@ export class LenderPool extends Contract {
 
     'getLenderInfo(uint256,address)'(_id: BigNumberish, _lender: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    initialize(
-      _owner: string,
-      _startFeeFraction: BigNumberish,
-      _maxStartFee: BigNumberish,
+    getLenderInterest(
+      _id: BigNumberish,
+      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'initialize(address,uint256,uint256)'(
-      _owner: string,
-      _startFeeFraction: BigNumberish,
-      _maxStartFee: BigNumberish,
+    'getLenderInterest(uint256,address)'(
+      _id: BigNumberish,
+      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    initialize(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'initialize()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     isApprovedForAll(account: string, operator: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -1659,14 +1461,6 @@ export class LenderPool extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    maxStartFee(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'maxStartFee()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'owner()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
     pooledCLConstants(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'pooledCLConstants(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1674,10 +1468,6 @@ export class LenderPool extends Contract {
     pooledCLVariables(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'pooledCLVariables(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     repaid(
       _id: BigNumberish,
@@ -1748,78 +1538,44 @@ export class LenderPool extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    start(_id: BigNumberish, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'start(uint256,address)'(
-      _id: BigNumberish,
-      _to: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    startFeeFraction(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'startFeeFraction()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    terminate(_id: BigNumberish, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'terminate(uint256,address)'(
+      _id: BigNumberish,
+      _to: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
     totalSupply(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'totalSupply(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'transferOwnership(address)'(
-      newOwner: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateMaxStartFee(
-      _maxStartFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateMaxStartFee(uint256)'(
-      _maxStartFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateStartFeeFraction(
-      _startFeeFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateStartFeeFraction(uint256)'(
-      _startFeeFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
 
     uri(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'uri(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    withdrawInterest(
+    withdrawInterest(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'withdrawInterest(uint256)'(
       _id: BigNumberish,
-      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'withdrawInterest(uint256,address)'(
+    withdrawLiquidatedCollateral(
       _id: BigNumberish,
-      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    withdrawLiquidation(
+    'withdrawLiquidatedCollateral(uint256)'(
       _id: BigNumberish,
-      _lender: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'withdrawLiquidation(uint256,address)'(
-      _id: BigNumberish,
-      _lender: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

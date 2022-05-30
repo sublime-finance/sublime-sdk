@@ -79,7 +79,7 @@ export enum CreditLineStatus {
 
 export enum StrategyType {
   NoYield = 'NoYield',
-  CompounYield = 'CompoundYield',
+  CompoundYield = 'CompoundYield',
   YearnYield = 'YearnYield',
   AaveYield = 'AaveYield',
 }
@@ -148,7 +148,8 @@ export interface CreditLineRequest {
   collateralRatio: string;
   borrowAsset: string;
   collateralAsset: string;
-  strategyType: StrategyType;
+  borrowAssetStrategy: StrategyType;
+  collateralAssetStrategy: StrategyType;
 }
 
 export interface SavingsAccountStrategyBalanceDisplay {

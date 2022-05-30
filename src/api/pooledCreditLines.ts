@@ -8,7 +8,6 @@ import { BigNumber } from 'bignumber.js';
 import { TokenManager } from '../tokenManager';
 
 import { Balance, Options as Overrides } from '../types/Types';
-import { CreditLineEthUtils } from './utils/creditLineEthUtils';
 
 import { PooledCreditLine } from '../wrappers/PooledCreditLine';
 import { PooledCreditLine__factory } from '../wrappers/factories/PooledCreditLine__factory';
@@ -16,18 +15,35 @@ import { PooledCreditLine__factory } from '../wrappers/factories/PooledCreditLin
 import { LenderPool } from '../wrappers/LenderPool';
 import { LenderPool__factory } from '../wrappers/factories/LenderPool__factory';
 
-import { IYield } from '../wrappers/IYield';
 import { IYield__factory } from '../wrappers/factories/IYield__factory';
 
 /**
  * @class PooledCreditLines
  */
 export class PooledCreditLineApi {
+  /**
+   * @description Instance of lender pool contract
+   */
   private lenderPool: LenderPool;
+
+  /**
+   * @description Instance of pooled credit line contract
+   */
   private pooledCreditLine: PooledCreditLine;
 
+  /**
+   * @description Instance to fetch and update token metadata
+   */
   private tokenManager: TokenManager;
+
+  /**
+   * @description All sublime contracts
+   */
   private config: SublimeConfig;
+
+  /**
+   * @description Signer Object
+   */
   private signer: Signer;
 
   constructor(signer: Signer, config: SublimeConfig, tokenManager: TokenManager) {
@@ -46,7 +62,7 @@ export class PooledCreditLineApi {
    * @returns
    */
   public async start(_id: string, options?: Overrides): Promise<ContractTransaction> {
-    return this.lenderPool.start(_id, await this.signer.getAddress(), { ...options });
+    return this.lenderPool.start(_id, { ...options });
   }
 
   /**
@@ -103,16 +119,11 @@ export class PooledCreditLineApi {
   /**
    * @description Withdraw Interest
    * @param _id
-   * @param lender
    * @param options
    * @returns
    */
-  public async withdrawInterest(_id: string, lender?: string, options?: Overrides): Promise<ContractTransaction> {
-    if (!lender) {
-      lender = await this.signer.getAddress();
-    }
-
-    return this.lenderPool.withdrawInterest(_id, lender, { ...options });
+  public async withdrawInterest(_id: string, options?: Overrides): Promise<ContractTransaction> {
+    return this.lenderPool.withdrawInterest(_id, { ...options });
   }
 
   /**
@@ -131,11 +142,13 @@ export class PooledCreditLineApi {
    * @param lenderAddress
    * @returns
    */
-  public async getLenderInterest(lenderAddress: string): Promise<Balance> {
-    {
-      return { value: 278873283781212, decimals: 18 };
-    }
+  public async getLenderInterest(_id: string, lenderAddress: string): Promise<Balance> {
+    const borrowToken = await (await this.lenderPool.pooledCLConstants(_id)).borrowAsset;
+    await this.tokenManager.updateAll(borrowToken);
+    const value = await this.lenderPool.callStatic.getLenderInterest(_id, lenderAddress);
+    return { value: value.toString(), decimals: this.tokenManager.getTokenDecimals(borrowToken) };
   }
+
   /**
    * @description get principle
    * @param _id
@@ -272,6 +285,26 @@ export class PooledCreditLineApi {
     return { value: value.toString(), decimals };
   }
 
+  /**
+   *
+   * @param colRatio
+   * @param durationInSeconds
+   * @param lenderVerifier
+   * @param defaultGracePeriodInSeconds
+   * @param gracePenaltyRate
+   * @param collectionPeriod
+   * @param minBorrowAmount
+   * @param _borrowLimit
+   * @param _borrowRate
+   * @param collateralAsset
+   * @param borrowAssetStrategy
+   * @param collateralAssetStrategy
+   * @param borrowAsset
+   * @param borrowerVerifier
+   * @param areTokensTransferable
+   * @param options
+   * @returns
+   */
   public async request(
     colRatio: string,
     durationInSeconds: string,
@@ -345,7 +378,7 @@ export class PooledCreditLineApi {
     let collateralStrategyAddress: string;
     if (collateralAssetStrategy === StrategyType.NoYield) {
       collateralStrategyAddress = this.config.noStrategyAddress;
-    } else if (collateralAssetStrategy === StrategyType.CompounYield) {
+    } else if (collateralAssetStrategy === StrategyType.CompoundYield) {
       collateralStrategyAddress = this.config.compoundStrategyContractAddress;
     } else {
       throw new Error('Unsupported strategy');
@@ -354,7 +387,7 @@ export class PooledCreditLineApi {
     let borrowerStrategyAddress: string;
     if (borrowAssetStrategy == StrategyType.NoYield) {
       borrowerStrategyAddress = this.config.noStrategyAddress;
-    } else if (borrowAssetStrategy == StrategyType.CompounYield) {
+    } else if (borrowAssetStrategy == StrategyType.CompoundYield) {
       borrowerStrategyAddress = this.config.compoundStrategyContractAddress;
     } else {
       throw new Error('Unsupported strategy');
@@ -444,7 +477,7 @@ export class PooledCreditLineApi {
 
   /**
    * @description Repay
-   * @param _id '
+   * @param _id
    * @param _amount
    * @param options
    * @returns

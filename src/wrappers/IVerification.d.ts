@@ -24,15 +24,18 @@ interface IVerificationInterface extends ethers.utils.Interface {
     'isUser(address,address)': FunctionFragment;
     'registerMasterAddress(address,bool)': FunctionFragment;
     'unregisterMasterAddress(address,address)': FunctionFragment;
+    'verifiers(address)': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'isUser', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'registerMasterAddress', values: [string, boolean]): string;
   encodeFunctionData(functionFragment: 'unregisterMasterAddress', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'verifiers', values: [string]): string;
 
   decodeFunctionResult(functionFragment: 'isUser', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'registerMasterAddress', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'unregisterMasterAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'verifiers', data: BytesLike): Result;
 
   events: {
     'ActivationDelayUpdated(uint256)': EventFragment;
@@ -132,6 +135,10 @@ export class IVerification extends Contract {
       _verifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
+
+    verifiers(_verifier: string, overrides?: CallOverrides): Promise<[boolean] & { isValid: boolean }>;
+
+    'verifiers(address)'(_verifier: string, overrides?: CallOverrides): Promise<[boolean] & { isValid: boolean }>;
   };
 
   isUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<boolean>;
@@ -162,6 +169,10 @@ export class IVerification extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  verifiers(_verifier: string, overrides?: CallOverrides): Promise<boolean>;
+
+  'verifiers(address)'(_verifier: string, overrides?: CallOverrides): Promise<boolean>;
+
   callStatic: {
     isUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<boolean>;
 
@@ -174,6 +185,10 @@ export class IVerification extends Contract {
     unregisterMasterAddress(_masterAddress: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
 
     'unregisterMasterAddress(address,address)'(_masterAddress: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
+
+    verifiers(_verifier: string, overrides?: CallOverrides): Promise<boolean>;
+
+    'verifiers(address)'(_verifier: string, overrides?: CallOverrides): Promise<boolean>;
   };
 
   filters: {
@@ -245,6 +260,10 @@ export class IVerification extends Contract {
       _verifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
+
+    verifiers(_verifier: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'verifiers(address)'(_verifier: string, overrides?: CallOverrides): Promise<BigNumber>;
   };
 
   populateTransaction: {
@@ -275,5 +294,9 @@ export class IVerification extends Contract {
       _verifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    verifiers(_verifier: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'verifiers(address)'(_verifier: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
   };
 }

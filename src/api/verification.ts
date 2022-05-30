@@ -17,12 +17,31 @@ import { Options as Overrides, VerifierType } from '../types/Types';
  * @class VerificationAPI
  */
 export class VerificationAPI {
+  /**
+   * @description Signer Object
+   */
   private signer: Signer;
+
+  /**
+   * @description verification contract instance
+   */
   private verification: Verification;
+
+  /**
+   * @description Twitter Verifier contract instance
+   */
   private twitterVerifier: TwitterVerifier;
+
+  /**
+   * @description Admin Verifier contract instance
+   */
   private adminVerifier: AdminVerifier;
 
+  /**
+   * @description Internal store for all sublime contracts addresses
+   */
   private config: SublimeConfig;
+
   /**
    * @param signer Signer
    * @param config SublimeConfig
@@ -36,27 +55,30 @@ export class VerificationAPI {
   }
 
   /**
-   * @param user Address to check
-   * @returns
+   * @param user Address of the user to be verifier
+   * @param verifierType Type of Verifier
+   * @returns true if the address is verified by a given verifier
    */
-  public async isUser(user: string): Promise<boolean> {
-    return this.verification.isUser(user, this.twitterVerifier.address);
+  public async isUser(user: string, verifierType: VerifierType): Promise<boolean> {
+    const verifierAddress = this.getVerifierAddress(verifierType);
+    return this.verification.isUser(user, verifierAddress);
   }
 
   /**
    *
    * @param verifier Address of the verifier contract
-   * @returns
+   * @returns true if the given address is a verifier
    */
   public async isVerifier(verifier: string): Promise<boolean> {
     return this.verification.verifiers(verifier);
   }
 
   /**
-   * @param verifier Address of the verifier contract. (Default is the admin verifier)
+   * @description Only Verification Admin can call this function
+   * @param verifier address of the new verifier contract
    * @returns
    */
-  public async addVerifier(verifier: string = this.twitterVerifier.address, options?: Overrides): Promise<ContractTransaction> {
+  public async addVerifier(verifier: string, options?: Overrides): Promise<ContractTransaction> {
     return this.verification.addVerifier(verifier, { ...options });
   }
   /**
@@ -92,12 +114,25 @@ export class VerificationAPI {
   }
 
   /**
+   * @description user should call this function from his wallet if he wants to unregister from twitter verifier
+   * @param options
    * @returns
    */
   public unregisterSelfUsingTwitterVerifier(options?: Overrides): Promise<ContractTransaction> {
     return this.twitterVerifier.unregisterSelf({ ...options });
   }
 
+  /**
+   *
+   * @param _isMasterLinked True if master address is linked
+   * @param _v V component of the signature
+   * @param _r R component of the signature
+   * @param _s S component of the signature
+   * @param _userData Any use metadata that is associated with the address
+   * @param _deadline deadline for the transaction to be mined
+   * @param options
+   * @returns
+   */
   public registerUsingAdminVerifier(
     _isMasterLinked: boolean,
     _v: BigNumberish,
@@ -110,17 +145,13 @@ export class VerificationAPI {
     return this.adminVerifier.registerSelf(_isMasterLinked, _v, _r, _s, _userData, _deadline, { ...options });
   }
 
-  public unregisterSelfUsingAdminVerifier(options?: Overrides): Promise<ContractTransaction> {
-    return this.adminVerifier.unregisterSelf({ ...options });
-  }
-
   /**
-   *
-   * @param _verification Address of the verification contract
+   * @description user should call this function from his wallet if he wants to unregister from admin verifier
+   * @param options
    * @returns
    */
-  public updateVerification(_verification: string, options?: Overrides): Promise<ContractTransaction> {
-    return this.twitterVerifier.updateVerification(_verification, { ...options });
+  public unregisterSelfUsingAdminVerifier(options?: Overrides): Promise<ContractTransaction> {
+    return this.adminVerifier.unregisterSelf({ ...options });
   }
 
   /**
@@ -132,6 +163,19 @@ export class VerificationAPI {
     return this.twitterVerifier.updateSignerAddress(_signerAddress, { ...options });
   }
 
+  /**
+   *
+   * @param hash Hash to blacklist
+   * @param options
+   */
+  public blacklistDigest(hash: BytesLike, options?: Overrides): Promise<ContractTransaction> {
+    return this.twitterVerifier.blackListDigest(hash, { ...options });
+  }
+
+  /**
+   * @param type Type of verifier
+   * @returns Contract address of the given verifier
+   */
   public getVerifierAddress(type: VerifierType): string {
     if (type == VerifierType.AdminVerifier) {
       return this.config.adminVerifierContractAddress;
@@ -142,6 +186,11 @@ export class VerificationAPI {
     }
   }
 
+  /**
+   *
+   * @param address Contract address of the verifier
+   * @returns Type of verifier
+   */
   public getVerifierType(address: string): VerifierType {
     if (!address) {
       return undefined;

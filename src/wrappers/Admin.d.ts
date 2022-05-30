@@ -21,63 +21,102 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface AdminInterface extends ethers.utils.Interface {
   functions: {
-    'addStrategy(address,address)': FunctionFragment;
-    'setChainlinkPriceFeed(address,address,address)': FunctionFragment;
+    'addAggregator(address,address,address)': FunctionFragment;
+    'addSavingsAccountStrategy(address,address)': FunctionFragment;
+    'addTokenAddressForCompoundYield(address,address,address)': FunctionFragment;
+    'addVerifier(address,address)': FunctionFragment;
+    'changeImplementationAddressOfProxy(address,address)': FunctionFragment;
+    'deployCompoundYield(address,address,address,address)': FunctionFragment;
+    'deployMockAdminVerifier(address,address)': FunctionFragment;
+    'deployMockCToken(address,address)': FunctionFragment;
+    'deployNoYield(address,address,address)': FunctionFragment;
+    'deployPriceOracle(address,address,uint32)': FunctionFragment;
+    'deploySavingsAccount(address,address)': FunctionFragment;
+    'deployStrategyRegistry(address,uint256)': FunctionFragment;
+    'deployVerification(address)': FunctionFragment;
+    'emergencyWithdrawFromCompoundYield(address,address,address)': FunctionFragment;
+    'emergencyWithdrawFromNoYield(address,address,uint256)': FunctionFragment;
+    'execute(address,uint256,bytes)': FunctionFragment;
+    'executeFuncSig(address,uint256,string,bytes)': FunctionFragment;
+    'forceUpdateTokenAddressForCompoundYield(address,address,address)': FunctionFragment;
+    'getFunctionSignature(string)': FunctionFragment;
+    'getImplementationAddressOfProxy(address)': FunctionFragment;
+    'initSavingsAccount(address,address)': FunctionFragment;
+    'setChainlinkFeedAddress(address,address,address)': FunctionFragment;
+    'setDepositLimitForCompoundYield(address,address,uint256)': FunctionFragment;
     'setUpAllOracles(address)': FunctionFragment;
     'setUpChainlinkOracles(address)': FunctionFragment;
     'setUpUniswapOracles(address)': FunctionFragment;
     'setUp_USDC_ETH_oracles(address)': FunctionFragment;
-    'updateBorrowLimitLimits(address,uint256,uint256)': FunctionFragment;
-    'updateBorrowRateLimits(address,uint256,uint256)': FunctionFragment;
-    'updateDefaultStrategy(address,address)': FunctionFragment;
-    'updateIdealCollateralRatioLimits(address,uint256,uint256)': FunctionFragment;
-    'updateLiquidatorRewardFraction(address,uint256)': FunctionFragment;
-    'updatePooledCLSavingsAccount(address,address)': FunctionFragment;
-    'updatePriceOracle(address,address)': FunctionFragment;
-    'updateProtocolFeeCollector(address,address)': FunctionFragment;
+    'transferOwnership(address,address)': FunctionFragment;
+    'transferToken(address,address,uint256)': FunctionFragment;
     'updateProtocolFeeFraction(address,uint256)': FunctionFragment;
-    'updateSavingsAccount(address,address)': FunctionFragment;
-    'updateStrategy(address,uint256,address,address)': FunctionFragment;
-    'updateStrategyRegistry(address,address)': FunctionFragment;
+    'verifyUser(address,address)': FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: 'addStrategy', values: [string, string]): string;
-  encodeFunctionData(functionFragment: 'setChainlinkPriceFeed', values: [string, string, string]): string;
+  encodeFunctionData(functionFragment: 'addAggregator', values: [string, string, string]): string;
+  encodeFunctionData(functionFragment: 'addSavingsAccountStrategy', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'addTokenAddressForCompoundYield', values: [string, string, string]): string;
+  encodeFunctionData(functionFragment: 'addVerifier', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'changeImplementationAddressOfProxy', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'deployCompoundYield', values: [string, string, string, string]): string;
+  encodeFunctionData(functionFragment: 'deployMockAdminVerifier', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'deployMockCToken', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'deployNoYield', values: [string, string, string]): string;
+  encodeFunctionData(functionFragment: 'deployPriceOracle', values: [string, string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'deploySavingsAccount', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'deployStrategyRegistry', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'deployVerification', values: [string]): string;
+  encodeFunctionData(functionFragment: 'emergencyWithdrawFromCompoundYield', values: [string, string, string]): string;
+  encodeFunctionData(functionFragment: 'emergencyWithdrawFromNoYield', values: [string, string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'execute', values: [string, BigNumberish, BytesLike]): string;
+  encodeFunctionData(functionFragment: 'executeFuncSig', values: [string, BigNumberish, string, BytesLike]): string;
+  encodeFunctionData(functionFragment: 'forceUpdateTokenAddressForCompoundYield', values: [string, string, string]): string;
+  encodeFunctionData(functionFragment: 'getFunctionSignature', values: [string]): string;
+  encodeFunctionData(functionFragment: 'getImplementationAddressOfProxy', values: [string]): string;
+  encodeFunctionData(functionFragment: 'initSavingsAccount', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'setChainlinkFeedAddress', values: [string, string, string]): string;
+  encodeFunctionData(functionFragment: 'setDepositLimitForCompoundYield', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'setUpAllOracles', values: [string]): string;
   encodeFunctionData(functionFragment: 'setUpChainlinkOracles', values: [string]): string;
   encodeFunctionData(functionFragment: 'setUpUniswapOracles', values: [string]): string;
   encodeFunctionData(functionFragment: 'setUp_USDC_ETH_oracles', values: [string]): string;
-  encodeFunctionData(functionFragment: 'updateBorrowLimitLimits', values: [string, BigNumberish, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateBorrowRateLimits', values: [string, BigNumberish, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateDefaultStrategy', values: [string, string]): string;
-  encodeFunctionData(functionFragment: 'updateIdealCollateralRatioLimits', values: [string, BigNumberish, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateLiquidatorRewardFraction', values: [string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updatePooledCLSavingsAccount', values: [string, string]): string;
-  encodeFunctionData(functionFragment: 'updatePriceOracle', values: [string, string]): string;
-  encodeFunctionData(functionFragment: 'updateProtocolFeeCollector', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'transferOwnership', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'transferToken', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateProtocolFeeFraction', values: [string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateSavingsAccount', values: [string, string]): string;
-  encodeFunctionData(functionFragment: 'updateStrategy', values: [string, BigNumberish, string, string]): string;
-  encodeFunctionData(functionFragment: 'updateStrategyRegistry', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'verifyUser', values: [string, string]): string;
 
-  decodeFunctionResult(functionFragment: 'addStrategy', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'setChainlinkPriceFeed', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'addAggregator', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'addSavingsAccountStrategy', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'addTokenAddressForCompoundYield', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'addVerifier', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'changeImplementationAddressOfProxy', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployCompoundYield', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployMockAdminVerifier', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployMockCToken', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployNoYield', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployPriceOracle', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deploySavingsAccount', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployStrategyRegistry', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployVerification', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'emergencyWithdrawFromCompoundYield', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'emergencyWithdrawFromNoYield', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'execute', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'executeFuncSig', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'forceUpdateTokenAddressForCompoundYield', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getFunctionSignature', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getImplementationAddressOfProxy', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'initSavingsAccount', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setChainlinkFeedAddress', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setDepositLimitForCompoundYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUpAllOracles', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUpChainlinkOracles', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUpUniswapOracles', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUp_USDC_ETH_oracles', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateBorrowLimitLimits', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateBorrowRateLimits', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateDefaultStrategy', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateIdealCollateralRatioLimits', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateLiquidatorRewardFraction', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updatePooledCLSavingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updatePriceOracle', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateProtocolFeeCollector', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'transferOwnership', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'transferToken', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateProtocolFeeFraction', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateSavingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateStrategy', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateStrategyRegistry', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'verifyUser', data: BytesLike): Result;
 
   events: {};
 }
@@ -126,29 +165,289 @@ export class Admin extends Contract {
   interface: AdminInterface;
 
   functions: {
-    addStrategy(
-      strategyRegistry: string,
-      strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'addStrategy(address,address)'(
-      strategyRegistry: string,
-      strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    setChainlinkPriceFeed(
+    addAggregator(
       priceOracle: string,
-      asset: string,
-      oracle: string,
+      token: string,
+      aggregator: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'setChainlinkPriceFeed(address,address,address)'(
+    'addAggregator(address,address,address)'(
       priceOracle: string,
-      asset: string,
-      oracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    addSavingsAccountStrategy(
+      _strategyRegistry: string,
+      _strategyAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'addSavingsAccountStrategy(address,address)'(
+      _strategyRegistry: string,
+      _strategyAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    addTokenAddressForCompoundYield(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'addTokenAddressForCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    addVerifier(
+      _verification: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'addVerifier(address,address)'(
+      _verification: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    changeImplementationAddressOfProxy(
+      proxy: string,
+      newImplementation: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'changeImplementationAddressOfProxy(address,address)'(
+      proxy: string,
+      newImplementation: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    deployCompoundYield(
+      _admin: string,
+      _savingsAccount: string,
+      _mockWETH: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'deployCompoundYield(address,address,address,address)'(
+      _admin: string,
+      _savingsAccount: string,
+      _mockWETH: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    deployMockAdminVerifier(
+      arg0: string,
+      _verification: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'deployMockAdminVerifier(address,address)'(
+      arg0: string,
+      _verification: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    deployMockCToken(
+      _mockToken: string,
+      _compoundYield: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'deployMockCToken(address,address)'(
+      _mockToken: string,
+      _compoundYield: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    deployNoYield(
+      _admin: string,
+      _savingsAccount: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'deployNoYield(address,address,address)'(
+      _admin: string,
+      _savingsAccount: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    deployPriceOracle(
+      _admin: string,
+      _weth: string,
+      _uniswapPriceAvgPeriod: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'deployPriceOracle(address,address,uint32)'(
+      _admin: string,
+      _weth: string,
+      _uniswapPriceAvgPeriod: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    deploySavingsAccount(
+      arg0: string,
+      _strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'deploySavingsAccount(address,address)'(
+      arg0: string,
+      _strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    deployStrategyRegistry(
+      arg0: string,
+      _maxStrategies: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'deployStrategyRegistry(address,uint256)'(
+      arg0: string,
+      _maxStrategies: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    deployVerification(arg0: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'deployVerification(address)'(arg0: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    emergencyWithdrawFromCompoundYield(
+      yield: string,
+      _asset: string,
+      _wallet: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'emergencyWithdrawFromCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _wallet: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    emergencyWithdrawFromNoYield(
+      yield: string,
+      _asset: string,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'emergencyWithdrawFromNoYield(address,address,uint256)'(
+      yield: string,
+      _asset: string,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    execute(
+      target: string,
+      value: BigNumberish,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'execute(address,uint256,bytes)'(
+      target: string,
+      value: BigNumberish,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    executeFuncSig(
+      target: string,
+      value: BigNumberish,
+      signature: string,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'executeFuncSig(address,uint256,string,bytes)'(
+      target: string,
+      value: BigNumberish,
+      signature: string,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    forceUpdateTokenAddressForCompoundYield(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'forceUpdateTokenAddressForCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<[string]>;
+
+    'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<[string]>;
+
+    getImplementationAddressOfProxy(
+      sublimeProxyInstance: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'getImplementationAddressOfProxy(address)'(
+      sublimeProxyInstance: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    initSavingsAccount(
+      savingsAccount: string,
+      _owner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'initSavingsAccount(address,address)'(
+      savingsAccount: string,
+      _owner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    setChainlinkFeedAddress(
+      priceOracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'setChainlinkFeedAddress(address,address,address)'(
+      priceOracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    setDepositLimitForCompoundYield(
+      _compound: string,
+      _asset: string,
+      _limit: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'setDepositLimitForCompoundYield(address,address,uint256)'(
+      _compound: string,
+      _asset: string,
+      _limit: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -189,105 +488,29 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateBorrowLimitLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
+    transferOwnership(
+      _contract: string,
+      _to: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'updateBorrowLimitLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
+    'transferOwnership(address,address)'(
+      _contract: string,
+      _to: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateBorrowRateLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
+    transferToken(
+      token: string,
+      recipient: string,
+      amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'updateBorrowRateLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateDefaultStrategy(
-      creditLine: string,
-      noYield: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateDefaultStrategy(address,address)'(
-      creditLine: string,
-      noYield: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateIdealCollateralRatioLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateLiquidatorRewardFraction(
-      creditLine: string,
-      rewardFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateLiquidatorRewardFraction(address,uint256)'(
-      creditLine: string,
-      rewardFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updatePooledCLSavingsAccount(
-      pooledCreditLineAddress: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updatePooledCLSavingsAccount(address,address)'(
-      pooledCreditLineAddress: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updatePriceOracle(
-      creditLine: string,
-      priceOracle: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updatePriceOracle(address,address)'(
-      creditLine: string,
-      priceOracle: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateProtocolFeeCollector(
-      creditLine: string,
-      protocolFeeCollector: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateProtocolFeeCollector(address,address)'(
-      creditLine: string,
-      protocolFeeCollector: string,
+    'transferToken(address,address,uint256)'(
+      token: string,
+      recipient: string,
+      amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -303,70 +526,298 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateSavingsAccount(
-      creditLine: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    verifyUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'updateSavingsAccount(address,address)'(
-      creditLine: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateStrategy(
-      strategyRegistry: string,
-      index: BigNumberish,
-      oldStrategy: string,
-      newStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateStrategy(address,uint256,address,address)'(
-      strategyRegistry: string,
-      index: BigNumberish,
-      oldStrategy: string,
-      newStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateStrategyRegistry(
-      creditLine: string,
-      strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateStrategyRegistry(address,address)'(
-      creditLine: string,
-      strategyRegistry: string,
+    'verifyUser(address,address)'(
+      _user: string,
+      _verifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
   };
 
-  addStrategy(
-    strategyRegistry: string,
-    strategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'addStrategy(address,address)'(
-    strategyRegistry: string,
-    strategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  setChainlinkPriceFeed(
+  addAggregator(
     priceOracle: string,
-    asset: string,
-    oracle: string,
+    token: string,
+    aggregator: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'setChainlinkPriceFeed(address,address,address)'(
+  'addAggregator(address,address,address)'(
     priceOracle: string,
-    asset: string,
-    oracle: string,
+    token: string,
+    aggregator: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  addSavingsAccountStrategy(
+    _strategyRegistry: string,
+    _strategyAddress: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'addSavingsAccountStrategy(address,address)'(
+    _strategyRegistry: string,
+    _strategyAddress: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  addTokenAddressForCompoundYield(
+    yield: string,
+    _asset: string,
+    _liquidityToken: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'addTokenAddressForCompoundYield(address,address,address)'(
+    yield: string,
+    _asset: string,
+    _liquidityToken: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  addVerifier(
+    _verification: string,
+    _verifier: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'addVerifier(address,address)'(
+    _verification: string,
+    _verifier: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  changeImplementationAddressOfProxy(
+    proxy: string,
+    newImplementation: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'changeImplementationAddressOfProxy(address,address)'(
+    proxy: string,
+    newImplementation: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  deployCompoundYield(
+    _admin: string,
+    _savingsAccount: string,
+    _mockWETH: string,
+    _treasury: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'deployCompoundYield(address,address,address,address)'(
+    _admin: string,
+    _savingsAccount: string,
+    _mockWETH: string,
+    _treasury: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  deployMockAdminVerifier(
+    arg0: string,
+    _verification: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'deployMockAdminVerifier(address,address)'(
+    arg0: string,
+    _verification: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  deployMockCToken(
+    _mockToken: string,
+    _compoundYield: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'deployMockCToken(address,address)'(
+    _mockToken: string,
+    _compoundYield: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  deployNoYield(
+    _admin: string,
+    _savingsAccount: string,
+    _treasury: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'deployNoYield(address,address,address)'(
+    _admin: string,
+    _savingsAccount: string,
+    _treasury: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  deployPriceOracle(
+    _admin: string,
+    _weth: string,
+    _uniswapPriceAvgPeriod: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'deployPriceOracle(address,address,uint32)'(
+    _admin: string,
+    _weth: string,
+    _uniswapPriceAvgPeriod: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  deploySavingsAccount(
+    arg0: string,
+    _strategyRegistry: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'deploySavingsAccount(address,address)'(
+    arg0: string,
+    _strategyRegistry: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  deployStrategyRegistry(
+    arg0: string,
+    _maxStrategies: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'deployStrategyRegistry(address,uint256)'(
+    arg0: string,
+    _maxStrategies: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  deployVerification(arg0: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'deployVerification(address)'(arg0: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  emergencyWithdrawFromCompoundYield(
+    yield: string,
+    _asset: string,
+    _wallet: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'emergencyWithdrawFromCompoundYield(address,address,address)'(
+    yield: string,
+    _asset: string,
+    _wallet: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  emergencyWithdrawFromNoYield(
+    yield: string,
+    _asset: string,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'emergencyWithdrawFromNoYield(address,address,uint256)'(
+    yield: string,
+    _asset: string,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  execute(
+    target: string,
+    value: BigNumberish,
+    callData: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'execute(address,uint256,bytes)'(
+    target: string,
+    value: BigNumberish,
+    callData: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  executeFuncSig(
+    target: string,
+    value: BigNumberish,
+    signature: string,
+    callData: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'executeFuncSig(address,uint256,string,bytes)'(
+    target: string,
+    value: BigNumberish,
+    signature: string,
+    callData: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  forceUpdateTokenAddressForCompoundYield(
+    yield: string,
+    _asset: string,
+    _liquidityToken: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'forceUpdateTokenAddressForCompoundYield(address,address,address)'(
+    yield: string,
+    _asset: string,
+    _liquidityToken: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<string>;
+
+  'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<string>;
+
+  getImplementationAddressOfProxy(
+    sublimeProxyInstance: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'getImplementationAddressOfProxy(address)'(
+    sublimeProxyInstance: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  initSavingsAccount(
+    savingsAccount: string,
+    _owner: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'initSavingsAccount(address,address)'(
+    savingsAccount: string,
+    _owner: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  setChainlinkFeedAddress(
+    priceOracle: string,
+    token: string,
+    aggregator: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'setChainlinkFeedAddress(address,address,address)'(
+    priceOracle: string,
+    token: string,
+    aggregator: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  setDepositLimitForCompoundYield(
+    _compound: string,
+    _asset: string,
+    _limit: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'setDepositLimitForCompoundYield(address,address,uint256)'(
+    _compound: string,
+    _asset: string,
+    _limit: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -407,105 +858,29 @@ export class Admin extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateBorrowLimitLimits(
-    creditLine: string,
-    min: BigNumberish,
-    max: BigNumberish,
+  transferOwnership(
+    _contract: string,
+    _to: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'updateBorrowLimitLimits(address,uint256,uint256)'(
-    creditLine: string,
-    min: BigNumberish,
-    max: BigNumberish,
+  'transferOwnership(address,address)'(
+    _contract: string,
+    _to: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateBorrowRateLimits(
-    creditLine: string,
-    min: BigNumberish,
-    max: BigNumberish,
+  transferToken(
+    token: string,
+    recipient: string,
+    amount: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'updateBorrowRateLimits(address,uint256,uint256)'(
-    creditLine: string,
-    min: BigNumberish,
-    max: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateDefaultStrategy(
-    creditLine: string,
-    noYield: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateDefaultStrategy(address,address)'(
-    creditLine: string,
-    noYield: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateIdealCollateralRatioLimits(
-    creditLine: string,
-    min: BigNumberish,
-    max: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
-    creditLine: string,
-    min: BigNumberish,
-    max: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateLiquidatorRewardFraction(
-    creditLine: string,
-    rewardFraction: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateLiquidatorRewardFraction(address,uint256)'(
-    creditLine: string,
-    rewardFraction: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updatePooledCLSavingsAccount(
-    pooledCreditLineAddress: string,
-    savingsAccount: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updatePooledCLSavingsAccount(address,address)'(
-    pooledCreditLineAddress: string,
-    savingsAccount: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updatePriceOracle(
-    creditLine: string,
-    priceOracle: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updatePriceOracle(address,address)'(
-    creditLine: string,
-    priceOracle: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateProtocolFeeCollector(
-    creditLine: string,
-    protocolFeeCollector: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateProtocolFeeCollector(address,address)'(
-    creditLine: string,
-    protocolFeeCollector: string,
+  'transferToken(address,address,uint256)'(
+    token: string,
+    recipient: string,
+    amount: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -521,57 +896,180 @@ export class Admin extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateSavingsAccount(
-    creditLine: string,
-    savingsAccount: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  verifyUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'updateSavingsAccount(address,address)'(
-    creditLine: string,
-    savingsAccount: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateStrategy(
-    strategyRegistry: string,
-    index: BigNumberish,
-    oldStrategy: string,
-    newStrategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateStrategy(address,uint256,address,address)'(
-    strategyRegistry: string,
-    index: BigNumberish,
-    oldStrategy: string,
-    newStrategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateStrategyRegistry(
-    creditLine: string,
-    strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateStrategyRegistry(address,address)'(
-    creditLine: string,
-    strategyRegistry: string,
+  'verifyUser(address,address)'(
+    _user: string,
+    _verifier: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   callStatic: {
-    addStrategy(strategyRegistry: string, strategy: string, overrides?: CallOverrides): Promise<void>;
+    addAggregator(priceOracle: string, token: string, aggregator: string, overrides?: CallOverrides): Promise<void>;
 
-    'addStrategy(address,address)'(strategyRegistry: string, strategy: string, overrides?: CallOverrides): Promise<void>;
-
-    setChainlinkPriceFeed(priceOracle: string, asset: string, oracle: string, overrides?: CallOverrides): Promise<void>;
-
-    'setChainlinkPriceFeed(address,address,address)'(
+    'addAggregator(address,address,address)'(
       priceOracle: string,
-      asset: string,
-      oracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    addSavingsAccountStrategy(_strategyRegistry: string, _strategyAddress: string, overrides?: CallOverrides): Promise<void>;
+
+    'addSavingsAccountStrategy(address,address)'(
+      _strategyRegistry: string,
+      _strategyAddress: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    addTokenAddressForCompoundYield(yield: string, _asset: string, _liquidityToken: string, overrides?: CallOverrides): Promise<void>;
+
+    'addTokenAddressForCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    addVerifier(_verification: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
+
+    'addVerifier(address,address)'(_verification: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
+
+    changeImplementationAddressOfProxy(proxy: string, newImplementation: string, overrides?: CallOverrides): Promise<void>;
+
+    'changeImplementationAddressOfProxy(address,address)'(
+      proxy: string,
+      newImplementation: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    deployCompoundYield(
+      _admin: string,
+      _savingsAccount: string,
+      _mockWETH: string,
+      _treasury: string,
+      overrides?: CallOverrides
+    ): Promise<string>;
+
+    'deployCompoundYield(address,address,address,address)'(
+      _admin: string,
+      _savingsAccount: string,
+      _mockWETH: string,
+      _treasury: string,
+      overrides?: CallOverrides
+    ): Promise<string>;
+
+    deployMockAdminVerifier(arg0: string, _verification: string, overrides?: CallOverrides): Promise<string>;
+
+    'deployMockAdminVerifier(address,address)'(arg0: string, _verification: string, overrides?: CallOverrides): Promise<string>;
+
+    deployMockCToken(_mockToken: string, _compoundYield: string, overrides?: CallOverrides): Promise<string>;
+
+    'deployMockCToken(address,address)'(_mockToken: string, _compoundYield: string, overrides?: CallOverrides): Promise<string>;
+
+    deployNoYield(_admin: string, _savingsAccount: string, _treasury: string, overrides?: CallOverrides): Promise<string>;
+
+    'deployNoYield(address,address,address)'(
+      _admin: string,
+      _savingsAccount: string,
+      _treasury: string,
+      overrides?: CallOverrides
+    ): Promise<string>;
+
+    deployPriceOracle(_admin: string, _weth: string, _uniswapPriceAvgPeriod: BigNumberish, overrides?: CallOverrides): Promise<string>;
+
+    'deployPriceOracle(address,address,uint32)'(
+      _admin: string,
+      _weth: string,
+      _uniswapPriceAvgPeriod: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<string>;
+
+    deploySavingsAccount(arg0: string, _strategyRegistry: string, overrides?: CallOverrides): Promise<string>;
+
+    'deploySavingsAccount(address,address)'(arg0: string, _strategyRegistry: string, overrides?: CallOverrides): Promise<string>;
+
+    deployStrategyRegistry(arg0: string, _maxStrategies: BigNumberish, overrides?: CallOverrides): Promise<string>;
+
+    'deployStrategyRegistry(address,uint256)'(arg0: string, _maxStrategies: BigNumberish, overrides?: CallOverrides): Promise<string>;
+
+    deployVerification(arg0: string, overrides?: CallOverrides): Promise<string>;
+
+    'deployVerification(address)'(arg0: string, overrides?: CallOverrides): Promise<string>;
+
+    emergencyWithdrawFromCompoundYield(yield: string, _asset: string, _wallet: string, overrides?: CallOverrides): Promise<void>;
+
+    'emergencyWithdrawFromCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _wallet: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    emergencyWithdrawFromNoYield(yield: string, _asset: string, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'emergencyWithdrawFromNoYield(address,address,uint256)'(
+      yield: string,
+      _asset: string,
+      _amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    execute(target: string, value: BigNumberish, callData: BytesLike, overrides?: CallOverrides): Promise<void>;
+
+    'execute(address,uint256,bytes)'(target: string, value: BigNumberish, callData: BytesLike, overrides?: CallOverrides): Promise<void>;
+
+    executeFuncSig(target: string, value: BigNumberish, signature: string, callData: BytesLike, overrides?: CallOverrides): Promise<void>;
+
+    'executeFuncSig(address,uint256,string,bytes)'(
+      target: string,
+      value: BigNumberish,
+      signature: string,
+      callData: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    forceUpdateTokenAddressForCompoundYield(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'forceUpdateTokenAddressForCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<string>;
+
+    'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<string>;
+
+    getImplementationAddressOfProxy(sublimeProxyInstance: string, overrides?: CallOverrides): Promise<string>;
+
+    'getImplementationAddressOfProxy(address)'(sublimeProxyInstance: string, overrides?: CallOverrides): Promise<string>;
+
+    initSavingsAccount(savingsAccount: string, _owner: string, overrides?: CallOverrides): Promise<void>;
+
+    'initSavingsAccount(address,address)'(savingsAccount: string, _owner: string, overrides?: CallOverrides): Promise<void>;
+
+    setChainlinkFeedAddress(priceOracle: string, token: string, aggregator: string, overrides?: CallOverrides): Promise<void>;
+
+    'setChainlinkFeedAddress(address,address,address)'(
+      priceOracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    setDepositLimitForCompoundYield(_compound: string, _asset: string, _limit: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'setDepositLimitForCompoundYield(address,address,uint256)'(
+      _compound: string,
+      _asset: string,
+      _limit: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
 
@@ -591,62 +1089,16 @@ export class Admin extends Contract {
 
     'setUp_USDC_ETH_oracles(address)'(priceOracleAddress: string, overrides?: CallOverrides): Promise<void>;
 
-    updateBorrowLimitLimits(creditLine: string, min: BigNumberish, max: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    transferOwnership(_contract: string, _to: string, overrides?: CallOverrides): Promise<void>;
 
-    'updateBorrowLimitLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
+    'transferOwnership(address,address)'(_contract: string, _to: string, overrides?: CallOverrides): Promise<void>;
 
-    updateBorrowRateLimits(creditLine: string, min: BigNumberish, max: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    transferToken(token: string, recipient: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'updateBorrowRateLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    updateDefaultStrategy(creditLine: string, noYield: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateDefaultStrategy(address,address)'(creditLine: string, noYield: string, overrides?: CallOverrides): Promise<void>;
-
-    updateIdealCollateralRatioLimits(creditLine: string, min: BigNumberish, max: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    updateLiquidatorRewardFraction(creditLine: string, rewardFraction: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'updateLiquidatorRewardFraction(address,uint256)'(
-      creditLine: string,
-      rewardFraction: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    updatePooledCLSavingsAccount(pooledCreditLineAddress: string, savingsAccount: string, overrides?: CallOverrides): Promise<void>;
-
-    'updatePooledCLSavingsAccount(address,address)'(
-      pooledCreditLineAddress: string,
-      savingsAccount: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    updatePriceOracle(creditLine: string, priceOracle: string, overrides?: CallOverrides): Promise<void>;
-
-    'updatePriceOracle(address,address)'(creditLine: string, priceOracle: string, overrides?: CallOverrides): Promise<void>;
-
-    updateProtocolFeeCollector(creditLine: string, protocolFeeCollector: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateProtocolFeeCollector(address,address)'(
-      creditLine: string,
-      protocolFeeCollector: string,
+    'transferToken(address,address,uint256)'(
+      token: string,
+      recipient: string,
+      amount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
 
@@ -654,57 +1106,293 @@ export class Admin extends Contract {
 
     'updateProtocolFeeFraction(address,uint256)'(creditLine: string, protocolFee: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    updateSavingsAccount(creditLine: string, savingsAccount: string, overrides?: CallOverrides): Promise<void>;
+    verifyUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
 
-    'updateSavingsAccount(address,address)'(creditLine: string, savingsAccount: string, overrides?: CallOverrides): Promise<void>;
-
-    updateStrategy(
-      strategyRegistry: string,
-      index: BigNumberish,
-      oldStrategy: string,
-      newStrategy: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    'updateStrategy(address,uint256,address,address)'(
-      strategyRegistry: string,
-      index: BigNumberish,
-      oldStrategy: string,
-      newStrategy: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    updateStrategyRegistry(creditLine: string, strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateStrategyRegistry(address,address)'(creditLine: string, strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
+    'verifyUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {};
 
   estimateGas: {
-    addStrategy(
-      strategyRegistry: string,
-      strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'addStrategy(address,address)'(
-      strategyRegistry: string,
-      strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    setChainlinkPriceFeed(
+    addAggregator(
       priceOracle: string,
-      asset: string,
-      oracle: string,
+      token: string,
+      aggregator: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'setChainlinkPriceFeed(address,address,address)'(
+    'addAggregator(address,address,address)'(
       priceOracle: string,
-      asset: string,
-      oracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    addSavingsAccountStrategy(
+      _strategyRegistry: string,
+      _strategyAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'addSavingsAccountStrategy(address,address)'(
+      _strategyRegistry: string,
+      _strategyAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    addTokenAddressForCompoundYield(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'addTokenAddressForCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    addVerifier(_verification: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'addVerifier(address,address)'(
+      _verification: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    changeImplementationAddressOfProxy(
+      proxy: string,
+      newImplementation: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'changeImplementationAddressOfProxy(address,address)'(
+      proxy: string,
+      newImplementation: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    deployCompoundYield(
+      _admin: string,
+      _savingsAccount: string,
+      _mockWETH: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'deployCompoundYield(address,address,address,address)'(
+      _admin: string,
+      _savingsAccount: string,
+      _mockWETH: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    deployMockAdminVerifier(
+      arg0: string,
+      _verification: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'deployMockAdminVerifier(address,address)'(
+      arg0: string,
+      _verification: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    deployMockCToken(
+      _mockToken: string,
+      _compoundYield: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'deployMockCToken(address,address)'(
+      _mockToken: string,
+      _compoundYield: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    deployNoYield(
+      _admin: string,
+      _savingsAccount: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'deployNoYield(address,address,address)'(
+      _admin: string,
+      _savingsAccount: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    deployPriceOracle(
+      _admin: string,
+      _weth: string,
+      _uniswapPriceAvgPeriod: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'deployPriceOracle(address,address,uint32)'(
+      _admin: string,
+      _weth: string,
+      _uniswapPriceAvgPeriod: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    deploySavingsAccount(
+      arg0: string,
+      _strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'deploySavingsAccount(address,address)'(
+      arg0: string,
+      _strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    deployStrategyRegistry(
+      arg0: string,
+      _maxStrategies: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'deployStrategyRegistry(address,uint256)'(
+      arg0: string,
+      _maxStrategies: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    deployVerification(arg0: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'deployVerification(address)'(arg0: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    emergencyWithdrawFromCompoundYield(
+      yield: string,
+      _asset: string,
+      _wallet: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'emergencyWithdrawFromCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _wallet: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    emergencyWithdrawFromNoYield(
+      yield: string,
+      _asset: string,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'emergencyWithdrawFromNoYield(address,address,uint256)'(
+      yield: string,
+      _asset: string,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    execute(
+      target: string,
+      value: BigNumberish,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'execute(address,uint256,bytes)'(
+      target: string,
+      value: BigNumberish,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    executeFuncSig(
+      target: string,
+      value: BigNumberish,
+      signature: string,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'executeFuncSig(address,uint256,string,bytes)'(
+      target: string,
+      value: BigNumberish,
+      signature: string,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    forceUpdateTokenAddressForCompoundYield(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'forceUpdateTokenAddressForCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    getImplementationAddressOfProxy(
+      sublimeProxyInstance: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'getImplementationAddressOfProxy(address)'(
+      sublimeProxyInstance: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    initSavingsAccount(
+      savingsAccount: string,
+      _owner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'initSavingsAccount(address,address)'(
+      savingsAccount: string,
+      _owner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    setChainlinkFeedAddress(
+      priceOracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'setChainlinkFeedAddress(address,address,address)'(
+      priceOracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    setDepositLimitForCompoundYield(
+      _compound: string,
+      _asset: string,
+      _limit: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'setDepositLimitForCompoundYield(address,address,uint256)'(
+      _compound: string,
+      _asset: string,
+      _limit: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -733,105 +1421,25 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateBorrowLimitLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
+    transferOwnership(_contract: string, _to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'transferOwnership(address,address)'(
+      _contract: string,
+      _to: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'updateBorrowLimitLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
+    transferToken(
+      token: string,
+      recipient: string,
+      amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateBorrowRateLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateBorrowRateLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateDefaultStrategy(
-      creditLine: string,
-      noYield: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateDefaultStrategy(address,address)'(
-      creditLine: string,
-      noYield: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateIdealCollateralRatioLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateLiquidatorRewardFraction(
-      creditLine: string,
-      rewardFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateLiquidatorRewardFraction(address,uint256)'(
-      creditLine: string,
-      rewardFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updatePooledCLSavingsAccount(
-      pooledCreditLineAddress: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updatePooledCLSavingsAccount(address,address)'(
-      pooledCreditLineAddress: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updatePriceOracle(
-      creditLine: string,
-      priceOracle: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updatePriceOracle(address,address)'(
-      creditLine: string,
-      priceOracle: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateProtocolFeeCollector(
-      creditLine: string,
-      protocolFeeCollector: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateProtocolFeeCollector(address,address)'(
-      creditLine: string,
-      protocolFeeCollector: string,
+    'transferToken(address,address,uint256)'(
+      token: string,
+      recipient: string,
+      amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -847,71 +1455,299 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateSavingsAccount(
-      creditLine: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
+    verifyUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'updateSavingsAccount(address,address)'(
-      creditLine: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateStrategy(
-      strategyRegistry: string,
-      index: BigNumberish,
-      oldStrategy: string,
-      newStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateStrategy(address,uint256,address,address)'(
-      strategyRegistry: string,
-      index: BigNumberish,
-      oldStrategy: string,
-      newStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateStrategyRegistry(
-      creditLine: string,
-      strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateStrategyRegistry(address,address)'(
-      creditLine: string,
-      strategyRegistry: string,
+    'verifyUser(address,address)'(
+      _user: string,
+      _verifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    addStrategy(
-      strategyRegistry: string,
-      strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'addStrategy(address,address)'(
-      strategyRegistry: string,
-      strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    setChainlinkPriceFeed(
+    addAggregator(
       priceOracle: string,
-      asset: string,
-      oracle: string,
+      token: string,
+      aggregator: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'setChainlinkPriceFeed(address,address,address)'(
+    'addAggregator(address,address,address)'(
       priceOracle: string,
-      asset: string,
-      oracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    addSavingsAccountStrategy(
+      _strategyRegistry: string,
+      _strategyAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'addSavingsAccountStrategy(address,address)'(
+      _strategyRegistry: string,
+      _strategyAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    addTokenAddressForCompoundYield(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'addTokenAddressForCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    addVerifier(
+      _verification: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'addVerifier(address,address)'(
+      _verification: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    changeImplementationAddressOfProxy(
+      proxy: string,
+      newImplementation: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'changeImplementationAddressOfProxy(address,address)'(
+      proxy: string,
+      newImplementation: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    deployCompoundYield(
+      _admin: string,
+      _savingsAccount: string,
+      _mockWETH: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'deployCompoundYield(address,address,address,address)'(
+      _admin: string,
+      _savingsAccount: string,
+      _mockWETH: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    deployMockAdminVerifier(
+      arg0: string,
+      _verification: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'deployMockAdminVerifier(address,address)'(
+      arg0: string,
+      _verification: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    deployMockCToken(
+      _mockToken: string,
+      _compoundYield: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'deployMockCToken(address,address)'(
+      _mockToken: string,
+      _compoundYield: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    deployNoYield(
+      _admin: string,
+      _savingsAccount: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'deployNoYield(address,address,address)'(
+      _admin: string,
+      _savingsAccount: string,
+      _treasury: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    deployPriceOracle(
+      _admin: string,
+      _weth: string,
+      _uniswapPriceAvgPeriod: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'deployPriceOracle(address,address,uint32)'(
+      _admin: string,
+      _weth: string,
+      _uniswapPriceAvgPeriod: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    deploySavingsAccount(
+      arg0: string,
+      _strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'deploySavingsAccount(address,address)'(
+      arg0: string,
+      _strategyRegistry: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    deployStrategyRegistry(
+      arg0: string,
+      _maxStrategies: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'deployStrategyRegistry(address,uint256)'(
+      arg0: string,
+      _maxStrategies: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    deployVerification(arg0: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'deployVerification(address)'(arg0: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    emergencyWithdrawFromCompoundYield(
+      yield: string,
+      _asset: string,
+      _wallet: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'emergencyWithdrawFromCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _wallet: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    emergencyWithdrawFromNoYield(
+      yield: string,
+      _asset: string,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'emergencyWithdrawFromNoYield(address,address,uint256)'(
+      yield: string,
+      _asset: string,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    execute(
+      target: string,
+      value: BigNumberish,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'execute(address,uint256,bytes)'(
+      target: string,
+      value: BigNumberish,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    executeFuncSig(
+      target: string,
+      value: BigNumberish,
+      signature: string,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'executeFuncSig(address,uint256,string,bytes)'(
+      target: string,
+      value: BigNumberish,
+      signature: string,
+      callData: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    forceUpdateTokenAddressForCompoundYield(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'forceUpdateTokenAddressForCompoundYield(address,address,address)'(
+      yield: string,
+      _asset: string,
+      _liquidityToken: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    getImplementationAddressOfProxy(
+      sublimeProxyInstance: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'getImplementationAddressOfProxy(address)'(
+      sublimeProxyInstance: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    initSavingsAccount(
+      savingsAccount: string,
+      _owner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'initSavingsAccount(address,address)'(
+      savingsAccount: string,
+      _owner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    setChainlinkFeedAddress(
+      priceOracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'setChainlinkFeedAddress(address,address,address)'(
+      priceOracle: string,
+      token: string,
+      aggregator: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    setDepositLimitForCompoundYield(
+      _compound: string,
+      _asset: string,
+      _limit: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'setDepositLimitForCompoundYield(address,address,uint256)'(
+      _compound: string,
+      _asset: string,
+      _limit: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -952,105 +1788,29 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateBorrowLimitLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
+    transferOwnership(
+      _contract: string,
+      _to: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'updateBorrowLimitLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
+    'transferOwnership(address,address)'(
+      _contract: string,
+      _to: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateBorrowRateLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
+    transferToken(
+      token: string,
+      recipient: string,
+      amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'updateBorrowRateLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateDefaultStrategy(
-      creditLine: string,
-      noYield: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateDefaultStrategy(address,address)'(
-      creditLine: string,
-      noYield: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateIdealCollateralRatioLimits(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateIdealCollateralRatioLimits(address,uint256,uint256)'(
-      creditLine: string,
-      min: BigNumberish,
-      max: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateLiquidatorRewardFraction(
-      creditLine: string,
-      rewardFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateLiquidatorRewardFraction(address,uint256)'(
-      creditLine: string,
-      rewardFraction: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updatePooledCLSavingsAccount(
-      pooledCreditLineAddress: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updatePooledCLSavingsAccount(address,address)'(
-      pooledCreditLineAddress: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updatePriceOracle(
-      creditLine: string,
-      priceOracle: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updatePriceOracle(address,address)'(
-      creditLine: string,
-      priceOracle: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateProtocolFeeCollector(
-      creditLine: string,
-      protocolFeeCollector: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateProtocolFeeCollector(address,address)'(
-      creditLine: string,
-      protocolFeeCollector: string,
+    'transferToken(address,address,uint256)'(
+      token: string,
+      recipient: string,
+      amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -1066,43 +1826,15 @@ export class Admin extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateSavingsAccount(
-      creditLine: string,
-      savingsAccount: string,
+    verifyUser(
+      _user: string,
+      _verifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'updateSavingsAccount(address,address)'(
-      creditLine: string,
-      savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateStrategy(
-      strategyRegistry: string,
-      index: BigNumberish,
-      oldStrategy: string,
-      newStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateStrategy(address,uint256,address,address)'(
-      strategyRegistry: string,
-      index: BigNumberish,
-      oldStrategy: string,
-      newStrategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateStrategyRegistry(
-      creditLine: string,
-      strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateStrategyRegistry(address,address)'(
-      creditLine: string,
-      strategyRegistry: string,
+    'verifyUser(address,address)'(
+      _user: string,
+      _verifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
   };

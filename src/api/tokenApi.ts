@@ -9,8 +9,19 @@ import { Options as Overrides } from '../types/Types';
  * @class TokenApi
  */
 export class TokenApi {
+  /**
+   * @description Signer Object
+   */
   private signer: Signer;
+
+  /**
+   * @description Contract instance for the given token
+   */
   private tokenContract: Token;
+
+  /**
+   * @description Instance to update and fetch token metadata
+   */
   private tokenManager: TokenManager;
 
   /**
@@ -101,6 +112,12 @@ export class TokenApi {
     return this._getBalance(user, prettified);
   }
 
+  /**
+   *
+   * @param user address whose balance needs to be fetched
+   * @param prettified
+   * @returns Balance of the given address
+   */
   private async _getBalance(user: string, prettified): Promise<string> {
     await this.tokenManager.updateTokenDecimals(this.tokenContract.address);
     const decimal = await this.tokenManager.getTokenDecimals(this.tokenContract.address);

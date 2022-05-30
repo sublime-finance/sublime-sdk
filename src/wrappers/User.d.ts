@@ -21,55 +21,63 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface UserInterface extends ethers.utils.Interface {
   functions: {
-    'addAggregator(address,address,address)': FunctionFragment;
     'approveToSavingsAccount(address,address,address,uint256)': FunctionFragment;
     'approveToken(address,address,uint256)': FunctionFragment;
-    'changeImplementationAddressOfProxy(address,address)': FunctionFragment;
-    'depositCollateralInPooledCreditLines(address,uint256,uint256,bool)': FunctionFragment;
     'depositToSavingsAccount(address,uint256,address,address,address)': FunctionFragment;
-    'emergencyWithdrawFromCompoundYield(address,address,address)': FunctionFragment;
-    'emergencyWithdrawFromNoYield(address,address,uint256)': FunctionFragment;
-    'execute(address,uint256,bytes)': FunctionFragment;
-    'executeFuncSig(address,uint256,string,bytes)': FunctionFragment;
-    'getFunctionSignature(string)': FunctionFragment;
-    'initSavingsAccount(address,address,address)': FunctionFragment;
-    'lendFromLenderPool(address,uint256,uint256)': FunctionFragment;
+    'fetchCreditLineVariable(address,uint256,string)': FunctionFragment;
     'lockTokensForCompoundYield(address,address,address,uint256)': FunctionFragment;
     'lockTokensForNoYield(address,address,address,uint256)': FunctionFragment;
     'onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)': FunctionFragment;
     'onERC1155Received(address,address,uint256,uint256,bytes)': FunctionFragment;
-    'placeRequestInPooledCreditLines(address,tuple)': FunctionFragment;
-    'setDepositLimitInCompound(address,address,uint256)': FunctionFragment;
+    'pclb_acceptRequest(address,uint256,uint256)': FunctionFragment;
+    'pclb_borrow(address,uint256,uint256)': FunctionFragment;
+    'pclb_calculateBorrowableAmount(address,uint256)': FunctionFragment;
+    'pclb_calculateCurrentCollateralRatio(address,uint256)': FunctionFragment;
+    'pclb_calculateCurrentDebt(address,uint256)': FunctionFragment;
+    'pclb_calculateInterestAccrued(address,uint256)': FunctionFragment;
+    'pclb_calculateRequiredCollateral(address,uint256,uint256)': FunctionFragment;
+    'pclb_calculateTotalCollateralTokens(address,uint256)': FunctionFragment;
+    'pclb_calculateWithdrawableCollateral(address,uint256)': FunctionFragment;
+    'pclb_cancelRequest(address,uint256)': FunctionFragment;
+    'pclb_close(address,uint256)': FunctionFragment;
+    'pclb_collateralTokensToLiquidate(address,uint256,uint256)': FunctionFragment;
+    'pclb_createRequest(address)': FunctionFragment;
+    'pclb_depositCollateral(address,uint256,uint256,bool)': FunctionFragment;
+    'pclb_lend(address,uint256,uint256)': FunctionFragment;
+    'pclb_liquidate(address,uint256)': FunctionFragment;
+    'pclb_repay(address,uint256,uint256)': FunctionFragment;
+    'pclb_supplyRequestParams_1(uint128,uint128,address,uint128,uint128,uint128,uint256)': FunctionFragment;
+    'pclb_supplyRequestParams_2(uint128,uint128,address,address,address,address,address,bool)': FunctionFragment;
+    'pclb_withdrawCollateral(address,uint256,uint256,bool)': FunctionFragment;
+    'pclb_withdrawEntireCollateral(address,uint256,bool)': FunctionFragment;
+    'pcll_create(address,uint256,address,address,address,uint256,uint256,uint256,bool)': FunctionFragment;
+    'pcll_getLenderPoolTokenBalance(address,uint256)': FunctionFragment;
+    'pcll_lend(address,uint256,uint256)': FunctionFragment;
+    'pcll_liquidate(address,uint256,bool)': FunctionFragment;
+    'pcll_repaid(address,uint256,uint256,uint256)': FunctionFragment;
+    'pcll_repay(address,uint256,uint256)': FunctionFragment;
+    'pcll_transfer_pool_tokens(address,address,address,uint256,uint256,bytes)': FunctionFragment;
+    'pcll_withdrawInterest(address,uint256)': FunctionFragment;
+    'pcll_withdrawLiquidatedCollateral(address,uint256)': FunctionFragment;
+    'pcll_withdrawLiquidity(address,uint256)': FunctionFragment;
+    'savingsAccountWithdraw(address,address,address,address,uint256,bool)': FunctionFragment;
+    'setAllowance(address,address,uint256)': FunctionFragment;
+    'setAllowanceForSavingsAccount(address,uint256,address,address)': FunctionFragment;
     'supportsInterface(bytes4)': FunctionFragment;
     'switchStrategyInSavingsAccount(address,address,address,address,uint256)': FunctionFragment;
     'transferFromSavingsAccount(address,address,address,address,address,uint256)': FunctionFragment;
     'transferSavingsAccount(address,address,address,address,uint256)': FunctionFragment;
-    'transferToken(address,address,uint256)': FunctionFragment;
     'unlockTokensForCompoundYield(address,address,address,uint256)': FunctionFragment;
     'unlockTokensForNoYield(address,address,address,uint256)': FunctionFragment;
-    'updateProtocolAddressesForCompoundYield(address,address,address)': FunctionFragment;
-    'updateStrategyRegistryInSavingsAccount(address,address)': FunctionFragment;
     'withdrawAllSavingsAccount(address,address)': FunctionFragment;
     'withdrawAllTokenFromStrategySavingsAccount(address,address,address)': FunctionFragment;
     'withdrawFromSavingsAccount(address,address,address,address,address,uint256,bool)': FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: 'addAggregator', values: [string, string, string]): string;
   encodeFunctionData(functionFragment: 'approveToSavingsAccount', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'approveToken', values: [string, string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'changeImplementationAddressOfProxy', values: [string, string]): string;
-  encodeFunctionData(
-    functionFragment: 'depositCollateralInPooledCreditLines',
-    values: [string, BigNumberish, BigNumberish, boolean]
-  ): string;
   encodeFunctionData(functionFragment: 'depositToSavingsAccount', values: [string, BigNumberish, string, string, string]): string;
-  encodeFunctionData(functionFragment: 'emergencyWithdrawFromCompoundYield', values: [string, string, string]): string;
-  encodeFunctionData(functionFragment: 'emergencyWithdrawFromNoYield', values: [string, string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'execute', values: [string, BigNumberish, BytesLike]): string;
-  encodeFunctionData(functionFragment: 'executeFuncSig', values: [string, BigNumberish, string, BytesLike]): string;
-  encodeFunctionData(functionFragment: 'getFunctionSignature', values: [string]): string;
-  encodeFunctionData(functionFragment: 'initSavingsAccount', values: [string, string, string]): string;
-  encodeFunctionData(functionFragment: 'lendFromLenderPool', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'fetchCreditLineVariable', values: [string, BigNumberish, string]): string;
   encodeFunctionData(functionFragment: 'lockTokensForCompoundYield', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'lockTokensForNoYield', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(
@@ -77,30 +85,52 @@ interface UserInterface extends ethers.utils.Interface {
     values: [string, string, BigNumberish[], BigNumberish[], BytesLike]
   ): string;
   encodeFunctionData(functionFragment: 'onERC1155Received', values: [string, string, BigNumberish, BigNumberish, BytesLike]): string;
+  encodeFunctionData(functionFragment: 'pclb_acceptRequest', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_borrow', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_calculateBorrowableAmount', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_calculateCurrentCollateralRatio', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_calculateCurrentDebt', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_calculateInterestAccrued', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_calculateRequiredCollateral', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_calculateTotalCollateralTokens', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_calculateWithdrawableCollateral', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_cancelRequest', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_close', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_collateralTokensToLiquidate', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_createRequest', values: [string]): string;
+  encodeFunctionData(functionFragment: 'pclb_depositCollateral', values: [string, BigNumberish, BigNumberish, boolean]): string;
+  encodeFunctionData(functionFragment: 'pclb_lend', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_liquidate', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pclb_repay', values: [string, BigNumberish, BigNumberish]): string;
   encodeFunctionData(
-    functionFragment: 'placeRequestInPooledCreditLines',
-    values: [
-      string,
-      {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      }
-    ]
+    functionFragment: 'pclb_supplyRequestParams_1',
+    values: [BigNumberish, BigNumberish, string, BigNumberish, BigNumberish, BigNumberish, BigNumberish]
   ): string;
-  encodeFunctionData(functionFragment: 'setDepositLimitInCompound', values: [string, string, BigNumberish]): string;
+  encodeFunctionData(
+    functionFragment: 'pclb_supplyRequestParams_2',
+    values: [BigNumberish, BigNumberish, string, string, string, string, string, boolean]
+  ): string;
+  encodeFunctionData(functionFragment: 'pclb_withdrawCollateral', values: [string, BigNumberish, BigNumberish, boolean]): string;
+  encodeFunctionData(functionFragment: 'pclb_withdrawEntireCollateral', values: [string, BigNumberish, boolean]): string;
+  encodeFunctionData(
+    functionFragment: 'pcll_create',
+    values: [string, BigNumberish, string, string, string, BigNumberish, BigNumberish, BigNumberish, boolean]
+  ): string;
+  encodeFunctionData(functionFragment: 'pcll_getLenderPoolTokenBalance', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pcll_lend', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pcll_liquidate', values: [string, BigNumberish, boolean]): string;
+  encodeFunctionData(functionFragment: 'pcll_repaid', values: [string, BigNumberish, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pcll_repay', values: [string, BigNumberish, BigNumberish]): string;
+  encodeFunctionData(
+    functionFragment: 'pcll_transfer_pool_tokens',
+    values: [string, string, string, BigNumberish, BigNumberish, BytesLike]
+  ): string;
+  encodeFunctionData(functionFragment: 'pcll_withdrawInterest', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pcll_withdrawLiquidatedCollateral', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'pcll_withdrawLiquidity', values: [string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'savingsAccountWithdraw', values: [string, string, string, string, BigNumberish, boolean]): string;
+  encodeFunctionData(functionFragment: 'setAllowance', values: [string, string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'setAllowanceForSavingsAccount', values: [string, BigNumberish, string, string]): string;
   encodeFunctionData(functionFragment: 'supportsInterface', values: [BytesLike]): string;
   encodeFunctionData(functionFragment: 'switchStrategyInSavingsAccount', values: [string, string, string, string, BigNumberish]): string;
   encodeFunctionData(
@@ -108,11 +138,8 @@ interface UserInterface extends ethers.utils.Interface {
     values: [string, string, string, string, string, BigNumberish]
   ): string;
   encodeFunctionData(functionFragment: 'transferSavingsAccount', values: [string, string, string, string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'transferToken', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'unlockTokensForCompoundYield', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'unlockTokensForNoYield', values: [string, string, string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateProtocolAddressesForCompoundYield', values: [string, string, string]): string;
-  encodeFunctionData(functionFragment: 'updateStrategyRegistryInSavingsAccount', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'withdrawAllSavingsAccount', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'withdrawAllTokenFromStrategySavingsAccount', values: [string, string, string]): string;
   encodeFunctionData(
@@ -120,34 +147,54 @@ interface UserInterface extends ethers.utils.Interface {
     values: [string, string, string, string, string, BigNumberish, boolean]
   ): string;
 
-  decodeFunctionResult(functionFragment: 'addAggregator', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'approveToSavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'approveToken', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'changeImplementationAddressOfProxy', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'depositCollateralInPooledCreditLines', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'depositToSavingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'emergencyWithdrawFromCompoundYield', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'emergencyWithdrawFromNoYield', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'execute', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'executeFuncSig', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'getFunctionSignature', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'initSavingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'lendFromLenderPool', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'fetchCreditLineVariable', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'lockTokensForCompoundYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'lockTokensForNoYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'onERC1155BatchReceived', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'onERC1155Received', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'placeRequestInPooledCreditLines', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'setDepositLimitInCompound', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_acceptRequest', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_borrow', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_calculateBorrowableAmount', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_calculateCurrentCollateralRatio', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_calculateCurrentDebt', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_calculateInterestAccrued', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_calculateRequiredCollateral', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_calculateTotalCollateralTokens', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_calculateWithdrawableCollateral', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_cancelRequest', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_close', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_collateralTokensToLiquidate', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_createRequest', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_depositCollateral', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_lend', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_liquidate', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_repay', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_supplyRequestParams_1', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_supplyRequestParams_2', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_withdrawCollateral', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pclb_withdrawEntireCollateral', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_create', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_getLenderPoolTokenBalance', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_lend', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_liquidate', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_repaid', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_repay', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_transfer_pool_tokens', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_withdrawInterest', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_withdrawLiquidatedCollateral', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pcll_withdrawLiquidity', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'savingsAccountWithdraw', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setAllowance', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setAllowanceForSavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'supportsInterface', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'switchStrategyInSavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferFromSavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferSavingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'transferToken', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'unlockTokensForCompoundYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'unlockTokensForNoYield', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateProtocolAddressesForCompoundYield', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateStrategyRegistryInSavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawAllSavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawAllTokenFromStrategySavingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawFromSavingsAccount', data: BytesLike): Result;
@@ -199,20 +246,6 @@ export class User extends Contract {
   interface: UserInterface;
 
   functions: {
-    addAggregator(
-      priceOracle: string,
-      token: string,
-      aggregator: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'addAggregator(address,address,address)'(
-      priceOracle: string,
-      token: string,
-      aggregator: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
     approveToSavingsAccount(
       savingsAccount: string,
       _token: string,
@@ -243,34 +276,6 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    changeImplementationAddressOfProxy(
-      proxy: string,
-      newImplementation: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'changeImplementationAddressOfProxy(address,address)'(
-      proxy: string,
-      newImplementation: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    depositCollateralInPooledCreditLines(
-      pcl: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      _fromSavingsAccount: boolean,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'depositCollateralInPooledCreditLines(address,uint256,uint256,bool)'(
-      pcl: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      _fromSavingsAccount: boolean,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
     depositToSavingsAccount(
       savingsAccount: string,
       _amount: BigNumberish,
@@ -289,95 +294,19 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    emergencyWithdrawFromCompoundYield(
-      yield: string,
-      _asset: string,
-      _wallet: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    fetchCreditLineVariable(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      variable: string,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
 
-    'emergencyWithdrawFromCompoundYield(address,address,address)'(
-      yield: string,
-      _asset: string,
-      _wallet: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    emergencyWithdrawFromNoYield(
-      yield: string,
-      _asset: string,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'emergencyWithdrawFromNoYield(address,address,uint256)'(
-      yield: string,
-      _asset: string,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    execute(
-      target: string,
-      value: BigNumberish,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'execute(address,uint256,bytes)'(
-      target: string,
-      value: BigNumberish,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    executeFuncSig(
-      target: string,
-      value: BigNumberish,
-      signature: string,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'executeFuncSig(address,uint256,string,bytes)'(
-      target: string,
-      value: BigNumberish,
-      signature: string,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<[string]>;
-
-    'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<[string]>;
-
-    initSavingsAccount(
-      savingsAccount: string,
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'initSavingsAccount(address,address,address)'(
-      savingsAccount: string,
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    lendFromLenderPool(
-      lenderPool: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'lendFromLenderPool(address,uint256,uint256)'(
-      lenderPool: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    'fetchCreditLineVariable(address,uint256,string)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      variable: string,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
 
     lockTokensForCompoundYield(
       yield: string,
@@ -412,102 +341,536 @@ export class User extends Contract {
     ): Promise<ContractTransaction>;
 
     onERC1155BatchReceived(
-      operator: string,
-      from: string,
-      ids: BigNumberish[],
-      values: BigNumberish[],
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish[],
+      arg3: BigNumberish[],
+      arg4: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<[string]>;
 
     'onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)'(
-      operator: string,
-      from: string,
-      ids: BigNumberish[],
-      values: BigNumberish[],
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish[],
+      arg3: BigNumberish[],
+      arg4: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<[string]>;
 
     onERC1155Received(
-      operator: string,
-      from: string,
-      id: BigNumberish,
-      value: BigNumberish,
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish,
+      arg3: BigNumberish,
+      arg4: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<[string]>;
 
     'onERC1155Received(address,address,uint256,uint256,bytes)'(
-      operator: string,
-      from: string,
-      id: BigNumberish,
-      value: BigNumberish,
-      data: BytesLike,
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish,
+      arg3: BigNumberish,
+      arg4: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<[string]>;
+
+    pclb_acceptRequest(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    placeRequestInPooledCreditLines(
-      pcl: string,
-      _request: {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      },
+    'pclb_acceptRequest(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
-      pcl: string,
-      _request: {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      },
+    pclb_borrow(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    setDepositLimitInCompound(
-      compoundYield: string,
-      _asset: string,
-      _limit: BigNumberish,
+    'pclb_borrow(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'setDepositLimitInCompound(address,address,uint256)'(
-      compoundYield: string,
-      _asset: string,
-      _limit: BigNumberish,
+    pclb_calculateBorrowableAmount(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<[boolean]>;
+    'pclb_calculateBorrowableAmount(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
-    'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<[boolean]>;
+    pclb_calculateCurrentCollateralRatio(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_calculateCurrentCollateralRatio(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_calculateCurrentDebt(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
+
+    'pclb_calculateCurrentDebt(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
+
+    pclb_calculateInterestAccrued(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
+
+    'pclb_calculateInterestAccrued(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
+
+    pclb_calculateRequiredCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
+
+    'pclb_calculateRequiredCollateral(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
+
+    pclb_calculateTotalCollateralTokens(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_calculateTotalCollateralTokens(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_calculateWithdrawableCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_calculateWithdrawableCollateral(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_cancelRequest(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_cancelRequest(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_close(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_close(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_collateralTokensToLiquidate(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
+
+    'pclb_collateralTokensToLiquidate(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
+
+    pclb_createRequest(
+      pooledCreditLineAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_createRequest(address)'(
+      pooledCreditLineAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_depositCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _fromSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_depositCollateral(address,uint256,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _fromSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_lend(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_lend(address,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_liquidate(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_liquidate(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_repay(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_repay(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_supplyRequestParams_1(
+      collateralRatio: BigNumberish,
+      duration: BigNumberish,
+      lenderVerifier: string,
+      defaultGracePeriod: BigNumberish,
+      gracePenaltyRate: BigNumberish,
+      collectionPeriod: BigNumberish,
+      minBorrowAmount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_supplyRequestParams_1(uint128,uint128,address,uint128,uint128,uint128,uint256)'(
+      collateralRatio: BigNumberish,
+      duration: BigNumberish,
+      lenderVerifier: string,
+      defaultGracePeriod: BigNumberish,
+      gracePenaltyRate: BigNumberish,
+      collectionPeriod: BigNumberish,
+      minBorrowAmount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_supplyRequestParams_2(
+      borrowLimit: BigNumberish,
+      borrowRate: BigNumberish,
+      collateralAsset: string,
+      borrowAssetStrategy: string,
+      collateralAssetStrategy: string,
+      borrowAsset: string,
+      borrowerVerifier: string,
+      areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_supplyRequestParams_2(uint128,uint128,address,address,address,address,address,bool)'(
+      borrowLimit: BigNumberish,
+      borrowRate: BigNumberish,
+      collateralAsset: string,
+      borrowAssetStrategy: string,
+      collateralAssetStrategy: string,
+      borrowAsset: string,
+      borrowerVerifier: string,
+      areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_withdrawCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_withdrawCollateral(address,uint256,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pclb_withdrawEntireCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pclb_withdrawEntireCollateral(address,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_create(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _verifier: string,
+      _token: string,
+      _strategy: string,
+      _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
+      _collectionPeriod: BigNumberish,
+      _areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_create(address,uint256,address,address,address,uint256,uint256,uint256,bool)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _verifier: string,
+      _token: string,
+      _strategy: string,
+      _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
+      _collectionPeriod: BigNumberish,
+      _areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_getLenderPoolTokenBalance(lenderPoolAddress: string, pooledCreditLineID: BigNumberish, overrides?: CallOverrides): Promise<[void]>;
+
+    'pcll_getLenderPoolTokenBalance(address,uint256)'(
+      lenderPoolAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[void]>;
+
+    pcll_lend(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_lend(address,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_liquidate(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _withdraw: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_liquidate(address,uint256,bool)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _withdraw: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_repaid(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _sharesRepaid: BigNumberish,
+      _interestShares: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_repaid(address,uint256,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _sharesRepaid: BigNumberish,
+      _interestShares: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_repay(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_repay(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_transfer_pool_tokens(
+      lenderPoolAddress: string,
+      lender_1: string,
+      lender_2: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_transfer_pool_tokens(address,address,address,uint256,uint256,bytes)'(
+      lenderPoolAddress: string,
+      lender_1: string,
+      lender_2: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_withdrawInterest(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_withdrawInterest(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_withdrawLiquidatedCollateral(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_withdrawLiquidatedCollateral(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    pcll_withdrawLiquidity(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'pcll_withdrawLiquidity(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    savingsAccountWithdraw(
+      savingsAccountAddress: string,
+      _token: string,
+      _strategy: string,
+      _to: string,
+      _amount: BigNumberish,
+      _receiveShares: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'savingsAccountWithdraw(address,address,address,address,uint256,bool)'(
+      savingsAccountAddress: string,
+      _token: string,
+      _strategy: string,
+      _to: string,
+      _amount: BigNumberish,
+      _receiveShares: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    setAllowance(
+      approvedAddress: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'setAllowance(address,address,uint256)'(
+      approvedAddress: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    setAllowanceForSavingsAccount(
+      savingsAccountAddress: string,
+      amount: BigNumberish,
+      token: string,
+      spender: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'setAllowanceForSavingsAccount(address,uint256,address,address)'(
+      savingsAccountAddress: string,
+      amount: BigNumberish,
+      token: string,
+      spender: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    supportsInterface(arg0: BytesLike, overrides?: CallOverrides): Promise<[boolean]>;
+
+    'supportsInterface(bytes4)'(arg0: BytesLike, overrides?: CallOverrides): Promise<[boolean]>;
 
     switchStrategyInSavingsAccount(
       savingsAccount: string,
@@ -565,20 +928,6 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    transferToken(
-      token: string,
-      recipient: string,
-      amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'transferToken(address,address,uint256)'(
-      token: string,
-      recipient: string,
-      amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
     unlockTokensForCompoundYield(
       yield: string,
       asset: string,
@@ -608,32 +957,6 @@ export class User extends Contract {
       asset: string,
       to: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateProtocolAddressesForCompoundYield(
-      yield: string,
-      _asset: string,
-      _liquidityToken: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateProtocolAddressesForCompoundYield(address,address,address)'(
-      yield: string,
-      _asset: string,
-      _liquidityToken: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateStrategyRegistryInSavingsAccount(
-      savingsAccount: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateStrategyRegistryInSavingsAccount(address,address)'(
-      savingsAccount: string,
-      _strategyRegistry: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -686,20 +1009,6 @@ export class User extends Contract {
     ): Promise<ContractTransaction>;
   };
 
-  addAggregator(
-    priceOracle: string,
-    token: string,
-    aggregator: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'addAggregator(address,address,address)'(
-    priceOracle: string,
-    token: string,
-    aggregator: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
   approveToSavingsAccount(
     savingsAccount: string,
     _token: string,
@@ -730,34 +1039,6 @@ export class User extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  changeImplementationAddressOfProxy(
-    proxy: string,
-    newImplementation: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'changeImplementationAddressOfProxy(address,address)'(
-    proxy: string,
-    newImplementation: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  depositCollateralInPooledCreditLines(
-    pcl: string,
-    _id: BigNumberish,
-    _amount: BigNumberish,
-    _fromSavingsAccount: boolean,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'depositCollateralInPooledCreditLines(address,uint256,uint256,bool)'(
-    pcl: string,
-    _id: BigNumberish,
-    _amount: BigNumberish,
-    _fromSavingsAccount: boolean,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
   depositToSavingsAccount(
     savingsAccount: string,
     _amount: BigNumberish,
@@ -776,95 +1057,19 @@ export class User extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  emergencyWithdrawFromCompoundYield(
-    yield: string,
-    _asset: string,
-    _wallet: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  fetchCreditLineVariable(
+    pooledCreditLineAddress: string,
+    pooledCreditLineID: BigNumberish,
+    variable: string,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
 
-  'emergencyWithdrawFromCompoundYield(address,address,address)'(
-    yield: string,
-    _asset: string,
-    _wallet: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  emergencyWithdrawFromNoYield(
-    yield: string,
-    _asset: string,
-    _amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'emergencyWithdrawFromNoYield(address,address,uint256)'(
-    yield: string,
-    _asset: string,
-    _amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  execute(
-    target: string,
-    value: BigNumberish,
-    callData: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'execute(address,uint256,bytes)'(
-    target: string,
-    value: BigNumberish,
-    callData: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  executeFuncSig(
-    target: string,
-    value: BigNumberish,
-    signature: string,
-    callData: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'executeFuncSig(address,uint256,string,bytes)'(
-    target: string,
-    value: BigNumberish,
-    signature: string,
-    callData: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<string>;
-
-  'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<string>;
-
-  initSavingsAccount(
-    savingsAccount: string,
-    _owner: string,
-    _strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'initSavingsAccount(address,address,address)'(
-    savingsAccount: string,
-    _owner: string,
-    _strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  lendFromLenderPool(
-    lenderPool: string,
-    _id: BigNumberish,
-    _amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'lendFromLenderPool(address,uint256,uint256)'(
-    lenderPool: string,
-    _id: BigNumberish,
-    _amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  'fetchCreditLineVariable(address,uint256,string)'(
+    pooledCreditLineAddress: string,
+    pooledCreditLineID: BigNumberish,
+    variable: string,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
 
   lockTokensForCompoundYield(
     yield: string,
@@ -899,102 +1104,536 @@ export class User extends Contract {
   ): Promise<ContractTransaction>;
 
   onERC1155BatchReceived(
-    operator: string,
-    from: string,
-    ids: BigNumberish[],
-    values: BigNumberish[],
-    data: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+    arg0: string,
+    arg1: string,
+    arg2: BigNumberish[],
+    arg3: BigNumberish[],
+    arg4: BytesLike,
+    overrides?: CallOverrides
+  ): Promise<string>;
 
   'onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)'(
-    operator: string,
-    from: string,
-    ids: BigNumberish[],
-    values: BigNumberish[],
-    data: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+    arg0: string,
+    arg1: string,
+    arg2: BigNumberish[],
+    arg3: BigNumberish[],
+    arg4: BytesLike,
+    overrides?: CallOverrides
+  ): Promise<string>;
 
   onERC1155Received(
-    operator: string,
-    from: string,
-    id: BigNumberish,
-    value: BigNumberish,
-    data: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+    arg0: string,
+    arg1: string,
+    arg2: BigNumberish,
+    arg3: BigNumberish,
+    arg4: BytesLike,
+    overrides?: CallOverrides
+  ): Promise<string>;
 
   'onERC1155Received(address,address,uint256,uint256,bytes)'(
-    operator: string,
-    from: string,
-    id: BigNumberish,
-    value: BigNumberish,
-    data: BytesLike,
+    arg0: string,
+    arg1: string,
+    arg2: BigNumberish,
+    arg3: BigNumberish,
+    arg4: BytesLike,
+    overrides?: CallOverrides
+  ): Promise<string>;
+
+  pclb_acceptRequest(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  placeRequestInPooledCreditLines(
-    pcl: string,
-    _request: {
-      collateralRatio: BigNumberish;
-      duration: BigNumberish;
-      lenderVerifier: string;
-      defaultGracePeriod: BigNumberish;
-      gracePenaltyRate: BigNumberish;
-      collectionPeriod: BigNumberish;
-      minBorrowAmount: BigNumberish;
-      borrowLimit: BigNumberish;
-      borrowRate: BigNumberish;
-      collateralAsset: string;
-      borrowAssetStrategy: string;
-      collateralAssetStrategy: string;
-      borrowAsset: string;
-      borrowerVerifier: string;
-      areTokensTransferable: boolean;
-    },
+  'pclb_acceptRequest(address,uint256,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
-    pcl: string,
-    _request: {
-      collateralRatio: BigNumberish;
-      duration: BigNumberish;
-      lenderVerifier: string;
-      defaultGracePeriod: BigNumberish;
-      gracePenaltyRate: BigNumberish;
-      collectionPeriod: BigNumberish;
-      minBorrowAmount: BigNumberish;
-      borrowLimit: BigNumberish;
-      borrowRate: BigNumberish;
-      collateralAsset: string;
-      borrowAssetStrategy: string;
-      collateralAssetStrategy: string;
-      borrowAsset: string;
-      borrowerVerifier: string;
-      areTokensTransferable: boolean;
-    },
+  pclb_borrow(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  setDepositLimitInCompound(
-    compoundYield: string,
-    _asset: string,
-    _limit: BigNumberish,
+  'pclb_borrow(address,uint256,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'setDepositLimitInCompound(address,address,uint256)'(
-    compoundYield: string,
-    _asset: string,
-    _limit: BigNumberish,
+  pclb_calculateBorrowableAmount(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
+  'pclb_calculateBorrowableAmount(address,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
-  'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
+  pclb_calculateCurrentCollateralRatio(
+    pooledCreditLineAddress: string,
+    pooledCreditLineID: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_calculateCurrentCollateralRatio(address,uint256)'(
+    pooledCreditLineAddress: string,
+    pooledCreditLineID: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_calculateCurrentDebt(
+    pooledCreditLineAddress: string,
+    pooledCreditLineID: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  'pclb_calculateCurrentDebt(address,uint256)'(
+    pooledCreditLineAddress: string,
+    pooledCreditLineID: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  pclb_calculateInterestAccrued(
+    pooledCreditLineAddress: string,
+    pooledCreditLineID: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  'pclb_calculateInterestAccrued(address,uint256)'(
+    pooledCreditLineAddress: string,
+    pooledCreditLineID: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  pclb_calculateRequiredCollateral(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _borrowTokens: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  'pclb_calculateRequiredCollateral(address,uint256,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _borrowTokens: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  pclb_calculateTotalCollateralTokens(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_calculateTotalCollateralTokens(address,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_calculateWithdrawableCollateral(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_calculateWithdrawableCollateral(address,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_cancelRequest(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_cancelRequest(address,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_close(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_close(address,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_collateralTokensToLiquidate(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _borrowTokens: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  'pclb_collateralTokensToLiquidate(address,uint256,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _borrowTokens: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
+  pclb_createRequest(
+    pooledCreditLineAddress: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_createRequest(address)'(
+    pooledCreditLineAddress: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_depositCollateral(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    _fromSavingsAccount: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_depositCollateral(address,uint256,uint256,bool)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    _fromSavingsAccount: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_lend(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_lend(address,uint256,uint256)'(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_liquidate(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_liquidate(address,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_repay(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_repay(address,uint256,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_supplyRequestParams_1(
+    collateralRatio: BigNumberish,
+    duration: BigNumberish,
+    lenderVerifier: string,
+    defaultGracePeriod: BigNumberish,
+    gracePenaltyRate: BigNumberish,
+    collectionPeriod: BigNumberish,
+    minBorrowAmount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_supplyRequestParams_1(uint128,uint128,address,uint128,uint128,uint128,uint256)'(
+    collateralRatio: BigNumberish,
+    duration: BigNumberish,
+    lenderVerifier: string,
+    defaultGracePeriod: BigNumberish,
+    gracePenaltyRate: BigNumberish,
+    collectionPeriod: BigNumberish,
+    minBorrowAmount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_supplyRequestParams_2(
+    borrowLimit: BigNumberish,
+    borrowRate: BigNumberish,
+    collateralAsset: string,
+    borrowAssetStrategy: string,
+    collateralAssetStrategy: string,
+    borrowAsset: string,
+    borrowerVerifier: string,
+    areTokensTransferable: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_supplyRequestParams_2(uint128,uint128,address,address,address,address,address,bool)'(
+    borrowLimit: BigNumberish,
+    borrowRate: BigNumberish,
+    collateralAsset: string,
+    borrowAssetStrategy: string,
+    collateralAssetStrategy: string,
+    borrowAsset: string,
+    borrowerVerifier: string,
+    areTokensTransferable: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_withdrawCollateral(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    _toSavingsAccount: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_withdrawCollateral(address,uint256,uint256,bool)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    _toSavingsAccount: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pclb_withdrawEntireCollateral(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _toSavingsAccount: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pclb_withdrawEntireCollateral(address,uint256,bool)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _toSavingsAccount: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_create(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _verifier: string,
+    _token: string,
+    _strategy: string,
+    _borrowLimit: BigNumberish,
+    _minBorrowAmount: BigNumberish,
+    _collectionPeriod: BigNumberish,
+    _areTokensTransferable: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_create(address,uint256,address,address,address,uint256,uint256,uint256,bool)'(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _verifier: string,
+    _token: string,
+    _strategy: string,
+    _borrowLimit: BigNumberish,
+    _minBorrowAmount: BigNumberish,
+    _collectionPeriod: BigNumberish,
+    _areTokensTransferable: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_getLenderPoolTokenBalance(lenderPoolAddress: string, pooledCreditLineID: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+  'pcll_getLenderPoolTokenBalance(address,uint256)'(
+    lenderPoolAddress: string,
+    pooledCreditLineID: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<void>;
+
+  pcll_lend(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_lend(address,uint256,uint256)'(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_liquidate(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _withdraw: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_liquidate(address,uint256,bool)'(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _withdraw: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_repaid(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _sharesRepaid: BigNumberish,
+    _interestShares: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_repaid(address,uint256,uint256,uint256)'(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    _sharesRepaid: BigNumberish,
+    _interestShares: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_repay(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_repay(address,uint256,uint256)'(
+    pooledCreditLineAddress: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_transfer_pool_tokens(
+    lenderPoolAddress: string,
+    lender_1: string,
+    lender_2: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    _data: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_transfer_pool_tokens(address,address,address,uint256,uint256,bytes)'(
+    lenderPoolAddress: string,
+    lender_1: string,
+    lender_2: string,
+    _id: BigNumberish,
+    _amount: BigNumberish,
+    _data: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_withdrawInterest(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_withdrawInterest(address,uint256)'(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_withdrawLiquidatedCollateral(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_withdrawLiquidatedCollateral(address,uint256)'(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  pcll_withdrawLiquidity(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'pcll_withdrawLiquidity(address,uint256)'(
+    lenderPoolAddress: string,
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  savingsAccountWithdraw(
+    savingsAccountAddress: string,
+    _token: string,
+    _strategy: string,
+    _to: string,
+    _amount: BigNumberish,
+    _receiveShares: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'savingsAccountWithdraw(address,address,address,address,uint256,bool)'(
+    savingsAccountAddress: string,
+    _token: string,
+    _strategy: string,
+    _to: string,
+    _amount: BigNumberish,
+    _receiveShares: boolean,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  setAllowance(
+    approvedAddress: string,
+    token: string,
+    amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'setAllowance(address,address,uint256)'(
+    approvedAddress: string,
+    token: string,
+    amount: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  setAllowanceForSavingsAccount(
+    savingsAccountAddress: string,
+    amount: BigNumberish,
+    token: string,
+    spender: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'setAllowanceForSavingsAccount(address,uint256,address,address)'(
+    savingsAccountAddress: string,
+    amount: BigNumberish,
+    token: string,
+    spender: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  supportsInterface(arg0: BytesLike, overrides?: CallOverrides): Promise<boolean>;
+
+  'supportsInterface(bytes4)'(arg0: BytesLike, overrides?: CallOverrides): Promise<boolean>;
 
   switchStrategyInSavingsAccount(
     savingsAccount: string,
@@ -1052,20 +1691,6 @@ export class User extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  transferToken(
-    token: string,
-    recipient: string,
-    amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'transferToken(address,address,uint256)'(
-    token: string,
-    recipient: string,
-    amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
   unlockTokensForCompoundYield(
     yield: string,
     asset: string,
@@ -1095,32 +1720,6 @@ export class User extends Contract {
     asset: string,
     to: string,
     amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateProtocolAddressesForCompoundYield(
-    yield: string,
-    _asset: string,
-    _liquidityToken: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateProtocolAddressesForCompoundYield(address,address,address)'(
-    yield: string,
-    _asset: string,
-    _liquidityToken: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateStrategyRegistryInSavingsAccount(
-    savingsAccount: string,
-    _strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateStrategyRegistryInSavingsAccount(address,address)'(
-    savingsAccount: string,
-    _strategyRegistry: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -1173,15 +1772,6 @@ export class User extends Contract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
-    addAggregator(priceOracle: string, token: string, aggregator: string, overrides?: CallOverrides): Promise<void>;
-
-    'addAggregator(address,address,address)'(
-      priceOracle: string,
-      token: string,
-      aggregator: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
     approveToSavingsAccount(
       savingsAccount: string,
       _token: string,
@@ -1202,30 +1792,6 @@ export class User extends Contract {
 
     'approveToken(address,address,uint256)'(token: string, spender: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    changeImplementationAddressOfProxy(proxy: string, newImplementation: string, overrides?: CallOverrides): Promise<void>;
-
-    'changeImplementationAddressOfProxy(address,address)'(
-      proxy: string,
-      newImplementation: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    depositCollateralInPooledCreditLines(
-      pcl: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      _fromSavingsAccount: boolean,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    'depositCollateralInPooledCreditLines(address,uint256,uint256,bool)'(
-      pcl: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      _fromSavingsAccount: boolean,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
     depositToSavingsAccount(
       savingsAccount: string,
       _amount: BigNumberish,
@@ -1244,59 +1810,19 @@ export class User extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
-    emergencyWithdrawFromCompoundYield(yield: string, _asset: string, _wallet: string, overrides?: CallOverrides): Promise<void>;
-
-    'emergencyWithdrawFromCompoundYield(address,address,address)'(
-      yield: string,
-      _asset: string,
-      _wallet: string,
+    fetchCreditLineVariable(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      variable: string,
       overrides?: CallOverrides
-    ): Promise<void>;
+    ): Promise<BigNumber>;
 
-    emergencyWithdrawFromNoYield(yield: string, _asset: string, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'emergencyWithdrawFromNoYield(address,address,uint256)'(
-      yield: string,
-      _asset: string,
-      _amount: BigNumberish,
+    'fetchCreditLineVariable(address,uint256,string)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      variable: string,
       overrides?: CallOverrides
-    ): Promise<void>;
-
-    execute(target: string, value: BigNumberish, callData: BytesLike, overrides?: CallOverrides): Promise<void>;
-
-    'execute(address,uint256,bytes)'(target: string, value: BigNumberish, callData: BytesLike, overrides?: CallOverrides): Promise<void>;
-
-    executeFuncSig(target: string, value: BigNumberish, signature: string, callData: BytesLike, overrides?: CallOverrides): Promise<void>;
-
-    'executeFuncSig(address,uint256,string,bytes)'(
-      target: string,
-      value: BigNumberish,
-      signature: string,
-      callData: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<string>;
-
-    'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<string>;
-
-    initSavingsAccount(savingsAccount: string, _owner: string, _strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
-
-    'initSavingsAccount(address,address,address)'(
-      savingsAccount: string,
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    lendFromLenderPool(lenderPool: string, _id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'lendFromLenderPool(address,uint256,uint256)'(
-      lenderPool: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
+    ): Promise<BigNumber>;
 
     lockTokensForCompoundYield(yield: string, user: string, asset: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
@@ -1319,97 +1845,434 @@ export class User extends Contract {
     ): Promise<void>;
 
     onERC1155BatchReceived(
-      operator: string,
-      from: string,
-      ids: BigNumberish[],
-      values: BigNumberish[],
-      data: BytesLike,
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish[],
+      arg3: BigNumberish[],
+      arg4: BytesLike,
       overrides?: CallOverrides
     ): Promise<string>;
 
     'onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)'(
-      operator: string,
-      from: string,
-      ids: BigNumberish[],
-      values: BigNumberish[],
-      data: BytesLike,
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish[],
+      arg3: BigNumberish[],
+      arg4: BytesLike,
       overrides?: CallOverrides
     ): Promise<string>;
 
     onERC1155Received(
-      operator: string,
-      from: string,
-      id: BigNumberish,
-      value: BigNumberish,
-      data: BytesLike,
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish,
+      arg3: BigNumberish,
+      arg4: BytesLike,
       overrides?: CallOverrides
     ): Promise<string>;
 
     'onERC1155Received(address,address,uint256,uint256,bytes)'(
-      operator: string,
-      from: string,
-      id: BigNumberish,
-      value: BigNumberish,
-      data: BytesLike,
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish,
+      arg3: BigNumberish,
+      arg4: BytesLike,
       overrides?: CallOverrides
     ): Promise<string>;
 
-    placeRequestInPooledCreditLines(
-      pcl: string,
-      _request: {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      },
+    pclb_acceptRequest(pooledCreditLineAddress: string, _id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pclb_acceptRequest(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
-      pcl: string,
-      _request: {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      },
+    pclb_borrow(pooledCreditLineAddress: string, _id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pclb_borrow(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
 
-    setDepositLimitInCompound(compoundYield: string, _asset: string, _limit: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    pclb_calculateBorrowableAmount(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'setDepositLimitInCompound(address,address,uint256)'(
-      compoundYield: string,
-      _asset: string,
-      _limit: BigNumberish,
+    'pclb_calculateBorrowableAmount(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateCurrentCollateralRatio(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_calculateCurrentCollateralRatio(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateCurrentDebt(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_calculateCurrentDebt(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateInterestAccrued(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_calculateInterestAccrued(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateRequiredCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_calculateRequiredCollateral(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateTotalCollateralTokens(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'pclb_calculateTotalCollateralTokens(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateWithdrawableCollateral(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'pclb_calculateWithdrawableCollateral(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_cancelRequest(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pclb_cancelRequest(address,uint256)'(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    pclb_close(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pclb_close(address,uint256)'(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    pclb_collateralTokensToLiquidate(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_collateralTokensToLiquidate(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_createRequest(pooledCreditLineAddress: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'pclb_createRequest(address)'(pooledCreditLineAddress: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    pclb_depositCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _fromSavingsAccount: boolean,
       overrides?: CallOverrides
     ): Promise<void>;
 
-    supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
+    'pclb_depositCollateral(address,uint256,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _fromSavingsAccount: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
-    'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<boolean>;
+    pclb_lend(lenderPoolAddress: string, _id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pclb_lend(address,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pclb_liquidate(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pclb_liquidate(address,uint256)'(pooledCreditLineAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    pclb_repay(pooledCreditLineAddress: string, _id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pclb_repay(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pclb_supplyRequestParams_1(
+      collateralRatio: BigNumberish,
+      duration: BigNumberish,
+      lenderVerifier: string,
+      defaultGracePeriod: BigNumberish,
+      gracePenaltyRate: BigNumberish,
+      collectionPeriod: BigNumberish,
+      minBorrowAmount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'pclb_supplyRequestParams_1(uint128,uint128,address,uint128,uint128,uint128,uint256)'(
+      collateralRatio: BigNumberish,
+      duration: BigNumberish,
+      lenderVerifier: string,
+      defaultGracePeriod: BigNumberish,
+      gracePenaltyRate: BigNumberish,
+      collectionPeriod: BigNumberish,
+      minBorrowAmount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pclb_supplyRequestParams_2(
+      borrowLimit: BigNumberish,
+      borrowRate: BigNumberish,
+      collateralAsset: string,
+      borrowAssetStrategy: string,
+      collateralAssetStrategy: string,
+      borrowAsset: string,
+      borrowerVerifier: string,
+      areTokensTransferable: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'pclb_supplyRequestParams_2(uint128,uint128,address,address,address,address,address,bool)'(
+      borrowLimit: BigNumberish,
+      borrowRate: BigNumberish,
+      collateralAsset: string,
+      borrowAssetStrategy: string,
+      collateralAssetStrategy: string,
+      borrowAsset: string,
+      borrowerVerifier: string,
+      areTokensTransferable: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pclb_withdrawCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'pclb_withdrawCollateral(address,uint256,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pclb_withdrawEntireCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'pclb_withdrawEntireCollateral(address,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_create(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _verifier: string,
+      _token: string,
+      _strategy: string,
+      _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
+      _collectionPeriod: BigNumberish,
+      _areTokensTransferable: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'pcll_create(address,uint256,address,address,address,uint256,uint256,uint256,bool)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _verifier: string,
+      _token: string,
+      _strategy: string,
+      _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
+      _collectionPeriod: BigNumberish,
+      _areTokensTransferable: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_getLenderPoolTokenBalance(lenderPoolAddress: string, pooledCreditLineID: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pcll_getLenderPoolTokenBalance(address,uint256)'(
+      lenderPoolAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_lend(lenderPoolAddress: string, _id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pcll_lend(address,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_liquidate(lenderPoolAddress: string, _id: BigNumberish, _withdraw: boolean, overrides?: CallOverrides): Promise<void>;
+
+    'pcll_liquidate(address,uint256,bool)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _withdraw: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_repaid(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _sharesRepaid: BigNumberish,
+      _interestShares: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'pcll_repaid(address,uint256,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _sharesRepaid: BigNumberish,
+      _interestShares: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_repay(pooledCreditLineAddress: string, _id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pcll_repay(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_transfer_pool_tokens(
+      lenderPoolAddress: string,
+      lender_1: string,
+      lender_2: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _data: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'pcll_transfer_pool_tokens(address,address,address,uint256,uint256,bytes)'(
+      lenderPoolAddress: string,
+      lender_1: string,
+      lender_2: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _data: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_withdrawInterest(lenderPoolAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pcll_withdrawInterest(address,uint256)'(lenderPoolAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    pcll_withdrawLiquidatedCollateral(lenderPoolAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pcll_withdrawLiquidatedCollateral(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    pcll_withdrawLiquidity(lenderPoolAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'pcll_withdrawLiquidity(address,uint256)'(lenderPoolAddress: string, _id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    savingsAccountWithdraw(
+      savingsAccountAddress: string,
+      _token: string,
+      _strategy: string,
+      _to: string,
+      _amount: BigNumberish,
+      _receiveShares: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'savingsAccountWithdraw(address,address,address,address,uint256,bool)'(
+      savingsAccountAddress: string,
+      _token: string,
+      _strategy: string,
+      _to: string,
+      _amount: BigNumberish,
+      _receiveShares: boolean,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    setAllowance(approvedAddress: string, token: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'setAllowance(address,address,uint256)'(
+      approvedAddress: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    setAllowanceForSavingsAccount(
+      savingsAccountAddress: string,
+      amount: BigNumberish,
+      token: string,
+      spender: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    'setAllowanceForSavingsAccount(address,uint256,address,address)'(
+      savingsAccountAddress: string,
+      amount: BigNumberish,
+      token: string,
+      spender: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    supportsInterface(arg0: BytesLike, overrides?: CallOverrides): Promise<boolean>;
+
+    'supportsInterface(bytes4)'(arg0: BytesLike, overrides?: CallOverrides): Promise<boolean>;
 
     switchStrategyInSavingsAccount(
       savingsAccount: string,
@@ -1467,15 +2330,6 @@ export class User extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
-    transferToken(token: string, recipient: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'transferToken(address,address,uint256)'(
-      token: string,
-      recipient: string,
-      amount: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
     unlockTokensForCompoundYield(yield: string, asset: string, to: string, amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'unlockTokensForCompoundYield(address,address,address,uint256)'(
@@ -1493,28 +2347,6 @@ export class User extends Contract {
       asset: string,
       to: string,
       amount: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    updateProtocolAddressesForCompoundYield(
-      yield: string,
-      _asset: string,
-      _liquidityToken: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    'updateProtocolAddressesForCompoundYield(address,address,address)'(
-      yield: string,
-      _asset: string,
-      _liquidityToken: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    updateStrategyRegistryInSavingsAccount(savingsAccount: string, _strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateStrategyRegistryInSavingsAccount(address,address)'(
-      savingsAccount: string,
-      _strategyRegistry: string,
       overrides?: CallOverrides
     ): Promise<void>;
 
@@ -1562,20 +2394,6 @@ export class User extends Contract {
   filters: {};
 
   estimateGas: {
-    addAggregator(
-      priceOracle: string,
-      token: string,
-      aggregator: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'addAggregator(address,address,address)'(
-      priceOracle: string,
-      token: string,
-      aggregator: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
     approveToSavingsAccount(
       savingsAccount: string,
       _token: string,
@@ -1606,34 +2424,6 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    changeImplementationAddressOfProxy(
-      proxy: string,
-      newImplementation: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'changeImplementationAddressOfProxy(address,address)'(
-      proxy: string,
-      newImplementation: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    depositCollateralInPooledCreditLines(
-      pcl: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      _fromSavingsAccount: boolean,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'depositCollateralInPooledCreditLines(address,uint256,uint256,bool)'(
-      pcl: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      _fromSavingsAccount: boolean,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
     depositToSavingsAccount(
       savingsAccount: string,
       _amount: BigNumberish,
@@ -1652,94 +2442,18 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    emergencyWithdrawFromCompoundYield(
-      yield: string,
-      _asset: string,
-      _wallet: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+    fetchCreditLineVariable(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      variable: string,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    'emergencyWithdrawFromCompoundYield(address,address,address)'(
-      yield: string,
-      _asset: string,
-      _wallet: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    emergencyWithdrawFromNoYield(
-      yield: string,
-      _asset: string,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'emergencyWithdrawFromNoYield(address,address,uint256)'(
-      yield: string,
-      _asset: string,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    execute(
-      target: string,
-      value: BigNumberish,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'execute(address,uint256,bytes)'(
-      target: string,
-      value: BigNumberish,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    executeFuncSig(
-      target: string,
-      value: BigNumberish,
-      signature: string,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'executeFuncSig(address,uint256,string,bytes)'(
-      target: string,
-      value: BigNumberish,
-      signature: string,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    initSavingsAccount(
-      savingsAccount: string,
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'initSavingsAccount(address,address,address)'(
-      savingsAccount: string,
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    lendFromLenderPool(
-      lenderPool: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'lendFromLenderPool(address,uint256,uint256)'(
-      lenderPool: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+    'fetchCreditLineVariable(address,uint256,string)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      variable: string,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     lockTokensForCompoundYield(
@@ -1775,102 +2489,537 @@ export class User extends Contract {
     ): Promise<BigNumber>;
 
     onERC1155BatchReceived(
-      operator: string,
-      from: string,
-      ids: BigNumberish[],
-      values: BigNumberish[],
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish[],
+      arg3: BigNumberish[],
+      arg4: BytesLike,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     'onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)'(
-      operator: string,
-      from: string,
-      ids: BigNumberish[],
-      values: BigNumberish[],
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish[],
+      arg3: BigNumberish[],
+      arg4: BytesLike,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     onERC1155Received(
-      operator: string,
-      from: string,
-      id: BigNumberish,
-      value: BigNumberish,
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish,
+      arg3: BigNumberish,
+      arg4: BytesLike,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     'onERC1155Received(address,address,uint256,uint256,bytes)'(
-      operator: string,
-      from: string,
-      id: BigNumberish,
-      value: BigNumberish,
-      data: BytesLike,
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish,
+      arg3: BigNumberish,
+      arg4: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_acceptRequest(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    placeRequestInPooledCreditLines(
-      pcl: string,
-      _request: {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      },
+    'pclb_acceptRequest(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
-      pcl: string,
-      _request: {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      },
+    pclb_borrow(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    setDepositLimitInCompound(
-      compoundYield: string,
-      _asset: string,
-      _limit: BigNumberish,
+    'pclb_borrow(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'setDepositLimitInCompound(address,address,uint256)'(
-      compoundYield: string,
-      _asset: string,
-      _limit: BigNumberish,
+    pclb_calculateBorrowableAmount(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
+    'pclb_calculateBorrowableAmount(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
-    'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
+    pclb_calculateCurrentCollateralRatio(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_calculateCurrentCollateralRatio(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_calculateCurrentDebt(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_calculateCurrentDebt(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateInterestAccrued(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_calculateInterestAccrued(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateRequiredCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_calculateRequiredCollateral(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_calculateTotalCollateralTokens(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_calculateTotalCollateralTokens(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_calculateWithdrawableCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_calculateWithdrawableCollateral(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_cancelRequest(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_cancelRequest(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_close(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_close(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_collateralTokensToLiquidate(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pclb_collateralTokensToLiquidate(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pclb_createRequest(pooledCreditLineAddress: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'pclb_createRequest(address)'(
+      pooledCreditLineAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_depositCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _fromSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_depositCollateral(address,uint256,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _fromSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_lend(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_lend(address,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_liquidate(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_liquidate(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_repay(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_repay(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_supplyRequestParams_1(
+      collateralRatio: BigNumberish,
+      duration: BigNumberish,
+      lenderVerifier: string,
+      defaultGracePeriod: BigNumberish,
+      gracePenaltyRate: BigNumberish,
+      collectionPeriod: BigNumberish,
+      minBorrowAmount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_supplyRequestParams_1(uint128,uint128,address,uint128,uint128,uint128,uint256)'(
+      collateralRatio: BigNumberish,
+      duration: BigNumberish,
+      lenderVerifier: string,
+      defaultGracePeriod: BigNumberish,
+      gracePenaltyRate: BigNumberish,
+      collectionPeriod: BigNumberish,
+      minBorrowAmount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_supplyRequestParams_2(
+      borrowLimit: BigNumberish,
+      borrowRate: BigNumberish,
+      collateralAsset: string,
+      borrowAssetStrategy: string,
+      collateralAssetStrategy: string,
+      borrowAsset: string,
+      borrowerVerifier: string,
+      areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_supplyRequestParams_2(uint128,uint128,address,address,address,address,address,bool)'(
+      borrowLimit: BigNumberish,
+      borrowRate: BigNumberish,
+      collateralAsset: string,
+      borrowAssetStrategy: string,
+      collateralAssetStrategy: string,
+      borrowAsset: string,
+      borrowerVerifier: string,
+      areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_withdrawCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_withdrawCollateral(address,uint256,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pclb_withdrawEntireCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pclb_withdrawEntireCollateral(address,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_create(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _verifier: string,
+      _token: string,
+      _strategy: string,
+      _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
+      _collectionPeriod: BigNumberish,
+      _areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_create(address,uint256,address,address,address,uint256,uint256,uint256,bool)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _verifier: string,
+      _token: string,
+      _strategy: string,
+      _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
+      _collectionPeriod: BigNumberish,
+      _areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_getLenderPoolTokenBalance(
+      lenderPoolAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    'pcll_getLenderPoolTokenBalance(address,uint256)'(
+      lenderPoolAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    pcll_lend(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_lend(address,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_liquidate(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _withdraw: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_liquidate(address,uint256,bool)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _withdraw: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_repaid(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _sharesRepaid: BigNumberish,
+      _interestShares: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_repaid(address,uint256,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _sharesRepaid: BigNumberish,
+      _interestShares: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_repay(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_repay(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_transfer_pool_tokens(
+      lenderPoolAddress: string,
+      lender_1: string,
+      lender_2: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_transfer_pool_tokens(address,address,address,uint256,uint256,bytes)'(
+      lenderPoolAddress: string,
+      lender_1: string,
+      lender_2: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_withdrawInterest(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_withdrawInterest(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_withdrawLiquidatedCollateral(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_withdrawLiquidatedCollateral(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    pcll_withdrawLiquidity(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'pcll_withdrawLiquidity(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    savingsAccountWithdraw(
+      savingsAccountAddress: string,
+      _token: string,
+      _strategy: string,
+      _to: string,
+      _amount: BigNumberish,
+      _receiveShares: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'savingsAccountWithdraw(address,address,address,address,uint256,bool)'(
+      savingsAccountAddress: string,
+      _token: string,
+      _strategy: string,
+      _to: string,
+      _amount: BigNumberish,
+      _receiveShares: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    setAllowance(
+      approvedAddress: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'setAllowance(address,address,uint256)'(
+      approvedAddress: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    setAllowanceForSavingsAccount(
+      savingsAccountAddress: string,
+      amount: BigNumberish,
+      token: string,
+      spender: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'setAllowanceForSavingsAccount(address,uint256,address,address)'(
+      savingsAccountAddress: string,
+      amount: BigNumberish,
+      token: string,
+      spender: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    supportsInterface(arg0: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'supportsInterface(bytes4)'(arg0: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
 
     switchStrategyInSavingsAccount(
       savingsAccount: string,
@@ -1928,20 +3077,6 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    transferToken(
-      token: string,
-      recipient: string,
-      amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'transferToken(address,address,uint256)'(
-      token: string,
-      recipient: string,
-      amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
     unlockTokensForCompoundYield(
       yield: string,
       asset: string,
@@ -1971,32 +3106,6 @@ export class User extends Contract {
       asset: string,
       to: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateProtocolAddressesForCompoundYield(
-      yield: string,
-      _asset: string,
-      _liquidityToken: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateProtocolAddressesForCompoundYield(address,address,address)'(
-      yield: string,
-      _asset: string,
-      _liquidityToken: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateStrategyRegistryInSavingsAccount(
-      savingsAccount: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'updateStrategyRegistryInSavingsAccount(address,address)'(
-      savingsAccount: string,
-      _strategyRegistry: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -2050,20 +3159,6 @@ export class User extends Contract {
   };
 
   populateTransaction: {
-    addAggregator(
-      priceOracle: string,
-      token: string,
-      aggregator: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'addAggregator(address,address,address)'(
-      priceOracle: string,
-      token: string,
-      aggregator: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
     approveToSavingsAccount(
       savingsAccount: string,
       _token: string,
@@ -2094,34 +3189,6 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    changeImplementationAddressOfProxy(
-      proxy: string,
-      newImplementation: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'changeImplementationAddressOfProxy(address,address)'(
-      proxy: string,
-      newImplementation: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    depositCollateralInPooledCreditLines(
-      pcl: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      _fromSavingsAccount: boolean,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'depositCollateralInPooledCreditLines(address,uint256,uint256,bool)'(
-      pcl: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      _fromSavingsAccount: boolean,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
     depositToSavingsAccount(
       savingsAccount: string,
       _amount: BigNumberish,
@@ -2140,94 +3207,18 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    emergencyWithdrawFromCompoundYield(
-      yield: string,
-      _asset: string,
-      _wallet: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+    fetchCreditLineVariable(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      variable: string,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
-    'emergencyWithdrawFromCompoundYield(address,address,address)'(
-      yield: string,
-      _asset: string,
-      _wallet: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    emergencyWithdrawFromNoYield(
-      yield: string,
-      _asset: string,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'emergencyWithdrawFromNoYield(address,address,uint256)'(
-      yield: string,
-      _asset: string,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    execute(
-      target: string,
-      value: BigNumberish,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'execute(address,uint256,bytes)'(
-      target: string,
-      value: BigNumberish,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    executeFuncSig(
-      target: string,
-      value: BigNumberish,
-      signature: string,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'executeFuncSig(address,uint256,string,bytes)'(
-      target: string,
-      value: BigNumberish,
-      signature: string,
-      callData: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    getFunctionSignature(signature: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'getFunctionSignature(string)'(signature: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    initSavingsAccount(
-      savingsAccount: string,
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'initSavingsAccount(address,address,address)'(
-      savingsAccount: string,
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    lendFromLenderPool(
-      lenderPool: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'lendFromLenderPool(address,uint256,uint256)'(
-      lenderPool: string,
-      _id: BigNumberish,
-      _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+    'fetchCreditLineVariable(address,uint256,string)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      variable: string,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     lockTokensForCompoundYield(
@@ -2263,102 +3254,540 @@ export class User extends Contract {
     ): Promise<PopulatedTransaction>;
 
     onERC1155BatchReceived(
-      operator: string,
-      from: string,
-      ids: BigNumberish[],
-      values: BigNumberish[],
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish[],
+      arg3: BigNumberish[],
+      arg4: BytesLike,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     'onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)'(
-      operator: string,
-      from: string,
-      ids: BigNumberish[],
-      values: BigNumberish[],
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish[],
+      arg3: BigNumberish[],
+      arg4: BytesLike,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     onERC1155Received(
-      operator: string,
-      from: string,
-      id: BigNumberish,
-      value: BigNumberish,
-      data: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish,
+      arg3: BigNumberish,
+      arg4: BytesLike,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     'onERC1155Received(address,address,uint256,uint256,bytes)'(
-      operator: string,
-      from: string,
-      id: BigNumberish,
-      value: BigNumberish,
-      data: BytesLike,
+      arg0: string,
+      arg1: string,
+      arg2: BigNumberish,
+      arg3: BigNumberish,
+      arg4: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    pclb_acceptRequest(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    placeRequestInPooledCreditLines(
-      pcl: string,
-      _request: {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      },
+    'pclb_acceptRequest(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'placeRequestInPooledCreditLines(address,(uint256,uint256,address,uint256,uint256,uint256,uint256,uint128,uint128,address,address,address,address,address,bool))'(
-      pcl: string,
-      _request: {
-        collateralRatio: BigNumberish;
-        duration: BigNumberish;
-        lenderVerifier: string;
-        defaultGracePeriod: BigNumberish;
-        gracePenaltyRate: BigNumberish;
-        collectionPeriod: BigNumberish;
-        minBorrowAmount: BigNumberish;
-        borrowLimit: BigNumberish;
-        borrowRate: BigNumberish;
-        collateralAsset: string;
-        borrowAssetStrategy: string;
-        collateralAssetStrategy: string;
-        borrowAsset: string;
-        borrowerVerifier: string;
-        areTokensTransferable: boolean;
-      },
+    pclb_borrow(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    setDepositLimitInCompound(
-      compoundYield: string,
-      _asset: string,
-      _limit: BigNumberish,
+    'pclb_borrow(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'setDepositLimitInCompound(address,address,uint256)'(
-      compoundYield: string,
-      _asset: string,
-      _limit: BigNumberish,
+    pclb_calculateBorrowableAmount(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    supportsInterface(interfaceId: BytesLike, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    'pclb_calculateBorrowableAmount(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
-    'supportsInterface(bytes4)'(interfaceId: BytesLike, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    pclb_calculateCurrentCollateralRatio(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_calculateCurrentCollateralRatio(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_calculateCurrentDebt(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_calculateCurrentDebt(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    pclb_calculateInterestAccrued(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_calculateInterestAccrued(address,uint256)'(
+      pooledCreditLineAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    pclb_calculateRequiredCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_calculateRequiredCollateral(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    pclb_calculateTotalCollateralTokens(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_calculateTotalCollateralTokens(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_calculateWithdrawableCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_calculateWithdrawableCollateral(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_cancelRequest(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_cancelRequest(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_close(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_close(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_collateralTokensToLiquidate(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_collateralTokensToLiquidate(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _borrowTokens: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    pclb_createRequest(
+      pooledCreditLineAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_createRequest(address)'(
+      pooledCreditLineAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_depositCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _fromSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_depositCollateral(address,uint256,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _fromSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_lend(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_lend(address,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_liquidate(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_liquidate(address,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_repay(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_repay(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_supplyRequestParams_1(
+      collateralRatio: BigNumberish,
+      duration: BigNumberish,
+      lenderVerifier: string,
+      defaultGracePeriod: BigNumberish,
+      gracePenaltyRate: BigNumberish,
+      collectionPeriod: BigNumberish,
+      minBorrowAmount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_supplyRequestParams_1(uint128,uint128,address,uint128,uint128,uint128,uint256)'(
+      collateralRatio: BigNumberish,
+      duration: BigNumberish,
+      lenderVerifier: string,
+      defaultGracePeriod: BigNumberish,
+      gracePenaltyRate: BigNumberish,
+      collectionPeriod: BigNumberish,
+      minBorrowAmount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_supplyRequestParams_2(
+      borrowLimit: BigNumberish,
+      borrowRate: BigNumberish,
+      collateralAsset: string,
+      borrowAssetStrategy: string,
+      collateralAssetStrategy: string,
+      borrowAsset: string,
+      borrowerVerifier: string,
+      areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_supplyRequestParams_2(uint128,uint128,address,address,address,address,address,bool)'(
+      borrowLimit: BigNumberish,
+      borrowRate: BigNumberish,
+      collateralAsset: string,
+      borrowAssetStrategy: string,
+      collateralAssetStrategy: string,
+      borrowAsset: string,
+      borrowerVerifier: string,
+      areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_withdrawCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_withdrawCollateral(address,uint256,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pclb_withdrawEntireCollateral(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pclb_withdrawEntireCollateral(address,uint256,bool)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_create(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _verifier: string,
+      _token: string,
+      _strategy: string,
+      _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
+      _collectionPeriod: BigNumberish,
+      _areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_create(address,uint256,address,address,address,uint256,uint256,uint256,bool)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _verifier: string,
+      _token: string,
+      _strategy: string,
+      _borrowLimit: BigNumberish,
+      _minBorrowAmount: BigNumberish,
+      _collectionPeriod: BigNumberish,
+      _areTokensTransferable: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_getLenderPoolTokenBalance(
+      lenderPoolAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_getLenderPoolTokenBalance(address,uint256)'(
+      lenderPoolAddress: string,
+      pooledCreditLineID: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    pcll_lend(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_lend(address,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_liquidate(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _withdraw: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_liquidate(address,uint256,bool)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _withdraw: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_repaid(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _sharesRepaid: BigNumberish,
+      _interestShares: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_repaid(address,uint256,uint256,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      _sharesRepaid: BigNumberish,
+      _interestShares: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_repay(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_repay(address,uint256,uint256)'(
+      pooledCreditLineAddress: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_transfer_pool_tokens(
+      lenderPoolAddress: string,
+      lender_1: string,
+      lender_2: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_transfer_pool_tokens(address,address,address,uint256,uint256,bytes)'(
+      lenderPoolAddress: string,
+      lender_1: string,
+      lender_2: string,
+      _id: BigNumberish,
+      _amount: BigNumberish,
+      _data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_withdrawInterest(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_withdrawInterest(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_withdrawLiquidatedCollateral(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_withdrawLiquidatedCollateral(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    pcll_withdrawLiquidity(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'pcll_withdrawLiquidity(address,uint256)'(
+      lenderPoolAddress: string,
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    savingsAccountWithdraw(
+      savingsAccountAddress: string,
+      _token: string,
+      _strategy: string,
+      _to: string,
+      _amount: BigNumberish,
+      _receiveShares: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'savingsAccountWithdraw(address,address,address,address,uint256,bool)'(
+      savingsAccountAddress: string,
+      _token: string,
+      _strategy: string,
+      _to: string,
+      _amount: BigNumberish,
+      _receiveShares: boolean,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    setAllowance(
+      approvedAddress: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'setAllowance(address,address,uint256)'(
+      approvedAddress: string,
+      token: string,
+      amount: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    setAllowanceForSavingsAccount(
+      savingsAccountAddress: string,
+      amount: BigNumberish,
+      token: string,
+      spender: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'setAllowanceForSavingsAccount(address,uint256,address,address)'(
+      savingsAccountAddress: string,
+      amount: BigNumberish,
+      token: string,
+      spender: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    supportsInterface(arg0: BytesLike, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'supportsInterface(bytes4)'(arg0: BytesLike, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     switchStrategyInSavingsAccount(
       savingsAccount: string,
@@ -2416,20 +3845,6 @@ export class User extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    transferToken(
-      token: string,
-      recipient: string,
-      amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'transferToken(address,address,uint256)'(
-      token: string,
-      recipient: string,
-      amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
     unlockTokensForCompoundYield(
       yield: string,
       asset: string,
@@ -2459,32 +3874,6 @@ export class User extends Contract {
       asset: string,
       to: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateProtocolAddressesForCompoundYield(
-      yield: string,
-      _asset: string,
-      _liquidityToken: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateProtocolAddressesForCompoundYield(address,address,address)'(
-      yield: string,
-      _asset: string,
-      _liquidityToken: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateStrategyRegistryInSavingsAccount(
-      savingsAccount: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateStrategyRegistryInSavingsAccount(address,address)'(
-      savingsAccount: string,
-      _strategyRegistry: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

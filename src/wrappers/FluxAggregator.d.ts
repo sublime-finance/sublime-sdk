@@ -101,12 +101,9 @@ export class FluxAggregator extends Contract {
 
     'description()'(overrides?: CallOverrides): Promise<[string]>;
 
-    getRoundData(_roundId: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
+    getRoundData(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
 
-    'getRoundData(uint80)'(
-      _roundId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
+    'getRoundData(uint80)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
 
     latestRoundData(overrides?: CallOverrides): Promise<
       [BigNumber, BigNumber, BigNumber, BigNumber, BigNumber] & {
@@ -149,12 +146,9 @@ export class FluxAggregator extends Contract {
 
   'description()'(overrides?: CallOverrides): Promise<string>;
 
-  getRoundData(_roundId: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
+  getRoundData(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
 
-  'getRoundData(uint80)'(
-    _roundId: BigNumberish,
-    overrides?: CallOverrides
-  ): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
+  'getRoundData(uint80)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
 
   latestRoundData(overrides?: CallOverrides): Promise<
     [BigNumber, BigNumber, BigNumber, BigNumber, BigNumber] & {
@@ -197,12 +191,9 @@ export class FluxAggregator extends Contract {
 
     'description()'(overrides?: CallOverrides): Promise<string>;
 
-    getRoundData(_roundId: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
+    getRoundData(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
 
-    'getRoundData(uint80)'(
-      _roundId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
+    'getRoundData(uint80)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber, BigNumber, BigNumber, BigNumber, BigNumber]>;
 
     latestRoundData(overrides?: CallOverrides): Promise<
       [BigNumber, BigNumber, BigNumber, BigNumber, BigNumber] & {
@@ -248,9 +239,9 @@ export class FluxAggregator extends Contract {
 
     'description()'(overrides?: CallOverrides): Promise<BigNumber>;
 
-    getRoundData(_roundId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+    getRoundData(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'getRoundData(uint80)'(_roundId: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+    'getRoundData(uint80)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     latestRoundData(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -278,9 +269,9 @@ export class FluxAggregator extends Contract {
 
     'description()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    getRoundData(_roundId: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    getRoundData(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    'getRoundData(uint80)'(_roundId: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    'getRoundData(uint80)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     latestRoundData(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

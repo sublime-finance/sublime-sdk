@@ -21,37 +21,36 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface NoYieldInterface extends ethers.utils.Interface {
   functions: {
+    'SAVINGS_ACCOUNT()': FunctionFragment;
     'TREASURY()': FunctionFragment;
     'emergencyWithdraw(address,uint256)': FunctionFragment;
     'getSharesForTokens(uint256,address)': FunctionFragment;
     'getTokensForShares(uint256,address)': FunctionFragment;
-    'initialize(address,address)': FunctionFragment;
+    'initialize(address)': FunctionFragment;
     'liquidityToken(address)': FunctionFragment;
     'lockTokens(address,address,uint256)': FunctionFragment;
     'owner()': FunctionFragment;
     'renounceOwnership()': FunctionFragment;
-    'savingsAccount()': FunctionFragment;
     'transferOwnership(address)': FunctionFragment;
     'unlockShares(address,address,uint256)': FunctionFragment;
     'unlockTokens(address,address,uint256)': FunctionFragment;
-    'updateSavingsAccount(address)': FunctionFragment;
   };
 
+  encodeFunctionData(functionFragment: 'SAVINGS_ACCOUNT', values?: undefined): string;
   encodeFunctionData(functionFragment: 'TREASURY', values?: undefined): string;
   encodeFunctionData(functionFragment: 'emergencyWithdraw', values: [string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getSharesForTokens', values: [BigNumberish, string]): string;
   encodeFunctionData(functionFragment: 'getTokensForShares', values: [BigNumberish, string]): string;
-  encodeFunctionData(functionFragment: 'initialize', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'initialize', values: [string]): string;
   encodeFunctionData(functionFragment: 'liquidityToken', values: [string]): string;
   encodeFunctionData(functionFragment: 'lockTokens', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
   encodeFunctionData(functionFragment: 'renounceOwnership', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'savingsAccount', values?: undefined): string;
   encodeFunctionData(functionFragment: 'transferOwnership', values: [string]): string;
   encodeFunctionData(functionFragment: 'unlockShares', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'unlockTokens', values: [string, string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateSavingsAccount', values: [string]): string;
 
+  decodeFunctionResult(functionFragment: 'SAVINGS_ACCOUNT', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'TREASURY', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'emergencyWithdraw', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getSharesForTokens', data: BytesLike): Result;
@@ -61,11 +60,9 @@ interface NoYieldInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'lockTokens', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'owner', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'renounceOwnership', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'savingsAccount', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferOwnership', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'unlockShares', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'unlockTokens', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateSavingsAccount', data: BytesLike): Result;
 
   events: {
     'EmergencyWithdraw(address,address,uint256)': EventFragment;
@@ -128,6 +125,10 @@ export class NoYield extends Contract {
   interface: NoYieldInterface;
 
   functions: {
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<[string]>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<[string]>;
+
     TREASURY(overrides?: CallOverrides): Promise<[string]>;
 
     'TREASURY()'(overrides?: CallOverrides): Promise<[string]>;
@@ -152,17 +153,9 @@ export class NoYield extends Contract {
 
     'getTokensForShares(uint256,address)'(shares: BigNumberish, arg1: string, overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    initialize(
-      _owner: string,
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    initialize(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'initialize(address,address)'(
-      _owner: string,
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    'initialize(address)'(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     liquidityToken(_asset: string, overrides?: CallOverrides): Promise<[string]>;
 
@@ -189,10 +182,6 @@ export class NoYield extends Contract {
     renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    savingsAccount(overrides?: CallOverrides): Promise<[string]>;
-
-    'savingsAccount()'(overrides?: CallOverrides): Promise<[string]>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -228,17 +217,11 @@ export class NoYield extends Contract {
       amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
-
-    updateSavingsAccount(
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
   };
+
+  SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<string>;
+
+  'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<string>;
 
   TREASURY(overrides?: CallOverrides): Promise<string>;
 
@@ -264,17 +247,9 @@ export class NoYield extends Contract {
 
   'getTokensForShares(uint256,address)'(shares: BigNumberish, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-  initialize(
-    _owner: string,
-    _savingsAccount: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  initialize(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'initialize(address,address)'(
-    _owner: string,
-    _savingsAccount: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  'initialize(address)'(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   liquidityToken(_asset: string, overrides?: CallOverrides): Promise<string>;
 
@@ -301,10 +276,6 @@ export class NoYield extends Contract {
   renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  savingsAccount(overrides?: CallOverrides): Promise<string>;
-
-  'savingsAccount()'(overrides?: CallOverrides): Promise<string>;
 
   transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -338,14 +309,11 @@ export class NoYield extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateSavingsAccount(_savingsAccount: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'updateSavingsAccount(address)'(
-    _savingsAccount: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
   callStatic: {
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<string>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<string>;
+
     TREASURY(overrides?: CallOverrides): Promise<string>;
 
     'TREASURY()'(overrides?: CallOverrides): Promise<string>;
@@ -362,9 +330,9 @@ export class NoYield extends Contract {
 
     'getTokensForShares(uint256,address)'(shares: BigNumberish, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    initialize(_owner: string, _savingsAccount: string, overrides?: CallOverrides): Promise<void>;
+    initialize(_owner: string, overrides?: CallOverrides): Promise<void>;
 
-    'initialize(address,address)'(_owner: string, _savingsAccount: string, overrides?: CallOverrides): Promise<void>;
+    'initialize(address)'(_owner: string, overrides?: CallOverrides): Promise<void>;
 
     liquidityToken(_asset: string, overrides?: CallOverrides): Promise<string>;
 
@@ -382,10 +350,6 @@ export class NoYield extends Contract {
 
     'renounceOwnership()'(overrides?: CallOverrides): Promise<void>;
 
-    savingsAccount(overrides?: CallOverrides): Promise<string>;
-
-    'savingsAccount()'(overrides?: CallOverrides): Promise<string>;
-
     transferOwnership(newOwner: string, overrides?: CallOverrides): Promise<void>;
 
     'transferOwnership(address)'(newOwner: string, overrides?: CallOverrides): Promise<void>;
@@ -397,10 +361,6 @@ export class NoYield extends Contract {
     unlockTokens(asset: string, to: string, amount: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'unlockTokens(address,address,uint256)'(asset: string, to: string, amount: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
-
-    updateSavingsAccount(_savingsAccount: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateSavingsAccount(address)'(_savingsAccount: string, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {
@@ -435,6 +395,10 @@ export class NoYield extends Contract {
   };
 
   estimateGas: {
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<BigNumber>;
+
     TREASURY(overrides?: CallOverrides): Promise<BigNumber>;
 
     'TREASURY()'(overrides?: CallOverrides): Promise<BigNumber>;
@@ -459,13 +423,9 @@ export class NoYield extends Contract {
 
     'getTokensForShares(uint256,address)'(shares: BigNumberish, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    initialize(_owner: string, _savingsAccount: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    initialize(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'initialize(address,address)'(
-      _owner: string,
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
+    'initialize(address)'(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     liquidityToken(_asset: string, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -492,10 +452,6 @@ export class NoYield extends Contract {
     renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    savingsAccount(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'savingsAccount()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -528,16 +484,13 @@ export class NoYield extends Contract {
       amount: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
-
-    updateSavingsAccount(_savingsAccount: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
   };
 
   populateTransaction: {
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     TREASURY(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'TREASURY()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -562,17 +515,9 @@ export class NoYield extends Contract {
 
     'getTokensForShares(uint256,address)'(shares: BigNumberish, arg1: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    initialize(
-      _owner: string,
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
+    initialize(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'initialize(address,address)'(
-      _owner: string,
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
+    'initialize(address)'(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     liquidityToken(_asset: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -599,10 +544,6 @@ export class NoYield extends Contract {
     renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    savingsAccount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'savingsAccount()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -636,16 +577,6 @@ export class NoYield extends Contract {
       asset: string,
       to: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateSavingsAccount(
-      _savingsAccount: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
   };

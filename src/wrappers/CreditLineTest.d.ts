@@ -27,7 +27,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
     'SetUpCreditLines()': FunctionFragment;
     'SetUpGlobalActors()': FunctionFragment;
     'SetUpPoolActors()': FunctionFragment;
-    'SetUpPooledCreditLines()': FunctionFragment;
+    'SetUpPooledCreditLine()': FunctionFragment;
     'createAdmin()': FunctionFragment;
     'createBob()': FunctionFragment;
     'createCreditLineBorrower()': FunctionFragment;
@@ -41,6 +41,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
     'createVerifier()': FunctionFragment;
     'deployCompoundYield()': FunctionFragment;
     'deployCreditLines()': FunctionFragment;
+    'deployLenderPoolProxy()': FunctionFragment;
     'deployNoYield()': FunctionFragment;
     'deployPriceOracle()': FunctionFragment;
     'deployProtocolFeeCollector()': FunctionFragment;
@@ -53,12 +54,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
     'mint(address,address,uint256)': FunctionFragment;
     'restrictToRange(uint256,uint256,uint256)': FunctionFragment;
     'setUp()': FunctionFragment;
-    'setUpLenderPools()': FunctionFragment;
-    'test_CreditLine_UpdateDefaultStrategy()': FunctionFragment;
     'test_CreditLine_updatePriceOracle()': FunctionFragment;
-    'test_UpdateDefaultStrategy_InvalidActor()': FunctionFragment;
-    'test_UpdateDefaultStrategy_SameAddress()': FunctionFragment;
-    'test_UpdateDefaultStrategy_zeroAddress()': FunctionFragment;
     'test_creditLineUpdateLiquidatorRewardFraction()': FunctionFragment;
     'test_creditLineUpdateProtocolFeeCollector()': FunctionFragment;
     'test_creditLineUpdateProtocolFeeFraction()': FunctionFragment;
@@ -113,7 +109,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'SetUpCreditLines', values?: undefined): string;
   encodeFunctionData(functionFragment: 'SetUpGlobalActors', values?: undefined): string;
   encodeFunctionData(functionFragment: 'SetUpPoolActors', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'SetUpPooledCreditLines', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'SetUpPooledCreditLine', values?: undefined): string;
   encodeFunctionData(functionFragment: 'createAdmin', values?: undefined): string;
   encodeFunctionData(functionFragment: 'createBob', values?: undefined): string;
   encodeFunctionData(functionFragment: 'createCreditLineBorrower', values?: undefined): string;
@@ -127,6 +123,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'createVerifier', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployCompoundYield', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployCreditLines', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'deployLenderPoolProxy', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployNoYield', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployPriceOracle', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployProtocolFeeCollector', values?: undefined): string;
@@ -139,12 +136,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'mint', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'restrictToRange', values: [BigNumberish, BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'setUp', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'setUpLenderPools', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'test_CreditLine_UpdateDefaultStrategy', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_CreditLine_updatePriceOracle', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'test_UpdateDefaultStrategy_InvalidActor', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'test_UpdateDefaultStrategy_SameAddress', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'test_UpdateDefaultStrategy_zeroAddress', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_creditLineUpdateLiquidatorRewardFraction', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_creditLineUpdateProtocolFeeCollector', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_creditLineUpdateProtocolFeeFraction', values?: undefined): string;
@@ -198,7 +190,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'SetUpCreditLines', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'SetUpGlobalActors', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'SetUpPoolActors', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'SetUpPooledCreditLines', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'SetUpPooledCreditLine', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createAdmin', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createBob', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createCreditLineBorrower', data: BytesLike): Result;
@@ -212,6 +204,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'createVerifier', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployCompoundYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployCreditLines', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployLenderPoolProxy', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployNoYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployPriceOracle', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployProtocolFeeCollector', data: BytesLike): Result;
@@ -224,12 +217,7 @@ interface CreditLineTestInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'mint', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'restrictToRange', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'setUp', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'setUpLenderPools', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'test_CreditLine_UpdateDefaultStrategy', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_CreditLine_updatePriceOracle', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'test_UpdateDefaultStrategy_InvalidActor', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'test_UpdateDefaultStrategy_SameAddress', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'test_UpdateDefaultStrategy_zeroAddress', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_creditLineUpdateLiquidatorRewardFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_creditLineUpdateProtocolFeeCollector', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_creditLineUpdateProtocolFeeFraction', data: BytesLike): Result;
@@ -382,9 +370,9 @@ export class CreditLineTest extends Contract {
 
     'SetUpPoolActors()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    SetUpPooledCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    SetUpPooledCreditLine(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'SetUpPooledCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'SetUpPooledCreditLine()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     createAdmin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -437,6 +425,10 @@ export class CreditLineTest extends Contract {
     deployCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'deployCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    deployLenderPoolProxy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'deployLenderPoolProxy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     deployNoYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -507,29 +499,9 @@ export class CreditLineTest extends Contract {
 
     'setUp()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    setUpLenderPools(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    test_CreditLine_UpdateDefaultStrategy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'test_CreditLine_UpdateDefaultStrategy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
     test_CreditLine_updatePriceOracle(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'test_CreditLine_updatePriceOracle()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    test_UpdateDefaultStrategy_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    test_UpdateDefaultStrategy_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'test_UpdateDefaultStrategy_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    test_UpdateDefaultStrategy_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     test_creditLineUpdateLiquidatorRewardFraction(
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -800,9 +772,9 @@ export class CreditLineTest extends Contract {
 
   'SetUpPoolActors()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  SetUpPooledCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  SetUpPooledCreditLine(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'SetUpPooledCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'SetUpPooledCreditLine()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   createAdmin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -855,6 +827,10 @@ export class CreditLineTest extends Contract {
   deployCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'deployCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  deployLenderPoolProxy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'deployLenderPoolProxy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   deployNoYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -925,29 +901,9 @@ export class CreditLineTest extends Contract {
 
   'setUp()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  setUpLenderPools(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  test_CreditLine_UpdateDefaultStrategy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'test_CreditLine_UpdateDefaultStrategy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
   test_CreditLine_updatePriceOracle(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'test_CreditLine_updatePriceOracle()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  test_UpdateDefaultStrategy_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  test_UpdateDefaultStrategy_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'test_UpdateDefaultStrategy_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  test_UpdateDefaultStrategy_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   test_creditLineUpdateLiquidatorRewardFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -1200,9 +1156,9 @@ export class CreditLineTest extends Contract {
 
     'SetUpPoolActors()'(overrides?: CallOverrides): Promise<void>;
 
-    SetUpPooledCreditLines(overrides?: CallOverrides): Promise<void>;
+    SetUpPooledCreditLine(overrides?: CallOverrides): Promise<void>;
 
-    'SetUpPooledCreditLines()'(overrides?: CallOverrides): Promise<void>;
+    'SetUpPooledCreditLine()'(overrides?: CallOverrides): Promise<void>;
 
     createAdmin(overrides?: CallOverrides): Promise<void>;
 
@@ -1255,6 +1211,10 @@ export class CreditLineTest extends Contract {
     deployCreditLines(overrides?: CallOverrides): Promise<void>;
 
     'deployCreditLines()'(overrides?: CallOverrides): Promise<void>;
+
+    deployLenderPoolProxy(overrides?: CallOverrides): Promise<void>;
+
+    'deployLenderPoolProxy()'(overrides?: CallOverrides): Promise<void>;
 
     deployNoYield(overrides?: CallOverrides): Promise<void>;
 
@@ -1315,29 +1275,9 @@ export class CreditLineTest extends Contract {
 
     'setUp()'(overrides?: CallOverrides): Promise<void>;
 
-    setUpLenderPools(overrides?: CallOverrides): Promise<void>;
-
-    'setUpLenderPools()'(overrides?: CallOverrides): Promise<void>;
-
-    test_CreditLine_UpdateDefaultStrategy(overrides?: CallOverrides): Promise<void>;
-
-    'test_CreditLine_UpdateDefaultStrategy()'(overrides?: CallOverrides): Promise<void>;
-
     test_CreditLine_updatePriceOracle(overrides?: CallOverrides): Promise<void>;
 
     'test_CreditLine_updatePriceOracle()'(overrides?: CallOverrides): Promise<void>;
-
-    test_UpdateDefaultStrategy_InvalidActor(overrides?: CallOverrides): Promise<void>;
-
-    'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: CallOverrides): Promise<void>;
-
-    test_UpdateDefaultStrategy_SameAddress(overrides?: CallOverrides): Promise<void>;
-
-    'test_UpdateDefaultStrategy_SameAddress()'(overrides?: CallOverrides): Promise<void>;
-
-    test_UpdateDefaultStrategy_zeroAddress(overrides?: CallOverrides): Promise<void>;
-
-    'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: CallOverrides): Promise<void>;
 
     test_creditLineUpdateLiquidatorRewardFraction(overrides?: CallOverrides): Promise<void>;
 
@@ -1591,9 +1531,9 @@ export class CreditLineTest extends Contract {
 
     'SetUpPoolActors()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    SetUpPooledCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    SetUpPooledCreditLine(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'SetUpPooledCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'SetUpPooledCreditLine()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     createAdmin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -1646,6 +1586,10 @@ export class CreditLineTest extends Contract {
     deployCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'deployCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    deployLenderPoolProxy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'deployLenderPoolProxy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     deployNoYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -1716,29 +1660,9 @@ export class CreditLineTest extends Contract {
 
     'setUp()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    setUpLenderPools(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    test_CreditLine_UpdateDefaultStrategy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'test_CreditLine_UpdateDefaultStrategy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
     test_CreditLine_updatePriceOracle(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'test_CreditLine_updatePriceOracle()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    test_UpdateDefaultStrategy_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    test_UpdateDefaultStrategy_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'test_UpdateDefaultStrategy_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    test_UpdateDefaultStrategy_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     test_creditLineUpdateLiquidatorRewardFraction(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -1950,9 +1874,9 @@ export class CreditLineTest extends Contract {
 
     'SetUpPoolActors()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    SetUpPooledCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    SetUpPooledCreditLine(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'SetUpPooledCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'SetUpPooledCreditLine()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     createAdmin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -2005,6 +1929,10 @@ export class CreditLineTest extends Contract {
     deployCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'deployCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    deployLenderPoolProxy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'deployLenderPoolProxy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     deployNoYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -2075,29 +2003,9 @@ export class CreditLineTest extends Contract {
 
     'setUp()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    setUpLenderPools(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    test_CreditLine_UpdateDefaultStrategy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'test_CreditLine_UpdateDefaultStrategy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
     test_CreditLine_updatePriceOracle(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'test_CreditLine_updatePriceOracle()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    test_UpdateDefaultStrategy_InvalidActor(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'test_UpdateDefaultStrategy_InvalidActor()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    test_UpdateDefaultStrategy_SameAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'test_UpdateDefaultStrategy_SameAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    test_UpdateDefaultStrategy_zeroAddress(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'test_UpdateDefaultStrategy_zeroAddress()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     test_creditLineUpdateLiquidatorRewardFraction(
       overrides?: Overrides & { from?: string | Promise<string> }

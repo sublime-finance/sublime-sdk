@@ -31,7 +31,7 @@ interface PoolInterface extends ethers.utils.Interface {
     'calculateRepaymentWithdrawable(address)': FunctionFragment;
     'cancelPool()': FunctionFragment;
     'closeLoan()': FunctionFragment;
-    'correspondingBorrowTokens(uint256,address,uint256)': FunctionFragment;
+    'correspondingBorrowTokens(uint256,uint256)': FunctionFragment;
     'decimals()': FunctionFragment;
     'decreaseAllowance(address,uint256)': FunctionFragment;
     'depositCollateral(uint256,bool)': FunctionFragment;
@@ -75,7 +75,7 @@ interface PoolInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'calculateRepaymentWithdrawable', values: [string]): string;
   encodeFunctionData(functionFragment: 'cancelPool', values?: undefined): string;
   encodeFunctionData(functionFragment: 'closeLoan', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'correspondingBorrowTokens', values: [BigNumberish, string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'correspondingBorrowTokens', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'decimals', values?: undefined): string;
   encodeFunctionData(functionFragment: 'decreaseAllowance', values: [string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'depositCollateral', values: [BigNumberish, boolean]): string;
@@ -318,14 +318,12 @@ export class Pool extends Contract {
 
     correspondingBorrowTokens(
       _totalCollateralTokens: BigNumberish,
-      _priceOracle: string,
       _fraction: BigNumberish,
       overrides?: CallOverrides
     ): Promise<[BigNumber]>;
 
-    'correspondingBorrowTokens(uint256,address,uint256)'(
+    'correspondingBorrowTokens(uint256,uint256)'(
       _totalCollateralTokens: BigNumberish,
-      _priceOracle: string,
       _fraction: BigNumberish,
       overrides?: CallOverrides
     ): Promise<[BigNumber]>;
@@ -703,16 +701,10 @@ export class Pool extends Contract {
 
   'closeLoan()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  correspondingBorrowTokens(
-    _totalCollateralTokens: BigNumberish,
-    _priceOracle: string,
-    _fraction: BigNumberish,
-    overrides?: CallOverrides
-  ): Promise<BigNumber>;
+  correspondingBorrowTokens(_totalCollateralTokens: BigNumberish, _fraction: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-  'correspondingBorrowTokens(uint256,address,uint256)'(
+  'correspondingBorrowTokens(uint256,uint256)'(
     _totalCollateralTokens: BigNumberish,
-    _priceOracle: string,
     _fraction: BigNumberish,
     overrides?: CallOverrides
   ): Promise<BigNumber>;
@@ -1082,16 +1074,10 @@ export class Pool extends Contract {
 
     'closeLoan()'(overrides?: CallOverrides): Promise<void>;
 
-    correspondingBorrowTokens(
-      _totalCollateralTokens: BigNumberish,
-      _priceOracle: string,
-      _fraction: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
+    correspondingBorrowTokens(_totalCollateralTokens: BigNumberish, _fraction: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'correspondingBorrowTokens(uint256,address,uint256)'(
+    'correspondingBorrowTokens(uint256,uint256)'(
       _totalCollateralTokens: BigNumberish,
-      _priceOracle: string,
       _fraction: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
@@ -1499,16 +1485,10 @@ export class Pool extends Contract {
 
     'closeLoan()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    correspondingBorrowTokens(
-      _totalCollateralTokens: BigNumberish,
-      _priceOracle: string,
-      _fraction: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
+    correspondingBorrowTokens(_totalCollateralTokens: BigNumberish, _fraction: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'correspondingBorrowTokens(uint256,address,uint256)'(
+    'correspondingBorrowTokens(uint256,uint256)'(
       _totalCollateralTokens: BigNumberish,
-      _priceOracle: string,
       _fraction: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
@@ -1824,14 +1804,12 @@ export class Pool extends Contract {
 
     correspondingBorrowTokens(
       _totalCollateralTokens: BigNumberish,
-      _priceOracle: string,
       _fraction: BigNumberish,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
-    'correspondingBorrowTokens(uint256,address,uint256)'(
+    'correspondingBorrowTokens(uint256,uint256)'(
       _totalCollateralTokens: BigNumberish,
-      _priceOracle: string,
       _fraction: BigNumberish,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;

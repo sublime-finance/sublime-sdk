@@ -11,6 +11,7 @@ import {
   PopulatedTransaction,
   Contract,
   ContractTransaction,
+  Overrides,
   CallOverrides,
 } from 'ethers';
 import { BytesLike } from '@ethersproject/bytes';
@@ -21,11 +22,26 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 interface MockVerification2Interface extends ethers.utils.Interface {
   functions: {
     'isUser(address,address)': FunctionFragment;
+    'unverifyUser(address)': FunctionFragment;
+    'verifiedUsers(address,address)': FunctionFragment;
+    'verifiers(address)': FunctionFragment;
+    'verifyUser(address,address)': FunctionFragment;
+    'whitelistVerifier(address)': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'isUser', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'unverifyUser', values: [string]): string;
+  encodeFunctionData(functionFragment: 'verifiedUsers', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'verifiers', values: [string]): string;
+  encodeFunctionData(functionFragment: 'verifyUser', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'whitelistVerifier', values: [string]): string;
 
   decodeFunctionResult(functionFragment: 'isUser', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'unverifyUser', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'verifiedUsers', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'verifiers', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'verifyUser', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'whitelistVerifier', data: BytesLike): Result;
 
   events: {};
 }
@@ -74,32 +90,161 @@ export class MockVerification2 extends Contract {
   interface: MockVerification2Interface;
 
   functions: {
-    isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<[boolean]>;
+    isUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<[boolean]>;
 
-    'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<[boolean]>;
+    'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<[boolean]>;
+
+    unverifyUser(_user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'unverifyUser(address)'(_user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    verifiedUsers(arg0: string, arg1: string, overrides?: CallOverrides): Promise<[boolean]>;
+
+    'verifiedUsers(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<[boolean]>;
+
+    verifiers(arg0: string, overrides?: CallOverrides): Promise<[boolean]>;
+
+    'verifiers(address)'(arg0: string, overrides?: CallOverrides): Promise<[boolean]>;
+
+    verifyUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'verifyUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    whitelistVerifier(_verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'whitelistVerifier(address)'(
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
   };
 
-  isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+  isUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<boolean>;
 
-  'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+  'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<boolean>;
+
+  unverifyUser(_user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'unverifyUser(address)'(_user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  verifiedUsers(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+
+  'verifiedUsers(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+
+  verifiers(arg0: string, overrides?: CallOverrides): Promise<boolean>;
+
+  'verifiers(address)'(arg0: string, overrides?: CallOverrides): Promise<boolean>;
+
+  verifyUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'verifyUser(address,address)'(
+    _user: string,
+    _verifier: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  whitelistVerifier(_verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'whitelistVerifier(address)'(
+    _verifier: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   callStatic: {
-    isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+    isUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<boolean>;
 
-    'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+    'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<boolean>;
+
+    unverifyUser(_user: string, overrides?: CallOverrides): Promise<void>;
+
+    'unverifyUser(address)'(_user: string, overrides?: CallOverrides): Promise<void>;
+
+    verifiedUsers(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+
+    'verifiedUsers(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<boolean>;
+
+    verifiers(arg0: string, overrides?: CallOverrides): Promise<boolean>;
+
+    'verifiers(address)'(arg0: string, overrides?: CallOverrides): Promise<boolean>;
+
+    verifyUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
+
+    'verifyUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<void>;
+
+    whitelistVerifier(_verifier: string, overrides?: CallOverrides): Promise<void>;
+
+    'whitelistVerifier(address)'(_verifier: string, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {};
 
   estimateGas: {
-    isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
+    isUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
+    'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    unverifyUser(_user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'unverifyUser(address)'(_user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    verifiedUsers(arg0: string, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'verifiedUsers(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    verifiers(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'verifiers(address)'(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    verifyUser(_user: string, _verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'verifyUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    whitelistVerifier(_verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'whitelistVerifier(address)'(_verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    isUser(arg0: string, arg1: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    isUser(_user: string, _verifier: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    'isUser(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    'isUser(address,address)'(_user: string, _verifier: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    unverifyUser(_user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'unverifyUser(address)'(_user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    verifiedUsers(arg0: string, arg1: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'verifiedUsers(address,address)'(arg0: string, arg1: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    verifiers(arg0: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'verifiers(address)'(arg0: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    verifyUser(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'verifyUser(address,address)'(
+      _user: string,
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    whitelistVerifier(_verifier: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'whitelistVerifier(address)'(
+      _verifier: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
   };
 }

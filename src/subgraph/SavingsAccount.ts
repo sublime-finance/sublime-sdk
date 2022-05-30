@@ -11,6 +11,7 @@ import {
   Strategy,
   Balance,
   SavingsAccountBalanceDisplay,
+  StrategyType,
 } from '../types/Types';
 import { getAllowances, getBalances } from '../queries';
 import BigNumber from 'bignumber.js';
@@ -113,7 +114,7 @@ export class SavingsAccountCalls extends PoolCalls {
 
     for (let index = 0; index < uniqueStrategies.length; index++) {
       const element = uniqueStrategies[index];
-      aprs[element] = await this.getAPR(element);
+      aprs[element] = await this.getAPR(this.yieldApi.getStrategy(element));
     }
 
     for (let index = 0; index < uniqueTokens.length; index++) {
@@ -226,19 +227,7 @@ export class SavingsAccountCalls extends PoolCalls {
    * @param strategy
    * @@description calulcates the APR for a given strategy
    */
-  private async getAPR(strategy: string): Promise<BigNumber> {
-    const BLOCKS_PER_DAY = 6570; // 13.15 sec block
-    const DAYS_PER_YEAR = 365;
-    if (strategy == this.sublimeAddresses.compoundStrategyContractAddress) {
-      // Ref - "Calculating the APY Using Rate Per Block" section in https://compound.finance/docs
-      const cTokenContract: ICToken = ICToken__factory.connect(strategy, this.signer);
-      const supplyRatePerBlock = new BigNumber((await cTokenContract.callStatic.supplyRatePerBlock()).toString());
-      const perDaySupplyRate = supplyRatePerBlock.div(new BigNumber(10).pow(18)).multipliedBy(BLOCKS_PER_DAY).plus(1);
-      const perYearSupplyRate = perDaySupplyRate.pow(DAYS_PER_YEAR).minus(1).multipliedBy(100);
-      return perYearSupplyRate;
-    } else if (strategy == this.sublimeAddresses.noStrategyAddress) {
-      return new BigNumber(0);
-    }
-    return new BigNumber(0);
+  private async getAPR(strategy: StrategyType): Promise<BigNumber> {
+    return new BigNumber(10).pow(17).multipliedBy(3).div(2);
   }
 }

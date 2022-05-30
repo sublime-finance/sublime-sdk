@@ -8,25 +8,47 @@ import { BigNumber } from 'bignumber.js';
 import { IYield } from '../wrappers/IYield';
 import { IYield__factory } from '../wrappers/factories/IYield__factory';
 
-import { ERC20Detailed, ERC20Detailed__factory } from '../wrappers';
+import { ERC20 as ERC20Detailed, ERC20__factory as ERC20Detailed__factory } from '../wrappers';
 
 import { TokenManager } from '../tokenManager';
-import { Asset, StrategyType, Options as Overrides } from '../types/Types';
+import { Asset, StrategyType, Options as Overrides, Balance } from '../types/Types';
 import { SavingAccountsEthUtils } from './utils/savingsAccountEthUtils';
+import { YieldAndStrategyApi } from './yieldAndStrategy';
 
 /**
  * @class SavingsAccountApi
  */
 export class SavingsAccountApi {
+  /**
+   * @description Signer Object
+   */
   private signer: Signer;
+
+  /**
+   * @description Instance of savings account contract
+   */
   private savingsAccount: SavingsAccount;
+
+  /**
+   * @description All sublime addresses
+   */
   private config: SublimeConfig;
+
+  /**
+   * @description Instance to fetch and update token metadata
+   */
   private tokenManager: TokenManager;
+
+  /**
+   * @description Yield APIs
+   */
+  private yieldAndStrategyApi: YieldAndStrategyApi;
 
   constructor(signer: Signer, config: SublimeConfig, tokenManager) {
     this.signer = signer;
     this.config = config;
     this.savingsAccount = new SavingsAccount__factory(signer).attach(config.savingsAccountContractAddress);
+    this.yieldAndStrategyApi = new YieldAndStrategyApi(signer, config, tokenManager);
     this.tokenManager = tokenManager;
   }
 
@@ -43,7 +65,7 @@ export class SavingsAccountApi {
    * @param amount
    * @param asset
    * @param strategy
-   * @returns Contract Transaction
+   * @returns
    */
   public async approveTokenForSavingsAccountDeposit(
     amount: string,
@@ -218,6 +240,51 @@ export class SavingsAccountApi {
   }
 
   /**
+   * @param token
+   * @param strategy
+   * @param to
+   * @param numberOfShares
+   * @param receiveShares
+   * @param options
+   * @returns
+   */
+  public async withdrawShares(
+    token: string,
+    strategy: StrategyType,
+    to: string,
+    numberOfShares: string,
+    receiveShares: boolean,
+    options?: Overrides
+  ): Promise<ContractTransaction> {
+    const strategyAddress = this.getStrategyAddress(strategy);
+    return this.savingsAccount.withdrawShares(token, strategyAddress, to, numberOfShares, receiveShares, { ...options });
+  }
+
+  /**
+   *
+   * @param token
+   * @param strategy
+   * @param from
+   * @param to
+   * @param numberOfShares
+   * @param receiveShares
+   * @param options
+   * @returns
+   */
+  public async withdrawSharesFrom(
+    token: string,
+    strategy: StrategyType,
+    from: string,
+    to: string,
+    numberOfShares: string,
+    receiveShares: boolean,
+    options?: Overrides
+  ): Promise<ContractTransaction> {
+    const strategyAddress = this.getStrategyAddress(strategy);
+    return this.savingsAccount.withdrawSharesFrom(token, strategyAddress, from, to, numberOfShares, receiveShares, { ...options });
+  }
+
+  /**
    * @description Withdraw a particular tokens from all strategies
    * @param asset / token address
    * @returns Contract Transaction
@@ -297,6 +364,22 @@ export class SavingsAccountApi {
     return this.savingsAccount.decreaseAllowance(token, to, _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0), {
       ...options,
     });
+  }
+
+  /**
+   *
+   * @param token Address of the token
+   * @param from
+   * @param to
+   * @returns Allowance
+   */
+  public async getAllowance(token: string, from: string, to: string): Promise<Balance> {
+    const allowance = await this.savingsAccount.connect(this.signer).allowance(token, from, to);
+    await this.tokenManager.updateAll(token);
+    return {
+      value: allowance.toString(),
+      decimals: this.tokenManager.getTokenDecimals(token),
+    };
   }
 
   /**
@@ -399,12 +482,12 @@ export class SavingsAccountApi {
    * @param asset
    * @returns easy read number in string
    */
-  public async getTotalTokens(user: string, asset: string): Promise<string> {
+  public async getTotalTokens(user: string, asset: string): Promise<Balance> {
     await this.tokenManager.updateTokenDecimals(asset);
     const decimals = this.tokenManager.getTokenDecimals(asset);
 
     const getTotalTokens = await (await this.savingsAccount.callStatic.getTotalTokens(user, asset)).toString();
-    return new BigNumber(getTotalTokens).div(new BigNumber(10).pow(decimals)).toFixed(2);
+    return { value: getTotalTokens.toString(), decimals };
   }
 
   /**
@@ -414,7 +497,7 @@ export class SavingsAccountApi {
    * @param strategy
    * @returns easy read number in string
    */
-  public async getShares(user: string, asset: string, strategy: StrategyType): Promise<string> {
+  public async getShares(user: string, asset: string, strategy: StrategyType): Promise<Balance> {
     const _strategyContractAddress = this.getStrategyAddress(strategy);
     const yieldContract: IYield = IYield__factory.connect(_strategyContractAddress, this.signer);
     const liquiditySharesAddress: string = await yieldContract.liquidityToken(asset);
@@ -423,7 +506,7 @@ export class SavingsAccountApi {
     const decimal = this.tokenManager.getTokenDecimals(liquiditySharesAddress);
 
     const userShares = await (await this.savingsAccount.balanceInShares(user, asset, _strategyContractAddress)).toString();
-    return new BigNumber(userShares).div(new BigNumber(10).pow(decimal)).toFixed(6);
+    return { value: userShares.toString(), decimals: decimal };
   }
 
   /**
@@ -451,12 +534,6 @@ export class SavingsAccountApi {
    * @returns
    */
   private getStrategyAddress(strategy: StrategyType): string {
-    if (strategy === StrategyType.NoYield) {
-      return this.config.noStrategyAddress;
-    } else if (strategy === StrategyType.CompounYield) {
-      return this.config.compoundStrategyContractAddress;
-    } else {
-      throw new Error(`${strategy} strategy is not supported`);
-    }
+    return this.yieldAndStrategyApi.getStrategyAddress(strategy);
   }
 }

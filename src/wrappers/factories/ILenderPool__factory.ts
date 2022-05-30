@@ -142,13 +142,26 @@ const _abi = [
         name: '_id',
         type: 'uint256',
       },
+    ],
+    name: 'start',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'id',
+        type: 'uint256',
+      },
       {
         internalType: 'address',
-        name: '_user',
+        name: 'to',
         type: 'address',
       },
     ],
-    name: 'start',
+    name: 'terminate',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',

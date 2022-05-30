@@ -25,7 +25,8 @@ interface ILenderPoolInterface extends ethers.utils.Interface {
     'create(uint256,address,address,address,uint256,uint256,uint256,bool)': FunctionFragment;
     'repaid(uint256,uint256,uint256)': FunctionFragment;
     'requestCancelled(uint256)': FunctionFragment;
-    'start(uint256,address)': FunctionFragment;
+    'start(uint256)': FunctionFragment;
+    'terminate(uint256,address)': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'borrowed', values: [BigNumberish, BigNumberish]): string;
@@ -35,13 +36,15 @@ interface ILenderPoolInterface extends ethers.utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: 'repaid', values: [BigNumberish, BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'requestCancelled', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'start', values: [BigNumberish, string]): string;
+  encodeFunctionData(functionFragment: 'start', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'terminate', values: [BigNumberish, string]): string;
 
   decodeFunctionResult(functionFragment: 'borrowed', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'create', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'repaid', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'requestCancelled', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'start', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'terminate', data: BytesLike): Result;
 
   events: {
     'LiquidityWithdrawn(uint256,address)': EventFragment;
@@ -151,11 +154,15 @@ export class ILenderPool extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    start(_id: BigNumberish, _user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'start(uint256,address)'(
-      _id: BigNumberish,
-      _user: string,
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    terminate(id: BigNumberish, to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'terminate(uint256,address)'(
+      id: BigNumberish,
+      to: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
   };
@@ -214,11 +221,15 @@ export class ILenderPool extends Contract {
 
   'requestCancelled(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  start(_id: BigNumberish, _user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'start(uint256,address)'(
-    _id: BigNumberish,
-    _user: string,
+  'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  terminate(id: BigNumberish, to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'terminate(uint256,address)'(
+    id: BigNumberish,
+    to: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -264,9 +275,13 @@ export class ILenderPool extends Contract {
 
     'requestCancelled(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    start(_id: BigNumberish, _user: string, overrides?: CallOverrides): Promise<void>;
+    start(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'start(uint256,address)'(_id: BigNumberish, _user: string, overrides?: CallOverrides): Promise<void>;
+    'start(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    terminate(id: BigNumberish, to: string, overrides?: CallOverrides): Promise<void>;
+
+    'terminate(uint256,address)'(id: BigNumberish, to: string, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {
@@ -331,11 +346,15 @@ export class ILenderPool extends Contract {
 
     'requestCancelled(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    start(_id: BigNumberish, _user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'start(uint256,address)'(
-      _id: BigNumberish,
-      _user: string,
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    terminate(id: BigNumberish, to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'terminate(uint256,address)'(
+      id: BigNumberish,
+      to: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
   };
@@ -398,11 +417,15 @@ export class ILenderPool extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    start(_id: BigNumberish, _user: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    start(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'start(uint256,address)'(
-      _id: BigNumberish,
-      _user: string,
+    'start(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    terminate(id: BigNumberish, to: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'terminate(uint256,address)'(
+      id: BigNumberish,
+      to: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
   };

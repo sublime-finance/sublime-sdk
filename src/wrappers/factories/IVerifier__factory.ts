@@ -18,7 +18,7 @@ const _abi = [
     anonymous: false,
     inputs: [
       {
-        indexed: false,
+        indexed: true,
         internalType: 'address',
         name: 'user',
         type: 'address',
@@ -30,7 +30,7 @@ const _abi = [
         type: 'bool',
       },
       {
-        indexed: false,
+        indexed: true,
         internalType: 'string',
         name: 'metadata',
         type: 'string',
@@ -43,7 +43,7 @@ const _abi = [
     anonymous: false,
     inputs: [
       {
-        indexed: false,
+        indexed: true,
         internalType: 'address',
         name: 'user',
         type: 'address',

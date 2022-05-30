@@ -9,7 +9,7 @@
 ### Enumeration members
 
 - [AaveYield](types_Types.StrategyType.md#aaveyield)
-- [CompounYield](types_Types.StrategyType.md#compounyield)
+- [CompoundYield](types_Types.StrategyType.md#CompoundYield)
 - [NoYield](types_Types.StrategyType.md#noyield)
 - [YearnYield](types_Types.StrategyType.md#yearnyield)
 
@@ -25,9 +25,9 @@
 
 ___
 
-### CompounYield
+### CompoundYield
 
-• **CompounYield** = `"CompoundYield"`
+• **CompoundYield** = `"CompoundYield"`
 
 #### Defined in
 

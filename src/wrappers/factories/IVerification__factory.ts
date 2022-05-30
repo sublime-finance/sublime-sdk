@@ -245,4 +245,23 @@ const _abi = [
     stateMutability: 'nonpayable',
     type: 'function',
   },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '_verifier',
+        type: 'address',
+      },
+    ],
+    name: 'verifiers',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: 'isValid',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
 ];

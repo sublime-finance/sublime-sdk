@@ -21,25 +21,23 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface SavingsAccountInterface extends ethers.utils.Interface {
   functions: {
+    'STRATEGY_REGISTRY()': FunctionFragment;
     'allowance(address,address,address)': FunctionFragment;
     'approve(address,address,uint256)': FunctionFragment;
     'balanceInShares(address,address,address)': FunctionFragment;
-    'burn(uint256,address,address)': FunctionFragment;
     'decreaseAllowance(address,address,uint256)': FunctionFragment;
     'deposit(address,address,address,uint256)': FunctionFragment;
     'getTotalTokens(address,address)': FunctionFragment;
     'increaseAllowance(address,address,uint256)': FunctionFragment;
-    'initialize(address,address)': FunctionFragment;
+    'initialize(address)': FunctionFragment;
     'owner()': FunctionFragment;
     'renounceOwnership()': FunctionFragment;
-    'strategyRegistry()': FunctionFragment;
     'switchStrategy(address,address,address,uint256)': FunctionFragment;
     'transfer(address,address,address,uint256)': FunctionFragment;
     'transferFrom(address,address,address,address,uint256)': FunctionFragment;
     'transferOwnership(address)': FunctionFragment;
-    'transferShares(uint256,address,address,address)': FunctionFragment;
-    'transferSharesFrom(uint256,address,address,address,address)': FunctionFragment;
-    'updateStrategyRegistry(address)': FunctionFragment;
+    'transferShares(address,address,address,uint256)': FunctionFragment;
+    'transferSharesFrom(address,address,address,address,uint256)': FunctionFragment;
     'withdraw(address,address,address,uint256,bool)': FunctionFragment;
     'withdrawAll(address,address)': FunctionFragment;
     'withdrawFrom(address,address,address,address,uint256,bool)': FunctionFragment;
@@ -47,35 +45,33 @@ interface SavingsAccountInterface extends ethers.utils.Interface {
     'withdrawSharesFrom(address,address,address,address,uint256,bool)': FunctionFragment;
   };
 
+  encodeFunctionData(functionFragment: 'STRATEGY_REGISTRY', values?: undefined): string;
   encodeFunctionData(functionFragment: 'allowance', values: [string, string, string]): string;
   encodeFunctionData(functionFragment: 'approve', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'balanceInShares', values: [string, string, string]): string;
-  encodeFunctionData(functionFragment: 'burn', values: [BigNumberish, string, string]): string;
   encodeFunctionData(functionFragment: 'decreaseAllowance', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'deposit', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getTotalTokens', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'increaseAllowance', values: [string, string, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'initialize', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'initialize', values: [string]): string;
   encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
   encodeFunctionData(functionFragment: 'renounceOwnership', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'strategyRegistry', values?: undefined): string;
   encodeFunctionData(functionFragment: 'switchStrategy', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'transfer', values: [string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'transferFrom', values: [string, string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'transferOwnership', values: [string]): string;
-  encodeFunctionData(functionFragment: 'transferShares', values: [BigNumberish, string, string, string]): string;
-  encodeFunctionData(functionFragment: 'transferSharesFrom', values: [BigNumberish, string, string, string, string]): string;
-  encodeFunctionData(functionFragment: 'updateStrategyRegistry', values: [string]): string;
+  encodeFunctionData(functionFragment: 'transferShares', values: [string, string, string, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'transferSharesFrom', values: [string, string, string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'withdraw', values: [string, string, string, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'withdrawAll', values: [string, string]): string;
   encodeFunctionData(functionFragment: 'withdrawFrom', values: [string, string, string, string, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'withdrawShares', values: [string, string, string, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'withdrawSharesFrom', values: [string, string, string, string, BigNumberish, boolean]): string;
 
+  decodeFunctionResult(functionFragment: 'STRATEGY_REGISTRY', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'allowance', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'approve', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'balanceInShares', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'burn', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'decreaseAllowance', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deposit', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getTotalTokens', data: BytesLike): Result;
@@ -83,14 +79,12 @@ interface SavingsAccountInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'owner', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'renounceOwnership', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'strategyRegistry', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'switchStrategy', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transfer', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferFrom', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferOwnership', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferShares', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferSharesFrom', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateStrategyRegistry', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdraw', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawAll', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawFrom', data: BytesLike): Result;
@@ -99,7 +93,6 @@ interface SavingsAccountInterface extends ethers.utils.Interface {
 
   events: {
     'Approved(address,address,address,uint256)': EventFragment;
-    'Burned(address,address,address,uint256)': EventFragment;
     'Deposited(address,uint256,address,address)': EventFragment;
     'OwnershipTransferred(address,address)': EventFragment;
     'StrategyRegistryUpdated(address)': EventFragment;
@@ -111,7 +104,6 @@ interface SavingsAccountInterface extends ethers.utils.Interface {
   };
 
   getEvent(nameOrSignatureOrTopic: 'Approved'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'Burned'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'Deposited'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'OwnershipTransferred'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'StrategyRegistryUpdated'): EventFragment;
@@ -166,6 +158,10 @@ export class SavingsAccount extends Contract {
   interface: SavingsAccountInterface;
 
   functions: {
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<[string]>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<[string]>;
+
     allowance(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'allowance(address,address,address)'(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -187,20 +183,6 @@ export class SavingsAccount extends Contract {
     balanceInShares(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'balanceInShares(address,address,address)'(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<[BigNumber]>;
-
-    burn(
-      _amount: BigNumberish,
-      _token: string,
-      _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'burn(uint256,address,address)'(
-      _amount: BigNumberish,
-      _token: string,
-      _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
 
     decreaseAllowance(
       _token: string,
@@ -258,17 +240,9 @@ export class SavingsAccount extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    initialize(
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    initialize(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'initialize(address,address)'(
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    'initialize(address)'(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     owner(overrides?: CallOverrides): Promise<[string]>;
 
@@ -277,10 +251,6 @@ export class SavingsAccount extends Contract {
     renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<[string]>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<[string]>;
 
     switchStrategy(
       _currentStrategy: string,
@@ -340,46 +310,36 @@ export class SavingsAccount extends Contract {
     ): Promise<ContractTransaction>;
 
     transferShares(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'transferShares(uint256,address,address,address)'(
-      _shares: BigNumberish,
+    'transferShares(address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     transferSharesFrom(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _from: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'transferSharesFrom(uint256,address,address,address,address)'(
-      _shares: BigNumberish,
+    'transferSharesFrom(address,address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _from: string,
       _to: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateStrategyRegistry(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -468,6 +428,10 @@ export class SavingsAccount extends Contract {
     ): Promise<ContractTransaction>;
   };
 
+  STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<string>;
+
+  'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<string>;
+
   allowance(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
 
   'allowance(address,address,address)'(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
@@ -489,20 +453,6 @@ export class SavingsAccount extends Contract {
   balanceInShares(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
 
   'balanceInShares(address,address,address)'(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-  burn(
-    _amount: BigNumberish,
-    _token: string,
-    _strategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'burn(uint256,address,address)'(
-    _amount: BigNumberish,
-    _token: string,
-    _strategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
 
   decreaseAllowance(
     _token: string,
@@ -556,17 +506,9 @@ export class SavingsAccount extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  initialize(
-    _owner: string,
-    _strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  initialize(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'initialize(address,address)'(
-    _owner: string,
-    _strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  'initialize(address)'(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   owner(overrides?: CallOverrides): Promise<string>;
 
@@ -575,10 +517,6 @@ export class SavingsAccount extends Contract {
   renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  strategyRegistry(overrides?: CallOverrides): Promise<string>;
-
-  'strategyRegistry()'(overrides?: CallOverrides): Promise<string>;
 
   switchStrategy(
     _currentStrategy: string,
@@ -635,46 +573,36 @@ export class SavingsAccount extends Contract {
   'transferOwnership(address)'(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   transferShares(
-    _shares: BigNumberish,
     _token: string,
     _strategy: string,
     _to: string,
+    _shares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'transferShares(uint256,address,address,address)'(
-    _shares: BigNumberish,
+  'transferShares(address,address,address,uint256)'(
     _token: string,
     _strategy: string,
     _to: string,
+    _shares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   transferSharesFrom(
-    _shares: BigNumberish,
     _token: string,
     _strategy: string,
     _from: string,
     _to: string,
+    _shares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'transferSharesFrom(uint256,address,address,address,address)'(
-    _shares: BigNumberish,
+  'transferSharesFrom(address,address,address,address,uint256)'(
     _token: string,
     _strategy: string,
     _from: string,
     _to: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateStrategyRegistry(
-    _strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  'updateStrategyRegistry(address)'(
-    _strategyRegistry: string,
+    _shares: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -763,6 +691,10 @@ export class SavingsAccount extends Contract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<string>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<string>;
+
     allowance(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     'allowance(address,address,address)'(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
@@ -774,15 +706,6 @@ export class SavingsAccount extends Contract {
     balanceInShares(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     'balanceInShares(address,address,address)'(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    burn(_amount: BigNumberish, _token: string, _strategy: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    'burn(uint256,address,address)'(
-      _amount: BigNumberish,
-      _token: string,
-      _strategy: string,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
 
     decreaseAllowance(_token: string, _to: string, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
@@ -816,9 +739,9 @@ export class SavingsAccount extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
-    initialize(_owner: string, _strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
+    initialize(_owner: string, overrides?: CallOverrides): Promise<void>;
 
-    'initialize(address,address)'(_owner: string, _strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
+    'initialize(address)'(_owner: string, overrides?: CallOverrides): Promise<void>;
 
     owner(overrides?: CallOverrides): Promise<string>;
 
@@ -827,10 +750,6 @@ export class SavingsAccount extends Contract {
     renounceOwnership(overrides?: CallOverrides): Promise<void>;
 
     'renounceOwnership()'(overrides?: CallOverrides): Promise<void>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<string>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<string>;
 
     switchStrategy(
       _currentStrategy: string,
@@ -880,37 +799,33 @@ export class SavingsAccount extends Contract {
 
     'transferOwnership(address)'(newOwner: string, overrides?: CallOverrides): Promise<void>;
 
-    transferShares(_shares: BigNumberish, _token: string, _strategy: string, _to: string, overrides?: CallOverrides): Promise<BigNumber>;
+    transferShares(_token: string, _strategy: string, _to: string, _shares: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'transferShares(uint256,address,address,address)'(
-      _shares: BigNumberish,
+    'transferShares(address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     transferSharesFrom(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _from: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    'transferSharesFrom(uint256,address,address,address,address)'(
-      _shares: BigNumberish,
+    'transferSharesFrom(address,address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _from: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
-
-    updateStrategyRegistry(_strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateStrategyRegistry(address)'(_strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
 
     withdraw(
       _token: string,
@@ -1000,13 +915,6 @@ export class SavingsAccount extends Contract {
       to: string | null,
       amount: null
     ): TypedEventFilter<[string, string, string, BigNumber], { token: string; from: string; to: string; amount: BigNumber }>;
-
-    Burned(
-      token: string | null,
-      strategy: null,
-      from: string | null,
-      amount: null
-    ): TypedEventFilter<[string, string, string, BigNumber], { token: string; strategy: string; from: string; amount: BigNumber }>;
 
     Deposited(
       user: string | null,
@@ -1110,6 +1018,10 @@ export class SavingsAccount extends Contract {
   };
 
   estimateGas: {
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<BigNumber>;
+
     allowance(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     'allowance(address,address,address)'(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
@@ -1131,20 +1043,6 @@ export class SavingsAccount extends Contract {
     balanceInShares(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     'balanceInShares(address,address,address)'(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    burn(
-      _amount: BigNumberish,
-      _token: string,
-      _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    'burn(uint256,address,address)'(
-      _amount: BigNumberish,
-      _token: string,
-      _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
 
     decreaseAllowance(
       _token: string,
@@ -1198,13 +1096,9 @@ export class SavingsAccount extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    initialize(_owner: string, _strategyRegistry: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    initialize(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'initialize(address,address)'(
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
+    'initialize(address)'(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1213,10 +1107,6 @@ export class SavingsAccount extends Contract {
     renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     switchStrategy(
       _currentStrategy: string,
@@ -1273,43 +1163,36 @@ export class SavingsAccount extends Contract {
     'transferOwnership(address)'(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     transferShares(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'transferShares(uint256,address,address,address)'(
-      _shares: BigNumberish,
+    'transferShares(address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     transferSharesFrom(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _from: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'transferSharesFrom(uint256,address,address,address,address)'(
-      _shares: BigNumberish,
+    'transferSharesFrom(address,address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _from: string,
       _to: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    updateStrategyRegistry(_strategyRegistry: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -1399,6 +1282,10 @@ export class SavingsAccount extends Contract {
   };
 
   populateTransaction: {
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     allowance(arg0: string, arg1: string, arg2: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'allowance(address,address,address)'(
@@ -1429,20 +1316,6 @@ export class SavingsAccount extends Contract {
       arg1: string,
       arg2: string,
       overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    burn(
-      _amount: BigNumberish,
-      _token: string,
-      _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'burn(uint256,address,address)'(
-      _amount: BigNumberish,
-      _token: string,
-      _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     decreaseAllowance(
@@ -1501,17 +1374,9 @@ export class SavingsAccount extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    initialize(
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
+    initialize(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'initialize(address,address)'(
-      _owner: string,
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
+    'initialize(address)'(_owner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -1520,10 +1385,6 @@ export class SavingsAccount extends Contract {
     renounceOwnership(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'renounceOwnership()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     switchStrategy(
       _currentStrategy: string,
@@ -1583,46 +1444,36 @@ export class SavingsAccount extends Contract {
     ): Promise<PopulatedTransaction>;
 
     transferShares(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'transferShares(uint256,address,address,address)'(
-      _shares: BigNumberish,
+    'transferShares(address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     transferSharesFrom(
-      _shares: BigNumberish,
       _token: string,
       _strategy: string,
       _from: string,
       _to: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'transferSharesFrom(uint256,address,address,address,address)'(
-      _shares: BigNumberish,
+    'transferSharesFrom(address,address,address,address,uint256)'(
       _token: string,
       _strategy: string,
       _from: string,
       _to: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateStrategyRegistry(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
+      _shares: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

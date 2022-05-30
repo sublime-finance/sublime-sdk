@@ -47,7 +47,7 @@ export class SavingAccountsEthUtils {
     let strategyAddress: string;
     if (strategy == StrategyType.NoYield) {
       strategyAddress = this.config.noStrategyAddress;
-    } else if (strategy == StrategyType.CompounYield) {
+    } else if (strategy == StrategyType.CompoundYield) {
       strategyAddress = this.config.compoundStrategyContractAddress;
     } else {
       strategyAddress = this.config.yearnStrategyContractAddress;

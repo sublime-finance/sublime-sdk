@@ -28,7 +28,7 @@ interface StrategyRegistryInterface extends ethers.utils.Interface {
     'maxStrategies()': FunctionFragment;
     'owner()': FunctionFragment;
     'registry(address)': FunctionFragment;
-    'removeStrategy(uint256)': FunctionFragment;
+    'removeStrategy(uint256,address)': FunctionFragment;
     'renounceOwnership()': FunctionFragment;
     'retiredRegistry(address)': FunctionFragment;
     'strategies(uint256)': FunctionFragment;
@@ -44,7 +44,7 @@ interface StrategyRegistryInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'maxStrategies', values?: undefined): string;
   encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
   encodeFunctionData(functionFragment: 'registry', values: [string]): string;
-  encodeFunctionData(functionFragment: 'removeStrategy', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'removeStrategy', values: [BigNumberish, string]): string;
   encodeFunctionData(functionFragment: 'renounceOwnership', values?: undefined): string;
   encodeFunctionData(functionFragment: 'retiredRegistry', values: [string]): string;
   encodeFunctionData(functionFragment: 'strategies', values: [BigNumberish]): string;
@@ -160,10 +160,15 @@ export class StrategyRegistry extends Contract {
 
     'registry(address)'(arg0: string, overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    removeStrategy(_strategyIndex: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'removeStrategy(uint256)'(
+    removeStrategy(
       _strategyIndex: BigNumberish,
+      _strategyAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'removeStrategy(uint256,address)'(
+      _strategyIndex: BigNumberish,
+      _strategyAddress: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -247,10 +252,15 @@ export class StrategyRegistry extends Contract {
 
   'registry(address)'(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-  removeStrategy(_strategyIndex: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'removeStrategy(uint256)'(
+  removeStrategy(
     _strategyIndex: BigNumberish,
+    _strategyAddress: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'removeStrategy(uint256,address)'(
+    _strategyIndex: BigNumberish,
+    _strategyAddress: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -323,9 +333,9 @@ export class StrategyRegistry extends Contract {
 
     'registry(address)'(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    removeStrategy(_strategyIndex: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    removeStrategy(_strategyIndex: BigNumberish, _strategyAddress: string, overrides?: CallOverrides): Promise<void>;
 
-    'removeStrategy(uint256)'(_strategyIndex: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    'removeStrategy(uint256,address)'(_strategyIndex: BigNumberish, _strategyAddress: string, overrides?: CallOverrides): Promise<void>;
 
     renounceOwnership(overrides?: CallOverrides): Promise<void>;
 
@@ -407,10 +417,15 @@ export class StrategyRegistry extends Contract {
 
     'registry(address)'(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    removeStrategy(_strategyIndex: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'removeStrategy(uint256)'(
+    removeStrategy(
       _strategyIndex: BigNumberish,
+      _strategyAddress: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    'removeStrategy(uint256,address)'(
+      _strategyIndex: BigNumberish,
+      _strategyAddress: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -491,11 +506,13 @@ export class StrategyRegistry extends Contract {
 
     removeStrategy(
       _strategyIndex: BigNumberish,
+      _strategyAddress: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'removeStrategy(uint256)'(
+    'removeStrategy(uint256,address)'(
       _strategyIndex: BigNumberish,
+      _strategyAddress: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

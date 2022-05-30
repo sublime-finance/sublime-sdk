@@ -27,6 +27,7 @@ interface PriceOracleTestsInterface extends ethers.utils.Interface {
     'test_deployments()': FunctionFragment;
     'test_getChainlinkLatestPrice()': FunctionFragment;
     'test_getChainlinkLatestPriceWithArgs(address,address)': FunctionFragment;
+    'test_setUniswapPriceAveragingPeriod()': FunctionFragment;
     'test_should_fetch_latestPrice_from_chainlink()': FunctionFragment;
     'test_should_fetch_latestPrice_from_uniswap()': FunctionFragment;
     'test_uniswapPrice(address,address)': FunctionFragment;
@@ -39,6 +40,7 @@ interface PriceOracleTestsInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'test_deployments', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_getChainlinkLatestPrice', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_getChainlinkLatestPriceWithArgs', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'test_setUniswapPriceAveragingPeriod', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_should_fetch_latestPrice_from_chainlink', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_should_fetch_latestPrice_from_uniswap', values?: undefined): string;
   encodeFunctionData(functionFragment: 'test_uniswapPrice', values: [string, string]): string;
@@ -50,6 +52,7 @@ interface PriceOracleTestsInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'test_deployments', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_getChainlinkLatestPrice', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_getChainlinkLatestPriceWithArgs', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'test_setUniswapPriceAveragingPeriod', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_should_fetch_latestPrice_from_chainlink', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_should_fetch_latestPrice_from_uniswap', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'test_uniswapPrice', data: BytesLike): Result;
@@ -168,6 +171,10 @@ export class PriceOracleTests extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    test_setUniswapPriceAveragingPeriod(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'test_setUniswapPriceAveragingPeriod()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
     test_should_fetch_latestPrice_from_chainlink(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'test_should_fetch_latestPrice_from_chainlink()'(
@@ -225,6 +232,10 @@ export class PriceOracleTests extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  test_setUniswapPriceAveragingPeriod(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'test_setUniswapPriceAveragingPeriod()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
   test_should_fetch_latestPrice_from_chainlink(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'test_should_fetch_latestPrice_from_chainlink()'(
@@ -271,6 +282,10 @@ export class PriceOracleTests extends Contract {
     test_getChainlinkLatestPriceWithArgs(num: string, den: string, overrides?: CallOverrides): Promise<void>;
 
     'test_getChainlinkLatestPriceWithArgs(address,address)'(num: string, den: string, overrides?: CallOverrides): Promise<void>;
+
+    test_setUniswapPriceAveragingPeriod(overrides?: CallOverrides): Promise<void>;
+
+    'test_setUniswapPriceAveragingPeriod()'(overrides?: CallOverrides): Promise<void>;
 
     test_should_fetch_latestPrice_from_chainlink(overrides?: CallOverrides): Promise<void>;
 
@@ -364,6 +379,10 @@ export class PriceOracleTests extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
+    test_setUniswapPriceAveragingPeriod(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'test_setUniswapPriceAveragingPeriod()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
     test_should_fetch_latestPrice_from_chainlink(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'test_should_fetch_latestPrice_from_chainlink()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
@@ -417,6 +436,10 @@ export class PriceOracleTests extends Contract {
       den: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    test_setUniswapPriceAveragingPeriod(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'test_setUniswapPriceAveragingPeriod()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     test_should_fetch_latestPrice_from_chainlink(
       overrides?: Overrides & { from?: string | Promise<string> }

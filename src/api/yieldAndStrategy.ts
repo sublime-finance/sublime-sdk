@@ -12,11 +12,29 @@ import { TokenManager } from '../tokenManager';
  * @class YieldAndStrategyApi
  */
 export class YieldAndStrategyApi {
+  /**
+   * @description Signer Object
+   */
   private signer: Signer;
-  config: SublimeConfig;
+
+  /**
+   * @description Internal store for all sublime contracts addresses
+   */
+  private config: SublimeConfig;
+
+  /**
+   * @description Object to update and fetch token meta data
+   */
   private tokenManager: TokenManager;
 
+  /**
+   * @description Display names of all strategies
+   */
   private displayName: Record<string, string> = {};
+
+  /**
+   * @description Logo for all strategies
+   */
   private logo: Record<string, string> = {};
 
   constructor(signer: Signer, config: SublimeConfig, tokenManger: TokenManager) {
@@ -31,19 +49,19 @@ export class YieldAndStrategyApi {
   }
 
   /**
-   * @description Returns the number of tokens that will be redeemed for given number of shares
-   * @param yieldAddress
-   * @param asset
-   * @param shares
-   * @param sharesInLowestUnits
-   * @returns
+   * @param yieldType Type of yield/strategy
+   * @param asset Address of the asset/token
+   * @param shares Number of shares
+   * @param sharesInLowestUnits If true, token decimals for shares are ignored
+   * @returns Total number of underlying tokens for a given asset and strategy
    */
   public async getTokensForShares(
-    yieldAddress: string,
+    yieldType: StrategyType,
     asset: string,
     shares: BigNumber,
     sharesInLowestUnits?: boolean
   ): Promise<BigNumber> {
+    const yieldAddress = this.getStrategyAddress(yieldType);
     const yieldContract: IYield = IYield__factory.connect(yieldAddress, this.signer);
 
     await this.tokenManager.updateTokenDecimals(asset);
@@ -69,13 +87,13 @@ export class YieldAndStrategyApi {
   }
 
   /**
-   * @description returns the number shares that will be generated for given number of tokens
-   * @param yieldAddress
-   * @param asset
-   * @param amount
-   * @returns
+   * @param yieldType Type of yield/strategy
+   * @param asset Address of the asset/token
+   * @param amount Number of tokens
+   * @returns Number of shares that will be generated for given number of tokens and strategy
    */
-  public async getSharesForTokens(yieldAddress: string, asset: string, amount: string): Promise<string> {
+  public async getSharesForTokens(yieldType: StrategyType, asset: string, amount: string): Promise<string> {
+    const yieldAddress = this.getStrategyAddress(yieldType);
     const yieldContract: IYield = IYield__factory.connect(yieldAddress, this.signer);
     const liquiditySharesAddress: string = await yieldContract.liquidityToken(asset);
 
@@ -97,7 +115,7 @@ export class YieldAndStrategyApi {
   }
 
   /**
-   * @description returns strategies supported sublime-sdk
+   * @description returns all strategies supported sublime-sdk
    * @returns
    */
   public getStrategies(): Strategy[] {
@@ -110,7 +128,7 @@ export class YieldAndStrategyApi {
       },
       {
         address: this.config.compoundStrategyContractAddress,
-        type: StrategyType.CompounYield,
+        type: StrategyType.CompoundYield,
         displayName: this.displayName[this.config.compoundStrategyContractAddress.toLowerCase()],
         logo: this.logo[this.config.compoundStrategyContractAddress.toLowerCase()],
       },
@@ -125,7 +143,7 @@ export class YieldAndStrategyApi {
   public getStrategyAddress(strategy: StrategyType): string | undefined {
     if (strategy == StrategyType.NoYield) {
       return this.config.noStrategyAddress;
-    } else if (strategy == StrategyType.CompounYield) {
+    } else if (strategy == StrategyType.CompoundYield) {
       return this.config.compoundStrategyContractAddress;
     } else {
       return undefined;
@@ -145,12 +163,16 @@ export class YieldAndStrategyApi {
     if (address == this.config.noStrategyAddress.toLowerCase()) {
       return StrategyType.NoYield;
     } else if (address == this.config.compoundStrategyContractAddress.toLowerCase()) {
-      return StrategyType.CompounYield;
+      return StrategyType.CompoundYield;
     } else {
       return undefined;
     }
   }
 
+  /**
+   * @param address yield/strategy address
+   * @returns URL of the strategy logo
+   */
   public getStrategyLogo(address: string): string | undefined {
     if (!address) {
       return undefined;
@@ -160,6 +182,10 @@ export class YieldAndStrategyApi {
     return this.logo[address];
   }
 
+  /**
+   * @param address yield/strategy address
+   * @returns Display Name/Info for the strategy
+   */
   public getStrategyDisplayName(address: string): string | undefined {
     if (!address) {
       return undefined;

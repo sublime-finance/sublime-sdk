@@ -21,14 +21,11 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface HevmInterface extends ethers.utils.Interface {
   functions: {
-    'store(address,bytes32,bytes32)': FunctionFragment;
     'warp(uint256)': FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: 'store', values: [string, BytesLike, BytesLike]): string;
   encodeFunctionData(functionFragment: 'warp', values: [BigNumberish]): string;
 
-  decodeFunctionResult(functionFragment: 'store', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'warp', data: BytesLike): Result;
 
   events: {};
@@ -78,87 +75,32 @@ export class Hevm extends Contract {
   interface: HevmInterface;
 
   functions: {
-    store(
-      arg0: string,
-      arg1: BytesLike,
-      arg2: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    warp(x: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'store(address,bytes32,bytes32)'(
-      arg0: string,
-      arg1: BytesLike,
-      arg2: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    warp(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'warp(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'warp(uint256)'(x: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
   };
 
-  store(
-    arg0: string,
-    arg1: BytesLike,
-    arg2: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  warp(x: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'store(address,bytes32,bytes32)'(
-    arg0: string,
-    arg1: BytesLike,
-    arg2: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  warp(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'warp(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'warp(uint256)'(x: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   callStatic: {
-    store(arg0: string, arg1: BytesLike, arg2: BytesLike, overrides?: CallOverrides): Promise<void>;
+    warp(x: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'store(address,bytes32,bytes32)'(arg0: string, arg1: BytesLike, arg2: BytesLike, overrides?: CallOverrides): Promise<void>;
-
-    warp(arg0: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    'warp(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    'warp(uint256)'(x: BigNumberish, overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {};
 
   estimateGas: {
-    store(arg0: string, arg1: BytesLike, arg2: BytesLike, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    warp(x: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'store(address,bytes32,bytes32)'(
-      arg0: string,
-      arg1: BytesLike,
-      arg2: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    warp(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'warp(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'warp(uint256)'(x: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    store(
-      arg0: string,
-      arg1: BytesLike,
-      arg2: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
+    warp(x: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'store(address,bytes32,bytes32)'(
-      arg0: string,
-      arg1: BytesLike,
-      arg2: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    warp(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'warp(uint256)'(arg0: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'warp(uint256)'(x: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
   };
 }

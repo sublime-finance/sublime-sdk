@@ -21,6 +21,9 @@ import { TokenManager } from '../tokenManager';
 import { Options as Overrides } from '../types/Types';
 import { PoolEthUtils } from './utils/poolEthUtils';
 
+/**
+ * @todo Pools are not let released
+ */
 export class PoolApi {
   private signer: Signer;
   private config: SublimeConfig;

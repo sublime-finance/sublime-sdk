@@ -16,9 +16,24 @@ import { CreditLineEthUtils } from './utils/creditLineEthUtils';
  * @class CreditLineApi
  */
 export class CreditLineApi {
+  /**
+   * @description Instance of credit line contract
+   */
   private creditLineContract: CreditLine;
+
+  /**
+   * @description Instance to fetch and token metadata
+   */
   private tokenManager: TokenManager;
+
+  /**
+   * @description All sublime contract addresses
+   */
   private config: SublimeConfig;
+
+  /**
+   * @description Signer Object
+   */
   private signer: Signer;
 
   constructor(signer: Signer, config: SublimeConfig, tokenManager: TokenManager) {
@@ -59,11 +74,20 @@ export class CreditLineApi {
       throw new Error('collateralRatio should be a valid number');
     }
 
-    let strategyAddress: string;
-    if (request.strategyType == StrategyType.NoYield) {
-      strategyAddress = this.config.noStrategyAddress;
-    } else if (request.strategyType == StrategyType.CompounYield) {
-      strategyAddress = this.config.compoundStrategyContractAddress;
+    let borrowStrategy: string;
+    if (request.borrowAssetStrategy == StrategyType.NoYield) {
+      borrowStrategy = this.config.noStrategyAddress;
+    } else if (request.borrowAssetStrategy == StrategyType.CompoundYield) {
+      borrowStrategy = this.config.compoundStrategyContractAddress;
+    } else {
+      throw new Error('Unsupported strategy');
+    }
+
+    let collateralStrategy: string;
+    if (request.collateralAssetStrategy == StrategyType.NoYield) {
+      collateralStrategy = this.config.noStrategyAddress;
+    } else if (request.collateralAssetStrategy == StrategyType.CompoundYield) {
+      collateralStrategy = this.config.compoundStrategyContractAddress;
     } else {
       throw new Error('Unsupported strategy');
     }
@@ -76,7 +100,8 @@ export class CreditLineApi {
       collateralRatio.multipliedBy(new BigNumber(10).pow(16)).toFixed(0),
       request.borrowAsset,
       request.collateralAsset,
-      strategyAddress,
+      borrowStrategy,
+      collateralStrategy,
       false,
       { ...options }
     );
@@ -104,11 +129,20 @@ export class CreditLineApi {
       throw new Error('collateralRatio should be a valid number');
     }
 
-    let strategyAddress: string;
-    if (request.strategyType == StrategyType.NoYield) {
-      strategyAddress = this.config.noStrategyAddress;
-    } else if (request.strategyType == StrategyType.CompounYield) {
-      strategyAddress = this.config.compoundStrategyContractAddress;
+    let borrowStrategy: string;
+    if (request.borrowAssetStrategy == StrategyType.NoYield) {
+      borrowStrategy = this.config.noStrategyAddress;
+    } else if (request.borrowAssetStrategy == StrategyType.CompoundYield) {
+      borrowStrategy = this.config.compoundStrategyContractAddress;
+    } else {
+      throw new Error('Unsupported strategy');
+    }
+
+    let collateralStrategy: string;
+    if (request.collateralAssetStrategy == StrategyType.NoYield) {
+      collateralStrategy = this.config.noStrategyAddress;
+    } else if (request.collateralAssetStrategy == StrategyType.CompoundYield) {
+      collateralStrategy = this.config.compoundStrategyContractAddress;
     } else {
       throw new Error('Unsupported strategy');
     }
@@ -121,7 +155,8 @@ export class CreditLineApi {
       collateralRatio.multipliedBy(new BigNumber(10).pow(16)).toFixed(0),
       request.borrowAsset,
       request.collateralAsset,
-      strategyAddress,
+      borrowStrategy,
+      collateralStrategy,
       true,
       { ...options }
     );
@@ -165,9 +200,9 @@ export class CreditLineApi {
     } catch (ex) {}
     const borrowAsset: string = await (await this.creditLineContract.creditLineConstants(creditLineNumber)).borrowAsset;
     await this.tokenManager.updateTokenDecimals(borrowAsset);
-    const borrowDecimal: BigNumberish = this.tokenManager.getTokenDecimals(borrowAsset);
+    const decimals = this.tokenManager.getTokenDecimals(borrowAsset);
 
-    return { value: _value.toString(), decimals: borrowDecimal };
+    return { value: _value.toString(), decimals };
   }
   /**
    * @description Calculate the total amount that can be borrowed from the credit line
@@ -200,9 +235,9 @@ export class CreditLineApi {
    * @param creditLineNumber
    * @returns collateral ratio (easy readable)
    */
-  public async calculateCurrentCollateralRatio(creditLineNumber: BigNumberish): Promise<string> {
+  public async calculateCurrentCollateralRatio(creditLineNumber: BigNumberish): Promise<Balance> {
     const [_value]: BigNumberish[] = await this.creditLineContract.callStatic.calculateCurrentCollateralRatio(creditLineNumber);
-    return new BigNumber(_value.toString()).div(new BigNumber(10).div(16)).toFixed(2);
+    return { value: _value.toString(), decimals: 18 };
   }
 
   /**

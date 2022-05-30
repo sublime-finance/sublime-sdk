@@ -21,7 +21,9 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface TwitterVerifierInterface extends ethers.utils.Interface {
   functions: {
-    'initialize(address,address,address,uint256,string,string)': FunctionFragment;
+    'VERIFICATION()': FunctionFragment;
+    'blackListDigest(bytes32)': FunctionFragment;
+    'initialize(address,address,uint256,string,string)': FunctionFragment;
     'owner()': FunctionFragment;
     'registerSelf(bool,uint8,bytes32,bytes32,string,string,uint256)': FunctionFragment;
     'renounceOwnership()': FunctionFragment;
@@ -33,12 +35,13 @@ interface TwitterVerifierInterface extends ethers.utils.Interface {
     'unregisterUser(address)': FunctionFragment;
     'updateSignValidity(uint256)': FunctionFragment;
     'updateSignerAddress(address)': FunctionFragment;
-    'updateVerification(address)': FunctionFragment;
+    'usedTweetIds(string)': FunctionFragment;
     'userData(address)': FunctionFragment;
-    'verification()': FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: 'initialize', values: [string, string, string, BigNumberish, string, string]): string;
+  encodeFunctionData(functionFragment: 'VERIFICATION', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'blackListDigest', values: [BytesLike]): string;
+  encodeFunctionData(functionFragment: 'initialize', values: [string, string, BigNumberish, string, string]): string;
   encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
   encodeFunctionData(
     functionFragment: 'registerSelf',
@@ -53,10 +56,11 @@ interface TwitterVerifierInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'unregisterUser', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateSignValidity', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateSignerAddress', values: [string]): string;
-  encodeFunctionData(functionFragment: 'updateVerification', values: [string]): string;
+  encodeFunctionData(functionFragment: 'usedTweetIds', values: [string]): string;
   encodeFunctionData(functionFragment: 'userData', values: [string]): string;
-  encodeFunctionData(functionFragment: 'verification', values?: undefined): string;
 
+  decodeFunctionResult(functionFragment: 'VERIFICATION', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'blackListDigest', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'owner', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'registerSelf', data: BytesLike): Result;
@@ -69,9 +73,8 @@ interface TwitterVerifierInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'unregisterUser', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateSignValidity', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateSignerAddress', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateVerification', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'usedTweetIds', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'userData', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'verification', data: BytesLike): Result;
 
   events: {
     'OwnershipTransferred(address,address)': EventFragment;
@@ -79,7 +82,6 @@ interface TwitterVerifierInterface extends ethers.utils.Interface {
     'SignerUpdated(address)': EventFragment;
     'UserRegistered(address,bool,string)': EventFragment;
     'UserUnregistered(address)': EventFragment;
-    'VerificationUpdated(address)': EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: 'OwnershipTransferred'): EventFragment;
@@ -87,7 +89,6 @@ interface TwitterVerifierInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: 'SignerUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'UserRegistered'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'UserUnregistered'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'VerificationUpdated'): EventFragment;
 }
 
 export class TwitterVerifier extends Contract {
@@ -134,9 +135,16 @@ export class TwitterVerifier extends Contract {
   interface: TwitterVerifierInterface;
 
   functions: {
+    VERIFICATION(overrides?: CallOverrides): Promise<[string]>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<[string]>;
+
+    blackListDigest(_hash: BytesLike, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'blackListDigest(bytes32)'(_hash: BytesLike, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
     initialize(
       _admin: string,
-      _verification: string,
       _signerAddress: string,
       _signValidity: BigNumberish,
       _name: string,
@@ -144,9 +152,8 @@ export class TwitterVerifier extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'initialize(address,address,address,uint256,string,string)'(
+    'initialize(address,address,uint256,string,string)'(
       _admin: string,
-      _verification: string,
       _signerAddress: string,
       _signValidity: BigNumberish,
       _name: string,
@@ -228,25 +235,25 @@ export class TwitterVerifier extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateVerification(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    usedTweetIds(arg0: string, overrides?: CallOverrides): Promise<[string]>;
 
-    'updateVerification(address)'(
-      _verification: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    'usedTweetIds(string)'(arg0: string, overrides?: CallOverrides): Promise<[string]>;
 
     userData(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
 
     'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
-
-    verification(overrides?: CallOverrides): Promise<[string]>;
-
-    'verification()'(overrides?: CallOverrides): Promise<[string]>;
   };
+
+  VERIFICATION(overrides?: CallOverrides): Promise<string>;
+
+  'VERIFICATION()'(overrides?: CallOverrides): Promise<string>;
+
+  blackListDigest(_hash: BytesLike, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'blackListDigest(bytes32)'(_hash: BytesLike, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   initialize(
     _admin: string,
-    _verification: string,
     _signerAddress: string,
     _signValidity: BigNumberish,
     _name: string,
@@ -254,9 +261,8 @@ export class TwitterVerifier extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'initialize(address,address,address,uint256,string,string)'(
+  'initialize(address,address,uint256,string,string)'(
     _admin: string,
-    _verification: string,
     _signerAddress: string,
     _signValidity: BigNumberish,
     _name: string,
@@ -335,25 +341,25 @@ export class TwitterVerifier extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateVerification(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  usedTweetIds(arg0: string, overrides?: CallOverrides): Promise<string>;
 
-  'updateVerification(address)'(
-    _verification: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  'usedTweetIds(string)'(arg0: string, overrides?: CallOverrides): Promise<string>;
 
   userData(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
 
   'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
 
-  verification(overrides?: CallOverrides): Promise<string>;
-
-  'verification()'(overrides?: CallOverrides): Promise<string>;
-
   callStatic: {
+    VERIFICATION(overrides?: CallOverrides): Promise<string>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<string>;
+
+    blackListDigest(_hash: BytesLike, overrides?: CallOverrides): Promise<void>;
+
+    'blackListDigest(bytes32)'(_hash: BytesLike, overrides?: CallOverrides): Promise<void>;
+
     initialize(
       _admin: string,
-      _verification: string,
       _signerAddress: string,
       _signValidity: BigNumberish,
       _name: string,
@@ -361,9 +367,8 @@ export class TwitterVerifier extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
-    'initialize(address,address,address,uint256,string,string)'(
+    'initialize(address,address,uint256,string,string)'(
       _admin: string,
-      _verification: string,
       _signerAddress: string,
       _signValidity: BigNumberish,
       _name: string,
@@ -433,17 +438,13 @@ export class TwitterVerifier extends Contract {
 
     'updateSignerAddress(address)'(_signerAddress: string, overrides?: CallOverrides): Promise<void>;
 
-    updateVerification(_verification: string, overrides?: CallOverrides): Promise<void>;
+    usedTweetIds(arg0: string, overrides?: CallOverrides): Promise<string>;
 
-    'updateVerification(address)'(_verification: string, overrides?: CallOverrides): Promise<void>;
+    'usedTweetIds(string)'(arg0: string, overrides?: CallOverrides): Promise<string>;
 
     userData(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
 
     'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<[string, string] & { twitterId: string; tweetId: string }>;
-
-    verification(overrides?: CallOverrides): Promise<string>;
-
-    'verification()'(overrides?: CallOverrides): Promise<string>;
   };
 
   filters: {
@@ -457,20 +458,25 @@ export class TwitterVerifier extends Contract {
     SignerUpdated(signerAddress: string | null): TypedEventFilter<[string], { signerAddress: string }>;
 
     UserRegistered(
-      user: null,
+      user: string | null,
       isMasterLinked: null,
-      metadata: null
+      metadata: string | null
     ): TypedEventFilter<[string, boolean, string], { user: string; isMasterLinked: boolean; metadata: string }>;
 
-    UserUnregistered(user: null): TypedEventFilter<[string], { user: string }>;
-
-    VerificationUpdated(verification: string | null): TypedEventFilter<[string], { verification: string }>;
+    UserUnregistered(user: string | null): TypedEventFilter<[string], { user: string }>;
   };
 
   estimateGas: {
+    VERIFICATION(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    blackListDigest(_hash: BytesLike, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'blackListDigest(bytes32)'(_hash: BytesLike, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
     initialize(
       _admin: string,
-      _verification: string,
       _signerAddress: string,
       _signValidity: BigNumberish,
       _name: string,
@@ -478,9 +484,8 @@ export class TwitterVerifier extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'initialize(address,address,address,uint256,string,string)'(
+    'initialize(address,address,uint256,string,string)'(
       _admin: string,
-      _verification: string,
       _signerAddress: string,
       _signValidity: BigNumberish,
       _name: string,
@@ -553,23 +558,29 @@ export class TwitterVerifier extends Contract {
 
     'updateSignerAddress(address)'(_signerAddress: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    updateVerification(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    usedTweetIds(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'updateVerification(address)'(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'usedTweetIds(string)'(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     userData(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    verification(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'verification()'(overrides?: CallOverrides): Promise<BigNumber>;
   };
 
   populateTransaction: {
+    VERIFICATION(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    blackListDigest(_hash: BytesLike, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'blackListDigest(bytes32)'(
+      _hash: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
     initialize(
       _admin: string,
-      _verification: string,
       _signerAddress: string,
       _signValidity: BigNumberish,
       _name: string,
@@ -577,9 +588,8 @@ export class TwitterVerifier extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'initialize(address,address,address,uint256,string,string)'(
+    'initialize(address,address,uint256,string,string)'(
       _admin: string,
-      _verification: string,
       _signerAddress: string,
       _signValidity: BigNumberish,
       _name: string,
@@ -661,19 +671,12 @@ export class TwitterVerifier extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateVerification(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    usedTweetIds(arg0: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    'updateVerification(address)'(
-      _verification: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
+    'usedTweetIds(string)'(arg0: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     userData(arg0: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'userData(address)'(arg0: string, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    verification(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'verification()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
   };
 }

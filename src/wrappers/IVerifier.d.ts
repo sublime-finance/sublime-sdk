@@ -69,12 +69,12 @@ export class IVerifier extends Contract {
 
   filters: {
     UserRegistered(
-      user: null,
+      user: string | null,
       isMasterLinked: null,
-      metadata: null
+      metadata: string | null
     ): TypedEventFilter<[string, boolean, string], { user: string; isMasterLinked: boolean; metadata: string }>;
 
-    UserUnregistered(user: null): TypedEventFilter<[string], { user: string }>;
+    UserUnregistered(user: string | null): TypedEventFilter<[string], { user: string }>;
   };
 
   estimateGas: {};

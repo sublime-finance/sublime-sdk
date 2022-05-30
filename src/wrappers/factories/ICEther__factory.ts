@@ -28,24 +28,6 @@ const _abi = [
     type: 'function',
   },
   {
-    inputs: [
-      {
-        internalType: 'address',
-        name: 'borrower',
-        type: 'address',
-      },
-      {
-        internalType: 'address',
-        name: 'cTokenCollateral',
-        type: 'address',
-      },
-    ],
-    name: 'liquidateBorrow',
-    outputs: [],
-    stateMutability: 'payable',
-    type: 'function',
-  },
-  {
     inputs: [],
     name: 'mint',
     outputs: [],
@@ -53,23 +35,22 @@ const _abi = [
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'repayBorrow',
-    outputs: [],
-    stateMutability: 'payable',
-    type: 'function',
-  },
-  {
     inputs: [
       {
-        internalType: 'address',
-        name: 'borrower',
-        type: 'address',
+        internalType: 'uint256',
+        name: 'redeemTokens',
+        type: 'uint256',
       },
     ],
-    name: 'repayBorrowBehalf',
-    outputs: [],
-    stateMutability: 'payable',
+    name: 'redeem',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
     type: 'function',
   },
 ];

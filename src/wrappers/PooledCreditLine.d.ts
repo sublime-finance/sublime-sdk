@@ -21,6 +21,12 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 
 interface PooledCreditLineInterface extends ethers.utils.Interface {
   functions: {
+    'LENDER_POOL()': FunctionFragment;
+    'PRICE_ORACLE()': FunctionFragment;
+    'SAVINGS_ACCOUNT()': FunctionFragment;
+    'STRATEGY_REGISTRY()': FunctionFragment;
+    'USDC()': FunctionFragment;
+    'VERIFICATION()': FunctionFragment;
     'accept(uint256,uint256)': FunctionFragment;
     'borrow(uint256,uint256)': FunctionFragment;
     'calculateBorrowableAmount(uint256)': FunctionFragment;
@@ -29,28 +35,29 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
     'calculateInterestAccrued(uint256)': FunctionFragment;
     'calculateTotalCollateralTokens(uint256)': FunctionFragment;
     'cancelRequest(uint256)': FunctionFragment;
+    'cancelRequestOnLowCollection(uint256)': FunctionFragment;
+    'cancelRequestOnRequestedStateAtEnd(uint256)': FunctionFragment;
     'close(uint256)': FunctionFragment;
     'collateralTokensToLiquidate(uint256,uint256)': FunctionFragment;
     'depositCollateral(uint256,uint256,bool)': FunctionFragment;
     'depositedCollateralInShares(uint256)': FunctionFragment;
+    'getEndsAt(uint256)': FunctionFragment;
     'getPrincipal(uint256)': FunctionFragment;
     'getRequiredCollateral(uint256,uint256)': FunctionFragment;
-    'getStatus(uint256)': FunctionFragment;
-    'initialize(address,address,address,address,uint256,address,address)': FunctionFragment;
-    'lenderPool()': FunctionFragment;
+    'getStatusAndUpdate(uint256)': FunctionFragment;
+    'initialize(address,uint256,address)': FunctionFragment;
     'liquidate(uint256)': FunctionFragment;
+    'maximumProtocolFeeFraction()': FunctionFragment;
     'owner()': FunctionFragment;
     'pooledCreditLineConstants(uint256)': FunctionFragment;
     'pooledCreditLineCounter()': FunctionFragment;
     'pooledCreditLineVariables(uint256)': FunctionFragment;
-    'priceOracle()': FunctionFragment;
     'protocolFeeCollector()': FunctionFragment;
     'protocolFeeFraction()': FunctionFragment;
     'renounceOwnership()': FunctionFragment;
     'repay(uint256,uint256)': FunctionFragment;
     'request(tuple)': FunctionFragment;
-    'savingsAccount()': FunctionFragment;
-    'strategyRegistry()': FunctionFragment;
+    'terminate(uint256)': FunctionFragment;
     'transferOwnership(address)': FunctionFragment;
     'updateBorrowLimitLimits(uint256,uint256)': FunctionFragment;
     'updateBorrowRateLimits(uint256,uint256)': FunctionFragment;
@@ -59,17 +66,19 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
     'updateDurationLimits(uint256,uint256)': FunctionFragment;
     'updateGracePenaltyRateLimits(uint256,uint256)': FunctionFragment;
     'updateIdealCollateralRatioLimits(uint256,uint256)': FunctionFragment;
-    'updatePriceOracle(address)': FunctionFragment;
     'updateProtocolFeeCollector(address)': FunctionFragment;
     'updateProtocolFeeFraction(uint256)': FunctionFragment;
-    'updateSavingsAccount(address)': FunctionFragment;
-    'updateStrategyRegistry(address)': FunctionFragment;
-    'updateVerification(address)': FunctionFragment;
-    'verification()': FunctionFragment;
+    'withdrawAllCollateral(uint256,bool)': FunctionFragment;
     'withdrawCollateral(uint256,uint256,bool)': FunctionFragment;
     'withdrawableCollateral(uint256)': FunctionFragment;
   };
 
+  encodeFunctionData(functionFragment: 'LENDER_POOL', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'PRICE_ORACLE', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'SAVINGS_ACCOUNT', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'STRATEGY_REGISTRY', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'USDC', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'VERIFICATION', values?: undefined): string;
   encodeFunctionData(functionFragment: 'accept', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'borrow', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'calculateBorrowableAmount', values: [BigNumberish]): string;
@@ -78,21 +87,23 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'calculateInterestAccrued', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'calculateTotalCollateralTokens', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'cancelRequest', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'cancelRequestOnLowCollection', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'cancelRequestOnRequestedStateAtEnd', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'close', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'collateralTokensToLiquidate', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'depositCollateral', values: [BigNumberish, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'depositedCollateralInShares', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'getEndsAt', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getPrincipal', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getRequiredCollateral', values: [BigNumberish, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'getStatus', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'initialize', values: [string, string, string, string, BigNumberish, string, string]): string;
-  encodeFunctionData(functionFragment: 'lenderPool', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'getStatusAndUpdate', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'initialize', values: [string, BigNumberish, string]): string;
   encodeFunctionData(functionFragment: 'liquidate', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'maximumProtocolFeeFraction', values?: undefined): string;
   encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
   encodeFunctionData(functionFragment: 'pooledCreditLineConstants', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'pooledCreditLineCounter', values?: undefined): string;
   encodeFunctionData(functionFragment: 'pooledCreditLineVariables', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'priceOracle', values?: undefined): string;
   encodeFunctionData(functionFragment: 'protocolFeeCollector', values?: undefined): string;
   encodeFunctionData(functionFragment: 'protocolFeeFraction', values?: undefined): string;
   encodeFunctionData(functionFragment: 'renounceOwnership', values?: undefined): string;
@@ -119,8 +130,7 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
       }
     ]
   ): string;
-  encodeFunctionData(functionFragment: 'savingsAccount', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'strategyRegistry', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'terminate', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'transferOwnership', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateBorrowLimitLimits', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateBorrowRateLimits', values: [BigNumberish, BigNumberish]): string;
@@ -129,16 +139,18 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'updateDurationLimits', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateGracePenaltyRateLimits', values: [BigNumberish, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'updateIdealCollateralRatioLimits', values: [BigNumberish, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updatePriceOracle', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateProtocolFeeCollector', values: [string]): string;
   encodeFunctionData(functionFragment: 'updateProtocolFeeFraction', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'updateSavingsAccount', values: [string]): string;
-  encodeFunctionData(functionFragment: 'updateStrategyRegistry', values: [string]): string;
-  encodeFunctionData(functionFragment: 'updateVerification', values: [string]): string;
-  encodeFunctionData(functionFragment: 'verification', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'withdrawAllCollateral', values: [BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'withdrawCollateral', values: [BigNumberish, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'withdrawableCollateral', values: [BigNumberish]): string;
 
+  decodeFunctionResult(functionFragment: 'LENDER_POOL', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'PRICE_ORACLE', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'SAVINGS_ACCOUNT', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'STRATEGY_REGISTRY', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'USDC', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'VERIFICATION', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'accept', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'borrow', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'calculateBorrowableAmount', data: BytesLike): Result;
@@ -147,28 +159,29 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'calculateInterestAccrued', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'calculateTotalCollateralTokens', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'cancelRequest', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'cancelRequestOnLowCollection', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'cancelRequestOnRequestedStateAtEnd', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'close', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'collateralTokensToLiquidate', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'depositCollateral', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'depositedCollateralInShares', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getEndsAt', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getPrincipal', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getRequiredCollateral', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'getStatus', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getStatusAndUpdate', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'lenderPool', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'liquidate', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'maximumProtocolFeeFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'owner', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'pooledCreditLineConstants', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'pooledCreditLineCounter', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'pooledCreditLineVariables', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'priceOracle', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'protocolFeeCollector', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'protocolFeeFraction', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'renounceOwnership', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'repay', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'request', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'savingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'strategyRegistry', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'terminate', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'transferOwnership', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateBorrowLimitLimits', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateBorrowRateLimits', data: BytesLike): Result;
@@ -177,13 +190,9 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'updateDurationLimits', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateGracePenaltyRateLimits', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateIdealCollateralRatioLimits', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updatePriceOracle', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateProtocolFeeCollector', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'updateProtocolFeeFraction', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateSavingsAccount', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateStrategyRegistry', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'updateVerification', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'verification', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'withdrawAllCollateral', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawCollateral', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'withdrawableCollateral', data: BytesLike): Result;
 
@@ -196,16 +205,13 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
     'OwnershipTransferred(address,address)': EventFragment;
     'PartialPooledCreditLineRepaid(uint256,address,uint256)': EventFragment;
     'PooledCreditLineAccepted(uint256,uint256)': EventFragment;
-    'PooledCreditLineCancelled(uint256)': EventFragment;
+    'PooledCreditLineCancelled(uint256,string)': EventFragment;
     'PooledCreditLineClosed(uint256)': EventFragment;
-    'PooledCreditLineLiquidated(uint256,address)': EventFragment;
-    'PooledCreditLineRequested(uint256,address)': EventFragment;
-    'PriceOracleUpdated(address)': EventFragment;
+    'PooledCreditLineLiquidated(uint256)': EventFragment;
+    'PooledCreditLineRequested(uint256,address,address)': EventFragment;
+    'PooledCreditLineTerminated(uint256)': EventFragment;
     'ProtocolFeeCollectorUpdated(address)': EventFragment;
     'ProtocolFeeFractionUpdated(uint256)': EventFragment;
-    'SavingsAccountUpdated(address)': EventFragment;
-    'StrategyRegistryUpdated(address)': EventFragment;
-    'VerificationUpdated(address)': EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: 'BorrowedFromPooledCreditLine'): EventFragment;
@@ -220,12 +226,9 @@ interface PooledCreditLineInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: 'PooledCreditLineClosed'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'PooledCreditLineLiquidated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'PooledCreditLineRequested'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'PriceOracleUpdated'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'PooledCreditLineTerminated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'ProtocolFeeCollectorUpdated'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'ProtocolFeeFractionUpdated'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SavingsAccountUpdated'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'StrategyRegistryUpdated'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'VerificationUpdated'): EventFragment;
 }
 
 export class PooledCreditLine extends Contract {
@@ -272,6 +275,30 @@ export class PooledCreditLine extends Contract {
   interface: PooledCreditLineInterface;
 
   functions: {
+    LENDER_POOL(overrides?: CallOverrides): Promise<[string]>;
+
+    'LENDER_POOL()'(overrides?: CallOverrides): Promise<[string]>;
+
+    PRICE_ORACLE(overrides?: CallOverrides): Promise<[string]>;
+
+    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<[string]>;
+
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<[string]>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<[string]>;
+
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<[string]>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<[string]>;
+
+    USDC(overrides?: CallOverrides): Promise<[string]>;
+
+    'USDC()'(overrides?: CallOverrides): Promise<[string]>;
+
+    VERIFICATION(overrides?: CallOverrides): Promise<[string]>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<[string]>;
+
     accept(
       _id: BigNumberish,
       _amount: BigNumberish,
@@ -335,15 +362,35 @@ export class PooledCreditLine extends Contract {
 
     'cancelRequest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
+    cancelRequestOnLowCollection(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'cancelRequestOnLowCollection(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    cancelRequestOnRequestedStateAtEnd(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'cancelRequestOnRequestedStateAtEnd(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     close(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'close(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    collateralTokensToLiquidate(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+    collateralTokensToLiquidate(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'collateralTokensToLiquidate(uint256,uint256)'(
       _id: BigNumberish,
-      _borrowTokens: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<[BigNumber]>;
 
@@ -365,51 +412,50 @@ export class PooledCreditLine extends Contract {
 
     'depositedCollateralInShares(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
+    getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
     getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    getRequiredCollateral(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+    getRequiredCollateral(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'getRequiredCollateral(uint256,uint256)'(
       _id: BigNumberish,
-      _borrowTokens: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<[BigNumber]>;
 
-    getStatus(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    getStatusAndUpdate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'getStatus(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'getStatusAndUpdate(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
     initialize(
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
-      _verification: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'initialize(address,address,address,address,uint256,address,address)'(
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
+    'initialize(address,uint256,address)'(
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
-      _verification: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
-
-    lenderPool(overrides?: CallOverrides): Promise<[string]>;
-
-    'lenderPool()'(overrides?: CallOverrides): Promise<[string]>;
 
     liquidate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'liquidate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    maximumProtocolFeeFraction(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'maximumProtocolFeeFraction()'(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     owner(overrides?: CallOverrides): Promise<[string]>;
 
@@ -485,10 +531,6 @@ export class PooledCreditLine extends Contract {
       }
     >;
 
-    priceOracle(overrides?: CallOverrides): Promise<[string]>;
-
-    'priceOracle()'(overrides?: CallOverrides): Promise<[string]>;
-
     protocolFeeCollector(overrides?: CallOverrides): Promise<[string]>;
 
     'protocolFeeCollector()'(overrides?: CallOverrides): Promise<[string]>;
@@ -555,13 +597,9 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    savingsAccount(overrides?: CallOverrides): Promise<[string]>;
+    terminate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'savingsAccount()'(overrides?: CallOverrides): Promise<[string]>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<[string]>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<[string]>;
+    'terminate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -654,13 +692,6 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updatePriceOracle(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'updatePriceOracle(address)'(
-      _priceOracle: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
     updateProtocolFeeCollector(
       _protocolFeeCollector: string,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -681,46 +712,28 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateSavingsAccount(
-      _savingsAccount: string,
+    withdrawAllCollateral(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
+    'withdrawAllCollateral(uint256,bool)'(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    updateStrategyRegistry(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    updateVerification(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'updateVerification(address)'(
-      _verification: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    verification(overrides?: CallOverrides): Promise<[string]>;
-
-    'verification()'(overrides?: CallOverrides): Promise<[string]>;
-
-    'withdrawCollateral(uint256,uint256,bool)'(
+    withdrawCollateral(
       _id: BigNumberish,
       _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'withdrawCollateral(uint256,bool)'(
+    'withdrawCollateral(uint256,uint256,bool)'(
       _id: BigNumberish,
+      _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
@@ -732,6 +745,30 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
   };
+
+  LENDER_POOL(overrides?: CallOverrides): Promise<string>;
+
+  'LENDER_POOL()'(overrides?: CallOverrides): Promise<string>;
+
+  PRICE_ORACLE(overrides?: CallOverrides): Promise<string>;
+
+  'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<string>;
+
+  SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<string>;
+
+  'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<string>;
+
+  STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<string>;
+
+  'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<string>;
+
+  USDC(overrides?: CallOverrides): Promise<string>;
+
+  'USDC()'(overrides?: CallOverrides): Promise<string>;
+
+  VERIFICATION(overrides?: CallOverrides): Promise<string>;
+
+  'VERIFICATION()'(overrides?: CallOverrides): Promise<string>;
 
   accept(
     _id: BigNumberish,
@@ -796,15 +833,35 @@ export class PooledCreditLine extends Contract {
 
   'cancelRequest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
+  cancelRequestOnLowCollection(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'cancelRequestOnLowCollection(uint256)'(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  cancelRequestOnRequestedStateAtEnd(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'cancelRequestOnRequestedStateAtEnd(uint256)'(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   close(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'close(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  collateralTokensToLiquidate(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+  collateralTokensToLiquidate(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
   'collateralTokensToLiquidate(uint256,uint256)'(
     _id: BigNumberish,
-    _borrowTokens: BigNumberish,
+    _borrowTokenAmount: BigNumberish,
     overrides?: CallOverrides
   ): Promise<BigNumber>;
 
@@ -826,47 +883,50 @@ export class PooledCreditLine extends Contract {
 
   'depositedCollateralInShares(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
+  getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+  'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
   getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
   'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-  getRequiredCollateral(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+  getRequiredCollateral(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-  'getRequiredCollateral(uint256,uint256)'(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+  'getRequiredCollateral(uint256,uint256)'(
+    _id: BigNumberish,
+    _borrowTokenAmount: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
 
-  getStatus(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  getStatusAndUpdate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'getStatus(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'getStatusAndUpdate(uint256)'(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   initialize(
-    _priceOracle: string,
-    _savingsAccount: string,
-    _strategyRegistry: string,
     _owner: string,
     _protocolFeeFraction: BigNumberish,
     _protocolFeeCollector: string,
-    _verification: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'initialize(address,address,address,address,uint256,address,address)'(
-    _priceOracle: string,
-    _savingsAccount: string,
-    _strategyRegistry: string,
+  'initialize(address,uint256,address)'(
     _owner: string,
     _protocolFeeFraction: BigNumberish,
     _protocolFeeCollector: string,
-    _verification: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
-
-  lenderPool(overrides?: CallOverrides): Promise<string>;
-
-  'lenderPool()'(overrides?: CallOverrides): Promise<string>;
 
   liquidate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'liquidate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  maximumProtocolFeeFraction(overrides?: CallOverrides): Promise<BigNumber>;
+
+  'maximumProtocolFeeFraction()'(overrides?: CallOverrides): Promise<BigNumber>;
 
   owner(overrides?: CallOverrides): Promise<string>;
 
@@ -942,10 +1002,6 @@ export class PooledCreditLine extends Contract {
     }
   >;
 
-  priceOracle(overrides?: CallOverrides): Promise<string>;
-
-  'priceOracle()'(overrides?: CallOverrides): Promise<string>;
-
   protocolFeeCollector(overrides?: CallOverrides): Promise<string>;
 
   'protocolFeeCollector()'(overrides?: CallOverrides): Promise<string>;
@@ -1012,13 +1068,9 @@ export class PooledCreditLine extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  savingsAccount(overrides?: CallOverrides): Promise<string>;
+  terminate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'savingsAccount()'(overrides?: CallOverrides): Promise<string>;
-
-  strategyRegistry(overrides?: CallOverrides): Promise<string>;
-
-  'strategyRegistry()'(overrides?: CallOverrides): Promise<string>;
+  'terminate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -1108,13 +1160,6 @@ export class PooledCreditLine extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updatePriceOracle(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'updatePriceOracle(address)'(
-    _priceOracle: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
   updateProtocolFeeCollector(
     _protocolFeeCollector: string,
     overrides?: Overrides & { from?: string | Promise<string> }
@@ -1135,43 +1180,28 @@ export class PooledCreditLine extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateSavingsAccount(_savingsAccount: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'updateSavingsAccount(address)'(
-    _savingsAccount: string,
+  withdrawAllCollateral(
+    _id: BigNumberish,
+    _toSavingsAccount: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  updateStrategyRegistry(
-    _strategyRegistry: string,
+  'withdrawAllCollateral(uint256,bool)'(
+    _id: BigNumberish,
+    _toSavingsAccount: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'updateStrategyRegistry(address)'(
-    _strategyRegistry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  updateVerification(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'updateVerification(address)'(
-    _verification: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  verification(overrides?: CallOverrides): Promise<string>;
-
-  'verification()'(overrides?: CallOverrides): Promise<string>;
-
-  'withdrawCollateral(uint256,uint256,bool)'(
+  withdrawCollateral(
     _id: BigNumberish,
     _amount: BigNumberish,
     _toSavingsAccount: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'withdrawCollateral(uint256,bool)'(
+  'withdrawCollateral(uint256,uint256,bool)'(
     _id: BigNumberish,
+    _amount: BigNumberish,
     _toSavingsAccount: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
@@ -1184,6 +1214,30 @@ export class PooledCreditLine extends Contract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
+    LENDER_POOL(overrides?: CallOverrides): Promise<string>;
+
+    'LENDER_POOL()'(overrides?: CallOverrides): Promise<string>;
+
+    PRICE_ORACLE(overrides?: CallOverrides): Promise<string>;
+
+    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<string>;
+
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<string>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<string>;
+
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<string>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<string>;
+
+    USDC(overrides?: CallOverrides): Promise<string>;
+
+    'USDC()'(overrides?: CallOverrides): Promise<string>;
+
+    VERIFICATION(overrides?: CallOverrides): Promise<string>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<string>;
+
     accept(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'accept(uint256,uint256)'(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
@@ -1216,15 +1270,23 @@ export class PooledCreditLine extends Contract {
 
     'cancelRequest(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
+    cancelRequestOnLowCollection(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'cancelRequestOnLowCollection(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    cancelRequestOnRequestedStateAtEnd(_id: BigNumberish, overrides?: CallOverrides): Promise<boolean>;
+
+    'cancelRequestOnRequestedStateAtEnd(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<boolean>;
+
     close(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     'close(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    collateralTokensToLiquidate(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+    collateralTokensToLiquidate(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'collateralTokensToLiquidate(uint256,uint256)'(
       _id: BigNumberish,
-      _borrowTokens: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
@@ -1241,47 +1303,42 @@ export class PooledCreditLine extends Contract {
 
     'depositedCollateralInShares(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
+    getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
     getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    getRequiredCollateral(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+    getRequiredCollateral(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'getRequiredCollateral(uint256,uint256)'(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+    'getRequiredCollateral(uint256,uint256)'(
+      _id: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
 
-    getStatus(_id: BigNumberish, overrides?: CallOverrides): Promise<number>;
+    getStatusAndUpdate(_id: BigNumberish, overrides?: CallOverrides): Promise<number>;
 
-    'getStatus(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<number>;
+    'getStatusAndUpdate(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<number>;
 
-    initialize(
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
+    initialize(_owner: string, _protocolFeeFraction: BigNumberish, _protocolFeeCollector: string, overrides?: CallOverrides): Promise<void>;
+
+    'initialize(address,uint256,address)'(
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
-      _verification: string,
       overrides?: CallOverrides
     ): Promise<void>;
-
-    'initialize(address,address,address,address,uint256,address,address)'(
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
-      _owner: string,
-      _protocolFeeFraction: BigNumberish,
-      _protocolFeeCollector: string,
-      _verification: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    lenderPool(overrides?: CallOverrides): Promise<string>;
-
-    'lenderPool()'(overrides?: CallOverrides): Promise<string>;
 
     liquidate(_id: BigNumberish, overrides?: CallOverrides): Promise<[string, BigNumber]>;
 
     'liquidate(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<[string, BigNumber]>;
+
+    maximumProtocolFeeFraction(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'maximumProtocolFeeFraction()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     owner(overrides?: CallOverrides): Promise<string>;
 
@@ -1357,10 +1414,6 @@ export class PooledCreditLine extends Contract {
       }
     >;
 
-    priceOracle(overrides?: CallOverrides): Promise<string>;
-
-    'priceOracle()'(overrides?: CallOverrides): Promise<string>;
-
     protocolFeeCollector(overrides?: CallOverrides): Promise<string>;
 
     'protocolFeeCollector()'(overrides?: CallOverrides): Promise<string>;
@@ -1419,13 +1472,9 @@ export class PooledCreditLine extends Contract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    savingsAccount(overrides?: CallOverrides): Promise<string>;
+    terminate(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    'savingsAccount()'(overrides?: CallOverrides): Promise<string>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<string>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<string>;
+    'terminate(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     transferOwnership(newOwner: string, overrides?: CallOverrides): Promise<void>;
 
@@ -1459,10 +1508,6 @@ export class PooledCreditLine extends Contract {
 
     'updateIdealCollateralRatioLimits(uint256,uint256)'(_min: BigNumberish, _max: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    updatePriceOracle(_priceOracle: string, overrides?: CallOverrides): Promise<void>;
-
-    'updatePriceOracle(address)'(_priceOracle: string, overrides?: CallOverrides): Promise<void>;
-
     updateProtocolFeeCollector(_protocolFeeCollector: string, overrides?: CallOverrides): Promise<void>;
 
     'updateProtocolFeeCollector(address)'(_protocolFeeCollector: string, overrides?: CallOverrides): Promise<void>;
@@ -1471,21 +1516,11 @@ export class PooledCreditLine extends Contract {
 
     'updateProtocolFeeFraction(uint256)'(_protocolFeeFraction: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
-    updateSavingsAccount(_savingsAccount: string, overrides?: CallOverrides): Promise<void>;
+    withdrawAllCollateral(_id: BigNumberish, _toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
-    'updateSavingsAccount(address)'(_savingsAccount: string, overrides?: CallOverrides): Promise<void>;
+    'withdrawAllCollateral(uint256,bool)'(_id: BigNumberish, _toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
-    updateStrategyRegistry(_strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateStrategyRegistry(address)'(_strategyRegistry: string, overrides?: CallOverrides): Promise<void>;
-
-    updateVerification(_verification: string, overrides?: CallOverrides): Promise<void>;
-
-    'updateVerification(address)'(_verification: string, overrides?: CallOverrides): Promise<void>;
-
-    verification(overrides?: CallOverrides): Promise<string>;
-
-    'verification()'(overrides?: CallOverrides): Promise<string>;
+    withdrawCollateral(_id: BigNumberish, _amount: BigNumberish, _toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
     'withdrawCollateral(uint256,uint256,bool)'(
       _id: BigNumberish,
@@ -1493,8 +1528,6 @@ export class PooledCreditLine extends Contract {
       _toSavingsAccount: boolean,
       overrides?: CallOverrides
     ): Promise<void>;
-
-    'withdrawCollateral(uint256,bool)'(_id: BigNumberish, _toSavingsAccount: boolean, overrides?: CallOverrides): Promise<void>;
 
     withdrawableCollateral(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1509,14 +1542,14 @@ export class PooledCreditLine extends Contract {
 
     CollateralDeposited(
       id: BigNumberish | null,
-      amount: null,
+      shares: null,
       strategy: string | null
-    ): TypedEventFilter<[BigNumber, BigNumber, string], { id: BigNumber; amount: BigNumber; strategy: string }>;
+    ): TypedEventFilter<[BigNumber, BigNumber, string], { id: BigNumber; shares: BigNumber; strategy: string }>;
 
     CollateralWithdrawn(
       id: BigNumberish | null,
-      amount: null
-    ): TypedEventFilter<[BigNumber, BigNumber], { id: BigNumber; amount: BigNumber }>;
+      shares: null
+    ): TypedEventFilter<[BigNumber, BigNumber], { id: BigNumber; shares: BigNumber }>;
 
     CompletePooledCreditLineRepaid(
       id: BigNumberish | null,
@@ -1526,9 +1559,9 @@ export class PooledCreditLine extends Contract {
 
     LimitsUpdated(
       limitType: string | null,
-      max: null,
-      min: null
-    ): TypedEventFilter<[string, BigNumber, BigNumber], { limitType: string; max: BigNumber; min: BigNumber }>;
+      min: null,
+      max: null
+    ): TypedEventFilter<[string, BigNumber, BigNumber], { limitType: string; min: BigNumber; max: BigNumber }>;
 
     OwnershipTransferred(
       previousOwner: string | null,
@@ -1546,36 +1579,55 @@ export class PooledCreditLine extends Contract {
       amount: null
     ): TypedEventFilter<[BigNumber, BigNumber], { id: BigNumber; amount: BigNumber }>;
 
-    PooledCreditLineCancelled(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
+    PooledCreditLineCancelled(
+      id: BigNumberish | null,
+      reason: string | null
+    ): TypedEventFilter<[BigNumber, string], { id: BigNumber; reason: string }>;
 
     PooledCreditLineClosed(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
 
-    PooledCreditLineLiquidated(
-      id: BigNumberish | null,
-      liquidator: string | null
-    ): TypedEventFilter<[BigNumber, string], { id: BigNumber; liquidator: string }>;
+    PooledCreditLineLiquidated(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
 
     PooledCreditLineRequested(
       id: BigNumberish | null,
-      borrower: string | null
-    ): TypedEventFilter<[BigNumber, string], { id: BigNumber; borrower: string }>;
+      borrower: string | null,
+      borrowerVerifier: string | null
+    ): TypedEventFilter<[BigNumber, string, string], { id: BigNumber; borrower: string; borrowerVerifier: string }>;
 
-    PriceOracleUpdated(priceOracle: string | null): TypedEventFilter<[string], { priceOracle: string }>;
+    PooledCreditLineTerminated(id: BigNumberish | null): TypedEventFilter<[BigNumber], { id: BigNumber }>;
 
     ProtocolFeeCollectorUpdated(
       updatedProtocolFeeCollector: string | null
     ): TypedEventFilter<[string], { updatedProtocolFeeCollector: string }>;
 
     ProtocolFeeFractionUpdated(updatedProtocolFee: null): TypedEventFilter<[BigNumber], { updatedProtocolFee: BigNumber }>;
-
-    SavingsAccountUpdated(savingsAccount: string | null): TypedEventFilter<[string], { savingsAccount: string }>;
-
-    StrategyRegistryUpdated(strategyRegistry: string | null): TypedEventFilter<[string], { strategyRegistry: string }>;
-
-    VerificationUpdated(updatedVerification: string | null): TypedEventFilter<[string], { updatedVerification: string }>;
   };
 
   estimateGas: {
+    LENDER_POOL(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'LENDER_POOL()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    PRICE_ORACLE(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    USDC(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'USDC()'(overrides?: CallOverrides): Promise<BigNumber>;
+
+    VERIFICATION(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<BigNumber>;
+
     accept(_id: BigNumberish, _amount: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'accept(uint256,uint256)'(
@@ -1625,15 +1677,29 @@ export class PooledCreditLine extends Contract {
 
     'cancelRequest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
+    cancelRequestOnLowCollection(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'cancelRequestOnLowCollection(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    cancelRequestOnRequestedStateAtEnd(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'cancelRequestOnRequestedStateAtEnd(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     close(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'close(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    collateralTokensToLiquidate(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+    collateralTokensToLiquidate(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'collateralTokensToLiquidate(uint256,uint256)'(
       _id: BigNumberish,
-      _borrowTokens: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
@@ -1655,47 +1721,47 @@ export class PooledCreditLine extends Contract {
 
     'depositedCollateralInShares(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
+    getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
     getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    getRequiredCollateral(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+    getRequiredCollateral(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    'getRequiredCollateral(uint256,uint256)'(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+    'getRequiredCollateral(uint256,uint256)'(
+      _id: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
 
-    getStatus(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    getStatusAndUpdate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'getStatus(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'getStatusAndUpdate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     initialize(
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
-      _verification: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'initialize(address,address,address,address,uint256,address,address)'(
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
+    'initialize(address,uint256,address)'(
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
-      _verification: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
-
-    lenderPool(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'lenderPool()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     liquidate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'liquidate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    maximumProtocolFeeFraction(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'maximumProtocolFeeFraction()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1712,10 +1778,6 @@ export class PooledCreditLine extends Contract {
     pooledCreditLineVariables(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'pooledCreditLineVariables(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
-
-    priceOracle(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'priceOracle()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     protocolFeeCollector(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -1779,13 +1841,9 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    savingsAccount(overrides?: CallOverrides): Promise<BigNumber>;
+    terminate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'savingsAccount()'(overrides?: CallOverrides): Promise<BigNumber>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<BigNumber>;
+    'terminate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -1875,10 +1933,6 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updatePriceOracle(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updatePriceOracle(address)'(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
     updateProtocolFeeCollector(
       _protocolFeeCollector: string,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -1899,37 +1953,28 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateSavingsAccount(_savingsAccount: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
+    withdrawAllCollateral(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateStrategyRegistry(_strategyRegistry: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
+    'withdrawAllCollateral(uint256,bool)'(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    updateVerification(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'updateVerification(address)'(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    verification(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'verification()'(overrides?: CallOverrides): Promise<BigNumber>;
-
-    'withdrawCollateral(uint256,uint256,bool)'(
+    withdrawCollateral(
       _id: BigNumberish,
       _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'withdrawCollateral(uint256,bool)'(
+    'withdrawCollateral(uint256,uint256,bool)'(
       _id: BigNumberish,
+      _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
@@ -1940,6 +1985,30 @@ export class PooledCreditLine extends Contract {
   };
 
   populateTransaction: {
+    LENDER_POOL(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'LENDER_POOL()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    PRICE_ORACLE(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'PRICE_ORACLE()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    SAVINGS_ACCOUNT(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'SAVINGS_ACCOUNT()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    STRATEGY_REGISTRY(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'STRATEGY_REGISTRY()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    USDC(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'USDC()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    VERIFICATION(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'VERIFICATION()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     accept(
       _id: BigNumberish,
       _amount: BigNumberish,
@@ -2006,15 +2075,39 @@ export class PooledCreditLine extends Contract {
 
     'cancelRequest(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
+    cancelRequestOnLowCollection(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'cancelRequestOnLowCollection(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    cancelRequestOnRequestedStateAtEnd(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'cancelRequestOnRequestedStateAtEnd(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
     close(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'close(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    collateralTokensToLiquidate(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    collateralTokensToLiquidate(
+      _id: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
 
     'collateralTokensToLiquidate(uint256,uint256)'(
       _id: BigNumberish,
-      _borrowTokens: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
@@ -2036,51 +2129,50 @@ export class PooledCreditLine extends Contract {
 
     'depositedCollateralInShares(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    getRequiredCollateral(_id: BigNumberish, _borrowTokens: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    getRequiredCollateral(_id: BigNumberish, _borrowTokenAmount: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'getRequiredCollateral(uint256,uint256)'(
       _id: BigNumberish,
-      _borrowTokens: BigNumberish,
+      _borrowTokenAmount: BigNumberish,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
-    getStatus(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    getStatusAndUpdate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'getStatus(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'getStatusAndUpdate(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     initialize(
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
-      _verification: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'initialize(address,address,address,address,uint256,address,address)'(
-      _priceOracle: string,
-      _savingsAccount: string,
-      _strategyRegistry: string,
+    'initialize(address,uint256,address)'(
       _owner: string,
       _protocolFeeFraction: BigNumberish,
       _protocolFeeCollector: string,
-      _verification: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
-
-    lenderPool(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'lenderPool()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     liquidate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'liquidate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    maximumProtocolFeeFraction(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'maximumProtocolFeeFraction()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -2097,10 +2189,6 @@ export class PooledCreditLine extends Contract {
     pooledCreditLineVariables(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'pooledCreditLineVariables(uint256)'(arg0: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    priceOracle(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'priceOracle()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     protocolFeeCollector(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -2168,13 +2256,9 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    savingsAccount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    terminate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'savingsAccount()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    strategyRegistry(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'strategyRegistry()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    'terminate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     transferOwnership(newOwner: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -2267,13 +2351,6 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updatePriceOracle(_priceOracle: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'updatePriceOracle(address)'(
-      _priceOracle: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
     updateProtocolFeeCollector(
       _protocolFeeCollector: string,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -2294,46 +2371,28 @@ export class PooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateSavingsAccount(
-      _savingsAccount: string,
+    withdrawAllCollateral(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'updateSavingsAccount(address)'(
-      _savingsAccount: string,
+    'withdrawAllCollateral(uint256,bool)'(
+      _id: BigNumberish,
+      _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    updateStrategyRegistry(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    'updateStrategyRegistry(address)'(
-      _strategyRegistry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    updateVerification(_verification: string, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'updateVerification(address)'(
-      _verification: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    verification(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'verification()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    'withdrawCollateral(uint256,uint256,bool)'(
+    withdrawCollateral(
       _id: BigNumberish,
       _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'withdrawCollateral(uint256,bool)'(
+    'withdrawCollateral(uint256,uint256,bool)'(
       _id: BigNumberish,
+      _amount: BigNumberish,
       _toSavingsAccount: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;

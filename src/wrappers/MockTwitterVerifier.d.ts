@@ -456,12 +456,12 @@ export class MockTwitterVerifier extends Contract {
     SignerUpdated(signerAddress: string | null): TypedEventFilter<[string], { signerAddress: string }>;
 
     UserRegistered(
-      user: null,
+      user: string | null,
       isMasterLinked: null,
-      metadata: null
+      metadata: string | null
     ): TypedEventFilter<[string, boolean, string], { user: string; isMasterLinked: boolean; metadata: string }>;
 
-    UserUnregistered(user: null): TypedEventFilter<[string], { user: string }>;
+    UserUnregistered(user: string | null): TypedEventFilter<[string], { user: string }>;
 
     VerificationUpdated(verification: string | null): TypedEventFilter<[string], { verification: string }>;
   };

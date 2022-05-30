@@ -22,19 +22,28 @@ import { TypedEventFilter, TypedEvent, TypedListener } from './commons';
 interface IPooledCreditLineInterface extends ethers.utils.Interface {
   functions: {
     'accept(uint256,uint256)': FunctionFragment;
+    'cancelRequestOnLowCollection(uint256)': FunctionFragment;
+    'cancelRequestOnRequestedStateAtEnd(uint256)': FunctionFragment;
+    'getEndsAt(uint256)': FunctionFragment;
     'getPrincipal(uint256)': FunctionFragment;
-    'getStatus(uint256)': FunctionFragment;
+    'getStatusAndUpdate(uint256)': FunctionFragment;
     'liquidate(uint256)': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'accept', values: [BigNumberish, BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'cancelRequestOnLowCollection', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'cancelRequestOnRequestedStateAtEnd', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'getEndsAt', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'getPrincipal', values: [BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'getStatus', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'getStatusAndUpdate', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'liquidate', values: [BigNumberish]): string;
 
   decodeFunctionResult(functionFragment: 'accept', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'cancelRequestOnLowCollection', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'cancelRequestOnRequestedStateAtEnd', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getEndsAt', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'getPrincipal', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'getStatus', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getStatusAndUpdate', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'liquidate', data: BytesLike): Result;
 
   events: {};
@@ -96,13 +105,40 @@ export class IPooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    cancelRequestOnLowCollection(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'cancelRequestOnLowCollection(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    cancelRequestOnRequestedStateAtEnd(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    'cancelRequestOnRequestedStateAtEnd(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
+
     getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    getStatus(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    getStatusAndUpdate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'getStatus(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'getStatusAndUpdate(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
     liquidate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -121,13 +157,40 @@ export class IPooledCreditLine extends Contract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  cancelRequestOnLowCollection(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'cancelRequestOnLowCollection(uint256)'(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  cancelRequestOnRequestedStateAtEnd(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  'cancelRequestOnRequestedStateAtEnd(uint256)'(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+  'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
   getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
   'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-  getStatus(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  getStatusAndUpdate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'getStatus(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'getStatusAndUpdate(uint256)'(
+    _id: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   liquidate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -138,13 +201,25 @@ export class IPooledCreditLine extends Contract {
 
     'accept(uint256,uint256)'(_id: BigNumberish, _amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
+    cancelRequestOnLowCollection(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    'cancelRequestOnLowCollection(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<void>;
+
+    cancelRequestOnRequestedStateAtEnd(_id: BigNumberish, overrides?: CallOverrides): Promise<boolean>;
+
+    'cancelRequestOnRequestedStateAtEnd(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<boolean>;
+
+    getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
     getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    getStatus(_id: BigNumberish, overrides?: CallOverrides): Promise<number>;
+    getStatusAndUpdate(_id: BigNumberish, overrides?: CallOverrides): Promise<number>;
 
-    'getStatus(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<number>;
+    'getStatusAndUpdate(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<number>;
 
     liquidate(_id: BigNumberish, overrides?: CallOverrides): Promise<[string, BigNumber]>;
 
@@ -162,13 +237,31 @@ export class IPooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
+    cancelRequestOnLowCollection(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'cancelRequestOnLowCollection(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    cancelRequestOnRequestedStateAtEnd(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'cancelRequestOnRequestedStateAtEnd(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
     getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
-    getStatus(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    getStatusAndUpdate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'getStatus(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'getStatusAndUpdate(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     liquidate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -188,13 +281,40 @@ export class IPooledCreditLine extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
+    cancelRequestOnLowCollection(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'cancelRequestOnLowCollection(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    cancelRequestOnRequestedStateAtEnd(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    'cancelRequestOnRequestedStateAtEnd(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    getEndsAt(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    'getEndsAt(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     getPrincipal(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     'getPrincipal(uint256)'(_id: BigNumberish, overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    getStatus(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    getStatusAndUpdate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'getStatus(uint256)'(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'getStatusAndUpdate(uint256)'(
+      _id: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     liquidate(_id: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 

@@ -40,6 +40,57 @@ const _abi = [
         type: 'uint256',
       },
     ],
+    name: 'cancelRequestOnLowCollection',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '_id',
+        type: 'uint256',
+      },
+    ],
+    name: 'cancelRequestOnRequestedStateAtEnd',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: '_isCancelled',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '_id',
+        type: 'uint256',
+      },
+    ],
+    name: 'getEndsAt',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '_id',
+        type: 'uint256',
+      },
+    ],
     name: 'getPrincipal',
     outputs: [
       {
@@ -59,10 +110,10 @@ const _abi = [
         type: 'uint256',
       },
     ],
-    name: 'getStatus',
+    name: 'getStatusAndUpdate',
     outputs: [
       {
-        internalType: 'enum IPooledCreditLineDeclarations.PooledCreditLineStatus',
+        internalType: 'enum IPooledCreditLineEnums.PooledCreditLineStatus',
         name: '',
         type: 'uint8',
       },

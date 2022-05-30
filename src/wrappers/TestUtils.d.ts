@@ -27,7 +27,7 @@ interface TestUtilsInterface extends ethers.utils.Interface {
     'SetUpCreditLines()': FunctionFragment;
     'SetUpGlobalActors()': FunctionFragment;
     'SetUpPoolActors()': FunctionFragment;
-    'SetUpPooledCreditLines()': FunctionFragment;
+    'SetUpPooledCreditLine()': FunctionFragment;
     'createAdmin()': FunctionFragment;
     'createBob()': FunctionFragment;
     'createCreditLineBorrower()': FunctionFragment;
@@ -41,6 +41,7 @@ interface TestUtilsInterface extends ethers.utils.Interface {
     'createVerifier()': FunctionFragment;
     'deployCompoundYield()': FunctionFragment;
     'deployCreditLines()': FunctionFragment;
+    'deployLenderPoolProxy()': FunctionFragment;
     'deployNoYield()': FunctionFragment;
     'deployPriceOracle()': FunctionFragment;
     'deployProtocolFeeCollector()': FunctionFragment;
@@ -52,7 +53,6 @@ interface TestUtilsInterface extends ethers.utils.Interface {
     'failed()': FunctionFragment;
     'mint(address,address,uint256)': FunctionFragment;
     'restrictToRange(uint256,uint256,uint256)': FunctionFragment;
-    'setUpLenderPools()': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'IS_TEST', values?: undefined): string;
@@ -61,7 +61,7 @@ interface TestUtilsInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'SetUpCreditLines', values?: undefined): string;
   encodeFunctionData(functionFragment: 'SetUpGlobalActors', values?: undefined): string;
   encodeFunctionData(functionFragment: 'SetUpPoolActors', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'SetUpPooledCreditLines', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'SetUpPooledCreditLine', values?: undefined): string;
   encodeFunctionData(functionFragment: 'createAdmin', values?: undefined): string;
   encodeFunctionData(functionFragment: 'createBob', values?: undefined): string;
   encodeFunctionData(functionFragment: 'createCreditLineBorrower', values?: undefined): string;
@@ -75,6 +75,7 @@ interface TestUtilsInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'createVerifier', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployCompoundYield', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployCreditLines', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'deployLenderPoolProxy', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployNoYield', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployPriceOracle', values?: undefined): string;
   encodeFunctionData(functionFragment: 'deployProtocolFeeCollector', values?: undefined): string;
@@ -86,7 +87,6 @@ interface TestUtilsInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'failed', values?: undefined): string;
   encodeFunctionData(functionFragment: 'mint', values: [string, string, BigNumberish]): string;
   encodeFunctionData(functionFragment: 'restrictToRange', values: [BigNumberish, BigNumberish, BigNumberish]): string;
-  encodeFunctionData(functionFragment: 'setUpLenderPools', values?: undefined): string;
 
   decodeFunctionResult(functionFragment: 'IS_TEST', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'SetUpAllContracts', data: BytesLike): Result;
@@ -94,7 +94,7 @@ interface TestUtilsInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'SetUpCreditLines', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'SetUpGlobalActors', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'SetUpPoolActors', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'SetUpPooledCreditLines', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'SetUpPooledCreditLine', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createAdmin', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createBob', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'createCreditLineBorrower', data: BytesLike): Result;
@@ -108,6 +108,7 @@ interface TestUtilsInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'createVerifier', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployCompoundYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployCreditLines', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deployLenderPoolProxy', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployNoYield', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployPriceOracle', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'deployProtocolFeeCollector', data: BytesLike): Result;
@@ -119,7 +120,6 @@ interface TestUtilsInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'failed', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'mint', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'restrictToRange', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'setUpLenderPools', data: BytesLike): Result;
 
   events: {
     'log(string)': EventFragment;
@@ -226,9 +226,9 @@ export class TestUtils extends Contract {
 
     'SetUpPoolActors()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    SetUpPooledCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    SetUpPooledCreditLine(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-    'SetUpPooledCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+    'SetUpPooledCreditLine()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     createAdmin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -281,6 +281,10 @@ export class TestUtils extends Contract {
     deployCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     'deployCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    deployLenderPoolProxy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'deployLenderPoolProxy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
     deployNoYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -346,10 +350,6 @@ export class TestUtils extends Contract {
       nonZero: boolean,
       overrides?: CallOverrides
     ): Promise<[BigNumber]>;
-
-    setUpLenderPools(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-    'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
   };
 
   IS_TEST(overrides?: CallOverrides): Promise<boolean>;
@@ -376,9 +376,9 @@ export class TestUtils extends Contract {
 
   'SetUpPoolActors()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  SetUpPooledCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  SetUpPooledCreditLine(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
-  'SetUpPooledCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+  'SetUpPooledCreditLine()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   createAdmin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -431,6 +431,10 @@ export class TestUtils extends Contract {
   deployCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   'deployCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  deployLenderPoolProxy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'deployLenderPoolProxy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
   deployNoYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
@@ -497,10 +501,6 @@ export class TestUtils extends Contract {
     overrides?: CallOverrides
   ): Promise<BigNumber>;
 
-  setUpLenderPools(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
-  'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
-
   callStatic: {
     IS_TEST(overrides?: CallOverrides): Promise<boolean>;
 
@@ -526,9 +526,9 @@ export class TestUtils extends Contract {
 
     'SetUpPoolActors()'(overrides?: CallOverrides): Promise<void>;
 
-    SetUpPooledCreditLines(overrides?: CallOverrides): Promise<void>;
+    SetUpPooledCreditLine(overrides?: CallOverrides): Promise<void>;
 
-    'SetUpPooledCreditLines()'(overrides?: CallOverrides): Promise<void>;
+    'SetUpPooledCreditLine()'(overrides?: CallOverrides): Promise<void>;
 
     createAdmin(overrides?: CallOverrides): Promise<void>;
 
@@ -581,6 +581,10 @@ export class TestUtils extends Contract {
     deployCreditLines(overrides?: CallOverrides): Promise<void>;
 
     'deployCreditLines()'(overrides?: CallOverrides): Promise<void>;
+
+    deployLenderPoolProxy(overrides?: CallOverrides): Promise<void>;
+
+    'deployLenderPoolProxy()'(overrides?: CallOverrides): Promise<void>;
 
     deployNoYield(overrides?: CallOverrides): Promise<void>;
 
@@ -636,10 +640,6 @@ export class TestUtils extends Contract {
       nonZero: boolean,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
-
-    setUpLenderPools(overrides?: CallOverrides): Promise<void>;
-
-    'setUpLenderPools()'(overrides?: CallOverrides): Promise<void>;
   };
 
   filters: {
@@ -709,9 +709,9 @@ export class TestUtils extends Contract {
 
     'SetUpPoolActors()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    SetUpPooledCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    SetUpPooledCreditLine(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
-    'SetUpPooledCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+    'SetUpPooledCreditLine()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     createAdmin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -764,6 +764,10 @@ export class TestUtils extends Contract {
     deployCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'deployCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    deployLenderPoolProxy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'deployLenderPoolProxy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     deployNoYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
@@ -829,10 +833,6 @@ export class TestUtils extends Contract {
       nonZero: boolean,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
-
-    setUpLenderPools(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
-
-    'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
   };
 
   populateTransaction: {
@@ -860,9 +860,9 @@ export class TestUtils extends Contract {
 
     'SetUpPoolActors()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    SetUpPooledCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    SetUpPooledCreditLine(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
-    'SetUpPooledCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+    'SetUpPooledCreditLine()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     createAdmin(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -915,6 +915,10 @@ export class TestUtils extends Contract {
     deployCreditLines(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     'deployCreditLines()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    deployLenderPoolProxy(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'deployLenderPoolProxy()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     deployNoYield(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
@@ -980,9 +984,5 @@ export class TestUtils extends Contract {
       nonZero: boolean,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
-
-    setUpLenderPools(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
-
-    'setUpLenderPools()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
   };
 }

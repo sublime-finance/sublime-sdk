@@ -331,7 +331,7 @@ export class PoolFactory extends Contract {
       _collateralAmount: BigNumberish,
       _transferFromSavingsAccount: boolean,
       _salt: BytesLike,
-      _verifier: string,
+      _borrowerVerifier: string,
       _lenderVerifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
@@ -348,7 +348,7 @@ export class PoolFactory extends Contract {
       _collateralAmount: BigNumberish,
       _transferFromSavingsAccount: boolean,
       _salt: BytesLike,
-      _verifier: string,
+      _borrowerVerifier: string,
       _lenderVerifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
@@ -749,7 +749,7 @@ export class PoolFactory extends Contract {
     _collateralAmount: BigNumberish,
     _transferFromSavingsAccount: boolean,
     _salt: BytesLike,
-    _verifier: string,
+    _borrowerVerifier: string,
     _lenderVerifier: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
@@ -766,7 +766,7 @@ export class PoolFactory extends Contract {
     _collateralAmount: BigNumberish,
     _transferFromSavingsAccount: boolean,
     _salt: BytesLike,
-    _verifier: string,
+    _borrowerVerifier: string,
     _lenderVerifier: string,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
@@ -1157,7 +1157,7 @@ export class PoolFactory extends Contract {
       _collateralAmount: BigNumberish,
       _transferFromSavingsAccount: boolean,
       _salt: BytesLike,
-      _verifier: string,
+      _borrowerVerifier: string,
       _lenderVerifier: string,
       overrides?: CallOverrides
     ): Promise<void>;
@@ -1174,7 +1174,7 @@ export class PoolFactory extends Contract {
       _collateralAmount: BigNumberish,
       _transferFromSavingsAccount: boolean,
       _salt: BytesLike,
-      _verifier: string,
+      _borrowerVerifier: string,
       _lenderVerifier: string,
       overrides?: CallOverrides
     ): Promise<void>;
@@ -1508,7 +1508,7 @@ export class PoolFactory extends Contract {
       _collateralAmount: BigNumberish,
       _transferFromSavingsAccount: boolean,
       _salt: BytesLike,
-      _verifier: string,
+      _borrowerVerifier: string,
       _lenderVerifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
@@ -1525,7 +1525,7 @@ export class PoolFactory extends Contract {
       _collateralAmount: BigNumberish,
       _transferFromSavingsAccount: boolean,
       _salt: BytesLike,
-      _verifier: string,
+      _borrowerVerifier: string,
       _lenderVerifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
@@ -1899,7 +1899,7 @@ export class PoolFactory extends Contract {
       _collateralAmount: BigNumberish,
       _transferFromSavingsAccount: boolean,
       _salt: BytesLike,
-      _verifier: string,
+      _borrowerVerifier: string,
       _lenderVerifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
@@ -1916,7 +1916,7 @@ export class PoolFactory extends Contract {
       _collateralAmount: BigNumberish,
       _transferFromSavingsAccount: boolean,
       _salt: BytesLike,
-      _verifier: string,
+      _borrowerVerifier: string,
       _lenderVerifier: string,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;

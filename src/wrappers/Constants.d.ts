@@ -22,6 +22,7 @@ interface ConstantsInterface extends ethers.utils.Interface {
   functions: {
     '_lendingPoolAddressesProvider()': FunctionFragment;
     '_protocolDataProvider()': FunctionFragment;
+    '_treasuryAddress()': FunctionFragment;
     '_wethGateway()': FunctionFragment;
     'cETH()': FunctionFragment;
     'ethUSDPriceAggregator()': FunctionFragment;
@@ -32,6 +33,7 @@ interface ConstantsInterface extends ethers.utils.Interface {
 
   encodeFunctionData(functionFragment: '_lendingPoolAddressesProvider', values?: undefined): string;
   encodeFunctionData(functionFragment: '_protocolDataProvider', values?: undefined): string;
+  encodeFunctionData(functionFragment: '_treasuryAddress', values?: undefined): string;
   encodeFunctionData(functionFragment: '_wethGateway', values?: undefined): string;
   encodeFunctionData(functionFragment: 'cETH', values?: undefined): string;
   encodeFunctionData(functionFragment: 'ethUSDPriceAggregator', values?: undefined): string;
@@ -41,6 +43,7 @@ interface ConstantsInterface extends ethers.utils.Interface {
 
   decodeFunctionResult(functionFragment: '_lendingPoolAddressesProvider', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: '_protocolDataProvider', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: '_treasuryAddress', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: '_wethGateway', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'cETH', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'ethUSDPriceAggregator', data: BytesLike): Result;
@@ -103,6 +106,10 @@ export class Constants extends Contract {
 
     '_protocolDataProvider()'(overrides?: CallOverrides): Promise<[string]>;
 
+    _treasuryAddress(overrides?: CallOverrides): Promise<[string]>;
+
+    '_treasuryAddress()'(overrides?: CallOverrides): Promise<[string]>;
+
     _wethGateway(overrides?: CallOverrides): Promise<[string]>;
 
     '_wethGateway()'(overrides?: CallOverrides): Promise<[string]>;
@@ -136,6 +143,10 @@ export class Constants extends Contract {
 
   '_protocolDataProvider()'(overrides?: CallOverrides): Promise<string>;
 
+  _treasuryAddress(overrides?: CallOverrides): Promise<string>;
+
+  '_treasuryAddress()'(overrides?: CallOverrides): Promise<string>;
+
   _wethGateway(overrides?: CallOverrides): Promise<string>;
 
   '_wethGateway()'(overrides?: CallOverrides): Promise<string>;
@@ -168,6 +179,10 @@ export class Constants extends Contract {
     _protocolDataProvider(overrides?: CallOverrides): Promise<string>;
 
     '_protocolDataProvider()'(overrides?: CallOverrides): Promise<string>;
+
+    _treasuryAddress(overrides?: CallOverrides): Promise<string>;
+
+    '_treasuryAddress()'(overrides?: CallOverrides): Promise<string>;
 
     _wethGateway(overrides?: CallOverrides): Promise<string>;
 
@@ -205,6 +220,10 @@ export class Constants extends Contract {
 
     '_protocolDataProvider()'(overrides?: CallOverrides): Promise<BigNumber>;
 
+    _treasuryAddress(overrides?: CallOverrides): Promise<BigNumber>;
+
+    '_treasuryAddress()'(overrides?: CallOverrides): Promise<BigNumber>;
+
     _wethGateway(overrides?: CallOverrides): Promise<BigNumber>;
 
     '_wethGateway()'(overrides?: CallOverrides): Promise<BigNumber>;
@@ -238,6 +257,10 @@ export class Constants extends Contract {
     _protocolDataProvider(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     '_protocolDataProvider()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    _treasuryAddress(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    '_treasuryAddress()'(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     _wethGateway(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

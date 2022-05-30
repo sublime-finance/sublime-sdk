@@ -26,7 +26,7 @@ interface CreditLineActorInterface extends ethers.utils.Interface {
     'borrow(address,uint256,uint256)': FunctionFragment;
     'cancelRequest(address,uint256)': FunctionFragment;
     'close(address,uint256)': FunctionFragment;
-    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,bool)': FunctionFragment;
+    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,address,bool)': FunctionFragment;
     'liquidate(address,uint256,bool)': FunctionFragment;
     'repay(address,uint256,uint256)': FunctionFragment;
     'savingsAccountDeposit(address,address,address,address,uint256)': FunctionFragment;
@@ -42,7 +42,7 @@ interface CreditLineActorInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'close', values: [string, BigNumberish]): string;
   encodeFunctionData(
     functionFragment: 'createRequest',
-    values: [string, string, BigNumberish, BigNumberish, boolean, BigNumberish, string, string, string, boolean]
+    values: [string, string, BigNumberish, BigNumberish, boolean, BigNumberish, string, string, string, string, boolean]
   ): string;
   encodeFunctionData(functionFragment: 'liquidate', values: [string, BigNumberish, boolean]): string;
   encodeFunctionData(functionFragment: 'repay', values: [string, BigNumberish, BigNumberish]): string;
@@ -185,13 +185,14 @@ export class CreditLineActor extends Contract {
       autoLiquidation: boolean,
       collateralRatio: BigNumberish,
       borrowAsset: string,
+      borrowAssetStrategy: string,
       collateralAsset: string,
       collateralStrategy: string,
       requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,bool)'(
+    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,address,bool)'(
       creditLineAddress: string,
       receiver: string,
       borrowLimit: BigNumberish,
@@ -199,6 +200,7 @@ export class CreditLineActor extends Contract {
       autoLiquidation: boolean,
       collateralRatio: BigNumberish,
       borrowAsset: string,
+      borrowAssetStrategy: string,
       collateralAsset: string,
       collateralStrategy: string,
       requestAsLender: boolean,
@@ -372,13 +374,14 @@ export class CreditLineActor extends Contract {
     autoLiquidation: boolean,
     collateralRatio: BigNumberish,
     borrowAsset: string,
+    borrowAssetStrategy: string,
     collateralAsset: string,
     collateralStrategy: string,
     requestAsLender: boolean,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,bool)'(
+  'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,address,bool)'(
     creditLineAddress: string,
     receiver: string,
     borrowLimit: BigNumberish,
@@ -386,6 +389,7 @@ export class CreditLineActor extends Contract {
     autoLiquidation: boolean,
     collateralRatio: BigNumberish,
     borrowAsset: string,
+    borrowAssetStrategy: string,
     collateralAsset: string,
     collateralStrategy: string,
     requestAsLender: boolean,
@@ -530,13 +534,14 @@ export class CreditLineActor extends Contract {
       autoLiquidation: boolean,
       collateralRatio: BigNumberish,
       borrowAsset: string,
+      borrowAssetStrategy: string,
       collateralAsset: string,
       collateralStrategy: string,
       requestAsLender: boolean,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,bool)'(
+    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,address,bool)'(
       creditLineAddress: string,
       receiver: string,
       borrowLimit: BigNumberish,
@@ -544,6 +549,7 @@ export class CreditLineActor extends Contract {
       autoLiquidation: boolean,
       collateralRatio: BigNumberish,
       borrowAsset: string,
+      borrowAssetStrategy: string,
       collateralAsset: string,
       collateralStrategy: string,
       requestAsLender: boolean,
@@ -696,13 +702,14 @@ export class CreditLineActor extends Contract {
       autoLiquidation: boolean,
       collateralRatio: BigNumberish,
       borrowAsset: string,
+      borrowAssetStrategy: string,
       collateralAsset: string,
       collateralStrategy: string,
       requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,bool)'(
+    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,address,bool)'(
       creditLineAddress: string,
       receiver: string,
       borrowLimit: BigNumberish,
@@ -710,6 +717,7 @@ export class CreditLineActor extends Contract {
       autoLiquidation: boolean,
       collateralRatio: BigNumberish,
       borrowAsset: string,
+      borrowAssetStrategy: string,
       collateralAsset: string,
       collateralStrategy: string,
       requestAsLender: boolean,
@@ -884,13 +892,14 @@ export class CreditLineActor extends Contract {
       autoLiquidation: boolean,
       collateralRatio: BigNumberish,
       borrowAsset: string,
+      borrowAssetStrategy: string,
       collateralAsset: string,
       collateralStrategy: string,
       requestAsLender: boolean,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,bool)'(
+    'createRequest(address,address,uint256,uint256,bool,uint256,address,address,address,address,bool)'(
       creditLineAddress: string,
       receiver: string,
       borrowLimit: BigNumberish,
@@ -898,6 +907,7 @@ export class CreditLineActor extends Contract {
       autoLiquidation: boolean,
       collateralRatio: BigNumberish,
       borrowAsset: string,
+      borrowAssetStrategy: string,
       collateralAsset: string,
       collateralStrategy: string,
       requestAsLender: boolean,
