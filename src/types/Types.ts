@@ -87,6 +87,7 @@ export enum StrategyType {
 export enum VerifierType {
   TwitterVerifier = 'TwitterVerifier',
   AdminVerifier = 'AdminVerifier',
+  PersonaVerifier = 'PersonaVerifier',
 }
 
 export enum Operation {

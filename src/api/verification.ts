@@ -21,6 +21,7 @@ export class VerificationAPI {
   private verification: Verification;
   private twitterVerifier: TwitterVerifier;
   private adminVerifier: AdminVerifier;
+  private personaVerifier: AdminVerifier;
 
   private config: SublimeConfig;
   /**
@@ -32,6 +33,7 @@ export class VerificationAPI {
     this.verification = new Verification__factory(this.signer).attach(config.verificationContractAddress);
     this.twitterVerifier = new TwitterVerifier__factory(this.signer).attach(config.twitterVerifierContractAddress);
     this.adminVerifier = new AdminVerifier__factory(this.signer).attach(config.adminVerifierContractAddress);
+    this.personaVerifier = new AdminVerifier__factory(this.signer).attach(config.personalVerifierContractAddress);
     this.config = config;
   }
 
@@ -91,9 +93,6 @@ export class VerificationAPI {
     return this.twitterVerifier.registerSelf(_isMasterLinked, _v, _r, _s, _twitterId, _tweetId, _deadline, { ...options });
   }
 
-  /**
-   * @returns
-   */
   public unregisterSelfUsingTwitterVerifier(options?: Overrides): Promise<ContractTransaction> {
     return this.twitterVerifier.unregisterSelf({ ...options });
   }
@@ -108,6 +107,22 @@ export class VerificationAPI {
     options?: Overrides
   ): Promise<ContractTransaction> {
     return this.adminVerifier.registerSelf(_isMasterLinked, _v, _r, _s, _userData, _deadline, { ...options });
+  }
+
+  public registerUsingPersonaVerifier(
+    _isMasterLinked: boolean,
+    _v: BigNumberish,
+    _r: BytesLike,
+    _s: BytesLike,
+    _userData: string,
+    _deadline: BigNumberish,
+    options?: Overrides
+  ): Promise<ContractTransaction> {
+    return this.personaVerifier.registerSelf(_isMasterLinked, _v, _r, _s, _userData, _deadline, { ...options });
+  }
+
+  public unregisterSelfUsingPersonaVerifier(options?: Overrides): Promise<ContractTransaction> {
+    return this.personaVerifier.unregisterSelf({ ...options });
   }
 
   public unregisterSelfUsingAdminVerifier(options?: Overrides): Promise<ContractTransaction> {
@@ -137,6 +152,8 @@ export class VerificationAPI {
       return this.config.adminVerifierContractAddress;
     } else if (type == VerifierType.TwitterVerifier) {
       return this.config.twitterVerifierContractAddress;
+    } else if (type == VerifierType.PersonaVerifier) {
+      return this.config.personalVerifierContractAddress;
     } else {
       return undefined;
     }
@@ -150,6 +167,8 @@ export class VerificationAPI {
       return VerifierType.AdminVerifier;
     } else if (address.toLowerCase() == this.config.twitterVerifierContractAddress.toLowerCase()) {
       return VerifierType.TwitterVerifier;
+    } else if (address.toLowerCase() == this.config.personalVerifierContractAddress.toLowerCase()) {
+      return VerifierType.PersonaVerifier;
     } else {
       return undefined;
     }

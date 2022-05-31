@@ -9,6 +9,7 @@
 ### Enumeration members
 
 - [AdminVerifier](types_Types.VerifierType.md#adminverifier)
+- [PersonaVerifier](types_Types.VerifierType.md#personaverifier)
 - [TwitterVerifier](types_Types.VerifierType.md#twitterverifier)
 
 ## Enumeration members
@@ -19,7 +20,17 @@
 
 #### Defined in
 
-[src/types/Types.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/54003e5/src/types/Types.ts#L89)
+[src/types/Types.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/599dea1/src/types/Types.ts#L89)
+
+___
+
+### PersonaVerifier
+
+• **PersonaVerifier** = `"PersonaVerifier"`
+
+#### Defined in
+
+[src/types/Types.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/599dea1/src/types/Types.ts#L90)
 
 ___
 
@@ -29,4 +40,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/54003e5/src/types/Types.ts#L88)
+[src/types/Types.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/599dea1/src/types/Types.ts#L88)
