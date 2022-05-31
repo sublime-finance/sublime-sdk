@@ -68,7 +68,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     };
   }
 
-  async getTotalAmountCommitedByLender(lender: string): Promise<LenderTotalCreditCommited> {
+  async getTotalAmountCommitedByLenderToCreditLines(lender: string): Promise<LenderTotalCreditCommited> {
     const result: any[] = [];
     const count = 999;
     let skip = 0;
@@ -89,7 +89,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     return this.transformToLenderTotalCredit(result);
   }
 
-  async getInterestCollectedByLender(lender: string): Promise<InterestCollectedByLender> {
+  async getInterestCollectedByLenderFromCreditLines(lender: string): Promise<InterestCollectedByLender> {
     const result: any[] = [];
     const count = 999;
     let skip = 0;
@@ -110,7 +110,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     return this.transformToInterestCollectedByLender(result);
   }
 
-  async getAvaialbleBorrowLimitOfBorrower(borrower: string): Promise<BorrowerAvailableCredit> {
+  async getAvaialbleBorrowLimitOfBorrowerOfCreditLines(borrower: string): Promise<BorrowerAvailableCredit> {
     const result: any[] = [];
     const count = 999;
     let skip = 0;
