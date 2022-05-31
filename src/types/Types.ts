@@ -271,6 +271,7 @@ export interface PooledCreditLineDetail {
   totalLentAmount: Balance;
   currentCollateralRatio: Balance;
   currentDebt: Balance;
+  minBorrowAmount: Balance;
 }
 
 export interface CreditLineUser {
