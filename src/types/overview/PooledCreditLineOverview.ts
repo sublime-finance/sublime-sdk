@@ -34,6 +34,7 @@ export interface PooledCreditLineCollective {
   amountWithdrawn: Balance;
   sharesWithdrawn: Balance;
   interestWithdrawn: Balance;
+  interestEarned: Balance;
 }
 
 export interface PooledCreditLineLenderCollectivePerTokenPerStrategy extends PooledCreditLineCollective {

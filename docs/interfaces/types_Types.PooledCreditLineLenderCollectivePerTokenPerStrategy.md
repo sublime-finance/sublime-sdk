@@ -17,6 +17,7 @@
 - [amountLent](types_Types.PooledCreditLineLenderCollectivePerTokenPerStrategy.md#amountlent)
 - [amountWithdrawn](types_Types.PooledCreditLineLenderCollectivePerTokenPerStrategy.md#amountwithdrawn)
 - [id](types_Types.PooledCreditLineLenderCollectivePerTokenPerStrategy.md#id)
+- [interestEarned](types_Types.PooledCreditLineLenderCollectivePerTokenPerStrategy.md#interestearned)
 - [interestWithdrawn](types_Types.PooledCreditLineLenderCollectivePerTokenPerStrategy.md#interestwithdrawn)
 - [sharesWithdrawn](types_Types.PooledCreditLineLenderCollectivePerTokenPerStrategy.md#shareswithdrawn)
 - [strategy](types_Types.PooledCreditLineLenderCollectivePerTokenPerStrategy.md#strategy)
@@ -34,7 +35,7 @@
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/4f79fdf/src/types/overview/PooledCreditLineOverview.ts#L33)
+[src/types/overview/PooledCreditLineOverview.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/96b51e9/src/types/overview/PooledCreditLineOverview.ts#L33)
 
 ___
 
@@ -48,7 +49,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/4f79fdf/src/types/overview/PooledCreditLineOverview.ts#L34)
+[src/types/overview/PooledCreditLineOverview.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/96b51e9/src/types/overview/PooledCreditLineOverview.ts#L34)
 
 ___
 
@@ -58,7 +59,21 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/4f79fdf/src/types/overview/PooledCreditLineOverview.ts#L40)
+[src/types/overview/PooledCreditLineOverview.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/96b51e9/src/types/overview/PooledCreditLineOverview.ts#L41)
+
+___
+
+### interestEarned
+
+• **interestEarned**: [`Balance`](types_Types.Balance.md)
+
+#### Inherited from
+
+[PooledCreditLineCollective](types_Types.PooledCreditLineCollective.md).[interestEarned](types_Types.PooledCreditLineCollective.md#interestearned)
+
+#### Defined in
+
+[src/types/overview/PooledCreditLineOverview.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/96b51e9/src/types/overview/PooledCreditLineOverview.ts#L37)
 
 ___
 
@@ -72,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/4f79fdf/src/types/overview/PooledCreditLineOverview.ts#L36)
+[src/types/overview/PooledCreditLineOverview.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/96b51e9/src/types/overview/PooledCreditLineOverview.ts#L36)
 
 ___
 
@@ -86,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/4f79fdf/src/types/overview/PooledCreditLineOverview.ts#L35)
+[src/types/overview/PooledCreditLineOverview.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/96b51e9/src/types/overview/PooledCreditLineOverview.ts#L35)
 
 ___
 
@@ -96,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/4f79fdf/src/types/overview/PooledCreditLineOverview.ts#L42)
+[src/types/overview/PooledCreditLineOverview.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/96b51e9/src/types/overview/PooledCreditLineOverview.ts#L43)
 
 ___
 
@@ -106,4 +121,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/PooledCreditLineOverview.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/4f79fdf/src/types/overview/PooledCreditLineOverview.ts#L41)
+[src/types/overview/PooledCreditLineOverview.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/96b51e9/src/types/overview/PooledCreditLineOverview.ts#L42)
