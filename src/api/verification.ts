@@ -33,7 +33,7 @@ export class VerificationAPI {
     this.verification = new Verification__factory(this.signer).attach(config.verificationContractAddress);
     this.twitterVerifier = new TwitterVerifier__factory(this.signer).attach(config.twitterVerifierContractAddress);
     this.adminVerifier = new AdminVerifier__factory(this.signer).attach(config.adminVerifierContractAddress);
-    this.personaVerifier = new AdminVerifier__factory(this.signer).attach(config.personalVerifierContractAddress);
+    this.personaVerifier = new AdminVerifier__factory(this.signer).attach(config.personaVerifierContractAddress);
     this.config = config;
   }
 
@@ -153,7 +153,7 @@ export class VerificationAPI {
     } else if (type == VerifierType.TwitterVerifier) {
       return this.config.twitterVerifierContractAddress;
     } else if (type == VerifierType.PersonaVerifier) {
-      return this.config.personalVerifierContractAddress;
+      return this.config.personaVerifierContractAddress;
     } else {
       return undefined;
     }
@@ -167,7 +167,7 @@ export class VerificationAPI {
       return VerifierType.AdminVerifier;
     } else if (address.toLowerCase() == this.config.twitterVerifierContractAddress.toLowerCase()) {
       return VerifierType.TwitterVerifier;
-    } else if (address.toLowerCase() == this.config.personalVerifierContractAddress.toLowerCase()) {
+    } else if (address.toLowerCase() == this.config.personaVerifierContractAddress.toLowerCase()) {
       return VerifierType.PersonaVerifier;
     } else {
       return undefined;

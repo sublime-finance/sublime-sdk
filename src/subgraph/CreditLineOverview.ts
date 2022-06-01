@@ -162,9 +162,13 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
       const element = uniqueTokens[index];
       const requiredEntries = data.filter((a) => a.borrowAsset === element);
       if (requiredEntries.length > 0) {
+        const totalInterestCollectedPerToken = requiredEntries.reduce(
+          (total, current) => total.plus(current.totalInterestRepaid),
+          new BigNumber(0)
+        );
         interestCollectedByLenderPerToken.push({
           amount: {
-            value: requiredEntries.reduce((total, current) => total.plus(current.totalInterestRepaid), new BigNumber(0)),
+            value: totalInterestCollectedPerToken.toString(),
             decimals: this.tokenManager.getTokenDecimals(requiredEntries[0].borrowAsset),
           },
           token: await this.tokenManager.getAssetMeta(requiredEntries[0].borrowAsset),
