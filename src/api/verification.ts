@@ -11,7 +11,7 @@ import { AdminVerifier } from '../wrappers';
 import { AdminVerifier__factory } from '../wrappers/factories/AdminVerifier__factory';
 
 import { BigNumberish } from '@ethersproject/bignumber';
-import { Options as Overrides, VerifierType } from '../types/Types';
+import { Options as Overrides, VerifierType, Verifier as VerifierDetails } from '../types/Types';
 
 /**
  * @class VerificationAPI
@@ -172,5 +172,11 @@ export class VerificationAPI {
     } else {
       return undefined;
     }
+  }
+
+  public getSupportedVerifiers(): VerifierDetails[] {
+    return [VerifierType.AdminVerifier, VerifierType.TwitterVerifier, VerifierType.PersonaVerifier].map((a) => {
+      return { type: a, address: this.getVerifierAddress(a) };
+    });
   }
 }

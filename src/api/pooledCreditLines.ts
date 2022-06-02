@@ -8,7 +8,6 @@ import { BigNumber } from 'bignumber.js';
 import { TokenManager } from '../tokenManager';
 
 import { Balance, Options as Overrides } from '../types/Types';
-import { CreditLineEthUtils } from './utils/creditLineEthUtils';
 
 import { PooledCreditLine } from '../wrappers/PooledCreditLine';
 import { PooledCreditLine__factory } from '../wrappers/factories/PooledCreditLine__factory';
@@ -18,6 +17,8 @@ import { LenderPool__factory } from '../wrappers/factories/LenderPool__factory';
 
 import { IYield } from '../wrappers/IYield';
 import { IYield__factory } from '../wrappers/factories/IYield__factory';
+import { YieldAndStrategyApi } from './yieldAndStrategy';
+import { VerificationAPI } from './verification';
 
 /**
  * @class PooledCreditLines
@@ -27,16 +28,18 @@ export class PooledCreditLineApi {
   private pooledCreditLine: PooledCreditLine;
 
   private tokenManager: TokenManager;
-  private config: SublimeConfig;
   private signer: Signer;
+  private yieldApi: YieldAndStrategyApi;
+  private verifiactionApi: VerificationAPI;
 
   constructor(signer: Signer, config: SublimeConfig, tokenManager: TokenManager) {
-    this.config = config;
     this.tokenManager = tokenManager;
     this.signer = signer;
 
     this.lenderPool = new LenderPool__factory(this.signer).attach(config.lenderPoolAddress);
     this.pooledCreditLine = new PooledCreditLine__factory(this.signer).attach(config.pooledCreditLineAddress);
+    this.yieldApi = new YieldAndStrategyApi(signer, config, tokenManager);
+    this.verifiactionApi = new VerificationAPI(signer, config);
   }
 
   /**
@@ -333,41 +336,10 @@ export class PooledCreditLineApi {
       throw new Error('_minBorrowAmount should be a valid number');
     }
 
-    let lenderVerifierAddress: string;
-    if (lenderVerifier === VerifierType.AdminVerifier) {
-      lenderVerifierAddress = this.config.adminVerifierContractAddress;
-    } else if (lenderVerifier === VerifierType.TwitterVerifier) {
-      lenderVerifierAddress = this.config.twitterVerifierContractAddress;
-    } else {
-      throw new Error('Unsupported verifier');
-    }
-
-    let collateralStrategyAddress: string;
-    if (collateralAssetStrategy === StrategyType.NoYield) {
-      collateralStrategyAddress = this.config.noStrategyAddress;
-    } else if (collateralAssetStrategy === StrategyType.CompounYield) {
-      collateralStrategyAddress = this.config.compoundStrategyContractAddress;
-    } else {
-      throw new Error('Unsupported strategy');
-    }
-
-    let borrowerStrategyAddress: string;
-    if (borrowAssetStrategy == StrategyType.NoYield) {
-      borrowerStrategyAddress = this.config.noStrategyAddress;
-    } else if (borrowAssetStrategy == StrategyType.CompounYield) {
-      borrowerStrategyAddress = this.config.compoundStrategyContractAddress;
-    } else {
-      throw new Error('Unsupported strategy');
-    }
-
-    let borrowerVerifierAddress: string;
-    if (borrowerVerifier == VerifierType.AdminVerifier) {
-      borrowerVerifierAddress = this.config.adminVerifierContractAddress;
-    } else if (borrowerVerifier == VerifierType.TwitterVerifier) {
-      borrowerVerifierAddress = this.config.twitterVerifierContractAddress;
-    } else {
-      throw new Error('Unsupported verifier');
-    }
+    const lenderVerifierAddress: string = this.verifiactionApi.getVerifierAddress(lenderVerifier);
+    const collateralStrategyAddress: string = this.yieldApi.getStrategyAddress(collateralAssetStrategy);
+    const borrowerStrategyAddress: string = this.yieldApi.getStrategyAddress(borrowAssetStrategy);
+    const borrowerVerifierAddress: string = this.verifiactionApi.getVerifierAddress(borrowerVerifier);
 
     return this.pooledCreditLine.request(
       {

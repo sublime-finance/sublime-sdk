@@ -515,7 +515,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       // REPAY
       let amount: Balance = { value: '0', decimals: 18 };
 
-      if (['DEPOSIT_COLLATERAL', 'COLLATERAL_ADDED', 'COLLATERAL_WITHDRAWN'].includes(a.pooledCreditLineOperation)) {
+      if (['DEPOSIT_COLLATERAL', 'COLLATERAL_ADDED', 'COLLATERAL_WITHDRAWN', 'WITHDRAW_COLLATERAL'].includes(a.pooledCreditLineOperation)) {
         amount = { value: a.amount, decimals: collateralTokenDecimal };
       }
       if (
