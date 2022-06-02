@@ -104,6 +104,16 @@ export class PooledCreditLinesLenderOverview extends PooledCreditLinesBorrowerOv
           new BigNumber(0)
         );
 
+        const totalInterestEarned = requiredElements.reduce(
+          (total, current) =>
+            total.plus(
+              new BigNumber(current.interestEarned.value.toString())
+                .multipliedBy(prices[current.token.address])
+                .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(current.token.address)))
+            ),
+          new BigNumber(0)
+        );
+
         const totalSharesWithdrawn = requiredElements.reduce(
           (total, current) => total.plus(new BigNumber(current.sharesWithdrawn.value.toString())),
           new BigNumber(0)
@@ -116,6 +126,7 @@ export class PooledCreditLinesLenderOverview extends PooledCreditLinesBorrowerOv
           amountWithdrawn: { value: totalAmountWithdrawn.toString(), decimals: 0 },
           interestWithdrawn: { value: totalInterestWithdrawn.toString(), decimals: 0 },
           sharesWithdrawn: { value: totalSharesWithdrawn.toString(), decimals: 18 },
+          interestEarned: { value: totalInterestEarned.toString(), decimals: 0 },
         });
       }
     }
@@ -156,13 +167,22 @@ export class PooledCreditLinesLenderOverview extends PooledCreditLinesBorrowerOv
           new BigNumber(0)
         );
 
+        const totalInterestEarned = requiredEntries.reduce(
+          (total, current) => total.plus(current.interestEarned.value.toString()),
+          new BigNumber(0)
+        );
+
         pooledCreditLineLenderCollectivePerToken.push({
-          amountLent: { value: totalAmountLent.toString(), decimals: 0 },
+          amountLent: { value: totalAmountLent.toString(), decimals: this.tokenManager.getTokenDecimals(requiredEntries[0].token.address) },
           amountWithdrawn: { value: totalAmountWithdrawn.toString(), decimals: 0 },
           interestWithdrawn: { value: totalInterestWithdrawn.toString(), decimals: 0 },
           sharesWithdrawn: { value: totalSharesWithdrawn.toString(), decimals: 18 },
           id: 'to=do',
           token: requiredEntries[0].token,
+          interestEarned: {
+            value: totalInterestEarned.toString(),
+            decimals: this.tokenManager.getTokenDecimals(requiredEntries[0].token.address),
+          },
         });
       }
     }
@@ -213,11 +233,22 @@ export class PooledCreditLinesLenderOverview extends PooledCreditLinesBorrowerOv
       new BigNumber(0)
     );
 
+    const totalInterestEarned = pooledCreditLineLenderCollectivePerTokenPerStrategy.reduce(
+      (total, current) =>
+        total.plus(
+          new BigNumber(current.interestEarned.value.toString())
+            .multipliedBy(prices[current.token.address])
+            .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(current.token.address)))
+        ),
+      new BigNumber(0)
+    );
+
     return {
       amountLent: { value: totalAmountLent.toString(), decimals: 0 },
       amountWithdrawn: { value: totalAmountWithdrawn.toString(), decimals: 0 },
       interestWithdrawn: { value: totalInterestWithdrawn.toString(), decimals: 0 },
       sharesWithdrawn: { value: totalSharesWithdrawn.toString(), decimals: 18 },
+      interestEarned: { value: totalInterestEarned.toString(), decimals: 0 },
     };
   }
 
@@ -243,6 +274,7 @@ export class PooledCreditLinesLenderOverview extends PooledCreditLinesBorrowerOv
         amountWithdrawn: { value: a.amountWithdrawn, decimals: this.tokenManager.getTokenDecimals(a.token) },
         sharesWithdrawn: { value: a.sharesWithdrawn, decimals: 0 },
         interestWithdrawn: { value: a.interestWithdrawn, decimals: 0 },
+        interestEarned: { value: this.getRandomInt(parseInt(a.amountLent)), decimals: this.tokenManager.getTokenDecimals(a.token) },
       };
     });
     return Promise.all(all);

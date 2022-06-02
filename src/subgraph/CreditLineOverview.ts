@@ -68,7 +68,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     };
   }
 
-  async getTotalAmountCommitedByLender(lender: string): Promise<LenderTotalCreditCommited> {
+  async getTotalAmountCommitedByLenderToCreditLines(lender: string): Promise<LenderTotalCreditCommited> {
     const result: any[] = [];
     const count = 999;
     let skip = 0;
@@ -89,7 +89,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     return this.transformToLenderTotalCredit(result);
   }
 
-  async getInterestCollectedByLender(lender: string): Promise<InterestCollectedByLender> {
+  async getInterestCollectedByLenderFromCreditLines(lender: string): Promise<InterestCollectedByLender> {
     const result: any[] = [];
     const count = 999;
     let skip = 0;
@@ -110,7 +110,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
     return this.transformToInterestCollectedByLender(result);
   }
 
-  async getAvaialbleBorrowLimitOfBorrower(borrower: string): Promise<BorrowerAvailableCredit> {
+  async getAvaialbleBorrowLimitOfBorrowerOfCreditLines(borrower: string): Promise<BorrowerAvailableCredit> {
     const result: any[] = [];
     const count = 999;
     let skip = 0;
@@ -162,9 +162,13 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
       const element = uniqueTokens[index];
       const requiredEntries = data.filter((a) => a.borrowAsset === element);
       if (requiredEntries.length > 0) {
+        const totalInterestCollectedPerToken = requiredEntries.reduce(
+          (total, current) => total.plus(current.totalInterestRepaid),
+          new BigNumber(0)
+        );
         interestCollectedByLenderPerToken.push({
           amount: {
-            value: requiredEntries.reduce((total, current) => total.plus(current.totalInterestRepaid), new BigNumber(0)),
+            value: totalInterestCollectedPerToken.toString(),
             decimals: this.tokenManager.getTokenDecimals(requiredEntries[0].borrowAsset),
           },
           token: await this.tokenManager.getAssetMeta(requiredEntries[0].borrowAsset),

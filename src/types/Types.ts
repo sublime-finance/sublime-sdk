@@ -87,6 +87,7 @@ export enum StrategyType {
 export enum VerifierType {
   TwitterVerifier = 'TwitterVerifier',
   AdminVerifier = 'AdminVerifier',
+  PersonaVerifier = 'PersonaVerifier',
 }
 
 export enum Operation {
@@ -272,6 +273,7 @@ export interface PooledCreditLineDetail {
   totalLentAmount: Balance;
   currentCollateralRatio: Balance;
   currentDebt: Balance;
+  minBorrowAmount: Balance;
 }
 
 export interface CreditLineUser {

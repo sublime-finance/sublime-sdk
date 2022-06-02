@@ -15,6 +15,7 @@ export interface SublimeConfig {
   repaymentContractAddress: string;
   twitterVerifierContractAddress: string;
   adminVerifierContractAddress: string;
+  personaVerifierContractAddress: string;
   priceOracleContractAddress: string;
   creditLineEthHelperAddress?: string;
   poolUtilsAddress?: string;

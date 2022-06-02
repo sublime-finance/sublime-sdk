@@ -11,7 +11,7 @@ import { AdminVerifier } from '../wrappers';
 import { AdminVerifier__factory } from '../wrappers/factories/AdminVerifier__factory';
 
 import { BigNumberish } from '@ethersproject/bignumber';
-import { Options as Overrides, VerifierType } from '../types/Types';
+import { Options as Overrides, VerifierType, Verifier as VerifierDetails } from '../types/Types';
 
 /**
  * @class VerificationAPI
@@ -36,6 +36,7 @@ export class VerificationAPI {
    * @description Admin Verifier contract instance
    */
   private adminVerifier: AdminVerifier;
+  private personaVerifier: AdminVerifier;
 
   /**
    * @description Internal store for all sublime contracts addresses
@@ -51,6 +52,7 @@ export class VerificationAPI {
     this.verification = new Verification__factory(this.signer).attach(config.verificationContractAddress);
     this.twitterVerifier = new TwitterVerifier__factory(this.signer).attach(config.twitterVerifierContractAddress);
     this.adminVerifier = new AdminVerifier__factory(this.signer).attach(config.adminVerifierContractAddress);
+    this.personaVerifier = new AdminVerifier__factory(this.signer).attach(config.personaVerifierContractAddress);
     this.config = config;
   }
 
@@ -74,8 +76,7 @@ export class VerificationAPI {
   }
 
   /**
-   * @description Only Verification Admin can call this function
-   * @param verifier address of the new verifier contract
+   * @param verifier Address of the verifier contract. Only Admin can call
    * @returns
    */
   public async addVerifier(verifier: string, options?: Overrides): Promise<ContractTransaction> {
@@ -113,11 +114,6 @@ export class VerificationAPI {
     return this.twitterVerifier.registerSelf(_isMasterLinked, _v, _r, _s, _twitterId, _tweetId, _deadline, { ...options });
   }
 
-  /**
-   * @description user should call this function from his wallet if he wants to unregister from twitter verifier
-   * @param options
-   * @returns
-   */
   public unregisterSelfUsingTwitterVerifier(options?: Overrides): Promise<ContractTransaction> {
     return this.twitterVerifier.unregisterSelf({ ...options });
   }
@@ -145,11 +141,22 @@ export class VerificationAPI {
     return this.adminVerifier.registerSelf(_isMasterLinked, _v, _r, _s, _userData, _deadline, { ...options });
   }
 
-  /**
-   * @description user should call this function from his wallet if he wants to unregister from admin verifier
-   * @param options
-   * @returns
-   */
+  public registerUsingPersonaVerifier(
+    _isMasterLinked: boolean,
+    _v: BigNumberish,
+    _r: BytesLike,
+    _s: BytesLike,
+    _userData: string,
+    _deadline: BigNumberish,
+    options?: Overrides
+  ): Promise<ContractTransaction> {
+    return this.personaVerifier.registerSelf(_isMasterLinked, _v, _r, _s, _userData, _deadline, { ...options });
+  }
+
+  public unregisterSelfUsingPersonaVerifier(options?: Overrides): Promise<ContractTransaction> {
+    return this.personaVerifier.unregisterSelf({ ...options });
+  }
+
   public unregisterSelfUsingAdminVerifier(options?: Overrides): Promise<ContractTransaction> {
     return this.adminVerifier.unregisterSelf({ ...options });
   }
@@ -181,6 +188,8 @@ export class VerificationAPI {
       return this.config.adminVerifierContractAddress;
     } else if (type == VerifierType.TwitterVerifier) {
       return this.config.twitterVerifierContractAddress;
+    } else if (type == VerifierType.PersonaVerifier) {
+      return this.config.personaVerifierContractAddress;
     } else {
       return undefined;
     }
@@ -199,8 +208,16 @@ export class VerificationAPI {
       return VerifierType.AdminVerifier;
     } else if (address.toLowerCase() == this.config.twitterVerifierContractAddress.toLowerCase()) {
       return VerifierType.TwitterVerifier;
+    } else if (address.toLowerCase() == this.config.personaVerifierContractAddress.toLowerCase()) {
+      return VerifierType.PersonaVerifier;
     } else {
       return undefined;
     }
+  }
+
+  public getSupportedVerifiers(): VerifierDetails[] {
+    return [VerifierType.AdminVerifier, VerifierType.TwitterVerifier, VerifierType.PersonaVerifier].map((a) => {
+      return { type: a, address: this.getVerifierAddress(a) };
+    });
   }
 }
