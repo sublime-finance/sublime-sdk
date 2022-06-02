@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/types/overview/LenderTotalCredit.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/0ae442b/src/types/overview/LenderTotalCredit.ts#L4)
+[src/types/overview/LenderTotalCredit.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/4a6535d/src/types/overview/LenderTotalCredit.ts#L4)

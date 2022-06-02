@@ -273,6 +273,7 @@ export interface PooledCreditLineDetail {
   currentCollateralRatio: Balance;
   currentDebt: Balance;
   minBorrowAmount: Balance;
+  lenderVerifier: Verifier;
 }
 
 export interface CreditLineUser {

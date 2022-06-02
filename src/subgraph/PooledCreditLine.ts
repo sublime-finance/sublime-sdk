@@ -22,6 +22,7 @@ import {
   Balance,
   LenderPoolDetail,
   LenderPerPoolDetail,
+  VerifierType,
 } from '../types/Types';
 
 import BigNumber from 'bignumber.js';
@@ -302,6 +303,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
           decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
         minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        lenderVerifier: { type: this.verificationApi.getVerifierType(a.lenderVerifier.id), address: a.lenderVerifier.id },
       };
     });
 

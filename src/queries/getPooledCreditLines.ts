@@ -10,6 +10,9 @@ export async function getPooledCreditLineTimeline(url: string, pooledCreditLineI
         timestamp
         amount
         strategy
+        lenderVerifier{
+          id
+        }
       }
     }`,
   });
@@ -65,6 +68,9 @@ export async function getPooledCreditLinesOfLender(
                 totalInterestRepaid
                 lastPrincipalUpdateTime
                 interestAccruedTillLastPrincipalUpdate
+                lenderVerifier{
+                  id
+                }
             }
           }
         }
@@ -130,6 +136,9 @@ export async function getPooledCreditLinesForLenderById(url: string, lenderAddre
                 lastPrincipalUpdateTime
                 interestAccruedTillLastPrincipalUpdate
                 totalLentAmount
+                lenderVerifier{
+                  id
+                }
             }
           }
         }
@@ -185,6 +194,9 @@ export async function getPooledCreditLinesOfBorrower(url: string, borrower: stri
           lastPrincipalUpdateTime
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
+          lenderVerifier{
+            id
+          }
         }
       }`,
   });
@@ -235,6 +247,9 @@ export async function getPooledCreditLinesOfBorrowerWithState(
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
   });
@@ -284,6 +299,9 @@ export async function getPooledCreditLinesOfBorrowerWithNotState(
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
   });
@@ -328,6 +346,9 @@ export async function getPooledCreditLinesOfLenderCanLendTo(url: string, lender:
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
   });
@@ -372,6 +393,9 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier{
+            id
+          }
         }
       }`,
   });
@@ -415,6 +439,9 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
   });
@@ -458,6 +485,9 @@ export async function getAllPooledCreditLinesWithState(url: string, count: numbe
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
   });
@@ -501,6 +531,9 @@ export async function getAllPooledCreditLinesWithNotState(url: string, count: nu
           interestAccruedTillLastPrincipalUpdate
           totalLentAmount
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
   });
@@ -574,6 +607,9 @@ export async function getAllPooledCreditLinesForCount(url: string): Promise<any[
       query: `{
         pooledCreditLines(first: ${countPerQuery}, skip:${skip * countPerQuery}, orderBy: createdAt, orderDirection: desc){
           id
+          lenderVerifier{
+            id
+          }
         }
       }`,
     });
@@ -597,37 +633,6 @@ export async function getAllPooledCreditLinesForCount(url: string): Promise<any[
   }
 }
 
-export async function getAllCreditLinesForCount(url: string): Promise<any[]> {
-  let skip = 0;
-  const allData = [];
-  for (;;) {
-    const data = JSON.stringify({
-      query: `{
-        creditLines(first: ${countPerQuery}, skip:${skip * countPerQuery}, orderBy: createdAt, orderDirection: desc){
-          id
-        }
-      }`,
-    });
-
-    const options = {
-      url,
-      headers: { 'Content-Type': 'application/json' },
-      body: data,
-    };
-
-    const result = await fetchData(options);
-    if (result.errors) {
-      print(result.errors);
-      throw new Error('Error while fetching data from subgraph');
-    } else if (result.data.creditLines.length == 0) {
-      return allData;
-    } else {
-      skip++;
-      allData.push(...result.data.creditLines);
-    }
-  }
-}
-
 export async function getAllPooledCreditLinesForCountWithState(url: string, status: string[]): Promise<any[]> {
   let skip = 0;
   const allData = [];
@@ -639,6 +644,9 @@ export async function getAllPooledCreditLinesForCountWithState(url: string, stat
       }, orderBy: createdAt, orderDirection: desc, where:{status_in:[${status}]}){
           id
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
     });
@@ -673,6 +681,9 @@ export async function getAllPooledCreditLinesForCountWithStateNotIn(url: string,
       }, orderBy: createdAt, orderDirection: desc, where:{status_not_in:[${status}]}){
           id
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
     });
@@ -708,6 +719,9 @@ export async function getAllPooledCreditLinesOfLenderWithState(url: string, lend
           pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}, where:{status_in:[${status}]}){
             id
             status
+            lenderVerifier{
+              id
+            }
           }
         }
       }`,
@@ -753,6 +767,9 @@ export async function getAllPooledCreditLinesOfLender(url: string, lenderAddress
           pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}){
             id
             status
+            lenderVerifier{
+              id
+            }
           }
         }
       }`,
@@ -798,6 +815,9 @@ export async function getAllPooledCreditLinesOfLenderWithStateNotIn(url: string,
           pooledCreditLines(first: ${countPerQuery}, skip: ${countPerQuery * skip}, where:{status_not_in:[${status}]}){
             id
             status
+            lenderVerifier{
+              id
+            }
           }
         }
       }`,
@@ -845,6 +865,9 @@ export async function getAllPooledCreditLinesOfBorrowerWithState(url: string, bo
           status
           endsAt
           defaultsAt
+          lenderVerifier{
+            id
+          }
         }
       }`,
     });
@@ -884,6 +907,9 @@ export async function getAllPooledCreditLinesOfBorrowerWithStateNotIn(
       }, orderBy: createdAt, orderDirection: desc, where:{borrowerAddress:"${borrowerAddress}",status_not_in:[${status}]}){
           id
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
     });
@@ -919,6 +945,9 @@ export async function getAllPooledCreditLinesOfBorrower(url: string, borrowerAdd
       }, orderBy: createdAt, orderDirection: desc, where:{borrowerAddress:"${borrowerAddress}"}){
           id
           status
+          lenderVerifier{
+            id
+          }
         }
       }`,
     });
