@@ -55,10 +55,10 @@ export class VerificationAPI {
   }
 
   /**
-   * @param verifier Address of the verifier contract. (Default is the admin verifier)
+   * @param verifier Address of the verifier contract. Only Admin can call
    * @returns
    */
-  public async addVerifier(verifier: string = this.twitterVerifier.address, options?: Overrides): Promise<ContractTransaction> {
+  public async addVerifier(verifier: string, options?: Overrides): Promise<ContractTransaction> {
     return this.verification.addVerifier(verifier, { ...options });
   }
   /**
