@@ -1,5 +1,5 @@
 import { BigNumber } from 'bignumber.js';
-import { CreditLineStatus } from 'types/Types';
+import { CreditLineStatus } from '../types/Types';
 import { EmulatorHelper } from './Helpers';
 
 interface CreditLineState {
