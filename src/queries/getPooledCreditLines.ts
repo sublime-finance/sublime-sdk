@@ -978,3 +978,49 @@ export async function getLendersOfPooledCreditLines(url: string, id: string): Pr
     }
   }
 }
+
+export async function getPCLandLpTogether(url: string, count: number, skip: number): Promise<any[]> {
+  const allData = [];
+  const data = JSON.stringify({
+    query: `{
+      lenderPools(first:${count}, skip:${skip}){
+        id,
+        sharesHeld,
+        borrowerInterestShares
+        borrowerInterestSharesWithdrawn
+        yieldInterestWithdrawnShares
+        borrowLimit
+        startTime
+        minBorrowAmount
+        pooledCreditLine{
+          id
+          status
+          endsAt
+          principal
+          idealCollateralRatio
+          totalInterestRepaid
+          lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
+          interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+        }
+      }
+    }`,
+  });
+
+  const options = {
+    url,
+    headers: { 'Content-Type': 'application/json' },
+    body: data,
+  };
+
+  const result = await fetchData(options);
+  // print({result});
+  allData.push(...result.data.lenderPools);
+  // console.log({allData})
+  return allData;
+}

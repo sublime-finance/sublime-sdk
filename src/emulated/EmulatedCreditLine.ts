@@ -5,16 +5,22 @@ import { Signer } from 'ethers';
 import BigNumber from 'bignumber.js';
 import { YieldAndStrategyApi } from '../api/yieldAndStrategy';
 import { SublimeConfig } from '../types/sublimeConfig';
-import { StrategyType } from '../types/Types';
-export class EmulatedCreditLines {
-  private subgraphUrl: string;
-  private tokenManager: TokenManager;
-  private yieldApi: YieldAndStrategyApi;
+import { EmulatedHelper } from './Helper';
 
-  constructor(subgraphUrl: string, priceSubgraphUrl: string, signer: Signer, config: SublimeConfig) {
+export class EmulatedCreditLines extends EmulatedHelper {
+  private subgraphUrl: string;
+
+  constructor(subgraphUrl: string, priceSubgraphUrl: string, signer: Signer, config: SublimeConfig, tokenManager?: TokenManager) {
+    let _tokenManager: TokenManager;
+    let yieldApi: YieldAndStrategyApi;
+    yieldApi = new YieldAndStrategyApi(signer, config, tokenManager);
+    if (tokenManager) {
+      _tokenManager = tokenManager;
+    } else {
+      _tokenManager = new TokenManager(signer, priceSubgraphUrl);
+    }
+    super(_tokenManager, yieldApi);
     this.subgraphUrl = subgraphUrl;
-    this.tokenManager = new TokenManager(signer, priceSubgraphUrl);
-    this.yieldApi = new YieldAndStrategyApi(signer, config, this.tokenManager);
   }
 
   async getAllCreditLines(count: number = 13, skip: number = 0): Promise<CreditLineEmulator[]> {
@@ -22,56 +28,6 @@ export class EmulatedCreditLines {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     return this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-  }
-
-  private async refreshTokenData(data: any[]): Promise<Record<string, BigNumber>> {
-    const borrowTokens: string[] = data.map((a) => a.collateralAsset);
-    const collateralTokens: string[] = data.map((a) => a.borrowAsset);
-    const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
-
-    const prices: Record<string, BigNumber> = {};
-    for (let index = 0; index < allTokens.length; index++) {
-      const element = allTokens[index];
-      await this.tokenManager.updateAll(element);
-      prices[element] = await this.tokenManager.getPricePerAsset(element);
-    }
-    return prices;
-  }
-
-  private async refreshStrategyData(data: any[]): Promise<Record<string, Record<string, BigNumber>>> {
-    const allStrategyAndTokenPairs = data.map((a) => {
-      return { strategy: a.strategy, collateralAsset: a.collateralAsset, id: `${a.strategy}-${a.collateralAsset}` };
-    });
-
-    const allIds = allStrategyAndTokenPairs.map((a) => a.id).filter((value, index, self) => self.indexOf(value) === index);
-    const uniquePairs = allIds.map((a) => {
-      return { strategy: a.split('-')[0], collateralAsset: a.split('-')[1] };
-    });
-
-    const collateralPerStrategyToken: Record<string, Record<string, BigNumber>> = {};
-    const valueToCheck = new BigNumber(10).pow(18);
-    for (let index = 0; index < uniquePairs.length; index++) {
-      const element = uniquePairs[index];
-      const strategy = this.yieldApi.getStrategy(element.strategy);
-
-      const tokensForShares = await this.getTokensForShares(strategy, element.collateralAsset, valueToCheck);
-      if (!collateralPerStrategyToken[element.strategy]) {
-        collateralPerStrategyToken[element.strategy] = {};
-      }
-      collateralPerStrategyToken[element.strategy][element.collateralAsset] = tokensForShares.div(valueToCheck);
-    }
-
-    return collateralPerStrategyToken;
-  }
-
-  private async getTokensForShares(strategy: StrategyType, collateralAsset: string, amount: BigNumber): Promise<BigNumber> {
-    if (strategy == StrategyType.NoYield) return new BigNumber(amount);
-
-    try {
-      return await this.yieldApi.getTokensForShares(strategy, collateralAsset, amount, false);
-    } catch (ex) {
-      return new BigNumber(0);
-    }
   }
 
   private transformToCreditLineEmulator(

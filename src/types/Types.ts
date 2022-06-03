@@ -6,6 +6,8 @@ export * from './overview/BorrowerCreditLimit';
 export * from './overview/PooledCreditLineOverview';
 export * from './overview/InterestDetails';
 
+export * from './emulator';
+
 export enum PclUpcomingState {
   ABOUT_TO_EXPIRE = 'PCL is about to cross endsAt time',
   ABOUT_TO_DEFAULT = 'PCL is about to cross defaultsAt time',

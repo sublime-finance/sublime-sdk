@@ -1,0 +1,181 @@
+import { BigNumber } from 'bignumber.js';
+import {
+  CreditLineStatus,
+  PooledCreditLineState,
+  PooledCreditLineExternalData,
+  LenderPoolState,
+  LenderPoolExternalData,
+} from '../types/Types';
+import { EmulatorHelper } from './Helpers';
+
+import { LenderPoolEmulator } from './LenderPool';
+
+const SCALING_FACTOR = new BigNumber(10).pow(18);
+const YEAR_IN_SECONDS = new BigNumber(86400).multipliedBy(365);
+const UINT256_MAX = new BigNumber('2').pow(256).minus(1);
+
+export class PooledCreditLineEmulator extends EmulatorHelper {
+  private pooledCreditLineState: PooledCreditLineState;
+  private externalData: PooledCreditLineExternalData;
+  private lenderPoolState: LenderPoolState;
+  private lenderPoolExternalData: LenderPoolExternalData;
+
+  constructor(pooledCreditLineState: PooledCreditLineState, externalData: PooledCreditLineExternalData, lenderPoolState: LenderPoolState) {
+    super();
+    this.pooledCreditLineState = pooledCreditLineState;
+    this.externalData = externalData;
+    this.lenderPoolState = lenderPoolState;
+    this.lenderPoolExternalData = externalData;
+  }
+
+  public getId(): string {
+    return this.pooledCreditLineState.id;
+  }
+
+  public getLenderPoolEmulator(): LenderPoolEmulator {
+    return new LenderPoolEmulator(this.lenderPoolState, this.lenderPoolExternalData, {
+      principal: this.pooledCreditLineState.principal,
+      status: this.getStatus(),
+    });
+  }
+
+  public withdrawableCollateral(): BigNumber {
+    const _status = this.getStatus();
+
+    if ([CreditLineStatus.EXPIRED, CreditLineStatus.CANCELLED, CreditLineStatus.REQUESTED].includes(_status)) {
+      return new BigNumber(0);
+    }
+
+    const _totalCollateralTokens = this.calculateTotalCollateralTokens();
+
+    if ([CreditLineStatus.LIQUIDATED, CreditLineStatus.CLOSED].includes(_status)) {
+      return _totalCollateralTokens;
+    }
+
+    const _currentDebt = this.calculateCurrentDebt();
+    const _collateralRatio = this.pooledCreditLineState.idealCollateralRatio;
+
+    const _collateralNeeded = _currentDebt
+      .multipliedBy(_collateralRatio)
+      .div(this.externalData.ratioOfPrices)
+      .multipliedBy(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals))
+      .div(SCALING_FACTOR);
+
+    if (_collateralNeeded.gte(_totalCollateralTokens)) {
+      return new BigNumber(0);
+    }
+
+    return _totalCollateralTokens.minus(_collateralNeeded);
+  }
+
+  public calculateInterestAccrued(): BigNumber {
+    const _lastPrincipalUpdateTime = this.pooledCreditLineState.lastPrincipalUpdateTime;
+    const _principal = this.pooledCreditLineState.principal;
+
+    if (_lastPrincipalUpdateTime.eq(0) && _principal.eq(0)) {
+      return new BigNumber(0);
+    }
+
+    const _timeElapsed = this.now().minus(_lastPrincipalUpdateTime);
+    const _endTime = this.pooledCreditLineState.endsAt;
+    const _penaltyRate = this.pooledCreditLineState.gracePenaltyRate;
+    const _borrowRate = this.pooledCreditLineState.borrowRate;
+
+    let _penaltyInterest: BigNumber = new BigNumber(0);
+    if (_lastPrincipalUpdateTime.lte(_endTime) && this.now().gt(_endTime)) {
+      _penaltyInterest = this.calculateInterest(_principal, _penaltyRate, this.now().minus(_endTime));
+    } else {
+      _penaltyInterest = this.calculateInterest(_principal, _penaltyRate, this.now().minus(_lastPrincipalUpdateTime));
+    }
+
+    let _interestAccrued = this.calculateInterest(_principal, _borrowRate, _timeElapsed);
+    _interestAccrued = _interestAccrued.plus(_penaltyInterest);
+    return _interestAccrued.plus(this.pooledCreditLineState.interestAccruedTillLastPrincipalUpdate);
+  }
+
+  public calculateCurrentDebt(): BigNumber {
+    const _interestAccrued = this.calculateInterestAccrued();
+    return this.pooledCreditLineState.principal.plus(_interestAccrued).minus(this.pooledCreditLineState.totalInterestRepaid);
+  }
+
+  public calculateTotalCollateralTokens(): BigNumber {
+    return this.externalData.collateralPerStrategyToken.multipliedBy(this.pooledCreditLineState.depositedCollateralInShares);
+  }
+
+  public getStatus(): CreditLineStatus {
+    const currentStatus = this.pooledCreditLineState.pooledCreditLineStatus;
+
+    if (currentStatus == CreditLineStatus.ACTIVE && this.pooledCreditLineState.endsAt.lte(this.now())) {
+      if (this.pooledCreditLineState.principal.gt(0)) {
+        return CreditLineStatus.EXPIRED;
+      } else {
+        return CreditLineStatus.CLOSED;
+      }
+    }
+
+    return currentStatus;
+  }
+
+  private calculateInterest(principal: BigNumber, borrowRate: BigNumber, timeElapsed: BigNumber): BigNumber {
+    return principal.multipliedBy(borrowRate).multipliedBy(timeElapsed).div(SCALING_FACTOR).div(YEAR_IN_SECONDS);
+  }
+
+  public getRequiredCollateral(_borrowTokennAmount: BigNumber): BigNumber {
+    const _collateral = this._equivalentCollateral(_borrowTokennAmount);
+    return _collateral.multipliedBy(this.pooledCreditLineState.idealCollateralRatio).div(SCALING_FACTOR);
+  }
+
+  private _equivalentCollateral(_borrowTokennAmount: BigNumber): BigNumber {
+    return _borrowTokennAmount
+      .multipliedBy(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals))
+      .div(this.externalData.ratioOfPrices);
+  }
+
+  public collateralTokensToLiquidate(_borrowTokensToLiquidate: BigNumber): BigNumber {
+    return this._equivalentCollateral(_borrowTokensToLiquidate);
+  }
+
+  public calculateBorrowableAmount(): BigNumber {
+    const _status = this.getStatus();
+
+    if (_status != CreditLineStatus.ACTIVE) return new BigNumber(0);
+
+    const _totalCollateralTokens = this.calculateTotalCollateralTokens();
+    const _currentDebt = this.calculateCurrentDebt();
+    const _collateralRatio = this.pooledCreditLineState.idealCollateralRatio;
+    let _maxPossible = UINT256_MAX;
+
+    if (_collateralRatio.gt(0)) {
+      _maxPossible = _totalCollateralTokens
+        .multipliedBy(this.externalData.ratioOfPrices)
+        .div(_collateralRatio)
+        .multipliedBy(SCALING_FACTOR)
+        .div(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals));
+    }
+
+    const _borrowLimit = this.pooledCreditLineState.borrowLimit;
+    const _principal = this.pooledCreditLineState.principal;
+
+    if (_maxPossible.lte(_currentDebt)) return new BigNumber(0);
+
+    return this.min(_borrowLimit.minus(_principal), _maxPossible.minus(_currentDebt));
+  }
+
+  public calculateCurrentCollateralRatio(): BigNumber {
+    const _currentDebt = this.calculateCurrentDebt();
+    let _currentCollateralRatio = UINT256_MAX;
+    if (_currentDebt.gt(0)) {
+      _currentCollateralRatio = this.calculateTotalCollateralTokens()
+        .multipliedBy(this.externalData.ratioOfPrices)
+        .div(_currentDebt)
+        .multipliedBy(SCALING_FACTOR)
+        .div(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals));
+    }
+
+    return _currentCollateralRatio;
+  }
+
+  public getPrincipal(): BigNumber {
+    return this.pooledCreditLineState.principal;
+  }
+}

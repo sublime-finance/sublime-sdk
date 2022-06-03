@@ -1,0 +1,100 @@
+import { TokenManager } from '../tokenManager';
+import { Signer } from 'ethers';
+import { YieldAndStrategyApi } from '../api/yieldAndStrategy';
+import { SublimeConfig } from '../types/sublimeConfig';
+import { EmulatedHelper } from './Helper';
+import { getPCLandLpTogether } from '../queries';
+import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
+import BigNumber from 'bignumber.js';
+
+export class EmulatedPooledCreditLines extends EmulatedHelper {
+  private subgraphUrl: string;
+
+  constructor(subgraphUrl: string, priceSubgraphUrl: string, signer: Signer, config: SublimeConfig, tokenManager?: TokenManager) {
+    let _tokenManager: TokenManager;
+    let yieldApi: YieldAndStrategyApi;
+    yieldApi = new YieldAndStrategyApi(signer, config, tokenManager);
+    if (tokenManager) {
+      _tokenManager = tokenManager;
+    } else {
+      _tokenManager = new TokenManager(signer, priceSubgraphUrl);
+    }
+    super(_tokenManager, yieldApi);
+    this.subgraphUrl = subgraphUrl;
+  }
+
+  async getAllPooledCreditLines(count: number = 13, skip: number = 0): Promise<PooledCreditLineEmulator[]> {
+    const lpData = await getPCLandLpTogether(this.subgraphUrl, count, skip);
+    const pclData = lpData.map((a) => a.pooledCreditLine);
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    return this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+  }
+
+  private transformToPooledCreditLineEmulator(
+    pclData: any[],
+    lenderPoolData: any[],
+    prices: Record<string, BigNumber>,
+    collateralPerStrategyToken: Record<string, Record<string, BigNumber>>
+  ): PooledCreditLineEmulator[] {
+    return pclData.map((a, index) => {
+      const aLenderPool = lenderPoolData[index];
+      return new PooledCreditLineEmulator(
+        {
+          id: a.id,
+          pooledCreditLineStatus: a.status,
+          endsAt: new BigNumber(a.endsAt),
+          principal: new BigNumber(a.principal),
+          idealCollateralRatio: new BigNumber(a.idealCollateralRatio),
+          totalInterestRepaid: new BigNumber(a.totalInterestRepaid),
+          lastPrincipalUpdateTime: new BigNumber(a.lastPrincipalUpdateTime),
+          gracePenaltyRate: new BigNumber(a.gracePenaltyRate),
+          borrowRate: new BigNumber(a.borrowRate),
+          interestAccruedTillLastPrincipalUpdate: new BigNumber(a.interestAccruedTillLastPrincipalUpdate),
+          depositedCollateralInShares: a.depositedCollateralInShares
+            ? new BigNumber(a.depositedCollateralInShares)
+            : this.getRandomInt(a.principal),
+          borrowLimit: new BigNumber(a.borrowLimit),
+        },
+        {
+          collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.lenderStrategy][a.collateralAsset]),
+          ratioOfPrices: new BigNumber(prices[a.borrowAsset]).dividedBy(prices[a.collateralAsset]),
+          ratioOfPricesDecimals: 1,
+        },
+        {
+          id: aLenderPool.id,
+          sharesHeld: new BigNumber(aLenderPool.sharesHeld),
+          borrowerInterestShares: new BigNumber(aLenderPool.borrowerInterestShares),
+          borrowerInterestSharesWithdrawn: new BigNumber(aLenderPool.borrowerInterestShares),
+          yieldInterestWithdrawnShares: new BigNumber(aLenderPool.yieldInterestWithdrawnShares),
+          borrowLimit: new BigNumber(aLenderPool.borrowLimit),
+          startTime: new BigNumber(aLenderPool.startTime),
+          minBorrowAmount: new BigNumber(aLenderPool.minBorrowAmount),
+        }
+      );
+    });
+  }
+}
+
+// {
+//     id: '123',
+//     borrowerAddress: '0x808ba745926e6cdef924c9bc0c758ec110474596',
+//     borrowLimit: '100000000000000000000',
+//     borrowRate: '120000000000000000',
+//     idealCollateralRatio: '400000000000000000',
+//     borrowAsset: '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa',
+//     collateralAsset: '0xe22da380ee6b445bb8273c81944adeb6e8450422',
+//     createdAt: '1653581648',
+//     startsAt: '1654013648',
+//     endsAt: '1661789648',
+//     defaultsAt: '1661962448',
+//     lenderStrategy: '0x924625da987a8f08f9ff3c370a23a1a1e41920cd',
+//     collateralStrategy: '0x924625da987a8f08f9ff3c370a23a1a1e41920cd',
+//     gracePenaltyRate: '120000000000000000',
+//     status: 'CANCELLED',
+//     principal: '0',
+//     totalInterestRepaid: '0',
+//     lastPrincipalUpdateTime: '0',
+//     interestAccruedTillLastPrincipalUpdate: '0',
+//     totalLentAmount: '0'
+//   }

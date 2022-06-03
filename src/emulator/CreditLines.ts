@@ -1,29 +1,6 @@
 import { BigNumber } from 'bignumber.js';
-import { CreditLineStatus } from '../types/Types';
+import { CreditLineStatus, CreditLineState, CreditLineExternalData, CreditLineGlobals } from '../types/Types';
 import { EmulatorHelper } from './Helpers';
-
-interface CreditLineState {
-  id: string;
-  collateralShareInStrategy: BigNumber;
-  principal: BigNumber;
-  lastPrincipalUpdateTime: BigNumber;
-  borrowRate: BigNumber;
-  interestAccruedTillLastPrincipalUpdate: BigNumber;
-  totalInterestRepaid: BigNumber;
-  idealCollateralRatio: BigNumber;
-  creditLineStatus: CreditLineStatus;
-  borrowLimit: BigNumber;
-}
-
-interface CreditLineGlobals {
-  liquidatorRewardFraction: BigNumber;
-}
-
-interface CreditLineExternalData {
-  collateralPerStrategyToken: BigNumber;
-  ratioOfPrices: BigNumber;
-  ratioOfPricesDecimals: number;
-}
 
 const SCALING_FACTOR = new BigNumber(10).pow(18);
 const YEAR_IN_SECONDS = new BigNumber(86400).multipliedBy(365);
@@ -34,7 +11,7 @@ export class CreditLineEmulator extends EmulatorHelper {
   externalData: CreditLineExternalData;
   globals: CreditLineGlobals;
 
-  constructor(creditLineState: CreditLineState, externalData: CreditLineExternalData, globals) {
+  constructor(creditLineState: CreditLineState, externalData: CreditLineExternalData, globals: CreditLineGlobals) {
     super();
     this.creditLineState = creditLineState;
     this.externalData = externalData;
@@ -140,7 +117,21 @@ export class CreditLineEmulator extends EmulatorHelper {
     return _borrowTokens.multipliedBy(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals)).div(this.externalData.ratioOfPrices);
   }
 
-  //to-do
+  public calculateCurrentCollateralRatio(): [BigNumber, BigNumber] {
+    const currentDebt = this.calculateCurrentDebt();
+    const totalCollateralTokens = this.calculateTotalCollateralTokens();
+    let currentCollateralRatio = UINT256_MAX;
+    if (currentDebt.gt(0)) {
+      currentCollateralRatio = totalCollateralTokens
+        .multipliedBy(this.externalData.ratioOfPrices)
+        .div(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals))
+        .multipliedBy(SCALING_FACTOR)
+        .div(currentDebt);
+    }
+    return [currentCollateralRatio, totalCollateralTokens];
+  }
+
+  // to-do
   //   public getCreditLineStatus() : CreditLineStatus{
 
   //   }
