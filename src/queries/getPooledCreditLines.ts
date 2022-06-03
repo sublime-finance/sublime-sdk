@@ -4,15 +4,12 @@ export async function getPooledCreditLineTimeline(url: string, pooledCreditLineI
   const allData = [];
   const data = JSON.stringify({
     query: `{
-        pooledCreditLineTimeLines(first:${count}, skip:${skip}, orderBy: timestamp, orderDirection: desc, where:{pooledCreditLine:"${pooledCreditLineId}"}){
+      pooledCreditLineTimeLines(first:${count}, skip:${skip}, orderBy: timestamp, orderDirection: desc, where:{pooledCreditLine:"${pooledCreditLineId}"}){
         id
         pooledCreditLineOperation
         timestamp
         amount
         strategy
-        lenderVerifier{
-          id
-        }
       }
     }`,
   });
