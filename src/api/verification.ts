@@ -24,6 +24,8 @@ export class VerificationAPI {
   private personaVerifier: AdminVerifier;
 
   private config: SublimeConfig;
+  private displayName: Record<string, string> = {};
+
   /**
    * @param signer Signer
    * @param config SublimeConfig
@@ -35,6 +37,10 @@ export class VerificationAPI {
     this.adminVerifier = new AdminVerifier__factory(this.signer).attach(config.adminVerifierContractAddress);
     this.personaVerifier = new AdminVerifier__factory(this.signer).attach(config.personaVerifierContractAddress);
     this.config = config;
+
+    this.displayName[config.personaVerifierContractAddress.toLowerCase()] = 'Personal Verifier';
+    this.displayName[config.twitterVerifierContractAddress.toLowerCase()] = 'Twitter Verifier';
+    this.displayName[config.adminVerifierContractAddress.toLocaleLowerCase()] = 'Admin Verifier';
   }
 
   /**
@@ -174,9 +180,18 @@ export class VerificationAPI {
     }
   }
 
+  public getVerifierDisplayName(address: string): string | undefined {
+    if (!address) {
+      return undefined;
+    }
+    address = address.toLowerCase();
+
+    return this.displayName[address];
+  }
+
   public getSupportedVerifiers(): VerifierDetails[] {
     return [VerifierType.AdminVerifier, VerifierType.TwitterVerifier, VerifierType.PersonaVerifier].map((a) => {
-      return { type: a, address: this.getVerifierAddress(a) };
+      return { type: a, address: this.getVerifierAddress(a), displayName: this.getVerifierDisplayName(this.getVerifierAddress(a)) };
     });
   }
 }

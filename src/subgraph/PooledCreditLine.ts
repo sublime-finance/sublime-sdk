@@ -305,8 +305,16 @@ export class PooledCreditLineCalls extends CreditLineCalls {
           decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
         minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        lenderVerifier: { type: this.verificationApi.getVerifierType(a.lenderVerifier.id), address: a.lenderVerifier.id },
-        borrowerVerifier: { type: VerifierType.TwitterVerifier, address: this.config.twitterVerifierContractAddress },
+        lenderVerifier: {
+          type: this.verificationApi.getVerifierType(a.lenderVerifier.id),
+          address: a.lenderVerifier.id,
+          displayName: this.verificationApi.getVerifierDisplayName(a.lenderVerifier.id),
+        },
+        borrowerVerifier: {
+          type: VerifierType.TwitterVerifier,
+          address: this.config.twitterVerifierContractAddress,
+          displayName: this.verificationApi.getVerifierDisplayName(this.config.twitterVerifierContractAddress),
+        },
       };
     });
 
@@ -611,7 +619,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         },
         collateralHeld: { value: a.collateralHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         areTokensTransferable: a.areTokensTransferable,
-        verifier: { type: this.verificationApi.getVerifierType(a.verifier.id), address: a.verifier.id },
+        verifier: {
+          type: this.verificationApi.getVerifierType(a.verifier.id),
+          address: a.verifier.id,
+          displayName: this.verificationApi.getVerifierDisplayName(a.verifier.id),
+        },
         lenders: this.transformToLenderPerPoolDetail(a.lender, this.tokenManager.getTokenDecimals(a.borrowAsset)),
       };
     });

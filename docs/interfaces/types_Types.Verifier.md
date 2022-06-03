@@ -9,6 +9,7 @@
 ### Properties
 
 - [address](types_Types.Verifier.md#address)
+- [displayName](types_Types.Verifier.md#displayname)
 - [type](types_Types.Verifier.md#type)
 
 ## Properties
@@ -19,7 +20,17 @@
 
 #### Defined in
 
-[src/types/Types.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/32a7536/src/types/Types.ts#L132)
+[src/types/Types.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/24c05e0/src/types/Types.ts#L132)
+
+___
+
+### displayName
+
+• **displayName**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/24c05e0/src/types/Types.ts#L133)
 
 ___
 
@@ -29,4 +40,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/32a7536/src/types/Types.ts#L131)
+[src/types/Types.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/24c05e0/src/types/Types.ts#L131)
