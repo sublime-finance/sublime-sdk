@@ -1007,6 +1007,7 @@ export async function getPCLandLpTogether(url: string, count: number, skip: numb
           borrowAsset
           collateralAsset
           lenderStrategy
+          depositedCollateralInShares
         }
       }
     }`,

@@ -51,9 +51,7 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
           gracePenaltyRate: new BigNumber(a.gracePenaltyRate),
           borrowRate: new BigNumber(a.borrowRate),
           interestAccruedTillLastPrincipalUpdate: new BigNumber(a.interestAccruedTillLastPrincipalUpdate),
-          depositedCollateralInShares: a.depositedCollateralInShares
-            ? new BigNumber(a.depositedCollateralInShares)
-            : this.getRandomInt(a.principal),
+          depositedCollateralInShares: new BigNumber(a.depositedCollateralInShares),
           borrowLimit: new BigNumber(a.borrowLimit),
         },
         {
