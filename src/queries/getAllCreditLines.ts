@@ -73,6 +73,7 @@ export async function getAllCreditLinesFromSubgraph(url: string, count: number, 
           autoLiquidation
           lastPrincipalUpdateTime
           createdAt
+          interestAccruedTillLastPrincipalUpdate
         }
     }`,
   });
@@ -136,6 +137,7 @@ async function _getCreditLinesOfBorrower(
           borrowAsset
           autoLiquidation
           lastPrincipalUpdateTime
+          interestAccruedTillLastPrincipalUpdate
         }
     }`,
   });
@@ -192,6 +194,7 @@ export async function getCreditLine(url: string, id: string): Promise<any[]> {
             borrowAsset
             autoLiquidation
             lastPrincipalUpdateTime
+            interestAccruedTillLastPrincipalUpdate
           }
       }`,
   });
@@ -256,6 +259,7 @@ async function _getCreditLinesOfLender(
             borrowAsset
             autoLiquidation
             lastPrincipalUpdateTime
+            interestAccruedTillLastPrincipalUpdate
           }
       }`,
   });
@@ -320,6 +324,7 @@ async function _getCreditLinesNotOfLender(
             borrowAsset
             autoLiquidation
             lastPrincipalUpdateTime
+            interestAccruedTillLastPrincipalUpdate
           }
       }`,
   });

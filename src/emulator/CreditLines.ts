@@ -41,6 +41,10 @@ export class CreditLineEmulator extends EmulatorHelper {
     this.globals = globals;
   }
 
+  public getId(): string {
+    return this.creditLineState.id;
+  }
+
   public withdrawableCollateral(): BigNumber {
     const totalCollateralTokens = this._calculateTotalCollateralTokens();
     const _currentDebt = this.calculateCurrentDebt();
@@ -54,6 +58,10 @@ export class CreditLineEmulator extends EmulatorHelper {
     }
 
     return totalCollateralTokens.minus(_collateralNeeded);
+  }
+
+  public calculateTotalCollateralTokens(): BigNumber {
+    return this._calculateTotalCollateralTokens();
   }
 
   private _calculateTotalCollateralTokens(): BigNumber {
@@ -71,16 +79,18 @@ export class CreditLineEmulator extends EmulatorHelper {
     }
     const _timeElapsed = this.now().minus(this.creditLineState.lastPrincipalUpdateTime);
     const _interestAccrued = this.calculateInterest(this.creditLineState.principal, this.creditLineState.borrowRate, _timeElapsed);
-    return _interestAccrued.minus(this.creditLineState.interestAccruedTillLastPrincipalUpdate);
+
+    return _interestAccrued.plus(this.creditLineState.interestAccruedTillLastPrincipalUpdate);
   }
 
-  public calculateInterest(principal: BigNumber, borrowRate: BigNumber, timeElapsed: BigNumber): BigNumber {
+  private calculateInterest(principal: BigNumber, borrowRate: BigNumber, timeElapsed: BigNumber): BigNumber {
     return principal.multipliedBy(borrowRate).multipliedBy(timeElapsed).div(SCALING_FACTOR).div(YEAR_IN_SECONDS);
   }
 
   public calculateBorrowableAmount(): BigNumber {
     if (this.creditLineState.creditLineStatus != CreditLineStatus.ACTIVE) {
-      throw new Error('CL:CBA1');
+      // throw new Error('CL:CBA1');
+      return new BigNumber(0);
     }
 
     const _collateralRatio = this.creditLineState.idealCollateralRatio;
