@@ -52,11 +52,13 @@ import {
 export class PooledCreditLineCalls extends CreditLineCalls {
   private pooledCreditLineContract: PooledCreditLine;
   private lenderPoolContract: LenderPool;
+  private config: SublimeConfig;
 
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
     super(url, signer, tokenManager, config);
     this.pooledCreditLineContract = new PooledCreditLine__factory(signer).attach(config.pooledCreditLineAddress);
     this.lenderPoolContract = new LenderPool__factory(signer).attach(config.lenderPoolAddress);
+    this.config = config;
   }
 
   /**
@@ -304,6 +306,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         },
         minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         lenderVerifier: { type: this.verificationApi.getVerifierType(a.lenderVerifier.id), address: a.lenderVerifier.id },
+        borrowerVerifier: { type: VerifierType.TwitterVerifier, address: this.config.twitterVerifierContractAddress },
       };
     });
 

@@ -274,6 +274,7 @@ export interface PooledCreditLineDetail {
   currentDebt: Balance;
   minBorrowAmount: Balance;
   lenderVerifier: Verifier;
+  borrowerVerifier: Verifier;
 }
 
 export interface CreditLineUser {
