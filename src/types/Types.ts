@@ -1,4 +1,5 @@
 import { BigNumberish, Overrides } from 'ethers';
+import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
 
 export * from './overview/CreditLineOverview';
 export * from './overview/LenderTotalCredit';
@@ -276,6 +277,7 @@ export interface PooledCreditLineDetail {
   currentCollateralRatio: Balance;
   currentDebt: Balance;
   minBorrowAmount: Balance;
+  emulator: PooledCreditLineEmulator;
 }
 
 export interface CreditLineUser {

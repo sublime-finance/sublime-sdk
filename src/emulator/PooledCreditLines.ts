@@ -5,6 +5,7 @@ import {
   PooledCreditLineExternalData,
   LenderPoolState,
   LenderPoolExternalData,
+  LenderPerPool,
 } from '../types/Types';
 import { EmulatorHelper } from './Helpers';
 
@@ -19,13 +20,20 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   private externalData: PooledCreditLineExternalData;
   private lenderPoolState: LenderPoolState;
   private lenderPoolExternalData: LenderPoolExternalData;
+  private lendersPerPool: LenderPerPool[];
 
-  constructor(pooledCreditLineState: PooledCreditLineState, externalData: PooledCreditLineExternalData, lenderPoolState: LenderPoolState) {
+  constructor(
+    pooledCreditLineState: PooledCreditLineState,
+    externalData: PooledCreditLineExternalData,
+    lenderPoolState: LenderPoolState,
+    lendersPerPool: LenderPerPool[]
+  ) {
     super();
     this.pooledCreditLineState = pooledCreditLineState;
     this.externalData = externalData;
     this.lenderPoolState = lenderPoolState;
     this.lenderPoolExternalData = externalData;
+    this.lendersPerPool = lendersPerPool;
   }
 
   public getId(): string {
@@ -33,10 +41,15 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   }
 
   public getLenderPoolEmulator(): LenderPoolEmulator {
-    return new LenderPoolEmulator(this.lenderPoolState, this.lenderPoolExternalData, {
-      principal: this.pooledCreditLineState.principal,
-      status: this.getStatus(),
-    });
+    return new LenderPoolEmulator(
+      this.lenderPoolState,
+      this.lenderPoolExternalData,
+      {
+        principal: this.pooledCreditLineState.principal,
+        status: this.getStatus(),
+      },
+      this.lendersPerPool
+    );
   }
 
   public withdrawableCollateral(): BigNumber {

@@ -12,6 +12,7 @@ import {
   getAllPooledCreditLinesOfBorrowerWithStateNotIn,
   getAllPooledCreditLinesOfBorrowerWithState,
   getAllPooledCreditLinesForCountWithStateNotIn,
+  getAllLendersPerPool,
 } from '../queries';
 
 import {
@@ -22,6 +23,7 @@ import {
   Balance,
   LenderPoolDetail,
   LenderPerPoolDetail,
+  LenderPerPool,
 } from '../types/Types';
 
 import BigNumber from 'bignumber.js';
@@ -46,7 +48,6 @@ import {
 import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
 
 export class PooledCreditLineCalls extends CreditLineCalls {
-
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
     super(url, signer, tokenManager, config);
   }
@@ -92,7 +93,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
@@ -119,7 +147,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
@@ -145,7 +200,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
@@ -160,7 +242,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
@@ -177,7 +286,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     const lines = this.transformToPooledCreditLine(result, emulatorResult, prices);
     return lines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
   }
@@ -207,7 +343,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
@@ -236,7 +399,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
@@ -253,7 +443,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
@@ -274,7 +491,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     let pooledCreditLines = this.transformToPooledCreditLine(result, emulatorResult, prices);
     let contributions = await this.transformToLenderContributionToPooledCreditLines(pooledCreditLines, contributionsData);
     pooledCreditLines = pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
@@ -295,7 +539,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const pclData = poolData;
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(
+      pclData,
+      lpData,
+      lenderPerPoolData,
+      prices,
+      collateralPerStrategyToken
+    );
     let poolDataDetail = this.transformToPooledCreditLine(poolData, emulatorResult, prices);
     const lenderContribution = await this.transformToLenderContributionToPooledCreditLines(poolDataDetail, contributionData);
     return [poolDataDetail[0], lenderContribution[0]];
@@ -312,6 +583,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     let lines = [...lenderLines, ...borrowerLines];
     lines = lines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
     return lines;
+  }
+
+  async getAllLendersPerPool(pclIds: string[]): Promise<any> {
+    const result = await getAllLendersPerPool(this.subgraphUrl, pclIds);
+    return result;
   }
 
   /**
@@ -571,11 +847,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
   private transformToPooledCreditLineEmulator(
     pclData: any[],
     lenderPoolData: any[],
+    lendersPerPool: LenderPerPool[][],
     prices: Record<string, BigNumber>,
     collateralPerStrategyToken: Record<string, Record<string, BigNumber>>
   ): PooledCreditLineEmulator[] {
     return pclData.map((a, index) => {
       const aLenderPool = lenderPoolData[index];
+      const lenderPerPool = lendersPerPool[index];
       return new PooledCreditLineEmulator(
         {
           id: a.id,
@@ -605,7 +883,8 @@ export class PooledCreditLineCalls extends CreditLineCalls {
           borrowLimit: new BigNumber(aLenderPool.borrowLimit),
           startTime: new BigNumber(aLenderPool.startTime),
           minBorrowAmount: new BigNumber(aLenderPool.minBorrowAmount),
-        }
+        },
+        lenderPerPool
       );
     });
   }
@@ -668,6 +947,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         currentCollateralRatio: { value: aNew.calculateCurrentCollateralRatio().toString(), decimals: 18 },
         currentDebt: { value: aNew.calculateCurrentDebt().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        emulator: aNew,
       };
     });
   }
@@ -750,4 +1030,3 @@ export class PooledCreditLineCalls extends CreditLineCalls {
 //   },
 //   minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
 // };
-

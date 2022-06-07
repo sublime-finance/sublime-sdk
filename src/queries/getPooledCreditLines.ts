@@ -1148,3 +1148,43 @@ export async function getPCLandLpTogether(url: string, count: number, skip: numb
   // console.log({allData})
   return allData;
 }
+
+export async function getAllLendersPerPool(url: string, poolIds: string[]): Promise<any[]> {
+  poolIds = poolIds.map((a) => `"${a}"`);
+  let skip = 0;
+
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        lenderPerLenderPools(first:${countPerQuery}, skip: ${countPerQuery * skip}, where:{lenderPool_in:[${poolIds}]}){
+          id
+          lenderAddress
+          amountLent
+          amountWithdrawn
+          sharesWithdrawn
+          interestWithdrawn
+          strategy
+          lenderPool {id}
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.lenderPerLenderPools.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.lenderPerLenderPools);
+    }
+  }
+}

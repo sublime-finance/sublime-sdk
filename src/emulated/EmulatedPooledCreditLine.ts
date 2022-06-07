@@ -3,9 +3,10 @@ import { Signer } from 'ethers';
 import { YieldAndStrategyApi } from '../api/yieldAndStrategy';
 import { SublimeConfig } from '../types/sublimeConfig';
 import { EmulatedHelper } from './Helper';
-import { getPCLandLpTogether } from '../queries';
+import { getPCLandLpTogether, getAllLendersPerPool } from '../queries';
 import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
 import BigNumber from 'bignumber.js';
+import { LenderPerPool } from '../types/Types';
 
 export class EmulatedPooledCreditLines extends EmulatedHelper {
   private subgraphUrl: string;
@@ -28,17 +29,39 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
     const pclData = lpData.map((a) => a.pooledCreditLine);
     const prices = await this.refreshTokenData(pclData);
     const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
-    return this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+
+    const lendersPerPoolData = await getAllLendersPerPool(
+      this.subgraphUrl,
+      pclData.map((a) => a.id)
+    );
+    const allPoolIds = pclData.map((a) => a.id);
+    const lenderPerPoolData: LenderPerPool[][] = [];
+
+    for (let index = 0; index < allPoolIds.length; index++) {
+      const poolId = allPoolIds[index];
+      const requiredLendersPerPool = lendersPerPoolData.filter((a) => a.lenderPool.id == poolId);
+      const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
+        return {
+          lenderAddress: a.lenderAddress,
+          lenderBalance: new BigNumber(a.amountLent),
+        };
+      });
+      lenderPerPoolData.push(requiredLenderPerPool);
+    }
+
+    return this.transformToPooledCreditLineEmulator(pclData, lpData, lenderPerPoolData, prices, collateralPerStrategyToken);
   }
 
   private transformToPooledCreditLineEmulator(
     pclData: any[],
     lenderPoolData: any[],
+    lendersPerPool: LenderPerPool[][],
     prices: Record<string, BigNumber>,
     collateralPerStrategyToken: Record<string, Record<string, BigNumber>>
   ): PooledCreditLineEmulator[] {
     return pclData.map((a, index) => {
       const aLenderPool = lenderPoolData[index];
+      const lenderPerPool = lendersPerPool[index];
       return new PooledCreditLineEmulator(
         {
           id: a.id,
@@ -68,7 +91,8 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
           borrowLimit: new BigNumber(aLenderPool.borrowLimit),
           startTime: new BigNumber(aLenderPool.startTime),
           minBorrowAmount: new BigNumber(aLenderPool.minBorrowAmount),
-        }
+        },
+        lenderPerPool
       );
     });
   }
