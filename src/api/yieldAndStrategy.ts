@@ -23,7 +23,7 @@ export class YieldAndStrategyApi {
     this.signer = signer;
     this.config = config;
     this.tokenManager = tokenManger;
-    this.displayName[config.compoundStrategyContractAddress.toLowerCase()] = 'Added to Compound Protocol';
+    this.displayName[config.compoundStrategyContractAddress.toLowerCase()] = 'Compound';
     this.displayName[config.noStrategyAddress.toLowerCase()] = 'Locked in Sublime';
 
     this.logo[config.compoundStrategyContractAddress.toLowerCase()] = 'https://cryptologos.cc/logos/compound-comp-logo.png';
