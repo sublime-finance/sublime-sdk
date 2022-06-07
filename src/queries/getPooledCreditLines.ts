@@ -46,25 +46,39 @@ export async function getPooledCreditLinesOfLender(
           interestWithdrawn
           lenderPool{
             pooledCreditLine{
+              id
+              status
+              endsAt
+              principal
+              idealCollateralRatio
+              totalInterestRepaid
+              lastPrincipalUpdateTime
+              gracePenaltyRate
+              borrowRate
+              interestAccruedTillLastPrincipalUpdate
+              borrowLimit
+              borrowAsset
+              collateralAsset
+              lenderStrategy
+              depositedCollateralInShares
+              borrowerAddress
+              createdAt
+              startsAt
+              defaultsAt
+              collateralStrategy
+              totalLentAmount
+              status
+              minBorrowAmount
+              lenderPool{
                 id
-                borrowerAddress
+                sharesHeld
+                borrowerInterestShares
+                borrowerInterestSharesWithdrawn
+                yieldInterestWithdrawnShares
                 borrowLimit
-                borrowRate
-                idealCollateralRatio
-                borrowAsset
-                collateralAsset
-                createdAt
-                startsAt
-                endsAt
-                defaultsAt
-                lenderStrategy
-                collateralStrategy
-                gracePenaltyRate
-                status
-                principal
-                totalInterestRepaid
-                lastPrincipalUpdateTime
-                interestAccruedTillLastPrincipalUpdate
+                startTime
+                minBorrowAmount
+              }
             }
           }
         }
@@ -110,26 +124,39 @@ export async function getPooledCreditLinesForLenderById(url: string, lenderAddre
           interestWithdrawn
           lenderPool{
             pooledCreditLine{
+              id
+              status
+              endsAt
+              principal
+              idealCollateralRatio
+              totalInterestRepaid
+              lastPrincipalUpdateTime
+              gracePenaltyRate
+              borrowRate
+              interestAccruedTillLastPrincipalUpdate
+              borrowLimit
+              borrowAsset
+              collateralAsset
+              lenderStrategy
+              depositedCollateralInShares
+              borrowerAddress
+              createdAt
+              startsAt
+              defaultsAt
+              collateralStrategy
+              totalLentAmount
+              status
+              minBorrowAmount
+              lenderPool{
                 id
-                borrowerAddress
+                sharesHeld
+                borrowerInterestShares
+                borrowerInterestSharesWithdrawn
+                yieldInterestWithdrawnShares
                 borrowLimit
-                borrowRate
-                idealCollateralRatio
-                borrowAsset
-                collateralAsset
-                createdAt
-                startsAt
-                endsAt
-                defaultsAt
-                lenderStrategy
-                collateralStrategy
-                gracePenaltyRate
-                status
-                principal
-                totalInterestRepaid
-                lastPrincipalUpdateTime
-                interestAccruedTillLastPrincipalUpdate
-                totalLentAmount
+                startTime
+                minBorrowAmount
+              }
             }
           }
         }
@@ -166,25 +193,38 @@ export async function getPooledCreditLinesOfBorrower(url: string, borrower: stri
     query: `{
         pooledCreditLines(first:${count}, skip:${skip}, orderBy:createdAt, orderDirection:desc, where:{borrowerAddress:"${borrower}"}){
           id
-          borrowerAddress
-          borrowLimit
-          borrowRate
-          idealCollateralRatio
-          borrowAsset
-          collateralAsset
-          createdAt
-          startsAt
-          endsAt
-          defaultsAt
-          lenderStrategy
-          collateralStrategy
-          gracePenaltyRate
           status
+          endsAt
           principal
+          idealCollateralRatio
           totalInterestRepaid
           lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
           interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+          depositedCollateralInShares
+          borrowerAddress
+          createdAt
+          startsAt
+          defaultsAt
+          collateralStrategy
           totalLentAmount
+          status
+          minBorrowAmount
+          lenderPool{
+            id
+            sharesHeld
+            borrowerInterestShares
+            borrowerInterestSharesWithdrawn
+            yieldInterestWithdrawnShares
+            borrowLimit
+            startTime
+            minBorrowAmount
+          }
         }
       }`,
   });
@@ -215,26 +255,38 @@ export async function getPooledCreditLinesOfBorrowerWithState(
     query: `{
         pooledCreditLines(first:${count}, skip:${skip}, orderBy:createdAt, orderDirection:desc, where:{borrowerAddress:"${borrower}",status_in:[${status}]}){
           id
-          borrowerAddress
-          borrowLimit
-          borrowRate
-          idealCollateralRatio
-          borrowAsset
-          collateralAsset
-          createdAt
-          startsAt
-          endsAt
-          defaultsAt
-          lenderStrategy
-          collateralStrategy
-          gracePenaltyRate
           status
+          endsAt
           principal
+          idealCollateralRatio
           totalInterestRepaid
           lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
           interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+          depositedCollateralInShares
+          borrowerAddress
+          createdAt
+          startsAt
+          defaultsAt
+          collateralStrategy
           totalLentAmount
           status
+          minBorrowAmount
+          lenderPool{
+            id
+            sharesHeld
+            borrowerInterestShares
+            borrowerInterestSharesWithdrawn
+            yieldInterestWithdrawnShares
+            borrowLimit
+            startTime
+            minBorrowAmount
+          }
         }
       }`,
   });
@@ -264,26 +316,38 @@ export async function getPooledCreditLinesOfBorrowerWithNotState(
     query: `{
         pooledCreditLines(first:${count}, skip:${skip}, orderBy:createdAt, orderDirection:desc, where:{borrowerAddress:"${borrower}",status_not_in:[${status}]}){
           id
-          borrowerAddress
-          borrowLimit
-          borrowRate
-          idealCollateralRatio
-          borrowAsset
-          collateralAsset
-          createdAt
-          startsAt
-          endsAt
-          defaultsAt
-          lenderStrategy
-          collateralStrategy
-          gracePenaltyRate
           status
+          endsAt
           principal
+          idealCollateralRatio
           totalInterestRepaid
           lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
           interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+          depositedCollateralInShares
+          borrowerAddress
+          createdAt
+          startsAt
+          defaultsAt
+          collateralStrategy
           totalLentAmount
           status
+          minBorrowAmount
+          lenderPool{
+            id
+            sharesHeld
+            borrowerInterestShares
+            borrowerInterestSharesWithdrawn
+            yieldInterestWithdrawnShares
+            borrowLimit
+            startTime
+            minBorrowAmount
+          }
         }
       }`,
   });
@@ -308,26 +372,38 @@ export async function getPooledCreditLinesOfLenderCanLendTo(url: string, lender:
     query: `{
         pooledCreditLines(first:${count}, skip:${skip}, orderBy:createdAt, orderDirection:desc, where:{borrowerAddress_not:"${lender}"}){
           id
-          borrowerAddress
-          borrowLimit
-          borrowRate
-          idealCollateralRatio
-          borrowAsset
-          collateralAsset
-          createdAt
-          startsAt
-          endsAt
-          defaultsAt
-          lenderStrategy
-          collateralStrategy
-          gracePenaltyRate
           status
+          endsAt
           principal
+          idealCollateralRatio
           totalInterestRepaid
           lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
           interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+          depositedCollateralInShares
+          borrowerAddress
+          createdAt
+          startsAt
+          defaultsAt
+          collateralStrategy
           totalLentAmount
           status
+          minBorrowAmount
+          lenderPool{
+            id
+            sharesHeld
+            borrowerInterestShares
+            borrowerInterestSharesWithdrawn
+            yieldInterestWithdrawnShares
+            borrowLimit
+            startTime
+            minBorrowAmount
+          }
         }
       }`,
   });
@@ -351,27 +427,38 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
     query: `{
         pooledCreditLines(where:{id:"${id}"}){
           id
-          borrowerAddress
-          borrowLimit
-          borrowRate
-          idealCollateralRatio
-          borrowAsset
-          collateralAsset
-          createdAt
-          startsAt
-          endsAt
-          defaultsAt
-          lenderStrategy
-          collateralStrategy
-          gracePenaltyRate
           status
+          endsAt
           principal
+          idealCollateralRatio
           totalInterestRepaid
           lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
           interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+          depositedCollateralInShares
+          borrowerAddress
+          createdAt
+          startsAt
+          defaultsAt
+          collateralStrategy
           totalLentAmount
           status
           minBorrowAmount
+          lenderPool{
+            id
+            sharesHeld
+            borrowerInterestShares
+            borrowerInterestSharesWithdrawn
+            yieldInterestWithdrawnShares
+            borrowLimit
+            startTime
+            minBorrowAmount
+          }
         }
       }`,
   });
@@ -395,26 +482,38 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
     query: `{
         pooledCreditLines(orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}){
           id
-          borrowerAddress
-          borrowLimit
-          borrowRate
-          idealCollateralRatio
-          borrowAsset
-          collateralAsset
-          createdAt
-          startsAt
-          endsAt
-          defaultsAt
-          lenderStrategy
-          collateralStrategy
-          gracePenaltyRate
           status
+          endsAt
           principal
+          idealCollateralRatio
           totalInterestRepaid
           lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
           interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+          depositedCollateralInShares
+          borrowerAddress
+          createdAt
+          startsAt
+          defaultsAt
+          collateralStrategy
           totalLentAmount
           status
+          minBorrowAmount
+          lenderPool{
+            id
+            sharesHeld
+            borrowerInterestShares
+            borrowerInterestSharesWithdrawn
+            yieldInterestWithdrawnShares
+            borrowLimit
+            startTime
+            minBorrowAmount
+          }
         }
       }`,
   });
@@ -438,26 +537,38 @@ export async function getAllPooledCreditLinesWithState(url: string, count: numbe
     query: `{
         pooledCreditLines(orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}, where:{status_in:[${status}]}){
           id
-          borrowerAddress
-          borrowLimit
-          borrowRate
-          idealCollateralRatio
-          borrowAsset
-          collateralAsset
-          createdAt
-          startsAt
-          endsAt
-          defaultsAt
-          lenderStrategy
-          collateralStrategy
-          gracePenaltyRate
           status
+          endsAt
           principal
+          idealCollateralRatio
           totalInterestRepaid
           lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
           interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+          depositedCollateralInShares
+          borrowerAddress
+          createdAt
+          startsAt
+          defaultsAt
+          collateralStrategy
           totalLentAmount
           status
+          minBorrowAmount
+          lenderPool{
+            id
+            sharesHeld
+            borrowerInterestShares
+            borrowerInterestSharesWithdrawn
+            yieldInterestWithdrawnShares
+            borrowLimit
+            startTime
+            minBorrowAmount
+          }
         }
       }`,
   });
@@ -481,26 +592,38 @@ export async function getAllPooledCreditLinesWithNotState(url: string, count: nu
     query: `{
         pooledCreditLines(orderBy:createdAt, orderDirection:desc, first:${count}, skip:${skip}, where:{status_not_in:[${status}]}){
           id
-          borrowerAddress
-          borrowLimit
-          borrowRate
-          idealCollateralRatio
-          borrowAsset
-          collateralAsset
-          createdAt
-          startsAt
-          endsAt
-          defaultsAt
-          lenderStrategy
-          collateralStrategy
-          gracePenaltyRate
           status
+          endsAt
           principal
+          idealCollateralRatio
           totalInterestRepaid
           lastPrincipalUpdateTime
+          gracePenaltyRate
+          borrowRate
           interestAccruedTillLastPrincipalUpdate
+          borrowLimit
+          borrowAsset
+          collateralAsset
+          lenderStrategy
+          depositedCollateralInShares
+          borrowerAddress
+          createdAt
+          startsAt
+          defaultsAt
+          collateralStrategy
           totalLentAmount
           status
+          minBorrowAmount
+          lenderPool{
+            id
+            sharesHeld
+            borrowerInterestShares
+            borrowerInterestSharesWithdrawn
+            yieldInterestWithdrawnShares
+            borrowLimit
+            startTime
+            minBorrowAmount
+          }
         }
       }`,
   });

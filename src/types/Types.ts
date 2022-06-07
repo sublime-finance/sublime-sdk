@@ -255,8 +255,8 @@ export interface PooledCreditLineDetail {
   id: string;
   borrowerAddress: string;
   borrowLimit: Balance;
-  borrowRate: string;
-  idealCollateralRatio: string;
+  borrowRate: Balance;
+  idealCollateralRatio: Balance;
   collateralTokens: Balance;
   borrowAsset: Asset;
   collateralAsset: Asset;
@@ -266,7 +266,7 @@ export interface PooledCreditLineDetail {
   defaultsAt: string;
   lenderStrategy: Strategy;
   collateralStrategy: Strategy;
-  gracePenaltyRate: string;
+  gracePenaltyRate: Balance;
   status: CreditLineStatus;
   principal: Balance;
   totalInterestRepaid: Balance;

@@ -26,20 +26,16 @@ import {
 
 import { CreditLineDetail, CreditLinesOverview, CreditLineOperation, CreditLineStatus } from '../types/Types';
 
-import { CreditLine } from '../wrappers/CreditLine';
-import { CreditLine__factory } from '../wrappers/factories/CreditLine__factory';
-
 import BigNumber from 'bignumber.js';
+import { CreditLineEmulator } from '../emulator/CreditLines';
 
 export class CreditLineCalls extends Base {
   /**
    * @description instance of credit line contract
    */
-  private creditLineContract: CreditLine;
 
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
     super(url, signer, tokenManager, config);
-    this.creditLineContract = new CreditLine__factory(signer).attach(config.creditLineContractAddress);
   }
 
   /**
@@ -51,7 +47,10 @@ export class CreditLineCalls extends Base {
    */
   async getAllCreditLines(count: number = 13, skip: number = 0): Promise<CreditLineDetail[]> {
     const result = await getAllCreditLinesFromSubgraph(this.subgraphUrl, count, skip);
-    return await this.transformToCreditLine(result);
+    const prices = await this.refreshTokenData(result);
+    const collateralPerStrategyToken = await this.refreshStrategyData(result);
+    const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
+    return this.transformToCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -59,65 +58,32 @@ export class CreditLineCalls extends Base {
    * @param data
    * @description transaform the data recevied from the subgraph to type
    */
-  private async transformToCreditLine(data: any[]): Promise<CreditLineDetail[]> {
-    const borrowTokens: string[] = data.map((a) => a.collateralAsset);
-    const collateralTokens: string[] = data.map((a) => a.borrowAsset);
-    const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
-
-    for (let index = 0; index < allTokens.length; index++) {
-      const element = allTokens[index];
-      await this.tokenManager.updateAll(element);
-    }
-
-    const creditLineDetails: Promise<CreditLineDetail>[] = data.map(async (a) => {
-      const interestAccrued = await this.calculateInterestAccruedForCreditLines(a.id);
-      const currentDebt = await this.calculateCurrentDebtForCreditLines(a.id);
-      const [collateralRatio, totalCollateralTokens] = await this.calculateCollateralRatioForCreditLines(a.id);
-
-      // if (a.lastPrincipalUpdateTime != 0) {
-      //   const timeElapsed: number = Date.now() / 1000 - a.lastPrincipalUpdateTime;
-      //   interestAccrued = new BigNumber(a.principal)
-      //     .multipliedBy(new BigNumber(a.borrowRate))
-      //     .times(timeElapsed)
-      //     .div(new BigNumber(10).pow(18))
-      //     .div(24 * 60 * 60 * 365);
-
-      //   currentDebt = new BigNumber(a.principal).plus(interestAccrued);
-
-      //   const priceOfCollateral = new BigNumber(totalCollateralTokens.toString())
-      //     .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.collateralAsset)))
-      //     .multipliedBy(await this.tokenManager.getPricePerAsset(a.collateralAsset));
-
-      //   const priceOfDebt = new BigNumber(currentDebt)
-      //     .dividedBy(new BigNumber(10).pow(this.tokenManager.getTokenDecimals(a.borrowAsset)))
-      //     .multipliedBy(await this.tokenManager.getPricePerAsset(a.borrowAsset));
-
-      //   collateralRatio = priceOfCollateral.multipliedBy(new BigNumber(10).pow(18)).dividedBy(priceOfDebt);
-      // }
-
+  private transformToCreditLine(data: any[], emulatorResult: CreditLineEmulator[], prices: Record<string, BigNumber>): CreditLineDetail[] {
+    return emulatorResult.map((aNew, index) => {
+      const a = data[index];
       return {
         createdAt: a.createdAt,
-        currentDebt: { value: currentDebt.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        principal: { value: new BigNumber(a.principal).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        interestAccrued: { value: interestAccrued.toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        collateralRatio: { value: collateralRatio.toFixed(0), decimals: 18 },
-        creditLimit: { value: new BigNumber(a.borrowLimit).toFixed(0), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        currentDebt: { value: aNew.calculateCurrentDebt().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        principal: { value: aNew.getPrincipal().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        interestAccrued: { value: aNew.calculateInterestAccrued().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        collateralRatio: { value: aNew.calculateCurrentCollateralRatio()[0].toString(), decimals: 18 },
+        creditLimit: { value: aNew.getCreditLimit().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
         interestRate: { value: a.borrowRate, decimals: 18 },
         idealCollateralRatio: { value: a.idealCollateralRatio, decimals: 18 },
         borrowAsset: {
           address: a.borrowAsset,
           name: this.tokenManager.getTokenName(a.borrowAsset),
-          pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(a.borrowAsset)).toString(),
+          pricePerAssetInUSD: prices[a.borrowAsset].toString(),
           logo: this.tokenManager.getLogo(a.borrowAsset),
         },
         collateralTokens: {
-          value: totalCollateralTokens.toString(),
-          decimals: await this.tokenManager.getTokenDecimals(a.collateralAsset),
+          value: aNew.calculateTotalCollateralTokens().toString(),
+          decimals: this.tokenManager.getTokenDecimals(a.collateralAsset),
         },
         collateralAsset: {
           address: a.collateralAsset,
           name: this.tokenManager.getTokenName(a.collateralAsset),
-          pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(a.collateralAsset)).toString(),
+          pricePerAssetInUSD: prices[a.collateralAsset].toString(),
           logo: this.tokenManager.getLogo(a.collateralAsset),
         },
 
@@ -136,33 +102,6 @@ export class CreditLineCalls extends Base {
         },
       };
     });
-    return Promise.all(creditLineDetails);
-  }
-
-  private async calculateInterestAccruedForCreditLines(creditLineId: string): Promise<BigNumber> {
-    let interest = new BigNumber(0);
-    try {
-      interest = new BigNumber((await this.creditLineContract.calculateInterestAccrued(creditLineId)).toString());
-    } catch (ex) {}
-    return interest;
-  }
-
-  private async calculateCurrentDebtForCreditLines(creditLineId: string): Promise<BigNumber> {
-    let debt = new BigNumber(0);
-    try {
-      debt = new BigNumber(await (await this.creditLineContract.calculateCurrentDebt(creditLineId)).toString());
-    } catch (ex) {}
-    return debt;
-  }
-
-  private async calculateCollateralRatioForCreditLines(creditLineId: string): Promise<[BigNumber, BigNumber]> {
-    let ratio = new BigNumber(0);
-    let totalCollateralTokens = new BigNumber(0);
-    try {
-      const data = await this.creditLineContract.callStatic.calculateCurrentCollateralRatio(creditLineId);
-      [ratio, totalCollateralTokens] = data.map((a) => new BigNumber(a.toString()));
-    } catch (ex) {}
-    return [ratio, totalCollateralTokens];
   }
 
   /**
@@ -173,7 +112,10 @@ export class CreditLineCalls extends Base {
    */
   async getConfirmedCreditLinesOfBorrower(borrower: string, count: number = 13, skip: number = 0): Promise<CreditLineDetail[]> {
     const result = await getConfirmedCreditLinesOfBorrower(this.subgraphUrl, borrower, count, skip);
-    return await this.transformToCreditLine(result);
+    const prices = await this.refreshTokenData(result);
+    const collateralPerStrategyToken = await this.refreshStrategyData(result);
+    const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
+    return this.transformToCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -184,7 +126,10 @@ export class CreditLineCalls extends Base {
    */
   async getConfirmedCreditLinesOfLender(lender: string, count: number = 13, skip: number = 0): Promise<CreditLineDetail[]> {
     const result = await getConfirmedCreditLinesOfLender(this.subgraphUrl, lender, count, skip);
-    return await this.transformToCreditLine(result);
+    const prices = await this.refreshTokenData(result);
+    const collateralPerStrategyToken = await this.refreshStrategyData(result);
+    const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
+    return this.transformToCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -195,7 +140,10 @@ export class CreditLineCalls extends Base {
    */
   async getPendingCreditlinesRequestedByLender(lender: string, count: number, skip: number): Promise<CreditLineDetail[]> {
     const result = await getPendingCreditlinesRequestedByLender(this.subgraphUrl, lender, count, skip);
-    return await this.transformToCreditLine(result);
+    const prices = await this.refreshTokenData(result);
+    const collateralPerStrategyToken = await this.refreshStrategyData(result);
+    const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
+    return this.transformToCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -206,7 +154,10 @@ export class CreditLineCalls extends Base {
    */
   async getPendingCreditLinesRequestedByBorrower(borrower: string, count: number, skip: number): Promise<CreditLineDetail[]> {
     const result = await getPendingCreditLinesRequestedByBorrower(this.subgraphUrl, borrower, count, skip);
-    return await this.transformToCreditLine(result);
+    const prices = await this.refreshTokenData(result);
+    const collateralPerStrategyToken = await this.refreshStrategyData(result);
+    const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
+    return this.transformToCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -217,7 +168,10 @@ export class CreditLineCalls extends Base {
    */
   async getPendingCreditLinesRequestedToLender(lender: string, count: number, skip: number): Promise<CreditLineDetail[]> {
     const result = await getPendingCreditLinesRequestedToLender(this.subgraphUrl, lender, count, skip);
-    return await this.transformToCreditLine(result);
+    const prices = await this.refreshTokenData(result);
+    const collateralPerStrategyToken = await this.refreshStrategyData(result);
+    const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
+    return this.transformToCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -228,7 +182,10 @@ export class CreditLineCalls extends Base {
    */
   async getPendingCreditLinesRequestedToBorrower(borrower: string, count: number, skip: number): Promise<CreditLineDetail[]> {
     const result = await getPendingCreditLinesRequestedToBorrower(this.subgraphUrl, borrower, count, skip);
-    return await this.transformToCreditLine(result);
+    const prices = await this.refreshTokenData(result);
+    const collateralPerStrategyToken = await this.refreshStrategyData(result);
+    const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
+    return this.transformToCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -237,7 +194,10 @@ export class CreditLineCalls extends Base {
    */
   async getCreditLine(id: string): Promise<CreditLineDetail> {
     const result = await getCreditLine(this.subgraphUrl, id);
-    const data = await this.transformToCreditLine(result);
+    const prices = await this.refreshTokenData(result);
+    const collateralPerStrategyToken = await this.refreshStrategyData(result);
+    const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
+    const data = this.transformToCreditLine(result, emulatorResult, prices);
     if (data.length == 0) {
       return undefined;
     } else {
@@ -431,5 +391,34 @@ export class CreditLineCalls extends Base {
       state.map((a) => a.toString())
     );
     return result.length;
+  }
+
+  private transformToCreditLineEmulator(
+    data: any[],
+    prices: Record<string, BigNumber>,
+    collateralPerStrategyToken: Record<string, Record<string, BigNumber>>
+  ): CreditLineEmulator[] {
+    return data.map((a) => {
+      return new CreditLineEmulator(
+        {
+          id: a.id,
+          collateralShareInStrategy: new BigNumber(1000),
+          principal: new BigNumber(a.principal),
+          lastPrincipalUpdateTime: new BigNumber(a.lastPrincipalUpdateTime),
+          borrowRate: new BigNumber(a.borrowRate),
+          interestAccruedTillLastPrincipalUpdate: new BigNumber(a.interestAccruedTillLastPrincipalUpdate),
+          totalInterestRepaid: new BigNumber(a.totalInterestRepaid),
+          idealCollateralRatio: new BigNumber(a.idealCollateralRatio),
+          creditLineStatus: a.status,
+          borrowLimit: new BigNumber(a.borrowLimit),
+        },
+        {
+          collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.strategy][a.collateralAsset]),
+          ratioOfPrices: new BigNumber(prices[a.borrowAsset]).dividedBy(prices[a.collateralAsset]),
+          ratioOfPricesDecimals: 1,
+        },
+        { liquidatorRewardFraction: new BigNumber(10).pow(16) }
+      );
+    });
   }
 }

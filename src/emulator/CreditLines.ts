@@ -131,6 +131,14 @@ export class CreditLineEmulator extends EmulatorHelper {
     return [currentCollateralRatio, totalCollateralTokens];
   }
 
+  public getPrincipal(): BigNumber {
+    return this.creditLineState.principal;
+  }
+
+  public getCreditLimit(): BigNumber {
+    return this.creditLineState.borrowLimit;
+  }
+
   // to-do
   //   public getCreditLineStatus() : CreditLineStatus{
 

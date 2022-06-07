@@ -178,4 +178,8 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   public getPrincipal(): BigNumber {
     return this.pooledCreditLineState.principal;
   }
+
+  public getBorrowLimit(): BigNumber {
+    return this.pooledCreditLineState.borrowLimit;
+  }
 }

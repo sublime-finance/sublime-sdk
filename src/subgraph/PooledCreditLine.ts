@@ -26,11 +26,6 @@ import {
 
 import BigNumber from 'bignumber.js';
 
-import { PooledCreditLine } from '../wrappers/PooledCreditLine';
-import { PooledCreditLine__factory } from '../wrappers/factories/PooledCreditLine__factory';
-
-import { LenderPool, LenderPool__factory } from '../wrappers';
-
 import {
   getPooledCreditLinesOfBorrower,
   getAllPooledCreditLinesWithState,
@@ -48,14 +43,12 @@ import {
   getLenderPerPool,
 } from '../queries';
 
+import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
+
 export class PooledCreditLineCalls extends CreditLineCalls {
-  private pooledCreditLineContract: PooledCreditLine;
-  private lenderPoolContract: LenderPool;
 
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
     super(url, signer, tokenManager, config);
-    this.pooledCreditLineContract = new PooledCreditLine__factory(signer).attach(config.pooledCreditLineAddress);
-    this.lenderPoolContract = new LenderPool__factory(signer).attach(config.lenderPoolAddress);
   }
 
   /**
@@ -95,7 +88,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
    */
   async getAllPooledCreditLines(count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getAllPooledCreditLines(this.subgraphUrl, count, skip);
-    return this.transformToPooledCreditLine(result);
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -116,7 +114,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       skip,
       state.map((a) => a.toString())
     );
-    return this.transformToPooledCreditLine(result);
+
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -137,7 +141,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       skip,
       state.map((a) => a.toString())
     );
-    return this.transformToPooledCreditLine(result);
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -147,7 +156,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
    */
   async getPooledCreditLineById(id: number): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLineById(this.subgraphUrl, id);
-    return this.transformToPooledCreditLine(result);
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -159,9 +173,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
    */
   async getAllPooledCreditLinesOfBorrower(address: string, count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfBorrower(this.subgraphUrl, address, count, skip);
-    let lines = await this.transformToPooledCreditLine(result);
-    lines = lines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
-    return lines;
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    const lines = this.transformToPooledCreditLine(result, emulatorResult, prices);
+    return lines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
   }
 
   /**
@@ -185,7 +203,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       skip,
       status.map((a) => a.toString())
     );
-    return await this.transformToPooledCreditLine(result);
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -209,7 +232,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       skip,
       status.map((a) => a.toString())
     );
-    return await this.transformToPooledCreditLine(result);
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -221,207 +249,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
    */
   async getAllPooledCreditLinesLenderCanLendTo(lender: string, count: number = 13, skip: number = 0): Promise<PooledCreditLineDetail[]> {
     const result = await getPooledCreditLinesOfLenderCanLendTo(this.subgraphUrl, lender, count, skip);
-    return await this.transformToPooledCreditLine(result);
-  }
-
-  private async transformToPooledCreditLine(data: any[]): Promise<PooledCreditLineDetail[]> {
-    const borrowTokens: string[] = data.map((a) => a.collateralAsset);
-    const collateralTokens: string[] = data.map((a) => a.borrowAsset);
-    const allTokens = [...borrowTokens, ...collateralTokens].filter((value, index, array) => array.indexOf(value) === index);
-    for (let index = 0; index < allTokens.length; index++) {
-      const element = allTokens[index];
-      await this.tokenManager.updateAll(element);
-    }
-
-    const prices = {};
-    for (let index = 0; index < allTokens.length; index++) {
-      const element = allTokens[index];
-      prices[element] = await (await this.tokenManager.getPricePerAsset(element)).toString();
-    }
-
-    const numberOfCollateralTokens = {};
-    const allId = data.map((a) => a.id);
-    for (let index = 0; index < allId.length; index++) {
-      const element = allId[index];
-      numberOfCollateralTokens[allId[index]] = await (await this.getTotalCollateralTokensInPooledCreditlines(element)).toString();
-    }
-
-    const all = data.map(async (a) => {
-      const colRatio = await this.getCurrentColRatioOfPcl(a.id);
-      return {
-        id: a.id,
-        borrowerAddress: a.borrowerAddress,
-        borrowLimit: { value: a.borrowLimit, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
-        idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
-        collateralTokens: { value: numberOfCollateralTokens[a.id], decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
-        borrowAsset: {
-          name: this.tokenManager.getTokenName(a.borrowAsset),
-          address: a.borrowAsset,
-          logo: this.tokenManager.getLogo(a.borrowAsset),
-          pricePerAssetInUSD: prices[a.borrowAsset],
-        },
-        collateralAsset: {
-          name: this.tokenManager.getTokenName(a.collateralAsset),
-          address: a.collateralAsset,
-          logo: this.tokenManager.getLogo(a.collateralAsset),
-          pricePerAssetInUSD: prices[a.collateralAsset],
-        },
-        createdAt: a.createdAt,
-        startsAt: a.startsAt,
-        endsAt: a.endsAt,
-        defaultsAt: a.defaultsAt,
-        lenderStrategy: {
-          type: this.yieldApi.getStrategy(a.lenderStrategy),
-          address: a.lenderStrategy,
-          displayName: this.yieldApi.getStrategyDisplayName(a.lenderStrategy),
-          logo: this.yieldApi.getStrategyLogo(a.lenderStrategy),
-        },
-        collateralStrategy: {
-          type: this.yieldApi.getStrategy(a.collateralStrategy),
-          address: a.collateralStrategy,
-          displayName: this.yieldApi.getStrategyDisplayName(a.collateralStrategy),
-          logo: this.yieldApi.getStrategyLogo(a.collateralStrategy),
-        },
-        gracePenaltyRate: new BigNumber(a.gracePenaltyRate).div(new BigNumber(10).pow(16)).toFixed(2),
-        status: await this.getCreditLineStatus(a.id),
-        principal: { value: a.principal, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        totalInterestRepaid: { value: a.totalInterestRepaid, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
-        interestAccruedTillLastPrincipalUpdate: {
-          value: a.interestAccruedTillLastPrincipalUpdate || '0',
-          decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
-        },
-        totalLentAmount: { value: a.totalLentAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        currentCollateralRatio: {
-          value: colRatio.toString(),
-          decimals: 18,
-        },
-        currentDebt: {
-          value: await (await this.getCurrentDebtForPooledCreditLines(a.id)).toString(),
-          decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
-        },
-        minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-      };
-    });
-
-    return Promise.all(all);
-  }
-
-  private async getTotalCollateralTokensInPooledCreditlines(id: string): Promise<BigNumber> {
-    let tokens = new BigNumber(0);
-
-    try {
-      const totalCollateralTokens = await (await this.pooledCreditLineContract.callStatic.calculateTotalCollateralTokens(id)).toString();
-      tokens = new BigNumber(totalCollateralTokens);
-    } catch (ex) {
-      console.log(`Error while fetching total collateral tokens for pcl ${id}`);
-    }
-    return tokens;
-  }
-
-  private async getCurrentColRatioOfPcl(id: string): Promise<BigNumber> {
-    let ratio = new BigNumber(0);
-    try {
-      const _ratio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(id);
-      ratio = new BigNumber(_ratio.toString());
-    } catch (ex) {
-      console.log(`Error while fetching current col ratio of pcl ${id}`);
-    }
-    return ratio;
-  }
-
-  private async getCurrentDebtForPooledCreditLines(id: string): Promise<BigNumber> {
-    let debt = new BigNumber(0);
-    try {
-      debt = new BigNumber((await this.pooledCreditLineContract.calculateCurrentDebt(id)).toString());
-    } catch (ex) {}
-    return debt;
-  }
-
-  /**
-   * @description Computed the latest state of PCL as subgraph doesn't return the exact state
-   * @param _id
-   * @returns
-   */
-  public async getCreditLineStatus(_id: string): Promise<CreditLineStatus> {
-    const pooledCreditLineVariables = await this.pooledCreditLineContract.pooledCreditLineVariables(_id);
-    const status = pooledCreditLineVariables.status;
-
-    const now = new Date().valueOf();
-
-    if (status == 0) {
-      return CreditLineStatus.NOT_CREATED;
-    } else if (status == 1) {
-      // request on sc
-      const pooledCLConstants = await this.lenderPoolContract.pooledCLConstants(_id);
-      const pooledCLConstantsOfPCL = await this.pooledCreditLineContract.pooledCreditLineConstants(_id);
-
-      const amountLent = await this.lenderPoolContract.totalSupply(_id);
-      if (
-        amountLent.gte(pooledCLConstants.minBorrowAmount) &&
-        new BigNumber(now).div(1000).gt(pooledCLConstantsOfPCL.startsAt.toString()) &&
-        new BigNumber(now).div(1000).lt(pooledCLConstantsOfPCL.endsAt.toString())
-      ) {
-        return CreditLineStatus.START_CALLABLE;
-      } else {
-        const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
-        if (dateBigNumber.gt(pooledCLConstantsOfPCL.startsAt.toString()) && amountLent.lt(pooledCLConstants.minBorrowAmount)) {
-          return CreditLineStatus.INTERMEDIATE_CANCELLED;
-        }
-      }
-      return CreditLineStatus.REQUESTED;
-      // status ==2 means it is active on smart contract
-    } else if (status == 2) {
-      const pooledCLConstants = await this.pooledCreditLineContract.pooledCreditLineConstants(_id);
-
-      const colRatio = await this.pooledCreditLineContract.callStatic.calculateCurrentCollateralRatio(_id);
-      if (
-        pooledCLConstants.idealCollateralRatio.gt(colRatio) ||
-        (new BigNumber(now).div(1000).gt(pooledCLConstants.defaultsAt.toString()) && pooledCreditLineVariables.principal.gt(0))
-      ) {
-        return CreditLineStatus.LIQUIDATE_CALLABLE;
-      }
-
-      if (
-        new BigNumber(now).div(1000).gt(pooledCLConstants.endsAt.toString()) &&
-        new BigNumber(now).div(1000).lt(pooledCLConstants.defaultsAt.toString()) &&
-        pooledCreditLineVariables.principal.gt(0)
-      ) {
-        return CreditLineStatus.INTERMEDIATE_EXPIRED;
-      }
-
-      return CreditLineStatus.ACTIVE;
-    } else if (status == 3) {
-      return CreditLineStatus.CLOSED;
-    } else if (status == 4) {
-      return CreditLineStatus.EXPIRED;
-    } else if (status == 5) {
-      return CreditLineStatus.LIQUIDATED;
-    } else if (status == 6) {
-      return CreditLineStatus.CANCELLED;
-    } else {
-      throw new Error('invalid state ');
-    }
-  }
-
-  private async transformToLenderContributionToPooledCreditLines(
-    pooledCreditLines: PooledCreditLineDetail[],
-    data: any[]
-  ): Promise<LenderContributionToPooledCreditLines[]> {
-    return data.map((a, index) => {
-      const borrowToken = pooledCreditLines[index].borrowAsset;
-      const collateralToken = pooledCreditLines[index].collateralAsset;
-      const borrowDecimals = this.tokenManager.getTokenDecimals(borrowToken.address);
-      const collateralDecimals = this.tokenManager.getTokenDecimals(collateralToken.address);
-      return {
-        id: pooledCreditLines[index].id,
-        amountLent: { value: a.amountLent || '0', decimals: borrowDecimals },
-        amountWithdrawn: { value: a.amountWithdrawn || '0', decimals: borrowDecimals },
-        sharesWithdrawn: { value: a.sharesWithdrawn || '0', decimals: collateralDecimals },
-        interestWithdrawn: { value: a.interestWithdrawn || '0', decimals: borrowDecimals },
-      };
-    });
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    return this.transformToPooledCreditLine(result, emulatorResult, prices);
   }
 
   /**
@@ -437,7 +270,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     skip: number = 0
   ): Promise<[PooledCreditLineDetail[], LenderContributionToPooledCreditLines[]]> {
     const [result, contributionsData] = await getPooledCreditLinesOfLender(this.subgraphUrl, lender, count, skip);
-    let pooledCreditLines = await this.transformToPooledCreditLine(result);
+    const lpData = result.map((a) => a.lenderPool);
+    const pclData = result;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    let pooledCreditLines = this.transformToPooledCreditLine(result, emulatorResult, prices);
     let contributions = await this.transformToLenderContributionToPooledCreditLines(pooledCreditLines, contributionsData);
     pooledCreditLines = pooledCreditLines.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
     contributions = contributions.sort((a, b) => new BigNumber(b.id).minus(a.id).toNumber());
@@ -453,7 +291,12 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       return [undefined, undefined];
     }
 
-    const poolDataDetail = await this.transformToPooledCreditLine(poolData);
+    const lpData = poolData.map((a) => a.lenderPool);
+    const pclData = poolData;
+    const prices = await this.refreshTokenData(pclData);
+    const collateralPerStrategyToken = await this.refreshStrategyDataForPcl(pclData);
+    const emulatorResult = await this.transformToPooledCreditLineEmulator(pclData, lpData, prices, collateralPerStrategyToken);
+    let poolDataDetail = this.transformToPooledCreditLine(poolData, emulatorResult, prices);
     const lenderContribution = await this.transformToLenderContributionToPooledCreditLines(poolDataDetail, contributionData);
     return [poolDataDetail[0], lenderContribution[0]];
   }
@@ -724,4 +567,187 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     const result = await getLendersOfPooledCreditLines(this.subgraphUrl, id.toString());
     return result.length;
   }
+
+  private transformToPooledCreditLineEmulator(
+    pclData: any[],
+    lenderPoolData: any[],
+    prices: Record<string, BigNumber>,
+    collateralPerStrategyToken: Record<string, Record<string, BigNumber>>
+  ): PooledCreditLineEmulator[] {
+    return pclData.map((a, index) => {
+      const aLenderPool = lenderPoolData[index];
+      return new PooledCreditLineEmulator(
+        {
+          id: a.id,
+          pooledCreditLineStatus: a.status,
+          endsAt: new BigNumber(a.endsAt),
+          principal: new BigNumber(a.principal),
+          idealCollateralRatio: new BigNumber(a.idealCollateralRatio),
+          totalInterestRepaid: new BigNumber(a.totalInterestRepaid),
+          lastPrincipalUpdateTime: new BigNumber(a.lastPrincipalUpdateTime),
+          gracePenaltyRate: new BigNumber(a.gracePenaltyRate),
+          borrowRate: new BigNumber(a.borrowRate),
+          interestAccruedTillLastPrincipalUpdate: new BigNumber(a.interestAccruedTillLastPrincipalUpdate),
+          depositedCollateralInShares: new BigNumber(a.depositedCollateralInShares),
+          borrowLimit: new BigNumber(a.borrowLimit),
+        },
+        {
+          collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.lenderStrategy][a.collateralAsset]),
+          ratioOfPrices: new BigNumber(prices[a.borrowAsset]).dividedBy(prices[a.collateralAsset]),
+          ratioOfPricesDecimals: 1,
+        },
+        {
+          id: aLenderPool.id,
+          sharesHeld: new BigNumber(aLenderPool.sharesHeld),
+          borrowerInterestShares: new BigNumber(aLenderPool.borrowerInterestShares),
+          borrowerInterestSharesWithdrawn: new BigNumber(aLenderPool.borrowerInterestShares),
+          yieldInterestWithdrawnShares: new BigNumber(aLenderPool.yieldInterestWithdrawnShares),
+          borrowLimit: new BigNumber(aLenderPool.borrowLimit),
+          startTime: new BigNumber(aLenderPool.startTime),
+          minBorrowAmount: new BigNumber(aLenderPool.minBorrowAmount),
+        }
+      );
+    });
+  }
+
+  private transformToPooledCreditLine(
+    data: any[],
+    emulatorResult: PooledCreditLineEmulator[],
+    prices: Record<string, BigNumber>
+  ): PooledCreditLineDetail[] {
+    return emulatorResult.map((aNew, index) => {
+      const a = data[index];
+      return {
+        id: aNew.getId(),
+        borrowerAddress: a.borrowerAddress,
+        borrowLimit: { value: aNew.getBorrowLimit().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        borrowRate: { value: a.borrowRate, decimals: 18 },
+        idealCollateralRatio: { value: a.borrowRate, decimals: 18 },
+        collateralTokens: {
+          value: aNew.calculateTotalCollateralTokens().toString(),
+          decimals: this.tokenManager.getTokenDecimals(a.collateralAsset),
+        },
+        borrowAsset: {
+          name: this.tokenManager.getTokenName(a.borrowAsset),
+          address: a.borrowAsset,
+          logo: this.tokenManager.getLogo(a.borrowAsset),
+          pricePerAssetInUSD: prices[a.borrowAsset].toString(0),
+        },
+        collateralAsset: {
+          name: this.tokenManager.getTokenName(a.collateralAsset),
+          address: a.collateralAsset,
+          logo: this.tokenManager.getLogo(a.collateralAsset),
+          pricePerAssetInUSD: prices[a.collateralAsset].toString(),
+        },
+        createdAt: a.createdAt,
+        startsAt: a.startsAt,
+        endsAt: a.endsAt,
+        defaultsAt: a.defaultsAt,
+        lenderStrategy: {
+          type: this.yieldApi.getStrategy(a.lenderStrategy),
+          address: a.lenderStrategy,
+          displayName: this.yieldApi.getStrategyDisplayName(a.lenderStrategy),
+          logo: this.yieldApi.getStrategyLogo(a.lenderStrategy),
+        },
+        collateralStrategy: {
+          type: this.yieldApi.getStrategy(a.collateralStrategy),
+          address: a.collateralStrategy,
+          displayName: this.yieldApi.getStrategyDisplayName(a.collateralStrategy),
+          logo: this.yieldApi.getStrategyLogo(a.collateralStrategy),
+        },
+        gracePenaltyRate: { value: a.gracePenaltyRate, decimals: 18 },
+        status: aNew.getStatus(),
+        principal: { value: aNew.getPrincipal().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        totalInterestRepaid: { value: a.totalInterestRepaid, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
+        interestAccruedTillLastPrincipalUpdate: {
+          value: a.interestAccruedTillLastPrincipalUpdate,
+          decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
+        },
+        totalLentAmount: { value: a.totalLentAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        currentCollateralRatio: { value: aNew.calculateCurrentCollateralRatio().toString(), decimals: 18 },
+        currentDebt: { value: aNew.calculateCurrentDebt().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+      };
+    });
+  }
+
+  private async transformToLenderContributionToPooledCreditLines(
+    pooledCreditLines: PooledCreditLineDetail[],
+    data: any[]
+  ): Promise<LenderContributionToPooledCreditLines[]> {
+    return data.map((a, index) => {
+      const borrowToken = pooledCreditLines[index].borrowAsset;
+      const collateralToken = pooledCreditLines[index].collateralAsset;
+      const borrowDecimals = this.tokenManager.getTokenDecimals(borrowToken.address);
+      const collateralDecimals = this.tokenManager.getTokenDecimals(collateralToken.address);
+      return {
+        id: pooledCreditLines[index].id,
+        amountLent: { value: a.amountLent || '0', decimals: borrowDecimals },
+        amountWithdrawn: { value: a.amountWithdrawn || '0', decimals: borrowDecimals },
+        sharesWithdrawn: { value: a.sharesWithdrawn || '0', decimals: collateralDecimals },
+        interestWithdrawn: { value: a.interestWithdrawn || '0', decimals: borrowDecimals },
+      };
+    });
+  }
 }
+
+// {
+//   id: a.id,
+//   borrowerAddress: a.borrowerAddress,
+//   borrowLimit: { value: aNew.getBorrowLimit().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+//   borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
+//   idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
+//   collateralTokens: {
+//     value: aNew.calculateTotalCollateralTokens().toString(),
+//     decimals: this.tokenManager.getTokenDecimals(a.collateralAsset),
+//   },
+//   borrowAsset: {
+//     name: this.tokenManager.getTokenName(a.borrowAsset),
+//     address: a.borrowAsset,
+//     logo: this.tokenManager.getLogo(a.borrowAsset),
+//     pricePerAssetInUSD: prices[a.borrowAsset],
+//   },
+//   collateralAsset: {
+//     name: this.tokenManager.getTokenName(a.collateralAsset),
+//     address: a.collateralAsset,
+//     logo: this.tokenManager.getLogo(a.collateralAsset),
+//     pricePerAssetInUSD: prices[a.collateralAsset],
+//   },
+//   createdAt: a.createdAt,
+//   startsAt: a.startsAt,
+//   endsAt: a.endsAt,
+//   defaultsAt: a.defaultsAt,
+//   lenderStrategy: {
+//     type: this.yieldApi.getStrategy(a.lenderStrategy),
+//     address: a.lenderStrategy,
+//     displayName: this.yieldApi.getStrategyDisplayName(a.lenderStrategy),
+//     logo: this.yieldApi.getStrategyLogo(a.lenderStrategy),
+//   },
+//   collateralStrategy: {
+//     type: this.yieldApi.getStrategy(a.collateralStrategy),
+//     address: a.collateralStrategy,
+//     displayName: this.yieldApi.getStrategyDisplayName(a.collateralStrategy),
+//     logo: this.yieldApi.getStrategyLogo(a.collateralStrategy),
+//   },
+//   gracePenaltyRate: new BigNumber(a.gracePenaltyRate).div(new BigNumber(10).pow(16)).toFixed(2),
+//   status: aNew.getStatus(),
+//   principal: { value: a.principal, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+//   totalInterestRepaid: { value: a.totalInterestRepaid, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+//   lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
+//   interestAccruedTillLastPrincipalUpdate: {
+//     value: a.interestAccruedTillLastPrincipalUpdate || '0',
+//     decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
+//   },
+//   totalLentAmount: { value: a.totalLentAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+//   currentCollateralRatio: {
+//     value: aNew.calculateCurrentCollateralRatio().toString(),
+//     decimals: 18,
+//   },
+//   currentDebt: {
+//     value: await (await this.getCurrentDebtForPooledCreditLines(a.id)).toString(),
+//     decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
+//   },
+//   minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+// };
+

@@ -203,24 +203,14 @@ export class SavingsAccountCalls extends PoolCalls {
         },
         shares: { value: a.shares, decimals: 0 },
         amount: {
-          value: await (await this.getTokensForShares(a.strategy.address, new BigNumber(a.shares), a.token)).toString(),
+          value: await (
+            await this.getTokensForShares(this.yieldApi.getStrategy(a.strategy.address), a.token, new BigNumber(a.shares))
+          ).toString(),
           decimals: this.tokenManager.getTokenDecimals(a.token),
         },
       };
     });
     return Promise.all(all);
-  }
-
-  private async getTokensForShares(yieldContract: string, shares: BigNumber, asset: string): Promise<BigNumber> {
-    let amount = new BigNumber(0);
-
-    try {
-      const result = (
-        await IYield__factory.connect(yieldContract, this.signer).callStatic.getTokensForShares(shares.toFixed(0), asset)
-      ).toString();
-      amount = new BigNumber(result);
-    } catch (ex) {}
-    return amount;
   }
 
   /**
