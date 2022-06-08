@@ -188,7 +188,7 @@ export class PooledCreditLineApi {
       const pooledCLConstants = await this.pooledCreditLine.pooledCreditLineConstants(_id);
       const colRatio = await this.pooledCreditLine.callStatic.calculateCurrentCollateralRatio(_id);
       if (pooledCLConstants.idealCollateralRatio.gt(colRatio)) {
-        return CreditLineStatus.LIQUIDATE_CALLABLE;
+        return CreditLineStatus.LIQUIDATE_CALLABLE_EXPIRED;
       }
 
       const dateBigNumber = new BigNumber(new Date().valueOf()).div(1000);
