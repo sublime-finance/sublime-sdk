@@ -108,7 +108,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -162,7 +164,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -215,7 +219,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -257,7 +263,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -301,7 +309,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -358,7 +368,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -414,7 +426,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -458,7 +472,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -506,7 +522,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -554,7 +572,9 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.amountLent),
+          lenderBalance: new BigNumber(a.lenderBalance),
+          borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -735,7 +755,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     return data.map((a) => {
       return {
         lenderAddress: a.lenderAddress,
-        amountLent: { value: a.amountLent, decimals: collateralDecimal },
+        amountLent: { value: a.lenderBalance, decimals: collateralDecimal },
         amountWithdrawn: { value: a.amountWithdrawn, decimals: collateralDecimal },
         sharesWithdrawn: { value: a.sharesWithdrawn, decimals: collateralDecimal },
         strategy: {
@@ -963,7 +983,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const collateralDecimals = this.tokenManager.getTokenDecimals(collateralToken.address);
       return {
         id: pooledCreditLines[index].id,
-        amountLent: { value: a.amountLent || '0', decimals: borrowDecimals },
+        amountLent: { value: a.lenderBalance || '0', decimals: borrowDecimals },
         amountWithdrawn: { value: a.amountWithdrawn || '0', decimals: borrowDecimals },
         sharesWithdrawn: { value: a.sharesWithdrawn || '0', decimals: collateralDecimals },
         interestWithdrawn: { value: a.interestWithdrawn || '0', decimals: borrowDecimals },

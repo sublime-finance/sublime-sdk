@@ -1165,6 +1165,9 @@ export async function getAllLendersPerPool(url: string, poolIds: string[]): Prom
           sharesWithdrawn
           interestWithdrawn
           strategy
+          borrowerInterestSharesWithdrawn
+          yieldInterestWithdrawnShares
+          lenderBalance
           lenderPool {id}
         }
       }`,

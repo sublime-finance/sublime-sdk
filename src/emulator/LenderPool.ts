@@ -15,6 +15,9 @@ export class LenderPoolEmulator extends EmulatorHelper {
   private dataFromPooledCreditLines: DataFromPooledCreditLines;
 
   private lenderData: Record<string, BigNumber> = {};
+  private borrowerInterestData: Record<string, BigNumber> = {};
+  private yieldInterestData: Record<string, BigNumber>;
+
   private lenderPerPool: LenderPerPool[];
 
   private totalSupply: BigNumber;
@@ -34,6 +37,8 @@ export class LenderPoolEmulator extends EmulatorHelper {
     for (let index = 0; index < lendersPerPool.length; index++) {
       const element = lendersPerPool[index];
       this.lenderData[element.lenderAddress] = element.lenderBalance;
+      this.borrowerInterestData[element.lenderAddress] = element.borrowerInterestSharesWithdrawn;
+      this.yieldInterestData[element.lenderAddress] = element.yieldInterestWithdrawnShares;
       this.totalSupply = this.totalSupply.plus(element.lenderBalance);
     }
   }
@@ -46,11 +51,11 @@ export class LenderPoolEmulator extends EmulatorHelper {
     }
   }
 
-  public getLenderInterest(
-    lenderBalance: BigNumber,
-    borrowerInterestSharesWithdrawnByLender: BigNumber,
-    yieldInterestSharesWithdrawnByLender: BigNumber
-  ): BigNumber {
+  public getLenderInterest(lenderAddress: string): BigNumber {
+    const lenderBalance = this.getLenderBalance(lenderAddress);
+    const borrowerInterestSharesWithdrawnByLender = this.borrowerInterestSharesWithdrawnByLender(lenderAddress);
+    const yieldInterestSharesWithdrawnByLender = this.yieldInterestSharesWithdrawnByLender(lenderAddress);
+
     const [_borrowerInterestShares, _yieldInterestShares] = this._calculateLenderInterest(
       lenderBalance,
       this.lenderPoolState.borrowLimit,
@@ -121,6 +126,22 @@ export class LenderPoolEmulator extends EmulatorHelper {
   }
 
   //-------------------------------- Function not part of contract --------------------------------//
+
+  public borrowerInterestSharesWithdrawnByLender(lenderAddress: string): BigNumber {
+    if (this.borrowerInterestData[lenderAddress]) {
+      return this.borrowerInterestData[lenderAddress];
+    } else {
+      return new BigNumber(0);
+    }
+  }
+
+  public yieldInterestSharesWithdrawnByLender(lenderAddress: string): BigNumber {
+    if (this.yieldInterestData[lenderAddress]) {
+      return this.yieldInterestData[lenderAddress];
+    } else {
+      return new BigNumber(0);
+    }
+  }
 
   public getAllLenders(): LenderPerPool[] {
     return this.lenderPerPool;
