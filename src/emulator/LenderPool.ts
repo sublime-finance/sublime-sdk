@@ -16,7 +16,7 @@ export class LenderPoolEmulator extends EmulatorHelper {
 
   private lenderData: Record<string, BigNumber> = {};
   private borrowerInterestData: Record<string, BigNumber> = {};
-  private yieldInterestData: Record<string, BigNumber>;
+  private yieldInterestData: Record<string, BigNumber> = {};
 
   private lenderPerPool: LenderPerPool[];
 

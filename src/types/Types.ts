@@ -1,5 +1,6 @@
 import { BigNumberish, Overrides } from 'ethers';
 import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
+import { CreditLineEmulator } from '../emulator/CreditLines';
 
 export * from './overview/CreditLineOverview';
 export * from './overview/LenderTotalCredit';
@@ -250,6 +251,7 @@ export interface CreditLineDetail {
   requestByLender: boolean;
   createdAt: string;
   strategy: Strategy;
+  emulator: CreditLineEmulator;
 }
 
 export interface PooledCreditLineDetail {

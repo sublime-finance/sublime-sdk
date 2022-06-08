@@ -100,6 +100,7 @@ export class CreditLineCalls extends Base {
           displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
           logo: this.yieldApi.getStrategyLogo(a.strategy),
         },
+        emulator: aNew,
       };
     });
   }
