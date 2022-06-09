@@ -78,6 +78,7 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
           interestAccruedTillLastPrincipalUpdate: new BigNumber(a.interestAccruedTillLastPrincipalUpdate),
           depositedCollateralInShares: new BigNumber(a.depositedCollateralInShares),
           borrowLimit: new BigNumber(a.borrowLimit),
+          defaultsAt: new BigNumber(a.defaultsAt),
         },
         {
           collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.lenderStrategy][a.collateralAsset]),
