@@ -25,6 +25,7 @@ export interface DataFromPooledCreditLines {
 
 export interface LenderPerPool {
   lenderAddress: string;
+  amountLent: BigNumber;
   lenderBalance: BigNumber;
   borrowerInterestSharesWithdrawn: BigNumber;
   yieldInterestWithdrawnShares: BigNumber;

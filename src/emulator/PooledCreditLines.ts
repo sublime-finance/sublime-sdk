@@ -196,4 +196,12 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   public getBorrowLimit(): BigNumber {
     return this.pooledCreditLineState.borrowLimit;
   }
+
+  public totalAmountLent(): BigNumber {
+    return this.lendersPerPool.reduce((total, current) => total.plus(current.amountLent), new BigNumber(0));
+  }
+
+  public totalSupply(): BigNumber {
+    return this.lendersPerPool.reduce((total, current) => total.plus(current.lenderBalance), new BigNumber(0));
+  }
 }

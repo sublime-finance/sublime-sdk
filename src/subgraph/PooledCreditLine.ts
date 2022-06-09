@@ -109,6 +109,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -165,6 +166,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -220,6 +222,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -264,6 +267,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -310,6 +314,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -369,6 +374,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -427,6 +433,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -473,6 +480,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -523,6 +531,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -573,6 +582,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };

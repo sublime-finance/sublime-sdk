@@ -44,6 +44,7 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
         return {
           lenderAddress: a.lenderAddress,
           lenderBalance: new BigNumber(a.lenderBalance),
+          amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
