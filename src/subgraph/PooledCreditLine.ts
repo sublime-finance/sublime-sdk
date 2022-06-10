@@ -532,7 +532,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         amount = { value: a.amount, decimals: collateralTokenDecimal };
       }
       if (
-        ['BORROW', 'EXTENSION_REPAID', 'INTEREST_REPAID', 'COMPLETE_INTEREST_REPAID', 'PRINCIPLE_REPAID', 'REPAY'].includes(
+        ['BORROW', 'EXTENSION_REPAID', 'INTEREST_REPAID', 'COMPLETE_INTEREST_REPAID', 'PRINCIPLE_REPAID', 'REPAY', 'LEND'].includes(
           a.pooledCreditLineOperation
         )
       ) {
