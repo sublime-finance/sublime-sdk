@@ -106,7 +106,6 @@ async function _getCreditLinesOfBorrower(
           id
           status
           lender
-          createdAt
           strategy
           totalInterestRepaid
           lenderWalletDetails {
@@ -137,6 +136,7 @@ async function _getCreditLinesOfBorrower(
           borrowAsset
           autoLiquidation
           lastPrincipalUpdateTime
+          createdAt
           interestAccruedTillLastPrincipalUpdate
         }
     }`,
@@ -162,8 +162,6 @@ export async function getCreditLine(url: string, id: string): Promise<any[]> {
             id
             status
             lender
-            borrower
-            createdAt
             strategy
             totalInterestRepaid
             lenderWalletDetails {
@@ -194,6 +192,7 @@ export async function getCreditLine(url: string, id: string): Promise<any[]> {
             borrowAsset
             autoLiquidation
             lastPrincipalUpdateTime
+            createdAt
             interestAccruedTillLastPrincipalUpdate
           }
       }`,
@@ -227,8 +226,6 @@ async function _getCreditLinesOfLender(
             id
             status
             lender
-            borrower
-            createdAt
             strategy
             totalInterestRepaid
             lenderWalletDetails {
@@ -259,6 +256,7 @@ async function _getCreditLinesOfLender(
             borrowAsset
             autoLiquidation
             lastPrincipalUpdateTime
+            createdAt
             interestAccruedTillLastPrincipalUpdate
           }
       }`,
@@ -292,8 +290,6 @@ async function _getCreditLinesNotOfLender(
             id
             status
             lender
-            borrower
-            createdAt
             strategy
             totalInterestRepaid
             lenderWalletDetails {
@@ -324,6 +320,7 @@ async function _getCreditLinesNotOfLender(
             borrowAsset
             autoLiquidation
             lastPrincipalUpdateTime
+            createdAt
             interestAccruedTillLastPrincipalUpdate
           }
       }`,

@@ -32,6 +32,22 @@ export class LenderPoolEmulator extends EmulatorHelper {
     return _borrowerInterestShares.plus(_yieldInterestShares).multipliedBy(this.lenderPoolExternalData.collateralPerStrategyToken);
   }
 
+  public calculatePrincipalWithdrawable(lenderBalance: BigNumber, totalSupply: BigNumber): BigNumber {
+    const _status = this.dataFromPooledCreditLines.status;
+    if (_status == CreditLineStatus.CLOSED || _status == CreditLineStatus.LIQUIDATED) {
+      return this._calculatePrincipalWithdrawable(lenderBalance);
+    } else if (
+      _status == CreditLineStatus.CANCELLED ||
+      (_status == CreditLineStatus.REQUESTED &&
+        this.now().gte(this.lenderPoolState.startTime) &&
+        totalSupply.lt(this.lenderPoolState.minBorrowAmount))
+    ) {
+      return lenderBalance;
+    } else {
+      return new BigNumber(0);
+    }
+  }
+
   private _calculateLenderInterest(
     _lenderBalance: BigNumber,
     _borrowLimit: BigNumber,
@@ -66,22 +82,6 @@ export class LenderPoolEmulator extends EmulatorHelper {
       .minus(yieldInterestSharesWithdrawnByLender);
 
     return [_borrowerInterestForLender, _yieldInterestForLender];
-  }
-
-  public calculatePrincipalWithdrawable(lenderBalance: BigNumber, totalSupply: BigNumber): BigNumber {
-    const _status = this.dataFromPooledCreditLines.status;
-    if (_status == CreditLineStatus.CLOSED || _status == CreditLineStatus.LIQUIDATED) {
-      return this._calculatePrincipalWithdrawable(lenderBalance);
-    } else if (
-      _status == CreditLineStatus.CANCELLED ||
-      (_status == CreditLineStatus.REQUESTED &&
-        this.now().gte(this.lenderPoolState.startTime) &&
-        totalSupply.lt(this.lenderPoolState.minBorrowAmount))
-    ) {
-      return lenderBalance;
-    } else {
-      return new BigNumber(0);
-    }
   }
 
   private _calculatePrincipalWithdrawable(lenderBalance: BigNumber): BigNumber {

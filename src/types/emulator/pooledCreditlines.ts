@@ -5,6 +5,9 @@ export interface PooledCreditLineState {
   id: string;
   pooledCreditLineStatus: CreditLineStatus;
   endsAt: BigNumber;
+  defaultsAt: BigNumber;
+  startsAt: BigNumber;
+  minBorrowAmount: BigNumber;
   principal: BigNumber;
   idealCollateralRatio: BigNumber;
   totalInterestRepaid: BigNumber;

@@ -77,6 +77,7 @@ export enum CreditLineStatus {
   LIQUIDATE_CALLABLE = 'LIQUIDATE_CALLABLE',
   INTERMEDIATE_CANCELLED = 'INTERMEDIATE_CANCELLED',
   INTERMEDIATE_EXPIRED = 'INTERMEDIATE_EXPIRED',
+  CLOSE_CALLABLE = 'CLOSE_CALLABLE',
 }
 
 export enum StrategyType {
@@ -255,8 +256,8 @@ export interface PooledCreditLineDetail {
   id: string;
   borrowerAddress: string;
   borrowLimit: Balance;
-  borrowRate: string;
-  idealCollateralRatio: string;
+  borrowRate: Balance;
+  idealCollateralRatio: Balance;
   collateralTokens: Balance;
   borrowAsset: Asset;
   collateralAsset: Asset;
@@ -266,7 +267,7 @@ export interface PooledCreditLineDetail {
   defaultsAt: string;
   lenderStrategy: Strategy;
   collateralStrategy: Strategy;
-  gracePenaltyRate: string;
+  gracePenaltyRate: Balance;
   status: CreditLineStatus;
   principal: Balance;
   totalInterestRepaid: Balance;
