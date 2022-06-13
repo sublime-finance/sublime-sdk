@@ -139,8 +139,54 @@ export class CreditLineEmulator extends EmulatorHelper {
     return this.creditLineState.borrowLimit;
   }
 
-  // to-do
-  //   public getCreditLineStatus() : CreditLineStatus{
+  // ------------------- function not part of smart contract ------------------ //
 
-  //   }
+  // to-do Ritik
+  public getStatus(): CreditLineStatus {
+    return CreditLineStatus.ACTIVE;
+  }
+
+  public createdAt(): BigNumber {
+    return this.creditLineState.createdAt;
+  }
+
+  public borrowAsset(): string {
+    return this.creditLineState.borrowAsset;
+  }
+
+  public collateralAsset(): string {
+    return this.creditLineState.collateralAsset;
+  }
+
+  public borrowRate(): BigNumber {
+    return this.creditLineState.borrowRate;
+  }
+
+  public idealCollateralRatio(): BigNumber {
+    return this.creditLineState.idealCollateralRatio;
+  }
+
+  public autoLiquidate(): boolean {
+    return this.creditLineState.autoLiquidation;
+  }
+
+  public lender(): string {
+    return this.creditLineState.lender;
+  }
+
+  public borrower(): string {
+    return this.creditLineState.borrower;
+  }
+
+  public lastPrincipalUpdateTime(): BigNumber {
+    return this.creditLineState.lastPrincipalUpdateTime;
+  }
+
+  public requestByLender(): boolean {
+    return this.creditLineState.requestByLender;
+  }
+
+  public strategy(): string {
+    return this.creditLineState.strategy;
+  }
 }

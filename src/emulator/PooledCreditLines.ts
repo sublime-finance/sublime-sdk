@@ -204,4 +204,72 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   public totalSupply(): BigNumber {
     return this.lendersPerPool.reduce((total, current) => total.plus(current.lenderBalance), new BigNumber(0));
   }
+
+  public borrowerAddress(): string {
+    return this.pooledCreditLineState.borrowerAddress;
+  }
+
+  public borrowRate(): BigNumber {
+    return this.pooledCreditLineState.borrowRate;
+  }
+
+  public idealCollateralratio(): BigNumber {
+    return this.pooledCreditLineState.idealCollateralRatio;
+  }
+
+  public borrowAsset(): string {
+    return this.pooledCreditLineState.borrowAsset;
+  }
+
+  public collateralAsset(): string {
+    return this.pooledCreditLineState.collateralAsset;
+  }
+
+  public createdAt(): BigNumber {
+    return this.pooledCreditLineState.createdAt;
+  }
+
+  public startsAt(): BigNumber {
+    return this.pooledCreditLineState.startsAt;
+  }
+
+  public endsAt(): BigNumber {
+    return this.pooledCreditLineState.endsAt;
+  }
+
+  public defaultsAt(): BigNumber {
+    return this.pooledCreditLineState.defaultsAt;
+  }
+
+  public lenderStrategy(): string {
+    return this.pooledCreditLineState.lenderStrategy;
+  }
+
+  public collateralStrategy(): string {
+    return this.pooledCreditLineState.collateralStrategy;
+  }
+
+  public gracePenaltyRate(): BigNumber {
+    return this.pooledCreditLineState.gracePenaltyRate;
+  }
+
+  public totalInterestRepaid(): BigNumber {
+    return this.pooledCreditLineState.totalInterestRepaid;
+  }
+
+  public lastPrincipalUpdateTime(): BigNumber {
+    return this.pooledCreditLineState.lastPrincipalUpdateTime;
+  }
+
+  public interestAccruedTillLastPrincipalUpdate(): BigNumber {
+    return this.pooledCreditLineState.interestAccruedTillLastPrincipalUpdate;
+  }
+
+  public totalLentAmount(): BigNumber {
+    return this.pooledCreditLineState.totalLentAmount;
+  }
+
+  public minBorrowAmount(): BigNumber {
+    return this.pooledCreditLineState.minBorrowAmount;
+  }
 }

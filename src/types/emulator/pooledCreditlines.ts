@@ -15,6 +15,15 @@ export interface PooledCreditLineState {
   interestAccruedTillLastPrincipalUpdate: BigNumber;
   depositedCollateralInShares: BigNumber;
   borrowLimit: BigNumber;
+  borrowerAddress: string;
+  borrowAsset: string;
+  collateralAsset: string;
+  createdAt: BigNumber;
+  startsAt: BigNumber;
+  lenderStrategy: string;
+  collateralStrategy: string;
+  totalLentAmount: BigNumber;
+  minBorrowAmount: BigNumber;
 }
 
 export interface PooledCreditLineExternalData {

@@ -12,6 +12,14 @@ export interface CreditLineState {
   idealCollateralRatio: BigNumber;
   creditLineStatus: CreditLineStatus;
   borrowLimit: BigNumber;
+  createdAt: BigNumber;
+  borrowAsset: string;
+  collateralAsset: string;
+  autoLiquidation: boolean;
+  lender: string;
+  borrower: string;
+  requestByLender: boolean;
+  strategy: string;
 }
 
 export interface CreditLineGlobals {

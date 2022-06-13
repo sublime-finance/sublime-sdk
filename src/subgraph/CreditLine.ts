@@ -50,7 +50,7 @@ export class CreditLineCalls extends Base {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-    return this.transformToCreditLine(result, emulatorResult, prices);
+    return this.transformToCreditLine(emulatorResult, prices);
   }
 
   /**
@@ -58,47 +58,49 @@ export class CreditLineCalls extends Base {
    * @param data
    * @description transaform the data recevied from the subgraph to type
    */
-  private transformToCreditLine(data: any[], emulatorResult: CreditLineEmulator[], prices: Record<string, BigNumber>): CreditLineDetail[] {
-    return emulatorResult.map((aNew, index) => {
-      const a = data[index];
+  private transformToCreditLine(emulatorResult: CreditLineEmulator[], prices: Record<string, BigNumber>): CreditLineDetail[] {
+    return emulatorResult.map((aNew) => {
       return {
-        createdAt: a.createdAt,
-        currentDebt: { value: aNew.calculateCurrentDebt().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        principal: { value: aNew.getPrincipal().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        interestAccrued: { value: aNew.calculateInterestAccrued().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
+        createdAt: aNew.createdAt().toString(),
+        currentDebt: { value: aNew.calculateCurrentDebt().toString(), decimals: this.tokenManager.getTokenDecimals(aNew.borrowAsset()) },
+        principal: { value: aNew.getPrincipal().toString(), decimals: this.tokenManager.getTokenDecimals(aNew.borrowAsset()) },
+        interestAccrued: {
+          value: aNew.calculateInterestAccrued().toString(),
+          decimals: this.tokenManager.getTokenDecimals(aNew.borrowAsset()),
+        },
         collateralRatio: { value: aNew.calculateCurrentCollateralRatio()[0].toString(), decimals: 18 },
-        creditLimit: { value: aNew.getCreditLimit().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-        interestRate: { value: a.borrowRate, decimals: 18 },
-        idealCollateralRatio: { value: a.idealCollateralRatio, decimals: 18 },
+        creditLimit: { value: aNew.getCreditLimit().toString(), decimals: this.tokenManager.getTokenDecimals(aNew.borrowAsset()) },
+        interestRate: { value: aNew.borrowRate().toString(), decimals: 18 },
+        idealCollateralRatio: { value: aNew.idealCollateralRatio().toString(), decimals: 18 },
         borrowAsset: {
-          address: a.borrowAsset,
-          name: this.tokenManager.getTokenName(a.borrowAsset),
-          pricePerAssetInUSD: prices[a.borrowAsset].toString(),
-          logo: this.tokenManager.getLogo(a.borrowAsset),
+          address: aNew.borrowAsset(),
+          name: this.tokenManager.getTokenName(aNew.borrowAsset()),
+          pricePerAssetInUSD: prices[aNew.borrowAsset()].toString(),
+          logo: this.tokenManager.getLogo(aNew.borrowAsset()),
         },
         collateralTokens: {
           value: aNew.calculateTotalCollateralTokens().toString(),
-          decimals: this.tokenManager.getTokenDecimals(a.collateralAsset),
+          decimals: this.tokenManager.getTokenDecimals(aNew.collateralAsset()),
         },
         collateralAsset: {
-          address: a.collateralAsset,
-          name: this.tokenManager.getTokenName(a.collateralAsset),
-          pricePerAssetInUSD: prices[a.collateralAsset].toString(),
-          logo: this.tokenManager.getLogo(a.collateralAsset),
+          address: aNew.collateralAsset(),
+          name: this.tokenManager.getTokenName(aNew.collateralAsset()),
+          pricePerAssetInUSD: prices[aNew.collateralAsset()].toString(),
+          logo: this.tokenManager.getLogo(aNew.collateralAsset()),
         },
 
-        autoLiquidate: a.autoLiquidation,
-        lender: { address: a.lender, otherData: a.lenderWalconstDetails },
-        borrower: { address: a.borrower, otherData: a.borrowerWalconstDetails },
-        type: a.status,
-        lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
-        id: a.id,
-        requestByLender: a.requestByLender,
+        autoLiquidate: aNew.autoLiquidate(),
+        lender: { address: aNew.lender() },
+        borrower: { address: aNew.borrower() },
+        type: aNew.getStatus(),
+        lastPrincipalUpdateTime: aNew.lastPrincipalUpdateTime().toString(),
+        id: aNew.getId(),
+        requestByLender: aNew.requestByLender(),
         strategy: {
-          address: a.strategy,
-          type: this.yieldApi.getStrategy(a.strategy),
-          displayName: this.yieldApi.getStrategyDisplayName(a.strategy),
-          logo: this.yieldApi.getStrategyLogo(a.strategy),
+          address: aNew.strategy(),
+          type: this.yieldApi.getStrategy(aNew.strategy()),
+          displayName: this.yieldApi.getStrategyDisplayName(aNew.strategy()),
+          logo: this.yieldApi.getStrategyLogo(aNew.strategy()),
         },
         emulator: aNew,
       };
@@ -116,7 +118,7 @@ export class CreditLineCalls extends Base {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-    return this.transformToCreditLine(result, emulatorResult, prices);
+    return this.transformToCreditLine(emulatorResult, prices);
   }
 
   /**
@@ -130,7 +132,7 @@ export class CreditLineCalls extends Base {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-    return this.transformToCreditLine(result, emulatorResult, prices);
+    return this.transformToCreditLine(emulatorResult, prices);
   }
 
   /**
@@ -144,7 +146,7 @@ export class CreditLineCalls extends Base {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-    return this.transformToCreditLine(result, emulatorResult, prices);
+    return this.transformToCreditLine(emulatorResult, prices);
   }
 
   /**
@@ -158,7 +160,7 @@ export class CreditLineCalls extends Base {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-    return this.transformToCreditLine(result, emulatorResult, prices);
+    return this.transformToCreditLine(emulatorResult, prices);
   }
 
   /**
@@ -172,7 +174,7 @@ export class CreditLineCalls extends Base {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-    return this.transformToCreditLine(result, emulatorResult, prices);
+    return this.transformToCreditLine(emulatorResult, prices);
   }
 
   /**
@@ -186,7 +188,7 @@ export class CreditLineCalls extends Base {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-    return this.transformToCreditLine(result, emulatorResult, prices);
+    return this.transformToCreditLine(emulatorResult, prices);
   }
 
   /**
@@ -198,7 +200,7 @@ export class CreditLineCalls extends Base {
     const prices = await this.refreshTokenData(result);
     const collateralPerStrategyToken = await this.refreshStrategyData(result);
     const emulatorResult = this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
-    const data = this.transformToCreditLine(result, emulatorResult, prices);
+    const data = this.transformToCreditLine(emulatorResult, prices);
     if (data.length == 0) {
       return undefined;
     } else {
@@ -412,6 +414,14 @@ export class CreditLineCalls extends Base {
           idealCollateralRatio: new BigNumber(a.idealCollateralRatio),
           creditLineStatus: a.status,
           borrowLimit: new BigNumber(a.borrowLimit),
+          createdAt: new BigNumber(a.createdAt),
+          borrowAsset: a.borrowAsset,
+          collateralAsset: a.collateralAsset,
+          autoLiquidation: new Boolean(a.autoLiquidation).valueOf(),
+          lender: a.lender,
+          borrower: a.borrower,
+          requestByLender: new Boolean(a.requestByLender).valueOf(),
+          strategy: a.strategy,
         },
         {
           collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.strategy][a.collateralAsset]),

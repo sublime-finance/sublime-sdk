@@ -1131,6 +1131,12 @@ export async function getPCLandLpTogether(url: string, count: number, skip: numb
           collateralAsset
           lenderStrategy
           depositedCollateralInShares
+          borrowerAddress
+          collateralAsset
+          createdAt
+          startsAt
+          collateralStrategy
+          totalLentAmount
         }
       }
     }`,
