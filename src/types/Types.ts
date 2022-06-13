@@ -43,6 +43,7 @@ export interface Asset {
   address: string;
   logo: string;
   pricePerAssetInUSD: string;
+  decimals: number;
 }
 
 export interface UserMetaData {

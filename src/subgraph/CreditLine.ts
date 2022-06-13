@@ -77,6 +77,7 @@ export class CreditLineCalls extends Base {
           name: this.tokenManager.getTokenName(aNew.borrowAsset()),
           pricePerAssetInUSD: prices[aNew.borrowAsset()].toString(),
           logo: this.tokenManager.getLogo(aNew.borrowAsset()),
+          decimals: this.tokenManager.getTokenDecimals(aNew.borrowAsset()),
         },
         collateralTokens: {
           value: aNew.calculateTotalCollateralTokens().toString(),
@@ -87,6 +88,7 @@ export class CreditLineCalls extends Base {
           name: this.tokenManager.getTokenName(aNew.collateralAsset()),
           pricePerAssetInUSD: prices[aNew.collateralAsset()].toString(),
           logo: this.tokenManager.getLogo(aNew.collateralAsset()),
+          decimals: this.tokenManager.getTokenDecimals(aNew.collateralAsset()),
         },
 
         autoLiquidate: aNew.autoLiquidate(),

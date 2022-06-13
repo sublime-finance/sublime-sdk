@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/types/Types.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L59)
+[src/types/Types.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/8121c28/src/types/Types.ts#L60)

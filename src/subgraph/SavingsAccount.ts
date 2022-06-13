@@ -60,6 +60,7 @@ export class SavingsAccountCalls extends PoolCalls {
           name: this.tokenManager.getTokenName(a.token),
           logo: this.tokenManager.getLogo(a.token),
           pricePerAssetInUSD: prices[a.token],
+          decimals: this.tokenManager.getTokenDecimals(a.token),
         },
       };
     });
@@ -194,6 +195,7 @@ export class SavingsAccountCalls extends PoolCalls {
           name: this.tokenManager.getTokenName(a.token),
           logo: this.tokenManager.getLogo(a.token),
           pricePerAssetInUSD: prices[a.token],
+          decimals: this.tokenManager.getTokenDecimals(a.token),
         },
         strategy: {
           address: a.strategy.address,

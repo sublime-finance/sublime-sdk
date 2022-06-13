@@ -171,6 +171,7 @@ export class CreditLineInterestCalculator extends PooledCreditLinesLenderOvervie
           name: this.tokenManager.getTokenName(a.borrowAsset),
           logo: this.tokenManager.getLogo(a.borrowAsset),
           pricePerAssetInUSD: prices[a.borrowAsset].toString(),
+          decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
         strategy: {
           address: a.strategy,

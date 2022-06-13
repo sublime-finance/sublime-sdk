@@ -275,6 +275,7 @@ export class PoolApi {
       name: this.tokenManager.getTokenName(poolConstants.borrowAsset.toLowerCase()),
       pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(poolConstants.borrowAsset)).toString(),
       logo: this.tokenManager.getLogo(poolConstants.borrowAsset),
+      decimals: this.tokenManager.getTokenDecimals(poolConstants.borrowAsset),
     };
     result.idealCollateralRatio = new BigNumber(poolConstants.idealCollateralRatio.toString()).div(new BigNumber(10).pow(28)).toFixed(2);
     result.borrowRate = new BigNumber(poolConstants.borrowRate.toString()).div(new BigNumber(10).pow(28)).toFixed(2);
@@ -285,6 +286,7 @@ export class PoolApi {
       name: this.tokenManager.getTokenName(poolConstants.collateralAsset),
       pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(poolConstants.collateralAsset)).toString(),
       logo: this.tokenManager.getLogo(poolConstants.collateralAsset),
+      decimals: this.tokenManager.getTokenDecimals(poolConstants.collateralAsset),
     };
     result.poolSavingsStrategy = poolConstants.poolSavingsStrategy;
 
