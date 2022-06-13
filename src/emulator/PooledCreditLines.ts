@@ -272,4 +272,14 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   public minBorrowAmount(): BigNumber {
     return this.pooledCreditLineState.minBorrowAmount;
   }
+
+  // to-do
+  public borrowerVerifier(): string {
+    return this.pooledCreditLineState.lenderVerifier;
+  }
+
+  // to-do
+  public lenderVerifier(): string {
+    return this.pooledCreditLineState.lenderVerifier;
+  }
 }

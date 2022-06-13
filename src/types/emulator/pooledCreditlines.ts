@@ -24,6 +24,7 @@ export interface PooledCreditLineState {
   collateralStrategy: string;
   totalLentAmount: BigNumber;
   minBorrowAmount: BigNumber;
+  lenderVerifier: string;
 }
 
 export interface PooledCreditLineExternalData {

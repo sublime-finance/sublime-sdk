@@ -189,4 +189,20 @@ export class CreditLineEmulator extends EmulatorHelper {
   public strategy(): string {
     return this.creditLineState.strategy;
   }
+
+  /**
+   * @description To-Do
+   * @returns
+   */
+  public borrowStrategy(): string {
+    return this.creditLineState.strategy;
+  }
+
+  /**
+   * @description To-Do
+   * @returns
+   */
+  public collateralStrategy(): string {
+    return this.creditLineState.strategy;
+  }
 }

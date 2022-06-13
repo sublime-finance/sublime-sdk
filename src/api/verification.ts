@@ -215,6 +215,10 @@ export class VerificationAPI {
     }
   }
 
+  public getVerifierDetails(address: string): VerifierDetails {
+    return { address, type: this.getVerifierType(address) };
+  }
+
   public getSupportedVerifiers(): VerifierDetails[] {
     return [VerifierType.AdminVerifier, VerifierType.TwitterVerifier, VerifierType.PersonaVerifier].map((a) => {
       return { type: a, address: this.getVerifierAddress(a) };

@@ -89,6 +89,7 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
           collateralStrategy: a.collateralStrategy,
           totalLentAmount: new BigNumber(a.totalLentAmount),
           minBorrowAmount: new BigNumber(a.minBorrowAmount),
+          lenderVerifier: a.lenderVerifier.id,
         },
         {
           collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.lenderStrategy][a.collateralAsset]),

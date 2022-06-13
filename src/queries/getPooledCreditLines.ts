@@ -449,6 +449,9 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -504,6 +507,9 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -559,6 +565,9 @@ export async function getAllPooledCreditLinesWithState(url: string, count: numbe
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -614,6 +623,9 @@ export async function getAllPooledCreditLinesWithNotState(url: string, count: nu
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -1137,6 +1149,9 @@ export async function getPCLandLpTogether(url: string, count: number, skip: numb
           startsAt
           collateralStrategy
           totalLentAmount
+          lenderVerifier {
+            id
+          }
         }
       }
     }`,
