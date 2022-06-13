@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderCreditLimit
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderCreditLimit
 
 # Interface: LenderCreditLimit
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/overview/BorrowerCreditLimit.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/BorrowerCreditLimit.ts#L16)
+[src/types/overview/BorrowerCreditLimit.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/BorrowerCreditLimit.ts#L16)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/BorrowerCreditLimit.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/BorrowerCreditLimit.ts#L17)
+[src/types/overview/BorrowerCreditLimit.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/BorrowerCreditLimit.ts#L17)

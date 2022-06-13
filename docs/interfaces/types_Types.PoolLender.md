@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / PoolLender
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / PoolLender
 
 # Interface: PoolLender
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:200](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L200)
+[src/types/Types.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L204)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:198](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L198)
+[src/types/Types.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L202)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L202)
+[src/types/Types.ts:206](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L206)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L201)
+[src/types/Types.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L205)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L204)
+[src/types/Types.ts:208](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L208)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:203](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L203)
+[src/types/Types.ts:207](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L207)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L199)
+[src/types/Types.ts:203](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L203)

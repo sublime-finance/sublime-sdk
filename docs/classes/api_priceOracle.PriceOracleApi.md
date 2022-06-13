@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [api/priceOracle](../modules/api_priceOracle.md) / PriceOracleApi
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [api/priceOracle](../modules/api_priceOracle.md) / PriceOracleApi
 
 # Class: PriceOracleApi
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[src/api/priceOracle.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L16)
+[src/api/priceOracle.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L16)
 
 ## Properties
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[src/api/priceOracle.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L14)
+[src/api/priceOracle.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L14)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/api/priceOracle.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L13)
+[src/api/priceOracle.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L13)
 
 ## Methods
 
@@ -84,7 +84,7 @@ Returns true if the both the tokens are mapped against each other in the oracle
 
 #### Defined in
 
-[src/api/priceOracle.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L48)
+[src/api/priceOracle.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L48)
 
 ___
 
@@ -106,7 +106,7 @@ Returns the addresses of chainlink feed to which the tokens prices are linked
 
 #### Defined in
 
-[src/api/priceOracle.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L37)
+[src/api/priceOracle.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L37)
 
 ___
 
@@ -129,7 +129,7 @@ Returns the price of uniswap
 
 #### Defined in
 
-[src/api/priceOracle.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L69)
+[src/api/priceOracle.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L69)
 
 ___
 
@@ -154,7 +154,7 @@ price of token1 in terms of token2
 
 #### Defined in
 
-[src/api/priceOracle.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L27)
+[src/api/priceOracle.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L27)
 
 ___
 
@@ -177,7 +177,7 @@ Returns the price from chainlink
 
 #### Defined in
 
-[src/api/priceOracle.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L58)
+[src/api/priceOracle.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L58)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-[src/api/priceOracle.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L81)
+[src/api/priceOracle.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L81)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[src/api/priceOracle.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L102)
+[src/api/priceOracle.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L102)
 
 ___
 
@@ -249,4 +249,4 @@ ___
 
 #### Defined in
 
-[src/api/priceOracle.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/priceOracle.ts#L92)
+[src/api/priceOracle.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/priceOracle.ts#L92)

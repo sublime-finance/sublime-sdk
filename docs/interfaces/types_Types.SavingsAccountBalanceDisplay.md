@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / SavingsAccountBalanceDisplay
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / SavingsAccountBalanceDisplay
 
 # Interface: SavingsAccountBalanceDisplay
 
@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L168)
+[src/types/Types.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L172)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L165)
+[src/types/Types.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L169)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L164)
+[src/types/Types.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L168)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L166)
+[src/types/Types.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L170)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L167)
+[src/types/Types.ts:171](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L171)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L163)
+[src/types/Types.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L167)

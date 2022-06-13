@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / Balance
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / Balance
 
 # Interface: Balance
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L306)
+[src/types/Types.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L312)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:305](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L305)
+[src/types/Types.ts:311](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L311)

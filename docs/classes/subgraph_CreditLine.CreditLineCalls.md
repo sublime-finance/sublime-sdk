@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [subgraph/CreditLine](../modules/subgraph_CreditLine.md) / CreditLineCalls
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [subgraph/CreditLine](../modules/subgraph_CreditLine.md) / CreditLineCalls
 
 # Class: CreditLineCalls
 
@@ -20,7 +20,6 @@
 
 ### Properties
 
-- [creditLineContract](subgraph_CreditLine.CreditLineCalls.md#creditlinecontract)
 - [signer](subgraph_CreditLine.CreditLineCalls.md#signer)
 - [subgraphUrl](subgraph_CreditLine.CreditLineCalls.md#subgraphurl)
 - [sublimeAddresses](subgraph_CreditLine.CreditLineCalls.md#sublimeaddresses)
@@ -30,9 +29,6 @@
 
 ### Methods
 
-- [calculateCollateralRatioForCreditLines](subgraph_CreditLine.CreditLineCalls.md#calculatecollateralratioforcreditlines)
-- [calculateCurrentDebtForCreditLines](subgraph_CreditLine.CreditLineCalls.md#calculatecurrentdebtforcreditlines)
-- [calculateInterestAccruedForCreditLines](subgraph_CreditLine.CreditLineCalls.md#calculateinterestaccruedforcreditlines)
 - [countAllCreditLines](subgraph_CreditLine.CreditLineCalls.md#countallcreditlines)
 - [countAllCreditLinesOfBorrowerWithStateIn](subgraph_CreditLine.CreditLineCalls.md#countallcreditlinesofborrowerwithstatein)
 - [countAllCreditLinesOfBorrowerWithStateIn\_requestByLender](subgraph_CreditLine.CreditLineCalls.md#countallcreditlinesofborrowerwithstatein_requestbylender)
@@ -54,7 +50,12 @@
 - [getPendingCreditLinesRequestedToLender](subgraph_CreditLine.CreditLineCalls.md#getpendingcreditlinesrequestedtolender)
 - [getPendingCreditlinesRequestedByLender](subgraph_CreditLine.CreditLineCalls.md#getpendingcreditlinesrequestedbylender)
 - [getRandomInt](subgraph_CreditLine.CreditLineCalls.md#getrandomint)
+- [getTokensForShares](subgraph_CreditLine.CreditLineCalls.md#gettokensforshares)
+- [refreshStrategyData](subgraph_CreditLine.CreditLineCalls.md#refreshstrategydata)
+- [refreshStrategyDataForPcl](subgraph_CreditLine.CreditLineCalls.md#refreshstrategydataforpcl)
+- [refreshTokenData](subgraph_CreditLine.CreditLineCalls.md#refreshtokendata)
 - [transformToCreditLine](subgraph_CreditLine.CreditLineCalls.md#transformtocreditline)
+- [transformToCreditLineEmulator](subgraph_CreditLine.CreditLineCalls.md#transformtocreditlineemulator)
 - [transformToCreditLineOperations](subgraph_CreditLine.CreditLineCalls.md#transformtocreditlineoperations)
 
 ## Constructors
@@ -62,6 +63,8 @@
 ### constructor
 
 • **new CreditLineCalls**(`url`, `signer`, `tokenManager`, `config`)
+
+**`description`** instance of credit line contract
 
 #### Parameters
 
@@ -78,21 +81,9 @@
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L40)
+[src/subgraph/CreditLine.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L37)
 
 ## Properties
-
-### creditLineContract
-
-• `Private` **creditLineContract**: `CreditLine`
-
-**`description`** instance of credit line contract
-
-#### Defined in
-
-[src/subgraph/CreditLine.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L38)
-
-___
 
 ### signer
 
@@ -106,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L19)
+[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L19)
 
 ___
 
@@ -122,7 +113,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L14)
+[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L14)
 
 ___
 
@@ -138,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L33)
+[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L33)
 
 ___
 
@@ -154,7 +145,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L24)
+[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L24)
 
 ___
 
@@ -168,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L28)
+[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L28)
 
 ___
 
@@ -182,69 +173,9 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L26)
+[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L26)
 
 ## Methods
-
-### calculateCollateralRatioForCreditLines
-
-▸ `Private` **calculateCollateralRatioForCreditLines**(`creditLineId`): `Promise`<[`BigNumber`, `BigNumber`]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `creditLineId` | `string` |
-
-#### Returns
-
-`Promise`<[`BigNumber`, `BigNumber`]\>
-
-#### Defined in
-
-[src/subgraph/CreditLine.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L158)
-
-___
-
-### calculateCurrentDebtForCreditLines
-
-▸ `Private` **calculateCurrentDebtForCreditLines**(`creditLineId`): `Promise`<`BigNumber`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `creditLineId` | `string` |
-
-#### Returns
-
-`Promise`<`BigNumber`\>
-
-#### Defined in
-
-[src/subgraph/CreditLine.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L150)
-
-___
-
-### calculateInterestAccruedForCreditLines
-
-▸ `Private` **calculateInterestAccruedForCreditLines**(`creditLineId`): `Promise`<`BigNumber`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `creditLineId` | `string` |
-
-#### Returns
-
-`Promise`<`BigNumber`\>
-
-#### Defined in
-
-[src/subgraph/CreditLine.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L142)
-
-___
 
 ### countAllCreditLines
 
@@ -256,7 +187,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:339](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L339)
+[src/subgraph/CreditLine.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L300)
 
 ___
 
@@ -277,7 +208,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L344)
+[src/subgraph/CreditLine.ts:305](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L305)
 
 ___
 
@@ -299,7 +230,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:353](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L353)
+[src/subgraph/CreditLine.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L314)
 
 ___
 
@@ -320,7 +251,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:367](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L367)
+[src/subgraph/CreditLine.ts:328](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L328)
 
 ___
 
@@ -342,7 +273,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:376](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L376)
+[src/subgraph/CreditLine.ts:337](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L337)
 
 ___
 
@@ -363,7 +294,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:413](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L413)
+[src/subgraph/CreditLine.ts:374](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L374)
 
 ___
 
@@ -385,7 +316,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:422](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L422)
+[src/subgraph/CreditLine.ts:383](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L383)
 
 ___
 
@@ -406,7 +337,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:390](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L390)
+[src/subgraph/CreditLine.ts:351](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L351)
 
 ___
 
@@ -428,7 +359,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:399](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L399)
+[src/subgraph/CreditLine.ts:360](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L360)
 
 ___
 
@@ -453,7 +384,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L52)
+[src/subgraph/CreditLine.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L48)
 
 ___
 
@@ -477,7 +408,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L174)
+[src/subgraph/CreditLine.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L114)
 
 ___
 
@@ -501,7 +432,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L185)
+[src/subgraph/CreditLine.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L128)
 
 ___
 
@@ -523,7 +454,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L238)
+[src/subgraph/CreditLine.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L196)
 
 ___
 
@@ -545,7 +476,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L302)
+[src/subgraph/CreditLine.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L263)
 
 ___
 
@@ -567,7 +498,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:252](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L252)
+[src/subgraph/CreditLine.ts:213](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L213)
 
 ___
 
@@ -593,7 +524,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L58)
+[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L58)
 
 ___
 
@@ -617,7 +548,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:207](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L207)
+[src/subgraph/CreditLine.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L156)
 
 ___
 
@@ -641,7 +572,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L229)
+[src/subgraph/CreditLine.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L184)
 
 ___
 
@@ -665,7 +596,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L218)
+[src/subgraph/CreditLine.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L170)
 
 ___
 
@@ -689,7 +620,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L196)
+[src/subgraph/CreditLine.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L142)
 
 ___
 
@@ -715,15 +646,39 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L50)
+[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L50)
 
 ___
 
-### transformToCreditLine
+### getTokensForShares
 
-▸ `Private` **transformToCreditLine**(`data`): `Promise`<[`CreditLineDetail`](../interfaces/types_Types.CreditLineDetail.md)[]\>
+▸ `Protected` **getTokensForShares**(`strategy`, `collateralAsset`, `amount`): `Promise`<`BigNumber`\>
 
-**`description`** transaform the data recevied from the subgraph to type
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `strategy` | [`StrategyType`](../enums/types_Types.StrategyType.md) |
+| `collateralAsset` | `string` |
+| `amount` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`BigNumber`\>
+
+#### Inherited from
+
+[Base](subgraph_Base.Base.md).[getTokensForShares](subgraph_Base.Base.md#gettokensforshares)
+
+#### Defined in
+
+[src/subgraph/Base.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L134)
+
+___
+
+### refreshStrategyData
+
+▸ `Protected` **refreshStrategyData**(`data`): `Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
 
 #### Parameters
 
@@ -733,11 +688,109 @@ ___
 
 #### Returns
 
-`Promise`<[`CreditLineDetail`](../interfaces/types_Types.CreditLineDetail.md)[]\>
+`Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Inherited from
+
+[Base](subgraph_Base.Base.md).[refreshStrategyData](subgraph_Base.Base.md#refreshstrategydata)
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L62)
+[src/subgraph/Base.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L108)
+
+___
+
+### refreshStrategyDataForPcl
+
+▸ `Protected` **refreshStrategyDataForPcl**(`data`): `Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Inherited from
+
+[Base](subgraph_Base.Base.md).[refreshStrategyDataForPcl](subgraph_Base.Base.md#refreshstrategydataforpcl)
+
+#### Defined in
+
+[src/subgraph/Base.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L82)
+
+___
+
+### refreshTokenData
+
+▸ `Protected` **refreshTokenData**(`data`): `Promise`<`Record`<`string`, `BigNumber`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<`Record`<`string`, `BigNumber`\>\>
+
+#### Inherited from
+
+[Base](subgraph_Base.Base.md).[refreshTokenData](subgraph_Base.Base.md#refreshtokendata)
+
+#### Defined in
+
+[src/subgraph/Base.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L67)
+
+___
+
+### transformToCreditLine
+
+▸ `Private` **transformToCreditLine**(`data`, `emulatorResult`, `prices`): [`CreditLineDetail`](../interfaces/types_Types.CreditLineDetail.md)[]
+
+**`description`** transaform the data recevied from the subgraph to type
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+| `emulatorResult` | `CreditLineEmulator`[] |
+| `prices` | `Record`<`string`, `BigNumber`\> |
+
+#### Returns
+
+[`CreditLineDetail`](../interfaces/types_Types.CreditLineDetail.md)[]
+
+#### Defined in
+
+[src/subgraph/CreditLine.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L61)
+
+___
+
+### transformToCreditLineEmulator
+
+▸ `Private` **transformToCreditLineEmulator**(`data`, `prices`, `collateralPerStrategyToken`): `CreditLineEmulator`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+| `prices` | `Record`<`string`, `BigNumber`\> |
+| `collateralPerStrategyToken` | `Record`<`string`, `Record`<`string`, `BigNumber`\>\> |
+
+#### Returns
+
+`CreditLineEmulator`[]
+
+#### Defined in
+
+[src/subgraph/CreditLine.ts:397](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L397)
 
 ___
 
@@ -759,4 +812,4 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:317](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L317)
+[src/subgraph/CreditLine.ts:278](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L278)

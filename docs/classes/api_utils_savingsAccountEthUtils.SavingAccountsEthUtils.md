@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [api/utils/savingsAccountEthUtils](../modules/api_utils_savingsAccountEthUtils.md) / SavingAccountsEthUtils
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [api/utils/savingsAccountEthUtils](../modules/api_utils_savingsAccountEthUtils.md) / SavingAccountsEthUtils
 
 # Class: SavingAccountsEthUtils
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/api/utils/savingsAccountEthUtils.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/utils/savingsAccountEthUtils.ts#L21)
+[src/api/utils/savingsAccountEthUtils.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/utils/savingsAccountEthUtils.ts#L21)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[src/api/utils/savingsAccountEthUtils.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/utils/savingsAccountEthUtils.ts#L14)
+[src/api/utils/savingsAccountEthUtils.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/utils/savingsAccountEthUtils.ts#L14)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/savingsAccountEthUtils.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/utils/savingsAccountEthUtils.ts#L12)
+[src/api/utils/savingsAccountEthUtils.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/utils/savingsAccountEthUtils.ts#L12)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/savingsAccountEthUtils.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/utils/savingsAccountEthUtils.ts#L13)
+[src/api/utils/savingsAccountEthUtils.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/utils/savingsAccountEthUtils.ts#L13)
 
 ## Methods
 
@@ -91,4 +91,4 @@ ___
 
 #### Defined in
 
-[src/api/utils/savingsAccountEthUtils.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/api/utils/savingsAccountEthUtils.ts#L38)
+[src/api/utils/savingsAccountEthUtils.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/api/utils/savingsAccountEthUtils.ts#L38)

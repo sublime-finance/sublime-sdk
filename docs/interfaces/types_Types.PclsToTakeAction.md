@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / PclsToTakeAction
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / PclsToTakeAction
 
 # Interface: PclsToTakeAction
 
@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L18)
+[src/types/Types.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L22)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L17)
+[src/types/Types.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L21)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L15)
+[src/types/Types.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L19)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L16)
+[src/types/Types.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L20)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L20)
+[src/types/Types.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L24)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L19)
+[src/types/Types.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L23)

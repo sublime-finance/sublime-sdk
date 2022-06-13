@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderTotalCreditCommited
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderTotalCreditCommited
 
 # Interface: LenderTotalCreditCommited
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/types/overview/LenderTotalCredit.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/LenderTotalCredit.ts#L20)
+[src/types/overview/LenderTotalCredit.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/LenderTotalCredit.ts#L20)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/LenderTotalCredit.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/LenderTotalCredit.ts#L18)
+[src/types/overview/LenderTotalCredit.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/LenderTotalCredit.ts#L18)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/LenderTotalCredit.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/LenderTotalCredit.ts#L19)
+[src/types/overview/LenderTotalCredit.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/LenderTotalCredit.ts#L19)

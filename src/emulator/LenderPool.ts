@@ -125,7 +125,7 @@ export class LenderPoolEmulator extends EmulatorHelper {
     return _principalWithdrawble;
   }
 
-  //-------------------------------- Function not part of contract --------------------------------//
+  // -------------------------------- Function not part of contract --------------------------------//
 
   public borrowerInterestSharesWithdrawnByLender(lenderAddress: string): BigNumber {
     if (this.borrowerInterestData[lenderAddress]) {

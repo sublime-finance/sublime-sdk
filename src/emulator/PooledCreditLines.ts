@@ -188,7 +188,7 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return _currentCollateralRatio;
   }
 
-  //----------- additional calls not part of smart contract ----------//
+  // ----------- additional calls not part of smart contract ----------//
   public getPrincipal(): BigNumber {
     return this.pooledCreditLineState.principal;
   }

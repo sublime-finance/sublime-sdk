@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / api/yieldAndStrategy
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / api/yieldAndStrategy
 
 # Module: api/yieldAndStrategy
 

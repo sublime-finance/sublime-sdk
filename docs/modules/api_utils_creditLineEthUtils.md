@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / api/utils/creditLineEthUtils
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / api/utils/creditLineEthUtils
 
 # Module: api/utils/creditLineEthUtils
 

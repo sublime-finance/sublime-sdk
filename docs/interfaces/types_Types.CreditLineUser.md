@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / CreditLineUser
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / CreditLineUser
 
 # Interface: CreditLineUser
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:280](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L280)
+[src/types/Types.ts:286](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L286)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:281](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L281)
+[src/types/Types.ts:287](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L287)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:283](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L283)
+[src/types/Types.ts:289](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L289)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:282](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L282)
+[src/types/Types.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L288)

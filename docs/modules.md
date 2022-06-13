@@ -1,6 +1,6 @@
-[sublime-sdk](README.md) / Modules
+[sublime-sdk-v2](README.md) / Modules
 
-# sublime-sdk
+# sublime-sdk-v2
 
 ## Table of contents
 

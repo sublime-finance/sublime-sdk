@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / StrategyType
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / StrategyType
 
 # Enumeration: StrategyType
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L84)
+[src/types/Types.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L88)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L82)
+[src/types/Types.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L86)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L81)
+[src/types/Types.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L85)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L83)
+[src/types/Types.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L87)

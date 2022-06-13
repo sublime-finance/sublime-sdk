@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / subgraph/CreditLineOverview
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / subgraph/CreditLineOverview
 
 # Module: subgraph/CreditLineOverview
 

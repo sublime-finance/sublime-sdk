@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / api/tokenApi
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / api/tokenApi
 
 # Module: api/tokenApi
 

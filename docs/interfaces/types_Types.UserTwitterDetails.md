@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / UserTwitterDetails
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / UserTwitterDetails
 
 # Interface: UserTwitterDetails
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L60)
+[src/types/Types.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L64)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L59)
+[src/types/Types.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L63)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L61)
+[src/types/Types.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L65)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L62)
+[src/types/Types.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L66)

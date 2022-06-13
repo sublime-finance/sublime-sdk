@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / Allowances
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / Allowances
 
 # Interface: Allowances
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L30)
+[src/types/Types.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L34)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L31)
+[src/types/Types.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L35)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L32)
+[src/types/Types.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L36)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L33)
+[src/types/Types.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L37)

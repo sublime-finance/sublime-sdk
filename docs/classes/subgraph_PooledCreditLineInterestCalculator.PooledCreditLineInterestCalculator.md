@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [subgraph/PooledCreditLineInterestCalculator](../modules/subgraph_PooledCreditLineInterestCalculator.md) / PooledCreditLineInterestCalculator
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [subgraph/PooledCreditLineInterestCalculator](../modules/subgraph_PooledCreditLineInterestCalculator.md) / PooledCreditLineInterestCalculator
 
 # Class: PooledCreditLineInterestCalculator
 
@@ -51,6 +51,7 @@
 - [countAllPooledCreditLinesWithStatesNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#countallpooledcreditlineswithstatesnotin)
 - [getAllCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallcreditlines)
 - [getAllLendersOfPool](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getalllendersofpool)
+- [getAllLendersPerPool](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getalllendersperpool)
 - [getAllPoolCreditLinesWithStateIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpoolcreditlineswithstatein)
 - [getAllPoolCreditLinesWithStateNotIn](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpoolcreditlineswithstatenotin)
 - [getAllPooledCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getallpooledcreditlines)
@@ -70,7 +71,6 @@
 - [getConfirmedCreditLinesOfBorrower](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getconfirmedcreditlinesofborrower)
 - [getConfirmedCreditLinesOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getconfirmedcreditlinesoflender)
 - [getCreditLine](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditline)
-- [getCreditLineStatus](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinestatus)
 - [getCreditLineTimeline](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinetimeline)
 - [getCreditLinesOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getcreditlinesoverview)
 - [getDashboardOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getdashboardoverview)
@@ -96,9 +96,13 @@
 - [getRandomInt](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getrandomint)
 - [getSavingsAccountOverview](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getsavingsaccountoverview)
 - [getSpecificPooledCreditLineOfLender](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getspecificpooledcreditlineoflender)
+- [getTokensForShares](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#gettokensforshares)
 - [getTotalAmountCommitedByLenderToCreditLines](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#gettotalamountcommitedbylendertocreditlines)
 - [getUserMetadata](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getusermetadata)
 - [getVerifiedTwitterId](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#getverifiedtwitterid)
+- [refreshStrategyData](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#refreshstrategydata)
+- [refreshStrategyDataForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#refreshstrategydataforpcl)
+- [refreshTokenData](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#refreshtokendata)
 - [transformToInterestDueDetailsForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#transformtointerestduedetailsforpcl)
 - [transformToInterestDueForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#transformtointerestdueforpcl)
 - [transformToInterestDuePerStrategyForPcl](subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md#transformtointerestdueperstrategyforpcl)
@@ -126,7 +130,7 @@
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineInterestCalculator.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineInterestCalculator.ts#L23)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineInterestCalculator.ts#L23)
 
 ## Properties
 
@@ -142,7 +146,7 @@
 
 #### Defined in
 
-[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L19)
+[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L19)
 
 ___
 
@@ -158,7 +162,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L14)
+[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L14)
 
 ___
 
@@ -174,7 +178,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L33)
+[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L33)
 
 ___
 
@@ -190,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L24)
+[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L24)
 
 ___
 
@@ -204,7 +208,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L28)
+[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L28)
 
 ___
 
@@ -218,7 +222,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L26)
+[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L26)
 
 ## Methods
 
@@ -240,7 +244,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineInterestCalculator.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineInterestCalculator.ts#L178)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineInterestCalculator.ts#L178)
 
 ___
 
@@ -258,7 +262,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:339](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L339)
+[src/subgraph/CreditLine.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L300)
 
 ___
 
@@ -283,7 +287,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L344)
+[src/subgraph/CreditLine.ts:305](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L305)
 
 ___
 
@@ -309,7 +313,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:353](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L353)
+[src/subgraph/CreditLine.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L314)
 
 ___
 
@@ -334,7 +338,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:367](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L367)
+[src/subgraph/CreditLine.ts:328](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L328)
 
 ___
 
@@ -360,7 +364,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:376](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L376)
+[src/subgraph/CreditLine.ts:337](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L337)
 
 ___
 
@@ -385,7 +389,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:413](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L413)
+[src/subgraph/CreditLine.ts:374](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L374)
 
 ___
 
@@ -411,7 +415,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:422](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L422)
+[src/subgraph/CreditLine.ts:383](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L383)
 
 ___
 
@@ -436,7 +440,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:390](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L390)
+[src/subgraph/CreditLine.ts:351](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L351)
 
 ___
 
@@ -462,7 +466,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:399](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L399)
+[src/subgraph/CreditLine.ts:360](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L360)
 
 ___
 
@@ -488,7 +492,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:723](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L723)
+[src/subgraph/PooledCreditLine.ts:872](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L872)
 
 ___
 
@@ -508,7 +512,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L65)
+[src/subgraph/PooledCreditLine.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L59)
 
 ___
 
@@ -534,7 +538,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L75)
+[src/subgraph/PooledCreditLine.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L69)
 
 ___
 
@@ -561,7 +565,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:664](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L664)
+[src/subgraph/PooledCreditLine.ts:813](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L813)
 
 ___
 
@@ -588,7 +592,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:679](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L679)
+[src/subgraph/PooledCreditLine.ts:828](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L828)
 
 ___
 
@@ -614,7 +618,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L85)
+[src/subgraph/PooledCreditLine.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L79)
 
 ___
 
@@ -641,7 +645,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:694](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L694)
+[src/subgraph/PooledCreditLine.ts:843](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L843)
 
 ___
 
@@ -668,7 +672,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:709](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L709)
+[src/subgraph/PooledCreditLine.ts:858](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L858)
 
 ___
 
@@ -694,7 +698,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:637](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L637)
+[src/subgraph/PooledCreditLine.ts:786](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L786)
 
 ___
 
@@ -720,7 +724,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:650](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L650)
+[src/subgraph/PooledCreditLine.ts:799](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L799)
 
 ___
 
@@ -749,7 +753,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L52)
+[src/subgraph/CreditLine.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L48)
 
 ___
 
@@ -771,7 +775,31 @@ All the lenders of a given pool
 
 #### Defined in
 
-[src/subgraph/Pools.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L97)
+[src/subgraph/Pools.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L97)
+
+___
+
+### getAllLendersPerPool
+
+▸ **getAllLendersPerPool**(`pclIds`): `Promise`<`any`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pclIds` | `string`[] |
+
+#### Returns
+
+`Promise`<`any`\>
+
+#### Inherited from
+
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getAllLendersPerPool](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getalllendersperpool)
+
+#### Defined in
+
+[src/subgraph/PooledCreditLine.ts:618](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L618)
 
 ___
 
@@ -799,7 +827,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L108)
+[src/subgraph/PooledCreditLine.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L137)
 
 ___
 
@@ -827,7 +855,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L129)
+[src/subgraph/PooledCreditLine.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L194)
 
 ___
 
@@ -854,7 +882,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L96)
+[src/subgraph/PooledCreditLine.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L90)
 
 ___
 
@@ -882,7 +910,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:222](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L222)
+[src/subgraph/PooledCreditLine.ts:461](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L461)
 
 ___
 
@@ -910,7 +938,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L160)
+[src/subgraph/PooledCreditLine.ts:295](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L295)
 
 ___
 
@@ -939,7 +967,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L175)
+[src/subgraph/PooledCreditLine.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L344)
 
 ___
 
@@ -968,7 +996,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L199)
+[src/subgraph/PooledCreditLine.ts:403](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L403)
 
 ___
 
@@ -996,7 +1024,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:434](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L434)
+[src/subgraph/PooledCreditLine.ts:508](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L508)
 
 ___
 
@@ -1022,7 +1050,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:466](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L466)
+[src/subgraph/PooledCreditLine.ts:610](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L610)
 
 ___
 
@@ -1048,7 +1076,7 @@ Array of specific pool types
 
 #### Defined in
 
-[src/subgraph/Pools.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L39)
+[src/subgraph/Pools.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L39)
 
 ___
 
@@ -1072,7 +1100,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/SavingsAccount.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/SavingsAccount.ts#L33)
+[src/subgraph/SavingsAccount.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/SavingsAccount.ts#L33)
 
 ___
 
@@ -1096,7 +1124,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLineOverview.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLineOverview.ts#L113)
+[src/subgraph/CreditLineOverview.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLineOverview.ts#L113)
 
 ___
 
@@ -1124,7 +1152,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLineOverview.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLineOverview.ts#L60)
+[src/subgraph/CreditLineOverview.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLineOverview.ts#L60)
 
 ___
 
@@ -1148,7 +1176,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLineInterestCalculator.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLineInterestCalculator.ts#L26)
+[src/subgraph/CreditLineInterestCalculator.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLineInterestCalculator.ts#L26)
 
 ___
 
@@ -1168,7 +1196,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineInterestCalculator.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineInterestCalculator.ts#L27)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineInterestCalculator.ts#L27)
 
 ___
 
@@ -1193,7 +1221,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLineInterestCalculator.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLineInterestCalculator.ts#L43)
+[src/subgraph/CreditLineInterestCalculator.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLineInterestCalculator.ts#L43)
 
 ___
 
@@ -1221,7 +1249,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L174)
+[src/subgraph/CreditLine.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L114)
 
 ___
 
@@ -1249,7 +1277,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L185)
+[src/subgraph/CreditLine.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L128)
 
 ___
 
@@ -1275,33 +1303,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L238)
-
-___
-
-### getCreditLineStatus
-
-▸ **getCreditLineStatus**(`_id`): `Promise`<[`CreditLineStatus`](../enums/types_Types.CreditLineStatus.md)\>
-
-**`description`** Computed the latest state of PCL as subgraph doesn't return the exact state
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_id` | `string` |
-
-#### Returns
-
-`Promise`<[`CreditLineStatus`](../enums/types_Types.CreditLineStatus.md)\>
-
-#### Inherited from
-
-[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getCreditLineStatus](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#getcreditlinestatus)
-
-#### Defined in
-
-[src/subgraph/PooledCreditLine.ts:347](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L347)
+[src/subgraph/CreditLine.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L196)
 
 ___
 
@@ -1327,7 +1329,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L302)
+[src/subgraph/CreditLine.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L263)
 
 ___
 
@@ -1353,7 +1355,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:252](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L252)
+[src/subgraph/CreditLine.ts:213](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L213)
 
 ___
 
@@ -1379,7 +1381,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L58)
+[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L58)
 
 ___
 
@@ -1403,7 +1405,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLineOverview.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLineOverview.ts#L92)
+[src/subgraph/CreditLineOverview.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLineOverview.ts#L92)
 
 ___
 
@@ -1427,7 +1429,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineBorrowerOverview.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineBorrowerOverview.ts#L30)
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineBorrowerOverview.ts#L30)
 
 ___
 
@@ -1453,7 +1455,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLineOverview.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLineOverview.ts#L43)
+[src/subgraph/CreditLineOverview.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLineOverview.ts#L43)
 
 ___
 
@@ -1481,7 +1483,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:554](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L554)
+[src/subgraph/PooledCreditLine.ts:703](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L703)
 
 ___
 
@@ -1509,7 +1511,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:207](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L207)
+[src/subgraph/CreditLine.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L156)
 
 ___
 
@@ -1537,7 +1539,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L229)
+[src/subgraph/CreditLine.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L184)
 
 ___
 
@@ -1565,7 +1567,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L218)
+[src/subgraph/CreditLine.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L170)
 
 ___
 
@@ -1593,7 +1595,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLine.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLine.ts#L196)
+[src/subgraph/CreditLine.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLine.ts#L142)
 
 ___
 
@@ -1619,7 +1621,7 @@ pool data if the pool exists, else null
 
 #### Defined in
 
-[src/subgraph/Pools.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L48)
+[src/subgraph/Pools.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L48)
 
 ___
 
@@ -1645,7 +1647,7 @@ Array of pools for the corresponding borrower
 
 #### Defined in
 
-[src/subgraph/Pools.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L58)
+[src/subgraph/Pools.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L58)
 
 ___
 
@@ -1672,7 +1674,7 @@ Array of pool
 
 #### Defined in
 
-[src/subgraph/Pools.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L87)
+[src/subgraph/Pools.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L87)
 
 ___
 
@@ -1698,7 +1700,7 @@ Array of pool for the lender
 
 #### Defined in
 
-[src/subgraph/Pools.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L67)
+[src/subgraph/Pools.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L67)
 
 ___
 
@@ -1725,7 +1727,7 @@ Array of pool
 
 #### Defined in
 
-[src/subgraph/Pools.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L77)
+[src/subgraph/Pools.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L77)
 
 ___
 
@@ -1751,7 +1753,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L148)
+[src/subgraph/PooledCreditLine.ts:248](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L248)
 
 ___
 
@@ -1775,7 +1777,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineBorrowerOverview.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineBorrowerOverview.ts#L25)
+[src/subgraph/PooledCreditLineBorrowerOverview.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineBorrowerOverview.ts#L25)
 
 ___
 
@@ -1801,7 +1803,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLinesLenderOverview.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLinesLenderOverview.ts#L27)
+[src/subgraph/PooledCreditLinesLenderOverview.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLinesLenderOverview.ts#L27)
 
 ___
 
@@ -1829,7 +1831,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:481](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L481)
+[src/subgraph/PooledCreditLine.ts:630](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L630)
 
 ___
 
@@ -1849,7 +1851,7 @@ Array of all pools created on sublime
 
 #### Defined in
 
-[src/subgraph/Pools.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L29)
+[src/subgraph/Pools.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L29)
 
 ___
 
@@ -1875,7 +1877,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Pools.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Pools.ts#L178)
+[src/subgraph/Pools.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Pools.ts#L178)
 
 ___
 
@@ -1901,7 +1903,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L50)
+[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L50)
 
 ___
 
@@ -1927,7 +1929,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/SavingsAccount.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/SavingsAccount.ts#L73)
+[src/subgraph/SavingsAccount.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/SavingsAccount.ts#L73)
 
 ___
 
@@ -1952,7 +1954,33 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLine.ts:447](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLine.ts#L447)
+[src/subgraph/PooledCreditLine.ts:556](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLine.ts#L556)
+
+___
+
+### getTokensForShares
+
+▸ `Protected` **getTokensForShares**(`strategy`, `collateralAsset`, `amount`): `Promise`<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `strategy` | [`StrategyType`](../enums/types_Types.StrategyType.md) |
+| `collateralAsset` | `string` |
+| `amount` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`BigNumber`\>
+
+#### Inherited from
+
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[getTokensForShares](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#gettokensforshares)
+
+#### Defined in
+
+[src/subgraph/Base.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L134)
 
 ___
 
@@ -1976,7 +2004,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/CreditLineOverview.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/CreditLineOverview.ts#L71)
+[src/subgraph/CreditLineOverview.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/CreditLineOverview.ts#L71)
 
 ___
 
@@ -2000,7 +2028,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/UserMeta.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/UserMeta.ts#L14)
+[src/subgraph/UserMeta.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/UserMeta.ts#L14)
 
 ___
 
@@ -2024,7 +2052,79 @@ ___
 
 #### Defined in
 
-[src/subgraph/UserMeta.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/UserMeta.ts#L53)
+[src/subgraph/UserMeta.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/UserMeta.ts#L53)
+
+___
+
+### refreshStrategyData
+
+▸ `Protected` **refreshStrategyData**(`data`): `Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Inherited from
+
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[refreshStrategyData](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#refreshstrategydata)
+
+#### Defined in
+
+[src/subgraph/Base.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L108)
+
+___
+
+### refreshStrategyDataForPcl
+
+▸ `Protected` **refreshStrategyDataForPcl**(`data`): `Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Inherited from
+
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[refreshStrategyDataForPcl](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#refreshstrategydataforpcl)
+
+#### Defined in
+
+[src/subgraph/Base.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L82)
+
+___
+
+### refreshTokenData
+
+▸ `Protected` **refreshTokenData**(`data`): `Promise`<`Record`<`string`, `BigNumber`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<`Record`<`string`, `BigNumber`\>\>
+
+#### Inherited from
+
+[CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md).[refreshTokenData](subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md#refreshtokendata)
+
+#### Defined in
+
+[src/subgraph/Base.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/Base.ts#L67)
 
 ___
 
@@ -2044,7 +2144,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineInterestCalculator.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineInterestCalculator.ts#L50)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineInterestCalculator.ts#L50)
 
 ___
 
@@ -2065,7 +2165,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineInterestCalculator.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineInterestCalculator.ts#L134)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineInterestCalculator.ts#L134)
 
 ___
 
@@ -2086,7 +2186,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineInterestCalculator.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineInterestCalculator.ts#L78)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineInterestCalculator.ts#L78)
 
 ___
 
@@ -2106,7 +2206,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineInterestCalculator.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineInterestCalculator.ts#L110)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineInterestCalculator.ts#L110)
 
 ___
 
@@ -2127,4 +2227,4 @@ ___
 
 #### Defined in
 
-[src/subgraph/PooledCreditLineInterestCalculator.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/PooledCreditLineInterestCalculator.ts#L151)
+[src/subgraph/PooledCreditLineInterestCalculator.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/subgraph/PooledCreditLineInterestCalculator.ts#L151)

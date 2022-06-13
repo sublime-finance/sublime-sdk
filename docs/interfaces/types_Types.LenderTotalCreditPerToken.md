@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderTotalCreditPerToken
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderTotalCreditPerToken
 
 # Interface: LenderTotalCreditPerToken
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/overview/LenderTotalCredit.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/LenderTotalCredit.ts#L13)
+[src/types/overview/LenderTotalCredit.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/LenderTotalCredit.ts#L13)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/LenderTotalCredit.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/LenderTotalCredit.ts#L14)
+[src/types/overview/LenderTotalCredit.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/LenderTotalCredit.ts#L14)

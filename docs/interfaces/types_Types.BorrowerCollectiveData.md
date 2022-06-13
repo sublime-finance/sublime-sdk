@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / BorrowerCollectiveData
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / BorrowerCollectiveData
 
 # Interface: BorrowerCollectiveData
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/CreditLineOverview.ts#L61)
+[src/types/overview/CreditLineOverview.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/CreditLineOverview.ts#L61)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/CreditLineOverview.ts#L62)
+[src/types/overview/CreditLineOverview.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/CreditLineOverview.ts#L62)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/CreditLineOverview.ts#L63)
+[src/types/overview/CreditLineOverview.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/CreditLineOverview.ts#L63)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/CreditLineOverview.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/CreditLineOverview.ts#L64)
+[src/types/overview/CreditLineOverview.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/overview/CreditLineOverview.ts#L64)

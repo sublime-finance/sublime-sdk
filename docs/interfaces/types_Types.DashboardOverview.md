@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / DashboardOverview
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / DashboardOverview
 
 # Interface: DashboardOverview
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:210](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L210)
+[src/types/Types.ts:214](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L214)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:208](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L208)
+[src/types/Types.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L212)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:209](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L209)
+[src/types/Types.ts:213](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L213)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:211](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L211)
+[src/types/Types.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/37446b7/src/types/Types.ts#L215)

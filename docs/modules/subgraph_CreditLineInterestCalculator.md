@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / subgraph/CreditLineInterestCalculator
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / subgraph/CreditLineInterestCalculator
 
 # Module: subgraph/CreditLineInterestCalculator
 

@@ -597,7 +597,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       prices,
       collateralPerStrategyToken
     );
-    let poolDataDetail = this.transformToPooledCreditLine(poolData, emulatorResult, prices);
+    const poolDataDetail = this.transformToPooledCreditLine(poolData, emulatorResult, prices);
     const lenderContribution = await this.transformToLenderContributionToPooledCreditLines(poolDataDetail, contributionData);
     return [poolDataDetail[0], lenderContribution[0]];
   }
