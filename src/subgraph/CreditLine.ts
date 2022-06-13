@@ -283,7 +283,7 @@ export class CreditLineCalls extends Base {
         amount: {
           value: a.amount || '0',
           decimals: this.tokenManager.getTokenDecimals(
-            a.creditLineOperation === 'WITHDRAW_COLLATERAL' || 'ADD_COLLATERAL' ? cl.collateralAsset : cl.borrowAsset
+            (a.creditLineOperation === 'WITHDRAW_COLLATERAL' || 'ADD_COLLATERAL') ? cl.collateralAsset : cl.borrowAsset
           ),
         },
         creditLineOperation: a.creditLineOperation,
