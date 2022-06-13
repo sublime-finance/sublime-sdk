@@ -1,6 +1,6 @@
 {
   "name": "sublime-sdk-v2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SDK to interact with set of sublime smart contracts",
   "main": "./dist/index.js",
   "bin": {},
@@ -11,7 +11,8 @@
     "prepublish": "npm run build",
     "tslint": "tslint -c tslint.json -p tsconfig.json './src/**/*.ts'",
     "ts-node": "ts-node",
-    "updateDocs": "npm run build; sleep 1; typedoc"
+    "updateDocs": "npm run build; sleep 1; typedoc",
+    "prepare": "npm run prettier && npm run build && npm run tslint && npm run updateDocs"
   },
   "author": "Akshay Meher",
   "license": "ISC",

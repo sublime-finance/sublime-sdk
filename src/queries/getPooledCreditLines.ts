@@ -69,6 +69,9 @@ export async function getPooledCreditLinesOfLender(
               totalLentAmount
               status
               minBorrowAmount
+              lenderVerifier {
+                id
+              }
               lenderPool{
                 id
                 sharesHeld
