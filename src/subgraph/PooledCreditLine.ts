@@ -757,7 +757,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         },
         collateralHeld: { value: a.collateralHeld, decimals: this.tokenManager.getTokenDecimals(a.collateralAsset) },
         areTokensTransferable: a.areTokensTransferable,
-        verifier: { type: this.verificationApi.getVerifierType(a.verifier.id), address: a.verifier.id },
+        verifier: {
+          type: this.verificationApi.getVerifierType(a.verifier.id),
+          address: a.verifier.id,
+          displayName: this.verificationApi.getVerifierDisplayName(a.verifier.id),
+        },
         lenders: this.transformToLenderPerPoolDetail(a.lender, this.tokenManager.getTokenDecimals(a.borrowAsset)),
       };
     });

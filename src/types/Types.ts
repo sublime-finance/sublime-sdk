@@ -135,6 +135,7 @@ export interface PooledCreditLineOperation {
 export interface Verifier {
   type: VerifierType;
   address: string;
+  displayName: string;
 }
 
 export interface Strategy {
