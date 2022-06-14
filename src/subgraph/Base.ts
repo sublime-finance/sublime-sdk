@@ -72,7 +72,7 @@ export class Base {
     const prices: Record<string, BigNumber> = {};
     for (let index = 0; index < allTokens.length; index++) {
       const element = allTokens[index];
-      
+
       await this.tokenManager.updateAll(element);
       prices[element] = await this.tokenManager.getPricePerAsset(element);
     }

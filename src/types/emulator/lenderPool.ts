@@ -22,3 +22,16 @@ export interface DataFromPooledCreditLines {
   principal: BigNumber;
   status: CreditLineStatus;
 }
+
+export interface LenderPerPool {
+  lenderAddress: string;
+  amountLent: BigNumber;
+  lenderBalance: BigNumber;
+  borrowerInterestSharesWithdrawn: BigNumber;
+  yieldInterestWithdrawnShares: BigNumber;
+}
+
+export interface LenderPerPoolPrincipalWithdrawable {
+  lenderAddress: string;
+  principalWithdrawable: BigNumber;
+}

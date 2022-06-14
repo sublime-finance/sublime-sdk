@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderWithdrawableAmount
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderWithdrawableAmount
 
 # Interface: LenderWithdrawableAmount
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L109)
+[src/types/Types.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L114)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L108)
+[src/types/Types.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L113)

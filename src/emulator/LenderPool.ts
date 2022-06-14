@@ -1,5 +1,12 @@
 import { BigNumber } from 'bignumber.js';
-import { CreditLineStatus, LenderPoolState, DataFromPooledCreditLines, LenderPoolExternalData } from '../types/Types';
+import {
+  CreditLineStatus,
+  LenderPoolState,
+  DataFromPooledCreditLines,
+  LenderPoolExternalData,
+  LenderPerPool,
+  LenderPerPoolPrincipalWithdrawable,
+} from '../types/Types';
 import { EmulatorHelper } from './Helpers';
 
 export class LenderPoolEmulator extends EmulatorHelper {
@@ -7,22 +14,48 @@ export class LenderPoolEmulator extends EmulatorHelper {
   private lenderPoolExternalData: LenderPoolExternalData;
   private dataFromPooledCreditLines: DataFromPooledCreditLines;
 
+  private lenderData: Record<string, BigNumber> = {};
+  private borrowerInterestData: Record<string, BigNumber> = {};
+  private yieldInterestData: Record<string, BigNumber> = {};
+
+  private lenderPerPool: LenderPerPool[];
+
+  private totalSupply: BigNumber;
   constructor(
     lenderPoolState: LenderPoolState,
     lenderPoolExternalData: LenderPoolExternalData,
-    dataFromPooledCreditLines: DataFromPooledCreditLines
+    dataFromPooledCreditLines: DataFromPooledCreditLines,
+    lendersPerPool: LenderPerPool[]
   ) {
     super();
     this.lenderPoolState = lenderPoolState;
     this.lenderPoolExternalData = lenderPoolExternalData;
     this.dataFromPooledCreditLines = dataFromPooledCreditLines;
+    this.lenderPerPool = lendersPerPool;
+    this.totalSupply = new BigNumber(0);
+
+    for (let index = 0; index < lendersPerPool.length; index++) {
+      const element = lendersPerPool[index];
+      this.lenderData[element.lenderAddress] = element.lenderBalance;
+      this.borrowerInterestData[element.lenderAddress] = element.borrowerInterestSharesWithdrawn;
+      this.yieldInterestData[element.lenderAddress] = element.yieldInterestWithdrawnShares;
+      this.totalSupply = this.totalSupply.plus(element.lenderBalance);
+    }
   }
 
-  public getLenderInterest(
-    lenderBalance: BigNumber,
-    borrowerInterestSharesWithdrawnByLender: BigNumber,
-    yieldInterestSharesWithdrawnByLender: BigNumber
-  ): BigNumber {
+  public getLenderBalance(lenderAddress: string): BigNumber {
+    if (this.lenderData[lenderAddress]) {
+      return this.lenderData[lenderAddress];
+    } else {
+      return new BigNumber(0);
+    }
+  }
+
+  public getLenderInterest(lenderAddress: string): BigNumber {
+    const lenderBalance = this.getLenderBalance(lenderAddress);
+    const borrowerInterestSharesWithdrawnByLender = this.borrowerInterestSharesWithdrawnByLender(lenderAddress);
+    const yieldInterestSharesWithdrawnByLender = this.yieldInterestSharesWithdrawnByLender(lenderAddress);
+
     const [_borrowerInterestShares, _yieldInterestShares] = this._calculateLenderInterest(
       lenderBalance,
       this.lenderPoolState.borrowLimit,
@@ -32,7 +65,8 @@ export class LenderPoolEmulator extends EmulatorHelper {
     return _borrowerInterestShares.plus(_yieldInterestShares).multipliedBy(this.lenderPoolExternalData.collateralPerStrategyToken);
   }
 
-  public calculatePrincipalWithdrawable(lenderBalance: BigNumber, totalSupply: BigNumber): BigNumber {
+  public calculatePrincipalWithdrawable(lenderAddress: string): BigNumber {
+    const lenderBalance: BigNumber = this.getLenderBalance(lenderAddress);
     const _status = this.dataFromPooledCreditLines.status;
     if (_status == CreditLineStatus.CLOSED || _status == CreditLineStatus.LIQUIDATED) {
       return this._calculatePrincipalWithdrawable(lenderBalance);
@@ -40,7 +74,7 @@ export class LenderPoolEmulator extends EmulatorHelper {
       _status == CreditLineStatus.CANCELLED ||
       (_status == CreditLineStatus.REQUESTED &&
         this.now().gte(this.lenderPoolState.startTime) &&
-        totalSupply.lt(this.lenderPoolState.minBorrowAmount))
+        this.totalSupply.lt(this.lenderPoolState.minBorrowAmount))
     ) {
       return lenderBalance;
     } else {
@@ -89,5 +123,33 @@ export class LenderPoolEmulator extends EmulatorHelper {
     const _totalLiquidityWithdrawable = _borrowTokens.minus(this.dataFromPooledCreditLines.principal);
     const _principalWithdrawble = _totalLiquidityWithdrawable.multipliedBy(lenderBalance).div(_borrowTokens);
     return _principalWithdrawble;
+  }
+
+  // -------------------------------- Function not part of contract --------------------------------//
+
+  public borrowerInterestSharesWithdrawnByLender(lenderAddress: string): BigNumber {
+    if (this.borrowerInterestData[lenderAddress]) {
+      return this.borrowerInterestData[lenderAddress];
+    } else {
+      return new BigNumber(0);
+    }
+  }
+
+  public yieldInterestSharesWithdrawnByLender(lenderAddress: string): BigNumber {
+    if (this.yieldInterestData[lenderAddress]) {
+      return this.yieldInterestData[lenderAddress];
+    } else {
+      return new BigNumber(0);
+    }
+  }
+
+  public getAllLenders(): LenderPerPool[] {
+    return this.lenderPerPool;
+  }
+
+  public getPrincipalWithdrawableForAllLenders(): LenderPerPoolPrincipalWithdrawable[] {
+    return this.lenderPerPool.map((a) => {
+      return { lenderAddress: a.lenderAddress, principalWithdrawable: this.calculatePrincipalWithdrawable(a.lenderAddress) };
+    });
   }
 }

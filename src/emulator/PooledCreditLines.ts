@@ -5,6 +5,7 @@ import {
   PooledCreditLineExternalData,
   LenderPoolState,
   LenderPoolExternalData,
+  LenderPerPool,
 } from '../types/Types';
 import { EmulatorHelper } from './Helpers';
 
@@ -19,13 +20,20 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   private externalData: PooledCreditLineExternalData;
   private lenderPoolState: LenderPoolState;
   private lenderPoolExternalData: LenderPoolExternalData;
+  private lendersPerPool: LenderPerPool[];
 
-  constructor(pooledCreditLineState: PooledCreditLineState, externalData: PooledCreditLineExternalData, lenderPoolState: LenderPoolState) {
+  constructor(
+    pooledCreditLineState: PooledCreditLineState,
+    externalData: PooledCreditLineExternalData,
+    lenderPoolState: LenderPoolState,
+    lendersPerPool: LenderPerPool[]
+  ) {
     super();
     this.pooledCreditLineState = pooledCreditLineState;
     this.externalData = externalData;
     this.lenderPoolState = lenderPoolState;
     this.lenderPoolExternalData = externalData;
+    this.lendersPerPool = lendersPerPool;
   }
 
   public getId(): string {
@@ -33,10 +41,15 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   }
 
   public getLenderPoolEmulator(): LenderPoolEmulator {
-    return new LenderPoolEmulator(this.lenderPoolState, this.lenderPoolExternalData, {
-      principal: this.pooledCreditLineState.principal,
-      status: this.getStatus(),
-    });
+    return new LenderPoolEmulator(
+      this.lenderPoolState,
+      this.lenderPoolExternalData,
+      {
+        principal: this.pooledCreditLineState.principal,
+        status: this.getStatus(),
+      },
+      this.lendersPerPool
+    );
   }
 
   public withdrawableCollateral(): BigNumber {
@@ -207,11 +220,98 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return _currentCollateralRatio;
   }
 
+  // ----------- additional calls not part of smart contract ----------//
   public getPrincipal(): BigNumber {
     return this.pooledCreditLineState.principal;
   }
 
   public getBorrowLimit(): BigNumber {
     return this.pooledCreditLineState.borrowLimit;
+  }
+
+  public totalAmountLent(): BigNumber {
+    return this.lendersPerPool.reduce((total, current) => total.plus(current.amountLent), new BigNumber(0));
+  }
+
+  public totalSupply(): BigNumber {
+    return this.lendersPerPool.reduce((total, current) => total.plus(current.lenderBalance), new BigNumber(0));
+  }
+
+  public borrowerAddress(): string {
+    return this.pooledCreditLineState.borrowerAddress;
+  }
+
+  public borrowRate(): BigNumber {
+    return this.pooledCreditLineState.borrowRate;
+  }
+
+  public idealCollateralratio(): BigNumber {
+    return this.pooledCreditLineState.idealCollateralRatio;
+  }
+
+  public borrowAsset(): string {
+    return this.pooledCreditLineState.borrowAsset;
+  }
+
+  public collateralAsset(): string {
+    return this.pooledCreditLineState.collateralAsset;
+  }
+
+  public createdAt(): BigNumber {
+    return this.pooledCreditLineState.createdAt;
+  }
+
+  public startsAt(): BigNumber {
+    return this.pooledCreditLineState.startsAt;
+  }
+
+  public endsAt(): BigNumber {
+    return this.pooledCreditLineState.endsAt;
+  }
+
+  public defaultsAt(): BigNumber {
+    return this.pooledCreditLineState.defaultsAt;
+  }
+
+  public lenderStrategy(): string {
+    return this.pooledCreditLineState.lenderStrategy;
+  }
+
+  public collateralStrategy(): string {
+    return this.pooledCreditLineState.collateralStrategy;
+  }
+
+  public gracePenaltyRate(): BigNumber {
+    return this.pooledCreditLineState.gracePenaltyRate;
+  }
+
+  public totalInterestRepaid(): BigNumber {
+    return this.pooledCreditLineState.totalInterestRepaid;
+  }
+
+  public lastPrincipalUpdateTime(): BigNumber {
+    return this.pooledCreditLineState.lastPrincipalUpdateTime;
+  }
+
+  public interestAccruedTillLastPrincipalUpdate(): BigNumber {
+    return this.pooledCreditLineState.interestAccruedTillLastPrincipalUpdate;
+  }
+
+  public totalLentAmount(): BigNumber {
+    return this.pooledCreditLineState.totalLentAmount;
+  }
+
+  public minBorrowAmount(): BigNumber {
+    return this.pooledCreditLineState.minBorrowAmount;
+  }
+
+  // to-do
+  public borrowerVerifier(): string {
+    return this.pooledCreditLineState.lenderVerifier;
+  }
+
+  // to-do
+  public lenderVerifier(): string {
+    return this.pooledCreditLineState.lenderVerifier;
   }
 }

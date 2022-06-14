@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / UserKycDetails
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / UserKycDetails
 
 # Interface: UserKycDetails
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/types/Types.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L55)
+[src/types/Types.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L60)

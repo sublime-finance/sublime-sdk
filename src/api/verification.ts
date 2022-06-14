@@ -215,9 +215,28 @@ export class VerificationAPI {
     }
   }
 
+  public getVerifierDisplayName(address: string): string {
+    if (!address) {
+      return undefined;
+    }
+    if (address.toLowerCase() == this.config.adminVerifierContractAddress.toLowerCase()) {
+      return 'Admin Verifier';
+    } else if (address.toLowerCase() == this.config.twitterVerifierContractAddress.toLowerCase()) {
+      return 'Twitter Verifier';
+    } else if (address.toLowerCase() == this.config.personaVerifierContractAddress.toLowerCase()) {
+      return 'Persona Verifier';
+    } else {
+      return undefined;
+    }
+  }
+
+  public getVerifierDetails(address: string): VerifierDetails {
+    return { address, type: this.getVerifierType(address), displayName: this.getVerifierDisplayName(address) };
+  }
+
   public getSupportedVerifiers(): VerifierDetails[] {
     return [VerifierType.AdminVerifier, VerifierType.TwitterVerifier, VerifierType.PersonaVerifier].map((a) => {
-      return { type: a, address: this.getVerifierAddress(a) };
+      return { type: a, address: this.getVerifierAddress(a), displayName: this.getVerifierDisplayName(a) };
     });
   }
 }

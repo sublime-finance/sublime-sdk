@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / PooledCreditLineOperation
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / PooledCreditLineOperation
 
 # Interface: PooledCreditLineOperation
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L126)
+[src/types/Types.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L131)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:123](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L123)
+[src/types/Types.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L128)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L121)
+[src/types/Types.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L126)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:124](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L124)
+[src/types/Types.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L129)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L127)
+[src/types/Types.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L132)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L125)
+[src/types/Types.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L130)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L122)
+[src/types/Types.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L127)

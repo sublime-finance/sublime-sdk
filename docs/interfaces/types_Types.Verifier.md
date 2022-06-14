@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / Verifier
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / Verifier
 
 # Interface: Verifier
 
@@ -9,6 +9,7 @@
 ### Properties
 
 - [address](types_Types.Verifier.md#address)
+- [displayName](types_Types.Verifier.md#displayname)
 - [type](types_Types.Verifier.md#type)
 
 ## Properties
@@ -19,7 +20,17 @@
 
 #### Defined in
 
-[src/types/Types.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L132)
+[src/types/Types.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L137)
+
+___
+
+### displayName
+
+• **displayName**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L138)
 
 ___
 
@@ -29,4 +40,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L131)
+[src/types/Types.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L136)

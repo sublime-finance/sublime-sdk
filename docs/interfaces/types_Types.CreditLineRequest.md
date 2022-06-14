@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / CreditLineRequest
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / CreditLineRequest
 
 # Interface: CreditLineRequest
 
@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L145)
+[src/types/Types.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L151)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L148)
+[src/types/Types.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L154)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L150)
+[src/types/Types.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L156)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L152)
+[src/types/Types.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L158)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L146)
+[src/types/Types.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L152)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L147)
+[src/types/Types.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L153)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L151)
+[src/types/Types.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L157)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L153)
+[src/types/Types.ts:159](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L159)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L149)
+[src/types/Types.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L155)

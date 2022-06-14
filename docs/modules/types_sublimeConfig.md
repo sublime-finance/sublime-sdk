@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / types/sublimeConfig
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / types/sublimeConfig
 
 # Module: types/sublimeConfig
 

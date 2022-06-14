@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderPerPoolDetail
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderPerPoolDetail
 
 # Interface: LenderPerPoolDetail
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:328](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L328)
+[src/types/Types.ts:336](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L336)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:329](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L329)
+[src/types/Types.ts:337](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L337)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:327](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L327)
+[src/types/Types.ts:335](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L335)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:330](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L330)
+[src/types/Types.ts:338](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L338)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:331](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L331)
+[src/types/Types.ts:339](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L339)

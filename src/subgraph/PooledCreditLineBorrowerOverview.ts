@@ -245,6 +245,7 @@ export class PooledCreditLinesBorrowerOverviewCall extends CreditLinesOverviewCa
           address: a.token,
           logo: this.tokenManager.getLogo(a.token),
           pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(a.token)).toString(),
+          decimals: this.tokenManager.getTokenDecimals(a.token),
         },
         strategy: {
           type: this.yieldApi.getStrategy(a.strategy),

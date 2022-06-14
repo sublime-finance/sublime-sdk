@@ -140,16 +140,76 @@ export class CreditLineEmulator extends EmulatorHelper {
     return this.creditLineState.borrowLimit;
   }
 
-  public getCreditLineStatus() : CreditLineStatus{
+  
+  public getStatus() : CreditLineStatus{
     let _currentStatus = this.creditLineState.creditLineStatus;
     let [_currentCollateralRatio, _totalCollateralTokens] = this.calculateCurrentCollateralRatio();
-    if (_currentCollateralRatio.lt(this.creditLineState.idealCollateralRatio)) {
+    if (_currentCollateralRatio.lt(this.idealCollateralRatio())) {
       _currentStatus = CreditLineStatus.LIQUIDATE_CALLABLE;
     }
     return _currentStatus;
   }
 
-  public getIdealCollateralRatio(): BigNumber {
+  // ------------------- function not part of smart contract ------------------ //
+
+  public createdAt(): BigNumber {
+    return this.creditLineState.createdAt;
+  }
+
+  public borrowAsset(): string {
+    return this.creditLineState.borrowAsset;
+  }
+
+  public collateralAsset(): string {
+    return this.creditLineState.collateralAsset;
+  }
+
+  public borrowRate(): BigNumber {
+    return this.creditLineState.borrowRate;
+  }
+
+  public idealCollateralRatio(): BigNumber {
     return this.creditLineState.idealCollateralRatio;
   }
+
+  public autoLiquidate(): boolean {
+    return this.creditLineState.autoLiquidation;
+  }
+
+  public lender(): string {
+    return this.creditLineState.lender;
+  }
+
+  public borrower(): string {
+    return this.creditLineState.borrower;
+  }
+
+  public lastPrincipalUpdateTime(): BigNumber {
+    return this.creditLineState.lastPrincipalUpdateTime;
+  }
+
+  public requestByLender(): boolean {
+    return this.creditLineState.requestByLender;
+  }
+
+  public strategy(): string {
+    return this.creditLineState.strategy;
+  }
+
+  /**
+   * @description To-Do
+   * @returns
+   */
+  public borrowStrategy(): string {
+    return this.creditLineState.strategy;
+  }
+
+  /**
+   * @description To-Do
+   * @returns
+   */
+  public collateralStrategy(): string {
+    return this.creditLineState.strategy;
+  }
+
 }

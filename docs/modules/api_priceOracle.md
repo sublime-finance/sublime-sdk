@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / api/priceOracle
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / api/priceOracle
 
 # Module: api/priceOracle
 

@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / subgraph/UserMeta
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / subgraph/UserMeta
 
 # Module: subgraph/UserMeta
 

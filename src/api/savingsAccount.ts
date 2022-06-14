@@ -525,6 +525,7 @@ export class SavingsAccountApi {
       name: this.tokenManager.getTokenName(liquidityToken),
       pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(liquidityToken)).toString(),
       logo: this.tokenManager.getLogo(liquidityToken),
+      decimals: this.tokenManager.getTokenDecimals(liquidityToken),
     };
   }
 

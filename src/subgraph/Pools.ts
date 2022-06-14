@@ -111,12 +111,14 @@ export class PoolCalls extends PooledCreditLineCalls {
           name: 'Pending...',
           pricePerAssetInUSD: '00.00',
           logo: 'Logo pending ...',
+          decimals: 18,
         },
         suppliedToken: {
           address: suppliedToken,
           name: 'Pending...',
           pricePerAssetInUSD: '00.00',
           logo: 'Logo pending ...',
+          decimals: 18,
         },
       });
     }
@@ -153,12 +155,14 @@ export class PoolCalls extends PooledCreditLineCalls {
           name: this.tokenManager.getTokenName(a.borrowAsset),
           pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(a.borrowAsset)).toString(),
           logo: this.tokenManager.getLogo(a.borrowAsset),
+          decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
         },
         collateralAsset: {
           address: a.collateralAsset,
           name: this.tokenManager.getTokenName(a.collateralAsset),
           pricePerAssetInUSD: (await this.tokenManager.getPricePerAsset(a.collateralAsset)).toString(),
           logo: this.tokenManager.getLogo(a.collateralAsset),
+          decimals: this.tokenManager.getTokenDecimals(a.collateralAsset),
         },
         estimatedEndDate: new BigNumber(this.getRandomInt(1000000)).multipliedBy(new BigNumber(10).pow(4)).toString(),
         lockedCollateral: new BigNumber(this.getRandomInt(10000)).div(100).toFixed(2),

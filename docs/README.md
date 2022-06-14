@@ -1,4 +1,4 @@
-sublime-sdk / [Modules](modules.md)
+sublime-sdk-v2 / [Modules](modules.md)
 
 # sublime-sdk
 

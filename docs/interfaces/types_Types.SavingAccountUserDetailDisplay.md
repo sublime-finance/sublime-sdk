@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / SavingAccountUserDetailDisplay
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / SavingAccountUserDetailDisplay
 
 # Interface: SavingAccountUserDetailDisplay
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L172)
+[src/types/Types.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L178)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L173)
+[src/types/Types.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L179)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:171](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L171)
+[src/types/Types.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L177)

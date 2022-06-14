@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderPoolDetail
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / LenderPoolDetail
 
 # Interface: LenderPoolDetail
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:321](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L321)
+[src/types/Types.ts:329](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L329)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L312)
+[src/types/Types.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L320)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:316](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L316)
+[src/types/Types.ts:324](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L324)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L314)
+[src/types/Types.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L322)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L318)
+[src/types/Types.ts:326](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L326)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:313](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L313)
+[src/types/Types.ts:321](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L321)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L320)
+[src/types/Types.ts:328](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L328)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L310)
+[src/types/Types.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L318)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:323](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L323)
+[src/types/Types.ts:331](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L331)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:315](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L315)
+[src/types/Types.ts:323](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L323)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:317](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L317)
+[src/types/Types.ts:325](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L325)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:311](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L311)
+[src/types/Types.ts:319](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L319)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L322)
+[src/types/Types.ts:330](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L330)
 
 ___
 
@@ -161,4 +161,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:319](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L319)
+[src/types/Types.ts:327](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L327)

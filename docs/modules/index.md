@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / index
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / index
 
 # Module: index
 

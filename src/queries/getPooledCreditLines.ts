@@ -69,6 +69,9 @@ export async function getPooledCreditLinesOfLender(
               totalLentAmount
               status
               minBorrowAmount
+              lenderVerifier {
+                id
+              }
               lenderPool{
                 id
                 sharesHeld
@@ -147,6 +150,9 @@ export async function getPooledCreditLinesForLenderById(url: string, lenderAddre
               totalLentAmount
               status
               minBorrowAmount
+              lenderVerifier {
+                id
+              }
               lenderPool{
                 id
                 sharesHeld
@@ -215,6 +221,9 @@ export async function getPooledCreditLinesOfBorrower(url: string, borrower: stri
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -277,6 +286,9 @@ export async function getPooledCreditLinesOfBorrowerWithState(
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -338,6 +350,9 @@ export async function getPooledCreditLinesOfBorrowerWithNotState(
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -394,6 +409,9 @@ export async function getPooledCreditLinesOfLenderCanLendTo(url: string, lender:
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -449,6 +467,9 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -504,6 +525,9 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -559,6 +583,9 @@ export async function getAllPooledCreditLinesWithState(url: string, count: numbe
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -614,6 +641,9 @@ export async function getAllPooledCreditLinesWithNotState(url: string, count: nu
           totalLentAmount
           status
           minBorrowAmount
+          lenderVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -716,37 +746,6 @@ export async function getAllPooledCreditLinesForCount(url: string): Promise<any[
     } else {
       skip++;
       allData.push(...result.data.pooledCreditLines);
-    }
-  }
-}
-
-export async function getAllCreditLinesForCount(url: string): Promise<any[]> {
-  let skip = 0;
-  const allData = [];
-  for (;;) {
-    const data = JSON.stringify({
-      query: `{
-        creditLines(first: ${countPerQuery}, skip:${skip * countPerQuery}, orderBy: createdAt, orderDirection: desc){
-          id
-        }
-      }`,
-    });
-
-    const options = {
-      url,
-      headers: { 'Content-Type': 'application/json' },
-      body: data,
-    };
-
-    const result = await fetchData(options);
-    if (result.errors) {
-      print(result.errors);
-      throw new Error('Error while fetching data from subgraph');
-    } else if (result.data.creditLines.length == 0) {
-      return allData;
-    } else {
-      skip++;
-      allData.push(...result.data.creditLines);
     }
   }
 }
@@ -1131,6 +1130,15 @@ export async function getPCLandLpTogether(url: string, count: number, skip: numb
           collateralAsset
           lenderStrategy
           depositedCollateralInShares
+          borrowerAddress
+          collateralAsset
+          createdAt
+          startsAt
+          collateralStrategy
+          totalLentAmount
+          lenderVerifier {
+            id
+          }
         }
       }
     }`,
@@ -1147,4 +1155,47 @@ export async function getPCLandLpTogether(url: string, count: number, skip: numb
   allData.push(...result.data.lenderPools);
   // console.log({allData})
   return allData;
+}
+
+export async function getAllLendersPerPool(url: string, poolIds: string[]): Promise<any[]> {
+  poolIds = poolIds.map((a) => `"${a}"`);
+  let skip = 0;
+
+  const allData = [];
+  for (;;) {
+    const data = JSON.stringify({
+      query: `{
+        lenderPerLenderPools(first:${countPerQuery}, skip: ${countPerQuery * skip}, where:{lenderPool_in:[${poolIds}]}){
+          id
+          lenderAddress
+          amountLent
+          amountWithdrawn
+          sharesWithdrawn
+          interestWithdrawn
+          strategy
+          borrowerInterestSharesWithdrawn
+          yieldInterestWithdrawnShares
+          lenderBalance
+          lenderPool {id}
+        }
+      }`,
+    });
+
+    const options = {
+      url,
+      headers: { 'Content-Type': 'application/json' },
+      body: data,
+    };
+
+    const result = await fetchData(options);
+    if (result.errors) {
+      print(result.errors);
+      throw new Error('Error while fetching data from subgraph');
+    } else if (result.data.lenderPerLenderPools.length == 0) {
+      return allData;
+    } else {
+      skip++;
+      allData.push(...result.data.lenderPerLenderPools);
+    }
+  }
 }

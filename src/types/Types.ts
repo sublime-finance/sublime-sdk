@@ -1,4 +1,6 @@
 import { BigNumberish, Overrides } from 'ethers';
+import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
+import { CreditLineEmulator } from '../emulator/CreditLines';
 
 export * from './overview/CreditLineOverview';
 export * from './overview/LenderTotalCredit';
@@ -41,6 +43,7 @@ export interface Asset {
   address: string;
   logo: string;
   pricePerAssetInUSD: string;
+  decimals: number;
 }
 
 export interface UserMetaData {
@@ -133,6 +136,7 @@ export interface PooledCreditLineOperation {
 export interface Verifier {
   type: VerifierType;
   address: string;
+  displayName: string;
 }
 
 export interface Strategy {
@@ -250,6 +254,7 @@ export interface CreditLineDetail {
   requestByLender: boolean;
   createdAt: string;
   strategy: Strategy;
+  emulator: CreditLineEmulator;
 }
 
 export interface PooledCreditLineDetail {
@@ -277,13 +282,14 @@ export interface PooledCreditLineDetail {
   currentCollateralRatio: Balance;
   currentDebt: Balance;
   minBorrowAmount: Balance;
+  emulator: PooledCreditLineEmulator;
 }
 
 export interface CreditLineUser {
   address: string;
   name?: string;
   username?: string;
-  otherData: object;
+  otherData?: object;
 }
 export interface CreditLineHistory {
   title: string;

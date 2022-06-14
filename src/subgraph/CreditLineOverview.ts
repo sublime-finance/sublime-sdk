@@ -490,6 +490,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
           pricePerAssetInUSD: prices[a.token],
           logo: this.tokenManager.getLogo(a.token),
           address: a.token,
+          decimals: this.tokenManager.getTokenDecimals(a.token),
         },
         strategy: {
           type: this.yieldApi.getStrategy(a.strategy),
@@ -522,6 +523,7 @@ export class CreditLinesOverviewCall extends UserMetaCalls {
           pricePerAssetInUSD: prices[a.token],
           logo: this.tokenManager.getLogo(a.token),
           address: a.token,
+          decimals: this.tokenManager.getTokenDecimals(a.token),
         },
         strategy: {
           type: this.yieldApi.getStrategy(a.strategy),

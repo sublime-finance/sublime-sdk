@@ -14,11 +14,13 @@ import * as types from './types/Types';
 export class SublimeSdk {
   private sublimeConnector: SublimeConnector;
   private sublimeSubgraph: SublimeSubgraph;
+  private tokenManager: TokenManager;
 
   constructor(provider: Provider, signer: Signer, subgraphUrl: string, priceSubgraphUrl: string, config: SublimeConfig) {
     const tokenManager = new TokenManager(signer, priceSubgraphUrl);
     this.sublimeConnector = new SublimeConnector(provider, signer, config, tokenManager);
     this.sublimeSubgraph = new SublimeSubgraph(subgraphUrl, signer, tokenManager, config);
+    this.tokenManager = tokenManager;
   }
 
   /**
@@ -35,6 +37,14 @@ export class SublimeSdk {
    */
   Subgraph(): SublimeSubgraph {
     return this.sublimeSubgraph;
+  }
+
+  /**
+   *
+   * @returns Instance of Token Manager
+   */
+  TokenManager(): TokenManager {
+    return this.tokenManager;
   }
 
   /**

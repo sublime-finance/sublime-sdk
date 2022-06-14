@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / Asset
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / Asset
 
 # Interface: Asset
 
@@ -9,6 +9,7 @@
 ### Properties
 
 - [address](types_Types.Asset.md#address)
+- [decimals](types_Types.Asset.md#decimals)
 - [logo](types_Types.Asset.md#logo)
 - [name](types_Types.Asset.md#name)
 - [pricePerAssetInUSD](types_Types.Asset.md#priceperassetinusd)
@@ -21,7 +22,17 @@
 
 #### Defined in
 
-[src/types/Types.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L39)
+[src/types/Types.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L43)
+
+___
+
+### decimals
+
+• **decimals**: `number`
+
+#### Defined in
+
+[src/types/Types.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L46)
 
 ___
 
@@ -31,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L40)
+[src/types/Types.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L44)
 
 ___
 
@@ -41,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L38)
+[src/types/Types.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L42)
 
 ___
 
@@ -51,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/Types.ts#L41)
+[src/types/Types.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/Types.ts#L45)

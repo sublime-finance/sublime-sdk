@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [subgraph/Base](../modules/subgraph_Base.md) / Base
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [subgraph/Base](../modules/subgraph_Base.md) / Base
 
 # Class: Base
 
@@ -29,6 +29,10 @@
 
 - [getDashboardOverview](subgraph_Base.Base.md#getdashboardoverview)
 - [getRandomInt](subgraph_Base.Base.md#getrandomint)
+- [getTokensForShares](subgraph_Base.Base.md#gettokensforshares)
+- [refreshStrategyData](subgraph_Base.Base.md#refreshstrategydata)
+- [refreshStrategyDataForPcl](subgraph_Base.Base.md#refreshstrategydataforpcl)
+- [refreshTokenData](subgraph_Base.Base.md#refreshtokendata)
 
 ## Constructors
 
@@ -47,7 +51,7 @@
 
 #### Defined in
 
-[src/subgraph/Base.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L35)
+[src/subgraph/Base.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L35)
 
 ## Properties
 
@@ -59,7 +63,7 @@
 
 #### Defined in
 
-[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L19)
+[src/subgraph/Base.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L19)
 
 ___
 
@@ -71,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L14)
+[src/subgraph/Base.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L14)
 
 ___
 
@@ -83,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L33)
+[src/subgraph/Base.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L33)
 
 ___
 
@@ -95,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L24)
+[src/subgraph/Base.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L24)
 
 ___
 
@@ -105,7 +109,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L28)
+[src/subgraph/Base.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L28)
 
 ___
 
@@ -115,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L26)
+[src/subgraph/Base.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L26)
 
 ## Methods
 
@@ -137,7 +141,7 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L58)
+[src/subgraph/Base.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L58)
 
 ___
 
@@ -159,4 +163,86 @@ ___
 
 #### Defined in
 
-[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/subgraph/Base.ts#L50)
+[src/subgraph/Base.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L50)
+
+___
+
+### getTokensForShares
+
+▸ `Protected` **getTokensForShares**(`strategy`, `collateralAsset`, `amount`): `Promise`<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `strategy` | [`StrategyType`](../enums/types_Types.StrategyType.md) |
+| `collateralAsset` | `string` |
+| `amount` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`BigNumber`\>
+
+#### Defined in
+
+[src/subgraph/Base.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L134)
+
+___
+
+### refreshStrategyData
+
+▸ `Protected` **refreshStrategyData**(`data`): `Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Defined in
+
+[src/subgraph/Base.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L108)
+
+___
+
+### refreshStrategyDataForPcl
+
+▸ `Protected` **refreshStrategyDataForPcl**(`data`): `Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<`Record`<`string`, `Record`<`string`, `BigNumber`\>\>\>
+
+#### Defined in
+
+[src/subgraph/Base.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L82)
+
+___
+
+### refreshTokenData
+
+▸ `Protected` **refreshTokenData**(`data`): `Promise`<`Record`<`string`, `BigNumber`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data` | `any`[] |
+
+#### Returns
+
+`Promise`<`Record`<`string`, `BigNumber`\>\>
+
+#### Defined in
+
+[src/subgraph/Base.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/subgraph/Base.ts#L67)

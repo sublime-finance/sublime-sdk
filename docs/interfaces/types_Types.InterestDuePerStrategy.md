@@ -1,4 +1,4 @@
-[sublime-sdk](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / InterestDuePerStrategy
+[sublime-sdk-v2](../README.md) / [Modules](../modules.md) / [types/Types](../modules/types_Types.md) / InterestDuePerStrategy
 
 # Interface: InterestDuePerStrategy
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/types/overview/InterestDetails.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/InterestDetails.ts#L4)
+[src/types/overview/InterestDetails.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/overview/InterestDetails.ts#L4)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/types/overview/InterestDetails.ts:5](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/InterestDetails.ts#L5)
+[src/types/overview/InterestDetails.ts:5](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/overview/InterestDetails.ts#L5)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/InterestDetails.ts:9](https://github.com/sublime-finance/sublime-sdk/blob/ca090ee/src/types/overview/InterestDetails.ts#L9)
+[src/types/overview/InterestDetails.ts:9](https://github.com/sublime-finance/sublime-sdk/blob/2020e69/src/types/overview/InterestDetails.ts#L9)
