@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [PooledCreditLinesBorrowerOverviewCall](../classes/subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md)
+- [PooledCreditLinesBorrowerOverviewCall](subgraph_PooledCreditLineBorrowerOverview.md#pooledcreditlinesborroweroverviewcall)
+
+## References
+
+### PooledCreditLinesBorrowerOverviewCall
+
+Re-exports [PooledCreditLinesBorrowerOverviewCall](../classes/subgraph_PooledCreditLineBorrowerOverview.PooledCreditLinesBorrowerOverviewCall.md)

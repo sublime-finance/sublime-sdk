@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [CreditLineCalls](../classes/subgraph_CreditLine.CreditLineCalls.md)
+- [CreditLineCalls](subgraph_CreditLine.md#creditlinecalls)
+
+## References
+
+### CreditLineCalls
+
+Re-exports [CreditLineCalls](../classes/subgraph_CreditLine.CreditLineCalls.md)

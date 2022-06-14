@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [PoolApi](../classes/api_pool.PoolApi.md)
+- [PoolApi](api_pool.md#poolapi)
+
+## References
+
+### PoolApi
+
+Re-exports [PoolApi](../classes/api_pool.PoolApi.md)

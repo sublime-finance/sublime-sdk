@@ -1,6 +1,5 @@
-import { zeroAddress } from './config/constants';
-import { Token } from './wrappers/Token';
-import { Token__factory } from './wrappers/factories/Token__factory';
+import { ERC20 as Token } from './wrappers/ERC20';
+import { ERC20__factory as Token__factory } from './wrappers/factories/ERC20__factory';
 import { Signer } from 'ethers';
 import { BigNumber } from 'bignumber.js';
 import { getPrice } from './queries/prices';

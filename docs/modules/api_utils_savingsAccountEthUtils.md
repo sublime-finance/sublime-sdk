@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [SavingAccountsEthUtils](../classes/api_utils_savingsAccountEthUtils.SavingAccountsEthUtils.md)
+- [SavingAccountsEthUtils](api_utils_savingsAccountEthUtils.md#savingaccountsethutils)
+
+## References
+
+### SavingAccountsEthUtils
+
+Re-exports [SavingAccountsEthUtils](../classes/api_utils_savingsAccountEthUtils.SavingAccountsEthUtils.md)

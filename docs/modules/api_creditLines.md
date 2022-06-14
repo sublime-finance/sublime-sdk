@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [CreditLineApi](../classes/api_creditLines.CreditLineApi.md)
+- [CreditLineApi](api_creditLines.md#creditlineapi)
+
+## References
+
+### CreditLineApi
+
+Re-exports [CreditLineApi](../classes/api_creditLines.CreditLineApi.md)

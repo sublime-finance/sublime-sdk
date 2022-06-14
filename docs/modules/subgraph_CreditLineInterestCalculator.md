@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [CreditLineInterestCalculator](../classes/subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md)
+- [CreditLineInterestCalculator](subgraph_CreditLineInterestCalculator.md#creditlineinterestcalculator)
+
+## References
+
+### CreditLineInterestCalculator
+
+Re-exports [CreditLineInterestCalculator](../classes/subgraph_CreditLineInterestCalculator.CreditLineInterestCalculator.md)

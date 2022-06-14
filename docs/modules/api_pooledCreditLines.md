@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [PooledCreditLineApi](../classes/api_pooledCreditLines.PooledCreditLineApi.md)
+- [PooledCreditLineApi](api_pooledCreditLines.md#pooledcreditlineapi)
+
+## References
+
+### PooledCreditLineApi
+
+Re-exports [PooledCreditLineApi](../classes/api_pooledCreditLines.PooledCreditLineApi.md)

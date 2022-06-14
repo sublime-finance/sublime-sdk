@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [PriceOracleApi](../classes/api_priceOracle.PriceOracleApi.md)
+- [PriceOracleApi](api_priceOracle.md#priceoracleapi)
+
+## References
+
+### PriceOracleApi
+
+Re-exports [PriceOracleApi](../classes/api_priceOracle.PriceOracleApi.md)

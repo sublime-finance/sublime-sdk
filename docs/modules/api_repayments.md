@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [RepaymentApi](../classes/api_repayments.RepaymentApi.md)
+- [RepaymentApi](api_repayments.md#repaymentapi)
+
+## References
+
+### RepaymentApi
+
+Re-exports [RepaymentApi](../classes/api_repayments.RepaymentApi.md)

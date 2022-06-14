@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [UserMetaCalls](../classes/subgraph_UserMeta.UserMetaCalls.md)
+- [UserMetaCalls](subgraph_UserMeta.md#usermetacalls)
+
+## References
+
+### UserMetaCalls
+
+Re-exports [UserMetaCalls](../classes/subgraph_UserMeta.UserMetaCalls.md)

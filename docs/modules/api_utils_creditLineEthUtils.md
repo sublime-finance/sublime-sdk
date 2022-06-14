@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [CreditLineEthUtils](../classes/api_utils_creditLineEthUtils.CreditLineEthUtils.md)
+- [CreditLineEthUtils](api_utils_creditLineEthUtils.md#creditlineethutils)
+
+## References
+
+### CreditLineEthUtils
+
+Re-exports [CreditLineEthUtils](../classes/api_utils_creditLineEthUtils.CreditLineEthUtils.md)

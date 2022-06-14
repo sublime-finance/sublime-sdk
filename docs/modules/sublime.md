@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [SublimeConnector](../classes/sublime.SublimeConnector.md)
+- [SublimeConnector](sublime.md#sublimeconnector)
+
+## References
+
+### SublimeConnector
+
+Re-exports [SublimeConnector](../classes/sublime.SublimeConnector.md)

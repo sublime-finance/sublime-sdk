@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [PooledCreditLineInterestCalculator](../classes/subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md)
+- [PooledCreditLineInterestCalculator](subgraph_PooledCreditLineInterestCalculator.md#pooledcreditlineinterestcalculator)
+
+## References
+
+### PooledCreditLineInterestCalculator
+
+Re-exports [PooledCreditLineInterestCalculator](../classes/subgraph_PooledCreditLineInterestCalculator.PooledCreditLineInterestCalculator.md)

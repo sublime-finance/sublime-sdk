@@ -4,6 +4,12 @@
 
 ## Table of contents
 
-### Classes
+### References
 
-- [TokenApi](../classes/api_tokenApi.TokenApi.md)
+- [TokenApi](api_tokenApi.md#tokenapi)
+
+## References
+
+### TokenApi
+
+Re-exports [TokenApi](../classes/api_tokenApi.TokenApi.md)

@@ -15,7 +15,6 @@
     "./src/api/repayments.ts",
     "./src/api/priceOracle.ts",
     "./src/api/pool.ts",
-    "./src/api/extension.ts",
     "./src/api/creditLines.ts",
     "./src/types/poolGenerateParam.ts",
     "./src/types/poolInfo.ts",
@@ -39,5 +38,6 @@
     "./src/subgraph/SavingsAccount.ts",
     "./src/subgraph/UserMeta.ts"
   ],
+  "entryPointStrategy": "expand",
   "out": "docs"
 }
