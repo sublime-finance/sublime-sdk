@@ -53,6 +53,23 @@ export class CreditLineCalls extends Base {
     return this.transformToCreditLine(emulatorResult, prices);
   }
 
+  private convertToCreditLineStatusEnum(stateInSubgraph: string): CreditLineStatus {
+    // enum CreditLineStatus {
+    //     NOT_CREATED,
+    //     REQUESTED,
+    //     ACTIVE
+    // }
+
+    if (stateInSubgraph == 'NOT_CREATED') {
+      return CreditLineStatus.NOT_CREATED;
+    } else if (stateInSubgraph == 'REQUESTED') {
+      return CreditLineStatus.REQUESTED;
+    } else if (stateInSubgraph == 'ACTIVE') {
+      return CreditLineStatus.ACTIVE;
+    } else {
+      return CreditLineStatus.NOT_CREATED;
+    }
+  }
   /**
    *
    * @param data
@@ -288,7 +305,7 @@ export class CreditLineCalls extends Base {
         amount: {
           value: a.amount || '0',
           decimals: this.tokenManager.getTokenDecimals(
-            (a.creditLineOperation === 'WITHDRAW_COLLATERAL' || 'ADD_COLLATERAL') ? cl.collateralAsset : cl.borrowAsset
+            a.creditLineOperation === 'WITHDRAW_COLLATERAL' || 'ADD_COLLATERAL' ? cl.collateralAsset : cl.borrowAsset
           ),
         },
         creditLineOperation: a.creditLineOperation,
@@ -414,7 +431,7 @@ export class CreditLineCalls extends Base {
           interestAccruedTillLastPrincipalUpdate: new BigNumber(a.interestAccruedTillLastPrincipalUpdate),
           totalInterestRepaid: new BigNumber(a.totalInterestRepaid),
           idealCollateralRatio: new BigNumber(a.idealCollateralRatio),
-          creditLineStatus: a.status,
+          creditLineStatus: this.convertToCreditLineStatusEnum(a.status),
           borrowLimit: new BigNumber(a.borrowLimit),
           createdAt: new BigNumber(a.createdAt),
           borrowAsset: a.borrowAsset,

@@ -6,7 +6,7 @@ import { EmulatedHelper } from './Helper';
 import { getPCLandLpTogether, getAllLendersPerPool } from '../queries';
 import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
 import BigNumber from 'bignumber.js';
-import { LenderPerPool } from '../types/Types';
+import { CreditLineStatus, LenderPerPool } from '../types/Types';
 
 export class EmulatedPooledCreditLines extends EmulatedHelper {
   private subgraphUrl: string;
@@ -55,6 +55,36 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
     return this.transformToPooledCreditLineEmulator(pclData, lpData, lenderPerPoolData, prices, collateralPerStrategyToken);
   }
 
+  private convertToPooledCreditLineStatusEnum(stateInSubgraph: string): CreditLineStatus {
+    //   enum PooledCreditLineStatus {
+    //     NOT_CREATED,
+    //     REQUESTED,
+    //     ACTIVE,
+    //     CLOSED,
+    //     EXPIRED,
+    //     LIQUIDATED,
+    //     CANCELLED
+    // }
+
+    if (stateInSubgraph == 'NOT_CREATED') {
+      return CreditLineStatus.NOT_CREATED;
+    } else if (stateInSubgraph == 'REQUESTED') {
+      return CreditLineStatus.REQUESTED;
+    } else if (stateInSubgraph == 'ACTIVE') {
+      return CreditLineStatus.ACTIVE;
+    } else if (stateInSubgraph == 'CLOSED') {
+      return CreditLineStatus.CLOSED;
+    } else if (stateInSubgraph == 'EXPIRED') {
+      return CreditLineStatus.EXPIRED;
+    } else if (stateInSubgraph == 'LIQUIDATED') {
+      return CreditLineStatus.LIQUIDATED;
+    } else if (stateInSubgraph == 'CANCELLED') {
+      return CreditLineStatus.CANCELLED;
+    } else {
+      return CreditLineStatus.NOT_CREATED;
+    }
+  }
+
   private transformToPooledCreditLineEmulator(
     pclData: any[],
     lenderPoolData: any[],
@@ -68,7 +98,7 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
       return new PooledCreditLineEmulator(
         {
           id: a.id,
-          pooledCreditLineStatus: a.status,
+          pooledCreditLineStatus: this.convertToPooledCreditLineStatusEnum(a.status),
           endsAt: new BigNumber(a.endsAt),
           principal: new BigNumber(a.principal),
           idealCollateralRatio: new BigNumber(a.idealCollateralRatio),
