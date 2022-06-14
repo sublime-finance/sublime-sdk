@@ -57,6 +57,8 @@
 - [redeem(uint256)](wrappers_ICEther.ICEther.md#redeem(uint256))
 - [removeAllListeners](wrappers_ICEther.ICEther.md#removealllisteners)
 - [removeListener](wrappers_ICEther.ICEther.md#removelistener)
+- [supplyRatePerBlock](wrappers_ICEther.ICEther.md#supplyrateperblock)
+- [supplyRatePerBlock()](wrappers_ICEther.ICEther.md#supplyrateperblock())
 - [getContractAddress](wrappers_ICEther.ICEther.md#getcontractaddress)
 - [getInterface](wrappers_ICEther.ICEther.md#getinterface)
 - [isIndexed](wrappers_ICEther.ICEther.md#isindexed)
@@ -163,6 +165,8 @@ ___
 | `mint()` | (`overrides?`: `CallOverrides`) => `Promise`<`void`\> |
 | `redeem` | (`redeemTokens`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
 | `redeem(uint256)` | (`redeemTokens`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
+| `supplyRatePerBlock` | (`overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
+| `supplyRatePerBlock()` | (`overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
 
 #### Overrides
 
@@ -170,7 +174,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L113)
+[src/wrappers/ICEther.d.ts:124](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L124)
 
 ___
 
@@ -202,6 +206,8 @@ ___
 | `mint()` | (`overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
 | `redeem` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
 | `redeem(uint256)` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
+| `supplyRatePerBlock` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
+| `supplyRatePerBlock()` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
 
 #### Overrides
 
@@ -209,7 +215,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L129)
+[src/wrappers/ICEther.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L144)
 
 ___
 
@@ -223,7 +229,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L127)
+[src/wrappers/ICEther.d.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L142)
 
 ___
 
@@ -241,6 +247,8 @@ ___
 | `mint()` | (`overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
 | `redeem` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
 | `redeem(uint256)` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
+| `supplyRatePerBlock` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
+| `supplyRatePerBlock()` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
 
 #### Overrides
 
@@ -248,7 +256,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L84)
+[src/wrappers/ICEther.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L87)
 
 ___
 
@@ -262,7 +270,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L82)
+[src/wrappers/ICEther.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L85)
 
 ___
 
@@ -280,6 +288,8 @@ ___
 | `mint()` | (`overrides?`: `PayableOverrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
 | `redeem` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
 | `redeem(uint256)` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
+| `supplyRatePerBlock` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
+| `supplyRatePerBlock()` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
 
 #### Overrides
 
@@ -287,7 +297,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L143)
+[src/wrappers/ICEther.d.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L162)
 
 ___
 
@@ -427,7 +437,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L43)
+[src/wrappers/ICEther.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L46)
 
 ___
 
@@ -451,7 +461,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L42)
+[src/wrappers/ICEther.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L45)
 
 ___
 
@@ -469,7 +479,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L44)
+[src/wrappers/ICEther.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L47)
 
 ___
 
@@ -538,7 +548,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L101)
+[src/wrappers/ICEther.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L108)
 
 ___
 
@@ -558,7 +568,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L103)
+[src/wrappers/ICEther.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L110)
 
 ___
 
@@ -613,7 +623,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L46)
+[src/wrappers/ICEther.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L49)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -633,7 +643,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L69)
+[src/wrappers/ICEther.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L72)
 
 ___
 
@@ -653,7 +663,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L105)
+[src/wrappers/ICEther.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L112)
 
 ___
 
@@ -673,7 +683,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L107)
+[src/wrappers/ICEther.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L114)
 
 ___
 
@@ -705,7 +715,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L49)
+[src/wrappers/ICEther.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L52)
 
 ▸ **off**(`eventName`, `listener`): [`ICEther`](wrappers_ICEther.ICEther.md)
 
@@ -726,7 +736,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L70)
+[src/wrappers/ICEther.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L73)
 
 ___
 
@@ -758,7 +768,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L53)
+[src/wrappers/ICEther.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L56)
 
 ▸ **on**(`eventName`, `listener`): [`ICEther`](wrappers_ICEther.ICEther.md)
 
@@ -779,7 +789,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L71)
+[src/wrappers/ICEther.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L74)
 
 ___
 
@@ -811,7 +821,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L57)
+[src/wrappers/ICEther.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L60)
 
 ▸ **once**(`eventName`, `listener`): [`ICEther`](wrappers_ICEther.ICEther.md)
 
@@ -832,7 +842,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L72)
+[src/wrappers/ICEther.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L75)
 
 ___
 
@@ -865,7 +875,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L76)
+[src/wrappers/ICEther.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L79)
 
 ___
 
@@ -886,7 +896,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L109)
+[src/wrappers/ICEther.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L116)
 
 ___
 
@@ -907,7 +917,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L111)
+[src/wrappers/ICEther.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L118)
 
 ___
 
@@ -938,7 +948,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L65)
+[src/wrappers/ICEther.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L68)
 
 ▸ **removeAllListeners**(`eventName?`): [`ICEther`](wrappers_ICEther.ICEther.md)
 
@@ -958,7 +968,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L74)
+[src/wrappers/ICEther.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L77)
 
 ___
 
@@ -990,7 +1000,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L61)
+[src/wrappers/ICEther.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L64)
 
 ▸ **removeListener**(`eventName`, `listener`): [`ICEther`](wrappers_ICEther.ICEther.md)
 
@@ -1011,7 +1021,47 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/ICEther.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICEther.d.ts#L73)
+[src/wrappers/ICEther.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L76)
+
+___
+
+### supplyRatePerBlock
+
+▸ **supplyRatePerBlock**(`overrides?`): `Promise`<`ContractTransaction`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+
+#### Returns
+
+`Promise`<`ContractTransaction`\>
+
+#### Defined in
+
+[src/wrappers/ICEther.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L120)
+
+___
+
+### supplyRatePerBlock()
+
+▸ **supplyRatePerBlock()**(`overrides?`): `Promise`<`ContractTransaction`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+
+#### Returns
+
+`Promise`<`ContractTransaction`\>
+
+#### Defined in
+
+[src/wrappers/ICEther.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICEther.d.ts#L122)
 
 ___
 

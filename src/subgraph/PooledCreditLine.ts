@@ -668,13 +668,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       let amount: Balance = { value: '0', decimals: 18 };
 
       if (
-        ['DEPOSIT_COLLATERAL', 'WITHDRAW_COLLATERAL', 'WITHDRAW_INTEREST', 'WITHDRAW_LIQUIDATY', 'WITHDRAW_COLLATERAL_LIQUIDITY'].includes(
+        ['DEPOSIT_COLLATERAL', 'WITHDRAW_COLLATERAL', 'WITHDRAW_INTEREST', 'WITHDRAW_COLLATERAL_LIQUIDITY'].includes(
           a.pooledCreditLineOperation
         )
       ) {
         amount = { value: a.amount, decimals: collateralTokenDecimal };
       }
-      if (['BORROW', 'REPAY', 'LEND'].includes(a.pooledCreditLineOperation)) {
+      if (['BORROW', 'REPAY', 'LEND', 'WITHDRAW_LIQUIDATY'].includes(a.pooledCreditLineOperation)) {
         amount = { value: a.amount, decimals: borrowTokenDecimal };
       }
 

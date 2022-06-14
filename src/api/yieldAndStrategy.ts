@@ -1,6 +1,6 @@
 import { Signer } from 'ethers';
 import { BigNumber } from 'bignumber.js';
-import { IYield } from '../wrappers';
+import { ICToken, ICToken__factory, IYield } from '../wrappers';
 import { IYield__factory } from '../wrappers/factories/IYield__factory';
 
 import { SublimeConfig } from '../types/sublimeConfig';
@@ -97,6 +97,18 @@ export class YieldAndStrategyApi {
       await yieldContract.callStatic.getSharesForTokens(_amount.multipliedBy(new BigNumber(10).pow(deopsitTokenDecimal)).toFixed(0), asset)
     ).toString();
     return new BigNumber(_temp);
+  }
+
+  public async getApr(yieldType: StrategyType, asset: string): Promise<BigNumber> {
+    const yieldAddress = this.getStrategyAddress(yieldType);
+    const yieldContract: IYield = IYield__factory.connect(yieldAddress, this.signer);
+    if (yieldType == StrategyType.CompoundYield) {
+      const liquiditySharesAddress: string = await yieldContract.liquidityToken(asset);
+      const cToken: ICToken = ICToken__factory.connect(liquiditySharesAddress, this.signer);
+      const aprString = await (await cToken.callStatic.supplyRatePerBlock()).toString();
+      return new BigNumber(aprString);
+    }
+    return new BigNumber(0);
   }
 
   /**

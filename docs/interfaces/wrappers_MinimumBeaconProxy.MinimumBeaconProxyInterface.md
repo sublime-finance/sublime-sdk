@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/MinimumBeaconProxy.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MinimumBeaconProxy.d.ts#L14)
+[src/wrappers/MinimumBeaconProxy.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MinimumBeaconProxy.d.ts#L14)
 
 ___
 
@@ -147,7 +147,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/MinimumBeaconProxy.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MinimumBeaconProxy.d.ts#L12)
+[src/wrappers/MinimumBeaconProxy.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MinimumBeaconProxy.d.ts#L12)
 
 ___
 

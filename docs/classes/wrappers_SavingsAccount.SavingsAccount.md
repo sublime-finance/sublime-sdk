@@ -246,7 +246,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:693](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L693)
+[src/wrappers/SavingsAccount.d.ts:693](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L693)
 
 ___
 
@@ -323,7 +323,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:1020](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L1020)
+[src/wrappers/SavingsAccount.d.ts:1020](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L1020)
 
 ___
 
@@ -351,7 +351,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:911](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L911)
+[src/wrappers/SavingsAccount.d.ts:911](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L911)
 
 ___
 
@@ -414,7 +414,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L160)
+[src/wrappers/SavingsAccount.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L160)
 
 ___
 
@@ -428,7 +428,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L158)
+[src/wrappers/SavingsAccount.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L158)
 
 ___
 
@@ -491,7 +491,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:1284](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L1284)
+[src/wrappers/SavingsAccount.d.ts:1284](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L1284)
 
 ___
 
@@ -553,7 +553,7 @@ node_modules/@ethersproject/contracts/lib/index.d.ts:79
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:431](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L431)
+[src/wrappers/SavingsAccount.d.ts:431](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L431)
 
 ___
 
@@ -573,7 +573,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:433](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L433)
+[src/wrappers/SavingsAccount.d.ts:433](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L433)
 
 ___
 
@@ -670,7 +670,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:435](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L435)
+[src/wrappers/SavingsAccount.d.ts:435](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L435)
 
 ___
 
@@ -693,7 +693,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:437](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L437)
+[src/wrappers/SavingsAccount.d.ts:437](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L437)
 
 ___
 
@@ -716,7 +716,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:439](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L439)
+[src/wrappers/SavingsAccount.d.ts:439](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L439)
 
 ___
 
@@ -739,7 +739,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:446](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L446)
+[src/wrappers/SavingsAccount.d.ts:446](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L446)
 
 ___
 
@@ -763,7 +763,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L119)
+[src/wrappers/SavingsAccount.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L119)
 
 ___
 
@@ -786,7 +786,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:453](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L453)
+[src/wrappers/SavingsAccount.d.ts:453](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L453)
 
 ___
 
@@ -809,7 +809,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:455](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L455)
+[src/wrappers/SavingsAccount.d.ts:455](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L455)
 
 ___
 
@@ -833,7 +833,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L118)
+[src/wrappers/SavingsAccount.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L118)
 
 ___
 
@@ -856,7 +856,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:457](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L457)
+[src/wrappers/SavingsAccount.d.ts:457](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L457)
 
 ___
 
@@ -879,7 +879,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:464](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L464)
+[src/wrappers/SavingsAccount.d.ts:464](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L464)
 
 ___
 
@@ -897,7 +897,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L120)
+[src/wrappers/SavingsAccount.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L120)
 
 ___
 
@@ -921,7 +921,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:471](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L471)
+[src/wrappers/SavingsAccount.d.ts:471](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L471)
 
 ___
 
@@ -945,7 +945,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:479](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L479)
+[src/wrappers/SavingsAccount.d.ts:479](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L479)
 
 ___
 
@@ -1016,7 +1016,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:487](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L487)
+[src/wrappers/SavingsAccount.d.ts:487](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L487)
 
 ___
 
@@ -1038,7 +1038,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:489](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L489)
+[src/wrappers/SavingsAccount.d.ts:489](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L489)
 
 ___
 
@@ -1061,7 +1061,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:495](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L495)
+[src/wrappers/SavingsAccount.d.ts:495](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L495)
 
 ___
 
@@ -1084,7 +1084,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:502](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L502)
+[src/wrappers/SavingsAccount.d.ts:502](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L502)
 
 ___
 
@@ -1105,7 +1105,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:509](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L509)
+[src/wrappers/SavingsAccount.d.ts:509](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L509)
 
 ___
 
@@ -1126,7 +1126,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:511](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L511)
+[src/wrappers/SavingsAccount.d.ts:511](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L511)
 
 ___
 
@@ -1181,7 +1181,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L122)
+[src/wrappers/SavingsAccount.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L122)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -1201,7 +1201,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L145)
+[src/wrappers/SavingsAccount.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L145)
 
 ___
 
@@ -1233,7 +1233,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L125)
+[src/wrappers/SavingsAccount.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L125)
 
 ▸ **off**(`eventName`, `listener`): [`SavingsAccount`](wrappers_SavingsAccount.SavingsAccount.md)
 
@@ -1254,7 +1254,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L146)
+[src/wrappers/SavingsAccount.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L146)
 
 ___
 
@@ -1286,7 +1286,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L129)
+[src/wrappers/SavingsAccount.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L129)
 
 ▸ **on**(`eventName`, `listener`): [`SavingsAccount`](wrappers_SavingsAccount.SavingsAccount.md)
 
@@ -1307,7 +1307,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L147)
+[src/wrappers/SavingsAccount.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L147)
 
 ___
 
@@ -1339,7 +1339,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L133)
+[src/wrappers/SavingsAccount.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L133)
 
 ▸ **once**(`eventName`, `listener`): [`SavingsAccount`](wrappers_SavingsAccount.SavingsAccount.md)
 
@@ -1360,7 +1360,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L148)
+[src/wrappers/SavingsAccount.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L148)
 
 ___
 
@@ -1380,7 +1380,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:513](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L513)
+[src/wrappers/SavingsAccount.d.ts:513](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L513)
 
 ___
 
@@ -1400,7 +1400,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:515](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L515)
+[src/wrappers/SavingsAccount.d.ts:515](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L515)
 
 ___
 
@@ -1433,7 +1433,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L152)
+[src/wrappers/SavingsAccount.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L152)
 
 ___
 
@@ -1464,7 +1464,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L141)
+[src/wrappers/SavingsAccount.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L141)
 
 ▸ **removeAllListeners**(`eventName?`): [`SavingsAccount`](wrappers_SavingsAccount.SavingsAccount.md)
 
@@ -1484,7 +1484,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L150)
+[src/wrappers/SavingsAccount.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L150)
 
 ___
 
@@ -1516,7 +1516,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L137)
+[src/wrappers/SavingsAccount.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L137)
 
 ▸ **removeListener**(`eventName`, `listener`): [`SavingsAccount`](wrappers_SavingsAccount.SavingsAccount.md)
 
@@ -1537,7 +1537,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L149)
+[src/wrappers/SavingsAccount.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L149)
 
 ___
 
@@ -1557,7 +1557,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:517](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L517)
+[src/wrappers/SavingsAccount.d.ts:517](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L517)
 
 ___
 
@@ -1577,7 +1577,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:519](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L519)
+[src/wrappers/SavingsAccount.d.ts:519](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L519)
 
 ___
 
@@ -1601,7 +1601,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:521](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L521)
+[src/wrappers/SavingsAccount.d.ts:521](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L521)
 
 ___
 
@@ -1625,7 +1625,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:529](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L529)
+[src/wrappers/SavingsAccount.d.ts:529](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L529)
 
 ___
 
@@ -1649,7 +1649,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:537](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L537)
+[src/wrappers/SavingsAccount.d.ts:537](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L537)
 
 ___
 
@@ -1673,7 +1673,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:545](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L545)
+[src/wrappers/SavingsAccount.d.ts:545](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L545)
 
 ___
 
@@ -1698,7 +1698,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:553](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L553)
+[src/wrappers/SavingsAccount.d.ts:553](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L553)
 
 ___
 
@@ -1723,7 +1723,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:562](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L562)
+[src/wrappers/SavingsAccount.d.ts:562](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L562)
 
 ___
 
@@ -1744,7 +1744,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:571](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L571)
+[src/wrappers/SavingsAccount.d.ts:571](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L571)
 
 ___
 
@@ -1765,7 +1765,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:573](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L573)
+[src/wrappers/SavingsAccount.d.ts:573](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L573)
 
 ___
 
@@ -1789,7 +1789,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:575](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L575)
+[src/wrappers/SavingsAccount.d.ts:575](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L575)
 
 ___
 
@@ -1813,7 +1813,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:583](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L583)
+[src/wrappers/SavingsAccount.d.ts:583](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L583)
 
 ___
 
@@ -1838,7 +1838,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:591](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L591)
+[src/wrappers/SavingsAccount.d.ts:591](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L591)
 
 ___
 
@@ -1863,7 +1863,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:600](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L600)
+[src/wrappers/SavingsAccount.d.ts:600](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L600)
 
 ___
 
@@ -1888,7 +1888,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:609](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L609)
+[src/wrappers/SavingsAccount.d.ts:609](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L609)
 
 ___
 
@@ -1913,7 +1913,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:618](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L618)
+[src/wrappers/SavingsAccount.d.ts:618](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L618)
 
 ___
 
@@ -1934,7 +1934,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:633](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L633)
+[src/wrappers/SavingsAccount.d.ts:633](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L633)
 
 ___
 
@@ -1956,7 +1956,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:627](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L627)
+[src/wrappers/SavingsAccount.d.ts:627](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L627)
 
 ___
 
@@ -1982,7 +1982,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:635](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L635)
+[src/wrappers/SavingsAccount.d.ts:635](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L635)
 
 ___
 
@@ -2008,7 +2008,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:645](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L645)
+[src/wrappers/SavingsAccount.d.ts:645](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L645)
 
 ___
 
@@ -2033,7 +2033,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:655](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L655)
+[src/wrappers/SavingsAccount.d.ts:655](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L655)
 
 ___
 
@@ -2058,7 +2058,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:664](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L664)
+[src/wrappers/SavingsAccount.d.ts:664](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L664)
 
 ___
 
@@ -2084,7 +2084,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:673](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L673)
+[src/wrappers/SavingsAccount.d.ts:673](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L673)
 
 ___
 
@@ -2110,7 +2110,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/SavingsAccount.d.ts:683](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/SavingsAccount.d.ts#L683)
+[src/wrappers/SavingsAccount.d.ts:683](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/SavingsAccount.d.ts#L683)
 
 ___
 

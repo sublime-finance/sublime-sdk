@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/queries/creditLineCollective.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/queries/creditLineCollective.ts#L44)
+[src/queries/creditLineCollective.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/queries/creditLineCollective.ts#L44)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/queries/creditLineCollective.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/queries/creditLineCollective.ts#L3)
+[src/queries/creditLineCollective.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/queries/creditLineCollective.ts#L3)

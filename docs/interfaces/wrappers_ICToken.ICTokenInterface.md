@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L49)
+[src/wrappers/ICToken.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L52)
 
 ___
 
@@ -151,6 +151,7 @@ ___
 | `getCash()` | `FunctionFragment` |
 | `mint(uint256)` | `FunctionFragment` |
 | `redeem(uint256)` | `FunctionFragment` |
+| `supplyRatePerBlock()` | `FunctionFragment` |
 | `underlying()` | `FunctionFragment` |
 
 #### Overrides
@@ -159,7 +160,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L23)
+[src/wrappers/ICToken.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L23)
 
 ___
 
@@ -328,7 +329,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L41)
+[src/wrappers/ICToken.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L43)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -349,7 +350,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L42)
+[src/wrappers/ICToken.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L44)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -370,7 +371,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L43)
+[src/wrappers/ICToken.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L45)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -391,7 +392,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L44)
+[src/wrappers/ICToken.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L46)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -412,7 +413,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L45)
+[src/wrappers/ICToken.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L47)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -433,7 +434,28 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L46)
+[src/wrappers/ICToken.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L48)
+
+▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `functionFragment` | ``"supplyRatePerBlock"`` |
+| `data` | `BytesLike` |
+
+#### Returns
+
+`Result`
+
+#### Overrides
+
+ethers.utils.Interface.decodeFunctionResult
+
+#### Defined in
+
+[src/wrappers/ICToken.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L49)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -454,7 +476,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L47)
+[src/wrappers/ICToken.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L50)
 
 ___
 
@@ -583,7 +605,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L33)
+[src/wrappers/ICToken.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L34)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -604,7 +626,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L34)
+[src/wrappers/ICToken.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L35)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -625,7 +647,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L35)
+[src/wrappers/ICToken.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L36)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -646,7 +668,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L36)
+[src/wrappers/ICToken.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L37)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -667,7 +689,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L37)
+[src/wrappers/ICToken.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L38)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -688,7 +710,28 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L38)
+[src/wrappers/ICToken.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L39)
+
+▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `functionFragment` | ``"supplyRatePerBlock"`` |
+| `values?` | `undefined` |
+
+#### Returns
+
+`string`
+
+#### Overrides
+
+ethers.utils.Interface.encodeFunctionData
+
+#### Defined in
+
+[src/wrappers/ICToken.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L40)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -709,7 +752,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L39)
+[src/wrappers/ICToken.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L41)
 
 ___
 

@@ -39,4 +39,4 @@
 
 #### Defined in
 
-[src/wrappers/factories/IERC1155ReceiverUpgradeable__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/factories/IERC1155ReceiverUpgradeable__factory.ts#L11)
+[src/wrappers/factories/IERC1155ReceiverUpgradeable__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/factories/IERC1155ReceiverUpgradeable__factory.ts#L11)

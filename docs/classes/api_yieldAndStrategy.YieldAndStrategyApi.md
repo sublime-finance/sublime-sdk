@@ -20,6 +20,7 @@
 
 ### Methods
 
+- [getApr](api_yieldAndStrategy.YieldAndStrategyApi.md#getapr)
 - [getSharesForTokens](api_yieldAndStrategy.YieldAndStrategyApi.md#getsharesfortokens)
 - [getStrategies](api_yieldAndStrategy.YieldAndStrategyApi.md#getstrategies)
 - [getStrategy](api_yieldAndStrategy.YieldAndStrategyApi.md#getstrategy)
@@ -44,7 +45,7 @@
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L40)
+[src/api/yieldAndStrategy.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L40)
 
 ## Properties
 
@@ -56,7 +57,7 @@
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L23)
+[src/api/yieldAndStrategy.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L23)
 
 ___
 
@@ -68,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L33)
+[src/api/yieldAndStrategy.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L33)
 
 ___
 
@@ -80,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L38)
+[src/api/yieldAndStrategy.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L38)
 
 ___
 
@@ -92,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L18)
+[src/api/yieldAndStrategy.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L18)
 
 ___
 
@@ -104,9 +105,30 @@ ___
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L28)
+[src/api/yieldAndStrategy.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L28)
 
 ## Methods
+
+### getApr
+
+▸ **getApr**(`yieldType`, `asset`): `Promise`<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `yieldType` | [`StrategyType`](../enums/types_Types.StrategyType.md) |
+| `asset` | `string` |
+
+#### Returns
+
+`Promise`<`BigNumber`\>
+
+#### Defined in
+
+[src/api/yieldAndStrategy.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L102)
+
+___
 
 ### getSharesForTokens
 
@@ -128,7 +150,7 @@ Number of shares that will be generated for given number of tokens and strategy
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L81)
+[src/api/yieldAndStrategy.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L81)
 
 ___
 
@@ -144,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L106)
+[src/api/yieldAndStrategy.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L118)
 
 ___
 
@@ -168,7 +190,7 @@ null if invalid strategy address is given in input
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L143)
+[src/api/yieldAndStrategy.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L155)
 
 ___
 
@@ -192,7 +214,7 @@ null if invalid strategy name is given
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L128)
+[src/api/yieldAndStrategy.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L140)
 
 ___
 
@@ -214,7 +236,7 @@ Display Name/Info for the strategy
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L174)
+[src/api/yieldAndStrategy.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L186)
 
 ___
 
@@ -236,7 +258,7 @@ URL of the strategy logo
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L161)
+[src/api/yieldAndStrategy.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L173)
 
 ___
 
@@ -260,4 +282,4 @@ Total number of underlying tokens for a given asset and strategy
 
 #### Defined in
 
-[src/api/yieldAndStrategy.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/yieldAndStrategy.ts#L58)
+[src/api/yieldAndStrategy.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/yieldAndStrategy.ts#L58)

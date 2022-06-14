@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[src/emulated/Helper.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/emulated/Helper.ts#L10)
+[src/emulated/Helper.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/emulated/Helper.ts#L10)
 
 ## Properties
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[src/emulated/Helper.ts:7](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/emulated/Helper.ts#L7)
+[src/emulated/Helper.ts:7](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/emulated/Helper.ts#L7)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/emulated/Helper.ts:8](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/emulated/Helper.ts#L8)
+[src/emulated/Helper.ts:8](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/emulated/Helper.ts#L8)
 
 ## Methods
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/emulated/Helper.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/emulated/Helper.ts#L91)
+[src/emulated/Helper.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/emulated/Helper.ts#L91)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/emulated/Helper.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/emulated/Helper.ts#L81)
+[src/emulated/Helper.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/emulated/Helper.ts#L81)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[src/emulated/Helper.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/emulated/Helper.ts#L55)
+[src/emulated/Helper.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/emulated/Helper.ts#L55)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[src/emulated/Helper.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/emulated/Helper.ts#L29)
+[src/emulated/Helper.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/emulated/Helper.ts#L29)
 
 ___
 
@@ -168,4 +168,4 @@ ___
 
 #### Defined in
 
-[src/emulated/Helper.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/emulated/Helper.ts#L15)
+[src/emulated/Helper.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/emulated/Helper.ts#L15)

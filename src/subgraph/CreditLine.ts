@@ -312,19 +312,18 @@ export class CreditLineCalls extends Base {
       // CANCELLED
       // RESET
       // LIQUIDATED
-      let assetToUse;
+      let decimalsToUse = 0;
       if (['DEPOSIT_COLLATERAL', 'WITHDRAW_COLLATERAL'].includes(a.creditLineOperation)) {
-        assetToUse = cl.collateralAsset;
-      } else if (['BORROW', 'REPAY'].includes(a.creditLineOperation)) {
-        assetToUse = cl.borrowAsset;
-      } else {
-        throw new Error('Invalid Credit line operation detected, please check');
+        decimalsToUse = this.tokenManager.getTokenDecimals(cl.collateralAsset);
+      }
+      if (['BORROW', 'REPAY'].includes(a.creditLineOperation)) {
+        decimalsToUse = this.tokenManager.getTokenDecimals(cl.borrowAsset);
       }
 
       return {
         amount: {
           value: a.amount || '0',
-          decimals: this.tokenManager.getTokenDecimals(assetToUse),
+          decimals: decimalsToUse,
         },
         creditLineOperation: a.creditLineOperation,
         liquidator: a.liquidator,

@@ -198,7 +198,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:234](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L234)
+[src/wrappers/MockAdminVerifier.d.ts:234](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L234)
 
 ___
 
@@ -251,7 +251,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:301](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L301)
+[src/wrappers/MockAdminVerifier.d.ts:301](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L301)
 
 ___
 
@@ -275,7 +275,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:282](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L282)
+[src/wrappers/MockAdminVerifier.d.ts:282](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L282)
 
 ___
 
@@ -314,7 +314,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L116)
+[src/wrappers/MockAdminVerifier.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L116)
 
 ___
 
@@ -328,7 +328,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L114)
+[src/wrappers/MockAdminVerifier.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L114)
 
 ___
 
@@ -367,7 +367,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:355](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L355)
+[src/wrappers/MockAdminVerifier.d.ts:355](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L355)
 
 ___
 
@@ -507,7 +507,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L75)
+[src/wrappers/MockAdminVerifier.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L75)
 
 ___
 
@@ -531,7 +531,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L74)
+[src/wrappers/MockAdminVerifier.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L74)
 
 ___
 
@@ -549,7 +549,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L76)
+[src/wrappers/MockAdminVerifier.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L76)
 
 ___
 
@@ -622,7 +622,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L179)
+[src/wrappers/MockAdminVerifier.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L179)
 
 ___
 
@@ -646,7 +646,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L187)
+[src/wrappers/MockAdminVerifier.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L187)
 
 ___
 
@@ -701,7 +701,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L78)
+[src/wrappers/MockAdminVerifier.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L78)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -721,7 +721,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L101)
+[src/wrappers/MockAdminVerifier.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L101)
 
 ___
 
@@ -753,7 +753,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L81)
+[src/wrappers/MockAdminVerifier.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L81)
 
 ▸ **off**(`eventName`, `listener`): [`MockAdminVerifier`](wrappers_MockAdminVerifier.MockAdminVerifier.md)
 
@@ -774,7 +774,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L102)
+[src/wrappers/MockAdminVerifier.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L102)
 
 ___
 
@@ -806,7 +806,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L85)
+[src/wrappers/MockAdminVerifier.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L85)
 
 ▸ **on**(`eventName`, `listener`): [`MockAdminVerifier`](wrappers_MockAdminVerifier.MockAdminVerifier.md)
 
@@ -827,7 +827,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L103)
+[src/wrappers/MockAdminVerifier.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L103)
 
 ___
 
@@ -859,7 +859,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L89)
+[src/wrappers/MockAdminVerifier.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L89)
 
 ▸ **once**(`eventName`, `listener`): [`MockAdminVerifier`](wrappers_MockAdminVerifier.MockAdminVerifier.md)
 
@@ -880,7 +880,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L104)
+[src/wrappers/MockAdminVerifier.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L104)
 
 ___
 
@@ -900,7 +900,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L195)
+[src/wrappers/MockAdminVerifier.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L195)
 
 ___
 
@@ -920,7 +920,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L197)
+[src/wrappers/MockAdminVerifier.d.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L197)
 
 ___
 
@@ -953,7 +953,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L108)
+[src/wrappers/MockAdminVerifier.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L108)
 
 ___
 
@@ -973,7 +973,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L199)
+[src/wrappers/MockAdminVerifier.d.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L199)
 
 ___
 
@@ -993,7 +993,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L201)
+[src/wrappers/MockAdminVerifier.d.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L201)
 
 ___
 
@@ -1014,7 +1014,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:203](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L203)
+[src/wrappers/MockAdminVerifier.d.ts:203](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L203)
 
 ___
 
@@ -1035,7 +1035,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L205)
+[src/wrappers/MockAdminVerifier.d.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L205)
 
 ___
 
@@ -1066,7 +1066,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L97)
+[src/wrappers/MockAdminVerifier.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L97)
 
 ▸ **removeAllListeners**(`eventName?`): [`MockAdminVerifier`](wrappers_MockAdminVerifier.MockAdminVerifier.md)
 
@@ -1086,7 +1086,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L106)
+[src/wrappers/MockAdminVerifier.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L106)
 
 ___
 
@@ -1118,7 +1118,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L93)
+[src/wrappers/MockAdminVerifier.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L93)
 
 ▸ **removeListener**(`eventName`, `listener`): [`MockAdminVerifier`](wrappers_MockAdminVerifier.MockAdminVerifier.md)
 
@@ -1139,7 +1139,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L105)
+[src/wrappers/MockAdminVerifier.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L105)
 
 ___
 
@@ -1159,7 +1159,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:207](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L207)
+[src/wrappers/MockAdminVerifier.d.ts:207](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L207)
 
 ___
 
@@ -1179,7 +1179,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:209](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L209)
+[src/wrappers/MockAdminVerifier.d.ts:209](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L209)
 
 ___
 
@@ -1200,7 +1200,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:211](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L211)
+[src/wrappers/MockAdminVerifier.d.ts:211](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L211)
 
 ___
 
@@ -1221,7 +1221,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:213](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L213)
+[src/wrappers/MockAdminVerifier.d.ts:213](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L213)
 
 ___
 
@@ -1241,7 +1241,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L215)
+[src/wrappers/MockAdminVerifier.d.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L215)
 
 ___
 
@@ -1261,7 +1261,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L217)
+[src/wrappers/MockAdminVerifier.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L217)
 
 ___
 
@@ -1282,7 +1282,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:219](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L219)
+[src/wrappers/MockAdminVerifier.d.ts:219](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L219)
 
 ___
 
@@ -1303,7 +1303,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L221)
+[src/wrappers/MockAdminVerifier.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L221)
 
 ___
 
@@ -1324,7 +1324,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:223](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L223)
+[src/wrappers/MockAdminVerifier.d.ts:223](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L223)
 
 ___
 
@@ -1345,7 +1345,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L225)
+[src/wrappers/MockAdminVerifier.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L225)
 
 ___
 
@@ -1365,7 +1365,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L230)
+[src/wrappers/MockAdminVerifier.d.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L230)
 
 ___
 
@@ -1385,7 +1385,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockAdminVerifier.d.ts:232](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockAdminVerifier.d.ts#L232)
+[src/wrappers/MockAdminVerifier.d.ts:232](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockAdminVerifier.d.ts#L232)
 
 ___
 

@@ -218,7 +218,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L344)
+[src/wrappers/MockToken.d.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L344)
 
 ___
 
@@ -281,7 +281,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:430](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L430)
+[src/wrappers/MockToken.d.ts:430](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L430)
 
 ___
 
@@ -303,7 +303,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:411](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L411)
+[src/wrappers/MockToken.d.ts:411](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L411)
 
 ___
 
@@ -352,7 +352,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L127)
+[src/wrappers/MockToken.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L127)
 
 ___
 
@@ -366,7 +366,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L125)
+[src/wrappers/MockToken.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L125)
 
 ___
 
@@ -415,7 +415,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:530](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L530)
+[src/wrappers/MockToken.d.ts:530](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L530)
 
 ___
 
@@ -553,7 +553,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L238)
+[src/wrappers/MockToken.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L238)
 
 ___
 
@@ -575,7 +575,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:240](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L240)
+[src/wrappers/MockToken.d.ts:240](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L240)
 
 ___
 
@@ -597,7 +597,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L242)
+[src/wrappers/MockToken.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L242)
 
 ___
 
@@ -619,7 +619,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:248](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L248)
+[src/wrappers/MockToken.d.ts:248](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L248)
 
 ___
 
@@ -643,7 +643,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L86)
+[src/wrappers/MockToken.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L86)
 
 ___
 
@@ -664,7 +664,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:254](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L254)
+[src/wrappers/MockToken.d.ts:254](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L254)
 
 ___
 
@@ -685,7 +685,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:256](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L256)
+[src/wrappers/MockToken.d.ts:256](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L256)
 
 ___
 
@@ -709,7 +709,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L85)
+[src/wrappers/MockToken.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L85)
 
 ___
 
@@ -729,7 +729,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:258](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L258)
+[src/wrappers/MockToken.d.ts:258](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L258)
 
 ___
 
@@ -749,7 +749,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:260](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L260)
+[src/wrappers/MockToken.d.ts:260](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L260)
 
 ___
 
@@ -771,7 +771,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L262)
+[src/wrappers/MockToken.d.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L262)
 
 ___
 
@@ -793,7 +793,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:268](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L268)
+[src/wrappers/MockToken.d.ts:268](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L268)
 
 ___
 
@@ -811,7 +811,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L87)
+[src/wrappers/MockToken.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L87)
 
 ___
 
@@ -882,7 +882,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:274](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L274)
+[src/wrappers/MockToken.d.ts:274](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L274)
 
 ___
 
@@ -904,7 +904,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:280](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L280)
+[src/wrappers/MockToken.d.ts:280](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L280)
 
 ___
 
@@ -959,7 +959,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L89)
+[src/wrappers/MockToken.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L89)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -979,7 +979,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L112)
+[src/wrappers/MockToken.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L112)
 
 ___
 
@@ -1001,7 +1001,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:286](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L286)
+[src/wrappers/MockToken.d.ts:286](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L286)
 
 ___
 
@@ -1023,7 +1023,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L288)
+[src/wrappers/MockToken.d.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L288)
 
 ___
 
@@ -1043,7 +1043,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L294)
+[src/wrappers/MockToken.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L294)
 
 ___
 
@@ -1063,7 +1063,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L296)
+[src/wrappers/MockToken.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L296)
 
 ___
 
@@ -1095,7 +1095,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L92)
+[src/wrappers/MockToken.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L92)
 
 ▸ **off**(`eventName`, `listener`): [`MockToken`](wrappers_MockToken.MockToken.md)
 
@@ -1116,7 +1116,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L113)
+[src/wrappers/MockToken.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L113)
 
 ___
 
@@ -1148,7 +1148,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L96)
+[src/wrappers/MockToken.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L96)
 
 ▸ **on**(`eventName`, `listener`): [`MockToken`](wrappers_MockToken.MockToken.md)
 
@@ -1169,7 +1169,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L114)
+[src/wrappers/MockToken.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L114)
 
 ___
 
@@ -1201,7 +1201,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L100)
+[src/wrappers/MockToken.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L100)
 
 ▸ **once**(`eventName`, `listener`): [`MockToken`](wrappers_MockToken.MockToken.md)
 
@@ -1222,7 +1222,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L115)
+[src/wrappers/MockToken.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L115)
 
 ___
 
@@ -1242,7 +1242,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:298](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L298)
+[src/wrappers/MockToken.d.ts:298](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L298)
 
 ___
 
@@ -1262,7 +1262,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L300)
+[src/wrappers/MockToken.d.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L300)
 
 ___
 
@@ -1295,7 +1295,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L119)
+[src/wrappers/MockToken.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L119)
 
 ___
 
@@ -1326,7 +1326,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L108)
+[src/wrappers/MockToken.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L108)
 
 ▸ **removeAllListeners**(`eventName?`): [`MockToken`](wrappers_MockToken.MockToken.md)
 
@@ -1346,7 +1346,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L117)
+[src/wrappers/MockToken.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L117)
 
 ___
 
@@ -1378,7 +1378,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L104)
+[src/wrappers/MockToken.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L104)
 
 ▸ **removeListener**(`eventName`, `listener`): [`MockToken`](wrappers_MockToken.MockToken.md)
 
@@ -1399,7 +1399,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L116)
+[src/wrappers/MockToken.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L116)
 
 ___
 
@@ -1419,7 +1419,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L302)
+[src/wrappers/MockToken.d.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L302)
 
 ___
 
@@ -1439,7 +1439,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:304](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L304)
+[src/wrappers/MockToken.d.ts:304](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L304)
 
 ___
 
@@ -1459,7 +1459,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L306)
+[src/wrappers/MockToken.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L306)
 
 ___
 
@@ -1479,7 +1479,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L308)
+[src/wrappers/MockToken.d.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L308)
 
 ___
 
@@ -1499,7 +1499,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L310)
+[src/wrappers/MockToken.d.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L310)
 
 ___
 
@@ -1519,7 +1519,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L312)
+[src/wrappers/MockToken.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L312)
 
 ___
 
@@ -1541,7 +1541,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L314)
+[src/wrappers/MockToken.d.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L314)
 
 ___
 
@@ -1563,7 +1563,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L320)
+[src/wrappers/MockToken.d.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L320)
 
 ___
 
@@ -1586,7 +1586,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:326](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L326)
+[src/wrappers/MockToken.d.ts:326](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L326)
 
 ___
 
@@ -1609,7 +1609,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:333](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L333)
+[src/wrappers/MockToken.d.ts:333](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L333)
 
 ___
 
@@ -1630,7 +1630,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:340](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L340)
+[src/wrappers/MockToken.d.ts:340](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L340)
 
 ___
 
@@ -1651,7 +1651,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:342](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/MockToken.d.ts#L342)
+[src/wrappers/MockToken.d.ts:342](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/MockToken.d.ts#L342)
 
 ___
 

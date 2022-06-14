@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/utils/creditLineEthUtils.ts#L19)
+[src/api/utils/creditLineEthUtils.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/utils/creditLineEthUtils.ts#L19)
 
 ## Properties
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/utils/creditLineEthUtils.ts#L17)
+[src/api/utils/creditLineEthUtils.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/utils/creditLineEthUtils.ts#L17)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/utils/creditLineEthUtils.ts#L15)
+[src/api/utils/creditLineEthUtils.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/utils/creditLineEthUtils.ts#L15)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/utils/creditLineEthUtils.ts#L16)
+[src/api/utils/creditLineEthUtils.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/utils/creditLineEthUtils.ts#L16)
 
 ## Methods
 
@@ -96,7 +96,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/utils/creditLineEthUtils.ts#L37)
+[src/api/utils/creditLineEthUtils.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/utils/creditLineEthUtils.ts#L37)
 
 ___
 
@@ -122,4 +122,4 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/utils/creditLineEthUtils.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/api/utils/creditLineEthUtils.ts#L66)
+[src/api/utils/creditLineEthUtils.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/api/utils/creditLineEthUtils.ts#L66)

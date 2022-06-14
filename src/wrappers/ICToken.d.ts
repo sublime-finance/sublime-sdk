@@ -27,6 +27,7 @@ interface ICTokenInterface extends ethers.utils.Interface {
     'getCash()': FunctionFragment;
     'mint(uint256)': FunctionFragment;
     'redeem(uint256)': FunctionFragment;
+    'supplyRatePerBlock()': FunctionFragment;
     'underlying()': FunctionFragment;
   };
 
@@ -36,6 +37,7 @@ interface ICTokenInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: 'getCash', values?: undefined): string;
   encodeFunctionData(functionFragment: 'mint', values: [BigNumberish]): string;
   encodeFunctionData(functionFragment: 'redeem', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'supplyRatePerBlock', values?: undefined): string;
   encodeFunctionData(functionFragment: 'underlying', values?: undefined): string;
 
   decodeFunctionResult(functionFragment: 'balanceOfUnderlying', data: BytesLike): Result;
@@ -44,6 +46,7 @@ interface ICTokenInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: 'getCash', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'mint', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'redeem', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'supplyRatePerBlock', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'underlying', data: BytesLike): Result;
 
   events: {};
@@ -123,6 +126,10 @@ export class ICToken extends Contract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    supplyRatePerBlock(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'supplyRatePerBlock()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
     underlying(overrides?: CallOverrides): Promise<[string]>;
 
     'underlying()'(overrides?: CallOverrides): Promise<[string]>;
@@ -155,6 +162,10 @@ export class ICToken extends Contract {
 
   'redeem(uint256)'(redeemTokens: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
+  supplyRatePerBlock(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'supplyRatePerBlock()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
   underlying(overrides?: CallOverrides): Promise<string>;
 
   'underlying()'(overrides?: CallOverrides): Promise<string>;
@@ -183,6 +194,10 @@ export class ICToken extends Contract {
     redeem(redeemTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'redeem(uint256)'(redeemTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    supplyRatePerBlock(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'supplyRatePerBlock()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     underlying(overrides?: CallOverrides): Promise<string>;
 
@@ -215,6 +230,10 @@ export class ICToken extends Contract {
     redeem(redeemTokens: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'redeem(uint256)'(redeemTokens: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    supplyRatePerBlock(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'supplyRatePerBlock()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     underlying(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -251,6 +270,10 @@ export class ICToken extends Contract {
       redeemTokens: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    supplyRatePerBlock(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'supplyRatePerBlock()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
 
     underlying(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

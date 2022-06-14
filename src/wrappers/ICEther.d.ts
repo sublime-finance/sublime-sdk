@@ -25,15 +25,18 @@ interface ICEtherInterface extends ethers.utils.Interface {
     'getCash()': FunctionFragment;
     'mint()': FunctionFragment;
     'redeem(uint256)': FunctionFragment;
+    'supplyRatePerBlock()': FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: 'getCash', values?: undefined): string;
   encodeFunctionData(functionFragment: 'mint', values?: undefined): string;
   encodeFunctionData(functionFragment: 'redeem', values: [BigNumberish]): string;
+  encodeFunctionData(functionFragment: 'supplyRatePerBlock', values?: undefined): string;
 
   decodeFunctionResult(functionFragment: 'getCash', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'mint', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'redeem', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'supplyRatePerBlock', data: BytesLike): Result;
 
   events: {};
 }
@@ -96,6 +99,10 @@ export class ICEther extends Contract {
       redeemTokens: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
+
+    supplyRatePerBlock(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+    'supplyRatePerBlock()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
   };
 
   getCash(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
@@ -110,6 +117,10 @@ export class ICEther extends Contract {
 
   'redeem(uint256)'(redeemTokens: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
 
+  supplyRatePerBlock(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
+  'supplyRatePerBlock()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<ContractTransaction>;
+
   callStatic: {
     getCash(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -122,6 +133,10 @@ export class ICEther extends Contract {
     redeem(redeemTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
 
     'redeem(uint256)'(redeemTokens: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
+
+    supplyRatePerBlock(overrides?: CallOverrides): Promise<BigNumber>;
+
+    'supplyRatePerBlock()'(overrides?: CallOverrides): Promise<BigNumber>;
   };
 
   filters: {};
@@ -138,6 +153,10 @@ export class ICEther extends Contract {
     redeem(redeemTokens: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
 
     'redeem(uint256)'(redeemTokens: BigNumberish, overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    supplyRatePerBlock(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
+
+    'supplyRatePerBlock()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<BigNumber>;
   };
 
   populateTransaction: {
@@ -155,5 +174,9 @@ export class ICEther extends Contract {
       redeemTokens: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    supplyRatePerBlock(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
+
+    'supplyRatePerBlock()'(overrides?: Overrides & { from?: string | Promise<string> }): Promise<PopulatedTransaction>;
   };
 }

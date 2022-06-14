@@ -210,7 +210,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L302)
+[src/wrappers/PriceOracle.d.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L302)
 
 ___
 
@@ -269,7 +269,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:387](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L387)
+[src/wrappers/PriceOracle.d.ts:387](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L387)
 
 ___
 
@@ -292,7 +292,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:364](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L364)
+[src/wrappers/PriceOracle.d.ts:364](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L364)
 
 ___
 
@@ -337,7 +337,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:123](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L123)
+[src/wrappers/PriceOracle.d.ts:123](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L123)
 
 ___
 
@@ -351,7 +351,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L121)
+[src/wrappers/PriceOracle.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L121)
 
 ___
 
@@ -396,7 +396,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:473](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L473)
+[src/wrappers/PriceOracle.d.ts:473](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L473)
 
 ___
 
@@ -536,7 +536,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L82)
+[src/wrappers/PriceOracle.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L82)
 
 ___
 
@@ -557,7 +557,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L215)
+[src/wrappers/PriceOracle.d.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L215)
 
 ___
 
@@ -578,7 +578,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L217)
+[src/wrappers/PriceOracle.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L217)
 
 ___
 
@@ -602,7 +602,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L81)
+[src/wrappers/PriceOracle.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L81)
 
 ___
 
@@ -620,7 +620,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L83)
+[src/wrappers/PriceOracle.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L83)
 
 ___
 
@@ -642,7 +642,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:222](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L222)
+[src/wrappers/PriceOracle.d.ts:222](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L222)
 
 ___
 
@@ -664,7 +664,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:224](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L224)
+[src/wrappers/PriceOracle.d.ts:224](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L224)
 
 ___
 
@@ -735,7 +735,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:226](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L226)
+[src/wrappers/PriceOracle.d.ts:226](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L226)
 
 ___
 
@@ -757,7 +757,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:228](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L228)
+[src/wrappers/PriceOracle.d.ts:228](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L228)
 
 ___
 
@@ -779,7 +779,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L230)
+[src/wrappers/PriceOracle.d.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L230)
 
 ___
 
@@ -801,7 +801,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:232](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L232)
+[src/wrappers/PriceOracle.d.ts:232](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L232)
 
 ___
 
@@ -823,7 +823,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:234](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L234)
+[src/wrappers/PriceOracle.d.ts:234](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L234)
 
 ___
 
@@ -845,7 +845,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:236](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L236)
+[src/wrappers/PriceOracle.d.ts:236](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L236)
 
 ___
 
@@ -867,7 +867,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L238)
+[src/wrappers/PriceOracle.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L238)
 
 ___
 
@@ -889,7 +889,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:244](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L244)
+[src/wrappers/PriceOracle.d.ts:244](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L244)
 
 ___
 
@@ -944,7 +944,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L85)
+[src/wrappers/PriceOracle.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L85)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -964,7 +964,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L108)
+[src/wrappers/PriceOracle.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L108)
 
 ___
 
@@ -996,7 +996,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L88)
+[src/wrappers/PriceOracle.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L88)
 
 ▸ **off**(`eventName`, `listener`): [`PriceOracle`](wrappers_PriceOracle.PriceOracle.md)
 
@@ -1017,7 +1017,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L109)
+[src/wrappers/PriceOracle.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L109)
 
 ___
 
@@ -1049,7 +1049,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L92)
+[src/wrappers/PriceOracle.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L92)
 
 ▸ **on**(`eventName`, `listener`): [`PriceOracle`](wrappers_PriceOracle.PriceOracle.md)
 
@@ -1070,7 +1070,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L110)
+[src/wrappers/PriceOracle.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L110)
 
 ___
 
@@ -1102,7 +1102,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L96)
+[src/wrappers/PriceOracle.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L96)
 
 ▸ **once**(`eventName`, `listener`): [`PriceOracle`](wrappers_PriceOracle.PriceOracle.md)
 
@@ -1123,7 +1123,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L111)
+[src/wrappers/PriceOracle.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L111)
 
 ___
 
@@ -1143,7 +1143,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L250)
+[src/wrappers/PriceOracle.d.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L250)
 
 ___
 
@@ -1163,7 +1163,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:252](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L252)
+[src/wrappers/PriceOracle.d.ts:252](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L252)
 
 ___
 
@@ -1196,7 +1196,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L115)
+[src/wrappers/PriceOracle.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L115)
 
 ___
 
@@ -1227,7 +1227,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L104)
+[src/wrappers/PriceOracle.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L104)
 
 ▸ **removeAllListeners**(`eventName?`): [`PriceOracle`](wrappers_PriceOracle.PriceOracle.md)
 
@@ -1247,7 +1247,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L113)
+[src/wrappers/PriceOracle.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L113)
 
 ___
 
@@ -1279,7 +1279,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L100)
+[src/wrappers/PriceOracle.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L100)
 
 ▸ **removeListener**(`eventName`, `listener`): [`PriceOracle`](wrappers_PriceOracle.PriceOracle.md)
 
@@ -1300,7 +1300,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L112)
+[src/wrappers/PriceOracle.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L112)
 
 ___
 
@@ -1320,7 +1320,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:254](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L254)
+[src/wrappers/PriceOracle.d.ts:254](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L254)
 
 ___
 
@@ -1340,7 +1340,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:256](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L256)
+[src/wrappers/PriceOracle.d.ts:256](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L256)
 
 ___
 
@@ -1362,7 +1362,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:258](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L258)
+[src/wrappers/PriceOracle.d.ts:258](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L258)
 
 ___
 
@@ -1384,7 +1384,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L264)
+[src/wrappers/PriceOracle.d.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L264)
 
 ___
 
@@ -1407,7 +1407,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:270](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L270)
+[src/wrappers/PriceOracle.d.ts:270](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L270)
 
 ___
 
@@ -1430,7 +1430,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L277)
+[src/wrappers/PriceOracle.d.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L277)
 
 ___
 
@@ -1451,7 +1451,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:284](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L284)
+[src/wrappers/PriceOracle.d.ts:284](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L284)
 
 ___
 
@@ -1472,7 +1472,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:289](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L289)
+[src/wrappers/PriceOracle.d.ts:289](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L289)
 
 ___
 
@@ -1493,7 +1493,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L294)
+[src/wrappers/PriceOracle.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L294)
 
 ___
 
@@ -1514,7 +1514,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L296)
+[src/wrappers/PriceOracle.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L296)
 
 ___
 
@@ -1535,7 +1535,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:298](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L298)
+[src/wrappers/PriceOracle.d.ts:298](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L298)
 
 ___
 
@@ -1556,7 +1556,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PriceOracle.d.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/PriceOracle.d.ts#L300)
+[src/wrappers/PriceOracle.d.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PriceOracle.d.ts#L300)
 
 ___
 

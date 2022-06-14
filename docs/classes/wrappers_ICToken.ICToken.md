@@ -63,6 +63,8 @@
 - [redeem(uint256)](wrappers_ICToken.ICToken.md#redeem(uint256))
 - [removeAllListeners](wrappers_ICToken.ICToken.md#removealllisteners)
 - [removeListener](wrappers_ICToken.ICToken.md#removelistener)
+- [supplyRatePerBlock](wrappers_ICToken.ICToken.md#supplyrateperblock)
+- [supplyRatePerBlock()](wrappers_ICToken.ICToken.md#supplyrateperblock())
 - [underlying](wrappers_ICToken.ICToken.md#underlying)
 - [underlying()](wrappers_ICToken.ICToken.md#underlying())
 - [getContractAddress](wrappers_ICToken.ICToken.md#getcontractaddress)
@@ -177,6 +179,8 @@ ___
 | `mint(uint256)` | (`mintAmount`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
 | `redeem` | (`redeemTokens`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
 | `redeem(uint256)` | (`redeemTokens`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
+| `supplyRatePerBlock` | (`overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
+| `supplyRatePerBlock()` | (`overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
 | `underlying` | (`overrides?`: `CallOverrides`) => `Promise`<`string`\> |
 | `underlying()` | (`overrides?`: `CallOverrides`) => `Promise`<`string`\> |
 
@@ -186,7 +190,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L162)
+[src/wrappers/ICToken.d.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L173)
 
 ___
 
@@ -224,6 +228,8 @@ ___
 | `mint(uint256)` | (`mintAmount`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
 | `redeem` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
 | `redeem(uint256)` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
+| `supplyRatePerBlock` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
+| `supplyRatePerBlock()` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`BigNumber`\> |
 | `underlying` | (`overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
 | `underlying()` | (`overrides?`: `CallOverrides`) => `Promise`<`BigNumber`\> |
 
@@ -233,7 +239,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L194)
+[src/wrappers/ICToken.d.ts:209](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L209)
 
 ___
 
@@ -247,7 +253,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:192](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L192)
+[src/wrappers/ICToken.d.ts:207](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L207)
 
 ___
 
@@ -271,6 +277,8 @@ ___
 | `mint(uint256)` | (`mintAmount`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
 | `redeem` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
 | `redeem(uint256)` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
+| `supplyRatePerBlock` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
+| `supplyRatePerBlock()` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`ContractTransaction`\> |
 | `underlying` | (`overrides?`: `CallOverrides`) => `Promise`<[`string`]\> |
 | `underlying()` | (`overrides?`: `CallOverrides`) => `Promise`<[`string`]\> |
 
@@ -280,7 +288,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L95)
+[src/wrappers/ICToken.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L98)
 
 ___
 
@@ -294,7 +302,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L93)
+[src/wrappers/ICToken.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L96)
 
 ___
 
@@ -318,6 +326,8 @@ ___
 | `mint(uint256)` | (`mintAmount`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
 | `redeem` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
 | `redeem(uint256)` | (`redeemTokens`: `BigNumberish`, `overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
+| `supplyRatePerBlock` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
+| `supplyRatePerBlock()` | (`overrides?`: `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  }) => `Promise`<`PopulatedTransaction`\> |
 | `underlying` | (`overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
 | `underlying()` | (`overrides?`: `CallOverrides`) => `Promise`<`PopulatedTransaction`\> |
 
@@ -327,7 +337,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:224](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L224)
+[src/wrappers/ICToken.d.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L243)
 
 ___
 
@@ -467,7 +477,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L54)
+[src/wrappers/ICToken.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L57)
 
 ___
 
@@ -488,7 +498,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L131)
+[src/wrappers/ICToken.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L138)
 
 ___
 
@@ -509,7 +519,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L133)
+[src/wrappers/ICToken.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L140)
 
 ___
 
@@ -529,7 +539,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L138)
+[src/wrappers/ICToken.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L145)
 
 ___
 
@@ -549,7 +559,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L140)
+[src/wrappers/ICToken.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L147)
 
 ___
 
@@ -573,7 +583,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L53)
+[src/wrappers/ICToken.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L56)
 
 ___
 
@@ -591,7 +601,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L55)
+[src/wrappers/ICToken.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L58)
 
 ___
 
@@ -636,7 +646,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L142)
+[src/wrappers/ICToken.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L149)
 
 ___
 
@@ -656,7 +666,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L144)
+[src/wrappers/ICToken.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L151)
 
 ___
 
@@ -700,7 +710,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L146)
+[src/wrappers/ICToken.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L153)
 
 ___
 
@@ -720,7 +730,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L148)
+[src/wrappers/ICToken.d.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L155)
 
 ___
 
@@ -775,7 +785,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L57)
+[src/wrappers/ICToken.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L60)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -795,7 +805,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L80)
+[src/wrappers/ICToken.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L83)
 
 ___
 
@@ -816,7 +826,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L150)
+[src/wrappers/ICToken.d.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L157)
 
 ___
 
@@ -837,7 +847,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L152)
+[src/wrappers/ICToken.d.ts:159](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L159)
 
 ___
 
@@ -869,7 +879,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L60)
+[src/wrappers/ICToken.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L63)
 
 ▸ **off**(`eventName`, `listener`): [`ICToken`](wrappers_ICToken.ICToken.md)
 
@@ -890,7 +900,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L81)
+[src/wrappers/ICToken.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L84)
 
 ___
 
@@ -922,7 +932,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L64)
+[src/wrappers/ICToken.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L67)
 
 ▸ **on**(`eventName`, `listener`): [`ICToken`](wrappers_ICToken.ICToken.md)
 
@@ -943,7 +953,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L82)
+[src/wrappers/ICToken.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L85)
 
 ___
 
@@ -975,7 +985,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L68)
+[src/wrappers/ICToken.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L71)
 
 ▸ **once**(`eventName`, `listener`): [`ICToken`](wrappers_ICToken.ICToken.md)
 
@@ -996,7 +1006,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L83)
+[src/wrappers/ICToken.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L86)
 
 ___
 
@@ -1029,7 +1039,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L87)
+[src/wrappers/ICToken.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L90)
 
 ___
 
@@ -1050,7 +1060,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L154)
+[src/wrappers/ICToken.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L161)
 
 ___
 
@@ -1071,7 +1081,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L156)
+[src/wrappers/ICToken.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L163)
 
 ___
 
@@ -1102,7 +1112,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L76)
+[src/wrappers/ICToken.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L79)
 
 ▸ **removeAllListeners**(`eventName?`): [`ICToken`](wrappers_ICToken.ICToken.md)
 
@@ -1122,7 +1132,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L85)
+[src/wrappers/ICToken.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L88)
 
 ___
 
@@ -1154,7 +1164,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L72)
+[src/wrappers/ICToken.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L75)
 
 ▸ **removeListener**(`eventName`, `listener`): [`ICToken`](wrappers_ICToken.ICToken.md)
 
@@ -1175,7 +1185,47 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L84)
+[src/wrappers/ICToken.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L87)
+
+___
+
+### supplyRatePerBlock
+
+▸ **supplyRatePerBlock**(`overrides?`): `Promise`<`ContractTransaction`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+
+#### Returns
+
+`Promise`<`ContractTransaction`\>
+
+#### Defined in
+
+[src/wrappers/ICToken.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L165)
+
+___
+
+### supplyRatePerBlock()
+
+▸ **supplyRatePerBlock()**(`overrides?`): `Promise`<`ContractTransaction`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `overrides?` | `Overrides` & { `from?`: `string` \| `Promise`<`string`\>  } |
+
+#### Returns
+
+`Promise`<`ContractTransaction`\>
+
+#### Defined in
+
+[src/wrappers/ICToken.d.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L167)
 
 ___
 
@@ -1195,7 +1245,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L158)
+[src/wrappers/ICToken.d.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L169)
 
 ___
 
@@ -1215,7 +1265,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ICToken.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ICToken.d.ts#L160)
+[src/wrappers/ICToken.d.ts:171](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/ICToken.d.ts#L171)
 
 ___
 

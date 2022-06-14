@@ -326,7 +326,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1022](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1022)
+[src/wrappers/Pool.d.ts:1022](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1022)
 
 ___
 
@@ -443,7 +443,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1425](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1425)
+[src/wrappers/Pool.d.ts:1425](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1425)
 
 ___
 
@@ -478,7 +478,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1350](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1350)
+[src/wrappers/Pool.d.ts:1350](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1350)
 
 ___
 
@@ -581,7 +581,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:252](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L252)
+[src/wrappers/Pool.d.ts:252](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L252)
 
 ___
 
@@ -595,7 +595,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L250)
+[src/wrappers/Pool.d.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L250)
 
 ___
 
@@ -698,7 +698,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1738](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1738)
+[src/wrappers/Pool.d.ts:1738](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1738)
 
 ___
 
@@ -837,7 +837,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:642](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L642)
+[src/wrappers/Pool.d.ts:642](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L642)
 
 ___
 
@@ -860,7 +860,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:649](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L649)
+[src/wrappers/Pool.d.ts:649](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L649)
 
 ___
 
@@ -882,7 +882,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:656](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L656)
+[src/wrappers/Pool.d.ts:656](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L656)
 
 ___
 
@@ -904,7 +904,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:658](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L658)
+[src/wrappers/Pool.d.ts:658](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L658)
 
 ___
 
@@ -926,7 +926,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:660](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L660)
+[src/wrappers/Pool.d.ts:660](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L660)
 
 ___
 
@@ -948,7 +948,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:662](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L662)
+[src/wrappers/Pool.d.ts:662](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L662)
 
 ___
 
@@ -972,7 +972,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:211](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L211)
+[src/wrappers/Pool.d.ts:211](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L211)
 
 ___
 
@@ -993,7 +993,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:668](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L668)
+[src/wrappers/Pool.d.ts:668](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L668)
 
 ___
 
@@ -1014,7 +1014,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:670](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L670)
+[src/wrappers/Pool.d.ts:670](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L670)
 
 ___
 
@@ -1034,7 +1034,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:672](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L672)
+[src/wrappers/Pool.d.ts:672](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L672)
 
 ___
 
@@ -1054,7 +1054,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:674](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L674)
+[src/wrappers/Pool.d.ts:674](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L674)
 
 ___
 
@@ -1076,7 +1076,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:676](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L676)
+[src/wrappers/Pool.d.ts:676](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L676)
 
 ___
 
@@ -1098,7 +1098,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:682](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L682)
+[src/wrappers/Pool.d.ts:682](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L682)
 
 ___
 
@@ -1118,7 +1118,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:688](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L688)
+[src/wrappers/Pool.d.ts:688](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L688)
 
 ___
 
@@ -1138,7 +1138,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:690](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L690)
+[src/wrappers/Pool.d.ts:690](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L690)
 
 ___
 
@@ -1159,7 +1159,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:692](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L692)
+[src/wrappers/Pool.d.ts:692](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L692)
 
 ___
 
@@ -1180,7 +1180,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:694](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L694)
+[src/wrappers/Pool.d.ts:694](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L694)
 
 ___
 
@@ -1200,7 +1200,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:696](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L696)
+[src/wrappers/Pool.d.ts:696](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L696)
 
 ___
 
@@ -1220,7 +1220,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:698](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L698)
+[src/wrappers/Pool.d.ts:698](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L698)
 
 ___
 
@@ -1240,7 +1240,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:700](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L700)
+[src/wrappers/Pool.d.ts:700](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L700)
 
 ___
 
@@ -1260,7 +1260,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:702](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L702)
+[src/wrappers/Pool.d.ts:702](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L702)
 
 ___
 
@@ -1284,7 +1284,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:210](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L210)
+[src/wrappers/Pool.d.ts:210](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L210)
 
 ___
 
@@ -1306,7 +1306,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:704](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L704)
+[src/wrappers/Pool.d.ts:704](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L704)
 
 ___
 
@@ -1328,7 +1328,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:706](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L706)
+[src/wrappers/Pool.d.ts:706](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L706)
 
 ___
 
@@ -1348,7 +1348,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:712](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L712)
+[src/wrappers/Pool.d.ts:712](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L712)
 
 ___
 
@@ -1368,7 +1368,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:714](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L714)
+[src/wrappers/Pool.d.ts:714](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L714)
 
 ___
 
@@ -1390,7 +1390,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:716](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L716)
+[src/wrappers/Pool.d.ts:716](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L716)
 
 ___
 
@@ -1412,7 +1412,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:722](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L722)
+[src/wrappers/Pool.d.ts:722](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L722)
 
 ___
 
@@ -1430,7 +1430,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L212)
+[src/wrappers/Pool.d.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L212)
 
 ___
 
@@ -1452,7 +1452,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:728](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L728)
+[src/wrappers/Pool.d.ts:728](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L728)
 
 ___
 
@@ -1474,7 +1474,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:734](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L734)
+[src/wrappers/Pool.d.ts:734](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L734)
 
 ___
 
@@ -1544,7 +1544,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:740](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L740)
+[src/wrappers/Pool.d.ts:740](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L740)
 
 ___
 
@@ -1565,7 +1565,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:742](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L742)
+[src/wrappers/Pool.d.ts:742](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L742)
 
 ___
 
@@ -1585,7 +1585,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:749](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L749)
+[src/wrappers/Pool.d.ts:749](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L749)
 
 ___
 
@@ -1606,7 +1606,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:744](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L744)
+[src/wrappers/Pool.d.ts:744](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L744)
 
 ___
 
@@ -1629,7 +1629,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:751](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L751)
+[src/wrappers/Pool.d.ts:751](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L751)
 
 ___
 
@@ -1652,7 +1652,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:753](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L753)
+[src/wrappers/Pool.d.ts:753](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L753)
 
 ___
 
@@ -1672,7 +1672,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:760](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L760)
+[src/wrappers/Pool.d.ts:760](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L760)
 
 ___
 
@@ -1692,7 +1692,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:762](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L762)
+[src/wrappers/Pool.d.ts:762](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L762)
 
 ___
 
@@ -1713,7 +1713,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:764](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L764)
+[src/wrappers/Pool.d.ts:764](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L764)
 
 ___
 
@@ -1734,7 +1734,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:766](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L766)
+[src/wrappers/Pool.d.ts:766](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L766)
 
 ___
 
@@ -1756,7 +1756,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:768](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L768)
+[src/wrappers/Pool.d.ts:768](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L768)
 
 ___
 
@@ -1778,7 +1778,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:774](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L774)
+[src/wrappers/Pool.d.ts:774](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L774)
 
 ___
 
@@ -1812,7 +1812,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:780](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L780)
+[src/wrappers/Pool.d.ts:780](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L780)
 
 ___
 
@@ -1846,7 +1846,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:798](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L798)
+[src/wrappers/Pool.d.ts:798](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L798)
 
 ___
 
@@ -1867,7 +1867,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:816](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L816)
+[src/wrappers/Pool.d.ts:816](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L816)
 
 ___
 
@@ -1888,7 +1888,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:818](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L818)
+[src/wrappers/Pool.d.ts:818](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L818)
 
 ___
 
@@ -1909,7 +1909,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:820](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L820)
+[src/wrappers/Pool.d.ts:820](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L820)
 
 ___
 
@@ -1930,7 +1930,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:822](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L822)
+[src/wrappers/Pool.d.ts:822](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L822)
 
 ___
 
@@ -1950,7 +1950,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:824](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L824)
+[src/wrappers/Pool.d.ts:824](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L824)
 
 ___
 
@@ -1970,7 +1970,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:826](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L826)
+[src/wrappers/Pool.d.ts:826](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L826)
 
 ___
 
@@ -1994,7 +1994,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:828](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L828)
+[src/wrappers/Pool.d.ts:828](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L828)
 
 ___
 
@@ -2018,7 +2018,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:836](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L836)
+[src/wrappers/Pool.d.ts:836](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L836)
 
 ___
 
@@ -2039,7 +2039,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:844](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L844)
+[src/wrappers/Pool.d.ts:844](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L844)
 
 ___
 
@@ -2060,7 +2060,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:855](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L855)
+[src/wrappers/Pool.d.ts:855](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L855)
 
 ___
 
@@ -2082,7 +2082,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:866](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L866)
+[src/wrappers/Pool.d.ts:866](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L866)
 
 ___
 
@@ -2104,7 +2104,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:872](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L872)
+[src/wrappers/Pool.d.ts:872](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L872)
 
 ___
 
@@ -2128,7 +2128,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:878](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L878)
+[src/wrappers/Pool.d.ts:878](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L878)
 
 ___
 
@@ -2152,7 +2152,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:886](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L886)
+[src/wrappers/Pool.d.ts:886](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L886)
 
 ___
 
@@ -2175,7 +2175,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:894](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L894)
+[src/wrappers/Pool.d.ts:894](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L894)
 
 ___
 
@@ -2198,7 +2198,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:901](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L901)
+[src/wrappers/Pool.d.ts:901](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L901)
 
 ___
 
@@ -2253,7 +2253,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:214](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L214)
+[src/wrappers/Pool.d.ts:214](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L214)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -2273,7 +2273,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:237](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L237)
+[src/wrappers/Pool.d.ts:237](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L237)
 
 ___
 
@@ -2293,7 +2293,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:908](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L908)
+[src/wrappers/Pool.d.ts:908](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L908)
 
 ___
 
@@ -2313,7 +2313,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:910](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L910)
+[src/wrappers/Pool.d.ts:910](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L910)
 
 ___
 
@@ -2345,7 +2345,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L217)
+[src/wrappers/Pool.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L217)
 
 ▸ **off**(`eventName`, `listener`): [`Pool`](wrappers_Pool.Pool.md)
 
@@ -2366,7 +2366,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L238)
+[src/wrappers/Pool.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L238)
 
 ___
 
@@ -2398,7 +2398,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L221)
+[src/wrappers/Pool.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L221)
 
 ▸ **on**(`eventName`, `listener`): [`Pool`](wrappers_Pool.Pool.md)
 
@@ -2419,7 +2419,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:239](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L239)
+[src/wrappers/Pool.d.ts:239](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L239)
 
 ___
 
@@ -2451,7 +2451,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L225)
+[src/wrappers/Pool.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L225)
 
 ▸ **once**(`eventName`, `listener`): [`Pool`](wrappers_Pool.Pool.md)
 
@@ -2472,7 +2472,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:240](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L240)
+[src/wrappers/Pool.d.ts:240](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L240)
 
 ___
 
@@ -2492,7 +2492,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:912](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L912)
+[src/wrappers/Pool.d.ts:912](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L912)
 
 ___
 
@@ -2512,7 +2512,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:914](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L914)
+[src/wrappers/Pool.d.ts:914](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L914)
 
 ___
 
@@ -2532,7 +2532,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:916](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L916)
+[src/wrappers/Pool.d.ts:916](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L916)
 
 ___
 
@@ -2552,7 +2552,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:933](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L933)
+[src/wrappers/Pool.d.ts:933](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L933)
 
 ___
 
@@ -2572,7 +2572,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:950](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L950)
+[src/wrappers/Pool.d.ts:950](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L950)
 
 ___
 
@@ -2592,7 +2592,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:959](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L959)
+[src/wrappers/Pool.d.ts:959](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L959)
 
 ___
 
@@ -2625,7 +2625,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:244](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L244)
+[src/wrappers/Pool.d.ts:244](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L244)
 
 ___
 
@@ -2656,7 +2656,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L233)
+[src/wrappers/Pool.d.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L233)
 
 ▸ **removeAllListeners**(`eventName?`): [`Pool`](wrappers_Pool.Pool.md)
 
@@ -2676,7 +2676,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L242)
+[src/wrappers/Pool.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L242)
 
 ___
 
@@ -2708,7 +2708,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L229)
+[src/wrappers/Pool.d.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L229)
 
 ▸ **removeListener**(`eventName`, `listener`): [`Pool`](wrappers_Pool.Pool.md)
 
@@ -2729,7 +2729,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L241)
+[src/wrappers/Pool.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L241)
 
 ___
 
@@ -2749,7 +2749,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:968](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L968)
+[src/wrappers/Pool.d.ts:968](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L968)
 
 ___
 
@@ -2769,7 +2769,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:970](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L970)
+[src/wrappers/Pool.d.ts:970](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L970)
 
 ___
 
@@ -2789,7 +2789,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:972](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L972)
+[src/wrappers/Pool.d.ts:972](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L972)
 
 ___
 
@@ -2809,7 +2809,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:974](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L974)
+[src/wrappers/Pool.d.ts:974](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L974)
 
 ___
 
@@ -2829,7 +2829,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:976](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L976)
+[src/wrappers/Pool.d.ts:976](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L976)
 
 ___
 
@@ -2849,7 +2849,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:978](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L978)
+[src/wrappers/Pool.d.ts:978](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L978)
 
 ___
 
@@ -2869,7 +2869,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:980](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L980)
+[src/wrappers/Pool.d.ts:980](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L980)
 
 ___
 
@@ -2889,7 +2889,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:982](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L982)
+[src/wrappers/Pool.d.ts:982](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L982)
 
 ___
 
@@ -2911,7 +2911,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:984](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L984)
+[src/wrappers/Pool.d.ts:984](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L984)
 
 ___
 
@@ -2933,7 +2933,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:990](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L990)
+[src/wrappers/Pool.d.ts:990](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L990)
 
 ___
 
@@ -2956,7 +2956,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:996](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L996)
+[src/wrappers/Pool.d.ts:996](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L996)
 
 ___
 
@@ -2979,7 +2979,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1003](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1003)
+[src/wrappers/Pool.d.ts:1003](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1003)
 
 ___
 
@@ -2999,7 +2999,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1010](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1010)
+[src/wrappers/Pool.d.ts:1010](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1010)
 
 ___
 
@@ -3019,7 +3019,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1012](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1012)
+[src/wrappers/Pool.d.ts:1012](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1012)
 
 ___
 
@@ -3039,7 +3039,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1014](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1014)
+[src/wrappers/Pool.d.ts:1014](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1014)
 
 ___
 
@@ -3059,7 +3059,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1016](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1016)
+[src/wrappers/Pool.d.ts:1016](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1016)
 
 ___
 
@@ -3079,7 +3079,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1018](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1018)
+[src/wrappers/Pool.d.ts:1018](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1018)
 
 ___
 
@@ -3099,7 +3099,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:1020](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/Pool.d.ts#L1020)
+[src/wrappers/Pool.d.ts:1020](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L1020)
 
 ___
 

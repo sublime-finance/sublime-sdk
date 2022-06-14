@@ -25,6 +25,7 @@ interface InternalBalancePerTokenStrategy {
   amount: Balance;
 }
 
+const SCALING_FACTOR = new BigNumber(10).pow(18);
 export class SavingsAccountCalls extends PoolCalls {
   constructor(url: string, signer: Signer, tokenManager: TokenManager, config: SublimeConfig) {
     super(url, signer, tokenManager, config);
@@ -98,6 +99,29 @@ export class SavingsAccountCalls extends PoolCalls {
     return savingsAccountUserDetails;
   }
 
+  private async getAprData(internalBalances: InternalBalancePerTokenStrategy[]): Promise<Record<string, Record<string, BigNumber>>> {
+    const allStrategyAndTokenPairs = internalBalances.map((a) => {
+      return { strategy: a.strategy.address, token: a.token.address, id: `${a.strategy.address}-${a.token.address}` };
+    });
+
+    const allIds = allStrategyAndTokenPairs.map((a) => a.id).filter((value, index, self) => self.indexOf(value) === index);
+    const uniquePairs = allIds.map((a) => {
+      return { strategy: a.split('-')[0], token: a.split('-')[1] };
+    });
+
+    const aprPerStrategyToken: Record<string, Record<string, BigNumber>> = {};
+
+    for (let index = 0; index < uniquePairs.length; index++) {
+      const element = uniquePairs[index];
+      if (!aprPerStrategyToken[element.strategy]) {
+        aprPerStrategyToken[element.strategy] = {};
+      }
+      aprPerStrategyToken[element.strategy][element.token] = await this.getAPR(this.yieldApi.getStrategy(element.strategy), element.token);
+    }
+
+    return aprPerStrategyToken;
+  }
+
   private async stackInternalBalanceByToken(internalBalances: InternalBalancePerTokenStrategy[]): Promise<SavingsAccountBalanceDisplay[]> {
     const stackedBalanceByToken: SavingsAccountBalanceDisplay[] = [];
     const uniqueTokens = internalBalances.map((a) => a.token.address).filter((value, index, self) => self.indexOf(value) === index);
@@ -110,13 +134,7 @@ export class SavingsAccountCalls extends PoolCalls {
       prices[element] = await this.tokenManager.getPricePerAsset(element);
     }
 
-    const uniqueStrategies = internalBalances.map((a) => a.strategy.address).filter((value, index, self) => self.indexOf(value) === index);
-    const aprs: Record<string, BigNumber> = {};
-
-    for (let index = 0; index < uniqueStrategies.length; index++) {
-      const element = uniqueStrategies[index];
-      aprs[element] = await this.getAPR(this.yieldApi.getStrategy(element));
-    }
+    const aprs: Record<string, Record<string, BigNumber>> = await this.getAprData(internalBalances);
 
     for (let index = 0; index < uniqueTokens.length; index++) {
       const element = uniqueTokens[index];
@@ -134,7 +152,8 @@ export class SavingsAccountCalls extends PoolCalls {
         );
 
         const totalAprWeight = requiredElements.reduce(
-          (total, current) => total.plus(new BigNumber(current.amount.value.toString()).multipliedBy(aprs[current.strategy.address])),
+          (total, current) =>
+            total.plus(new BigNumber(current.amount.value.toString()).multipliedBy(aprs[current.strategy.address][current.token.address])),
           new BigNumber(0)
         );
 
@@ -144,7 +163,7 @@ export class SavingsAccountCalls extends PoolCalls {
           amountAllocatedToCreditLines: { value: '0', decimals: this.tokenManager.getTokenDecimals(requiredElements[0].token.address) },
           balanceUSD: { value: totalBalanceUSD.toString(), decimals: 0 },
           strategyBalance: [...this.transformToSavingsAccountStrategyBalanceDisplay(requiredElements, aprs, prices)],
-          APR: totalAprWeight.dividedBy(totalBalance).toString(),
+          APR: totalAprWeight.dividedBy(totalBalance).dividedBy(SCALING_FACTOR).toString(),
         });
       }
     }
@@ -154,7 +173,7 @@ export class SavingsAccountCalls extends PoolCalls {
 
   private transformToSavingsAccountStrategyBalanceDisplay(
     internalBalances: InternalBalancePerTokenStrategy[],
-    aprs: Record<string, BigNumber>,
+    aprs: Record<string, Record<string, BigNumber>>,
     prices: Record<string, BigNumber>
   ): SavingsAccountStrategyBalanceDisplay[] {
     return internalBalances.map((a) => {
@@ -168,7 +187,7 @@ export class SavingsAccountCalls extends PoolCalls {
             .toString(),
           decimals: 0,
         },
-        APR: aprs[a.strategy.address].toString(),
+        APR: aprs[a.strategy.address][a.token.address].div(SCALING_FACTOR).toString(),
       };
     });
   }
@@ -219,7 +238,7 @@ export class SavingsAccountCalls extends PoolCalls {
    * @param strategy
    * @@description calulcates the APR for a given strategy
    */
-  private async getAPR(strategy: StrategyType): Promise<BigNumber> {
-    return new BigNumber(10).pow(17).multipliedBy(3).div(2);
+  private async getAPR(strategy: StrategyType, asset: string): Promise<BigNumber> {
+    return this.yieldApi.getApr(strategy, asset);
   }
 }
