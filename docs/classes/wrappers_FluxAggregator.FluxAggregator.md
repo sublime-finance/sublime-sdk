@@ -186,7 +186,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L185)
+[src/wrappers/FluxAggregator.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L185)
 
 ___
 
@@ -233,7 +233,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L233)
+[src/wrappers/FluxAggregator.d.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L233)
 
 ___
 
@@ -247,7 +247,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:231](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L231)
+[src/wrappers/FluxAggregator.d.ts:231](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L231)
 
 ___
 
@@ -280,7 +280,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L95)
+[src/wrappers/FluxAggregator.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L95)
 
 ___
 
@@ -294,7 +294,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L93)
+[src/wrappers/FluxAggregator.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L93)
 
 ___
 
@@ -327,7 +327,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L263)
+[src/wrappers/FluxAggregator.d.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L263)
 
 ___
 
@@ -467,7 +467,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L54)
+[src/wrappers/FluxAggregator.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L54)
 
 ___
 
@@ -491,7 +491,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L53)
+[src/wrappers/FluxAggregator.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L53)
 
 ___
 
@@ -511,7 +511,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L141)
+[src/wrappers/FluxAggregator.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L141)
 
 ___
 
@@ -531,7 +531,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L143)
+[src/wrappers/FluxAggregator.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L143)
 
 ___
 
@@ -549,7 +549,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L55)
+[src/wrappers/FluxAggregator.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L55)
 
 ___
 
@@ -569,7 +569,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L145)
+[src/wrappers/FluxAggregator.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L145)
 
 ___
 
@@ -589,7 +589,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L147)
+[src/wrappers/FluxAggregator.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L147)
 
 ___
 
@@ -659,7 +659,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L149)
+[src/wrappers/FluxAggregator.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L149)
 
 ___
 
@@ -680,7 +680,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L151)
+[src/wrappers/FluxAggregator.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L151)
 
 ___
 
@@ -700,7 +700,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L153)
+[src/wrappers/FluxAggregator.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L153)
 
 ___
 
@@ -720,7 +720,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L163)
+[src/wrappers/FluxAggregator.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L163)
 
 ___
 
@@ -775,7 +775,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L57)
+[src/wrappers/FluxAggregator.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L57)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -795,7 +795,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L80)
+[src/wrappers/FluxAggregator.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L80)
 
 ___
 
@@ -827,7 +827,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L60)
+[src/wrappers/FluxAggregator.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L60)
 
 ▸ **off**(`eventName`, `listener`): [`FluxAggregator`](wrappers_FluxAggregator.FluxAggregator.md)
 
@@ -848,7 +848,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L81)
+[src/wrappers/FluxAggregator.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L81)
 
 ___
 
@@ -880,7 +880,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L64)
+[src/wrappers/FluxAggregator.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L64)
 
 ▸ **on**(`eventName`, `listener`): [`FluxAggregator`](wrappers_FluxAggregator.FluxAggregator.md)
 
@@ -901,7 +901,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L82)
+[src/wrappers/FluxAggregator.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L82)
 
 ___
 
@@ -933,7 +933,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L68)
+[src/wrappers/FluxAggregator.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L68)
 
 ▸ **once**(`eventName`, `listener`): [`FluxAggregator`](wrappers_FluxAggregator.FluxAggregator.md)
 
@@ -954,7 +954,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L83)
+[src/wrappers/FluxAggregator.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L83)
 
 ___
 
@@ -987,7 +987,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L87)
+[src/wrappers/FluxAggregator.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L87)
 
 ___
 
@@ -1018,7 +1018,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L76)
+[src/wrappers/FluxAggregator.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L76)
 
 ▸ **removeAllListeners**(`eventName?`): [`FluxAggregator`](wrappers_FluxAggregator.FluxAggregator.md)
 
@@ -1038,7 +1038,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L85)
+[src/wrappers/FluxAggregator.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L85)
 
 ___
 
@@ -1070,7 +1070,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L72)
+[src/wrappers/FluxAggregator.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L72)
 
 ▸ **removeListener**(`eventName`, `listener`): [`FluxAggregator`](wrappers_FluxAggregator.FluxAggregator.md)
 
@@ -1091,7 +1091,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L84)
+[src/wrappers/FluxAggregator.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L84)
 
 ___
 
@@ -1112,7 +1112,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L173)
+[src/wrappers/FluxAggregator.d.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L173)
 
 ___
 
@@ -1133,7 +1133,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L175)
+[src/wrappers/FluxAggregator.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L175)
 
 ___
 
@@ -1153,7 +1153,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L177)
+[src/wrappers/FluxAggregator.d.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L177)
 
 ___
 
@@ -1173,7 +1173,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L179)
+[src/wrappers/FluxAggregator.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L179)
 
 ___
 
@@ -1193,7 +1193,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:181](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L181)
+[src/wrappers/FluxAggregator.d.ts:181](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L181)
 
 ___
 
@@ -1213,7 +1213,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/FluxAggregator.d.ts:183](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/FluxAggregator.d.ts#L183)
+[src/wrappers/FluxAggregator.d.ts:183](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/FluxAggregator.d.ts#L183)
 
 ___
 

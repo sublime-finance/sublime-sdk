@@ -153,7 +153,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L62)
+[src/wrappers/Proxy.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L62)
 
 ___
 
@@ -181,7 +181,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L66)
+[src/wrappers/Proxy.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L66)
 
 ___
 
@@ -195,7 +195,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L64)
+[src/wrappers/Proxy.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L64)
 
 ___
 
@@ -209,7 +209,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L60)
+[src/wrappers/Proxy.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L60)
 
 ___
 
@@ -223,7 +223,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L58)
+[src/wrappers/Proxy.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L58)
 
 ___
 
@@ -237,7 +237,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L68)
+[src/wrappers/Proxy.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L68)
 
 ___
 
@@ -377,7 +377,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L19)
+[src/wrappers/Proxy.d.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L19)
 
 ___
 
@@ -401,7 +401,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L18)
+[src/wrappers/Proxy.d.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L18)
 
 ___
 
@@ -419,7 +419,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L20)
+[src/wrappers/Proxy.d.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L20)
 
 ___
 
@@ -523,7 +523,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L22)
+[src/wrappers/Proxy.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L22)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -543,7 +543,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L45)
+[src/wrappers/Proxy.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L45)
 
 ___
 
@@ -575,7 +575,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L25)
+[src/wrappers/Proxy.d.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L25)
 
 ▸ **off**(`eventName`, `listener`): [`Proxy`](wrappers_Proxy.Proxy.md)
 
@@ -596,7 +596,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L46)
+[src/wrappers/Proxy.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L46)
 
 ___
 
@@ -628,7 +628,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L29)
+[src/wrappers/Proxy.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L29)
 
 ▸ **on**(`eventName`, `listener`): [`Proxy`](wrappers_Proxy.Proxy.md)
 
@@ -649,7 +649,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L47)
+[src/wrappers/Proxy.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L47)
 
 ___
 
@@ -681,7 +681,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L33)
+[src/wrappers/Proxy.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L33)
 
 ▸ **once**(`eventName`, `listener`): [`Proxy`](wrappers_Proxy.Proxy.md)
 
@@ -702,7 +702,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L48)
+[src/wrappers/Proxy.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L48)
 
 ___
 
@@ -735,7 +735,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L52)
+[src/wrappers/Proxy.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L52)
 
 ___
 
@@ -766,7 +766,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L41)
+[src/wrappers/Proxy.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L41)
 
 ▸ **removeAllListeners**(`eventName?`): [`Proxy`](wrappers_Proxy.Proxy.md)
 
@@ -786,7 +786,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L50)
+[src/wrappers/Proxy.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L50)
 
 ___
 
@@ -818,7 +818,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L37)
+[src/wrappers/Proxy.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L37)
 
 ▸ **removeListener**(`eventName`, `listener`): [`Proxy`](wrappers_Proxy.Proxy.md)
 
@@ -839,7 +839,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L49)
+[src/wrappers/Proxy.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L49)
 
 ___
 

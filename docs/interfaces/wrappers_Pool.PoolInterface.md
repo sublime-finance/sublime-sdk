@@ -140,7 +140,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L172)
+[src/wrappers/Pool.d.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L172)
 
 ___
 
@@ -215,7 +215,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L23)
+[src/wrappers/Pool.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L23)
 
 ___
 
@@ -384,7 +384,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L129)
+[src/wrappers/Pool.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L129)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -405,7 +405,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L130)
+[src/wrappers/Pool.d.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L130)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -426,7 +426,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L131)
+[src/wrappers/Pool.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L131)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -447,7 +447,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L132)
+[src/wrappers/Pool.d.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L132)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -468,7 +468,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L133)
+[src/wrappers/Pool.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L133)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -489,7 +489,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L134)
+[src/wrappers/Pool.d.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L134)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -510,7 +510,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L135)
+[src/wrappers/Pool.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L135)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -531,7 +531,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L136)
+[src/wrappers/Pool.d.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L136)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -552,7 +552,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L137)
+[src/wrappers/Pool.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L137)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -573,7 +573,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L138)
+[src/wrappers/Pool.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L138)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -594,7 +594,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L139)
+[src/wrappers/Pool.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L139)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -615,7 +615,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L140)
+[src/wrappers/Pool.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L140)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -636,7 +636,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L141)
+[src/wrappers/Pool.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L141)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -657,7 +657,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L142)
+[src/wrappers/Pool.d.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L142)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -678,7 +678,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L143)
+[src/wrappers/Pool.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L143)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -699,7 +699,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L144)
+[src/wrappers/Pool.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L144)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -720,7 +720,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L145)
+[src/wrappers/Pool.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L145)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -741,7 +741,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L146)
+[src/wrappers/Pool.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L146)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -762,7 +762,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L147)
+[src/wrappers/Pool.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L147)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -783,7 +783,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L148)
+[src/wrappers/Pool.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L148)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -804,7 +804,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L149)
+[src/wrappers/Pool.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L149)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -825,7 +825,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L150)
+[src/wrappers/Pool.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L150)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -846,7 +846,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L151)
+[src/wrappers/Pool.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L151)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -867,7 +867,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L152)
+[src/wrappers/Pool.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L152)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -888,7 +888,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L153)
+[src/wrappers/Pool.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L153)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -909,7 +909,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L154)
+[src/wrappers/Pool.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L154)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -930,7 +930,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L155)
+[src/wrappers/Pool.d.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L155)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -951,7 +951,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L156)
+[src/wrappers/Pool.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L156)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -972,7 +972,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L157)
+[src/wrappers/Pool.d.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L157)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -993,7 +993,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L158)
+[src/wrappers/Pool.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L158)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1014,7 +1014,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:159](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L159)
+[src/wrappers/Pool.d.ts:159](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L159)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1035,7 +1035,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L160)
+[src/wrappers/Pool.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L160)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1056,7 +1056,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L161)
+[src/wrappers/Pool.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L161)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1077,7 +1077,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L162)
+[src/wrappers/Pool.d.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L162)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1098,7 +1098,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L163)
+[src/wrappers/Pool.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L163)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1119,7 +1119,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L164)
+[src/wrappers/Pool.d.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L164)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1140,7 +1140,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L165)
+[src/wrappers/Pool.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L165)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1161,7 +1161,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L166)
+[src/wrappers/Pool.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L166)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1182,7 +1182,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L167)
+[src/wrappers/Pool.d.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L167)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1203,7 +1203,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L168)
+[src/wrappers/Pool.d.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L168)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1224,7 +1224,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L169)
+[src/wrappers/Pool.d.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L169)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1245,7 +1245,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L170)
+[src/wrappers/Pool.d.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L170)
 
 ___
 
@@ -1374,7 +1374,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L68)
+[src/wrappers/Pool.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L68)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1395,7 +1395,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L69)
+[src/wrappers/Pool.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L69)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1416,7 +1416,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L70)
+[src/wrappers/Pool.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L70)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1437,7 +1437,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L71)
+[src/wrappers/Pool.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L71)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1458,7 +1458,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L72)
+[src/wrappers/Pool.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L72)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1479,7 +1479,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L73)
+[src/wrappers/Pool.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L73)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1500,7 +1500,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L74)
+[src/wrappers/Pool.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L74)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1521,7 +1521,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L75)
+[src/wrappers/Pool.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L75)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1542,7 +1542,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L76)
+[src/wrappers/Pool.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L76)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1563,7 +1563,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L77)
+[src/wrappers/Pool.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L77)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1584,7 +1584,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L78)
+[src/wrappers/Pool.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L78)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1605,7 +1605,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L79)
+[src/wrappers/Pool.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L79)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1626,7 +1626,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L80)
+[src/wrappers/Pool.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L80)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1647,7 +1647,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L81)
+[src/wrappers/Pool.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L81)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1668,7 +1668,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L82)
+[src/wrappers/Pool.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L82)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1689,7 +1689,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L83)
+[src/wrappers/Pool.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L83)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1710,7 +1710,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L84)
+[src/wrappers/Pool.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L84)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1731,7 +1731,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L85)
+[src/wrappers/Pool.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L85)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1752,7 +1752,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L86)
+[src/wrappers/Pool.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L86)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1773,7 +1773,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L87)
+[src/wrappers/Pool.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L87)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1794,7 +1794,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L88)
+[src/wrappers/Pool.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L88)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1815,7 +1815,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L107)
+[src/wrappers/Pool.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L107)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1836,7 +1836,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L108)
+[src/wrappers/Pool.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L108)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1857,7 +1857,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L109)
+[src/wrappers/Pool.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L109)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1878,7 +1878,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L110)
+[src/wrappers/Pool.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L110)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1899,7 +1899,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L111)
+[src/wrappers/Pool.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L111)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1920,7 +1920,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L112)
+[src/wrappers/Pool.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L112)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1941,7 +1941,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L113)
+[src/wrappers/Pool.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L113)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1962,7 +1962,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L114)
+[src/wrappers/Pool.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L114)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1983,7 +1983,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L115)
+[src/wrappers/Pool.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L115)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2004,7 +2004,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L116)
+[src/wrappers/Pool.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L116)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2025,7 +2025,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L117)
+[src/wrappers/Pool.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L117)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2046,7 +2046,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L118)
+[src/wrappers/Pool.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L118)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2067,7 +2067,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L119)
+[src/wrappers/Pool.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L119)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2088,7 +2088,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L120)
+[src/wrappers/Pool.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L120)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2109,7 +2109,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L121)
+[src/wrappers/Pool.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L121)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2130,7 +2130,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L122)
+[src/wrappers/Pool.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L122)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2151,7 +2151,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:123](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L123)
+[src/wrappers/Pool.d.ts:123](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L123)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2172,7 +2172,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:124](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L124)
+[src/wrappers/Pool.d.ts:124](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L124)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2193,7 +2193,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L125)
+[src/wrappers/Pool.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L125)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2214,7 +2214,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L126)
+[src/wrappers/Pool.d.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L126)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2235,7 +2235,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L127)
+[src/wrappers/Pool.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L127)
 
 ___
 
@@ -2332,7 +2332,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L191)
+[src/wrappers/Pool.d.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L191)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2352,7 +2352,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:192](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L192)
+[src/wrappers/Pool.d.ts:192](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L192)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2372,7 +2372,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L193)
+[src/wrappers/Pool.d.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L193)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2392,7 +2392,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L194)
+[src/wrappers/Pool.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L194)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2412,7 +2412,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L195)
+[src/wrappers/Pool.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L195)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2432,7 +2432,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L196)
+[src/wrappers/Pool.d.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L196)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2452,7 +2452,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L197)
+[src/wrappers/Pool.d.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L197)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2472,7 +2472,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:198](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L198)
+[src/wrappers/Pool.d.ts:198](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L198)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2492,7 +2492,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L199)
+[src/wrappers/Pool.d.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L199)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2512,7 +2512,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:200](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L200)
+[src/wrappers/Pool.d.ts:200](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L200)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2532,7 +2532,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L201)
+[src/wrappers/Pool.d.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L201)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2552,7 +2552,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L202)
+[src/wrappers/Pool.d.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L202)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2572,7 +2572,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:203](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L203)
+[src/wrappers/Pool.d.ts:203](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L203)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2592,7 +2592,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L204)
+[src/wrappers/Pool.d.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L204)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2612,7 +2612,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L205)
+[src/wrappers/Pool.d.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L205)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2632,7 +2632,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Pool.d.ts:206](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Pool.d.ts#L206)
+[src/wrappers/Pool.d.ts:206](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Pool.d.ts#L206)
 
 ___
 

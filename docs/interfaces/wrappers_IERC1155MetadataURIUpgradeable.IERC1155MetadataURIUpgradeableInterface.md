@@ -128,7 +128,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L55)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L55)
 
 ___
 
@@ -169,7 +169,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L23)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L23)
 
 ___
 
@@ -338,7 +338,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L46)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L46)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -359,7 +359,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L47)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L47)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -380,7 +380,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L48)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L48)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -401,7 +401,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L49)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L49)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -422,7 +422,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L50)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L50)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -443,7 +443,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L51)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L51)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -464,7 +464,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L52)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L52)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -485,7 +485,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L53)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L53)
 
 ___
 
@@ -614,7 +614,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L34)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L34)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -635,7 +635,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L35)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L35)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -656,7 +656,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L36)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L36)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -677,7 +677,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L37)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L37)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -698,7 +698,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L41)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L41)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -719,7 +719,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L42)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L42)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -740,7 +740,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L43)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L43)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -761,7 +761,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L44)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L44)
 
 ___
 
@@ -858,7 +858,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L62)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L62)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -878,7 +878,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L63)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L63)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -898,7 +898,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L64)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L64)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -918,7 +918,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L65)
+[src/wrappers/IERC1155MetadataURIUpgradeable.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155MetadataURIUpgradeable.d.ts#L65)
 
 ___
 

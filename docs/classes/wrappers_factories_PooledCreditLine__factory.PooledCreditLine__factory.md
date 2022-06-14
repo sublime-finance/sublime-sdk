@@ -52,7 +52,7 @@ ContractFactory.constructor
 
 #### Defined in
 
-[src/wrappers/factories/PooledCreditLine__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/factories/PooledCreditLine__factory.ts#L11)
+[src/wrappers/factories/PooledCreditLine__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/factories/PooledCreditLine__factory.ts#L11)
 
 ## Properties
 
@@ -118,7 +118,7 @@ ContractFactory.attach
 
 #### Defined in
 
-[src/wrappers/factories/PooledCreditLine__factory.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/factories/PooledCreditLine__factory.ts#L57)
+[src/wrappers/factories/PooledCreditLine__factory.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/factories/PooledCreditLine__factory.ts#L57)
 
 ___
 
@@ -142,7 +142,7 @@ ContractFactory.connect
 
 #### Defined in
 
-[src/wrappers/factories/PooledCreditLine__factory.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/factories/PooledCreditLine__factory.ts#L60)
+[src/wrappers/factories/PooledCreditLine__factory.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/factories/PooledCreditLine__factory.ts#L60)
 
 ___
 
@@ -173,7 +173,7 @@ ContractFactory.deploy
 
 #### Defined in
 
-[src/wrappers/factories/PooledCreditLine__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/factories/PooledCreditLine__factory.ts#L15)
+[src/wrappers/factories/PooledCreditLine__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/factories/PooledCreditLine__factory.ts#L15)
 
 ___
 
@@ -204,7 +204,7 @@ ContractFactory.getDeployTransaction
 
 #### Defined in
 
-[src/wrappers/factories/PooledCreditLine__factory.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/factories/PooledCreditLine__factory.ts#L36)
+[src/wrappers/factories/PooledCreditLine__factory.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/factories/PooledCreditLine__factory.ts#L36)
 
 ___
 
@@ -225,7 +225,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/factories/PooledCreditLine__factory.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/factories/PooledCreditLine__factory.ts#L63)
+[src/wrappers/factories/PooledCreditLine__factory.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/factories/PooledCreditLine__factory.ts#L63)
 
 ___
 

@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L40)
+[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L40)
 
 ___
 
@@ -155,7 +155,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L23)
+[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L23)
 
 ___
 
@@ -324,7 +324,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L36)
+[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L36)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -345,7 +345,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L37)
+[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L37)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -366,7 +366,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L38)
+[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L38)
 
 ___
 
@@ -495,7 +495,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L29)
+[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L29)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -516,7 +516,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L33)
+[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L33)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -537,7 +537,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L34)
+[src/wrappers/IERC1155ReceiverUpgradeable.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IERC1155ReceiverUpgradeable.d.ts#L34)
 
 ___
 

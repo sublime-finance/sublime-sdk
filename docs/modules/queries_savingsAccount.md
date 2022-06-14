@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/queries/savingsAccount.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/queries/savingsAccount.ts#L71)
+[src/queries/savingsAccount.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/queries/savingsAccount.ts#L71)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/queries/savingsAccount.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/queries/savingsAccount.ts#L4)
+[src/queries/savingsAccount.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/queries/savingsAccount.ts#L4)
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 #### Defined in
 
-[src/queries/savingsAccount.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/queries/savingsAccount.ts#L27)
+[src/queries/savingsAccount.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/queries/savingsAccount.ts#L27)

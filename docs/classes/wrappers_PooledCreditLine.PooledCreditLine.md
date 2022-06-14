@@ -358,7 +358,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1216](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1216)
+[src/wrappers/PooledCreditLine.d.ts:1216](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1216)
 
 ___
 
@@ -491,7 +491,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1606](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1606)
+[src/wrappers/PooledCreditLine.d.ts:1606](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1606)
 
 ___
 
@@ -525,7 +525,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1537](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1537)
+[src/wrappers/PooledCreditLine.d.ts:1537](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1537)
 
 ___
 
@@ -644,7 +644,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L277)
+[src/wrappers/PooledCreditLine.d.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L277)
 
 ___
 
@@ -658,7 +658,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L275)
+[src/wrappers/PooledCreditLine.d.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L275)
 
 ___
 
@@ -777,7 +777,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1987](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1987)
+[src/wrappers/PooledCreditLine.d.ts:1987](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1987)
 
 ___
 
@@ -839,7 +839,7 @@ node_modules/@ethersproject/contracts/lib/index.d.ts:79
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:749](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L749)
+[src/wrappers/PooledCreditLine.d.ts:749](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L749)
 
 ___
 
@@ -859,7 +859,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:751](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L751)
+[src/wrappers/PooledCreditLine.d.ts:751](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L751)
 
 ___
 
@@ -879,7 +879,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:753](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L753)
+[src/wrappers/PooledCreditLine.d.ts:753](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L753)
 
 ___
 
@@ -899,7 +899,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:755](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L755)
+[src/wrappers/PooledCreditLine.d.ts:755](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L755)
 
 ___
 
@@ -919,7 +919,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:757](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L757)
+[src/wrappers/PooledCreditLine.d.ts:757](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L757)
 
 ___
 
@@ -939,7 +939,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:759](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L759)
+[src/wrappers/PooledCreditLine.d.ts:759](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L759)
 
 ___
 
@@ -959,7 +959,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:761](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L761)
+[src/wrappers/PooledCreditLine.d.ts:761](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L761)
 
 ___
 
@@ -979,7 +979,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:763](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L763)
+[src/wrappers/PooledCreditLine.d.ts:763](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L763)
 
 ___
 
@@ -999,7 +999,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:765](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L765)
+[src/wrappers/PooledCreditLine.d.ts:765](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L765)
 
 ___
 
@@ -1019,7 +1019,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:767](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L767)
+[src/wrappers/PooledCreditLine.d.ts:767](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L767)
 
 ___
 
@@ -1039,7 +1039,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:769](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L769)
+[src/wrappers/PooledCreditLine.d.ts:769](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L769)
 
 ___
 
@@ -1059,7 +1059,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:771](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L771)
+[src/wrappers/PooledCreditLine.d.ts:771](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L771)
 
 ___
 
@@ -1155,7 +1155,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:773](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L773)
+[src/wrappers/PooledCreditLine.d.ts:773](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L773)
 
 ___
 
@@ -1177,7 +1177,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:779](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L779)
+[src/wrappers/PooledCreditLine.d.ts:779](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L779)
 
 ___
 
@@ -1201,7 +1201,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:236](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L236)
+[src/wrappers/PooledCreditLine.d.ts:236](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L236)
 
 ___
 
@@ -1223,7 +1223,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:785](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L785)
+[src/wrappers/PooledCreditLine.d.ts:785](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L785)
 
 ___
 
@@ -1245,7 +1245,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:791](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L791)
+[src/wrappers/PooledCreditLine.d.ts:791](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L791)
 
 ___
 
@@ -1266,7 +1266,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:797](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L797)
+[src/wrappers/PooledCreditLine.d.ts:797](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L797)
 
 ___
 
@@ -1287,7 +1287,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:799](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L799)
+[src/wrappers/PooledCreditLine.d.ts:799](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L799)
 
 ___
 
@@ -1308,7 +1308,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:804](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L804)
+[src/wrappers/PooledCreditLine.d.ts:804](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L804)
 
 ___
 
@@ -1329,7 +1329,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:809](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L809)
+[src/wrappers/PooledCreditLine.d.ts:809](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L809)
 
 ___
 
@@ -1350,7 +1350,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:814](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L814)
+[src/wrappers/PooledCreditLine.d.ts:814](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L814)
 
 ___
 
@@ -1371,7 +1371,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:816](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L816)
+[src/wrappers/PooledCreditLine.d.ts:816](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L816)
 
 ___
 
@@ -1392,7 +1392,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:818](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L818)
+[src/wrappers/PooledCreditLine.d.ts:818](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L818)
 
 ___
 
@@ -1413,7 +1413,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:820](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L820)
+[src/wrappers/PooledCreditLine.d.ts:820](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L820)
 
 ___
 
@@ -1434,7 +1434,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:822](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L822)
+[src/wrappers/PooledCreditLine.d.ts:822](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L822)
 
 ___
 
@@ -1455,7 +1455,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:827](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L827)
+[src/wrappers/PooledCreditLine.d.ts:827](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L827)
 
 ___
 
@@ -1476,7 +1476,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:832](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L832)
+[src/wrappers/PooledCreditLine.d.ts:832](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L832)
 
 ___
 
@@ -1497,7 +1497,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:834](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L834)
+[src/wrappers/PooledCreditLine.d.ts:834](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L834)
 
 ___
 
@@ -1518,7 +1518,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:836](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L836)
+[src/wrappers/PooledCreditLine.d.ts:836](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L836)
 
 ___
 
@@ -1539,7 +1539,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:841](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L841)
+[src/wrappers/PooledCreditLine.d.ts:841](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L841)
 
 ___
 
@@ -1560,7 +1560,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:846](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L846)
+[src/wrappers/PooledCreditLine.d.ts:846](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L846)
 
 ___
 
@@ -1581,7 +1581,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:851](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L851)
+[src/wrappers/PooledCreditLine.d.ts:851](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L851)
 
 ___
 
@@ -1602,7 +1602,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:856](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L856)
+[src/wrappers/PooledCreditLine.d.ts:856](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L856)
 
 ___
 
@@ -1623,7 +1623,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:858](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L858)
+[src/wrappers/PooledCreditLine.d.ts:858](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L858)
 
 ___
 
@@ -1645,7 +1645,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:860](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L860)
+[src/wrappers/PooledCreditLine.d.ts:860](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L860)
 
 ___
 
@@ -1667,7 +1667,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:862](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L862)
+[src/wrappers/PooledCreditLine.d.ts:862](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L862)
 
 ___
 
@@ -1691,7 +1691,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:235](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L235)
+[src/wrappers/PooledCreditLine.d.ts:235](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L235)
 
 ___
 
@@ -1709,7 +1709,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:237](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L237)
+[src/wrappers/PooledCreditLine.d.ts:237](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L237)
 
 ___
 
@@ -1732,7 +1732,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:868](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L868)
+[src/wrappers/PooledCreditLine.d.ts:868](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L868)
 
 ___
 
@@ -1755,7 +1755,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:875](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L875)
+[src/wrappers/PooledCreditLine.d.ts:875](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L875)
 
 ___
 
@@ -1776,7 +1776,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:882](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L882)
+[src/wrappers/PooledCreditLine.d.ts:882](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L882)
 
 ___
 
@@ -1797,7 +1797,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:884](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L884)
+[src/wrappers/PooledCreditLine.d.ts:884](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L884)
 
 ___
 
@@ -1867,7 +1867,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:886](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L886)
+[src/wrappers/PooledCreditLine.d.ts:886](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L886)
 
 ___
 
@@ -1888,7 +1888,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:888](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L888)
+[src/wrappers/PooledCreditLine.d.ts:888](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L888)
 
 ___
 
@@ -1909,7 +1909,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:890](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L890)
+[src/wrappers/PooledCreditLine.d.ts:890](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L890)
 
 ___
 
@@ -1930,7 +1930,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:892](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L892)
+[src/wrappers/PooledCreditLine.d.ts:892](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L892)
 
 ___
 
@@ -1952,7 +1952,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:894](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L894)
+[src/wrappers/PooledCreditLine.d.ts:894](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L894)
 
 ___
 
@@ -1974,7 +1974,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:896](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L896)
+[src/wrappers/PooledCreditLine.d.ts:896](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L896)
 
 ___
 
@@ -1995,7 +1995,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:902](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L902)
+[src/wrappers/PooledCreditLine.d.ts:902](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L902)
 
 ___
 
@@ -2016,7 +2016,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:904](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L904)
+[src/wrappers/PooledCreditLine.d.ts:904](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L904)
 
 ___
 
@@ -2039,7 +2039,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:909](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L909)
+[src/wrappers/PooledCreditLine.d.ts:909](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L909)
 
 ___
 
@@ -2062,7 +2062,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:916](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L916)
+[src/wrappers/PooledCreditLine.d.ts:916](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L916)
 
 ___
 
@@ -2083,7 +2083,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:923](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L923)
+[src/wrappers/PooledCreditLine.d.ts:923](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L923)
 
 ___
 
@@ -2104,7 +2104,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:925](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L925)
+[src/wrappers/PooledCreditLine.d.ts:925](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L925)
 
 ___
 
@@ -2159,7 +2159,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:239](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L239)
+[src/wrappers/PooledCreditLine.d.ts:239](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L239)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -2179,7 +2179,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L262)
+[src/wrappers/PooledCreditLine.d.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L262)
 
 ___
 
@@ -2199,7 +2199,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:927](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L927)
+[src/wrappers/PooledCreditLine.d.ts:927](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L927)
 
 ___
 
@@ -2219,7 +2219,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:929](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L929)
+[src/wrappers/PooledCreditLine.d.ts:929](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L929)
 
 ___
 
@@ -2251,7 +2251,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L242)
+[src/wrappers/PooledCreditLine.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L242)
 
 ▸ **off**(`eventName`, `listener`): [`PooledCreditLine`](wrappers_PooledCreditLine.PooledCreditLine.md)
 
@@ -2272,7 +2272,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L263)
+[src/wrappers/PooledCreditLine.d.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L263)
 
 ___
 
@@ -2304,7 +2304,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:246](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L246)
+[src/wrappers/PooledCreditLine.d.ts:246](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L246)
 
 ▸ **on**(`eventName`, `listener`): [`PooledCreditLine`](wrappers_PooledCreditLine.PooledCreditLine.md)
 
@@ -2325,7 +2325,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L264)
+[src/wrappers/PooledCreditLine.d.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L264)
 
 ___
 
@@ -2357,7 +2357,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L250)
+[src/wrappers/PooledCreditLine.d.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L250)
 
 ▸ **once**(`eventName`, `listener`): [`PooledCreditLine`](wrappers_PooledCreditLine.PooledCreditLine.md)
 
@@ -2378,7 +2378,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:265](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L265)
+[src/wrappers/PooledCreditLine.d.ts:265](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L265)
 
 ___
 
@@ -2398,7 +2398,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:931](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L931)
+[src/wrappers/PooledCreditLine.d.ts:931](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L931)
 
 ___
 
@@ -2418,7 +2418,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:933](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L933)
+[src/wrappers/PooledCreditLine.d.ts:933](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L933)
 
 ___
 
@@ -2439,7 +2439,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:935](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L935)
+[src/wrappers/PooledCreditLine.d.ts:935](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L935)
 
 ___
 
@@ -2460,7 +2460,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:955](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L955)
+[src/wrappers/PooledCreditLine.d.ts:955](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L955)
 
 ___
 
@@ -2480,7 +2480,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:975](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L975)
+[src/wrappers/PooledCreditLine.d.ts:975](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L975)
 
 ___
 
@@ -2500,7 +2500,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:977](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L977)
+[src/wrappers/PooledCreditLine.d.ts:977](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L977)
 
 ___
 
@@ -2521,7 +2521,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:979](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L979)
+[src/wrappers/PooledCreditLine.d.ts:979](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L979)
 
 ___
 
@@ -2542,7 +2542,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:992](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L992)
+[src/wrappers/PooledCreditLine.d.ts:992](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L992)
 
 ___
 
@@ -2562,7 +2562,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1005](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1005)
+[src/wrappers/PooledCreditLine.d.ts:1005](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1005)
 
 ___
 
@@ -2582,7 +2582,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1007](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1007)
+[src/wrappers/PooledCreditLine.d.ts:1007](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1007)
 
 ___
 
@@ -2602,7 +2602,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1009](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1009)
+[src/wrappers/PooledCreditLine.d.ts:1009](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1009)
 
 ___
 
@@ -2622,7 +2622,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1011](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1011)
+[src/wrappers/PooledCreditLine.d.ts:1011](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1011)
 
 ___
 
@@ -2655,7 +2655,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L269)
+[src/wrappers/PooledCreditLine.d.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L269)
 
 ___
 
@@ -2686,7 +2686,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:258](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L258)
+[src/wrappers/PooledCreditLine.d.ts:258](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L258)
 
 ▸ **removeAllListeners**(`eventName?`): [`PooledCreditLine`](wrappers_PooledCreditLine.PooledCreditLine.md)
 
@@ -2706,7 +2706,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:267](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L267)
+[src/wrappers/PooledCreditLine.d.ts:267](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L267)
 
 ___
 
@@ -2738,7 +2738,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:254](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L254)
+[src/wrappers/PooledCreditLine.d.ts:254](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L254)
 
 ▸ **removeListener**(`eventName`, `listener`): [`PooledCreditLine`](wrappers_PooledCreditLine.PooledCreditLine.md)
 
@@ -2759,7 +2759,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:266](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L266)
+[src/wrappers/PooledCreditLine.d.ts:266](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L266)
 
 ___
 
@@ -2779,7 +2779,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1013](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1013)
+[src/wrappers/PooledCreditLine.d.ts:1013](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1013)
 
 ___
 
@@ -2799,7 +2799,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1015](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1015)
+[src/wrappers/PooledCreditLine.d.ts:1015](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1015)
 
 ___
 
@@ -2821,7 +2821,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1017](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1017)
+[src/wrappers/PooledCreditLine.d.ts:1017](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1017)
 
 ___
 
@@ -2843,7 +2843,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1023](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1023)
+[src/wrappers/PooledCreditLine.d.ts:1023](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1023)
 
 ___
 
@@ -2879,7 +2879,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1029](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1029)
+[src/wrappers/PooledCreditLine.d.ts:1029](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1029)
 
 ___
 
@@ -2915,7 +2915,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1050](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1050)
+[src/wrappers/PooledCreditLine.d.ts:1050](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1050)
 
 ___
 
@@ -2936,7 +2936,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1071](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1071)
+[src/wrappers/PooledCreditLine.d.ts:1071](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1071)
 
 ___
 
@@ -2957,7 +2957,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1073](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1073)
+[src/wrappers/PooledCreditLine.d.ts:1073](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1073)
 
 ___
 
@@ -2978,7 +2978,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1075](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1075)
+[src/wrappers/PooledCreditLine.d.ts:1075](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1075)
 
 ___
 
@@ -2999,7 +2999,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1077](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1077)
+[src/wrappers/PooledCreditLine.d.ts:1077](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1077)
 
 ___
 
@@ -3021,7 +3021,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1079](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1079)
+[src/wrappers/PooledCreditLine.d.ts:1079](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1079)
 
 ___
 
@@ -3043,7 +3043,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1085](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1085)
+[src/wrappers/PooledCreditLine.d.ts:1085](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1085)
 
 ___
 
@@ -3065,7 +3065,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1091](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1091)
+[src/wrappers/PooledCreditLine.d.ts:1091](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1091)
 
 ___
 
@@ -3087,7 +3087,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1097](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1097)
+[src/wrappers/PooledCreditLine.d.ts:1097](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1097)
 
 ___
 
@@ -3109,7 +3109,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1103](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1103)
+[src/wrappers/PooledCreditLine.d.ts:1103](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1103)
 
 ___
 
@@ -3131,7 +3131,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1109](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1109)
+[src/wrappers/PooledCreditLine.d.ts:1109](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1109)
 
 ___
 
@@ -3153,7 +3153,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1115](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1115)
+[src/wrappers/PooledCreditLine.d.ts:1115](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1115)
 
 ___
 
@@ -3175,7 +3175,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1121](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1121)
+[src/wrappers/PooledCreditLine.d.ts:1121](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1121)
 
 ___
 
@@ -3197,7 +3197,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1127](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1127)
+[src/wrappers/PooledCreditLine.d.ts:1127](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1127)
 
 ___
 
@@ -3219,7 +3219,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1133](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1133)
+[src/wrappers/PooledCreditLine.d.ts:1133](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1133)
 
 ___
 
@@ -3241,7 +3241,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1139](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1139)
+[src/wrappers/PooledCreditLine.d.ts:1139](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1139)
 
 ___
 
@@ -3263,7 +3263,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1145](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1145)
+[src/wrappers/PooledCreditLine.d.ts:1145](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1145)
 
 ___
 
@@ -3285,7 +3285,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1151](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1151)
+[src/wrappers/PooledCreditLine.d.ts:1151](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1151)
 
 ___
 
@@ -3307,7 +3307,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1157](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1157)
+[src/wrappers/PooledCreditLine.d.ts:1157](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1157)
 
 ___
 
@@ -3328,7 +3328,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1163](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1163)
+[src/wrappers/PooledCreditLine.d.ts:1163](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1163)
 
 ___
 
@@ -3349,7 +3349,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1168](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1168)
+[src/wrappers/PooledCreditLine.d.ts:1168](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1168)
 
 ___
 
@@ -3370,7 +3370,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1173](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1173)
+[src/wrappers/PooledCreditLine.d.ts:1173](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1173)
 
 ___
 
@@ -3391,7 +3391,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1178](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1178)
+[src/wrappers/PooledCreditLine.d.ts:1178](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1178)
 
 ___
 
@@ -3413,7 +3413,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1183](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1183)
+[src/wrappers/PooledCreditLine.d.ts:1183](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1183)
 
 ___
 
@@ -3435,7 +3435,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1189](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1189)
+[src/wrappers/PooledCreditLine.d.ts:1189](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1189)
 
 ___
 
@@ -3458,7 +3458,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1195](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1195)
+[src/wrappers/PooledCreditLine.d.ts:1195](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1195)
 
 ___
 
@@ -3481,7 +3481,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1202](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1202)
+[src/wrappers/PooledCreditLine.d.ts:1202](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1202)
 
 ___
 
@@ -3502,7 +3502,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1209](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1209)
+[src/wrappers/PooledCreditLine.d.ts:1209](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1209)
 
 ___
 
@@ -3523,7 +3523,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:1211](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/PooledCreditLine.d.ts#L1211)
+[src/wrappers/PooledCreditLine.d.ts:1211](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/PooledCreditLine.d.ts#L1211)
 
 ___
 

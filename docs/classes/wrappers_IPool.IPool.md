@@ -202,7 +202,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:403](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L403)
+[src/wrappers/IPool.d.ts:403](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L403)
 
 ___
 
@@ -257,7 +257,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:571](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L571)
+[src/wrappers/IPool.d.ts:571](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L571)
 
 ___
 
@@ -288,7 +288,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:512](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L512)
+[src/wrappers/IPool.d.ts:512](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L512)
 
 ___
 
@@ -329,7 +329,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L151)
+[src/wrappers/IPool.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L151)
 
 ___
 
@@ -343,7 +343,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L149)
+[src/wrappers/IPool.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L149)
 
 ___
 
@@ -384,7 +384,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:679](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L679)
+[src/wrappers/IPool.d.ts:679](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L679)
 
 ___
 
@@ -523,7 +523,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:278](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L278)
+[src/wrappers/IPool.d.ts:278](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L278)
 
 ___
 
@@ -546,7 +546,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:285](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L285)
+[src/wrappers/IPool.d.ts:285](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L285)
 
 ___
 
@@ -570,7 +570,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L110)
+[src/wrappers/IPool.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L110)
 
 ___
 
@@ -590,7 +590,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:292](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L292)
+[src/wrappers/IPool.d.ts:292](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L292)
 
 ___
 
@@ -610,7 +610,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L294)
+[src/wrappers/IPool.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L294)
 
 ___
 
@@ -630,7 +630,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L296)
+[src/wrappers/IPool.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L296)
 
 ___
 
@@ -650,7 +650,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:298](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L298)
+[src/wrappers/IPool.d.ts:298](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L298)
 
 ___
 
@@ -674,7 +674,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L109)
+[src/wrappers/IPool.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L109)
 
 ___
 
@@ -692,7 +692,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L111)
+[src/wrappers/IPool.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L111)
 
 ___
 
@@ -714,7 +714,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L300)
+[src/wrappers/IPool.d.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L300)
 
 ___
 
@@ -736,7 +736,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L306)
+[src/wrappers/IPool.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L306)
 
 ___
 
@@ -806,7 +806,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L312)
+[src/wrappers/IPool.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L312)
 
 ___
 
@@ -827,7 +827,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L322)
+[src/wrappers/IPool.d.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L322)
 
 ___
 
@@ -847,7 +847,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:332](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L332)
+[src/wrappers/IPool.d.ts:332](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L332)
 
 ___
 
@@ -867,7 +867,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:334](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L334)
+[src/wrappers/IPool.d.ts:334](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L334)
 
 ___
 
@@ -888,7 +888,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:336](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L336)
+[src/wrappers/IPool.d.ts:336](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L336)
 
 ___
 
@@ -909,7 +909,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:338](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L338)
+[src/wrappers/IPool.d.ts:338](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L338)
 
 ___
 
@@ -943,7 +943,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:343](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L343)
+[src/wrappers/IPool.d.ts:343](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L343)
 
 ___
 
@@ -977,7 +977,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:361](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L361)
+[src/wrappers/IPool.d.ts:361](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L361)
 
 ___
 
@@ -1001,7 +1001,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:379](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L379)
+[src/wrappers/IPool.d.ts:379](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L379)
 
 ___
 
@@ -1025,7 +1025,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:387](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L387)
+[src/wrappers/IPool.d.ts:387](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L387)
 
 ___
 
@@ -1080,7 +1080,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L113)
+[src/wrappers/IPool.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L113)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -1100,7 +1100,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L136)
+[src/wrappers/IPool.d.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L136)
 
 ___
 
@@ -1132,7 +1132,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L116)
+[src/wrappers/IPool.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L116)
 
 ▸ **off**(`eventName`, `listener`): [`IPool`](wrappers_IPool.IPool.md)
 
@@ -1153,7 +1153,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L137)
+[src/wrappers/IPool.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L137)
 
 ___
 
@@ -1185,7 +1185,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L120)
+[src/wrappers/IPool.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L120)
 
 ▸ **on**(`eventName`, `listener`): [`IPool`](wrappers_IPool.IPool.md)
 
@@ -1206,7 +1206,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L138)
+[src/wrappers/IPool.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L138)
 
 ___
 
@@ -1238,7 +1238,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:124](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L124)
+[src/wrappers/IPool.d.ts:124](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L124)
 
 ▸ **once**(`eventName`, `listener`): [`IPool`](wrappers_IPool.IPool.md)
 
@@ -1259,7 +1259,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L139)
+[src/wrappers/IPool.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L139)
 
 ___
 
@@ -1292,7 +1292,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L143)
+[src/wrappers/IPool.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L143)
 
 ___
 
@@ -1323,7 +1323,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L132)
+[src/wrappers/IPool.d.ts:132](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L132)
 
 ▸ **removeAllListeners**(`eventName?`): [`IPool`](wrappers_IPool.IPool.md)
 
@@ -1343,7 +1343,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L141)
+[src/wrappers/IPool.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L141)
 
 ___
 
@@ -1375,7 +1375,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L128)
+[src/wrappers/IPool.d.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L128)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IPool`](wrappers_IPool.IPool.md)
 
@@ -1396,7 +1396,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L140)
+[src/wrappers/IPool.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L140)
 
 ___
 
@@ -1416,7 +1416,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:395](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L395)
+[src/wrappers/IPool.d.ts:395](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L395)
 
 ___
 
@@ -1436,7 +1436,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:397](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L397)
+[src/wrappers/IPool.d.ts:397](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L397)
 
 ___
 
@@ -1456,7 +1456,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:399](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L399)
+[src/wrappers/IPool.d.ts:399](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L399)
 
 ___
 
@@ -1476,7 +1476,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:401](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IPool.d.ts#L401)
+[src/wrappers/IPool.d.ts:401](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IPool.d.ts#L401)
 
 ___
 

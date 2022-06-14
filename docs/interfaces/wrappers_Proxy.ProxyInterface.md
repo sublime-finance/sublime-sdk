@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L14)
+[src/wrappers/Proxy.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L14)
 
 ___
 
@@ -147,7 +147,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/Proxy.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/Proxy.d.ts#L12)
+[src/wrappers/Proxy.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Proxy.d.ts#L12)
 
 ___
 

@@ -126,7 +126,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IVerifier.d.ts#L14)
+[src/wrappers/IVerifier.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IVerifier.d.ts#L14)
 
 ___
 
@@ -154,7 +154,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IVerifier.d.ts#L12)
+[src/wrappers/IVerifier.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IVerifier.d.ts#L12)
 
 ___
 
@@ -549,7 +549,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IVerifier.d.ts#L19)
+[src/wrappers/IVerifier.d.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IVerifier.d.ts#L19)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -569,7 +569,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/c854fc6/src/wrappers/IVerifier.d.ts#L20)
+[src/wrappers/IVerifier.d.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/IVerifier.d.ts#L20)
 
 ___
 
