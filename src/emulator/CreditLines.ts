@@ -143,7 +143,7 @@ export class CreditLineEmulator extends EmulatorHelper {
 
   // to-do Ritik
   public getStatus(): CreditLineStatus {
-    return CreditLineStatus.ACTIVE;
+    return this.creditLineState.creditLineStatus;
   }
 
   public createdAt(): BigNumber {

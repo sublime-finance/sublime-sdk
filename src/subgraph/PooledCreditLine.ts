@@ -893,7 +893,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       return new PooledCreditLineEmulator(
         {
           id: a.id,
-          pooledCreditLineStatus: a.status,
+          pooledCreditLineStatus: this.convertToPooledCreditLineStatusEnum(a.status),
           endsAt: new BigNumber(a.endsAt),
           principal: new BigNumber(a.principal),
           idealCollateralRatio: new BigNumber(a.idealCollateralRatio),
@@ -1020,63 +1020,34 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       };
     });
   }
-}
 
-// {
-//   id: a.id,
-//   borrowerAddress: a.borrowerAddress,
-//   borrowLimit: { value: aNew.getBorrowLimit().toString(), decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-//   borrowRate: new BigNumber(a.borrowRate).div(new BigNumber(10).pow(16)).toFixed(2),
-//   idealCollateralRatio: new BigNumber(a.idealCollateralRatio).div(new BigNumber(10).pow(16)).toFixed(2),
-//   collateralTokens: {
-//     value: aNew.calculateTotalCollateralTokens().toString(),
-//     decimals: this.tokenManager.getTokenDecimals(a.collateralAsset),
-//   },
-//   borrowAsset: {
-//     name: this.tokenManager.getTokenName(a.borrowAsset),
-//     address: a.borrowAsset,
-//     logo: this.tokenManager.getLogo(a.borrowAsset),
-//     pricePerAssetInUSD: prices[a.borrowAsset],
-//   },
-//   collateralAsset: {
-//     name: this.tokenManager.getTokenName(a.collateralAsset),
-//     address: a.collateralAsset,
-//     logo: this.tokenManager.getLogo(a.collateralAsset),
-//     pricePerAssetInUSD: prices[a.collateralAsset],
-//   },
-//   createdAt: a.createdAt,
-//   startsAt: a.startsAt,
-//   endsAt: a.endsAt,
-//   defaultsAt: a.defaultsAt,
-//   lenderStrategy: {
-//     type: this.yieldApi.getStrategy(a.lenderStrategy),
-//     address: a.lenderStrategy,
-//     displayName: this.yieldApi.getStrategyDisplayName(a.lenderStrategy),
-//     logo: this.yieldApi.getStrategyLogo(a.lenderStrategy),
-//   },
-//   collateralStrategy: {
-//     type: this.yieldApi.getStrategy(a.collateralStrategy),
-//     address: a.collateralStrategy,
-//     displayName: this.yieldApi.getStrategyDisplayName(a.collateralStrategy),
-//     logo: this.yieldApi.getStrategyLogo(a.collateralStrategy),
-//   },
-//   gracePenaltyRate: new BigNumber(a.gracePenaltyRate).div(new BigNumber(10).pow(16)).toFixed(2),
-//   status: aNew.getStatus(),
-//   principal: { value: a.principal, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-//   totalInterestRepaid: { value: a.totalInterestRepaid, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-//   lastPrincipalUpdateTime: a.lastPrincipalUpdateTime,
-//   interestAccruedTillLastPrincipalUpdate: {
-//     value: a.interestAccruedTillLastPrincipalUpdate || '0',
-//     decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
-//   },
-//   totalLentAmount: { value: a.totalLentAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-//   currentCollateralRatio: {
-//     value: aNew.calculateCurrentCollateralRatio().toString(),
-//     decimals: 18,
-//   },
-//   currentDebt: {
-//     value: await (await this.getCurrentDebtForPooledCreditLines(a.id)).toString(),
-//     decimals: this.tokenManager.getTokenDecimals(a.borrowAsset),
-//   },
-//   minBorrowAmount: { value: a.minBorrowAmount, decimals: this.tokenManager.getTokenDecimals(a.borrowAsset) },
-// };
+  private convertToPooledCreditLineStatusEnum(stateInSubgraph: string): CreditLineStatus {
+    //   enum PooledCreditLineStatus {
+    //     NOT_CREATED,
+    //     REQUESTED,
+    //     ACTIVE,
+    //     CLOSED,
+    //     EXPIRED,
+    //     LIQUIDATED,
+    //     CANCELLED
+    // }
+
+    if (stateInSubgraph == 'NOT_CREATED') {
+      return CreditLineStatus.NOT_CREATED;
+    } else if (stateInSubgraph == 'REQUESTED') {
+      return CreditLineStatus.REQUESTED;
+    } else if (stateInSubgraph == 'ACTIVE') {
+      return CreditLineStatus.ACTIVE;
+    } else if (stateInSubgraph == 'CLOSED') {
+      return CreditLineStatus.CLOSED;
+    } else if (stateInSubgraph == 'EXPIRED') {
+      return CreditLineStatus.EXPIRED;
+    } else if (stateInSubgraph == 'LIQUIDATED') {
+      return CreditLineStatus.LIQUIDATED;
+    } else if (stateInSubgraph == 'CANCELLED') {
+      return CreditLineStatus.CANCELLED;
+    } else {
+      return CreditLineStatus.NOT_CREATED;
+    }
+  }
+}
