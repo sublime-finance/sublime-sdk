@@ -170,7 +170,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L113)
+[src/wrappers/GovernanceTester.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L113)
 
 ___
 
@@ -209,7 +209,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L135)
+[src/wrappers/GovernanceTester.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L135)
 
 ___
 
@@ -229,7 +229,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L127)
+[src/wrappers/GovernanceTester.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L127)
 
 ___
 
@@ -254,7 +254,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L87)
+[src/wrappers/GovernanceTester.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L87)
 
 ___
 
@@ -268,7 +268,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L85)
+[src/wrappers/GovernanceTester.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L85)
 
 ___
 
@@ -293,7 +293,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L149)
+[src/wrappers/GovernanceTester.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L149)
 
 ___
 
@@ -433,7 +433,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L46)
+[src/wrappers/GovernanceTester.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L46)
 
 ___
 
@@ -457,7 +457,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L45)
+[src/wrappers/GovernanceTester.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L45)
 
 ___
 
@@ -475,7 +475,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L47)
+[src/wrappers/GovernanceTester.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L47)
 
 ___
 
@@ -544,7 +544,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L101)
+[src/wrappers/GovernanceTester.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L101)
 
 ___
 
@@ -564,7 +564,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L103)
+[src/wrappers/GovernanceTester.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L103)
 
 ___
 
@@ -619,7 +619,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L49)
+[src/wrappers/GovernanceTester.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L49)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -639,7 +639,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L72)
+[src/wrappers/GovernanceTester.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L72)
 
 ___
 
@@ -671,7 +671,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L52)
+[src/wrappers/GovernanceTester.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L52)
 
 ▸ **off**(`eventName`, `listener`): [`GovernanceTester`](wrappers_GovernanceTester.GovernanceTester.md)
 
@@ -692,7 +692,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L73)
+[src/wrappers/GovernanceTester.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L73)
 
 ___
 
@@ -724,7 +724,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L56)
+[src/wrappers/GovernanceTester.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L56)
 
 ▸ **on**(`eventName`, `listener`): [`GovernanceTester`](wrappers_GovernanceTester.GovernanceTester.md)
 
@@ -745,7 +745,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L74)
+[src/wrappers/GovernanceTester.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L74)
 
 ___
 
@@ -777,7 +777,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L60)
+[src/wrappers/GovernanceTester.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L60)
 
 ▸ **once**(`eventName`, `listener`): [`GovernanceTester`](wrappers_GovernanceTester.GovernanceTester.md)
 
@@ -798,7 +798,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L75)
+[src/wrappers/GovernanceTester.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L75)
 
 ___
 
@@ -831,7 +831,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L79)
+[src/wrappers/GovernanceTester.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L79)
 
 ___
 
@@ -862,7 +862,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L68)
+[src/wrappers/GovernanceTester.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L68)
 
 ▸ **removeAllListeners**(`eventName?`): [`GovernanceTester`](wrappers_GovernanceTester.GovernanceTester.md)
 
@@ -882,7 +882,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L77)
+[src/wrappers/GovernanceTester.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L77)
 
 ___
 
@@ -914,7 +914,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L64)
+[src/wrappers/GovernanceTester.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L64)
 
 ▸ **removeListener**(`eventName`, `listener`): [`GovernanceTester`](wrappers_GovernanceTester.GovernanceTester.md)
 
@@ -935,7 +935,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L76)
+[src/wrappers/GovernanceTester.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L76)
 
 ___
 
@@ -956,7 +956,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L105)
+[src/wrappers/GovernanceTester.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L105)
 
 ___
 
@@ -977,7 +977,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L107)
+[src/wrappers/GovernanceTester.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L107)
 
 ___
 
@@ -997,7 +997,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L109)
+[src/wrappers/GovernanceTester.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L109)
 
 ___
 
@@ -1017,7 +1017,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/GovernanceTester.d.ts#L111)
+[src/wrappers/GovernanceTester.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/GovernanceTester.d.ts#L111)
 
 ___
 

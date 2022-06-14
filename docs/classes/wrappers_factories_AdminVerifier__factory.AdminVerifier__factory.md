@@ -52,7 +52,7 @@ ContractFactory.constructor
 
 #### Defined in
 
-[src/wrappers/factories/AdminVerifier__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/factories/AdminVerifier__factory.ts#L11)
+[src/wrappers/factories/AdminVerifier__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/factories/AdminVerifier__factory.ts#L11)
 
 ## Properties
 
@@ -118,7 +118,7 @@ ContractFactory.attach
 
 #### Defined in
 
-[src/wrappers/factories/AdminVerifier__factory.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/factories/AdminVerifier__factory.ts#L21)
+[src/wrappers/factories/AdminVerifier__factory.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/factories/AdminVerifier__factory.ts#L21)
 
 ___
 
@@ -142,7 +142,7 @@ ContractFactory.connect
 
 #### Defined in
 
-[src/wrappers/factories/AdminVerifier__factory.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/factories/AdminVerifier__factory.ts#L24)
+[src/wrappers/factories/AdminVerifier__factory.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/factories/AdminVerifier__factory.ts#L24)
 
 ___
 
@@ -167,7 +167,7 @@ ContractFactory.deploy
 
 #### Defined in
 
-[src/wrappers/factories/AdminVerifier__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/factories/AdminVerifier__factory.ts#L15)
+[src/wrappers/factories/AdminVerifier__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/factories/AdminVerifier__factory.ts#L15)
 
 ___
 
@@ -192,7 +192,7 @@ ContractFactory.getDeployTransaction
 
 #### Defined in
 
-[src/wrappers/factories/AdminVerifier__factory.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/factories/AdminVerifier__factory.ts#L18)
+[src/wrappers/factories/AdminVerifier__factory.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/factories/AdminVerifier__factory.ts#L18)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/factories/AdminVerifier__factory.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/factories/AdminVerifier__factory.ts#L27)
+[src/wrappers/factories/AdminVerifier__factory.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/factories/AdminVerifier__factory.ts#L27)
 
 ___
 

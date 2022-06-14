@@ -186,7 +186,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L241)
+[src/wrappers/IRepayment.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L241)
 
 ___
 
@@ -233,7 +233,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:329](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L329)
+[src/wrappers/IRepayment.d.ts:329](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L329)
 
 ___
 
@@ -259,7 +259,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:301](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L301)
+[src/wrappers/IRepayment.d.ts:301](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L301)
 
 ___
 
@@ -292,7 +292,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L114)
+[src/wrappers/IRepayment.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L114)
 
 ___
 
@@ -306,7 +306,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L112)
+[src/wrappers/IRepayment.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L112)
 
 ___
 
@@ -339,7 +339,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:373](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L373)
+[src/wrappers/IRepayment.d.ts:373](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L373)
 
 ___
 
@@ -479,7 +479,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L73)
+[src/wrappers/IRepayment.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L73)
 
 ___
 
@@ -503,7 +503,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L72)
+[src/wrappers/IRepayment.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L72)
 
 ___
 
@@ -521,7 +521,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L74)
+[src/wrappers/IRepayment.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L74)
 
 ___
 
@@ -542,7 +542,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:183](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L183)
+[src/wrappers/IRepayment.d.ts:183](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L183)
 
 ___
 
@@ -563,7 +563,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L185)
+[src/wrappers/IRepayment.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L185)
 
 ___
 
@@ -633,7 +633,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L187)
+[src/wrappers/IRepayment.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L187)
 
 ___
 
@@ -654,7 +654,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L189)
+[src/wrappers/IRepayment.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L189)
 
 ___
 
@@ -674,7 +674,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L191)
+[src/wrappers/IRepayment.d.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L191)
 
 ___
 
@@ -694,7 +694,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L193)
+[src/wrappers/IRepayment.d.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L193)
 
 ___
 
@@ -715,7 +715,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L195)
+[src/wrappers/IRepayment.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L195)
 
 ___
 
@@ -736,7 +736,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L205)
+[src/wrappers/IRepayment.d.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L205)
 
 ___
 
@@ -757,7 +757,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L215)
+[src/wrappers/IRepayment.d.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L215)
 
 ___
 
@@ -778,7 +778,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L217)
+[src/wrappers/IRepayment.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L217)
 
 ___
 
@@ -799,7 +799,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:219](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L219)
+[src/wrappers/IRepayment.d.ts:219](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L219)
 
 ___
 
@@ -820,7 +820,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L221)
+[src/wrappers/IRepayment.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L221)
 
 ___
 
@@ -845,7 +845,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:223](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L223)
+[src/wrappers/IRepayment.d.ts:223](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L223)
 
 ___
 
@@ -870,7 +870,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:232](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L232)
+[src/wrappers/IRepayment.d.ts:232](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L232)
 
 ___
 
@@ -925,7 +925,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L76)
+[src/wrappers/IRepayment.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L76)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -945,7 +945,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L99)
+[src/wrappers/IRepayment.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L99)
 
 ___
 
@@ -977,7 +977,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L79)
+[src/wrappers/IRepayment.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L79)
 
 ▸ **off**(`eventName`, `listener`): [`IRepayment`](wrappers_IRepayment.IRepayment.md)
 
@@ -998,7 +998,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L100)
+[src/wrappers/IRepayment.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L100)
 
 ___
 
@@ -1030,7 +1030,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L83)
+[src/wrappers/IRepayment.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L83)
 
 ▸ **on**(`eventName`, `listener`): [`IRepayment`](wrappers_IRepayment.IRepayment.md)
 
@@ -1051,7 +1051,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L101)
+[src/wrappers/IRepayment.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L101)
 
 ___
 
@@ -1083,7 +1083,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L87)
+[src/wrappers/IRepayment.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L87)
 
 ▸ **once**(`eventName`, `listener`): [`IRepayment`](wrappers_IRepayment.IRepayment.md)
 
@@ -1104,7 +1104,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L102)
+[src/wrappers/IRepayment.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L102)
 
 ___
 
@@ -1137,7 +1137,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L106)
+[src/wrappers/IRepayment.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L106)
 
 ___
 
@@ -1168,7 +1168,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L95)
+[src/wrappers/IRepayment.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L95)
 
 ▸ **removeAllListeners**(`eventName?`): [`IRepayment`](wrappers_IRepayment.IRepayment.md)
 
@@ -1188,7 +1188,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L104)
+[src/wrappers/IRepayment.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L104)
 
 ___
 
@@ -1220,7 +1220,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L91)
+[src/wrappers/IRepayment.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L91)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IRepayment`](wrappers_IRepayment.IRepayment.md)
 
@@ -1241,7 +1241,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IRepayment.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IRepayment.d.ts#L103)
+[src/wrappers/IRepayment.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IRepayment.d.ts#L103)
 
 ___
 

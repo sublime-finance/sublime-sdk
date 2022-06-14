@@ -59,7 +59,7 @@ export class CreditLineCalls extends Base {
     //     REQUESTED,
     //     ACTIVE
     // }
-
+    console.log({ stateInSubgraph });
     if (stateInSubgraph == 'NOT_CREATED') {
       return CreditLineStatus.NOT_CREATED;
     } else if (stateInSubgraph == 'REQUESTED') {
@@ -67,7 +67,7 @@ export class CreditLineCalls extends Base {
     } else if (stateInSubgraph == 'ACTIVE') {
       return CreditLineStatus.ACTIVE;
     } else {
-      return CreditLineStatus.NOT_CREATED;
+      return CreditLineStatus.CLOSED;
     }
   }
   /**
@@ -301,12 +301,30 @@ export class CreditLineCalls extends Base {
     await this.tokenManager.updateAll(cl.collateralAsset);
 
     const operations: CreditLineOperation[] = cl.creditLineTimeline.map((a) => {
+      // NOT_CREATED
+      // REQUESTED
+      // ACTIVE
+      // DEPOSIT_COLLATERAL
+      // BORROW
+      // REPAY
+      // WITHDRAW_COLLATERAL
+      // CLOSED
+      // CANCELLED
+      // RESET
+      // LIQUIDATED
+      let assetToUse;
+      if (['DEPOSIT_COLLATERAL', 'WITHDRAW_COLLATERAL'].includes(a.creditLineOperation)) {
+        assetToUse = cl.collateralAsset;
+      } else if (['BORROW', 'REPAY'].includes(a.creditLineOperation)) {
+        assetToUse = cl.borrowAsset;
+      } else {
+        throw new Error('Invalid Credit line operation detected, please check');
+      }
+
       return {
         amount: {
           value: a.amount || '0',
-          decimals: this.tokenManager.getTokenDecimals(
-            a.creditLineOperation === 'WITHDRAW_COLLATERAL' || 'ADD_COLLATERAL' ? cl.collateralAsset : cl.borrowAsset
-          ),
+          decimals: this.tokenManager.getTokenDecimals(assetToUse),
         },
         creditLineOperation: a.creditLineOperation,
         liquidator: a.liquidator,

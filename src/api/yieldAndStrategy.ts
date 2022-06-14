@@ -41,7 +41,7 @@ export class YieldAndStrategyApi {
     this.signer = signer;
     this.config = config;
     this.tokenManager = tokenManger;
-    this.displayName[config.compoundStrategyContractAddress.toLowerCase()] = 'Added to Compound Protocol';
+    this.displayName[config.compoundStrategyContractAddress.toLowerCase()] = 'Compound Protocol';
     this.displayName[config.noStrategyAddress.toLowerCase()] = 'Locked in Sublime';
 
     this.logo[config.compoundStrategyContractAddress.toLowerCase()] = 'https://cryptologos.cc/logos/compound-comp-logo.png';
@@ -55,35 +55,21 @@ export class YieldAndStrategyApi {
    * @param sharesInLowestUnits If true, token decimals for shares are ignored
    * @returns Total number of underlying tokens for a given asset and strategy
    */
-  public async getTokensForShares(
-    yieldType: StrategyType,
-    asset: string,
-    shares: BigNumber,
-    sharesInLowestUnits?: boolean
-  ): Promise<BigNumber> {
+  public async getTokensForShares(yieldType: StrategyType, asset: string, shares: BigNumber): Promise<BigNumber> {
     const yieldAddress = this.getStrategyAddress(yieldType);
     const yieldContract: IYield = IYield__factory.connect(yieldAddress, this.signer);
 
     await this.tokenManager.updateTokenDecimals(asset);
-    const depositTokenDecimal = this.tokenManager.getTokenDecimals(asset);
 
     const _amount = new BigNumber(shares);
     if (_amount.isNaN() || _amount.isZero() || _amount.isNegative()) {
       throw new Error('shares should be a valid number');
     }
 
-    let _amountInLowestUnits = new BigNumber(_amount);
-
-    if (!sharesInLowestUnits) {
-      const liquiditySharesAddress: string = await yieldContract.liquidityToken(asset);
-      await this.tokenManager.updateTokenDecimals(liquiditySharesAddress);
-      const liquidityTokenDecimal = this.tokenManager.getTokenDecimals(liquiditySharesAddress);
-
-      _amountInLowestUnits = _amount.multipliedBy(new BigNumber(10).pow(liquidityTokenDecimal));
-    }
+    const _amountInLowestUnits = new BigNumber(_amount);
 
     const _temp: string = (await yieldContract.callStatic.getTokensForShares(_amountInLowestUnits.toFixed(0), asset)).toString();
-    return new BigNumber(_temp).div(new BigNumber(10).pow(depositTokenDecimal));
+    return new BigNumber(_temp);
   }
 
   /**
@@ -92,13 +78,12 @@ export class YieldAndStrategyApi {
    * @param amount Number of tokens
    * @returns Number of shares that will be generated for given number of tokens and strategy
    */
-  public async getSharesForTokens(yieldType: StrategyType, asset: string, amount: string): Promise<string> {
+  public async getSharesForTokens(yieldType: StrategyType, asset: string, amount: string): Promise<BigNumber> {
     const yieldAddress = this.getStrategyAddress(yieldType);
     const yieldContract: IYield = IYield__factory.connect(yieldAddress, this.signer);
     const liquiditySharesAddress: string = await yieldContract.liquidityToken(asset);
 
     await this.tokenManager.updateTokenDecimals(liquiditySharesAddress);
-    const liquidityTokenDecimal = this.tokenManager.getTokenDecimals(liquiditySharesAddress);
 
     await this.tokenManager.updateTokenDecimals(asset);
     const deopsitTokenDecimal = this.tokenManager.getTokenDecimals(asset);
@@ -111,7 +96,7 @@ export class YieldAndStrategyApi {
     const _temp: string = (
       await yieldContract.callStatic.getSharesForTokens(_amount.multipliedBy(new BigNumber(10).pow(deopsitTokenDecimal)).toFixed(0), asset)
     ).toString();
-    return new BigNumber(_temp).div(new BigNumber(10).pow(liquidityTokenDecimal)).toFixed(2);
+    return new BigNumber(_temp);
   }
 
   /**

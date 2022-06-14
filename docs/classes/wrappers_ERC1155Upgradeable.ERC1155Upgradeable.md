@@ -190,7 +190,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:249](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L249)
+[src/wrappers/ERC1155Upgradeable.d.ts:249](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L249)
 
 ___
 
@@ -239,7 +239,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:355](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L355)
+[src/wrappers/ERC1155Upgradeable.d.ts:355](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L355)
 
 ___
 
@@ -262,7 +262,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:311](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L311)
+[src/wrappers/ERC1155Upgradeable.d.ts:311](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L311)
 
 ___
 
@@ -297,7 +297,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L111)
+[src/wrappers/ERC1155Upgradeable.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L111)
 
 ___
 
@@ -311,7 +311,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L109)
+[src/wrappers/ERC1155Upgradeable.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L109)
 
 ___
 
@@ -346,7 +346,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:421](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L421)
+[src/wrappers/ERC1155Upgradeable.d.ts:421](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L421)
 
 ___
 
@@ -486,7 +486,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L70)
+[src/wrappers/ERC1155Upgradeable.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L70)
 
 ___
 
@@ -508,7 +508,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:181](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L181)
+[src/wrappers/ERC1155Upgradeable.d.ts:181](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L181)
 
 ___
 
@@ -530,7 +530,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:183](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L183)
+[src/wrappers/ERC1155Upgradeable.d.ts:183](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L183)
 
 ___
 
@@ -552,7 +552,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L185)
+[src/wrappers/ERC1155Upgradeable.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L185)
 
 ___
 
@@ -574,7 +574,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L187)
+[src/wrappers/ERC1155Upgradeable.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L187)
 
 ___
 
@@ -598,7 +598,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L69)
+[src/wrappers/ERC1155Upgradeable.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L69)
 
 ___
 
@@ -616,7 +616,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L71)
+[src/wrappers/ERC1155Upgradeable.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L71)
 
 ___
 
@@ -687,7 +687,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L189)
+[src/wrappers/ERC1155Upgradeable.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L189)
 
 ___
 
@@ -709,7 +709,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L191)
+[src/wrappers/ERC1155Upgradeable.d.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L191)
 
 ___
 
@@ -764,7 +764,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L73)
+[src/wrappers/ERC1155Upgradeable.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L73)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -784,7 +784,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L96)
+[src/wrappers/ERC1155Upgradeable.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L96)
 
 ___
 
@@ -816,7 +816,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L76)
+[src/wrappers/ERC1155Upgradeable.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L76)
 
 ▸ **off**(`eventName`, `listener`): [`ERC1155Upgradeable`](wrappers_ERC1155Upgradeable.ERC1155Upgradeable.md)
 
@@ -837,7 +837,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L97)
+[src/wrappers/ERC1155Upgradeable.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L97)
 
 ___
 
@@ -869,7 +869,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L80)
+[src/wrappers/ERC1155Upgradeable.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L80)
 
 ▸ **on**(`eventName`, `listener`): [`ERC1155Upgradeable`](wrappers_ERC1155Upgradeable.ERC1155Upgradeable.md)
 
@@ -890,7 +890,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L98)
+[src/wrappers/ERC1155Upgradeable.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L98)
 
 ___
 
@@ -922,7 +922,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L84)
+[src/wrappers/ERC1155Upgradeable.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L84)
 
 ▸ **once**(`eventName`, `listener`): [`ERC1155Upgradeable`](wrappers_ERC1155Upgradeable.ERC1155Upgradeable.md)
 
@@ -943,7 +943,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L99)
+[src/wrappers/ERC1155Upgradeable.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L99)
 
 ___
 
@@ -976,7 +976,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L103)
+[src/wrappers/ERC1155Upgradeable.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L103)
 
 ___
 
@@ -1007,7 +1007,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L92)
+[src/wrappers/ERC1155Upgradeable.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L92)
 
 ▸ **removeAllListeners**(`eventName?`): [`ERC1155Upgradeable`](wrappers_ERC1155Upgradeable.ERC1155Upgradeable.md)
 
@@ -1027,7 +1027,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L101)
+[src/wrappers/ERC1155Upgradeable.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L101)
 
 ___
 
@@ -1059,7 +1059,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L88)
+[src/wrappers/ERC1155Upgradeable.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L88)
 
 ▸ **removeListener**(`eventName`, `listener`): [`ERC1155Upgradeable`](wrappers_ERC1155Upgradeable.ERC1155Upgradeable.md)
 
@@ -1080,7 +1080,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L100)
+[src/wrappers/ERC1155Upgradeable.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L100)
 
 ___
 
@@ -1105,7 +1105,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L193)
+[src/wrappers/ERC1155Upgradeable.d.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L193)
 
 ___
 
@@ -1130,7 +1130,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L202)
+[src/wrappers/ERC1155Upgradeable.d.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L202)
 
 ___
 
@@ -1155,7 +1155,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:211](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L211)
+[src/wrappers/ERC1155Upgradeable.d.ts:211](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L211)
 
 ___
 
@@ -1180,7 +1180,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:220](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L220)
+[src/wrappers/ERC1155Upgradeable.d.ts:220](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L220)
 
 ___
 
@@ -1202,7 +1202,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L229)
+[src/wrappers/ERC1155Upgradeable.d.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L229)
 
 ___
 
@@ -1224,7 +1224,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:235](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L235)
+[src/wrappers/ERC1155Upgradeable.d.ts:235](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L235)
 
 ___
 
@@ -1245,7 +1245,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L241)
+[src/wrappers/ERC1155Upgradeable.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L241)
 
 ___
 
@@ -1266,7 +1266,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L243)
+[src/wrappers/ERC1155Upgradeable.d.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L243)
 
 ___
 
@@ -1287,7 +1287,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:245](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L245)
+[src/wrappers/ERC1155Upgradeable.d.ts:245](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L245)
 
 ___
 
@@ -1308,7 +1308,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ERC1155Upgradeable.d.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/ERC1155Upgradeable.d.ts#L247)
+[src/wrappers/ERC1155Upgradeable.d.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/ERC1155Upgradeable.d.ts#L247)
 
 ___
 

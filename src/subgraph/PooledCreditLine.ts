@@ -649,29 +649,32 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     collateralTokenDecimal
   ): Promise<PooledCreditLineOperation[]> {
     return data.map((a) => {
-      //     CREATED
-      // COLLATERAL_ADDED
-      // LIQUIDITY_SUPPLIED
-      // BORROW
-      // CLOSE
-      // EXTENSION_REPAID
-      // GRACE_PENALTY_REPAID
-      // INTEREST_REPAID
-      // COMPLETE_INTEREST_REPAID
-      // PRINCIPLE_REPAID
-      // COLLATERAL_WITHDRAWN
+      // NOT_CREATED
+      // REQUESTED
+      // ACTIVE
       // DEPOSIT_COLLATERAL
+      // BORROW
       // REPAY
+      // WITHDRAW_COLLATERAL
+      // CLOSED
+      // EXPIRED
+      // CANCELLED
+      // RESET
+      // LIQUIDATED
+      // LEND
+      // WITHDRAW_INTEREST
+      // WITHDRAW_LIQUIDATY
+      // WITHDRAW_COLLATERAL_LIQUIDITY
       let amount: Balance = { value: '0', decimals: 18 };
 
-      if (['DEPOSIT_COLLATERAL', 'COLLATERAL_ADDED', 'COLLATERAL_WITHDRAWN', 'WITHDRAW_COLLATERAL'].includes(a.pooledCreditLineOperation)) {
-        amount = { value: a.amount, decimals: collateralTokenDecimal };
-      }
       if (
-        ['BORROW', 'EXTENSION_REPAID', 'INTEREST_REPAID', 'COMPLETE_INTEREST_REPAID', 'PRINCIPLE_REPAID', 'REPAY', 'LEND'].includes(
+        ['DEPOSIT_COLLATERAL', 'WITHDRAW_COLLATERAL', 'WITHDRAW_INTEREST', 'WITHDRAW_LIQUIDATY', 'WITHDRAW_COLLATERAL_LIQUIDITY'].includes(
           a.pooledCreditLineOperation
         )
       ) {
+        amount = { value: a.amount, decimals: collateralTokenDecimal };
+      }
+      if (['BORROW', 'REPAY', 'LEND'].includes(a.pooledCreditLineOperation)) {
         amount = { value: a.amount, decimals: borrowTokenDecimal };
       }
 

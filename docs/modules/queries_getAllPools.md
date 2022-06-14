@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/queries/getAllPools.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/queries/getAllPools.ts#L3)
+[src/queries/getAllPools.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/queries/getAllPools.ts#L3)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllPools.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/queries/getAllPools.ts#L79)
+[src/queries/getAllPools.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/queries/getAllPools.ts#L79)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllPools.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/queries/getAllPools.ts#L218)
+[src/queries/getAllPools.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/queries/getAllPools.ts#L218)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllPools.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/queries/getAllPools.ts#L122)
+[src/queries/getAllPools.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/queries/getAllPools.ts#L122)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllPools.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/queries/getAllPools.ts#L170)
+[src/queries/getAllPools.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/queries/getAllPools.ts#L170)
 
 ___
 
@@ -138,4 +138,4 @@ ___
 
 #### Defined in
 
-[src/queries/getAllPools.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/queries/getAllPools.ts#L41)
+[src/queries/getAllPools.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/queries/getAllPools.ts#L41)

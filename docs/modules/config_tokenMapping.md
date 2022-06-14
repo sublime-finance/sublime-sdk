@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[src/config/tokenMapping.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/config/tokenMapping.ts#L3)
+[src/config/tokenMapping.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/config/tokenMapping.ts#L3)

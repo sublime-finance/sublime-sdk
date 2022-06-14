@@ -82,7 +82,7 @@ export class EmulatedHelper {
     if (strategy == StrategyType.NoYield) return new BigNumber(amount);
 
     try {
-      return await this.yieldApi.getTokensForShares(strategy, collateralAsset, amount, false);
+      return await this.yieldApi.getTokensForShares(strategy, collateralAsset, amount);
     } catch (ex) {
       return new BigNumber(0);
     }

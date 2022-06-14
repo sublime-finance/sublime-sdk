@@ -39,4 +39,4 @@
 
 #### Defined in
 
-[src/wrappers/factories/IYield__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/factories/IYield__factory.ts#L11)
+[src/wrappers/factories/IYield__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/factories/IYield__factory.ts#L11)

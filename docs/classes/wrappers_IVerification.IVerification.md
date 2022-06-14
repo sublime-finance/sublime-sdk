@@ -174,7 +174,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L176)
+[src/wrappers/IVerification.d.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L176)
 
 ___
 
@@ -215,7 +215,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:235](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L235)
+[src/wrappers/IVerification.d.ts:235](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L235)
 
 ___
 
@@ -243,7 +243,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L194)
+[src/wrappers/IVerification.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L194)
 
 ___
 
@@ -270,7 +270,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L106)
+[src/wrappers/IVerification.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L106)
 
 ___
 
@@ -284,7 +284,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L104)
+[src/wrappers/IVerification.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L104)
 
 ___
 
@@ -311,7 +311,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L269)
+[src/wrappers/IVerification.d.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L269)
 
 ___
 
@@ -451,7 +451,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L65)
+[src/wrappers/IVerification.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L65)
 
 ___
 
@@ -475,7 +475,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L64)
+[src/wrappers/IVerification.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L64)
 
 ___
 
@@ -493,7 +493,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L66)
+[src/wrappers/IVerification.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L66)
 
 ___
 
@@ -564,7 +564,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L144)
+[src/wrappers/IVerification.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L144)
 
 ___
 
@@ -586,7 +586,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L146)
+[src/wrappers/IVerification.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L146)
 
 ___
 
@@ -641,7 +641,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L68)
+[src/wrappers/IVerification.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L68)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -661,7 +661,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L91)
+[src/wrappers/IVerification.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L91)
 
 ___
 
@@ -693,7 +693,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L71)
+[src/wrappers/IVerification.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L71)
 
 ▸ **off**(`eventName`, `listener`): [`IVerification`](wrappers_IVerification.IVerification.md)
 
@@ -714,7 +714,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L92)
+[src/wrappers/IVerification.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L92)
 
 ___
 
@@ -746,7 +746,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L75)
+[src/wrappers/IVerification.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L75)
 
 ▸ **on**(`eventName`, `listener`): [`IVerification`](wrappers_IVerification.IVerification.md)
 
@@ -767,7 +767,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L93)
+[src/wrappers/IVerification.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L93)
 
 ___
 
@@ -799,7 +799,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L79)
+[src/wrappers/IVerification.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L79)
 
 ▸ **once**(`eventName`, `listener`): [`IVerification`](wrappers_IVerification.IVerification.md)
 
@@ -820,7 +820,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L94)
+[src/wrappers/IVerification.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L94)
 
 ___
 
@@ -853,7 +853,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L98)
+[src/wrappers/IVerification.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L98)
 
 ___
 
@@ -875,7 +875,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L148)
+[src/wrappers/IVerification.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L148)
 
 ___
 
@@ -897,7 +897,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L154)
+[src/wrappers/IVerification.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L154)
 
 ___
 
@@ -928,7 +928,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L87)
+[src/wrappers/IVerification.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L87)
 
 ▸ **removeAllListeners**(`eventName?`): [`IVerification`](wrappers_IVerification.IVerification.md)
 
@@ -948,7 +948,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L96)
+[src/wrappers/IVerification.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L96)
 
 ___
 
@@ -980,7 +980,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L83)
+[src/wrappers/IVerification.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L83)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IVerification`](wrappers_IVerification.IVerification.md)
 
@@ -1001,7 +1001,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L95)
+[src/wrappers/IVerification.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L95)
 
 ___
 
@@ -1023,7 +1023,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L160)
+[src/wrappers/IVerification.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L160)
 
 ___
 
@@ -1045,7 +1045,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L166)
+[src/wrappers/IVerification.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L166)
 
 ___
 
@@ -1066,7 +1066,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L172)
+[src/wrappers/IVerification.d.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L172)
 
 ___
 
@@ -1087,7 +1087,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IVerification.d.ts#L174)
+[src/wrappers/IVerification.d.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IVerification.d.ts#L174)
 
 ___
 

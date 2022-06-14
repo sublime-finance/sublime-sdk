@@ -42,4 +42,4 @@
 
 #### Defined in
 
-[src/wrappers/commons.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/commons.ts#L14)
+[src/wrappers/commons.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/commons.ts#L14)

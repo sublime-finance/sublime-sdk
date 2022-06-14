@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IWETH9.d.ts#L38)
+[src/wrappers/IWETH9.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IWETH9.d.ts#L38)
 
 ___
 
@@ -155,7 +155,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IWETH9.d.ts#L24)
+[src/wrappers/IWETH9.d.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IWETH9.d.ts#L24)
 
 ___
 
@@ -324,7 +324,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IWETH9.d.ts#L34)
+[src/wrappers/IWETH9.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IWETH9.d.ts#L34)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -345,7 +345,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IWETH9.d.ts#L35)
+[src/wrappers/IWETH9.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IWETH9.d.ts#L35)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -366,7 +366,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IWETH9.d.ts#L36)
+[src/wrappers/IWETH9.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IWETH9.d.ts#L36)
 
 ___
 
@@ -495,7 +495,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IWETH9.d.ts#L30)
+[src/wrappers/IWETH9.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IWETH9.d.ts#L30)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -516,7 +516,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IWETH9.d.ts#L31)
+[src/wrappers/IWETH9.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IWETH9.d.ts#L31)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -537,7 +537,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/2f42fde/src/wrappers/IWETH9.d.ts#L32)
+[src/wrappers/IWETH9.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/f8c66d9/src/wrappers/IWETH9.d.ts#L32)
 
 ___
 

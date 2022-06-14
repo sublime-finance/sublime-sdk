@@ -135,7 +135,8 @@ export class Base {
     if (strategy == StrategyType.NoYield) return new BigNumber(amount);
 
     try {
-      return await this.yieldApi.getTokensForShares(strategy, collateralAsset, amount, false);
+      const tokensInCompoundYield = await this.yieldApi.getTokensForShares(strategy, collateralAsset, amount);
+      return tokensInCompoundYield;
     } catch (ex) {
       return new BigNumber(0);
     }
