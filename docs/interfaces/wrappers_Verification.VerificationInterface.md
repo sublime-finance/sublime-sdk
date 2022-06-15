@@ -134,7 +134,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L85)
+[src/wrappers/Verification.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L85)
 
 ___
 
@@ -186,7 +186,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L23)
+[src/wrappers/Verification.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L23)
 
 ___
 
@@ -355,7 +355,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L65)
+[src/wrappers/Verification.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L65)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -376,7 +376,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L66)
+[src/wrappers/Verification.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L66)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -397,7 +397,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L67)
+[src/wrappers/Verification.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L67)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -418,7 +418,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L68)
+[src/wrappers/Verification.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L68)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -439,7 +439,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L69)
+[src/wrappers/Verification.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L69)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -460,7 +460,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L70)
+[src/wrappers/Verification.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L70)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -481,7 +481,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L71)
+[src/wrappers/Verification.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L71)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -502,7 +502,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L72)
+[src/wrappers/Verification.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L72)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -523,7 +523,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L73)
+[src/wrappers/Verification.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L73)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -544,7 +544,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L74)
+[src/wrappers/Verification.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L74)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -565,7 +565,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L75)
+[src/wrappers/Verification.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L75)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -586,7 +586,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L76)
+[src/wrappers/Verification.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L76)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -607,7 +607,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L77)
+[src/wrappers/Verification.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L77)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -628,7 +628,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L78)
+[src/wrappers/Verification.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L78)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -649,7 +649,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L79)
+[src/wrappers/Verification.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L79)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -670,7 +670,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L80)
+[src/wrappers/Verification.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L80)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -691,7 +691,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L81)
+[src/wrappers/Verification.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L81)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -712,7 +712,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L82)
+[src/wrappers/Verification.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L82)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -733,7 +733,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L83)
+[src/wrappers/Verification.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L83)
 
 ___
 
@@ -862,7 +862,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L45)
+[src/wrappers/Verification.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L45)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -883,7 +883,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L46)
+[src/wrappers/Verification.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L46)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -904,7 +904,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L47)
+[src/wrappers/Verification.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L47)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -925,7 +925,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L48)
+[src/wrappers/Verification.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L48)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -946,7 +946,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L49)
+[src/wrappers/Verification.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L49)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -967,7 +967,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L50)
+[src/wrappers/Verification.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L50)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -988,7 +988,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L51)
+[src/wrappers/Verification.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L51)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1009,7 +1009,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L52)
+[src/wrappers/Verification.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L52)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1030,7 +1030,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L53)
+[src/wrappers/Verification.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L53)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1051,7 +1051,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L54)
+[src/wrappers/Verification.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L54)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1072,7 +1072,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L55)
+[src/wrappers/Verification.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L55)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1093,7 +1093,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L56)
+[src/wrappers/Verification.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L56)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1114,7 +1114,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L57)
+[src/wrappers/Verification.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L57)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1135,7 +1135,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L58)
+[src/wrappers/Verification.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L58)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1156,7 +1156,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L59)
+[src/wrappers/Verification.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L59)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1177,7 +1177,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L60)
+[src/wrappers/Verification.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L60)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1198,7 +1198,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L61)
+[src/wrappers/Verification.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L61)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1219,7 +1219,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L62)
+[src/wrappers/Verification.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L62)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1240,7 +1240,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L63)
+[src/wrappers/Verification.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L63)
 
 ___
 
@@ -1337,7 +1337,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L98)
+[src/wrappers/Verification.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L98)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1357,7 +1357,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L99)
+[src/wrappers/Verification.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L99)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1377,7 +1377,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L100)
+[src/wrappers/Verification.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L100)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1397,7 +1397,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L101)
+[src/wrappers/Verification.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L101)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1417,7 +1417,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L102)
+[src/wrappers/Verification.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L102)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1437,7 +1437,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L103)
+[src/wrappers/Verification.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L103)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1457,7 +1457,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L104)
+[src/wrappers/Verification.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L104)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1477,7 +1477,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L105)
+[src/wrappers/Verification.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L105)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1497,7 +1497,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L106)
+[src/wrappers/Verification.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L106)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1517,7 +1517,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Verification.d.ts#L107)
+[src/wrappers/Verification.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Verification.d.ts#L107)
 
 ___
 

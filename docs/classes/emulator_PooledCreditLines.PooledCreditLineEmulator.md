@@ -42,6 +42,7 @@
 - [collateralTokensToLiquidate](emulator_PooledCreditLines.PooledCreditLineEmulator.md#collateraltokenstoliquidate)
 - [createdAt](emulator_PooledCreditLines.PooledCreditLineEmulator.md#createdat)
 - [defaultsAt](emulator_PooledCreditLines.PooledCreditLineEmulator.md#defaultsat)
+- [depositedCollateralInShares](emulator_PooledCreditLines.PooledCreditLineEmulator.md#depositedcollateralinshares)
 - [endsAt](emulator_PooledCreditLines.PooledCreditLineEmulator.md#endsat)
 - [getBorrowLimit](emulator_PooledCreditLines.PooledCreditLineEmulator.md#getborrowlimit)
 - [getId](emulator_PooledCreditLines.PooledCreditLineEmulator.md#getid)
@@ -86,7 +87,7 @@
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L25)
+[src/emulator/PooledCreditLines.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L25)
 
 ## Properties
 
@@ -96,7 +97,7 @@
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L20)
+[src/emulator/PooledCreditLines.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L20)
 
 ___
 
@@ -106,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L22)
+[src/emulator/PooledCreditLines.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L22)
 
 ___
 
@@ -116,7 +117,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L21)
+[src/emulator/PooledCreditLines.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L21)
 
 ___
 
@@ -126,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L23)
+[src/emulator/PooledCreditLines.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L23)
 
 ___
 
@@ -136,7 +137,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L19)
+[src/emulator/PooledCreditLines.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L19)
 
 ## Methods
 
@@ -156,7 +157,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L184)
+[src/emulator/PooledCreditLines.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L184)
 
 ___
 
@@ -170,7 +171,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L263)
+[src/emulator/PooledCreditLines.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L263)
 
 ___
 
@@ -184,7 +185,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:255](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L255)
+[src/emulator/PooledCreditLines.ts:255](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L255)
 
 ___
 
@@ -198,7 +199,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L251)
+[src/emulator/PooledCreditLines.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L251)
 
 ___
 
@@ -212,7 +213,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L320)
+[src/emulator/PooledCreditLines.ts:324](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L324)
 
 ___
 
@@ -226,7 +227,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L194)
+[src/emulator/PooledCreditLines.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L194)
 
 ___
 
@@ -240,7 +241,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:220](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L220)
+[src/emulator/PooledCreditLines.ts:220](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L220)
 
 ___
 
@@ -254,7 +255,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L109)
+[src/emulator/PooledCreditLines.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L109)
 
 ___
 
@@ -276,7 +277,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L175)
+[src/emulator/PooledCreditLines.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L175)
 
 ___
 
@@ -290,7 +291,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L84)
+[src/emulator/PooledCreditLines.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L84)
 
 ___
 
@@ -304,7 +305,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L114)
+[src/emulator/PooledCreditLines.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L114)
 
 ___
 
@@ -318,7 +319,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:267](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L267)
+[src/emulator/PooledCreditLines.ts:267](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L267)
 
 ___
 
@@ -332,7 +333,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:291](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L291)
+[src/emulator/PooledCreditLines.ts:291](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L291)
 
 ___
 
@@ -352,7 +353,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:190](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L190)
+[src/emulator/PooledCreditLines.ts:190](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L190)
 
 ___
 
@@ -366,7 +367,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:271](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L271)
+[src/emulator/PooledCreditLines.ts:271](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L271)
 
 ___
 
@@ -380,7 +381,21 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:283](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L283)
+[src/emulator/PooledCreditLines.ts:283](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L283)
+
+___
+
+### depositedCollateralInShares
+
+▸ **depositedCollateralInShares**(): `BigNumber`
+
+#### Returns
+
+`BigNumber`
+
+#### Defined in
+
+[src/emulator/PooledCreditLines.ts:319](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L319)
 
 ___
 
@@ -394,7 +409,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:279](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L279)
+[src/emulator/PooledCreditLines.ts:279](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L279)
 
 ___
 
@@ -408,7 +423,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:239](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L239)
+[src/emulator/PooledCreditLines.ts:239](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L239)
 
 ___
 
@@ -422,7 +437,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L39)
+[src/emulator/PooledCreditLines.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L39)
 
 ___
 
@@ -436,7 +451,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L43)
+[src/emulator/PooledCreditLines.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L43)
 
 ___
 
@@ -450,7 +465,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:235](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L235)
+[src/emulator/PooledCreditLines.ts:235](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L235)
 
 ___
 
@@ -470,7 +485,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L179)
+[src/emulator/PooledCreditLines.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L179)
 
 ___
 
@@ -484,7 +499,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L118)
+[src/emulator/PooledCreditLines.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L118)
 
 ___
 
@@ -498,7 +513,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:295](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L295)
+[src/emulator/PooledCreditLines.ts:295](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L295)
 
 ___
 
@@ -512,7 +527,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:259](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L259)
+[src/emulator/PooledCreditLines.ts:259](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L259)
 
 ___
 
@@ -526,7 +541,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:307](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L307)
+[src/emulator/PooledCreditLines.ts:307](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L307)
 
 ___
 
@@ -540,7 +555,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:303](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L303)
+[src/emulator/PooledCreditLines.ts:303](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L303)
 
 ___
 
@@ -554,7 +569,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:287](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L287)
+[src/emulator/PooledCreditLines.ts:287](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L287)
 
 ___
 
@@ -568,7 +583,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:325](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L325)
+[src/emulator/PooledCreditLines.ts:329](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L329)
 
 ___
 
@@ -593,7 +608,7 @@ ___
 
 #### Defined in
 
-[src/emulator/Helpers.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/Helpers.ts#L10)
+[src/emulator/Helpers.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/Helpers.ts#L10)
 
 ___
 
@@ -607,7 +622,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:315](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L315)
+[src/emulator/PooledCreditLines.ts:315](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L315)
 
 ___
 
@@ -625,7 +640,7 @@ ___
 
 #### Defined in
 
-[src/emulator/Helpers.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/Helpers.ts#L6)
+[src/emulator/Helpers.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/Helpers.ts#L6)
 
 ___
 
@@ -639,7 +654,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L275)
+[src/emulator/PooledCreditLines.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L275)
 
 ___
 
@@ -653,7 +668,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L243)
+[src/emulator/PooledCreditLines.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L243)
 
 ___
 
@@ -667,7 +682,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:299](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L299)
+[src/emulator/PooledCreditLines.ts:299](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L299)
 
 ___
 
@@ -681,7 +696,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:311](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L311)
+[src/emulator/PooledCreditLines.ts:311](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L311)
 
 ___
 
@@ -695,7 +710,7 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L247)
+[src/emulator/PooledCreditLines.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L247)
 
 ___
 
@@ -709,4 +724,4 @@ ___
 
 #### Defined in
 
-[src/emulator/PooledCreditLines.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/emulator/PooledCreditLines.ts#L55)
+[src/emulator/PooledCreditLines.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/emulator/PooledCreditLines.ts#L55)

@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/queries/getPool.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/queries/getPool.ts#L3)
+[src/queries/getPool.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPool.ts#L3)

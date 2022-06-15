@@ -214,7 +214,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:348](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L348)
+[src/wrappers/MockTwitterVerifier.d.ts:348](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L348)
 
 ___
 
@@ -275,7 +275,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:469](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L469)
+[src/wrappers/MockTwitterVerifier.d.ts:469](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L469)
 
 ___
 
@@ -299,7 +299,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:450](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L450)
+[src/wrappers/MockTwitterVerifier.d.ts:450](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L450)
 
 ___
 
@@ -346,7 +346,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L131)
+[src/wrappers/MockTwitterVerifier.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L131)
 
 ___
 
@@ -360,7 +360,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L129)
+[src/wrappers/MockTwitterVerifier.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L129)
 
 ___
 
@@ -407,7 +407,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:571](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L571)
+[src/wrappers/MockTwitterVerifier.d.ts:571](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L571)
 
 ___
 
@@ -547,7 +547,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L90)
+[src/wrappers/MockTwitterVerifier.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L90)
 
 ___
 
@@ -571,7 +571,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L89)
+[src/wrappers/MockTwitterVerifier.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L89)
 
 ___
 
@@ -589,7 +589,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L91)
+[src/wrappers/MockTwitterVerifier.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L91)
 
 ___
 
@@ -663,7 +663,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L242)
+[src/wrappers/MockTwitterVerifier.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L242)
 
 ___
 
@@ -688,7 +688,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L251)
+[src/wrappers/MockTwitterVerifier.d.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L251)
 
 ___
 
@@ -743,7 +743,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L93)
+[src/wrappers/MockTwitterVerifier.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L93)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -763,7 +763,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L116)
+[src/wrappers/MockTwitterVerifier.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L116)
 
 ___
 
@@ -795,7 +795,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L96)
+[src/wrappers/MockTwitterVerifier.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L96)
 
 ▸ **off**(`eventName`, `listener`): [`MockTwitterVerifier`](wrappers_MockTwitterVerifier.MockTwitterVerifier.md)
 
@@ -816,7 +816,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L117)
+[src/wrappers/MockTwitterVerifier.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L117)
 
 ___
 
@@ -848,7 +848,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L100)
+[src/wrappers/MockTwitterVerifier.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L100)
 
 ▸ **on**(`eventName`, `listener`): [`MockTwitterVerifier`](wrappers_MockTwitterVerifier.MockTwitterVerifier.md)
 
@@ -869,7 +869,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L118)
+[src/wrappers/MockTwitterVerifier.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L118)
 
 ___
 
@@ -901,7 +901,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L104)
+[src/wrappers/MockTwitterVerifier.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L104)
 
 ▸ **once**(`eventName`, `listener`): [`MockTwitterVerifier`](wrappers_MockTwitterVerifier.MockTwitterVerifier.md)
 
@@ -922,7 +922,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L119)
+[src/wrappers/MockTwitterVerifier.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L119)
 
 ___
 
@@ -942,7 +942,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:260](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L260)
+[src/wrappers/MockTwitterVerifier.d.ts:260](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L260)
 
 ___
 
@@ -962,7 +962,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L262)
+[src/wrappers/MockTwitterVerifier.d.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L262)
 
 ___
 
@@ -995,7 +995,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:123](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L123)
+[src/wrappers/MockTwitterVerifier.d.ts:123](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L123)
 
 ___
 
@@ -1022,7 +1022,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L264)
+[src/wrappers/MockTwitterVerifier.d.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L264)
 
 ___
 
@@ -1049,7 +1049,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L275)
+[src/wrappers/MockTwitterVerifier.d.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L275)
 
 ___
 
@@ -1073,7 +1073,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:286](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L286)
+[src/wrappers/MockTwitterVerifier.d.ts:286](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L286)
 
 ___
 
@@ -1097,7 +1097,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L294)
+[src/wrappers/MockTwitterVerifier.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L294)
 
 ___
 
@@ -1128,7 +1128,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L112)
+[src/wrappers/MockTwitterVerifier.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L112)
 
 ▸ **removeAllListeners**(`eventName?`): [`MockTwitterVerifier`](wrappers_MockTwitterVerifier.MockTwitterVerifier.md)
 
@@ -1148,7 +1148,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L121)
+[src/wrappers/MockTwitterVerifier.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L121)
 
 ___
 
@@ -1180,7 +1180,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L108)
+[src/wrappers/MockTwitterVerifier.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L108)
 
 ▸ **removeListener**(`eventName`, `listener`): [`MockTwitterVerifier`](wrappers_MockTwitterVerifier.MockTwitterVerifier.md)
 
@@ -1201,7 +1201,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L120)
+[src/wrappers/MockTwitterVerifier.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L120)
 
 ___
 
@@ -1221,7 +1221,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L302)
+[src/wrappers/MockTwitterVerifier.d.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L302)
 
 ___
 
@@ -1241,7 +1241,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:304](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L304)
+[src/wrappers/MockTwitterVerifier.d.ts:304](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L304)
 
 ___
 
@@ -1261,7 +1261,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L306)
+[src/wrappers/MockTwitterVerifier.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L306)
 
 ___
 
@@ -1281,7 +1281,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L308)
+[src/wrappers/MockTwitterVerifier.d.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L308)
 
 ___
 
@@ -1302,7 +1302,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L310)
+[src/wrappers/MockTwitterVerifier.d.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L310)
 
 ___
 
@@ -1323,7 +1323,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L312)
+[src/wrappers/MockTwitterVerifier.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L312)
 
 ___
 
@@ -1344,7 +1344,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L314)
+[src/wrappers/MockTwitterVerifier.d.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L314)
 
 ___
 
@@ -1365,7 +1365,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:316](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L316)
+[src/wrappers/MockTwitterVerifier.d.ts:316](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L316)
 
 ___
 
@@ -1385,7 +1385,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L318)
+[src/wrappers/MockTwitterVerifier.d.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L318)
 
 ___
 
@@ -1405,7 +1405,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L320)
+[src/wrappers/MockTwitterVerifier.d.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L320)
 
 ___
 
@@ -1426,7 +1426,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L322)
+[src/wrappers/MockTwitterVerifier.d.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L322)
 
 ___
 
@@ -1447,7 +1447,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:324](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L324)
+[src/wrappers/MockTwitterVerifier.d.ts:324](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L324)
 
 ___
 
@@ -1468,7 +1468,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:326](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L326)
+[src/wrappers/MockTwitterVerifier.d.ts:326](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L326)
 
 ___
 
@@ -1489,7 +1489,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:328](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L328)
+[src/wrappers/MockTwitterVerifier.d.ts:328](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L328)
 
 ___
 
@@ -1510,7 +1510,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:333](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L333)
+[src/wrappers/MockTwitterVerifier.d.ts:333](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L333)
 
 ___
 
@@ -1531,7 +1531,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:335](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L335)
+[src/wrappers/MockTwitterVerifier.d.ts:335](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L335)
 
 ___
 
@@ -1552,7 +1552,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:340](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L340)
+[src/wrappers/MockTwitterVerifier.d.ts:340](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L340)
 
 ___
 
@@ -1573,7 +1573,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:342](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L342)
+[src/wrappers/MockTwitterVerifier.d.ts:342](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L342)
 
 ___
 
@@ -1593,7 +1593,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L344)
+[src/wrappers/MockTwitterVerifier.d.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L344)
 
 ___
 
@@ -1613,7 +1613,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:346](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/MockTwitterVerifier.d.ts#L346)
+[src/wrappers/MockTwitterVerifier.d.ts:346](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockTwitterVerifier.d.ts#L346)
 
 ___
 

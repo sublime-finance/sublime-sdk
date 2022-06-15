@@ -245,8 +245,8 @@ export class PooledCreditLineCalls extends CreditLineCalls {
    * @param id
    * @returns
    */
-  async getPooledCreditLineById(id: number): Promise<PooledCreditLineDetail[]> {
-    const result = await getPooledCreditLineById(this.subgraphUrl, id);
+  async getPooledCreditLineById(id: number | string): Promise<PooledCreditLineDetail[]> {
+    const result = await getPooledCreditLineById(this.subgraphUrl, new BigNumber(id).toNumber());
     const lpData = result.map((a) => a.lenderPool);
     const pclData = result;
     const prices = await this.refreshTokenData(pclData);

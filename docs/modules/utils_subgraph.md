@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/utils/subgraph.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/utils/subgraph.ts#L3)
+[src/utils/subgraph.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/utils/subgraph.ts#L3)

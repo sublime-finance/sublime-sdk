@@ -170,7 +170,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L116)
+[src/wrappers/Ownable.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L116)
 
 ___
 
@@ -209,7 +209,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L137)
+[src/wrappers/Ownable.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L137)
 
 ___
 
@@ -229,7 +229,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L130)
+[src/wrappers/Ownable.d.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L130)
 
 ___
 
@@ -254,7 +254,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L87)
+[src/wrappers/Ownable.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L87)
 
 ___
 
@@ -268,7 +268,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L85)
+[src/wrappers/Ownable.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L85)
 
 ___
 
@@ -293,7 +293,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L151)
+[src/wrappers/Ownable.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L151)
 
 ___
 
@@ -433,7 +433,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L46)
+[src/wrappers/Ownable.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L46)
 
 ___
 
@@ -457,7 +457,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L45)
+[src/wrappers/Ownable.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L45)
 
 ___
 
@@ -475,7 +475,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L47)
+[src/wrappers/Ownable.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L47)
 
 ___
 
@@ -579,7 +579,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L49)
+[src/wrappers/Ownable.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L49)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -599,7 +599,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L72)
+[src/wrappers/Ownable.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L72)
 
 ___
 
@@ -631,7 +631,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L52)
+[src/wrappers/Ownable.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L52)
 
 ▸ **off**(`eventName`, `listener`): [`Ownable`](wrappers_Ownable.Ownable.md)
 
@@ -652,7 +652,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L73)
+[src/wrappers/Ownable.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L73)
 
 ___
 
@@ -684,7 +684,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L56)
+[src/wrappers/Ownable.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L56)
 
 ▸ **on**(`eventName`, `listener`): [`Ownable`](wrappers_Ownable.Ownable.md)
 
@@ -705,7 +705,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L74)
+[src/wrappers/Ownable.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L74)
 
 ___
 
@@ -737,7 +737,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L60)
+[src/wrappers/Ownable.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L60)
 
 ▸ **once**(`eventName`, `listener`): [`Ownable`](wrappers_Ownable.Ownable.md)
 
@@ -758,7 +758,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L75)
+[src/wrappers/Ownable.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L75)
 
 ___
 
@@ -778,7 +778,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L104)
+[src/wrappers/Ownable.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L104)
 
 ___
 
@@ -798,7 +798,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L106)
+[src/wrappers/Ownable.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L106)
 
 ___
 
@@ -831,7 +831,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L79)
+[src/wrappers/Ownable.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L79)
 
 ___
 
@@ -862,7 +862,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L68)
+[src/wrappers/Ownable.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L68)
 
 ▸ **removeAllListeners**(`eventName?`): [`Ownable`](wrappers_Ownable.Ownable.md)
 
@@ -882,7 +882,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L77)
+[src/wrappers/Ownable.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L77)
 
 ___
 
@@ -914,7 +914,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L64)
+[src/wrappers/Ownable.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L64)
 
 ▸ **removeListener**(`eventName`, `listener`): [`Ownable`](wrappers_Ownable.Ownable.md)
 
@@ -935,7 +935,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L76)
+[src/wrappers/Ownable.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L76)
 
 ___
 
@@ -955,7 +955,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L108)
+[src/wrappers/Ownable.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L108)
 
 ___
 
@@ -975,7 +975,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L110)
+[src/wrappers/Ownable.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L110)
 
 ___
 
@@ -996,7 +996,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L112)
+[src/wrappers/Ownable.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L112)
 
 ___
 
@@ -1017,7 +1017,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Ownable.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/Ownable.d.ts#L114)
+[src/wrappers/Ownable.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Ownable.d.ts#L114)
 
 ___
 

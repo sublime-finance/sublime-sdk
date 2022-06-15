@@ -39,4 +39,4 @@
 
 #### Defined in
 
-[src/wrappers/factories/ITwitterVerifier__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/factories/ITwitterVerifier__factory.ts#L11)
+[src/wrappers/factories/ITwitterVerifier__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/factories/ITwitterVerifier__factory.ts#L11)

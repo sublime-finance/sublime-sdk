@@ -316,6 +316,10 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return this.pooledCreditLineState.minBorrowAmount;
   }
 
+  public depositedCollateralInShares(): BigNumber {
+    return this.pooledCreditLineState.depositedCollateralInShares;
+  }
+
   // to-do
   public borrowerVerifier(): string {
     return this.pooledCreditLineState.lenderVerifier;

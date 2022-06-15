@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/ITwitterVerifier.d.ts#L34)
+[src/wrappers/ITwitterVerifier.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L34)
 
 ___
 
@@ -154,7 +154,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/ITwitterVerifier.d.ts#L23)
+[src/wrappers/ITwitterVerifier.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L23)
 
 ___
 
@@ -323,7 +323,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/ITwitterVerifier.d.ts#L31)
+[src/wrappers/ITwitterVerifier.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L31)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -344,7 +344,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/ITwitterVerifier.d.ts#L32)
+[src/wrappers/ITwitterVerifier.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L32)
 
 ___
 
@@ -473,7 +473,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/ITwitterVerifier.d.ts#L28)
+[src/wrappers/ITwitterVerifier.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L28)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -494,7 +494,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/691c55a/src/wrappers/ITwitterVerifier.d.ts#L29)
+[src/wrappers/ITwitterVerifier.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L29)
 
 ___
 

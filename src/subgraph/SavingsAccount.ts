@@ -163,7 +163,7 @@ export class SavingsAccountCalls extends PoolCalls {
           amountAllocatedToCreditLines: { value: '0', decimals: this.tokenManager.getTokenDecimals(requiredElements[0].token.address) },
           balanceUSD: { value: totalBalanceUSD.toString(), decimals: 0 },
           strategyBalance: [...this.transformToSavingsAccountStrategyBalanceDisplay(requiredElements, aprs, prices)],
-          APR: totalAprWeight.dividedBy(totalBalance).dividedBy(SCALING_FACTOR).toString(),
+          APR: totalAprWeight.dividedBy(totalBalance).dividedBy(SCALING_FACTOR).toFixed(),
         });
       }
     }
@@ -187,7 +187,7 @@ export class SavingsAccountCalls extends PoolCalls {
             .toString(),
           decimals: 0,
         },
-        APR: aprs[a.strategy.address][a.token.address].div(SCALING_FACTOR).toString(),
+        APR: aprs[a.strategy.address][a.token.address].div(SCALING_FACTOR).toFixed(),
       };
     });
   }
