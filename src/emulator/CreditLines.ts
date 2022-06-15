@@ -191,22 +191,14 @@ export class CreditLineEmulator extends EmulatorHelper {
   }
 
   public strategy(): string {
-    return this.creditLineState.strategy;
+    return this.creditLineState.borrowAssetStrategy;
   }
 
-  /**
-   * @description To-Do
-   * @returns
-   */
-  public borrowStrategy(): string {
-    return this.creditLineState.strategy;
+  public borrowAssetStrategy(): string {
+    return this.creditLineState.borrowAssetStrategy;
   }
 
-  /**
-   * @description To-Do
-   * @returns
-   */
-  public collateralStrategy(): string {
-    return this.creditLineState.strategy;
+  public collateralAssetStrategy(): string {
+    return this.creditLineState.collateralAssetStrategy;
   }
 }

@@ -19,7 +19,8 @@ export interface CreditLineState {
   lender: string;
   borrower: string;
   requestByLender: boolean;
-  strategy: string;
+  borrowAssetStrategy: string;
+  collateralAssetStrategy: string;
 }
 
 export interface CreditLineGlobals {

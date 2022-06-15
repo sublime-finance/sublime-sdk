@@ -10,10 +10,12 @@
 
 - [autoLiquidation](types_emulator_creditLines.CreditLineState.md#autoliquidation)
 - [borrowAsset](types_emulator_creditLines.CreditLineState.md#borrowasset)
+- [borrowAssetStrategy](types_emulator_creditLines.CreditLineState.md#borrowassetstrategy)
 - [borrowLimit](types_emulator_creditLines.CreditLineState.md#borrowlimit)
 - [borrowRate](types_emulator_creditLines.CreditLineState.md#borrowrate)
 - [borrower](types_emulator_creditLines.CreditLineState.md#borrower)
 - [collateralAsset](types_emulator_creditLines.CreditLineState.md#collateralasset)
+- [collateralAssetStrategy](types_emulator_creditLines.CreditLineState.md#collateralassetstrategy)
 - [collateralShareInStrategy](types_emulator_creditLines.CreditLineState.md#collateralshareinstrategy)
 - [createdAt](types_emulator_creditLines.CreditLineState.md#createdat)
 - [creditLineStatus](types_emulator_creditLines.CreditLineState.md#creditlinestatus)
@@ -24,7 +26,6 @@
 - [lender](types_emulator_creditLines.CreditLineState.md#lender)
 - [principal](types_emulator_creditLines.CreditLineState.md#principal)
 - [requestByLender](types_emulator_creditLines.CreditLineState.md#requestbylender)
-- [strategy](types_emulator_creditLines.CreditLineState.md#strategy)
 - [totalInterestRepaid](types_emulator_creditLines.CreditLineState.md#totalinterestrepaid)
 
 ## Properties
@@ -35,7 +36,7 @@
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L18)
+[src/types/emulator/creditLines.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L18)
 
 ___
 
@@ -45,7 +46,17 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L16)
+[src/types/emulator/creditLines.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L16)
+
+___
+
+### borrowAssetStrategy
+
+• **borrowAssetStrategy**: `string`
+
+#### Defined in
+
+[src/types/emulator/creditLines.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L22)
 
 ___
 
@@ -55,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L14)
+[src/types/emulator/creditLines.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L14)
 
 ___
 
@@ -65,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:9](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L9)
+[src/types/emulator/creditLines.ts:9](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L9)
 
 ___
 
@@ -75,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L20)
+[src/types/emulator/creditLines.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L20)
 
 ___
 
@@ -85,7 +96,17 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L17)
+[src/types/emulator/creditLines.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L17)
+
+___
+
+### collateralAssetStrategy
+
+• **collateralAssetStrategy**: `string`
+
+#### Defined in
+
+[src/types/emulator/creditLines.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L23)
 
 ___
 
@@ -95,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L6)
+[src/types/emulator/creditLines.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L6)
 
 ___
 
@@ -105,7 +126,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L15)
+[src/types/emulator/creditLines.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L15)
 
 ___
 
@@ -115,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L13)
+[src/types/emulator/creditLines.ts:13](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L13)
 
 ___
 
@@ -125,7 +146,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:5](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L5)
+[src/types/emulator/creditLines.ts:5](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L5)
 
 ___
 
@@ -135,7 +156,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L12)
+[src/types/emulator/creditLines.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L12)
 
 ___
 
@@ -145,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L10)
+[src/types/emulator/creditLines.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L10)
 
 ___
 
@@ -155,7 +176,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:8](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L8)
+[src/types/emulator/creditLines.ts:8](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L8)
 
 ___
 
@@ -165,7 +186,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L19)
+[src/types/emulator/creditLines.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L19)
 
 ___
 
@@ -175,7 +196,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:7](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L7)
+[src/types/emulator/creditLines.ts:7](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L7)
 
 ___
 
@@ -185,17 +206,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L21)
-
-___
-
-### strategy
-
-• **strategy**: `string`
-
-#### Defined in
-
-[src/types/emulator/creditLines.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L22)
+[src/types/emulator/creditLines.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L21)
 
 ___
 
@@ -205,4 +216,4 @@ ___
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/types/emulator/creditLines.ts#L11)
+[src/types/emulator/creditLines.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/types/emulator/creditLines.ts#L11)

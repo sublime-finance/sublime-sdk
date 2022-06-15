@@ -127,7 +127,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L73)
+[src/wrappers/MockToken.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L73)
 
 ___
 
@@ -175,7 +175,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L23)
+[src/wrappers/MockToken.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L23)
 
 ___
 
@@ -344,7 +344,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L57)
+[src/wrappers/MockToken.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L57)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -365,7 +365,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L58)
+[src/wrappers/MockToken.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L58)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -386,7 +386,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L59)
+[src/wrappers/MockToken.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L59)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -407,7 +407,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L60)
+[src/wrappers/MockToken.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L60)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -428,7 +428,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L61)
+[src/wrappers/MockToken.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L61)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -449,7 +449,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L62)
+[src/wrappers/MockToken.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L62)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -470,7 +470,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L63)
+[src/wrappers/MockToken.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L63)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -491,7 +491,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L64)
+[src/wrappers/MockToken.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L64)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -512,7 +512,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L65)
+[src/wrappers/MockToken.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L65)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -533,7 +533,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L66)
+[src/wrappers/MockToken.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L66)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -554,7 +554,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L67)
+[src/wrappers/MockToken.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L67)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -575,7 +575,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L68)
+[src/wrappers/MockToken.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L68)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -596,7 +596,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L69)
+[src/wrappers/MockToken.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L69)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -617,7 +617,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L70)
+[src/wrappers/MockToken.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L70)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -638,7 +638,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L71)
+[src/wrappers/MockToken.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L71)
 
 ___
 
@@ -767,7 +767,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L41)
+[src/wrappers/MockToken.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L41)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -788,7 +788,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L42)
+[src/wrappers/MockToken.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L42)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -809,7 +809,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L43)
+[src/wrappers/MockToken.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L43)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -830,7 +830,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L44)
+[src/wrappers/MockToken.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L44)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -851,7 +851,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L45)
+[src/wrappers/MockToken.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L45)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -872,7 +872,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L46)
+[src/wrappers/MockToken.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L46)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -893,7 +893,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L47)
+[src/wrappers/MockToken.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L47)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -914,7 +914,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L48)
+[src/wrappers/MockToken.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L48)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -935,7 +935,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L49)
+[src/wrappers/MockToken.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L49)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -956,7 +956,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L50)
+[src/wrappers/MockToken.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L50)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -977,7 +977,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L51)
+[src/wrappers/MockToken.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L51)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -998,7 +998,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L52)
+[src/wrappers/MockToken.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L52)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1019,7 +1019,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L53)
+[src/wrappers/MockToken.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L53)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1040,7 +1040,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L54)
+[src/wrappers/MockToken.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L54)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1061,7 +1061,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L55)
+[src/wrappers/MockToken.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L55)
 
 ___
 
@@ -1158,7 +1158,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L79)
+[src/wrappers/MockToken.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L79)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1178,7 +1178,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L80)
+[src/wrappers/MockToken.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L80)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1198,7 +1198,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/MockToken.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockToken.d.ts#L81)
+[src/wrappers/MockToken.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/MockToken.d.ts#L81)
 
 ___
 

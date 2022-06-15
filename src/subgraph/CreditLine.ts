@@ -457,7 +457,8 @@ export class CreditLineCalls extends Base {
           lender: a.lender,
           borrower: a.borrower,
           requestByLender: new Boolean(a.requestByLender).valueOf(),
-          strategy: a.strategy,
+          borrowAssetStrategy: a.borrowAssetStrategy,
+          collateralAssetStrategy: a.collateralAssetStrategy,
         },
         {
           collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.strategy][a.collateralAsset]),

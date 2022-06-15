@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/SavingsAccountEthUtils.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/SavingsAccountEthUtils.d.ts#L37)
+[src/wrappers/SavingsAccountEthUtils.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/SavingsAccountEthUtils.d.ts#L37)
 
 ___
 
@@ -155,7 +155,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/SavingsAccountEthUtils.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/SavingsAccountEthUtils.d.ts#L23)
+[src/wrappers/SavingsAccountEthUtils.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/SavingsAccountEthUtils.d.ts#L23)
 
 ___
 
@@ -324,7 +324,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/SavingsAccountEthUtils.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/SavingsAccountEthUtils.d.ts#L33)
+[src/wrappers/SavingsAccountEthUtils.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/SavingsAccountEthUtils.d.ts#L33)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -345,7 +345,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/SavingsAccountEthUtils.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/SavingsAccountEthUtils.d.ts#L34)
+[src/wrappers/SavingsAccountEthUtils.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/SavingsAccountEthUtils.d.ts#L34)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -366,7 +366,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/SavingsAccountEthUtils.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/SavingsAccountEthUtils.d.ts#L35)
+[src/wrappers/SavingsAccountEthUtils.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/SavingsAccountEthUtils.d.ts#L35)
 
 ___
 
@@ -495,7 +495,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/SavingsAccountEthUtils.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/SavingsAccountEthUtils.d.ts#L29)
+[src/wrappers/SavingsAccountEthUtils.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/SavingsAccountEthUtils.d.ts#L29)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -516,7 +516,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/SavingsAccountEthUtils.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/SavingsAccountEthUtils.d.ts#L30)
+[src/wrappers/SavingsAccountEthUtils.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/SavingsAccountEthUtils.d.ts#L30)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -537,7 +537,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/SavingsAccountEthUtils.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/SavingsAccountEthUtils.d.ts#L31)
+[src/wrappers/SavingsAccountEthUtils.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/SavingsAccountEthUtils.d.ts#L31)
 
 ___
 

@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/queries/prices.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/prices.ts#L4)
+[src/queries/prices.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/prices.ts#L4)

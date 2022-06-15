@@ -126,7 +126,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L30)
+[src/wrappers/PausableUpgradeable.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L30)
 
 ___
 
@@ -160,7 +160,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L22)
+[src/wrappers/PausableUpgradeable.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L22)
 
 ___
 
@@ -329,7 +329,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L28)
+[src/wrappers/PausableUpgradeable.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L28)
 
 ___
 
@@ -458,7 +458,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L26)
+[src/wrappers/PausableUpgradeable.d.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L26)
 
 ___
 
@@ -555,7 +555,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L35)
+[src/wrappers/PausableUpgradeable.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L35)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -575,7 +575,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L36)
+[src/wrappers/PausableUpgradeable.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L36)
 
 ___
 

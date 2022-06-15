@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:706](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L706)
+[src/queries/getAllCreditLines.ts:712](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L712)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L37)
+[src/queries/getAllCreditLines.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L38)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:350](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L350)
+[src/queries/getAllCreditLines.ts:356](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L356)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:359](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L359)
+[src/queries/getAllCreditLines.ts:365](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L365)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L157)
+[src/queries/getAllCreditLines.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L160)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L3)
+[src/queries/getAllCreditLines.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L3)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:341](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L341)
+[src/queries/getAllCreditLines.ts:347](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L347)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:404](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L404)
+[src/queries/getAllCreditLines.ts:410](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L410)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:474](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L474)
+[src/queries/getAllCreditLines.ts:480](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L480)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:626](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L626)
+[src/queries/getAllCreditLines.ts:632](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L632)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:546](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L546)
+[src/queries/getAllCreditLines.ts:552](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L552)
 
 ___
 
@@ -289,7 +289,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:439](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L439)
+[src/queries/getAllCreditLines.ts:445](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L445)
 
 ___
 
@@ -311,7 +311,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:509](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L509)
+[src/queries/getAllCreditLines.ts:515](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L515)
 
 ___
 
@@ -334,7 +334,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:666](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L666)
+[src/queries/getAllCreditLines.ts:672](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L672)
 
 ___
 
@@ -357,7 +357,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:586](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L586)
+[src/queries/getAllCreditLines.ts:592](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L592)
 
 ___
 
@@ -380,7 +380,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:386](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L386)
+[src/queries/getAllCreditLines.ts:392](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L392)
 
 ___
 
@@ -403,7 +403,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:395](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L395)
+[src/queries/getAllCreditLines.ts:401](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L401)
 
 ___
 
@@ -426,7 +426,7 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:377](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L377)
+[src/queries/getAllCreditLines.ts:383](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L383)
 
 ___
 
@@ -449,4 +449,4 @@ ___
 
 #### Defined in
 
-[src/queries/getAllCreditLines.ts:368](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/queries/getAllCreditLines.ts#L368)
+[src/queries/getAllCreditLines.ts:374](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/queries/getAllCreditLines.ts#L374)

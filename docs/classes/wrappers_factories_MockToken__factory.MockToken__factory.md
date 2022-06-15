@@ -52,7 +52,7 @@ ContractFactory.constructor
 
 #### Defined in
 
-[src/wrappers/factories/MockToken__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/MockToken__factory.ts#L11)
+[src/wrappers/factories/MockToken__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/factories/MockToken__factory.ts#L11)
 
 ## Properties
 
@@ -118,7 +118,7 @@ ContractFactory.attach
 
 #### Defined in
 
-[src/wrappers/factories/MockToken__factory.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/MockToken__factory.ts#L35)
+[src/wrappers/factories/MockToken__factory.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/factories/MockToken__factory.ts#L35)
 
 ___
 
@@ -142,7 +142,7 @@ ContractFactory.connect
 
 #### Defined in
 
-[src/wrappers/factories/MockToken__factory.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/MockToken__factory.ts#L38)
+[src/wrappers/factories/MockToken__factory.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/factories/MockToken__factory.ts#L38)
 
 ___
 
@@ -171,7 +171,7 @@ ContractFactory.deploy
 
 #### Defined in
 
-[src/wrappers/factories/MockToken__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/MockToken__factory.ts#L15)
+[src/wrappers/factories/MockToken__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/factories/MockToken__factory.ts#L15)
 
 ___
 
@@ -200,7 +200,7 @@ ContractFactory.getDeployTransaction
 
 #### Defined in
 
-[src/wrappers/factories/MockToken__factory.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/MockToken__factory.ts#L25)
+[src/wrappers/factories/MockToken__factory.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/factories/MockToken__factory.ts#L25)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/factories/MockToken__factory.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/MockToken__factory.ts#L41)
+[src/wrappers/factories/MockToken__factory.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/factories/MockToken__factory.ts#L41)
 
 ___
 

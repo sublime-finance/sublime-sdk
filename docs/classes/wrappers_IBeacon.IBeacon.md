@@ -162,7 +162,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L86)
+[src/wrappers/IBeacon.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L86)
 
 ___
 
@@ -197,7 +197,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L94)
+[src/wrappers/IBeacon.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L94)
 
 ___
 
@@ -211,7 +211,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L92)
+[src/wrappers/IBeacon.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L92)
 
 ___
 
@@ -232,7 +232,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L76)
+[src/wrappers/IBeacon.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L76)
 
 ___
 
@@ -246,7 +246,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L74)
+[src/wrappers/IBeacon.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L74)
 
 ___
 
@@ -267,7 +267,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L100)
+[src/wrappers/IBeacon.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L100)
 
 ___
 
@@ -407,7 +407,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L35)
+[src/wrappers/IBeacon.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L35)
 
 ___
 
@@ -431,7 +431,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L34)
+[src/wrappers/IBeacon.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L34)
 
 ___
 
@@ -449,7 +449,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L36)
+[src/wrappers/IBeacon.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L36)
 
 ___
 
@@ -518,7 +518,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L82)
+[src/wrappers/IBeacon.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L82)
 
 ___
 
@@ -538,7 +538,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L84)
+[src/wrappers/IBeacon.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L84)
 
 ___
 
@@ -593,7 +593,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L38)
+[src/wrappers/IBeacon.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L38)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -613,7 +613,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L61)
+[src/wrappers/IBeacon.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L61)
 
 ___
 
@@ -645,7 +645,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L41)
+[src/wrappers/IBeacon.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L41)
 
 ▸ **off**(`eventName`, `listener`): [`IBeacon`](wrappers_IBeacon.IBeacon.md)
 
@@ -666,7 +666,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L62)
+[src/wrappers/IBeacon.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L62)
 
 ___
 
@@ -698,7 +698,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L45)
+[src/wrappers/IBeacon.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L45)
 
 ▸ **on**(`eventName`, `listener`): [`IBeacon`](wrappers_IBeacon.IBeacon.md)
 
@@ -719,7 +719,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L63)
+[src/wrappers/IBeacon.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L63)
 
 ___
 
@@ -751,7 +751,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L49)
+[src/wrappers/IBeacon.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L49)
 
 ▸ **once**(`eventName`, `listener`): [`IBeacon`](wrappers_IBeacon.IBeacon.md)
 
@@ -772,7 +772,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L64)
+[src/wrappers/IBeacon.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L64)
 
 ___
 
@@ -805,7 +805,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L68)
+[src/wrappers/IBeacon.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L68)
 
 ___
 
@@ -836,7 +836,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L57)
+[src/wrappers/IBeacon.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L57)
 
 ▸ **removeAllListeners**(`eventName?`): [`IBeacon`](wrappers_IBeacon.IBeacon.md)
 
@@ -856,7 +856,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L66)
+[src/wrappers/IBeacon.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L66)
 
 ___
 
@@ -888,7 +888,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L53)
+[src/wrappers/IBeacon.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L53)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IBeacon`](wrappers_IBeacon.IBeacon.md)
 
@@ -909,7 +909,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IBeacon.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IBeacon.d.ts#L65)
+[src/wrappers/IBeacon.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IBeacon.d.ts#L65)
 
 ___
 

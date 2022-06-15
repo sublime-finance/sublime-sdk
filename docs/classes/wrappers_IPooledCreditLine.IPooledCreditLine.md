@@ -186,7 +186,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L199)
+[src/wrappers/IPooledCreditLine.d.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L199)
 
 ___
 
@@ -233,7 +233,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:231](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L231)
+[src/wrappers/IPooledCreditLine.d.ts:231](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L231)
 
 ___
 
@@ -247,7 +247,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L229)
+[src/wrappers/IPooledCreditLine.d.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L229)
 
 ___
 
@@ -280,7 +280,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L95)
+[src/wrappers/IPooledCreditLine.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L95)
 
 ___
 
@@ -294,7 +294,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L93)
+[src/wrappers/IPooledCreditLine.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L93)
 
 ___
 
@@ -327,7 +327,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:271](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L271)
+[src/wrappers/IPooledCreditLine.d.ts:271](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L271)
 
 ___
 
@@ -465,7 +465,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L148)
+[src/wrappers/IPooledCreditLine.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L148)
 
 ___
 
@@ -487,7 +487,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L154)
+[src/wrappers/IPooledCreditLine.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L154)
 
 ___
 
@@ -511,7 +511,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L54)
+[src/wrappers/IPooledCreditLine.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L54)
 
 ___
 
@@ -532,7 +532,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L160)
+[src/wrappers/IPooledCreditLine.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L160)
 
 ___
 
@@ -553,7 +553,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L165)
+[src/wrappers/IPooledCreditLine.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L165)
 
 ___
 
@@ -574,7 +574,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L170)
+[src/wrappers/IPooledCreditLine.d.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L170)
 
 ___
 
@@ -595,7 +595,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L175)
+[src/wrappers/IPooledCreditLine.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L175)
 
 ___
 
@@ -619,7 +619,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L53)
+[src/wrappers/IPooledCreditLine.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L53)
 
 ___
 
@@ -637,7 +637,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L55)
+[src/wrappers/IPooledCreditLine.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L55)
 
 ___
 
@@ -707,7 +707,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:180](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L180)
+[src/wrappers/IPooledCreditLine.d.ts:180](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L180)
 
 ___
 
@@ -728,7 +728,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L182)
+[src/wrappers/IPooledCreditLine.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L182)
 
 ___
 
@@ -749,7 +749,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L184)
+[src/wrappers/IPooledCreditLine.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L184)
 
 ___
 
@@ -770,7 +770,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L186)
+[src/wrappers/IPooledCreditLine.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L186)
 
 ___
 
@@ -791,7 +791,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L188)
+[src/wrappers/IPooledCreditLine.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L188)
 
 ___
 
@@ -812,7 +812,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:190](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L190)
+[src/wrappers/IPooledCreditLine.d.ts:190](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L190)
 
 ___
 
@@ -833,7 +833,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L195)
+[src/wrappers/IPooledCreditLine.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L195)
 
 ___
 
@@ -854,7 +854,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L197)
+[src/wrappers/IPooledCreditLine.d.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L197)
 
 ___
 
@@ -909,7 +909,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L57)
+[src/wrappers/IPooledCreditLine.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L57)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -929,7 +929,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L80)
+[src/wrappers/IPooledCreditLine.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L80)
 
 ___
 
@@ -961,7 +961,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L60)
+[src/wrappers/IPooledCreditLine.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L60)
 
 ▸ **off**(`eventName`, `listener`): [`IPooledCreditLine`](wrappers_IPooledCreditLine.IPooledCreditLine.md)
 
@@ -982,7 +982,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L81)
+[src/wrappers/IPooledCreditLine.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L81)
 
 ___
 
@@ -1014,7 +1014,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L64)
+[src/wrappers/IPooledCreditLine.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L64)
 
 ▸ **on**(`eventName`, `listener`): [`IPooledCreditLine`](wrappers_IPooledCreditLine.IPooledCreditLine.md)
 
@@ -1035,7 +1035,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L82)
+[src/wrappers/IPooledCreditLine.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L82)
 
 ___
 
@@ -1067,7 +1067,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L68)
+[src/wrappers/IPooledCreditLine.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L68)
 
 ▸ **once**(`eventName`, `listener`): [`IPooledCreditLine`](wrappers_IPooledCreditLine.IPooledCreditLine.md)
 
@@ -1088,7 +1088,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L83)
+[src/wrappers/IPooledCreditLine.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L83)
 
 ___
 
@@ -1121,7 +1121,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L87)
+[src/wrappers/IPooledCreditLine.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L87)
 
 ___
 
@@ -1152,7 +1152,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L76)
+[src/wrappers/IPooledCreditLine.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L76)
 
 ▸ **removeAllListeners**(`eventName?`): [`IPooledCreditLine`](wrappers_IPooledCreditLine.IPooledCreditLine.md)
 
@@ -1172,7 +1172,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L85)
+[src/wrappers/IPooledCreditLine.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L85)
 
 ___
 
@@ -1204,7 +1204,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L72)
+[src/wrappers/IPooledCreditLine.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L72)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IPooledCreditLine`](wrappers_IPooledCreditLine.IPooledCreditLine.md)
 
@@ -1225,7 +1225,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IPooledCreditLine.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IPooledCreditLine.d.ts#L84)
+[src/wrappers/IPooledCreditLine.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPooledCreditLine.d.ts#L84)
 
 ___
 

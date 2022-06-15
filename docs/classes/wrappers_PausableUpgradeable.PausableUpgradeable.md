@@ -162,7 +162,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L92)
+[src/wrappers/PausableUpgradeable.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L92)
 
 ___
 
@@ -197,7 +197,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L104)
+[src/wrappers/PausableUpgradeable.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L104)
 
 ___
 
@@ -218,7 +218,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L98)
+[src/wrappers/PausableUpgradeable.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L98)
 
 ___
 
@@ -239,7 +239,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L82)
+[src/wrappers/PausableUpgradeable.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L82)
 
 ___
 
@@ -253,7 +253,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L80)
+[src/wrappers/PausableUpgradeable.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L80)
 
 ___
 
@@ -274,7 +274,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L110)
+[src/wrappers/PausableUpgradeable.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L110)
 
 ___
 
@@ -414,7 +414,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L41)
+[src/wrappers/PausableUpgradeable.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L41)
 
 ___
 
@@ -438,7 +438,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L40)
+[src/wrappers/PausableUpgradeable.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L40)
 
 ___
 
@@ -456,7 +456,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L42)
+[src/wrappers/PausableUpgradeable.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L42)
 
 ___
 
@@ -560,7 +560,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L44)
+[src/wrappers/PausableUpgradeable.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L44)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -580,7 +580,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L67)
+[src/wrappers/PausableUpgradeable.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L67)
 
 ___
 
@@ -612,7 +612,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L47)
+[src/wrappers/PausableUpgradeable.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L47)
 
 ▸ **off**(`eventName`, `listener`): [`PausableUpgradeable`](wrappers_PausableUpgradeable.PausableUpgradeable.md)
 
@@ -633,7 +633,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L68)
+[src/wrappers/PausableUpgradeable.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L68)
 
 ___
 
@@ -665,7 +665,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L51)
+[src/wrappers/PausableUpgradeable.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L51)
 
 ▸ **on**(`eventName`, `listener`): [`PausableUpgradeable`](wrappers_PausableUpgradeable.PausableUpgradeable.md)
 
@@ -686,7 +686,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L69)
+[src/wrappers/PausableUpgradeable.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L69)
 
 ___
 
@@ -718,7 +718,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L55)
+[src/wrappers/PausableUpgradeable.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L55)
 
 ▸ **once**(`eventName`, `listener`): [`PausableUpgradeable`](wrappers_PausableUpgradeable.PausableUpgradeable.md)
 
@@ -739,7 +739,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L70)
+[src/wrappers/PausableUpgradeable.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L70)
 
 ___
 
@@ -759,7 +759,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L88)
+[src/wrappers/PausableUpgradeable.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L88)
 
 ___
 
@@ -779,7 +779,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L90)
+[src/wrappers/PausableUpgradeable.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L90)
 
 ___
 
@@ -812,7 +812,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L74)
+[src/wrappers/PausableUpgradeable.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L74)
 
 ___
 
@@ -843,7 +843,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L63)
+[src/wrappers/PausableUpgradeable.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L63)
 
 ▸ **removeAllListeners**(`eventName?`): [`PausableUpgradeable`](wrappers_PausableUpgradeable.PausableUpgradeable.md)
 
@@ -863,7 +863,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L72)
+[src/wrappers/PausableUpgradeable.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L72)
 
 ___
 
@@ -895,7 +895,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L59)
+[src/wrappers/PausableUpgradeable.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L59)
 
 ▸ **removeListener**(`eventName`, `listener`): [`PausableUpgradeable`](wrappers_PausableUpgradeable.PausableUpgradeable.md)
 
@@ -916,7 +916,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/PausableUpgradeable.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/PausableUpgradeable.d.ts#L71)
+[src/wrappers/PausableUpgradeable.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PausableUpgradeable.d.ts#L71)
 
 ___
 

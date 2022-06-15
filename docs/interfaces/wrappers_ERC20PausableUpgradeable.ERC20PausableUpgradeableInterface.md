@@ -128,7 +128,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L64)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L64)
 
 ___
 
@@ -173,7 +173,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L23)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L23)
 
 ___
 
@@ -342,7 +342,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L51)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L51)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -363,7 +363,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L52)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L52)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -384,7 +384,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L53)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L53)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -405,7 +405,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L54)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L54)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -426,7 +426,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L55)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L55)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -447,7 +447,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L56)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L56)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -468,7 +468,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L57)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L57)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -489,7 +489,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L58)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L58)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -510,7 +510,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L59)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L59)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -531,7 +531,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L60)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L60)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -552,7 +552,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L61)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L61)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -573,7 +573,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L62)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L62)
 
 ___
 
@@ -702,7 +702,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L38)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L38)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -723,7 +723,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L39)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L39)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -744,7 +744,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L40)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L40)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -765,7 +765,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L41)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L41)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -786,7 +786,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L42)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L42)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -807,7 +807,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L43)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L43)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -828,7 +828,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L44)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L44)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -849,7 +849,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L45)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L45)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -870,7 +870,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L46)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L46)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -891,7 +891,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L47)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L47)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -912,7 +912,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L48)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L48)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -933,7 +933,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L49)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L49)
 
 ___
 
@@ -1030,7 +1030,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L71)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L71)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1050,7 +1050,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L72)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L72)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1070,7 +1070,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L73)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L73)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1090,7 +1090,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/ERC20PausableUpgradeable.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/ERC20PausableUpgradeable.d.ts#L74)
+[src/wrappers/ERC20PausableUpgradeable.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/ERC20PausableUpgradeable.d.ts#L74)
 
 ___
 
