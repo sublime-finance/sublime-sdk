@@ -202,7 +202,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:244](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L244)
+[src/wrappers/MockWETH.d.ts:244](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L244)
 
 ___
 
@@ -257,7 +257,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L308)
+[src/wrappers/MockWETH.d.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L308)
 
 ___
 
@@ -280,7 +280,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L290)
+[src/wrappers/MockWETH.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L290)
 
 ___
 
@@ -321,7 +321,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L118)
+[src/wrappers/MockWETH.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L118)
 
 ___
 
@@ -335,7 +335,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L116)
+[src/wrappers/MockWETH.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L116)
 
 ___
 
@@ -376,7 +376,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:372](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L372)
+[src/wrappers/MockWETH.d.ts:372](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L372)
 
 ___
 
@@ -514,7 +514,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L182)
+[src/wrappers/MockWETH.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L182)
 
 ___
 
@@ -536,7 +536,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L184)
+[src/wrappers/MockWETH.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L184)
 
 ___
 
@@ -558,7 +558,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L186)
+[src/wrappers/MockWETH.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L186)
 
 ___
 
@@ -580,7 +580,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L188)
+[src/wrappers/MockWETH.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L188)
 
 ___
 
@@ -604,7 +604,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L77)
+[src/wrappers/MockWETH.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L77)
 
 ___
 
@@ -625,7 +625,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L194)
+[src/wrappers/MockWETH.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L194)
 
 ___
 
@@ -646,7 +646,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L196)
+[src/wrappers/MockWETH.d.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L196)
 
 ___
 
@@ -670,7 +670,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L76)
+[src/wrappers/MockWETH.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L76)
 
 ___
 
@@ -690,7 +690,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:198](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L198)
+[src/wrappers/MockWETH.d.ts:198](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L198)
 
 ___
 
@@ -710,7 +710,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:200](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L200)
+[src/wrappers/MockWETH.d.ts:200](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L200)
 
 ___
 
@@ -728,7 +728,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L78)
+[src/wrappers/MockWETH.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L78)
 
 ___
 
@@ -748,7 +748,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L202)
+[src/wrappers/MockWETH.d.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L202)
 
 ___
 
@@ -768,7 +768,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L204)
+[src/wrappers/MockWETH.d.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L204)
 
 ___
 
@@ -872,7 +872,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L80)
+[src/wrappers/MockWETH.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L80)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -892,7 +892,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L103)
+[src/wrappers/MockWETH.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L103)
 
 ___
 
@@ -912,7 +912,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:206](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L206)
+[src/wrappers/MockWETH.d.ts:206](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L206)
 
 ___
 
@@ -932,7 +932,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:208](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L208)
+[src/wrappers/MockWETH.d.ts:208](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L208)
 
 ___
 
@@ -964,7 +964,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L83)
+[src/wrappers/MockWETH.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L83)
 
 ▸ **off**(`eventName`, `listener`): [`MockWETH`](wrappers_MockWETH.MockWETH.md)
 
@@ -985,7 +985,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L104)
+[src/wrappers/MockWETH.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L104)
 
 ___
 
@@ -1017,7 +1017,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L87)
+[src/wrappers/MockWETH.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L87)
 
 ▸ **on**(`eventName`, `listener`): [`MockWETH`](wrappers_MockWETH.MockWETH.md)
 
@@ -1038,7 +1038,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L105)
+[src/wrappers/MockWETH.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L105)
 
 ___
 
@@ -1070,7 +1070,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L91)
+[src/wrappers/MockWETH.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L91)
 
 ▸ **once**(`eventName`, `listener`): [`MockWETH`](wrappers_MockWETH.MockWETH.md)
 
@@ -1091,7 +1091,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L106)
+[src/wrappers/MockWETH.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L106)
 
 ___
 
@@ -1124,7 +1124,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L110)
+[src/wrappers/MockWETH.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L110)
 
 ___
 
@@ -1155,7 +1155,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L99)
+[src/wrappers/MockWETH.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L99)
 
 ▸ **removeAllListeners**(`eventName?`): [`MockWETH`](wrappers_MockWETH.MockWETH.md)
 
@@ -1175,7 +1175,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L108)
+[src/wrappers/MockWETH.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L108)
 
 ___
 
@@ -1207,7 +1207,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L95)
+[src/wrappers/MockWETH.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L95)
 
 ▸ **removeListener**(`eventName`, `listener`): [`MockWETH`](wrappers_MockWETH.MockWETH.md)
 
@@ -1228,7 +1228,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L107)
+[src/wrappers/MockWETH.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L107)
 
 ___
 
@@ -1248,7 +1248,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:210](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L210)
+[src/wrappers/MockWETH.d.ts:210](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L210)
 
 ___
 
@@ -1268,7 +1268,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L212)
+[src/wrappers/MockWETH.d.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L212)
 
 ___
 
@@ -1288,7 +1288,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:214](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L214)
+[src/wrappers/MockWETH.d.ts:214](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L214)
 
 ___
 
@@ -1308,7 +1308,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:216](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L216)
+[src/wrappers/MockWETH.d.ts:216](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L216)
 
 ___
 
@@ -1330,7 +1330,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L218)
+[src/wrappers/MockWETH.d.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L218)
 
 ___
 
@@ -1352,7 +1352,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:220](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L220)
+[src/wrappers/MockWETH.d.ts:220](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L220)
 
 ___
 
@@ -1375,7 +1375,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:226](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L226)
+[src/wrappers/MockWETH.d.ts:226](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L226)
 
 ___
 
@@ -1398,7 +1398,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L233)
+[src/wrappers/MockWETH.d.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L233)
 
 ___
 
@@ -1419,7 +1419,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:240](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L240)
+[src/wrappers/MockWETH.d.ts:240](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L240)
 
 ___
 
@@ -1440,7 +1440,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockWETH.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockWETH.d.ts#L242)
+[src/wrappers/MockWETH.d.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/MockWETH.d.ts#L242)
 
 ___
 

@@ -125,7 +125,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/UpgradeableProxy.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/UpgradeableProxy.d.ts#L14)
+[src/wrappers/UpgradeableProxy.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/UpgradeableProxy.d.ts#L14)
 
 ___
 
@@ -153,7 +153,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/UpgradeableProxy.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/UpgradeableProxy.d.ts#L12)
+[src/wrappers/UpgradeableProxy.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/UpgradeableProxy.d.ts#L12)
 
 ___
 
@@ -548,7 +548,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/UpgradeableProxy.d.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/UpgradeableProxy.d.ts#L18)
+[src/wrappers/UpgradeableProxy.d.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/UpgradeableProxy.d.ts#L18)
 
 ___
 

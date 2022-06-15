@@ -52,7 +52,7 @@ ContractFactory.constructor
 
 #### Defined in
 
-[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L11)
+[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L11)
 
 ## Properties
 
@@ -118,7 +118,7 @@ ContractFactory.attach
 
 #### Defined in
 
-[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L29)
+[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L29)
 
 ___
 
@@ -142,7 +142,7 @@ ContractFactory.connect
 
 #### Defined in
 
-[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L32)
+[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L32)
 
 ___
 
@@ -168,7 +168,7 @@ ContractFactory.deploy
 
 #### Defined in
 
-[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L15)
+[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L15)
 
 ___
 
@@ -194,7 +194,7 @@ ContractFactory.getDeployTransaction
 
 #### Defined in
 
-[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L22)
+[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L22)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L35)
+[src/wrappers/factories/SavingsAccountEthUtils__factory.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/SavingsAccountEthUtils__factory.ts#L35)
 
 ___
 

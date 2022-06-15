@@ -186,7 +186,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:299](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L299)
+[src/wrappers/IUniswapV3PoolActions.d.ts:299](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L299)
 
 ___
 
@@ -233,7 +233,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:389](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L389)
+[src/wrappers/IUniswapV3PoolActions.d.ts:389](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L389)
 
 ___
 
@@ -247,7 +247,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:387](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L387)
+[src/wrappers/IUniswapV3PoolActions.d.ts:387](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L387)
 
 ___
 
@@ -280,7 +280,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L95)
+[src/wrappers/IUniswapV3PoolActions.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L95)
 
 ___
 
@@ -294,7 +294,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L93)
+[src/wrappers/IUniswapV3PoolActions.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L93)
 
 ___
 
@@ -327,7 +327,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:489](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L489)
+[src/wrappers/IUniswapV3PoolActions.d.ts:489](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L489)
 
 ___
 
@@ -467,7 +467,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L54)
+[src/wrappers/IUniswapV3PoolActions.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L54)
 
 ___
 
@@ -490,7 +490,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:198](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L198)
+[src/wrappers/IUniswapV3PoolActions.d.ts:198](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L198)
 
 ___
 
@@ -513,7 +513,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L205)
+[src/wrappers/IUniswapV3PoolActions.d.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L205)
 
 ___
 
@@ -538,7 +538,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L212)
+[src/wrappers/IUniswapV3PoolActions.d.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L212)
 
 ___
 
@@ -563,7 +563,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L221)
+[src/wrappers/IUniswapV3PoolActions.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L221)
 
 ___
 
@@ -587,7 +587,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L53)
+[src/wrappers/IUniswapV3PoolActions.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L53)
 
 ___
 
@@ -605,7 +605,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L55)
+[src/wrappers/IUniswapV3PoolActions.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L55)
 
 ___
 
@@ -678,7 +678,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L230)
+[src/wrappers/IUniswapV3PoolActions.d.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L230)
 
 ___
 
@@ -702,7 +702,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L238)
+[src/wrappers/IUniswapV3PoolActions.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L238)
 
 ___
 
@@ -723,7 +723,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:246](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L246)
+[src/wrappers/IUniswapV3PoolActions.d.ts:246](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L246)
 
 ___
 
@@ -744,7 +744,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L251)
+[src/wrappers/IUniswapV3PoolActions.d.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L251)
 
 ___
 
@@ -765,7 +765,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:256](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L256)
+[src/wrappers/IUniswapV3PoolActions.d.ts:256](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L256)
 
 ___
 
@@ -786,7 +786,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:258](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L258)
+[src/wrappers/IUniswapV3PoolActions.d.ts:258](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L258)
 
 ___
 
@@ -841,7 +841,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L57)
+[src/wrappers/IUniswapV3PoolActions.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L57)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -861,7 +861,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L80)
+[src/wrappers/IUniswapV3PoolActions.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L80)
 
 ___
 
@@ -886,7 +886,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L263)
+[src/wrappers/IUniswapV3PoolActions.d.ts:263](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L263)
 
 ___
 
@@ -911,7 +911,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:272](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L272)
+[src/wrappers/IUniswapV3PoolActions.d.ts:272](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L272)
 
 ___
 
@@ -943,7 +943,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L60)
+[src/wrappers/IUniswapV3PoolActions.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L60)
 
 ▸ **off**(`eventName`, `listener`): [`IUniswapV3PoolActions`](wrappers_IUniswapV3PoolActions.IUniswapV3PoolActions.md)
 
@@ -964,7 +964,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L81)
+[src/wrappers/IUniswapV3PoolActions.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L81)
 
 ___
 
@@ -996,7 +996,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L64)
+[src/wrappers/IUniswapV3PoolActions.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L64)
 
 ▸ **on**(`eventName`, `listener`): [`IUniswapV3PoolActions`](wrappers_IUniswapV3PoolActions.IUniswapV3PoolActions.md)
 
@@ -1017,7 +1017,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L82)
+[src/wrappers/IUniswapV3PoolActions.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L82)
 
 ___
 
@@ -1049,7 +1049,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L68)
+[src/wrappers/IUniswapV3PoolActions.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L68)
 
 ▸ **once**(`eventName`, `listener`): [`IUniswapV3PoolActions`](wrappers_IUniswapV3PoolActions.IUniswapV3PoolActions.md)
 
@@ -1070,7 +1070,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L83)
+[src/wrappers/IUniswapV3PoolActions.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L83)
 
 ___
 
@@ -1103,7 +1103,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L87)
+[src/wrappers/IUniswapV3PoolActions.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L87)
 
 ___
 
@@ -1134,7 +1134,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L76)
+[src/wrappers/IUniswapV3PoolActions.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L76)
 
 ▸ **removeAllListeners**(`eventName?`): [`IUniswapV3PoolActions`](wrappers_IUniswapV3PoolActions.IUniswapV3PoolActions.md)
 
@@ -1154,7 +1154,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L85)
+[src/wrappers/IUniswapV3PoolActions.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L85)
 
 ___
 
@@ -1186,7 +1186,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L72)
+[src/wrappers/IUniswapV3PoolActions.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L72)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IUniswapV3PoolActions`](wrappers_IUniswapV3PoolActions.IUniswapV3PoolActions.md)
 
@@ -1207,7 +1207,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L84)
+[src/wrappers/IUniswapV3PoolActions.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L84)
 
 ___
 
@@ -1232,7 +1232,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:281](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L281)
+[src/wrappers/IUniswapV3PoolActions.d.ts:281](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L281)
 
 ___
 
@@ -1257,7 +1257,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolActions.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolActions.d.ts#L290)
+[src/wrappers/IUniswapV3PoolActions.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IUniswapV3PoolActions.d.ts#L290)
 
 ___
 

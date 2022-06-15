@@ -1,9 +1,10 @@
 import { ERC20 as Token } from '../wrappers/ERC20';
 import { ERC20__factory as Token__factory } from '../wrappers/factories/ERC20__factory';
-import { ContractTransaction, Signer } from 'ethers';
+import { BigNumberish, ContractTransaction, Signer } from 'ethers';
 import { BigNumber } from 'bignumber.js';
 import { TokenManager } from '../tokenManager';
 import { Options as Overrides } from '../types/Types';
+import { IERC20Minter__factory, IERC20Minter } from '../wrappers';
 
 /**
  * @class TokenApi
@@ -19,6 +20,8 @@ export class TokenApi {
    */
   private tokenContract: Token;
 
+  private minterTokenContract: IERC20Minter;
+
   /**
    * @description Instance to update and fetch token metadata
    */
@@ -33,6 +36,7 @@ export class TokenApi {
   constructor(signer: Signer, tokenAddress: string, tokenManager: TokenManager) {
     this.signer = signer;
     this.tokenContract = new Token__factory(signer).attach(tokenAddress);
+    this.minterTokenContract = IERC20Minter__factory.connect(tokenAddress, signer);
     this.tokenManager = tokenManager;
   }
 
@@ -128,5 +132,9 @@ export class TokenApi {
     } else {
       return balance.toString();
     }
+  }
+
+  public async mintTokens(addressToReceive: string, amount: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.minterTokenContract.mint(addressToReceive, amount, { ...options });
   }
 }

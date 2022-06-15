@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[src/index.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/index.ts#L19)
+[src/index.ts:19](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/index.ts#L19)
 
 ## Properties
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[src/index.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/index.ts#L15)
+[src/index.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/index.ts#L15)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/index.ts#L16)
+[src/index.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/index.ts#L16)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/index.ts#L17)
+[src/index.ts:17](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/index.ts#L17)
 
 ## Methods
 
@@ -87,7 +87,7 @@ Instance of Sublime Connector
 
 #### Defined in
 
-[src/index.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/index.ts#L30)
+[src/index.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/index.ts#L30)
 
 ___
 
@@ -103,7 +103,7 @@ Instance of Subgraph Class used for querying
 
 #### Defined in
 
-[src/index.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/index.ts#L38)
+[src/index.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/index.ts#L38)
 
 ___
 
@@ -119,7 +119,7 @@ Instance of Token Manager
 
 #### Defined in
 
-[src/index.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/index.ts#L46)
+[src/index.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/index.ts#L46)
 
 ___
 
@@ -135,4 +135,4 @@ types used in the SDK
 
 #### Defined in
 
-[src/index.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/index.ts#L53)
+[src/index.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/index.ts#L53)

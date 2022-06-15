@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/emulator/Helpers.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/emulator/Helpers.ts#L4)
+[src/emulator/Helpers.ts:4](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/emulator/Helpers.ts#L4)
 
 ## Methods
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[src/emulator/Helpers.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/emulator/Helpers.ts#L10)
+[src/emulator/Helpers.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/emulator/Helpers.ts#L10)
 
 ___
 
@@ -68,4 +68,4 @@ ___
 
 #### Defined in
 
-[src/emulator/Helpers.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/emulator/Helpers.ts#L6)
+[src/emulator/Helpers.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/emulator/Helpers.ts#L6)

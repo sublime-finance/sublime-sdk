@@ -1,11 +1,11 @@
-import { Signer } from 'ethers';
+import { Signer, ContractTransaction, BigNumberish } from 'ethers';
 import { BigNumber } from 'bignumber.js';
-import { ICToken, ICToken__factory, IYield } from '../wrappers';
+import { CompoundYield, CompoundYield__factory, ICToken, ICToken__factory, IYield } from '../wrappers';
 import { IYield__factory } from '../wrappers/factories/IYield__factory';
 
 import { SublimeConfig } from '../types/sublimeConfig';
 
-import { Strategy, StrategyType } from '../types/Types';
+import { Strategy, StrategyType, Options as Overrides } from '../types/Types';
 import { TokenManager } from '../tokenManager';
 
 /**
@@ -16,6 +16,8 @@ export class YieldAndStrategyApi {
    * @description Signer Object
    */
   private signer: Signer;
+
+  private compoundYield: CompoundYield;
 
   /**
    * @description Internal store for all sublime contracts addresses
@@ -41,6 +43,8 @@ export class YieldAndStrategyApi {
     this.signer = signer;
     this.config = config;
     this.tokenManager = tokenManger;
+
+    this.compoundYield = new CompoundYield__factory(this.signer).attach(this.config.compoundStrategyContractAddress);
     this.displayName[config.compoundStrategyContractAddress.toLowerCase()] = 'Compound Protocol';
     this.displayName[config.noStrategyAddress.toLowerCase()] = 'Locked in Sublime';
 
@@ -190,5 +194,13 @@ export class YieldAndStrategyApi {
     address = address.toLowerCase();
 
     return this.displayName[address];
+  }
+
+  public updateLiquidityTokenInCompoundYield(asset: string, cToken: string, options?: Overrides): Promise<ContractTransaction> {
+    return this.compoundYield.addTokenAddress(asset, cToken, { ...options });
+  }
+
+  public setDepositLimitInCompoundYield(asset: string, limit: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.compoundYield.setDepositLimit(asset, limit.toString(0), { ...options });
   }
 }

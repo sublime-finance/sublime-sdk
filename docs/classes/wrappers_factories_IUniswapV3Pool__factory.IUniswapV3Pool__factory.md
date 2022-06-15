@@ -39,4 +39,4 @@
 
 #### Defined in
 
-[src/wrappers/factories/IUniswapV3Pool__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/factories/IUniswapV3Pool__factory.ts#L11)
+[src/wrappers/factories/IUniswapV3Pool__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/factories/IUniswapV3Pool__factory.ts#L11)

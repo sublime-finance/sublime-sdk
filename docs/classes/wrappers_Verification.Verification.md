@@ -234,7 +234,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:412](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L412)
+[src/wrappers/Verification.d.ts:412](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L412)
 
 ___
 
@@ -305,7 +305,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:542](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L542)
+[src/wrappers/Verification.d.ts:542](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L542)
 
 ___
 
@@ -334,7 +334,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:496](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L496)
+[src/wrappers/Verification.d.ts:496](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L496)
 
 ___
 
@@ -391,7 +391,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L153)
+[src/wrappers/Verification.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L153)
 
 ___
 
@@ -405,7 +405,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L151)
+[src/wrappers/Verification.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L151)
 
 ___
 
@@ -462,7 +462,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:653](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L653)
+[src/wrappers/Verification.d.ts:653](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L653)
 
 ___
 
@@ -598,7 +598,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L288)
+[src/wrappers/Verification.d.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L288)
 
 ___
 
@@ -618,7 +618,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L290)
+[src/wrappers/Verification.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L290)
 
 ___
 
@@ -639,7 +639,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:292](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L292)
+[src/wrappers/Verification.d.ts:292](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L292)
 
 ___
 
@@ -660,7 +660,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L294)
+[src/wrappers/Verification.d.ts:294](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L294)
 
 ___
 
@@ -684,7 +684,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L112)
+[src/wrappers/Verification.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L112)
 
 ___
 
@@ -705,7 +705,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L296)
+[src/wrappers/Verification.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L296)
 
 ___
 
@@ -726,7 +726,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:301](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L301)
+[src/wrappers/Verification.d.ts:301](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L301)
 
 ___
 
@@ -750,7 +750,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L111)
+[src/wrappers/Verification.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L111)
 
 ___
 
@@ -768,7 +768,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L113)
+[src/wrappers/Verification.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L113)
 
 ___
 
@@ -839,7 +839,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L306)
+[src/wrappers/Verification.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L306)
 
 ___
 
@@ -861,7 +861,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L312)
+[src/wrappers/Verification.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L312)
 
 ___
 
@@ -883,7 +883,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L318)
+[src/wrappers/Verification.d.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L318)
 
 ___
 
@@ -905,7 +905,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L320)
+[src/wrappers/Verification.d.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L320)
 
 ___
 
@@ -926,7 +926,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L322)
+[src/wrappers/Verification.d.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L322)
 
 ___
 
@@ -947,7 +947,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:324](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L324)
+[src/wrappers/Verification.d.ts:324](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L324)
 
 ___
 
@@ -968,7 +968,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:326](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L326)
+[src/wrappers/Verification.d.ts:326](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L326)
 
 ___
 
@@ -989,7 +989,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:331](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L331)
+[src/wrappers/Verification.d.ts:331](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L331)
 
 ___
 
@@ -1044,7 +1044,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L115)
+[src/wrappers/Verification.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L115)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -1064,7 +1064,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L138)
+[src/wrappers/Verification.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L138)
 
 ___
 
@@ -1086,7 +1086,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:336](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L336)
+[src/wrappers/Verification.d.ts:336](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L336)
 
 ___
 
@@ -1108,7 +1108,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:338](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L338)
+[src/wrappers/Verification.d.ts:338](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L338)
 
 ___
 
@@ -1140,7 +1140,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L118)
+[src/wrappers/Verification.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L118)
 
 ▸ **off**(`eventName`, `listener`): [`Verification`](wrappers_Verification.Verification.md)
 
@@ -1161,7 +1161,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L139)
+[src/wrappers/Verification.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L139)
 
 ___
 
@@ -1193,7 +1193,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L122)
+[src/wrappers/Verification.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L122)
 
 ▸ **on**(`eventName`, `listener`): [`Verification`](wrappers_Verification.Verification.md)
 
@@ -1214,7 +1214,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L140)
+[src/wrappers/Verification.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L140)
 
 ___
 
@@ -1246,7 +1246,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L126)
+[src/wrappers/Verification.d.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L126)
 
 ▸ **once**(`eventName`, `listener`): [`Verification`](wrappers_Verification.Verification.md)
 
@@ -1267,7 +1267,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L141)
+[src/wrappers/Verification.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L141)
 
 ___
 
@@ -1287,7 +1287,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:340](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L340)
+[src/wrappers/Verification.d.ts:340](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L340)
 
 ___
 
@@ -1307,7 +1307,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:342](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L342)
+[src/wrappers/Verification.d.ts:342](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L342)
 
 ___
 
@@ -1329,7 +1329,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L344)
+[src/wrappers/Verification.d.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L344)
 
 ___
 
@@ -1351,7 +1351,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:346](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L346)
+[src/wrappers/Verification.d.ts:346](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L346)
 
 ___
 
@@ -1384,7 +1384,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L145)
+[src/wrappers/Verification.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L145)
 
 ___
 
@@ -1406,7 +1406,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:348](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L348)
+[src/wrappers/Verification.d.ts:348](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L348)
 
 ___
 
@@ -1428,7 +1428,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:354](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L354)
+[src/wrappers/Verification.d.ts:354](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L354)
 
 ___
 
@@ -1459,7 +1459,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L134)
+[src/wrappers/Verification.d.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L134)
 
 ▸ **removeAllListeners**(`eventName?`): [`Verification`](wrappers_Verification.Verification.md)
 
@@ -1479,7 +1479,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L143)
+[src/wrappers/Verification.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L143)
 
 ___
 
@@ -1511,7 +1511,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L130)
+[src/wrappers/Verification.d.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L130)
 
 ▸ **removeListener**(`eventName`, `listener`): [`Verification`](wrappers_Verification.Verification.md)
 
@@ -1532,7 +1532,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L142)
+[src/wrappers/Verification.d.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L142)
 
 ___
 
@@ -1553,7 +1553,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:360](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L360)
+[src/wrappers/Verification.d.ts:360](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L360)
 
 ___
 
@@ -1574,7 +1574,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:362](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L362)
+[src/wrappers/Verification.d.ts:362](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L362)
 
 ___
 
@@ -1594,7 +1594,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:364](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L364)
+[src/wrappers/Verification.d.ts:364](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L364)
 
 ___
 
@@ -1614,7 +1614,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:366](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L366)
+[src/wrappers/Verification.d.ts:366](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L366)
 
 ___
 
@@ -1635,7 +1635,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:368](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L368)
+[src/wrappers/Verification.d.ts:368](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L368)
 
 ___
 
@@ -1656,7 +1656,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:370](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L370)
+[src/wrappers/Verification.d.ts:370](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L370)
 
 ___
 
@@ -1677,7 +1677,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:375](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L375)
+[src/wrappers/Verification.d.ts:375](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L375)
 
 ___
 
@@ -1698,7 +1698,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:377](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L377)
+[src/wrappers/Verification.d.ts:377](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L377)
 
 ___
 
@@ -1719,7 +1719,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:379](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L379)
+[src/wrappers/Verification.d.ts:379](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L379)
 
 ___
 
@@ -1740,7 +1740,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:381](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L381)
+[src/wrappers/Verification.d.ts:381](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L381)
 
 ___
 
@@ -1762,7 +1762,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:386](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L386)
+[src/wrappers/Verification.d.ts:386](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L386)
 
 ___
 
@@ -1784,7 +1784,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:392](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L392)
+[src/wrappers/Verification.d.ts:392](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L392)
 
 ___
 
@@ -1805,7 +1805,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:398](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L398)
+[src/wrappers/Verification.d.ts:398](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L398)
 
 ___
 
@@ -1826,7 +1826,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:403](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L403)
+[src/wrappers/Verification.d.ts:403](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L403)
 
 ___
 
@@ -1847,7 +1847,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:408](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L408)
+[src/wrappers/Verification.d.ts:408](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L408)
 
 ___
 
@@ -1868,7 +1868,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Verification.d.ts:410](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Verification.d.ts#L410)
+[src/wrappers/Verification.d.ts:410](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/Verification.d.ts#L410)
 
 ___
 

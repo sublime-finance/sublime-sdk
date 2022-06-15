@@ -186,7 +186,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L215)
+[src/wrappers/IERC20Minter.d.ts:215](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L215)
 
 ___
 
@@ -233,7 +233,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L264)
+[src/wrappers/IERC20Minter.d.ts:264](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L264)
 
 ___
 
@@ -254,7 +254,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L250)
+[src/wrappers/IERC20Minter.d.ts:250](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L250)
 
 ___
 
@@ -287,7 +287,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L101)
+[src/wrappers/IERC20Minter.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L101)
 
 ___
 
@@ -301,7 +301,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L99)
+[src/wrappers/IERC20Minter.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L99)
 
 ___
 
@@ -334,7 +334,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:316](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L316)
+[src/wrappers/IERC20Minter.d.ts:316](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L316)
 
 ___
 
@@ -472,7 +472,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L161)
+[src/wrappers/IERC20Minter.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L161)
 
 ___
 
@@ -494,7 +494,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L163)
+[src/wrappers/IERC20Minter.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L163)
 
 ___
 
@@ -516,7 +516,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L165)
+[src/wrappers/IERC20Minter.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L165)
 
 ___
 
@@ -538,7 +538,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L167)
+[src/wrappers/IERC20Minter.d.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L167)
 
 ___
 
@@ -562,7 +562,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L60)
+[src/wrappers/IERC20Minter.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L60)
 
 ___
 
@@ -583,7 +583,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L173)
+[src/wrappers/IERC20Minter.d.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L173)
 
 ___
 
@@ -604,7 +604,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L175)
+[src/wrappers/IERC20Minter.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L175)
 
 ___
 
@@ -628,7 +628,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L59)
+[src/wrappers/IERC20Minter.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L59)
 
 ___
 
@@ -646,7 +646,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L61)
+[src/wrappers/IERC20Minter.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L61)
 
 ___
 
@@ -750,7 +750,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L63)
+[src/wrappers/IERC20Minter.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L63)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -770,7 +770,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L86)
+[src/wrappers/IERC20Minter.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L86)
 
 ___
 
@@ -792,7 +792,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L177)
+[src/wrappers/IERC20Minter.d.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L177)
 
 ___
 
@@ -814,7 +814,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L179)
+[src/wrappers/IERC20Minter.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L179)
 
 ___
 
@@ -846,7 +846,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L66)
+[src/wrappers/IERC20Minter.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L66)
 
 ▸ **off**(`eventName`, `listener`): [`IERC20Minter`](wrappers_IERC20Minter.IERC20Minter.md)
 
@@ -867,7 +867,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L87)
+[src/wrappers/IERC20Minter.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L87)
 
 ___
 
@@ -899,7 +899,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L70)
+[src/wrappers/IERC20Minter.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L70)
 
 ▸ **on**(`eventName`, `listener`): [`IERC20Minter`](wrappers_IERC20Minter.IERC20Minter.md)
 
@@ -920,7 +920,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L88)
+[src/wrappers/IERC20Minter.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L88)
 
 ___
 
@@ -952,7 +952,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L74)
+[src/wrappers/IERC20Minter.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L74)
 
 ▸ **once**(`eventName`, `listener`): [`IERC20Minter`](wrappers_IERC20Minter.IERC20Minter.md)
 
@@ -973,7 +973,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L89)
+[src/wrappers/IERC20Minter.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L89)
 
 ___
 
@@ -1006,7 +1006,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L93)
+[src/wrappers/IERC20Minter.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L93)
 
 ___
 
@@ -1037,7 +1037,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L82)
+[src/wrappers/IERC20Minter.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L82)
 
 ▸ **removeAllListeners**(`eventName?`): [`IERC20Minter`](wrappers_IERC20Minter.IERC20Minter.md)
 
@@ -1057,7 +1057,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L91)
+[src/wrappers/IERC20Minter.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L91)
 
 ___
 
@@ -1089,7 +1089,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L78)
+[src/wrappers/IERC20Minter.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L78)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IERC20Minter`](wrappers_IERC20Minter.IERC20Minter.md)
 
@@ -1110,7 +1110,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L90)
+[src/wrappers/IERC20Minter.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L90)
 
 ___
 
@@ -1130,7 +1130,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L185)
+[src/wrappers/IERC20Minter.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L185)
 
 ___
 
@@ -1150,7 +1150,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L187)
+[src/wrappers/IERC20Minter.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L187)
 
 ___
 
@@ -1172,7 +1172,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L189)
+[src/wrappers/IERC20Minter.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L189)
 
 ___
 
@@ -1194,7 +1194,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L195)
+[src/wrappers/IERC20Minter.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L195)
 
 ___
 
@@ -1217,7 +1217,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L201)
+[src/wrappers/IERC20Minter.d.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L201)
 
 ___
 
@@ -1240,7 +1240,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:208](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC20Minter.d.ts#L208)
+[src/wrappers/IERC20Minter.d.ts:208](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/wrappers/IERC20Minter.d.ts#L208)
 
 ___
 

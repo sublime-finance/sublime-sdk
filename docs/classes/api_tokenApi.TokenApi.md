@@ -12,6 +12,7 @@
 
 ### Properties
 
+- [minterTokenContract](api_tokenApi.TokenApi.md#mintertokencontract)
 - [signer](api_tokenApi.TokenApi.md#signer)
 - [tokenContract](api_tokenApi.TokenApi.md#tokencontract)
 - [tokenManager](api_tokenApi.TokenApi.md#tokenmanager)
@@ -24,6 +25,7 @@
 - [approve](api_tokenApi.TokenApi.md#approve)
 - [getTokenBalance](api_tokenApi.TokenApi.md#gettokenbalance)
 - [getUserTokenBalance](api_tokenApi.TokenApi.md#getusertokenbalance)
+- [mintTokens](api_tokenApi.TokenApi.md#minttokens)
 
 ## Constructors
 
@@ -43,9 +45,19 @@
 
 #### Defined in
 
-[src/api/tokenApi.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L33)
+[src/api/tokenApi.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L36)
 
 ## Properties
+
+### minterTokenContract
+
+• `Private` **minterTokenContract**: [`IERC20Minter`](wrappers_IERC20Minter.IERC20Minter.md)
+
+#### Defined in
+
+[src/api/tokenApi.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L23)
+
+___
 
 ### signer
 
@@ -55,7 +67,7 @@
 
 #### Defined in
 
-[src/api/tokenApi.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L15)
+[src/api/tokenApi.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L16)
 
 ___
 
@@ -67,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L20)
+[src/api/tokenApi.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L21)
 
 ___
 
@@ -79,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L25)
+[src/api/tokenApi.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L28)
 
 ## Methods
 
@@ -105,7 +117,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/tokenApi.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L45)
+[src/api/tokenApi.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L49)
 
 ___
 
@@ -128,7 +140,7 @@ Balance of the given address
 
 #### Defined in
 
-[src/api/tokenApi.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L121)
+[src/api/tokenApi.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L125)
 
 ___
 
@@ -154,7 +166,7 @@ number
 
 #### Defined in
 
-[src/api/tokenApi.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L84)
+[src/api/tokenApi.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L88)
 
 ___
 
@@ -180,7 +192,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/tokenApi.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L64)
+[src/api/tokenApi.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L68)
 
 ___
 
@@ -202,7 +214,7 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L101)
+[src/api/tokenApi.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L105)
 
 ___
 
@@ -225,4 +237,26 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/api/tokenApi.ts#L111)
+[src/api/tokenApi.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L115)
+
+___
+
+### mintTokens
+
+▸ **mintTokens**(`addressToReceive`, `amount`, `options?`): `Promise`<`ContractTransaction`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `addressToReceive` | `string` |
+| `amount` | `BigNumberish` |
+| `options?` | [`Options`](../interfaces/types_Types.Options.md) |
+
+#### Returns
+
+`Promise`<`ContractTransaction`\>
+
+#### Defined in
+
+[src/api/tokenApi.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/f5d6e70/src/api/tokenApi.ts#L137)
