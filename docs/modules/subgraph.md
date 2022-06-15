@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [SublimeSubgraph](subgraph.md#sublimesubgraph)
-
-## References
-
-### SublimeSubgraph
-
-Re-exports [SublimeSubgraph](../classes/subgraph.SublimeSubgraph.md)
+- [SublimeSubgraph](../classes/subgraph.SublimeSubgraph.md)

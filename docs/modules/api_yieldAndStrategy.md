@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [YieldAndStrategyApi](api_yieldAndStrategy.md#yieldandstrategyapi)
-
-## References
-
-### YieldAndStrategyApi
-
-Re-exports [YieldAndStrategyApi](../classes/api_yieldAndStrategy.YieldAndStrategyApi.md)
+- [YieldAndStrategyApi](../classes/api_yieldAndStrategy.YieldAndStrategyApi.md)

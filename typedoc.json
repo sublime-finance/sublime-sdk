@@ -38,6 +38,5 @@
     "./src/subgraph/SavingsAccount.ts",
     "./src/subgraph/UserMeta.ts"
   ],
-  "entryPointStrategy": "expand",
   "out": "docs"
 }

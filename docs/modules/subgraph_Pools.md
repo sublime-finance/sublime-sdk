@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [PoolCalls](subgraph_Pools.md#poolcalls)
-
-## References
-
-### PoolCalls
-
-Re-exports [PoolCalls](../classes/subgraph_Pools.PoolCalls.md)
+- [PoolCalls](../classes/subgraph_Pools.PoolCalls.md)

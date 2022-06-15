@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [SavingsAccountApi](api_savingsAccount.md#savingsaccountapi)
-
-## References
-
-### SavingsAccountApi
-
-Re-exports [SavingsAccountApi](../classes/api_savingsAccount.SavingsAccountApi.md)
+- [SavingsAccountApi](../classes/api_savingsAccount.SavingsAccountApi.md)

@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [WrappedEth](api_utils_wrappedEth.md#wrappedeth)
-
-## References
-
-### WrappedEth
-
-Re-exports [WrappedEth](../classes/api_utils_wrappedEth.WrappedEth.md)
+- [WrappedEth](../classes/api_utils_wrappedEth.WrappedEth.md)

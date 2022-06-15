@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [Base](subgraph_Base.md#base)
-
-## References
-
-### Base
-
-Re-exports [Base](../classes/subgraph_Base.Base.md)
+- [Base](../classes/subgraph_Base.Base.md)

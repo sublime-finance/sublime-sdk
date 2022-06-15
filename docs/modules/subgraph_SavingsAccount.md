@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [SavingsAccountCalls](subgraph_SavingsAccount.md#savingsaccountcalls)
-
-## References
-
-### SavingsAccountCalls
-
-Re-exports [SavingsAccountCalls](../classes/subgraph_SavingsAccount.SavingsAccountCalls.md)
+- [SavingsAccountCalls](../classes/subgraph_SavingsAccount.SavingsAccountCalls.md)

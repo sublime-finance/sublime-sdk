@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [PoolEthUtils](api_utils_poolEthUtils.md#poolethutils)
-
-## References
-
-### PoolEthUtils
-
-Re-exports [PoolEthUtils](../classes/api_utils_poolEthUtils.PoolEthUtils.md)
+- [PoolEthUtils](../classes/api_utils_poolEthUtils.PoolEthUtils.md)

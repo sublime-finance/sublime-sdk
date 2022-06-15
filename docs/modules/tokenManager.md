@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [TokenManager](tokenManager.md#tokenmanager)
-
-## References
-
-### TokenManager
-
-Re-exports [TokenManager](../classes/tokenManager.TokenManager.md)
+- [TokenManager](../classes/tokenManager.TokenManager.md)

@@ -4,12 +4,6 @@
 
 ## Table of contents
 
-### References
+### Classes
 
-- [VerificationAPI](api_verification.md#verificationapi)
-
-## References
-
-### VerificationAPI
-
-Re-exports [VerificationAPI](../classes/api_verification.VerificationAPI.md)
+- [VerificationAPI](../classes/api_verification.VerificationAPI.md)

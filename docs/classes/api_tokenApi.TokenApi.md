@@ -45,17 +45,17 @@
 
 #### Defined in
 
-[src/api/tokenApi.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L36)
+[src/api/tokenApi.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L36)
 
 ## Properties
 
 ### minterTokenContract
 
-• `Private` **minterTokenContract**: [`IERC20Minter`](wrappers_IERC20Minter.IERC20Minter.md)
+• `Private` **minterTokenContract**: `IERC20Minter`
 
 #### Defined in
 
-[src/api/tokenApi.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L23)
+[src/api/tokenApi.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L23)
 
 ___
 
@@ -67,19 +67,19 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L16)
+[src/api/tokenApi.ts:16](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L16)
 
 ___
 
 ### tokenContract
 
-• `Private` **tokenContract**: [`ERC20`](wrappers_ERC20.ERC20.md)
+• `Private` **tokenContract**: `ERC20`
 
 **`description`** Contract instance for the given token
 
 #### Defined in
 
-[src/api/tokenApi.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L21)
+[src/api/tokenApi.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L21)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L28)
+[src/api/tokenApi.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L28)
 
 ## Methods
 
@@ -117,7 +117,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/tokenApi.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L49)
+[src/api/tokenApi.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L49)
 
 ___
 
@@ -140,7 +140,7 @@ Balance of the given address
 
 #### Defined in
 
-[src/api/tokenApi.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L125)
+[src/api/tokenApi.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L125)
 
 ___
 
@@ -166,7 +166,7 @@ number
 
 #### Defined in
 
-[src/api/tokenApi.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L88)
+[src/api/tokenApi.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L88)
 
 ___
 
@@ -192,7 +192,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/tokenApi.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L68)
+[src/api/tokenApi.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L68)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L105)
+[src/api/tokenApi.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L105)
 
 ___
 
@@ -237,7 +237,7 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L115)
+[src/api/tokenApi.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L115)
 
 ___
 
@@ -259,4 +259,4 @@ ___
 
 #### Defined in
 
-[src/api/tokenApi.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/api/tokenApi.ts#L137)
+[src/api/tokenApi.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/b2496c0/src/api/tokenApi.ts#L137)
