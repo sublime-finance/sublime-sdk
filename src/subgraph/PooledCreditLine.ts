@@ -941,6 +941,8 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     prices: Record<string, BigNumber>
   ): PooledCreditLineDetail[] {
     return emulatorResult.map((aNew) => {
+      console.log({ prices });
+
       return {
         id: aNew.getId(),
         borrowerAddress: aNew.borrowerAddress(),
@@ -955,7 +957,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
           name: this.tokenManager.getTokenName(aNew.borrowAsset()),
           address: aNew.borrowAsset(),
           logo: this.tokenManager.getLogo(aNew.borrowAsset()),
-          pricePerAssetInUSD: prices[aNew.borrowAsset()].toString(0),
+          pricePerAssetInUSD: prices[aNew.borrowAsset()].toString(),
           decimals: this.tokenManager.getTokenDecimals(aNew.borrowAsset()),
         },
         collateralAsset: {

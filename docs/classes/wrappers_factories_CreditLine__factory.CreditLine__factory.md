@@ -52,7 +52,7 @@ ContractFactory.constructor
 
 #### Defined in
 
-[src/wrappers/factories/CreditLine__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/CreditLine__factory.ts#L11)
+[src/wrappers/factories/CreditLine__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/CreditLine__factory.ts#L11)
 
 ## Properties
 
@@ -118,7 +118,7 @@ ContractFactory.attach
 
 #### Defined in
 
-[src/wrappers/factories/CreditLine__factory.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/CreditLine__factory.ts#L33)
+[src/wrappers/factories/CreditLine__factory.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/CreditLine__factory.ts#L33)
 
 ___
 
@@ -142,7 +142,7 @@ ContractFactory.connect
 
 #### Defined in
 
-[src/wrappers/factories/CreditLine__factory.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/CreditLine__factory.ts#L36)
+[src/wrappers/factories/CreditLine__factory.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/CreditLine__factory.ts#L36)
 
 ___
 
@@ -170,7 +170,7 @@ ContractFactory.deploy
 
 #### Defined in
 
-[src/wrappers/factories/CreditLine__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/CreditLine__factory.ts#L15)
+[src/wrappers/factories/CreditLine__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/CreditLine__factory.ts#L15)
 
 ___
 
@@ -198,7 +198,7 @@ ContractFactory.getDeployTransaction
 
 #### Defined in
 
-[src/wrappers/factories/CreditLine__factory.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/CreditLine__factory.ts#L24)
+[src/wrappers/factories/CreditLine__factory.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/CreditLine__factory.ts#L24)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/factories/CreditLine__factory.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/CreditLine__factory.ts#L39)
+[src/wrappers/factories/CreditLine__factory.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/CreditLine__factory.ts#L39)
 
 ___
 

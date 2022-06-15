@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/types/emulator/creditLines.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/types/emulator/creditLines.ts#L27)
+[src/types/emulator/creditLines.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/types/emulator/creditLines.ts#L27)

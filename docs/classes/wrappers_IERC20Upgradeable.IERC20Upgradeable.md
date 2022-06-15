@@ -182,7 +182,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L196)
+[src/wrappers/IERC20Upgradeable.d.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L196)
 
 ___
 
@@ -227,7 +227,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L241)
+[src/wrappers/IERC20Upgradeable.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L241)
 
 ___
 
@@ -248,7 +248,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L227)
+[src/wrappers/IERC20Upgradeable.d.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L227)
 
 ___
 
@@ -279,7 +279,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L98)
+[src/wrappers/IERC20Upgradeable.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L98)
 
 ___
 
@@ -293,7 +293,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L96)
+[src/wrappers/IERC20Upgradeable.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L96)
 
 ___
 
@@ -324,7 +324,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:285](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L285)
+[src/wrappers/IERC20Upgradeable.d.ts:285](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L285)
 
 ___
 
@@ -462,7 +462,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L150)
+[src/wrappers/IERC20Upgradeable.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L150)
 
 ___
 
@@ -484,7 +484,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L152)
+[src/wrappers/IERC20Upgradeable.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L152)
 
 ___
 
@@ -506,7 +506,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L154)
+[src/wrappers/IERC20Upgradeable.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L154)
 
 ___
 
@@ -528,7 +528,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L156)
+[src/wrappers/IERC20Upgradeable.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L156)
 
 ___
 
@@ -552,7 +552,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L57)
+[src/wrappers/IERC20Upgradeable.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L57)
 
 ___
 
@@ -573,7 +573,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L162)
+[src/wrappers/IERC20Upgradeable.d.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L162)
 
 ___
 
@@ -594,7 +594,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L164)
+[src/wrappers/IERC20Upgradeable.d.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L164)
 
 ___
 
@@ -618,7 +618,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L56)
+[src/wrappers/IERC20Upgradeable.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L56)
 
 ___
 
@@ -636,7 +636,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L58)
+[src/wrappers/IERC20Upgradeable.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L58)
 
 ___
 
@@ -740,7 +740,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L60)
+[src/wrappers/IERC20Upgradeable.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L60)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -760,7 +760,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L83)
+[src/wrappers/IERC20Upgradeable.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L83)
 
 ___
 
@@ -792,7 +792,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L63)
+[src/wrappers/IERC20Upgradeable.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L63)
 
 ▸ **off**(`eventName`, `listener`): [`IERC20Upgradeable`](wrappers_IERC20Upgradeable.IERC20Upgradeable.md)
 
@@ -813,7 +813,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L84)
+[src/wrappers/IERC20Upgradeable.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L84)
 
 ___
 
@@ -845,7 +845,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L67)
+[src/wrappers/IERC20Upgradeable.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L67)
 
 ▸ **on**(`eventName`, `listener`): [`IERC20Upgradeable`](wrappers_IERC20Upgradeable.IERC20Upgradeable.md)
 
@@ -866,7 +866,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L85)
+[src/wrappers/IERC20Upgradeable.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L85)
 
 ___
 
@@ -898,7 +898,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L71)
+[src/wrappers/IERC20Upgradeable.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L71)
 
 ▸ **once**(`eventName`, `listener`): [`IERC20Upgradeable`](wrappers_IERC20Upgradeable.IERC20Upgradeable.md)
 
@@ -919,7 +919,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L86)
+[src/wrappers/IERC20Upgradeable.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L86)
 
 ___
 
@@ -952,7 +952,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L90)
+[src/wrappers/IERC20Upgradeable.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L90)
 
 ___
 
@@ -983,7 +983,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L79)
+[src/wrappers/IERC20Upgradeable.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L79)
 
 ▸ **removeAllListeners**(`eventName?`): [`IERC20Upgradeable`](wrappers_IERC20Upgradeable.IERC20Upgradeable.md)
 
@@ -1003,7 +1003,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L88)
+[src/wrappers/IERC20Upgradeable.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L88)
 
 ___
 
@@ -1035,7 +1035,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L75)
+[src/wrappers/IERC20Upgradeable.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L75)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IERC20Upgradeable`](wrappers_IERC20Upgradeable.IERC20Upgradeable.md)
 
@@ -1056,7 +1056,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L87)
+[src/wrappers/IERC20Upgradeable.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L87)
 
 ___
 
@@ -1076,7 +1076,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L166)
+[src/wrappers/IERC20Upgradeable.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L166)
 
 ___
 
@@ -1096,7 +1096,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L168)
+[src/wrappers/IERC20Upgradeable.d.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L168)
 
 ___
 
@@ -1118,7 +1118,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L170)
+[src/wrappers/IERC20Upgradeable.d.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L170)
 
 ___
 
@@ -1140,7 +1140,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L176)
+[src/wrappers/IERC20Upgradeable.d.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L176)
 
 ___
 
@@ -1163,7 +1163,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L182)
+[src/wrappers/IERC20Upgradeable.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L182)
 
 ___
 
@@ -1186,7 +1186,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC20Upgradeable.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Upgradeable.d.ts#L189)
+[src/wrappers/IERC20Upgradeable.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/IERC20Upgradeable.d.ts#L189)
 
 ___
 

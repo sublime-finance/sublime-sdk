@@ -52,7 +52,7 @@ ContractFactory.constructor
 
 #### Defined in
 
-[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L11)
+[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L11)
 
 ## Properties
 
@@ -118,7 +118,7 @@ ContractFactory.attach
 
 #### Defined in
 
-[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L31)
+[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L31)
 
 ___
 
@@ -142,7 +142,7 @@ ContractFactory.connect
 
 #### Defined in
 
-[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L34)
+[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L34)
 
 ___
 
@@ -169,7 +169,7 @@ ContractFactory.deploy
 
 #### Defined in
 
-[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L15)
+[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:15](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L15)
 
 ___
 
@@ -196,7 +196,7 @@ ContractFactory.getDeployTransaction
 
 #### Defined in
 
-[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L23)
+[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L23)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L37)
+[src/wrappers/factories/TransparentUpgradeableProxy__factory.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/TransparentUpgradeableProxy__factory.ts#L37)
 
 ___
 

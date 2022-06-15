@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/queries/verification.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/queries/verification.ts#L69)
+[src/queries/verification.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/queries/verification.ts#L69)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[src/queries/verification.ts:7](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/queries/verification.ts#L7)
+[src/queries/verification.ts:7](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/queries/verification.ts#L7)
 
 ___
 
@@ -70,4 +70,4 @@ ___
 
 #### Defined in
 
-[src/queries/verification.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/queries/verification.ts#L33)
+[src/queries/verification.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/queries/verification.ts#L33)

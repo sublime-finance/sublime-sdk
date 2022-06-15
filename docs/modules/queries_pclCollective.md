@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/queries/pclCollective.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/queries/pclCollective.ts#L3)
+[src/queries/pclCollective.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/queries/pclCollective.ts#L3)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/queries/pclCollective.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/queries/pclCollective.ts#L45)
+[src/queries/pclCollective.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/queries/pclCollective.ts#L45)

@@ -39,4 +39,4 @@
 
 #### Defined in
 
-[src/wrappers/factories/IERC20Minter__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/factories/IERC20Minter__factory.ts#L11)
+[src/wrappers/factories/IERC20Minter__factory.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/factories/IERC20Minter__factory.ts#L11)

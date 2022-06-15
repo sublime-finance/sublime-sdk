@@ -170,7 +170,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L121)
+[src/wrappers/Comptroller.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L121)
 
 ___
 
@@ -209,7 +209,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L143)
+[src/wrappers/Comptroller.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L143)
 
 ___
 
@@ -223,7 +223,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L141)
+[src/wrappers/Comptroller.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L141)
 
 ___
 
@@ -248,7 +248,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L83)
+[src/wrappers/Comptroller.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L83)
 
 ___
 
@@ -262,7 +262,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L81)
+[src/wrappers/Comptroller.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L81)
 
 ___
 
@@ -287,7 +287,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L163)
+[src/wrappers/Comptroller.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L163)
 
 ___
 
@@ -427,7 +427,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L42)
+[src/wrappers/Comptroller.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L42)
 
 ___
 
@@ -448,7 +448,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L111)
+[src/wrappers/Comptroller.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L111)
 
 ___
 
@@ -472,7 +472,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L103)
+[src/wrappers/Comptroller.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L103)
 
 ___
 
@@ -493,7 +493,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L113)
+[src/wrappers/Comptroller.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L113)
 
 ___
 
@@ -514,7 +514,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L115)
+[src/wrappers/Comptroller.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L115)
 
 ___
 
@@ -535,7 +535,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L117)
+[src/wrappers/Comptroller.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L117)
 
 ___
 
@@ -556,7 +556,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L119)
+[src/wrappers/Comptroller.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L119)
 
 ___
 
@@ -580,7 +580,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L41)
+[src/wrappers/Comptroller.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L41)
 
 ___
 
@@ -598,7 +598,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L43)
+[src/wrappers/Comptroller.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L43)
 
 ___
 
@@ -702,7 +702,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L45)
+[src/wrappers/Comptroller.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L45)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -722,7 +722,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L68)
+[src/wrappers/Comptroller.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L68)
 
 ___
 
@@ -754,7 +754,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L48)
+[src/wrappers/Comptroller.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L48)
 
 ▸ **off**(`eventName`, `listener`): [`Comptroller`](wrappers_Comptroller.Comptroller.md)
 
@@ -775,7 +775,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L69)
+[src/wrappers/Comptroller.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L69)
 
 ___
 
@@ -807,7 +807,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L52)
+[src/wrappers/Comptroller.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L52)
 
 ▸ **on**(`eventName`, `listener`): [`Comptroller`](wrappers_Comptroller.Comptroller.md)
 
@@ -828,7 +828,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L70)
+[src/wrappers/Comptroller.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L70)
 
 ___
 
@@ -860,7 +860,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L56)
+[src/wrappers/Comptroller.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L56)
 
 ▸ **once**(`eventName`, `listener`): [`Comptroller`](wrappers_Comptroller.Comptroller.md)
 
@@ -881,7 +881,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L71)
+[src/wrappers/Comptroller.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L71)
 
 ___
 
@@ -914,7 +914,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L75)
+[src/wrappers/Comptroller.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L75)
 
 ___
 
@@ -945,7 +945,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L64)
+[src/wrappers/Comptroller.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L64)
 
 ▸ **removeAllListeners**(`eventName?`): [`Comptroller`](wrappers_Comptroller.Comptroller.md)
 
@@ -965,7 +965,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L73)
+[src/wrappers/Comptroller.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L73)
 
 ___
 
@@ -997,7 +997,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L60)
+[src/wrappers/Comptroller.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L60)
 
 ▸ **removeListener**(`eventName`, `listener`): [`Comptroller`](wrappers_Comptroller.Comptroller.md)
 
@@ -1018,7 +1018,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Comptroller.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/Comptroller.d.ts#L72)
+[src/wrappers/Comptroller.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/6bd8832/src/wrappers/Comptroller.d.ts#L72)
 
 ___
 
