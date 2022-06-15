@@ -409,4 +409,24 @@ export class CreditLineApi {
   ): Promise<ContractTransaction> {
     return this.creditLineContract.liquidate(creditLineNumber, toSavingsAccount, { ...options });
   }
+
+  public async updateBorrowLimitLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.creditLineContract.updateBorrowLimitLimits(min, max, {...options});
+  }
+
+  public async updateIdealCollateralRatioLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.creditLineContract.updateIdealCollateralRatioLimits(min, max, {...options});
+  }
+
+  public async updateBorrowRateLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.creditLineContract.updateBorrowRateLimits(min, max, {...options});
+  }
+
+  public async updateProtocolFeeFraction(fee: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.creditLineContract.updateProtocolFeeFraction(fee, {...options});
+  }
+
+  public async updateLiquidatorRewardFraction(fee: BigNumberish,  options?: Overrides): Promise<ContractTransaction> {
+    return this.creditLineContract.updateLiquidatorRewardFraction(fee, {...options});
+  }
 }
