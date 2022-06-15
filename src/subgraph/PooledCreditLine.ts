@@ -13,22 +13,6 @@ import {
   getAllPooledCreditLinesOfBorrowerWithState,
   getAllPooledCreditLinesForCountWithStateNotIn,
   getAllLendersPerPool,
-} from '../queries';
-
-import {
-  PooledCreditLineDetail,
-  CreditLineStatus,
-  LenderContributionToPooledCreditLines,
-  PooledCreditLineOperation,
-  Balance,
-  LenderPoolDetail,
-  LenderPerPoolDetail,
-  LenderPerPool,
-} from '../types/Types';
-
-import BigNumber from 'bignumber.js';
-
-import {
   getPooledCreditLinesOfBorrower,
   getAllPooledCreditLinesWithState,
   getAllPooledCreditLinesWithNotState,
@@ -44,6 +28,19 @@ import {
   getAllPooledCreditLinesOfLender,
   getLenderPerPool,
 } from '../queries';
+
+import {
+  PooledCreditLineDetail,
+  CreditLineStatus,
+  LenderContributionToPooledCreditLines,
+  PooledCreditLineOperation,
+  Balance,
+  LenderPoolDetail,
+  LenderPerPoolDetail,
+  LenderPerPool,
+} from '../types/Types';
+
+import BigNumber from 'bignumber.js';
 
 import { PooledCreditLineEmulator } from '../emulator/PooledCreditLines';
 

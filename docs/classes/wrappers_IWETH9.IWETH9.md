@@ -170,7 +170,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L122)
+[src/wrappers/IWETH9.d.ts:122](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L122)
 
 ___
 
@@ -209,7 +209,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L138)
+[src/wrappers/IWETH9.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L138)
 
 ___
 
@@ -223,7 +223,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L136)
+[src/wrappers/IWETH9.d.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L136)
 
 ___
 
@@ -248,7 +248,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L84)
+[src/wrappers/IWETH9.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L84)
 
 ___
 
@@ -262,7 +262,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L82)
+[src/wrappers/IWETH9.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L82)
 
 ___
 
@@ -287,7 +287,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L156)
+[src/wrappers/IWETH9.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L156)
 
 ___
 
@@ -425,7 +425,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L106)
+[src/wrappers/IWETH9.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L106)
 
 ___
 
@@ -447,7 +447,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L108)
+[src/wrappers/IWETH9.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L108)
 
 ___
 
@@ -471,7 +471,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L43)
+[src/wrappers/IWETH9.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L43)
 
 ___
 
@@ -495,7 +495,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L42)
+[src/wrappers/IWETH9.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L42)
 
 ___
 
@@ -513,7 +513,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L44)
+[src/wrappers/IWETH9.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L44)
 
 ___
 
@@ -533,7 +533,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L114)
+[src/wrappers/IWETH9.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L114)
 
 ___
 
@@ -553,7 +553,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L116)
+[src/wrappers/IWETH9.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L116)
 
 ___
 
@@ -657,7 +657,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L46)
+[src/wrappers/IWETH9.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L46)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -677,7 +677,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L69)
+[src/wrappers/IWETH9.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L69)
 
 ___
 
@@ -709,7 +709,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L49)
+[src/wrappers/IWETH9.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L49)
 
 ▸ **off**(`eventName`, `listener`): [`IWETH9`](wrappers_IWETH9.IWETH9.md)
 
@@ -730,7 +730,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L70)
+[src/wrappers/IWETH9.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L70)
 
 ___
 
@@ -762,7 +762,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L53)
+[src/wrappers/IWETH9.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L53)
 
 ▸ **on**(`eventName`, `listener`): [`IWETH9`](wrappers_IWETH9.IWETH9.md)
 
@@ -783,7 +783,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L71)
+[src/wrappers/IWETH9.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L71)
 
 ___
 
@@ -815,7 +815,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L57)
+[src/wrappers/IWETH9.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L57)
 
 ▸ **once**(`eventName`, `listener`): [`IWETH9`](wrappers_IWETH9.IWETH9.md)
 
@@ -836,7 +836,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L72)
+[src/wrappers/IWETH9.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L72)
 
 ___
 
@@ -869,7 +869,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L76)
+[src/wrappers/IWETH9.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L76)
 
 ___
 
@@ -900,7 +900,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L65)
+[src/wrappers/IWETH9.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L65)
 
 ▸ **removeAllListeners**(`eventName?`): [`IWETH9`](wrappers_IWETH9.IWETH9.md)
 
@@ -920,7 +920,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L74)
+[src/wrappers/IWETH9.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L74)
 
 ___
 
@@ -952,7 +952,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L61)
+[src/wrappers/IWETH9.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L61)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IWETH9`](wrappers_IWETH9.IWETH9.md)
 
@@ -973,7 +973,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L73)
+[src/wrappers/IWETH9.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L73)
 
 ___
 
@@ -994,7 +994,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L118)
+[src/wrappers/IWETH9.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L118)
 
 ___
 
@@ -1015,7 +1015,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IWETH9.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IWETH9.d.ts#L120)
+[src/wrappers/IWETH9.d.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IWETH9.d.ts#L120)
 
 ___
 

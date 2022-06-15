@@ -128,7 +128,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L70)
+[src/wrappers/StrategyRegistry.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L70)
 
 ___
 
@@ -175,7 +175,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L23)
+[src/wrappers/StrategyRegistry.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L23)
 
 ___
 
@@ -344,7 +344,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L55)
+[src/wrappers/StrategyRegistry.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L55)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -365,7 +365,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L56)
+[src/wrappers/StrategyRegistry.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L56)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -386,7 +386,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L57)
+[src/wrappers/StrategyRegistry.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L57)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -407,7 +407,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L58)
+[src/wrappers/StrategyRegistry.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L58)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -428,7 +428,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L59)
+[src/wrappers/StrategyRegistry.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L59)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -449,7 +449,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L60)
+[src/wrappers/StrategyRegistry.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L60)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -470,7 +470,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L61)
+[src/wrappers/StrategyRegistry.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L61)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -491,7 +491,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L62)
+[src/wrappers/StrategyRegistry.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L62)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -512,7 +512,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L63)
+[src/wrappers/StrategyRegistry.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L63)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -533,7 +533,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L64)
+[src/wrappers/StrategyRegistry.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L64)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -554,7 +554,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L65)
+[src/wrappers/StrategyRegistry.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L65)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -575,7 +575,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L66)
+[src/wrappers/StrategyRegistry.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L66)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -596,7 +596,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L67)
+[src/wrappers/StrategyRegistry.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L67)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -617,7 +617,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L68)
+[src/wrappers/StrategyRegistry.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L68)
 
 ___
 
@@ -746,7 +746,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L40)
+[src/wrappers/StrategyRegistry.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L40)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -767,7 +767,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L41)
+[src/wrappers/StrategyRegistry.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L41)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -788,7 +788,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L42)
+[src/wrappers/StrategyRegistry.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L42)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -809,7 +809,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L43)
+[src/wrappers/StrategyRegistry.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L43)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -830,7 +830,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L44)
+[src/wrappers/StrategyRegistry.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L44)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -851,7 +851,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L45)
+[src/wrappers/StrategyRegistry.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L45)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -872,7 +872,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L46)
+[src/wrappers/StrategyRegistry.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L46)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -893,7 +893,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L47)
+[src/wrappers/StrategyRegistry.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L47)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -914,7 +914,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L48)
+[src/wrappers/StrategyRegistry.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L48)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -935,7 +935,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L49)
+[src/wrappers/StrategyRegistry.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L49)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -956,7 +956,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L50)
+[src/wrappers/StrategyRegistry.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L50)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -977,7 +977,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L51)
+[src/wrappers/StrategyRegistry.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L51)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -998,7 +998,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L52)
+[src/wrappers/StrategyRegistry.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L52)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1019,7 +1019,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L53)
+[src/wrappers/StrategyRegistry.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L53)
 
 ___
 
@@ -1116,7 +1116,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L77)
+[src/wrappers/StrategyRegistry.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L77)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1136,7 +1136,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L78)
+[src/wrappers/StrategyRegistry.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L78)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1156,7 +1156,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L79)
+[src/wrappers/StrategyRegistry.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L79)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1176,7 +1176,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/StrategyRegistry.d.ts#L80)
+[src/wrappers/StrategyRegistry.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L80)
 
 ___
 

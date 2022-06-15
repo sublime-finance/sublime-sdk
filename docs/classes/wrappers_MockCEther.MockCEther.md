@@ -222,7 +222,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:348](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L348)
+[src/wrappers/MockCEther.d.ts:348](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L348)
 
 ___
 
@@ -287,7 +287,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:433](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L433)
+[src/wrappers/MockCEther.d.ts:433](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L433)
 
 ___
 
@@ -308,7 +308,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:419](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L419)
+[src/wrappers/MockCEther.d.ts:419](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L419)
 
 ___
 
@@ -359,7 +359,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L129)
+[src/wrappers/MockCEther.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L129)
 
 ___
 
@@ -373,7 +373,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L127)
+[src/wrappers/MockCEther.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L127)
 
 ___
 
@@ -424,7 +424,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:533](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L533)
+[src/wrappers/MockCEther.d.ts:533](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L533)
 
 ___
 
@@ -562,7 +562,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L243)
+[src/wrappers/MockCEther.d.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L243)
 
 ___
 
@@ -584,7 +584,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:245](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L245)
+[src/wrappers/MockCEther.d.ts:245](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L245)
 
 ___
 
@@ -606,7 +606,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L247)
+[src/wrappers/MockCEther.d.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L247)
 
 ___
 
@@ -628,7 +628,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:249](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L249)
+[src/wrappers/MockCEther.d.ts:249](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L249)
 
 ___
 
@@ -652,7 +652,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L88)
+[src/wrappers/MockCEther.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L88)
 
 ___
 
@@ -673,7 +673,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:255](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L255)
+[src/wrappers/MockCEther.d.ts:255](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L255)
 
 ___
 
@@ -694,7 +694,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:257](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L257)
+[src/wrappers/MockCEther.d.ts:257](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L257)
 
 ___
 
@@ -715,7 +715,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:259](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L259)
+[src/wrappers/MockCEther.d.ts:259](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L259)
 
 ___
 
@@ -736,7 +736,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:261](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L261)
+[src/wrappers/MockCEther.d.ts:261](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L261)
 
 ___
 
@@ -760,7 +760,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L87)
+[src/wrappers/MockCEther.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L87)
 
 ___
 
@@ -780,7 +780,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:266](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L266)
+[src/wrappers/MockCEther.d.ts:266](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L266)
 
 ___
 
@@ -800,7 +800,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:268](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L268)
+[src/wrappers/MockCEther.d.ts:268](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L268)
 
 ___
 
@@ -822,7 +822,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:270](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L270)
+[src/wrappers/MockCEther.d.ts:270](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L270)
 
 ___
 
@@ -844,7 +844,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:276](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L276)
+[src/wrappers/MockCEther.d.ts:276](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L276)
 
 ___
 
@@ -862,7 +862,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L89)
+[src/wrappers/MockCEther.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L89)
 
 ___
 
@@ -907,7 +907,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:282](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L282)
+[src/wrappers/MockCEther.d.ts:282](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L282)
 
 ___
 
@@ -927,7 +927,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:284](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L284)
+[src/wrappers/MockCEther.d.ts:284](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L284)
 
 ___
 
@@ -971,7 +971,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:286](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L286)
+[src/wrappers/MockCEther.d.ts:286](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L286)
 
 ___
 
@@ -991,7 +991,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L288)
+[src/wrappers/MockCEther.d.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L288)
 
 ___
 
@@ -1013,7 +1013,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L290)
+[src/wrappers/MockCEther.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L290)
 
 ___
 
@@ -1035,7 +1035,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L296)
+[src/wrappers/MockCEther.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L296)
 
 ___
 
@@ -1090,7 +1090,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L91)
+[src/wrappers/MockCEther.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L91)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -1110,7 +1110,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L114)
+[src/wrappers/MockCEther.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L114)
 
 ___
 
@@ -1130,7 +1130,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L302)
+[src/wrappers/MockCEther.d.ts:302](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L302)
 
 ___
 
@@ -1150,7 +1150,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:304](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L304)
+[src/wrappers/MockCEther.d.ts:304](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L304)
 
 ___
 
@@ -1170,7 +1170,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L306)
+[src/wrappers/MockCEther.d.ts:306](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L306)
 
 ___
 
@@ -1190,7 +1190,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L308)
+[src/wrappers/MockCEther.d.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L308)
 
 ___
 
@@ -1222,7 +1222,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L94)
+[src/wrappers/MockCEther.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L94)
 
 ▸ **off**(`eventName`, `listener`): [`MockCEther`](wrappers_MockCEther.MockCEther.md)
 
@@ -1243,7 +1243,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L115)
+[src/wrappers/MockCEther.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L115)
 
 ___
 
@@ -1275,7 +1275,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L98)
+[src/wrappers/MockCEther.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L98)
 
 ▸ **on**(`eventName`, `listener`): [`MockCEther`](wrappers_MockCEther.MockCEther.md)
 
@@ -1296,7 +1296,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L116)
+[src/wrappers/MockCEther.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L116)
 
 ___
 
@@ -1328,7 +1328,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L102)
+[src/wrappers/MockCEther.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L102)
 
 ▸ **once**(`eventName`, `listener`): [`MockCEther`](wrappers_MockCEther.MockCEther.md)
 
@@ -1349,7 +1349,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L117)
+[src/wrappers/MockCEther.d.ts:117](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L117)
 
 ___
 
@@ -1382,7 +1382,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L121)
+[src/wrappers/MockCEther.d.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L121)
 
 ___
 
@@ -1403,7 +1403,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L310)
+[src/wrappers/MockCEther.d.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L310)
 
 ___
 
@@ -1424,7 +1424,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L312)
+[src/wrappers/MockCEther.d.ts:312](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L312)
 
 ___
 
@@ -1455,7 +1455,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L110)
+[src/wrappers/MockCEther.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L110)
 
 ▸ **removeAllListeners**(`eventName?`): [`MockCEther`](wrappers_MockCEther.MockCEther.md)
 
@@ -1475,7 +1475,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L119)
+[src/wrappers/MockCEther.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L119)
 
 ___
 
@@ -1507,7 +1507,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L106)
+[src/wrappers/MockCEther.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L106)
 
 ▸ **removeListener**(`eventName`, `listener`): [`MockCEther`](wrappers_MockCEther.MockCEther.md)
 
@@ -1528,7 +1528,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L118)
+[src/wrappers/MockCEther.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L118)
 
 ___
 
@@ -1548,7 +1548,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L314)
+[src/wrappers/MockCEther.d.ts:314](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L314)
 
 ___
 
@@ -1568,7 +1568,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:316](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L316)
+[src/wrappers/MockCEther.d.ts:316](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L316)
 
 ___
 
@@ -1588,7 +1588,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L318)
+[src/wrappers/MockCEther.d.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L318)
 
 ___
 
@@ -1608,7 +1608,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L320)
+[src/wrappers/MockCEther.d.ts:320](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L320)
 
 ___
 
@@ -1630,7 +1630,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L322)
+[src/wrappers/MockCEther.d.ts:322](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L322)
 
 ___
 
@@ -1652,7 +1652,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:328](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L328)
+[src/wrappers/MockCEther.d.ts:328](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L328)
 
 ___
 
@@ -1675,7 +1675,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:334](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L334)
+[src/wrappers/MockCEther.d.ts:334](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L334)
 
 ___
 
@@ -1698,7 +1698,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/MockCEther.d.ts:341](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/MockCEther.d.ts#L341)
+[src/wrappers/MockCEther.d.ts:341](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockCEther.d.ts#L341)
 
 ___
 

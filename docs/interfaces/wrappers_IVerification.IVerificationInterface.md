@@ -133,7 +133,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L40)
+[src/wrappers/IVerification.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L40)
 
 ___
 
@@ -170,7 +170,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L23)
+[src/wrappers/IVerification.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L23)
 
 ___
 
@@ -339,7 +339,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L35)
+[src/wrappers/IVerification.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L35)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -360,7 +360,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L36)
+[src/wrappers/IVerification.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L36)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -381,7 +381,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L37)
+[src/wrappers/IVerification.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L37)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -402,7 +402,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L38)
+[src/wrappers/IVerification.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L38)
 
 ___
 
@@ -531,7 +531,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L30)
+[src/wrappers/IVerification.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L30)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -552,7 +552,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L31)
+[src/wrappers/IVerification.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L31)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -573,7 +573,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L32)
+[src/wrappers/IVerification.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L32)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -594,7 +594,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L33)
+[src/wrappers/IVerification.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L33)
 
 ___
 
@@ -691,7 +691,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L52)
+[src/wrappers/IVerification.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L52)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -711,7 +711,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L53)
+[src/wrappers/IVerification.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L53)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -731,7 +731,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L54)
+[src/wrappers/IVerification.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L54)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -751,7 +751,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L55)
+[src/wrappers/IVerification.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L55)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -771,7 +771,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L56)
+[src/wrappers/IVerification.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L56)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -791,7 +791,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L57)
+[src/wrappers/IVerification.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L57)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -811,7 +811,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L58)
+[src/wrappers/IVerification.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L58)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -831,7 +831,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L59)
+[src/wrappers/IVerification.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L59)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -851,7 +851,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IVerification.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerification.d.ts#L60)
+[src/wrappers/IVerification.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerification.d.ts#L60)
 
 ___
 

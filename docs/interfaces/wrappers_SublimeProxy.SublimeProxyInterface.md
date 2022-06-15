@@ -126,7 +126,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L44)
+[src/wrappers/SublimeProxy.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L44)
 
 ___
 
@@ -164,7 +164,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L24)
+[src/wrappers/SublimeProxy.d.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L24)
 
 ___
 
@@ -333,7 +333,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L38)
+[src/wrappers/SublimeProxy.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L38)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -354,7 +354,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L39)
+[src/wrappers/SublimeProxy.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L39)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -375,7 +375,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L40)
+[src/wrappers/SublimeProxy.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L40)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -396,7 +396,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L41)
+[src/wrappers/SublimeProxy.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L41)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -417,7 +417,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L42)
+[src/wrappers/SublimeProxy.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L42)
 
 ___
 
@@ -546,7 +546,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L32)
+[src/wrappers/SublimeProxy.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L32)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -567,7 +567,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L33)
+[src/wrappers/SublimeProxy.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L33)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -588,7 +588,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L34)
+[src/wrappers/SublimeProxy.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L34)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -609,7 +609,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L35)
+[src/wrappers/SublimeProxy.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L35)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -630,7 +630,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L36)
+[src/wrappers/SublimeProxy.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L36)
 
 ___
 
@@ -727,7 +727,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L49)
+[src/wrappers/SublimeProxy.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L49)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -747,7 +747,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/SublimeProxy.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/SublimeProxy.d.ts#L50)
+[src/wrappers/SublimeProxy.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/SublimeProxy.d.ts#L50)
 
 ___
 

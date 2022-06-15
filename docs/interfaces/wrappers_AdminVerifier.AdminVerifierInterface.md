@@ -129,7 +129,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L70)
+[src/wrappers/AdminVerifier.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L70)
 
 ___
 
@@ -176,7 +176,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L23)
+[src/wrappers/AdminVerifier.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L23)
 
 ___
 
@@ -345,7 +345,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L55)
+[src/wrappers/AdminVerifier.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L55)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -366,7 +366,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L56)
+[src/wrappers/AdminVerifier.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L56)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -387,7 +387,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L57)
+[src/wrappers/AdminVerifier.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L57)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -408,7 +408,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L58)
+[src/wrappers/AdminVerifier.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L58)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -429,7 +429,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L59)
+[src/wrappers/AdminVerifier.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L59)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -450,7 +450,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L60)
+[src/wrappers/AdminVerifier.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L60)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -471,7 +471,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L61)
+[src/wrappers/AdminVerifier.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L61)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -492,7 +492,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L62)
+[src/wrappers/AdminVerifier.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L62)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -513,7 +513,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L63)
+[src/wrappers/AdminVerifier.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L63)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -534,7 +534,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L64)
+[src/wrappers/AdminVerifier.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L64)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -555,7 +555,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L65)
+[src/wrappers/AdminVerifier.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L65)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -576,7 +576,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L66)
+[src/wrappers/AdminVerifier.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L66)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -597,7 +597,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L67)
+[src/wrappers/AdminVerifier.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L67)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -618,7 +618,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L68)
+[src/wrappers/AdminVerifier.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L68)
 
 ___
 
@@ -747,7 +747,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L40)
+[src/wrappers/AdminVerifier.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L40)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -768,7 +768,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L41)
+[src/wrappers/AdminVerifier.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L41)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -789,7 +789,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L42)
+[src/wrappers/AdminVerifier.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L42)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -810,7 +810,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L43)
+[src/wrappers/AdminVerifier.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L43)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -831,7 +831,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L44)
+[src/wrappers/AdminVerifier.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L44)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -852,7 +852,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L45)
+[src/wrappers/AdminVerifier.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L45)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -873,7 +873,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L46)
+[src/wrappers/AdminVerifier.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L46)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -894,7 +894,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L47)
+[src/wrappers/AdminVerifier.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L47)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -915,7 +915,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L48)
+[src/wrappers/AdminVerifier.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L48)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -936,7 +936,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L49)
+[src/wrappers/AdminVerifier.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L49)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -957,7 +957,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L50)
+[src/wrappers/AdminVerifier.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L50)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -978,7 +978,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L51)
+[src/wrappers/AdminVerifier.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L51)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -999,7 +999,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L52)
+[src/wrappers/AdminVerifier.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L52)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1020,7 +1020,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L53)
+[src/wrappers/AdminVerifier.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L53)
 
 ___
 
@@ -1117,7 +1117,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L78)
+[src/wrappers/AdminVerifier.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L78)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1137,7 +1137,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L79)
+[src/wrappers/AdminVerifier.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L79)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1157,7 +1157,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L80)
+[src/wrappers/AdminVerifier.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L80)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1177,7 +1177,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L81)
+[src/wrappers/AdminVerifier.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L81)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1197,7 +1197,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/AdminVerifier.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/AdminVerifier.d.ts#L82)
+[src/wrappers/AdminVerifier.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AdminVerifier.d.ts#L82)
 
 ___
 

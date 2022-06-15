@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:1160](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L1160)
+[src/queries/getPooledCreditLines.ts:1160](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L1160)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:500](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L500)
+[src/queries/getPooledCreditLines.ts:500](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L500)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:722](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L722)
+[src/queries/getPooledCreditLines.ts:722](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L722)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:753](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L753)
+[src/queries/getPooledCreditLines.ts:753](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L753)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:787](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L787)
+[src/queries/getPooledCreditLines.ts:787](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L787)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:1032](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L1032)
+[src/queries/getPooledCreditLines.ts:1032](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L1032)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:956](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L956)
+[src/queries/getPooledCreditLines.ts:956](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L956)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:993](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L993)
+[src/queries/getPooledCreditLines.ts:993](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L993)
 
 ___
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:866](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L866)
+[src/queries/getPooledCreditLines.ts:866](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L866)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:821](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L821)
+[src/queries/getPooledCreditLines.ts:821](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L821)
 
 ___
 
@@ -264,7 +264,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:911](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L911)
+[src/queries/getPooledCreditLines.ts:911](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L911)
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:616](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L616)
+[src/queries/getPooledCreditLines.ts:616](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L616)
 
 ___
 
@@ -310,7 +310,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:558](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L558)
+[src/queries/getPooledCreditLines.ts:558](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L558)
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:674](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L674)
+[src/queries/getPooledCreditLines.ts:674](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L674)
 
 ___
 
@@ -352,7 +352,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:1067](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L1067)
+[src/queries/getPooledCreditLines.ts:1067](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L1067)
 
 ___
 
@@ -374,7 +374,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:1104](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L1104)
+[src/queries/getPooledCreditLines.ts:1104](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L1104)
 
 ___
 
@@ -395,7 +395,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:442](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L442)
+[src/queries/getPooledCreditLines.ts:442](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L442)
 
 ___
 
@@ -418,7 +418,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L3)
+[src/queries/getPooledCreditLines.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L3)
 
 ___
 
@@ -440,7 +440,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L114)
+[src/queries/getPooledCreditLines.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L114)
 
 ___
 
@@ -463,7 +463,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L195)
+[src/queries/getPooledCreditLines.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L195)
 
 ___
 
@@ -487,7 +487,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L318)
+[src/queries/getPooledCreditLines.ts:318](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L318)
 
 ___
 
@@ -511,7 +511,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:254](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L254)
+[src/queries/getPooledCreditLines.ts:254](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L254)
 
 ___
 
@@ -534,7 +534,7 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L30)
+[src/queries/getPooledCreditLines.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L30)
 
 ___
 
@@ -557,4 +557,4 @@ ___
 
 #### Defined in
 
-[src/queries/getPooledCreditLines.ts:383](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/queries/getPooledCreditLines.ts#L383)
+[src/queries/getPooledCreditLines.ts:383](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/queries/getPooledCreditLines.ts#L383)

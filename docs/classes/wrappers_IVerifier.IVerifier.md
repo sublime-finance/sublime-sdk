@@ -153,7 +153,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L68)
+[src/wrappers/IVerifier.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L68)
 
 ___
 
@@ -181,7 +181,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L80)
+[src/wrappers/IVerifier.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L80)
 
 ___
 
@@ -202,7 +202,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L70)
+[src/wrappers/IVerifier.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L70)
 
 ___
 
@@ -216,7 +216,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L66)
+[src/wrappers/IVerifier.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L66)
 
 ___
 
@@ -230,7 +230,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L64)
+[src/wrappers/IVerifier.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L64)
 
 ___
 
@@ -244,7 +244,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L82)
+[src/wrappers/IVerifier.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L82)
 
 ___
 
@@ -384,7 +384,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L25)
+[src/wrappers/IVerifier.d.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L25)
 
 ___
 
@@ -408,7 +408,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L24)
+[src/wrappers/IVerifier.d.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L24)
 
 ___
 
@@ -426,7 +426,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L26)
+[src/wrappers/IVerifier.d.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L26)
 
 ___
 
@@ -530,7 +530,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L28)
+[src/wrappers/IVerifier.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L28)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -550,7 +550,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L51)
+[src/wrappers/IVerifier.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L51)
 
 ___
 
@@ -582,7 +582,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L31)
+[src/wrappers/IVerifier.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L31)
 
 ▸ **off**(`eventName`, `listener`): [`IVerifier`](wrappers_IVerifier.IVerifier.md)
 
@@ -603,7 +603,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L52)
+[src/wrappers/IVerifier.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L52)
 
 ___
 
@@ -635,7 +635,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L35)
+[src/wrappers/IVerifier.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L35)
 
 ▸ **on**(`eventName`, `listener`): [`IVerifier`](wrappers_IVerifier.IVerifier.md)
 
@@ -656,7 +656,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L53)
+[src/wrappers/IVerifier.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L53)
 
 ___
 
@@ -688,7 +688,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L39)
+[src/wrappers/IVerifier.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L39)
 
 ▸ **once**(`eventName`, `listener`): [`IVerifier`](wrappers_IVerifier.IVerifier.md)
 
@@ -709,7 +709,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L54)
+[src/wrappers/IVerifier.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L54)
 
 ___
 
@@ -742,7 +742,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L58)
+[src/wrappers/IVerifier.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L58)
 
 ___
 
@@ -773,7 +773,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L47)
+[src/wrappers/IVerifier.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L47)
 
 ▸ **removeAllListeners**(`eventName?`): [`IVerifier`](wrappers_IVerifier.IVerifier.md)
 
@@ -793,7 +793,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L56)
+[src/wrappers/IVerifier.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L56)
 
 ___
 
@@ -825,7 +825,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L43)
+[src/wrappers/IVerifier.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L43)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IVerifier`](wrappers_IVerifier.IVerifier.md)
 
@@ -846,7 +846,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IVerifier.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/IVerifier.d.ts#L55)
+[src/wrappers/IVerifier.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IVerifier.d.ts#L55)
 
 ___
 

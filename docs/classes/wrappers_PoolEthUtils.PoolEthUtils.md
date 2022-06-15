@@ -174,7 +174,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L168)
+[src/wrappers/PoolEthUtils.d.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L168)
 
 ___
 
@@ -215,7 +215,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L188)
+[src/wrappers/PoolEthUtils.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L188)
 
 ___
 
@@ -229,7 +229,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L186)
+[src/wrappers/PoolEthUtils.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L186)
 
 ___
 
@@ -256,7 +256,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L86)
+[src/wrappers/PoolEthUtils.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L86)
 
 ___
 
@@ -270,7 +270,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L84)
+[src/wrappers/PoolEthUtils.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L84)
 
 ___
 
@@ -297,7 +297,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L227)
+[src/wrappers/PoolEthUtils.d.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L227)
 
 ___
 
@@ -435,7 +435,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L128)
+[src/wrappers/PoolEthUtils.d.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L128)
 
 ___
 
@@ -457,7 +457,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L134)
+[src/wrappers/PoolEthUtils.d.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L134)
 
 ___
 
@@ -481,7 +481,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L45)
+[src/wrappers/PoolEthUtils.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L45)
 
 ___
 
@@ -505,7 +505,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L44)
+[src/wrappers/PoolEthUtils.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L44)
 
 ___
 
@@ -523,7 +523,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L46)
+[src/wrappers/PoolEthUtils.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L46)
 
 ___
 
@@ -544,7 +544,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L140)
+[src/wrappers/PoolEthUtils.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L140)
 
 ___
 
@@ -565,7 +565,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L145)
+[src/wrappers/PoolEthUtils.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L145)
 
 ___
 
@@ -613,7 +613,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L150)
+[src/wrappers/PoolEthUtils.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L150)
 
 ___
 
@@ -636,7 +636,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L157)
+[src/wrappers/PoolEthUtils.d.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L157)
 
 ___
 
@@ -715,7 +715,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L48)
+[src/wrappers/PoolEthUtils.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L48)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -735,7 +735,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L71)
+[src/wrappers/PoolEthUtils.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L71)
 
 ___
 
@@ -767,7 +767,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L51)
+[src/wrappers/PoolEthUtils.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L51)
 
 ▸ **off**(`eventName`, `listener`): [`PoolEthUtils`](wrappers_PoolEthUtils.PoolEthUtils.md)
 
@@ -788,7 +788,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L72)
+[src/wrappers/PoolEthUtils.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L72)
 
 ___
 
@@ -820,7 +820,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L55)
+[src/wrappers/PoolEthUtils.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L55)
 
 ▸ **on**(`eventName`, `listener`): [`PoolEthUtils`](wrappers_PoolEthUtils.PoolEthUtils.md)
 
@@ -841,7 +841,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L73)
+[src/wrappers/PoolEthUtils.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L73)
 
 ___
 
@@ -873,7 +873,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L59)
+[src/wrappers/PoolEthUtils.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L59)
 
 ▸ **once**(`eventName`, `listener`): [`PoolEthUtils`](wrappers_PoolEthUtils.PoolEthUtils.md)
 
@@ -894,7 +894,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L74)
+[src/wrappers/PoolEthUtils.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L74)
 
 ___
 
@@ -927,7 +927,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L78)
+[src/wrappers/PoolEthUtils.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L78)
 
 ___
 
@@ -958,7 +958,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L67)
+[src/wrappers/PoolEthUtils.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L67)
 
 ▸ **removeAllListeners**(`eventName?`): [`PoolEthUtils`](wrappers_PoolEthUtils.PoolEthUtils.md)
 
@@ -978,7 +978,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L76)
+[src/wrappers/PoolEthUtils.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L76)
 
 ___
 
@@ -1010,7 +1010,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L63)
+[src/wrappers/PoolEthUtils.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L63)
 
 ▸ **removeListener**(`eventName`, `listener`): [`PoolEthUtils`](wrappers_PoolEthUtils.PoolEthUtils.md)
 
@@ -1031,7 +1031,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L75)
+[src/wrappers/PoolEthUtils.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L75)
 
 ___
 
@@ -1051,7 +1051,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L164)
+[src/wrappers/PoolEthUtils.d.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L164)
 
 ___
 
@@ -1071,7 +1071,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/PoolEthUtils.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/PoolEthUtils.d.ts#L166)
+[src/wrappers/PoolEthUtils.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/PoolEthUtils.d.ts#L166)
 
 ___
 

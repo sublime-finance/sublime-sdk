@@ -182,7 +182,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L149)
+[src/wrappers/Beacon.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L149)
 
 ___
 
@@ -227,7 +227,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L182)
+[src/wrappers/Beacon.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L182)
 
 ___
 
@@ -247,7 +247,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L175)
+[src/wrappers/Beacon.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L175)
 
 ___
 
@@ -278,7 +278,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L96)
+[src/wrappers/Beacon.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L96)
 
 ___
 
@@ -292,7 +292,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L94)
+[src/wrappers/Beacon.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L94)
 
 ___
 
@@ -323,7 +323,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:208](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L208)
+[src/wrappers/Beacon.d.ts:208](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L208)
 
 ___
 
@@ -463,7 +463,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L55)
+[src/wrappers/Beacon.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L55)
 
 ___
 
@@ -484,7 +484,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L125)
+[src/wrappers/Beacon.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L125)
 
 ___
 
@@ -505,7 +505,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L127)
+[src/wrappers/Beacon.d.ts:127](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L127)
 
 ___
 
@@ -529,7 +529,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L54)
+[src/wrappers/Beacon.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L54)
 
 ___
 
@@ -547,7 +547,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L56)
+[src/wrappers/Beacon.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L56)
 
 ___
 
@@ -616,7 +616,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L129)
+[src/wrappers/Beacon.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L129)
 
 ___
 
@@ -636,7 +636,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L131)
+[src/wrappers/Beacon.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L131)
 
 ___
 
@@ -656,7 +656,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L133)
+[src/wrappers/Beacon.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L133)
 
 ___
 
@@ -676,7 +676,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L135)
+[src/wrappers/Beacon.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L135)
 
 ___
 
@@ -731,7 +731,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L58)
+[src/wrappers/Beacon.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L58)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -751,7 +751,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L81)
+[src/wrappers/Beacon.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L81)
 
 ___
 
@@ -783,7 +783,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L61)
+[src/wrappers/Beacon.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L61)
 
 ▸ **off**(`eventName`, `listener`): [`Beacon`](wrappers_Beacon.Beacon.md)
 
@@ -804,7 +804,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L82)
+[src/wrappers/Beacon.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L82)
 
 ___
 
@@ -836,7 +836,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L65)
+[src/wrappers/Beacon.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L65)
 
 ▸ **on**(`eventName`, `listener`): [`Beacon`](wrappers_Beacon.Beacon.md)
 
@@ -857,7 +857,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L83)
+[src/wrappers/Beacon.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L83)
 
 ___
 
@@ -889,7 +889,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L69)
+[src/wrappers/Beacon.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L69)
 
 ▸ **once**(`eventName`, `listener`): [`Beacon`](wrappers_Beacon.Beacon.md)
 
@@ -910,7 +910,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L84)
+[src/wrappers/Beacon.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L84)
 
 ___
 
@@ -930,7 +930,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L137)
+[src/wrappers/Beacon.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L137)
 
 ___
 
@@ -950,7 +950,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L139)
+[src/wrappers/Beacon.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L139)
 
 ___
 
@@ -983,7 +983,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L88)
+[src/wrappers/Beacon.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L88)
 
 ___
 
@@ -1014,7 +1014,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L77)
+[src/wrappers/Beacon.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L77)
 
 ▸ **removeAllListeners**(`eventName?`): [`Beacon`](wrappers_Beacon.Beacon.md)
 
@@ -1034,7 +1034,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L86)
+[src/wrappers/Beacon.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L86)
 
 ___
 
@@ -1066,7 +1066,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L73)
+[src/wrappers/Beacon.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L73)
 
 ▸ **removeListener**(`eventName`, `listener`): [`Beacon`](wrappers_Beacon.Beacon.md)
 
@@ -1087,7 +1087,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L85)
+[src/wrappers/Beacon.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L85)
 
 ___
 
@@ -1107,7 +1107,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L141)
+[src/wrappers/Beacon.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L141)
 
 ___
 
@@ -1127,7 +1127,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L143)
+[src/wrappers/Beacon.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L143)
 
 ___
 
@@ -1148,7 +1148,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L145)
+[src/wrappers/Beacon.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L145)
 
 ___
 
@@ -1169,7 +1169,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/Beacon.d.ts#L147)
+[src/wrappers/Beacon.d.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L147)
 
 ___
 

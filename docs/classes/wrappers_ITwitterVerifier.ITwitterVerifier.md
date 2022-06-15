@@ -166,7 +166,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L130)
+[src/wrappers/ITwitterVerifier.d.ts:130](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L130)
 
 ___
 
@@ -203,7 +203,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L158)
+[src/wrappers/ITwitterVerifier.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L158)
 
 ___
 
@@ -217,7 +217,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L156)
+[src/wrappers/ITwitterVerifier.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L156)
 
 ___
 
@@ -240,7 +240,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L80)
+[src/wrappers/ITwitterVerifier.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L80)
 
 ___
 
@@ -254,7 +254,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L78)
+[src/wrappers/ITwitterVerifier.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L78)
 
 ___
 
@@ -277,7 +277,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L184)
+[src/wrappers/ITwitterVerifier.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L184)
 
 ___
 
@@ -417,7 +417,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L39)
+[src/wrappers/ITwitterVerifier.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L39)
 
 ___
 
@@ -441,7 +441,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L38)
+[src/wrappers/ITwitterVerifier.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L38)
 
 ___
 
@@ -459,7 +459,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L40)
+[src/wrappers/ITwitterVerifier.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L40)
 
 ___
 
@@ -563,7 +563,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L42)
+[src/wrappers/ITwitterVerifier.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L42)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -583,7 +583,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L65)
+[src/wrappers/ITwitterVerifier.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L65)
 
 ___
 
@@ -615,7 +615,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L45)
+[src/wrappers/ITwitterVerifier.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L45)
 
 ▸ **off**(`eventName`, `listener`): [`ITwitterVerifier`](wrappers_ITwitterVerifier.ITwitterVerifier.md)
 
@@ -636,7 +636,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L66)
+[src/wrappers/ITwitterVerifier.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L66)
 
 ___
 
@@ -668,7 +668,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L49)
+[src/wrappers/ITwitterVerifier.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L49)
 
 ▸ **on**(`eventName`, `listener`): [`ITwitterVerifier`](wrappers_ITwitterVerifier.ITwitterVerifier.md)
 
@@ -689,7 +689,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L67)
+[src/wrappers/ITwitterVerifier.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L67)
 
 ___
 
@@ -721,7 +721,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L53)
+[src/wrappers/ITwitterVerifier.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L53)
 
 ▸ **once**(`eventName`, `listener`): [`ITwitterVerifier`](wrappers_ITwitterVerifier.ITwitterVerifier.md)
 
@@ -742,7 +742,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L68)
+[src/wrappers/ITwitterVerifier.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L68)
 
 ___
 
@@ -775,7 +775,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L72)
+[src/wrappers/ITwitterVerifier.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L72)
 
 ___
 
@@ -801,7 +801,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L106)
+[src/wrappers/ITwitterVerifier.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L106)
 
 ___
 
@@ -827,7 +827,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L116)
+[src/wrappers/ITwitterVerifier.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L116)
 
 ___
 
@@ -858,7 +858,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L61)
+[src/wrappers/ITwitterVerifier.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L61)
 
 ▸ **removeAllListeners**(`eventName?`): [`ITwitterVerifier`](wrappers_ITwitterVerifier.ITwitterVerifier.md)
 
@@ -878,7 +878,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L70)
+[src/wrappers/ITwitterVerifier.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L70)
 
 ___
 
@@ -910,7 +910,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L57)
+[src/wrappers/ITwitterVerifier.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L57)
 
 ▸ **removeListener**(`eventName`, `listener`): [`ITwitterVerifier`](wrappers_ITwitterVerifier.ITwitterVerifier.md)
 
@@ -931,7 +931,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L69)
+[src/wrappers/ITwitterVerifier.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L69)
 
 ___
 
@@ -951,7 +951,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L126)
+[src/wrappers/ITwitterVerifier.d.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L126)
 
 ___
 
@@ -971,7 +971,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/ITwitterVerifier.d.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/230dfd0/src/wrappers/ITwitterVerifier.d.ts#L128)
+[src/wrappers/ITwitterVerifier.d.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/ITwitterVerifier.d.ts#L128)
 
 ___
 
