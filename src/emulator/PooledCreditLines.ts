@@ -320,9 +320,8 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return this.pooledCreditLineState.depositedCollateralInShares;
   }
 
-  // to-do
   public borrowerVerifier(): string {
-    return this.pooledCreditLineState.lenderVerifier;
+    return this.pooledCreditLineState.borrowerVerifier;
   }
 
   // to-do

@@ -72,6 +72,9 @@ export async function getPooledCreditLinesOfLender(
               lenderVerifier {
                 id
               }
+              borrowerVerifier {
+                id
+              }
               lenderPool{
                 id
                 sharesHeld
@@ -153,6 +156,9 @@ export async function getPooledCreditLinesForLenderById(url: string, lenderAddre
               lenderVerifier {
                 id
               }
+              borrowerVerifier {
+                id
+              }
               lenderPool{
                 id
                 sharesHeld
@@ -224,6 +230,9 @@ export async function getPooledCreditLinesOfBorrower(url: string, borrower: stri
           lenderVerifier {
             id
           }
+          borrowerVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -287,6 +296,9 @@ export async function getPooledCreditLinesOfBorrowerWithState(
           status
           minBorrowAmount
           lenderVerifier {
+            id
+          }
+          borrowerVerifier {
             id
           }
           lenderPool{
@@ -353,6 +365,9 @@ export async function getPooledCreditLinesOfBorrowerWithNotState(
           lenderVerifier {
             id
           }
+          borrowerVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -410,6 +425,9 @@ export async function getPooledCreditLinesOfLenderCanLendTo(url: string, lender:
           status
           minBorrowAmount
           lenderVerifier {
+            id
+          }
+          borrowerVerifier {
             id
           }
           lenderPool{
@@ -470,6 +488,9 @@ export async function getPooledCreditLineById(url: string, id: number): Promise<
           lenderVerifier {
             id
           }
+          borrowerVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -526,6 +547,9 @@ export async function getAllPooledCreditLines(url: string, count: number, skip: 
           status
           minBorrowAmount
           lenderVerifier {
+            id
+          }
+          borrowerVerifier {
             id
           }
           lenderPool{
@@ -586,6 +610,9 @@ export async function getAllPooledCreditLinesWithState(url: string, count: numbe
           lenderVerifier {
             id
           }
+          borrowerVerifier {
+            id
+          }
           lenderPool{
             id
             sharesHeld
@@ -642,6 +669,9 @@ export async function getAllPooledCreditLinesWithNotState(url: string, count: nu
           status
           minBorrowAmount
           lenderVerifier {
+            id
+          }
+          borrowerVerifier {
             id
           }
           lenderPool{
@@ -1137,6 +1167,9 @@ export async function getPCLandLpTogether(url: string, count: number, skip: numb
           collateralStrategy
           totalLentAmount
           lenderVerifier {
+            id
+          }
+          borrowerVerifier {
             id
           }
         }

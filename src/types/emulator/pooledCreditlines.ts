@@ -25,6 +25,7 @@ export interface PooledCreditLineState {
   totalLentAmount: BigNumber;
   minBorrowAmount: BigNumber;
   lenderVerifier: string;
+  borrowerVerifier: string;
 }
 
 export interface PooledCreditLineExternalData {
