@@ -125,7 +125,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L46)
+[src/wrappers/Beacon.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L46)
 
 ___
 
@@ -164,7 +164,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L23)
+[src/wrappers/Beacon.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L23)
 
 ___
 
@@ -333,7 +333,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L39)
+[src/wrappers/Beacon.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L39)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -354,7 +354,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L40)
+[src/wrappers/Beacon.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L40)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -375,7 +375,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L41)
+[src/wrappers/Beacon.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L41)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -396,7 +396,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L42)
+[src/wrappers/Beacon.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L42)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -417,7 +417,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L43)
+[src/wrappers/Beacon.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L43)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -438,7 +438,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L44)
+[src/wrappers/Beacon.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L44)
 
 ___
 
@@ -567,7 +567,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L32)
+[src/wrappers/Beacon.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L32)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -588,7 +588,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L33)
+[src/wrappers/Beacon.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L33)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -609,7 +609,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L34)
+[src/wrappers/Beacon.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L34)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -630,7 +630,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L35)
+[src/wrappers/Beacon.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L35)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -651,7 +651,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L36)
+[src/wrappers/Beacon.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L36)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -672,7 +672,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L37)
+[src/wrappers/Beacon.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L37)
 
 ___
 
@@ -769,7 +769,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/Beacon.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/Beacon.d.ts#L50)
+[src/wrappers/Beacon.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/Beacon.d.ts#L50)
 
 ___
 

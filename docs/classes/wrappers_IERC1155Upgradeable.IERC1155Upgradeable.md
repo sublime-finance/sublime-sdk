@@ -186,7 +186,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L238)
+[src/wrappers/IERC1155Upgradeable.d.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L238)
 
 ___
 
@@ -233,7 +233,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:340](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L340)
+[src/wrappers/IERC1155Upgradeable.d.ts:340](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L340)
 
 ___
 
@@ -256,7 +256,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L296)
+[src/wrappers/IERC1155Upgradeable.d.ts:296](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L296)
 
 ___
 
@@ -289,7 +289,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L108)
+[src/wrappers/IERC1155Upgradeable.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L108)
 
 ___
 
@@ -303,7 +303,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L106)
+[src/wrappers/IERC1155Upgradeable.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L106)
 
 ___
 
@@ -336,7 +336,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:402](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L402)
+[src/wrappers/IERC1155Upgradeable.d.ts:402](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L402)
 
 ___
 
@@ -476,7 +476,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L67)
+[src/wrappers/IERC1155Upgradeable.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L67)
 
 ___
 
@@ -498,7 +498,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L174)
+[src/wrappers/IERC1155Upgradeable.d.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L174)
 
 ___
 
@@ -520,7 +520,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L176)
+[src/wrappers/IERC1155Upgradeable.d.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L176)
 
 ___
 
@@ -542,7 +542,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L178)
+[src/wrappers/IERC1155Upgradeable.d.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L178)
 
 ___
 
@@ -564,7 +564,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:180](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L180)
+[src/wrappers/IERC1155Upgradeable.d.ts:180](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L180)
 
 ___
 
@@ -588,7 +588,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L66)
+[src/wrappers/IERC1155Upgradeable.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L66)
 
 ___
 
@@ -606,7 +606,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L68)
+[src/wrappers/IERC1155Upgradeable.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L68)
 
 ___
 
@@ -677,7 +677,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L182)
+[src/wrappers/IERC1155Upgradeable.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L182)
 
 ___
 
@@ -699,7 +699,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L184)
+[src/wrappers/IERC1155Upgradeable.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L184)
 
 ___
 
@@ -754,7 +754,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L70)
+[src/wrappers/IERC1155Upgradeable.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L70)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -774,7 +774,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L93)
+[src/wrappers/IERC1155Upgradeable.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L93)
 
 ___
 
@@ -806,7 +806,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L73)
+[src/wrappers/IERC1155Upgradeable.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L73)
 
 ▸ **off**(`eventName`, `listener`): [`IERC1155Upgradeable`](wrappers_IERC1155Upgradeable.IERC1155Upgradeable.md)
 
@@ -827,7 +827,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L94)
+[src/wrappers/IERC1155Upgradeable.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L94)
 
 ___
 
@@ -859,7 +859,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L77)
+[src/wrappers/IERC1155Upgradeable.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L77)
 
 ▸ **on**(`eventName`, `listener`): [`IERC1155Upgradeable`](wrappers_IERC1155Upgradeable.IERC1155Upgradeable.md)
 
@@ -880,7 +880,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L95)
+[src/wrappers/IERC1155Upgradeable.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L95)
 
 ___
 
@@ -912,7 +912,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L81)
+[src/wrappers/IERC1155Upgradeable.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L81)
 
 ▸ **once**(`eventName`, `listener`): [`IERC1155Upgradeable`](wrappers_IERC1155Upgradeable.IERC1155Upgradeable.md)
 
@@ -933,7 +933,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L96)
+[src/wrappers/IERC1155Upgradeable.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L96)
 
 ___
 
@@ -966,7 +966,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L100)
+[src/wrappers/IERC1155Upgradeable.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L100)
 
 ___
 
@@ -997,7 +997,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L89)
+[src/wrappers/IERC1155Upgradeable.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L89)
 
 ▸ **removeAllListeners**(`eventName?`): [`IERC1155Upgradeable`](wrappers_IERC1155Upgradeable.IERC1155Upgradeable.md)
 
@@ -1017,7 +1017,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L98)
+[src/wrappers/IERC1155Upgradeable.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L98)
 
 ___
 
@@ -1049,7 +1049,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L85)
+[src/wrappers/IERC1155Upgradeable.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L85)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IERC1155Upgradeable`](wrappers_IERC1155Upgradeable.IERC1155Upgradeable.md)
 
@@ -1070,7 +1070,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L97)
+[src/wrappers/IERC1155Upgradeable.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L97)
 
 ___
 
@@ -1095,7 +1095,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L186)
+[src/wrappers/IERC1155Upgradeable.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L186)
 
 ___
 
@@ -1120,7 +1120,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L195)
+[src/wrappers/IERC1155Upgradeable.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L195)
 
 ___
 
@@ -1145,7 +1145,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L204)
+[src/wrappers/IERC1155Upgradeable.d.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L204)
 
 ___
 
@@ -1170,7 +1170,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:213](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L213)
+[src/wrappers/IERC1155Upgradeable.d.ts:213](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L213)
 
 ___
 
@@ -1192,7 +1192,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:222](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L222)
+[src/wrappers/IERC1155Upgradeable.d.ts:222](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L222)
 
 ___
 
@@ -1214,7 +1214,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:228](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L228)
+[src/wrappers/IERC1155Upgradeable.d.ts:228](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L228)
 
 ___
 
@@ -1235,7 +1235,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:234](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L234)
+[src/wrappers/IERC1155Upgradeable.d.ts:234](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L234)
 
 ___
 
@@ -1256,7 +1256,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IERC1155Upgradeable.d.ts:236](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IERC1155Upgradeable.d.ts#L236)
+[src/wrappers/IERC1155Upgradeable.d.ts:236](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IERC1155Upgradeable.d.ts#L236)
 
 ___
 

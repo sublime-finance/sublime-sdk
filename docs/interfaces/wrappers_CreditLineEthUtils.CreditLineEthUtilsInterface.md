@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L40)
+[src/wrappers/CreditLineEthUtils.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L40)
 
 ___
 
@@ -156,7 +156,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L23)
+[src/wrappers/CreditLineEthUtils.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L23)
 
 ___
 
@@ -325,7 +325,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L35)
+[src/wrappers/CreditLineEthUtils.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L35)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -346,7 +346,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L36)
+[src/wrappers/CreditLineEthUtils.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L36)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -367,7 +367,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L37)
+[src/wrappers/CreditLineEthUtils.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L37)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -388,7 +388,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L38)
+[src/wrappers/CreditLineEthUtils.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L38)
 
 ___
 
@@ -517,7 +517,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L30)
+[src/wrappers/CreditLineEthUtils.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L30)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -538,7 +538,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L31)
+[src/wrappers/CreditLineEthUtils.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L31)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -559,7 +559,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L32)
+[src/wrappers/CreditLineEthUtils.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L32)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -580,7 +580,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/CreditLineEthUtils.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/CreditLineEthUtils.d.ts#L33)
+[src/wrappers/CreditLineEthUtils.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/CreditLineEthUtils.d.ts#L33)
 
 ___
 

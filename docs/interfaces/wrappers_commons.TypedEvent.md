@@ -68,7 +68,7 @@ Event.args
 
 #### Defined in
 
-[src/wrappers/commons.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/commons.ts#L11)
+[src/wrappers/commons.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/commons.ts#L11)
 
 ___
 

@@ -133,7 +133,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L14)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L14)
 
 ___
 
@@ -161,7 +161,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L12)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L12)
 
 ___
 
@@ -556,7 +556,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L26)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L26)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -576,7 +576,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L27)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L27)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -596,7 +596,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L28)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L28)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -616,7 +616,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L29)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L29)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -636,7 +636,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L30)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L30)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -656,7 +656,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L31)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L31)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -676,7 +676,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L32)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L32)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -696,7 +696,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L33)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L33)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -716,7 +716,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolEvents.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IUniswapV3PoolEvents.d.ts#L34)
+[src/wrappers/IUniswapV3PoolEvents.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IUniswapV3PoolEvents.d.ts#L34)
 
 ___
 

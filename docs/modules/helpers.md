@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/helpers.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/helpers.ts#L12)
+[src/helpers.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/helpers.ts#L12)
 
 ## Functions
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[src/helpers.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/helpers.ts#L3)
+[src/helpers.ts:3](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/helpers.ts#L3)
 
 ___
 
@@ -61,4 +61,4 @@ ___
 
 #### Defined in
 
-[src/helpers.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/helpers.ts#L14)
+[src/helpers.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/helpers.ts#L14)

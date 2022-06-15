@@ -129,7 +129,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L73)
+[src/wrappers/MockTwitterVerifier.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L73)
 
 ___
 
@@ -176,7 +176,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L23)
+[src/wrappers/MockTwitterVerifier.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L23)
 
 ___
 
@@ -345,7 +345,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L58)
+[src/wrappers/MockTwitterVerifier.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L58)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -366,7 +366,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L59)
+[src/wrappers/MockTwitterVerifier.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L59)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -387,7 +387,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L60)
+[src/wrappers/MockTwitterVerifier.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L60)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -408,7 +408,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L61)
+[src/wrappers/MockTwitterVerifier.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L61)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -429,7 +429,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L62)
+[src/wrappers/MockTwitterVerifier.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L62)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -450,7 +450,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L63)
+[src/wrappers/MockTwitterVerifier.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L63)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -471,7 +471,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L64)
+[src/wrappers/MockTwitterVerifier.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L64)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -492,7 +492,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L65)
+[src/wrappers/MockTwitterVerifier.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L65)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -513,7 +513,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L66)
+[src/wrappers/MockTwitterVerifier.d.ts:66](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L66)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -534,7 +534,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L67)
+[src/wrappers/MockTwitterVerifier.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L67)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -555,7 +555,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L68)
+[src/wrappers/MockTwitterVerifier.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L68)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -576,7 +576,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L69)
+[src/wrappers/MockTwitterVerifier.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L69)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -597,7 +597,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L70)
+[src/wrappers/MockTwitterVerifier.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L70)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -618,7 +618,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L71)
+[src/wrappers/MockTwitterVerifier.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L71)
 
 ___
 
@@ -747,7 +747,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L40)
+[src/wrappers/MockTwitterVerifier.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L40)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -768,7 +768,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L41)
+[src/wrappers/MockTwitterVerifier.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L41)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -789,7 +789,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L42)
+[src/wrappers/MockTwitterVerifier.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L42)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -810,7 +810,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L46)
+[src/wrappers/MockTwitterVerifier.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L46)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -831,7 +831,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L47)
+[src/wrappers/MockTwitterVerifier.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L47)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -852,7 +852,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L48)
+[src/wrappers/MockTwitterVerifier.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L48)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -873,7 +873,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L49)
+[src/wrappers/MockTwitterVerifier.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L49)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -894,7 +894,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L50)
+[src/wrappers/MockTwitterVerifier.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L50)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -915,7 +915,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L51)
+[src/wrappers/MockTwitterVerifier.d.ts:51](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L51)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -936,7 +936,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L52)
+[src/wrappers/MockTwitterVerifier.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L52)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -957,7 +957,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L53)
+[src/wrappers/MockTwitterVerifier.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L53)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -978,7 +978,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L54)
+[src/wrappers/MockTwitterVerifier.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L54)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -999,7 +999,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L55)
+[src/wrappers/MockTwitterVerifier.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L55)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1020,7 +1020,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L56)
+[src/wrappers/MockTwitterVerifier.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L56)
 
 ___
 
@@ -1117,7 +1117,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L81)
+[src/wrappers/MockTwitterVerifier.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L81)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1137,7 +1137,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L82)
+[src/wrappers/MockTwitterVerifier.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L82)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1157,7 +1157,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L83)
+[src/wrappers/MockTwitterVerifier.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L83)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1177,7 +1177,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L84)
+[src/wrappers/MockTwitterVerifier.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L84)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1197,7 +1197,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/MockTwitterVerifier.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/MockTwitterVerifier.d.ts#L85)
+[src/wrappers/MockTwitterVerifier.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/MockTwitterVerifier.d.ts#L85)
 
 ___
 

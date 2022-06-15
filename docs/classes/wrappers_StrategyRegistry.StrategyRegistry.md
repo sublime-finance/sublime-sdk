@@ -214,7 +214,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:307](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L307)
+[src/wrappers/StrategyRegistry.d.ts:307](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L307)
 
 ___
 
@@ -275,7 +275,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:383](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L383)
+[src/wrappers/StrategyRegistry.d.ts:383](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L383)
 
 ___
 
@@ -298,7 +298,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:370](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L370)
+[src/wrappers/StrategyRegistry.d.ts:370](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L370)
 
 ___
 
@@ -345,7 +345,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L126)
+[src/wrappers/StrategyRegistry.d.ts:126](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L126)
 
 ___
 
@@ -359,7 +359,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:124](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L124)
+[src/wrappers/StrategyRegistry.d.ts:124](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L124)
 
 ___
 
@@ -406,7 +406,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:470](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L470)
+[src/wrappers/StrategyRegistry.d.ts:470](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L470)
 
 ___
 
@@ -543,7 +543,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:219](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L219)
+[src/wrappers/StrategyRegistry.d.ts:219](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L219)
 
 ___
 
@@ -564,7 +564,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L221)
+[src/wrappers/StrategyRegistry.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L221)
 
 ___
 
@@ -588,7 +588,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L85)
+[src/wrappers/StrategyRegistry.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L85)
 
 ___
 
@@ -612,7 +612,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L84)
+[src/wrappers/StrategyRegistry.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L84)
 
 ___
 
@@ -630,7 +630,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L86)
+[src/wrappers/StrategyRegistry.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L86)
 
 ___
 
@@ -699,7 +699,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:223](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L223)
+[src/wrappers/StrategyRegistry.d.ts:223](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L223)
 
 ___
 
@@ -719,7 +719,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L225)
+[src/wrappers/StrategyRegistry.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L225)
 
 ___
 
@@ -741,7 +741,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L227)
+[src/wrappers/StrategyRegistry.d.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L227)
 
 ___
 
@@ -763,7 +763,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L233)
+[src/wrappers/StrategyRegistry.d.ts:233](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L233)
 
 ___
 
@@ -784,7 +784,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:239](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L239)
+[src/wrappers/StrategyRegistry.d.ts:239](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L239)
 
 ___
 
@@ -805,7 +805,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L241)
+[src/wrappers/StrategyRegistry.d.ts:241](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L241)
 
 ___
 
@@ -860,7 +860,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L88)
+[src/wrappers/StrategyRegistry.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L88)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -880,7 +880,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L111)
+[src/wrappers/StrategyRegistry.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L111)
 
 ___
 
@@ -900,7 +900,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L243)
+[src/wrappers/StrategyRegistry.d.ts:243](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L243)
 
 ___
 
@@ -920,7 +920,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:245](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L245)
+[src/wrappers/StrategyRegistry.d.ts:245](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L245)
 
 ___
 
@@ -952,7 +952,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L91)
+[src/wrappers/StrategyRegistry.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L91)
 
 ▸ **off**(`eventName`, `listener`): [`StrategyRegistry`](wrappers_StrategyRegistry.StrategyRegistry.md)
 
@@ -973,7 +973,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L112)
+[src/wrappers/StrategyRegistry.d.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L112)
 
 ___
 
@@ -1005,7 +1005,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L95)
+[src/wrappers/StrategyRegistry.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L95)
 
 ▸ **on**(`eventName`, `listener`): [`StrategyRegistry`](wrappers_StrategyRegistry.StrategyRegistry.md)
 
@@ -1026,7 +1026,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L113)
+[src/wrappers/StrategyRegistry.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L113)
 
 ___
 
@@ -1058,7 +1058,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L99)
+[src/wrappers/StrategyRegistry.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L99)
 
 ▸ **once**(`eventName`, `listener`): [`StrategyRegistry`](wrappers_StrategyRegistry.StrategyRegistry.md)
 
@@ -1079,7 +1079,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L114)
+[src/wrappers/StrategyRegistry.d.ts:114](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L114)
 
 ___
 
@@ -1099,7 +1099,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L247)
+[src/wrappers/StrategyRegistry.d.ts:247](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L247)
 
 ___
 
@@ -1119,7 +1119,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:249](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L249)
+[src/wrappers/StrategyRegistry.d.ts:249](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L249)
 
 ___
 
@@ -1152,7 +1152,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L118)
+[src/wrappers/StrategyRegistry.d.ts:118](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L118)
 
 ___
 
@@ -1173,7 +1173,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L251)
+[src/wrappers/StrategyRegistry.d.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L251)
 
 ___
 
@@ -1194,7 +1194,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:253](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L253)
+[src/wrappers/StrategyRegistry.d.ts:253](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L253)
 
 ___
 
@@ -1225,7 +1225,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L107)
+[src/wrappers/StrategyRegistry.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L107)
 
 ▸ **removeAllListeners**(`eventName?`): [`StrategyRegistry`](wrappers_StrategyRegistry.StrategyRegistry.md)
 
@@ -1245,7 +1245,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L116)
+[src/wrappers/StrategyRegistry.d.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L116)
 
 ___
 
@@ -1277,7 +1277,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L103)
+[src/wrappers/StrategyRegistry.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L103)
 
 ▸ **removeListener**(`eventName`, `listener`): [`StrategyRegistry`](wrappers_StrategyRegistry.StrategyRegistry.md)
 
@@ -1298,7 +1298,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L115)
+[src/wrappers/StrategyRegistry.d.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L115)
 
 ___
 
@@ -1320,7 +1320,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:255](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L255)
+[src/wrappers/StrategyRegistry.d.ts:255](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L255)
 
 ___
 
@@ -1342,7 +1342,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:261](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L261)
+[src/wrappers/StrategyRegistry.d.ts:261](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L261)
 
 ___
 
@@ -1362,7 +1362,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:267](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L267)
+[src/wrappers/StrategyRegistry.d.ts:267](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L267)
 
 ___
 
@@ -1382,7 +1382,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L269)
+[src/wrappers/StrategyRegistry.d.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L269)
 
 ___
 
@@ -1403,7 +1403,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:271](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L271)
+[src/wrappers/StrategyRegistry.d.ts:271](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L271)
 
 ___
 
@@ -1424,7 +1424,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:273](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L273)
+[src/wrappers/StrategyRegistry.d.ts:273](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L273)
 
 ___
 
@@ -1445,7 +1445,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L275)
+[src/wrappers/StrategyRegistry.d.ts:275](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L275)
 
 ___
 
@@ -1466,7 +1466,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L277)
+[src/wrappers/StrategyRegistry.d.ts:277](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L277)
 
 ___
 
@@ -1487,7 +1487,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:279](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L279)
+[src/wrappers/StrategyRegistry.d.ts:279](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L279)
 
 ___
 
@@ -1508,7 +1508,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:281](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L281)
+[src/wrappers/StrategyRegistry.d.ts:281](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L281)
 
 ___
 
@@ -1529,7 +1529,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:283](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L283)
+[src/wrappers/StrategyRegistry.d.ts:283](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L283)
 
 ___
 
@@ -1550,7 +1550,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L288)
+[src/wrappers/StrategyRegistry.d.ts:288](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L288)
 
 ___
 
@@ -1573,7 +1573,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:293](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L293)
+[src/wrappers/StrategyRegistry.d.ts:293](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L293)
 
 ___
 
@@ -1596,7 +1596,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/StrategyRegistry.d.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/StrategyRegistry.d.ts#L300)
+[src/wrappers/StrategyRegistry.d.ts:300](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/StrategyRegistry.d.ts#L300)
 
 ___
 

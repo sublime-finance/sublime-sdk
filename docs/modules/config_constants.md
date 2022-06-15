@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[src/config/constants.ts:1](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/config/constants.ts#L1)
+[src/config/constants.ts:1](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/config/constants.ts#L1)

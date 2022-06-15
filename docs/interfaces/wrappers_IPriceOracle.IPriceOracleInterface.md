@@ -127,7 +127,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L33)
+[src/wrappers/IPriceOracle.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L33)
 
 ___
 
@@ -162,7 +162,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L22)
+[src/wrappers/IPriceOracle.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L22)
 
 ___
 
@@ -331,7 +331,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L30)
+[src/wrappers/IPriceOracle.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L30)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -352,7 +352,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L31)
+[src/wrappers/IPriceOracle.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L31)
 
 ___
 
@@ -481,7 +481,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L27)
+[src/wrappers/IPriceOracle.d.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L27)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -502,7 +502,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L28)
+[src/wrappers/IPriceOracle.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L28)
 
 ___
 
@@ -599,7 +599,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L39)
+[src/wrappers/IPriceOracle.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L39)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -619,7 +619,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L40)
+[src/wrappers/IPriceOracle.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L40)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -639,7 +639,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IPriceOracle.d.ts#L41)
+[src/wrappers/IPriceOracle.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IPriceOracle.d.ts#L41)
 
 ___
 

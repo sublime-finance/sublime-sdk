@@ -178,7 +178,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:206](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L206)
+[src/wrappers/AggregatorV3Interface.d.ts:206](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L206)
 
 ___
 
@@ -221,7 +221,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:268](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L268)
+[src/wrappers/AggregatorV3Interface.d.ts:268](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L268)
 
 ___
 
@@ -235,7 +235,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:266](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L266)
+[src/wrappers/AggregatorV3Interface.d.ts:266](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L266)
 
 ___
 
@@ -264,7 +264,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L88)
+[src/wrappers/AggregatorV3Interface.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L88)
 
 ___
 
@@ -278,7 +278,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L86)
+[src/wrappers/AggregatorV3Interface.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L86)
 
 ___
 
@@ -307,7 +307,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L290)
+[src/wrappers/AggregatorV3Interface.d.ts:290](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L290)
 
 ___
 
@@ -447,7 +447,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L47)
+[src/wrappers/AggregatorV3Interface.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L47)
 
 ___
 
@@ -471,7 +471,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L46)
+[src/wrappers/AggregatorV3Interface.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L46)
 
 ___
 
@@ -491,7 +491,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L148)
+[src/wrappers/AggregatorV3Interface.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L148)
 
 ___
 
@@ -511,7 +511,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L150)
+[src/wrappers/AggregatorV3Interface.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L150)
 
 ___
 
@@ -529,7 +529,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L48)
+[src/wrappers/AggregatorV3Interface.d.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L48)
 
 ___
 
@@ -549,7 +549,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L152)
+[src/wrappers/AggregatorV3Interface.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L152)
 
 ___
 
@@ -569,7 +569,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L154)
+[src/wrappers/AggregatorV3Interface.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L154)
 
 ___
 
@@ -639,7 +639,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L156)
+[src/wrappers/AggregatorV3Interface.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L156)
 
 ___
 
@@ -660,7 +660,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L169)
+[src/wrappers/AggregatorV3Interface.d.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L169)
 
 ___
 
@@ -680,7 +680,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L182)
+[src/wrappers/AggregatorV3Interface.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L182)
 
 ___
 
@@ -700,7 +700,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:192](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L192)
+[src/wrappers/AggregatorV3Interface.d.ts:192](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L192)
 
 ___
 
@@ -755,7 +755,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L50)
+[src/wrappers/AggregatorV3Interface.d.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L50)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -775,7 +775,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L73)
+[src/wrappers/AggregatorV3Interface.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L73)
 
 ___
 
@@ -807,7 +807,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L53)
+[src/wrappers/AggregatorV3Interface.d.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L53)
 
 ▸ **off**(`eventName`, `listener`): [`AggregatorV3Interface`](wrappers_AggregatorV3Interface.AggregatorV3Interface.md)
 
@@ -828,7 +828,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L74)
+[src/wrappers/AggregatorV3Interface.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L74)
 
 ___
 
@@ -860,7 +860,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L57)
+[src/wrappers/AggregatorV3Interface.d.ts:57](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L57)
 
 ▸ **on**(`eventName`, `listener`): [`AggregatorV3Interface`](wrappers_AggregatorV3Interface.AggregatorV3Interface.md)
 
@@ -881,7 +881,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L75)
+[src/wrappers/AggregatorV3Interface.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L75)
 
 ___
 
@@ -913,7 +913,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L61)
+[src/wrappers/AggregatorV3Interface.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L61)
 
 ▸ **once**(`eventName`, `listener`): [`AggregatorV3Interface`](wrappers_AggregatorV3Interface.AggregatorV3Interface.md)
 
@@ -934,7 +934,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L76)
+[src/wrappers/AggregatorV3Interface.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L76)
 
 ___
 
@@ -967,7 +967,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L80)
+[src/wrappers/AggregatorV3Interface.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L80)
 
 ___
 
@@ -998,7 +998,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L69)
+[src/wrappers/AggregatorV3Interface.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L69)
 
 ▸ **removeAllListeners**(`eventName?`): [`AggregatorV3Interface`](wrappers_AggregatorV3Interface.AggregatorV3Interface.md)
 
@@ -1018,7 +1018,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L78)
+[src/wrappers/AggregatorV3Interface.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L78)
 
 ___
 
@@ -1050,7 +1050,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L65)
+[src/wrappers/AggregatorV3Interface.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L65)
 
 ▸ **removeListener**(`eventName`, `listener`): [`AggregatorV3Interface`](wrappers_AggregatorV3Interface.AggregatorV3Interface.md)
 
@@ -1071,7 +1071,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L77)
+[src/wrappers/AggregatorV3Interface.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L77)
 
 ___
 
@@ -1091,7 +1091,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L202)
+[src/wrappers/AggregatorV3Interface.d.ts:202](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L202)
 
 ___
 
@@ -1111,7 +1111,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/AggregatorV3Interface.d.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/AggregatorV3Interface.d.ts#L204)
+[src/wrappers/AggregatorV3Interface.d.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/AggregatorV3Interface.d.ts#L204)
 
 ___
 

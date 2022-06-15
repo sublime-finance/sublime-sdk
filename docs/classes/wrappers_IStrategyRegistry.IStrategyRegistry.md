@@ -182,7 +182,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L186)
+[src/wrappers/IStrategyRegistry.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L186)
 
 ___
 
@@ -227,7 +227,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L225)
+[src/wrappers/IStrategyRegistry.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L225)
 
 ___
 
@@ -249,7 +249,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L217)
+[src/wrappers/IStrategyRegistry.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L217)
 
 ___
 
@@ -280,7 +280,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L100)
+[src/wrappers/IStrategyRegistry.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L100)
 
 ___
 
@@ -294,7 +294,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L98)
+[src/wrappers/IStrategyRegistry.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L98)
 
 ___
 
@@ -325,7 +325,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L269)
+[src/wrappers/IStrategyRegistry.d.ts:269](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L269)
 
 ___
 
@@ -462,7 +462,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L144)
+[src/wrappers/IStrategyRegistry.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L144)
 
 ___
 
@@ -483,7 +483,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L146)
+[src/wrappers/IStrategyRegistry.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L146)
 
 ___
 
@@ -507,7 +507,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L59)
+[src/wrappers/IStrategyRegistry.d.ts:59](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L59)
 
 ___
 
@@ -531,7 +531,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L58)
+[src/wrappers/IStrategyRegistry.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L58)
 
 ___
 
@@ -549,7 +549,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L60)
+[src/wrappers/IStrategyRegistry.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L60)
 
 ___
 
@@ -618,7 +618,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L148)
+[src/wrappers/IStrategyRegistry.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L148)
 
 ___
 
@@ -638,7 +638,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L150)
+[src/wrappers/IStrategyRegistry.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L150)
 
 ___
 
@@ -659,7 +659,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L152)
+[src/wrappers/IStrategyRegistry.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L152)
 
 ___
 
@@ -680,7 +680,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L154)
+[src/wrappers/IStrategyRegistry.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L154)
 
 ___
 
@@ -735,7 +735,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L62)
+[src/wrappers/IStrategyRegistry.d.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L62)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -755,7 +755,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L85)
+[src/wrappers/IStrategyRegistry.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L85)
 
 ___
 
@@ -787,7 +787,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L65)
+[src/wrappers/IStrategyRegistry.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L65)
 
 ▸ **off**(`eventName`, `listener`): [`IStrategyRegistry`](wrappers_IStrategyRegistry.IStrategyRegistry.md)
 
@@ -808,7 +808,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L86)
+[src/wrappers/IStrategyRegistry.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L86)
 
 ___
 
@@ -840,7 +840,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L69)
+[src/wrappers/IStrategyRegistry.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L69)
 
 ▸ **on**(`eventName`, `listener`): [`IStrategyRegistry`](wrappers_IStrategyRegistry.IStrategyRegistry.md)
 
@@ -861,7 +861,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L87)
+[src/wrappers/IStrategyRegistry.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L87)
 
 ___
 
@@ -893,7 +893,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L73)
+[src/wrappers/IStrategyRegistry.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L73)
 
 ▸ **once**(`eventName`, `listener`): [`IStrategyRegistry`](wrappers_IStrategyRegistry.IStrategyRegistry.md)
 
@@ -914,7 +914,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L88)
+[src/wrappers/IStrategyRegistry.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L88)
 
 ___
 
@@ -947,7 +947,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L92)
+[src/wrappers/IStrategyRegistry.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L92)
 
 ___
 
@@ -968,7 +968,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L156)
+[src/wrappers/IStrategyRegistry.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L156)
 
 ___
 
@@ -989,7 +989,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L158)
+[src/wrappers/IStrategyRegistry.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L158)
 
 ___
 
@@ -1020,7 +1020,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L81)
+[src/wrappers/IStrategyRegistry.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L81)
 
 ▸ **removeAllListeners**(`eventName?`): [`IStrategyRegistry`](wrappers_IStrategyRegistry.IStrategyRegistry.md)
 
@@ -1040,7 +1040,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L90)
+[src/wrappers/IStrategyRegistry.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L90)
 
 ___
 
@@ -1072,7 +1072,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L77)
+[src/wrappers/IStrategyRegistry.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L77)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IStrategyRegistry`](wrappers_IStrategyRegistry.IStrategyRegistry.md)
 
@@ -1093,7 +1093,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L89)
+[src/wrappers/IStrategyRegistry.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L89)
 
 ___
 
@@ -1115,7 +1115,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L160)
+[src/wrappers/IStrategyRegistry.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L160)
 
 ___
 
@@ -1137,7 +1137,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L166)
+[src/wrappers/IStrategyRegistry.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L166)
 
 ___
 
@@ -1160,7 +1160,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L172)
+[src/wrappers/IStrategyRegistry.d.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L172)
 
 ___
 
@@ -1183,7 +1183,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IStrategyRegistry.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/6985802/src/wrappers/IStrategyRegistry.d.ts#L179)
+[src/wrappers/IStrategyRegistry.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/d3b62bd/src/wrappers/IStrategyRegistry.d.ts#L179)
 
 ___
 
