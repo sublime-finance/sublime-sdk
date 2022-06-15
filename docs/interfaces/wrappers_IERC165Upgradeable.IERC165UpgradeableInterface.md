@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IERC165Upgradeable.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC165Upgradeable.d.ts#L30)
+[src/wrappers/IERC165Upgradeable.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC165Upgradeable.d.ts#L30)
 
 ___
 
@@ -153,7 +153,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IERC165Upgradeable.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC165Upgradeable.d.ts#L22)
+[src/wrappers/IERC165Upgradeable.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC165Upgradeable.d.ts#L22)
 
 ___
 
@@ -322,7 +322,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC165Upgradeable.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC165Upgradeable.d.ts#L28)
+[src/wrappers/IERC165Upgradeable.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC165Upgradeable.d.ts#L28)
 
 ___
 
@@ -451,7 +451,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC165Upgradeable.d.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC165Upgradeable.d.ts#L26)
+[src/wrappers/IERC165Upgradeable.d.ts:26](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC165Upgradeable.d.ts#L26)
 
 ___
 

@@ -126,7 +126,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L49)
+[src/wrappers/IERC20Minter.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L49)
 
 ___
 
@@ -166,7 +166,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L23)
+[src/wrappers/IERC20Minter.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L23)
 
 ___
 
@@ -335,7 +335,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L41)
+[src/wrappers/IERC20Minter.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L41)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -356,7 +356,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L42)
+[src/wrappers/IERC20Minter.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L42)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -377,7 +377,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L43)
+[src/wrappers/IERC20Minter.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L43)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -398,7 +398,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L44)
+[src/wrappers/IERC20Minter.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L44)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -419,7 +419,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L45)
+[src/wrappers/IERC20Minter.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L45)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -440,7 +440,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L46)
+[src/wrappers/IERC20Minter.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L46)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -461,7 +461,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L47)
+[src/wrappers/IERC20Minter.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L47)
 
 ___
 
@@ -590,7 +590,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L33)
+[src/wrappers/IERC20Minter.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L33)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -611,7 +611,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L34)
+[src/wrappers/IERC20Minter.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L34)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -632,7 +632,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L35)
+[src/wrappers/IERC20Minter.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L35)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -653,7 +653,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L36)
+[src/wrappers/IERC20Minter.d.ts:36](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L36)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -674,7 +674,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L37)
+[src/wrappers/IERC20Minter.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L37)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -695,7 +695,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L38)
+[src/wrappers/IERC20Minter.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L38)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -716,7 +716,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L39)
+[src/wrappers/IERC20Minter.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L39)
 
 ___
 
@@ -813,7 +813,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L54)
+[src/wrappers/IERC20Minter.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L54)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -833,7 +833,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IERC20Minter.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IERC20Minter.d.ts#L55)
+[src/wrappers/IERC20Minter.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IERC20Minter.d.ts#L55)
 
 ___
 

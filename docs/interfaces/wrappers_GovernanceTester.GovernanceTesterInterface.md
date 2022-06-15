@@ -125,7 +125,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L37)
+[src/wrappers/GovernanceTester.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L37)
 
 ___
 
@@ -161,7 +161,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L23)
+[src/wrappers/GovernanceTester.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L23)
 
 ___
 
@@ -330,7 +330,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L33)
+[src/wrappers/GovernanceTester.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L33)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -351,7 +351,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L34)
+[src/wrappers/GovernanceTester.d.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L34)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -372,7 +372,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L35)
+[src/wrappers/GovernanceTester.d.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L35)
 
 ___
 
@@ -501,7 +501,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L29)
+[src/wrappers/GovernanceTester.d.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L29)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -522,7 +522,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L30)
+[src/wrappers/GovernanceTester.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L30)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -543,7 +543,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L31)
+[src/wrappers/GovernanceTester.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L31)
 
 ___
 
@@ -640,7 +640,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/GovernanceTester.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/GovernanceTester.d.ts#L41)
+[src/wrappers/GovernanceTester.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/GovernanceTester.d.ts#L41)
 
 ___
 

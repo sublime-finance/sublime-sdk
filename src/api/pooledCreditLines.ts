@@ -1,5 +1,4 @@
 import { SublimeConfig } from '../types/sublimeConfig';
-import { ContractTransaction, Signer } from 'ethers';
 
 import { StrategyType, CreditLineStatus, VerifierType, LenderWithdrawableAmount } from '../types/Types';
 import { BigNumberish } from '@ethersproject/bignumber';
@@ -18,6 +17,7 @@ import { LenderPool__factory } from '../wrappers/factories/LenderPool__factory';
 import { IYield__factory } from '../wrappers/factories/IYield__factory';
 import { YieldAndStrategyApi } from './yieldAndStrategy';
 import { VerificationAPI } from './verification';
+import { ContractTransaction, Signer } from 'ethers';
 
 /**
  * @class PooledCreditLines
@@ -652,5 +652,37 @@ export class PooledCreditLineApi {
       .minus(yieldInterestWithdrawnShares.toString());
 
     return yieldInterestForLender.plus(borrowerInterestForLender);
+  }
+
+  public async updateBorrowLimitLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.updateBorrowLimitLimits(min, max, { ...options });
+  }
+
+  public async updateIdealCollateralRatioLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.updateIdealCollateralRatioLimits(min, max, { ...options });
+  }
+
+  public async updateBorrowRateLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.updateBorrowRateLimits(min, max, { ...options });
+  }
+
+  public async updateCollectionPeriodLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.updateCollectionPeriodLimits(min, max, { ...options });
+  }
+
+  public async updateDurationLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.updateDurationLimits(min, max, { ...options });
+  }
+
+  public async updateDefaultGracePeriodLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.updateDefaultGracePeriodLimits(min, max, { ...options });
+  }
+
+  public async updateGracePenaltyRateLimits(min: BigNumberish, max: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.updateGracePenaltyRateLimits(min, max, { ...options });
+  }
+
+  public async updateProtocolFeeFraction(fee: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
+    return this.pooledCreditLine.updateProtocolFeeFraction(fee, { ...options });
   }
 }

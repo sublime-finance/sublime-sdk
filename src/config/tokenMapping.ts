@@ -2,6 +2,13 @@ import { InternalTokenMap } from '../types/Types';
 
 export const tokenData: InternalTokenMap[] = [
   {
+    address: '0xc778417e063141139fce010982780140aa0cd5ab'.toLowerCase(),
+    name: 'Wrapped ETH',
+    symbol: 'WETH',
+    decimals: 18,
+    iconMapping: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+  },
+  {
     address: '0xd0a1e359811322d97991e03f863a0c30c2cf029c'.toLowerCase(),
     name: 'Wrapped ETH',
     symbol: 'WETH',
@@ -17,6 +24,13 @@ export const tokenData: InternalTokenMap[] = [
   },
   {
     address: '0x41B5844f4680a8C38fBb695b7F9CFd1F64474a72',
+    name: 'Compound ETH',
+    symbol: 'cETH',
+    decimals: 8,
+    iconMapping: '0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5',
+  },
+  {
+    address: '0xd6801a1dffcd0a410336ef88def4320d6df1883e',
     name: 'Compound ETH',
     symbol: 'cETH',
     decimals: 8,
@@ -58,7 +72,7 @@ export const tokenData: InternalTokenMap[] = [
     iconMapping: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
   },
   {
-    address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+    address: '0x39AA39c021dfbaE8faC545936693aC917d5E7563'.toLowerCase(),
     name: 'Compound USD Coin',
     symbol: 'cUSDC',
     decimals: 8,
@@ -134,4 +148,38 @@ export const tokenData: InternalTokenMap[] = [
     decimals: 8,
     iconMapping: '0x70e36f6BF80a52b3B46b3aF8e106CC0ed743E8e4',
   },
-];
+  {
+    address: '0x6a9865ade2b6207daac49f8bcba9705deb0b0e6d',
+    name: 'DAI',
+    symbol: 'DAI',
+    decimals: 18,
+    iconMapping: '0x6b175474e89094c44da98b954eedeac495271d0f',
+  },
+  {
+    address: '0xeb8f08a975ab53e34d8a0330e0d34de942c95926',
+    name: 'USD Coin',
+    symbol: 'USDC',
+    decimals: 6,
+    iconMapping: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+  },
+  {
+    address: '0x6d7f0754ffeb405d23c51ce938289d4835be3b14'.toLowerCase(),
+    name: 'Compound DAI',
+    symbol: 'cDAI',
+    decimals: 8,
+    iconMapping: '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643'.toLowerCase(),
+  },
+
+  {
+    address: '0x5b281a6dda0b271e91ae35de655ad301c976edb1'.toLowerCase(),
+    name: 'Compound USD Coin',
+    symbol: 'cUSDC',
+    decimals: 8,
+    iconMapping: '0x39AA39c021dfbaE8faC545936693aC917d5E7563',
+  },
+].map((a) => {
+  return {
+    ...a,
+    address: a.address.toLowerCase(),
+  };
+});

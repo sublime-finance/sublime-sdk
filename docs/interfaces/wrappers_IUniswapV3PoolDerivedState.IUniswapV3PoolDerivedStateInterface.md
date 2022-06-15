@@ -119,7 +119,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolDerivedState.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L33)
+[src/wrappers/IUniswapV3PoolDerivedState.d.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L33)
 
 ___
 
@@ -154,7 +154,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolDerivedState.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L22)
+[src/wrappers/IUniswapV3PoolDerivedState.d.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L22)
 
 ___
 
@@ -323,7 +323,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolDerivedState.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L30)
+[src/wrappers/IUniswapV3PoolDerivedState.d.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L30)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -344,7 +344,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolDerivedState.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L31)
+[src/wrappers/IUniswapV3PoolDerivedState.d.ts:31](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L31)
 
 ___
 
@@ -473,7 +473,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolDerivedState.d.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L27)
+[src/wrappers/IUniswapV3PoolDerivedState.d.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L27)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -494,7 +494,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IUniswapV3PoolDerivedState.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L28)
+[src/wrappers/IUniswapV3PoolDerivedState.d.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IUniswapV3PoolDerivedState.d.ts#L28)
 
 ___
 

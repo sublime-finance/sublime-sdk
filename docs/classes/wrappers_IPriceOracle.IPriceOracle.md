@@ -166,7 +166,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L125)
+[src/wrappers/IPriceOracle.d.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L125)
 
 ___
 
@@ -203,7 +203,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L161)
+[src/wrappers/IPriceOracle.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L161)
 
 ___
 
@@ -225,7 +225,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L143)
+[src/wrappers/IPriceOracle.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L143)
 
 ___
 
@@ -248,7 +248,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L87)
+[src/wrappers/IPriceOracle.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L87)
 
 ___
 
@@ -262,7 +262,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L85)
+[src/wrappers/IPriceOracle.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L85)
 
 ___
 
@@ -285,7 +285,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:171](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L171)
+[src/wrappers/IPriceOracle.d.ts:171](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L171)
 
 ___
 
@@ -425,7 +425,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L46)
+[src/wrappers/IPriceOracle.d.ts:46](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L46)
 
 ___
 
@@ -449,7 +449,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L45)
+[src/wrappers/IPriceOracle.d.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L45)
 
 ___
 
@@ -467,7 +467,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L47)
+[src/wrappers/IPriceOracle.d.ts:47](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L47)
 
 ___
 
@@ -489,7 +489,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L109)
+[src/wrappers/IPriceOracle.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L109)
 
 ___
 
@@ -511,7 +511,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L111)
+[src/wrappers/IPriceOracle.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L111)
 
 ___
 
@@ -582,7 +582,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L113)
+[src/wrappers/IPriceOracle.d.ts:113](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L113)
 
 ___
 
@@ -604,7 +604,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L119)
+[src/wrappers/IPriceOracle.d.ts:119](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L119)
 
 ___
 
@@ -659,7 +659,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L49)
+[src/wrappers/IPriceOracle.d.ts:49](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L49)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -679,7 +679,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L72)
+[src/wrappers/IPriceOracle.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L72)
 
 ___
 
@@ -711,7 +711,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L52)
+[src/wrappers/IPriceOracle.d.ts:52](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L52)
 
 ▸ **off**(`eventName`, `listener`): [`IPriceOracle`](wrappers_IPriceOracle.IPriceOracle.md)
 
@@ -732,7 +732,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L73)
+[src/wrappers/IPriceOracle.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L73)
 
 ___
 
@@ -764,7 +764,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L56)
+[src/wrappers/IPriceOracle.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L56)
 
 ▸ **on**(`eventName`, `listener`): [`IPriceOracle`](wrappers_IPriceOracle.IPriceOracle.md)
 
@@ -785,7 +785,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L74)
+[src/wrappers/IPriceOracle.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L74)
 
 ___
 
@@ -817,7 +817,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L60)
+[src/wrappers/IPriceOracle.d.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L60)
 
 ▸ **once**(`eventName`, `listener`): [`IPriceOracle`](wrappers_IPriceOracle.IPriceOracle.md)
 
@@ -838,7 +838,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L75)
+[src/wrappers/IPriceOracle.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L75)
 
 ___
 
@@ -871,7 +871,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L79)
+[src/wrappers/IPriceOracle.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L79)
 
 ___
 
@@ -902,7 +902,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L68)
+[src/wrappers/IPriceOracle.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L68)
 
 ▸ **removeAllListeners**(`eventName?`): [`IPriceOracle`](wrappers_IPriceOracle.IPriceOracle.md)
 
@@ -922,7 +922,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L77)
+[src/wrappers/IPriceOracle.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L77)
 
 ___
 
@@ -954,7 +954,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L64)
+[src/wrappers/IPriceOracle.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L64)
 
 ▸ **removeListener**(`eventName`, `listener`): [`IPriceOracle`](wrappers_IPriceOracle.IPriceOracle.md)
 
@@ -975,7 +975,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/IPriceOracle.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPriceOracle.d.ts#L76)
+[src/wrappers/IPriceOracle.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPriceOracle.d.ts#L76)
 
 ___
 

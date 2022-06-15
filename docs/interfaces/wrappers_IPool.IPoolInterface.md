@@ -136,7 +136,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L79)
+[src/wrappers/IPool.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L79)
 
 ___
 
@@ -180,7 +180,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L23)
+[src/wrappers/IPool.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L23)
 
 ___
 
@@ -349,7 +349,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L67)
+[src/wrappers/IPool.d.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L67)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -370,7 +370,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L68)
+[src/wrappers/IPool.d.ts:68](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L68)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -391,7 +391,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L69)
+[src/wrappers/IPool.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L69)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -412,7 +412,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L70)
+[src/wrappers/IPool.d.ts:70](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L70)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -433,7 +433,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L71)
+[src/wrappers/IPool.d.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L71)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -454,7 +454,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L72)
+[src/wrappers/IPool.d.ts:72](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L72)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -475,7 +475,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L73)
+[src/wrappers/IPool.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L73)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -496,7 +496,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L74)
+[src/wrappers/IPool.d.ts:74](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L74)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -517,7 +517,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L75)
+[src/wrappers/IPool.d.ts:75](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L75)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -538,7 +538,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L76)
+[src/wrappers/IPool.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L76)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -559,7 +559,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L77)
+[src/wrappers/IPool.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L77)
 
 ___
 
@@ -688,7 +688,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L37)
+[src/wrappers/IPool.d.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L37)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -709,7 +709,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L38)
+[src/wrappers/IPool.d.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L38)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -730,7 +730,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L39)
+[src/wrappers/IPool.d.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L39)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -751,7 +751,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L40)
+[src/wrappers/IPool.d.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L40)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -772,7 +772,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L41)
+[src/wrappers/IPool.d.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L41)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -793,7 +793,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L42)
+[src/wrappers/IPool.d.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L42)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -814,7 +814,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L43)
+[src/wrappers/IPool.d.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L43)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -835,7 +835,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L44)
+[src/wrappers/IPool.d.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L44)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -856,7 +856,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L63)
+[src/wrappers/IPool.d.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L63)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -877,7 +877,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L64)
+[src/wrappers/IPool.d.ts:64](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L64)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -898,7 +898,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L65)
+[src/wrappers/IPool.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L65)
 
 ___
 
@@ -995,7 +995,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L94)
+[src/wrappers/IPool.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L94)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1015,7 +1015,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L95)
+[src/wrappers/IPool.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L95)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1035,7 +1035,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L96)
+[src/wrappers/IPool.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L96)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1055,7 +1055,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L97)
+[src/wrappers/IPool.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L97)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1075,7 +1075,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L98)
+[src/wrappers/IPool.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L98)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1095,7 +1095,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L99)
+[src/wrappers/IPool.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L99)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1115,7 +1115,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L100)
+[src/wrappers/IPool.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L100)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1135,7 +1135,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L101)
+[src/wrappers/IPool.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L101)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1155,7 +1155,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L102)
+[src/wrappers/IPool.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L102)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1175,7 +1175,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L103)
+[src/wrappers/IPool.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L103)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1195,7 +1195,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L104)
+[src/wrappers/IPool.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L104)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -1215,7 +1215,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/IPool.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/IPool.d.ts#L105)
+[src/wrappers/IPool.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/IPool.d.ts#L105)
 
 ___
 

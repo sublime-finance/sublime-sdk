@@ -139,7 +139,7 @@ ethers.utils.Interface.events
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L199)
+[src/wrappers/PooledCreditLine.d.ts:199](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L199)
 
 ___
 
@@ -222,7 +222,7 @@ ethers.utils.Interface.functions
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L23)
+[src/wrappers/PooledCreditLine.d.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L23)
 
 ___
 
@@ -391,7 +391,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L148)
+[src/wrappers/PooledCreditLine.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L148)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -412,7 +412,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L149)
+[src/wrappers/PooledCreditLine.d.ts:149](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L149)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -433,7 +433,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L150)
+[src/wrappers/PooledCreditLine.d.ts:150](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L150)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -454,7 +454,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L151)
+[src/wrappers/PooledCreditLine.d.ts:151](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L151)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -475,7 +475,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L152)
+[src/wrappers/PooledCreditLine.d.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L152)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -496,7 +496,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L153)
+[src/wrappers/PooledCreditLine.d.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L153)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -517,7 +517,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L154)
+[src/wrappers/PooledCreditLine.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L154)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -538,7 +538,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L155)
+[src/wrappers/PooledCreditLine.d.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L155)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -559,7 +559,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L156)
+[src/wrappers/PooledCreditLine.d.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L156)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -580,7 +580,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L157)
+[src/wrappers/PooledCreditLine.d.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L157)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -601,7 +601,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L158)
+[src/wrappers/PooledCreditLine.d.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L158)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -622,7 +622,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:159](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L159)
+[src/wrappers/PooledCreditLine.d.ts:159](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L159)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -643,7 +643,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L160)
+[src/wrappers/PooledCreditLine.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L160)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -664,7 +664,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L161)
+[src/wrappers/PooledCreditLine.d.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L161)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -685,7 +685,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L162)
+[src/wrappers/PooledCreditLine.d.ts:162](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L162)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -706,7 +706,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L163)
+[src/wrappers/PooledCreditLine.d.ts:163](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L163)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -727,7 +727,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L164)
+[src/wrappers/PooledCreditLine.d.ts:164](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L164)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -748,7 +748,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L165)
+[src/wrappers/PooledCreditLine.d.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L165)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -769,7 +769,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L166)
+[src/wrappers/PooledCreditLine.d.ts:166](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L166)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -790,7 +790,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L167)
+[src/wrappers/PooledCreditLine.d.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L167)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -811,7 +811,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L168)
+[src/wrappers/PooledCreditLine.d.ts:168](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L168)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -832,7 +832,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L169)
+[src/wrappers/PooledCreditLine.d.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L169)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -853,7 +853,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L170)
+[src/wrappers/PooledCreditLine.d.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L170)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -874,7 +874,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:171](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L171)
+[src/wrappers/PooledCreditLine.d.ts:171](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L171)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -895,7 +895,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L172)
+[src/wrappers/PooledCreditLine.d.ts:172](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L172)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -916,7 +916,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L173)
+[src/wrappers/PooledCreditLine.d.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L173)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -937,7 +937,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L174)
+[src/wrappers/PooledCreditLine.d.ts:174](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L174)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -958,7 +958,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L175)
+[src/wrappers/PooledCreditLine.d.ts:175](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L175)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -979,7 +979,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L176)
+[src/wrappers/PooledCreditLine.d.ts:176](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L176)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1000,7 +1000,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L177)
+[src/wrappers/PooledCreditLine.d.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L177)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1021,7 +1021,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L178)
+[src/wrappers/PooledCreditLine.d.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L178)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1042,7 +1042,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L179)
+[src/wrappers/PooledCreditLine.d.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L179)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1063,7 +1063,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:180](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L180)
+[src/wrappers/PooledCreditLine.d.ts:180](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L180)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1084,7 +1084,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:181](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L181)
+[src/wrappers/PooledCreditLine.d.ts:181](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L181)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1105,7 +1105,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L182)
+[src/wrappers/PooledCreditLine.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L182)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1126,7 +1126,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:183](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L183)
+[src/wrappers/PooledCreditLine.d.ts:183](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L183)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1147,7 +1147,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L184)
+[src/wrappers/PooledCreditLine.d.ts:184](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L184)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1168,7 +1168,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L185)
+[src/wrappers/PooledCreditLine.d.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L185)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1189,7 +1189,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L186)
+[src/wrappers/PooledCreditLine.d.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L186)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1210,7 +1210,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L187)
+[src/wrappers/PooledCreditLine.d.ts:187](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L187)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1231,7 +1231,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L188)
+[src/wrappers/PooledCreditLine.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L188)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1252,7 +1252,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L189)
+[src/wrappers/PooledCreditLine.d.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L189)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1273,7 +1273,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:190](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L190)
+[src/wrappers/PooledCreditLine.d.ts:190](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L190)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1294,7 +1294,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L191)
+[src/wrappers/PooledCreditLine.d.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L191)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1315,7 +1315,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:192](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L192)
+[src/wrappers/PooledCreditLine.d.ts:192](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L192)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1336,7 +1336,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L193)
+[src/wrappers/PooledCreditLine.d.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L193)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1357,7 +1357,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L194)
+[src/wrappers/PooledCreditLine.d.ts:194](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L194)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1378,7 +1378,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L195)
+[src/wrappers/PooledCreditLine.d.ts:195](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L195)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1399,7 +1399,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L196)
+[src/wrappers/PooledCreditLine.d.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L196)
 
 ▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
@@ -1420,7 +1420,7 @@ ethers.utils.Interface.decodeFunctionResult
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L197)
+[src/wrappers/PooledCreditLine.d.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L197)
 
 ___
 
@@ -1549,7 +1549,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L76)
+[src/wrappers/PooledCreditLine.d.ts:76](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L76)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1570,7 +1570,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L77)
+[src/wrappers/PooledCreditLine.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L77)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1591,7 +1591,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L78)
+[src/wrappers/PooledCreditLine.d.ts:78](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L78)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1612,7 +1612,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L79)
+[src/wrappers/PooledCreditLine.d.ts:79](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L79)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1633,7 +1633,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L80)
+[src/wrappers/PooledCreditLine.d.ts:80](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L80)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -1654,7 +1654,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L81)
+[src/wrappers/PooledCreditLine.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L81)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1675,7 +1675,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L82)
+[src/wrappers/PooledCreditLine.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L82)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1696,7 +1696,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L83)
+[src/wrappers/PooledCreditLine.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L83)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1717,7 +1717,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L84)
+[src/wrappers/PooledCreditLine.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L84)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1738,7 +1738,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L85)
+[src/wrappers/PooledCreditLine.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L85)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1759,7 +1759,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L86)
+[src/wrappers/PooledCreditLine.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L86)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1780,7 +1780,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L87)
+[src/wrappers/PooledCreditLine.d.ts:87](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L87)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1801,7 +1801,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L88)
+[src/wrappers/PooledCreditLine.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L88)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1822,7 +1822,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L89)
+[src/wrappers/PooledCreditLine.d.ts:89](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L89)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1843,7 +1843,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L90)
+[src/wrappers/PooledCreditLine.d.ts:90](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L90)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1864,7 +1864,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L91)
+[src/wrappers/PooledCreditLine.d.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L91)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1885,7 +1885,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L92)
+[src/wrappers/PooledCreditLine.d.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L92)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1906,7 +1906,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L93)
+[src/wrappers/PooledCreditLine.d.ts:93](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L93)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1927,7 +1927,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L94)
+[src/wrappers/PooledCreditLine.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L94)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1948,7 +1948,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L95)
+[src/wrappers/PooledCreditLine.d.ts:95](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L95)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1969,7 +1969,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L96)
+[src/wrappers/PooledCreditLine.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L96)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -1990,7 +1990,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L97)
+[src/wrappers/PooledCreditLine.d.ts:97](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L97)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2011,7 +2011,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L98)
+[src/wrappers/PooledCreditLine.d.ts:98](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L98)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2032,7 +2032,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L99)
+[src/wrappers/PooledCreditLine.d.ts:99](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L99)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2053,7 +2053,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L100)
+[src/wrappers/PooledCreditLine.d.ts:100](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L100)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2074,7 +2074,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L101)
+[src/wrappers/PooledCreditLine.d.ts:101](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L101)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2095,7 +2095,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L102)
+[src/wrappers/PooledCreditLine.d.ts:102](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L102)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2116,7 +2116,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L103)
+[src/wrappers/PooledCreditLine.d.ts:103](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L103)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2137,7 +2137,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L104)
+[src/wrappers/PooledCreditLine.d.ts:104](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L104)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2158,7 +2158,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L105)
+[src/wrappers/PooledCreditLine.d.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L105)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2179,7 +2179,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L106)
+[src/wrappers/PooledCreditLine.d.ts:106](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L106)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2200,7 +2200,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L107)
+[src/wrappers/PooledCreditLine.d.ts:107](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L107)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2221,7 +2221,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L108)
+[src/wrappers/PooledCreditLine.d.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L108)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
 
@@ -2242,7 +2242,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L109)
+[src/wrappers/PooledCreditLine.d.ts:109](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L109)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2263,7 +2263,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L110)
+[src/wrappers/PooledCreditLine.d.ts:110](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L110)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2284,7 +2284,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L111)
+[src/wrappers/PooledCreditLine.d.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L111)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2305,7 +2305,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L133)
+[src/wrappers/PooledCreditLine.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L133)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2326,7 +2326,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L134)
+[src/wrappers/PooledCreditLine.d.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L134)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2347,7 +2347,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L135)
+[src/wrappers/PooledCreditLine.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L135)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2368,7 +2368,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L136)
+[src/wrappers/PooledCreditLine.d.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L136)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2389,7 +2389,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L137)
+[src/wrappers/PooledCreditLine.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L137)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2410,7 +2410,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L138)
+[src/wrappers/PooledCreditLine.d.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L138)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2431,7 +2431,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L139)
+[src/wrappers/PooledCreditLine.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L139)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2452,7 +2452,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L140)
+[src/wrappers/PooledCreditLine.d.ts:140](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L140)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2473,7 +2473,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L141)
+[src/wrappers/PooledCreditLine.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L141)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2494,7 +2494,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L142)
+[src/wrappers/PooledCreditLine.d.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L142)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2515,7 +2515,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L143)
+[src/wrappers/PooledCreditLine.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L143)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2536,7 +2536,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L144)
+[src/wrappers/PooledCreditLine.d.ts:144](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L144)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2557,7 +2557,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L145)
+[src/wrappers/PooledCreditLine.d.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L145)
 
 ▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
 
@@ -2578,7 +2578,7 @@ ethers.utils.Interface.encodeFunctionData
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L146)
+[src/wrappers/PooledCreditLine.d.ts:146](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L146)
 
 ___
 
@@ -2675,7 +2675,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L217)
+[src/wrappers/PooledCreditLine.d.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L217)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2695,7 +2695,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L218)
+[src/wrappers/PooledCreditLine.d.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L218)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2715,7 +2715,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:219](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L219)
+[src/wrappers/PooledCreditLine.d.ts:219](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L219)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2735,7 +2735,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:220](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L220)
+[src/wrappers/PooledCreditLine.d.ts:220](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L220)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2755,7 +2755,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L221)
+[src/wrappers/PooledCreditLine.d.ts:221](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L221)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2775,7 +2775,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:222](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L222)
+[src/wrappers/PooledCreditLine.d.ts:222](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L222)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2795,7 +2795,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:223](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L223)
+[src/wrappers/PooledCreditLine.d.ts:223](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L223)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2815,7 +2815,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:224](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L224)
+[src/wrappers/PooledCreditLine.d.ts:224](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L224)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2835,7 +2835,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L225)
+[src/wrappers/PooledCreditLine.d.ts:225](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L225)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2855,7 +2855,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:226](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L226)
+[src/wrappers/PooledCreditLine.d.ts:226](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L226)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2875,7 +2875,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L227)
+[src/wrappers/PooledCreditLine.d.ts:227](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L227)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2895,7 +2895,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:228](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L228)
+[src/wrappers/PooledCreditLine.d.ts:228](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L228)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2915,7 +2915,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L229)
+[src/wrappers/PooledCreditLine.d.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L229)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2935,7 +2935,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L230)
+[src/wrappers/PooledCreditLine.d.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L230)
 
 ▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
@@ -2955,7 +2955,7 @@ ethers.utils.Interface.getEvent
 
 #### Defined in
 
-[src/wrappers/PooledCreditLine.d.ts:231](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/PooledCreditLine.d.ts#L231)
+[src/wrappers/PooledCreditLine.d.ts:231](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/PooledCreditLine.d.ts#L231)
 
 ___
 

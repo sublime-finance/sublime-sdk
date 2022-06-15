@@ -178,7 +178,7 @@ Contract.callStatic
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L160)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L160)
 
 ___
 
@@ -221,7 +221,7 @@ Contract.estimateGas
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L188)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:188](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L188)
 
 ___
 
@@ -242,7 +242,7 @@ Contract.filters
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L182)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:182](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L182)
 
 ___
 
@@ -271,7 +271,7 @@ Contract.functions
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L96)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L96)
 
 ___
 
@@ -285,7 +285,7 @@ Contract.interface
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L94)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:94](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L94)
 
 ___
 
@@ -314,7 +314,7 @@ Contract.populateTransaction
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L218)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L218)
 
 ___
 
@@ -450,7 +450,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L129)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:129](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L129)
 
 ___
 
@@ -470,7 +470,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L131)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:131](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L131)
 
 ___
 
@@ -494,7 +494,7 @@ Contract.attach
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L55)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L55)
 
 ___
 
@@ -515,7 +515,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L133)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:133](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L133)
 
 ___
 
@@ -536,7 +536,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L135)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:135](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L135)
 
 ___
 
@@ -560,7 +560,7 @@ Contract.connect
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L54)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:54](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L54)
 
 ___
 
@@ -578,7 +578,7 @@ Contract.deployed
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L56)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:56](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L56)
 
 ___
 
@@ -647,7 +647,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L137)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L137)
 
 ___
 
@@ -667,7 +667,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L139)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:139](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L139)
 
 ___
 
@@ -722,7 +722,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L58)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L58)
 
 ▸ **listeners**(`eventName?`): `Listener`[]
 
@@ -742,7 +742,7 @@ Contract.listeners
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L81)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:81](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L81)
 
 ___
 
@@ -774,7 +774,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L61)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:61](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L61)
 
 ▸ **off**(`eventName`, `listener`): [`TransparentUpgradeableProxy`](wrappers_TransparentUpgradeableProxy.TransparentUpgradeableProxy.md)
 
@@ -795,7 +795,7 @@ Contract.off
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L82)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:82](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L82)
 
 ___
 
@@ -827,7 +827,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L65)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L65)
 
 ▸ **on**(`eventName`, `listener`): [`TransparentUpgradeableProxy`](wrappers_TransparentUpgradeableProxy.TransparentUpgradeableProxy.md)
 
@@ -848,7 +848,7 @@ Contract.on
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L83)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L83)
 
 ___
 
@@ -880,7 +880,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L69)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L69)
 
 ▸ **once**(`eventName`, `listener`): [`TransparentUpgradeableProxy`](wrappers_TransparentUpgradeableProxy.TransparentUpgradeableProxy.md)
 
@@ -901,7 +901,7 @@ Contract.once
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L84)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:84](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L84)
 
 ___
 
@@ -934,7 +934,7 @@ Contract.queryFilter
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L88)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:88](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L88)
 
 ___
 
@@ -965,7 +965,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L77)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:77](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L77)
 
 ▸ **removeAllListeners**(`eventName?`): [`TransparentUpgradeableProxy`](wrappers_TransparentUpgradeableProxy.TransparentUpgradeableProxy.md)
 
@@ -985,7 +985,7 @@ Contract.removeAllListeners
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L86)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:86](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L86)
 
 ___
 
@@ -1017,7 +1017,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L73)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:73](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L73)
 
 ▸ **removeListener**(`eventName`, `listener`): [`TransparentUpgradeableProxy`](wrappers_TransparentUpgradeableProxy.TransparentUpgradeableProxy.md)
 
@@ -1038,7 +1038,7 @@ Contract.removeListener
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L85)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:85](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L85)
 
 ___
 
@@ -1059,7 +1059,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L141)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:141](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L141)
 
 ___
 
@@ -1080,7 +1080,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L143)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:143](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L143)
 
 ___
 
@@ -1102,7 +1102,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L148)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:148](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L148)
 
 ___
 
@@ -1124,7 +1124,7 @@ ___
 
 #### Defined in
 
-[src/wrappers/TransparentUpgradeableProxy.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/0aed62a/src/wrappers/TransparentUpgradeableProxy.d.ts#L154)
+[src/wrappers/TransparentUpgradeableProxy.d.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/b39ddff/src/wrappers/TransparentUpgradeableProxy.d.ts#L154)
 
 ___
 
