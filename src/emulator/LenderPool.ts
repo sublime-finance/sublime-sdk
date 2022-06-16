@@ -152,4 +152,22 @@ export class LenderPoolEmulator extends EmulatorHelper {
       return { lenderAddress: a.lenderAddress, principalWithdrawable: this.calculatePrincipalWithdrawable(a.lenderAddress) };
     });
   }
+
+  // ------ calls not part of contract  ------------ //
+
+  public getLenderData(lenderAddress: string): LenderPerPool {
+    const lenderData = this.getAllLenders().filter((a) => a.lenderAddress.toLowerCase() === lenderAddress.toLowerCase());
+    const zero = new BigNumber(0);
+    if (lenderData.length == 0) {
+      return {
+        lenderAddress: lenderAddress,
+        amountLent: zero,
+        lenderBalance: zero,
+        borrowerInterestSharesWithdrawn: zero,
+        yieldInterestWithdrawnShares: zero,
+      };
+    } else {
+      return lenderData[0];
+    }
+  }
 }

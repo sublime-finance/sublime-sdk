@@ -201,6 +201,6 @@ export class YieldAndStrategyApi {
   }
 
   public setDepositLimitInCompoundYield(asset: string, limit: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
-    return this.compoundYield.setDepositLimit(asset, limit.toString(0), { ...options });
+    return this.compoundYield.setDepositLimit(asset, limit.toString(), { ...options });
   }
 }

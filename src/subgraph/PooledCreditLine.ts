@@ -266,7 +266,7 @@ export class PooledCreditLineCalls extends CreditLineCalls {
           lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
-          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares || '0'),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -942,8 +942,6 @@ export class PooledCreditLineCalls extends CreditLineCalls {
     prices: Record<string, BigNumber>
   ): PooledCreditLineDetail[] {
     return emulatorResult.map((aNew) => {
-      console.log({ prices });
-
       return {
         id: aNew.getId(),
         borrowerAddress: aNew.borrowerAddress(),

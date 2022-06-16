@@ -1221,6 +1221,7 @@ export async function getAllLendersPerPool(url: string, poolIds: string[]): Prom
     };
 
     const result = await fetchData(options);
+
     if (result.errors) {
       print(result.errors);
       throw new Error('Error while fetching data from subgraph');

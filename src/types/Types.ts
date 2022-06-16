@@ -339,3 +339,12 @@ export interface LenderPerPoolDetail {
   sharesWithdrawn: Balance;
   strategy: Strategy;
 }
+
+export interface TwitterVerifierSignatureData {
+  twitterId: string;
+  tweetId: string;
+  timestamp: string;
+  v: number;
+  r: string;
+  s: string;
+}

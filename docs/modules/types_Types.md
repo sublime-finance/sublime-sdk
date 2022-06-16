@@ -83,6 +83,7 @@
 - [StrategyType](types_Types.md#strategytype)
 - [TempTwitterResponse](types_Types.md#temptwitterresponse)
 - [TwitterDetails](types_Types.md#twitterdetails)
+- [TwitterVerifierSignatureData](types_Types.md#twitterverifiersignaturedata)
 - [UserKycDetails](types_Types.md#userkycdetails)
 - [UserMetaData](types_Types.md#usermetadata)
 - [UserTwitterDetails](types_Types.md#usertwitterdetails)
@@ -550,6 +551,12 @@ ___
 ### TwitterDetails
 
 Re-exports [TwitterDetails](../interfaces/types_Types.TwitterDetails.md)
+
+___
+
+### TwitterVerifierSignatureData
+
+Re-exports [TwitterVerifierSignatureData](../interfaces/types_Types.TwitterVerifierSignatureData.md)
 
 ___
 

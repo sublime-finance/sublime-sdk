@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[src/api/creditLines.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L39)
+[src/api/creditLines.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L39)
 
 ## Properties
 
@@ -71,7 +71,7 @@
 
 #### Defined in
 
-[src/api/creditLines.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L32)
+[src/api/creditLines.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L32)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L22)
+[src/api/creditLines.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L22)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L37)
+[src/api/creditLines.ts:37](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L37)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L27)
+[src/api/creditLines.ts:27](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L27)
 
 ## Methods
 
@@ -125,7 +125,7 @@ Instance of Credit line Eth Utils.
 
 #### Defined in
 
-[src/api/creditLines.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L50)
+[src/api/creditLines.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L50)
 
 ___
 
@@ -150,7 +150,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L170)
+[src/api/creditLines.ts:170](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L170)
 
 ___
 
@@ -176,7 +176,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:354](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L354)
+[src/api/creditLines.ts:354](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L354)
 
 ___
 
@@ -200,7 +200,7 @@ borrowable amount in borrow tokens (easy readable)
 
 #### Defined in
 
-[src/api/creditLines.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L212)
+[src/api/creditLines.ts:212](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L212)
 
 ___
 
@@ -224,7 +224,7 @@ collateral ratio (easy readable)
 
 #### Defined in
 
-[src/api/creditLines.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L238)
+[src/api/creditLines.ts:238](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L238)
 
 ___
 
@@ -248,7 +248,7 @@ debt in borrow tokens
 
 #### Defined in
 
-[src/api/creditLines.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L196)
+[src/api/creditLines.ts:196](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L196)
 
 ___
 
@@ -272,7 +272,7 @@ debt in borrow tokens (easy readable)
 
 #### Defined in
 
-[src/api/creditLines.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L179)
+[src/api/creditLines.ts:179](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L179)
 
 ___
 
@@ -296,7 +296,7 @@ collateral tokens number (easy readable)
 
 #### Defined in
 
-[src/api/creditLines.ts:248](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L248)
+[src/api/creditLines.ts:248](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L248)
 
 ___
 
@@ -319,7 +319,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L229)
+[src/api/creditLines.ts:229](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L229)
 
 ___
 
@@ -344,7 +344,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:395](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L395)
+[src/api/creditLines.ts:395](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L395)
 
 ___
 
@@ -371,7 +371,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:325](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L325)
+[src/api/creditLines.ts:325](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L325)
 
 ___
 
@@ -397,7 +397,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:405](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L405)
+[src/api/creditLines.ts:405](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L405)
 
 ___
 
@@ -423,7 +423,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:375](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L375)
+[src/api/creditLines.ts:375](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L375)
 
 ___
 
@@ -448,7 +448,7 @@ contract transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L115)
+[src/api/creditLines.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L115)
 
 ___
 
@@ -473,7 +473,7 @@ contract transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L60)
+[src/api/creditLines.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L60)
 
 ___
 
@@ -495,7 +495,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:413](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L413)
+[src/api/creditLines.ts:413](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L413)
 
 ___
 
@@ -517,7 +517,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:421](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L421)
+[src/api/creditLines.ts:421](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L421)
 
 ___
 
@@ -539,7 +539,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:417](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L417)
+[src/api/creditLines.ts:417](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L417)
 
 ___
 
@@ -560,7 +560,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:429](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L429)
+[src/api/creditLines.ts:429](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L429)
 
 ___
 
@@ -581,7 +581,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:425](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L425)
+[src/api/creditLines.ts:425](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L425)
 
 ___
 
@@ -605,7 +605,7 @@ ___
 
 #### Defined in
 
-[src/api/creditLines.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L310)
+[src/api/creditLines.ts:310](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L310)
 
 ___
 
@@ -632,7 +632,7 @@ Contract Transaction
 
 #### Defined in
 
-[src/api/creditLines.ts:280](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L280)
+[src/api/creditLines.ts:280](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L280)
 
 ___
 
@@ -656,4 +656,4 @@ collateral tokens (easy readable)
 
 #### Defined in
 
-[src/api/creditLines.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/1c62631/src/api/creditLines.ts#L262)
+[src/api/creditLines.ts:262](https://github.com/sublime-finance/sublime-sdk/blob/7d55ab5/src/api/creditLines.ts#L262)

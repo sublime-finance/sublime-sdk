@@ -29,7 +29,7 @@ export class UserMetaCalls extends SavingsAccountCalls {
         id: a.id,
         verifier: {
           type: a.verifier,
-          address: this.verificationApi.getVerifierType(a.verifiedBy.id),
+          address: a.verifiedBy.id,
           displayName: this.verificationApi.getVerifierDisplayName(a.verifiedBy.id),
         },
         details: userDetails,

@@ -99,8 +99,8 @@ export class CreditLineApi {
       request.autoLiquidation,
       collateralRatio.multipliedBy(new BigNumber(10).pow(16)).toFixed(0),
       request.borrowAsset,
-      request.collateralAsset,
       borrowStrategy,
+      request.collateralAsset,
       collateralStrategy,
       false,
       { ...options }
@@ -154,8 +154,8 @@ export class CreditLineApi {
       request.autoLiquidation,
       collateralRatio.multipliedBy(new BigNumber(10).pow(16)).toFixed(0),
       request.borrowAsset,
-      request.collateralAsset,
       borrowStrategy,
+      request.collateralAsset,
       collateralStrategy,
       true,
       { ...options }

@@ -1,4 +1,5 @@
-import { Signer, BytesLike, ContractTransaction } from 'ethers';
+import { Signer, BytesLike, ContractTransaction, ethers } from 'ethers';
+
 import { SublimeConfig } from '../types/sublimeConfig';
 
 import { Verification } from '../wrappers/Verification';
@@ -11,7 +12,9 @@ import { AdminVerifier } from '../wrappers';
 import { AdminVerifier__factory } from '../wrappers/factories/AdminVerifier__factory';
 
 import { BigNumberish } from '@ethersproject/bignumber';
-import { Options as Overrides, VerifierType, Verifier as VerifierDetails } from '../types/Types';
+import { Options as Overrides, VerifierType, Verifier as VerifierDetails, TwitterVerifierSignatureData } from '../types/Types';
+import { keccak256 } from 'ethers/lib/utils';
+import BigNumber from 'bignumber.js';
 
 /**
  * @class VerificationAPI
@@ -238,5 +241,103 @@ export class VerificationAPI {
     return [VerifierType.AdminVerifier, VerifierType.TwitterVerifier, VerifierType.PersonaVerifier].map((a) => {
       return { type: a, address: this.getVerifierAddress(a), displayName: this.getVerifierDisplayName(a) };
     });
+  }
+
+  public async generateSignatureForTwitterVerifier(
+    verifierName: string,
+    verifierVersion: string,
+    twitterId: string,
+    tweetId: string,
+    msgSender: string,
+    timestamp: string,
+    signerPrivate: string
+  ): Promise<TwitterVerifierSignatureData> {
+    const digest = this.calculateDigestForTwitterVerifier(twitterId, tweetId, msgSender, timestamp);
+    const chainId = await (await this.signer.getChainId()).toString();
+    const hash = this._hashTypedDataV4_withContractAddress(digest, VerifierType.TwitterVerifier, verifierName, verifierVersion, chainId);
+    const signer = new ethers.utils.SigningKey(signerPrivate);
+
+    const signature = signer.signDigest('0x' + hash);
+
+    return {
+      twitterId,
+      tweetId,
+      timestamp,
+      v: signature.v,
+      r: signature.r,
+      s: signature.s,
+    };
+  }
+
+  private _hashTypedDataV4_withContractAddress(
+    structHash: string,
+    verifier: VerifierType,
+    name: string,
+    version: string,
+    chainId: string
+  ): string {
+    const allBytesString = '1901' + this._domainSeparatorV4_withContractAddress(verifier, name, version, chainId) + structHash;
+    return keccak256('0x' + allBytesString.trim()).split('x')[1];
+  }
+
+  private _domainSeparatorV4_withContractAddress(verifier: VerifierType, name: string, version: string, chainId: string): string {
+    const verifierAddress = this.getVerifierAddress(verifier);
+    const _TYPE_HASH = this.keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)');
+    const _EIP712NameHash = this.keccak256(name);
+    const _EIP712VersionHash = this.keccak256(version);
+
+    const domainSeperator = this._buildDomainSeparator_withContractAddress(
+      _TYPE_HASH,
+      _EIP712NameHash,
+      _EIP712VersionHash,
+      verifierAddress,
+      chainId
+    );
+    return domainSeperator;
+  }
+
+  private _buildDomainSeparator_withContractAddress(
+    typeHash: string,
+    nameHash: string,
+    versionHash: string,
+    contractAddress: string,
+    chainId: string
+  ): string {
+    const allBytesString = typeHash + nameHash + versionHash + this.timestampPaddedHex(chainId) + this.addressToPaddedHex(contractAddress);
+    return keccak256('0x' + allBytesString.trim()).split('x')[1];
+  }
+
+  private calculateDigestForTwitterVerifier(_twitterId: string, _tweetId: string, _user: string, _timestamp: string): string {
+    const allBytesString =
+      this.keccak256('set(string twitterId,string tweetId,address userAddr,uint256 timestamp)') +
+      this.keccak256(_twitterId) +
+      this.keccak256(_tweetId) +
+      this.addressToPaddedHex(_user) +
+      this.timestampPaddedHex(_timestamp);
+    return keccak256('0x' + allBytesString.trim()).split('x')[1];
+  }
+
+  private keccak256(data: string): string {
+    return keccak256(Buffer.from(data)).split('x')[1];
+  }
+
+  private addressToPaddedHex(data: string): string {
+    data = data.toLowerCase();
+    const address = new BigNumber(data).toString(16);
+    return this.padLeft(address);
+  }
+
+  private timestampPaddedHex(data: string): string {
+    const address = new BigNumber(data).toString(16);
+    return this.padLeft(address);
+  }
+
+  private padLeft(data: string, size: number = 64): string {
+    const remaining = size - data.length;
+    if (remaining < 0) {
+      throw new Error("padded result can' be more than 32 bytes");
+    }
+    const pad = '0'.repeat(remaining);
+    return pad + data;
   }
 }
