@@ -324,6 +324,11 @@ export class SavingsAccountApi {
     return this.savingsAccount.approve(token, to, _amount.multipliedBy(new BigNumber(10).pow(decimals)).toFixed(0), { ...options });
   }
 
+  public async approveMax(token: string, to: string, options?: Overrides): Promise<ContractTransaction> {
+    const max = new BigNumber(2).pow(256).minus(1);
+    return this.savingsAccount.approve(token, to, max.toFixed(), { ...options });
+  }
+
   /**
    * @description Increase the amount of tokens that can be used by "to" address
    * @param token

@@ -8,6 +8,12 @@ import { SublimeConfig } from '../types/sublimeConfig';
 import { Strategy, StrategyType, Options as Overrides } from '../types/Types';
 import { TokenManager } from '../tokenManager';
 
+const CompoundStrategyDisplayName = 'Compound Protocol';
+const NoYieldStrategyDisplayName = 'Locked in Sublime';
+
+const CompoundLogo = 'https://cryptologos.cc/logos/compound-comp-logo.png';
+const SublimeLogo = 'logo pending ...';
+
 /**
  * @class YieldAndStrategyApi
  */
@@ -45,11 +51,11 @@ export class YieldAndStrategyApi {
     this.tokenManager = tokenManger;
 
     this.compoundYield = new CompoundYield__factory(this.signer).attach(this.config.compoundStrategyContractAddress);
-    this.displayName[config.compoundStrategyContractAddress.toLowerCase()] = 'Compound Protocol';
-    this.displayName[config.noStrategyAddress.toLowerCase()] = 'Locked in Sublime';
+    this.displayName[config.compoundStrategyContractAddress.toLowerCase()] = CompoundStrategyDisplayName;
+    this.displayName[config.noStrategyAddress.toLowerCase()] = NoYieldStrategyDisplayName;
 
-    this.logo[config.compoundStrategyContractAddress.toLowerCase()] = 'https://cryptologos.cc/logos/compound-comp-logo.png';
-    this.logo[config.noStrategyAddress.toLowerCase()] = 'logo pending ...';
+    this.logo[config.compoundStrategyContractAddress.toLowerCase()] = CompoundLogo;
+    this.logo[config.noStrategyAddress.toLowerCase()] = SublimeLogo;
   }
 
   /**

@@ -305,6 +305,11 @@ export interface InternalTokenMap {
   iconMapping: string;
 }
 
+export interface ChainlinkInternalMap {
+  tokenAddress: string;
+  feedAddress: string;
+}
+
 export interface TwitterDetails {
   id: string;
   metadata: string;
@@ -347,4 +352,5 @@ export interface TwitterVerifierSignatureData {
   v: number;
   r: string;
   s: string;
+  user: string;
 }

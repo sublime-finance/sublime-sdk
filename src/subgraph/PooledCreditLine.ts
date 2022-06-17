@@ -919,8 +919,8 @@ export class PooledCreditLineCalls extends CreditLineCalls {
         },
         {
           collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.lenderStrategy][a.collateralAsset]),
-          ratioOfPrices: new BigNumber(prices[a.borrowAsset]).dividedBy(prices[a.collateralAsset]),
-          ratioOfPricesDecimals: 1,
+          ratioOfPrices: new BigNumber(prices[a.collateralAsset]).dividedBy(prices[a.borrowAsset]),
+          ratioOfPricesDecimals: 0,
         },
         {
           id: aLenderPool.id,

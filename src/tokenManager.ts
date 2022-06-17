@@ -2,10 +2,12 @@ import { ERC20 as Token } from './wrappers/ERC20';
 import { ERC20__factory as Token__factory } from './wrappers/factories/ERC20__factory';
 import { Signer } from 'ethers';
 import { BigNumber } from 'bignumber.js';
-import { getPrice } from './queries/prices';
+import { getUniswapPrice } from './queries/prices';
 import { SublimeSubgraph } from './subgraph';
 import { Asset } from './types/Types';
 import { tokenData } from './config/tokenMapping';
+import { feedData as chainlinkFeedData } from './config/chainlinkMapping';
+import { AggregatorV3Interface, AggregatorV3Interface__factory } from './wrappers';
 
 /**
  * @class TokenManager
@@ -57,6 +59,8 @@ export class TokenManager {
    */
   private priceRefreshInterval: number = 60000;
 
+  private chainlinkFeedsAddress: Record<string, string> = {};
+
   /**
    * @description web3 signer
    */
@@ -73,6 +77,11 @@ export class TokenManager {
       this.addressMapper[element.address.toLowerCase()] = element.iconMapping.toLowerCase();
       this.decimals[element.address.toLowerCase()] = element.decimals;
       this.names[element.address.toLowerCase()] = element.symbol;
+    }
+
+    for (let index = 0; index < chainlinkFeedData.length; index++) {
+      const element = chainlinkFeedData[index];
+      this.chainlinkFeedsAddress[element.tokenAddress] = element.feedAddress;
     }
   }
 
@@ -126,17 +135,47 @@ export class TokenManager {
    * @returns
    */
   async updatePricePerAsset(tokenAddress: string): Promise<void> {
+    // tokenAddress = tokenAddress.toLowerCase();
+    // const now = new Date().valueOf();
+    // if (!(tokenAddress in this.prices) || now > this.priceRefreshInterval + this.priceLastUpdatedAt[tokenAddress]) {
+    //   let mappedAddress = tokenAddress;
+    //   if (this.addressMapper[tokenAddress]) {
+    //     mappedAddress = this.addressMapper[tokenAddress];
+    //   }
+    //   this.prices[tokenAddress] = await getUniswapPrice(this.priceSubgraphUrl, mappedAddress);
+    //   this.priceLastUpdatedAt[tokenAddress] = new Date().valueOf();
+    // }
+    await this._updatePricePerAsset(tokenAddress);
+    return;
+  }
+
+  private async _updatePricePerAsset(tokenAddress: string): Promise<void> {
     tokenAddress = tokenAddress.toLowerCase();
     const now = new Date().valueOf();
-    if (!(tokenAddress in this.prices) || now > this.priceRefreshInterval + this.priceLastUpdatedAt[tokenAddress]) {
-      let mappedAddress = tokenAddress;
-      if (this.addressMapper[tokenAddress]) {
-        mappedAddress = this.addressMapper[tokenAddress];
+
+    if (this.chainlinkFeedsAddress[tokenAddress]) {
+      if (!(tokenAddress in this.prices) || now > this.priceRefreshInterval + this.priceLastUpdatedAt[tokenAddress]) {
+        const feedAddress = this.chainlinkFeedsAddress[tokenAddress];
+        const aggregator = AggregatorV3Interface__factory.connect(feedAddress, this.signer);
+        const feedData = await aggregator.callStatic.latestRoundData();
+        const decimals = (await aggregator.callStatic.decimals()).toString();
+        const price = feedData.answer.toString();
+
+        this.prices[tokenAddress] = new BigNumber(price).dividedBy(new BigNumber(10).pow(decimals));
+        this.priceLastUpdatedAt[tokenAddress] = new Date().valueOf();
       }
-      this.prices[tokenAddress] = await getPrice(this.priceSubgraphUrl, mappedAddress);
-      this.priceLastUpdatedAt[tokenAddress] = new Date().valueOf();
+      return;
+    } else {
+      if (!(tokenAddress in this.prices) || now > this.priceRefreshInterval + this.priceLastUpdatedAt[tokenAddress]) {
+        let mappedAddress = tokenAddress;
+        if (this.addressMapper[tokenAddress]) {
+          mappedAddress = this.addressMapper[tokenAddress];
+        }
+        this.prices[tokenAddress] = await getUniswapPrice(this.priceSubgraphUrl, mappedAddress);
+        this.priceLastUpdatedAt[tokenAddress] = new Date().valueOf();
+      }
+      return;
     }
-    return;
   }
 
   /**

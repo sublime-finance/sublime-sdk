@@ -1,7 +1,7 @@
 import { BigNumber } from 'bignumber.js';
 import { fetchData, print } from '../helpers';
 
-export async function getPrice(url, address: string): Promise<BigNumber> {
+export async function getUniswapPrice(url, address: string): Promise<BigNumber> {
   address = address.toLowerCase();
 
   const data = JSON.stringify({

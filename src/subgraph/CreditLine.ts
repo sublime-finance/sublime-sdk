@@ -462,8 +462,8 @@ export class CreditLineCalls extends Base {
         },
         {
           collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.strategy][a.collateralAsset]),
-          ratioOfPrices: new BigNumber(prices[a.borrowAsset]).dividedBy(prices[a.collateralAsset]),
-          ratioOfPricesDecimals: 1,
+          ratioOfPrices: new BigNumber(prices[a.collateralAsset]).dividedBy(prices[a.borrowAsset]),
+          ratioOfPricesDecimals: 0,
         },
         { liquidatorRewardFraction: new BigNumber(10).pow(16) }
       );

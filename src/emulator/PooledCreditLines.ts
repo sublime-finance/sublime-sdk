@@ -6,6 +6,7 @@ import {
   LenderPoolState,
   LenderPoolExternalData,
   LenderPerPool,
+  Balance,
 } from '../types/Types';
 import { EmulatorHelper } from './Helpers';
 
@@ -324,8 +325,14 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return this.pooledCreditLineState.borrowerVerifier;
   }
 
-  // to-do
   public lenderVerifier(): string {
     return this.pooledCreditLineState.lenderVerifier;
+  }
+
+  public ratioOfCollateralTokensVsBorrowTokensPrice(): Balance {
+    return {
+      value: this.externalData.ratioOfPrices.toString(),
+      decimals: this.externalData.ratioOfPricesDecimals,
+    };
   }
 }

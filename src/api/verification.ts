@@ -16,6 +16,10 @@ import { Options as Overrides, VerifierType, Verifier as VerifierDetails, Twitte
 import { keccak256 } from 'ethers/lib/utils';
 import BigNumber from 'bignumber.js';
 
+const AdminVerifierDisplayName = 'Admin Verifier';
+const TwitterVerifierDisplayName = 'Twitter Verifier';
+const PersonaVerifierDisplayName = 'Persona Verifier';
+
 /**
  * @class VerificationAPI
  */
@@ -223,11 +227,11 @@ export class VerificationAPI {
       return undefined;
     }
     if (address.toLowerCase() == this.config.adminVerifierContractAddress.toLowerCase()) {
-      return 'Admin Verifier';
+      return AdminVerifierDisplayName;
     } else if (address.toLowerCase() == this.config.twitterVerifierContractAddress.toLowerCase()) {
-      return 'Twitter Verifier';
+      return TwitterVerifierDisplayName;
     } else if (address.toLowerCase() == this.config.personaVerifierContractAddress.toLowerCase()) {
-      return 'Persona Verifier';
+      return PersonaVerifierDisplayName;
     } else {
       return undefined;
     }
@@ -266,6 +270,7 @@ export class VerificationAPI {
       v: signature.v,
       r: signature.r,
       s: signature.s,
+      user: msgSender,
     };
   }
 
