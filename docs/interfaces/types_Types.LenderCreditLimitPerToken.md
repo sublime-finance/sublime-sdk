@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/types/overview/BorrowerCreditLimit.ts:9](https://github.com/sublime-finance/sublime-sdk/blob/9db853d/src/types/overview/BorrowerCreditLimit.ts#L9)
+[src/types/overview/BorrowerCreditLimit.ts:9](https://github.com/sublime-finance/sublime-sdk/blob/4c48079/src/types/overview/BorrowerCreditLimit.ts#L9)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[src/types/overview/BorrowerCreditLimit.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/9db853d/src/types/overview/BorrowerCreditLimit.ts#L10)
+[src/types/overview/BorrowerCreditLimit.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/4c48079/src/types/overview/BorrowerCreditLimit.ts#L10)
