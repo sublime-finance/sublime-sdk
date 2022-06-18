@@ -21,6 +21,7 @@ export class LenderPoolEmulator extends EmulatorHelper {
   private lenderPerPool: LenderPerPool[];
 
   private totalSupply: BigNumber;
+
   constructor(
     lenderPoolState: LenderPoolState,
     lenderPoolExternalData: LenderPoolExternalData,
@@ -66,15 +67,15 @@ export class LenderPoolEmulator extends EmulatorHelper {
   }
 
   public calculatePrincipalWithdrawable(lenderAddress: string): BigNumber {
-    const lenderBalance: BigNumber = this.getLenderBalance(lenderAddress);
     const _status = this.dataFromPooledCreditLines.status;
+    const lenderBalance: BigNumber = this.getLenderBalance(lenderAddress); // for next use
     if (_status == CreditLineStatus.CLOSED || _status == CreditLineStatus.LIQUIDATED) {
       return this._calculatePrincipalWithdrawable(lenderBalance);
     } else if (
       _status == CreditLineStatus.CANCELLED ||
       (_status == CreditLineStatus.REQUESTED &&
-        this.now().gte(this.lenderPoolState.startTime) &&
-        this.totalSupply.lt(this.lenderPoolState.minBorrowAmount))
+        ((this.now().gte(this.lenderPoolState.startTime) && this.totalSupply.lt(this.lenderPoolState.minBorrowAmount)) ||
+          this.now().gte(this.dataFromPooledCreditLines.endsAt)))
     ) {
       return lenderBalance;
     } else {
@@ -127,6 +128,15 @@ export class LenderPoolEmulator extends EmulatorHelper {
 
   // -------------------------------- Function not part of contract --------------------------------//
 
+  public totalInterestWithdrawnByLender(lenderAddress: string): BigNumber {
+    const borrowerInterestSharesWithdrawnByLender = this.borrowerInterestSharesWithdrawnByLender(lenderAddress);
+    const yieldInterestSharesWithdrawnByLender = this.yieldInterestSharesWithdrawnByLender(lenderAddress);
+
+    return borrowerInterestSharesWithdrawnByLender
+      .plus(yieldInterestSharesWithdrawnByLender)
+      .multipliedBy(this.lenderPoolExternalData.collateralPerStrategyToken);
+  }
+
   public borrowerInterestSharesWithdrawnByLender(lenderAddress: string): BigNumber {
     if (this.borrowerInterestData[lenderAddress]) {
       return this.borrowerInterestData[lenderAddress];
@@ -165,9 +175,16 @@ export class LenderPoolEmulator extends EmulatorHelper {
         lenderBalance: zero,
         borrowerInterestSharesWithdrawn: zero,
         yieldInterestWithdrawnShares: zero,
+        amountWithdrawn: zero,
+        sharesWithdrawn: zero,
+        interestWithdrawn: zero,
       };
     } else {
       return lenderData[0];
     }
+  }
+
+  public totalPrincipalSuppliedByLender(lenderAddress: string): BigNumber {
+    return this.getLenderData(lenderAddress).amountLent;
   }
 }

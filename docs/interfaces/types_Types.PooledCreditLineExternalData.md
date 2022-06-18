@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/types/emulator/pooledCreditlines.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/emulator/pooledCreditlines.ts#L32)
+[src/types/emulator/pooledCreditlines.ts:32](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/emulator/pooledCreditlines.ts#L32)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[src/types/emulator/pooledCreditlines.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/emulator/pooledCreditlines.ts#L33)
+[src/types/emulator/pooledCreditlines.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/emulator/pooledCreditlines.ts#L33)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[src/types/emulator/pooledCreditlines.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/emulator/pooledCreditlines.ts#L34)
+[src/types/emulator/pooledCreditlines.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/emulator/pooledCreditlines.ts#L34)

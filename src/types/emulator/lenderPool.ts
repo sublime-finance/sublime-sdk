@@ -21,14 +21,19 @@ export interface LenderPoolExternalData {
 export interface DataFromPooledCreditLines {
   principal: BigNumber;
   status: CreditLineStatus;
+  endsAt: BigNumber;
 }
 
 export interface LenderPerPool {
   lenderAddress: string;
   amountLent: BigNumber;
-  lenderBalance: BigNumber;
+  amountWithdrawn: BigNumber;
+  sharesWithdrawn: BigNumber;
+  interestWithdrawn: BigNumber;
+  // strategy: string, // may require in future
   borrowerInterestSharesWithdrawn: BigNumber;
   yieldInterestWithdrawnShares: BigNumber;
+  lenderBalance: BigNumber;
 }
 
 export interface LenderPerPoolPrincipalWithdrawable {

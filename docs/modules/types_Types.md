@@ -16,6 +16,7 @@
 - [BorrowerCollectivePerStrategy](types_Types.md#borrowercollectiveperstrategy)
 - [BorrowerCollectivePerToken](types_Types.md#borrowercollectivepertoken)
 - [BorrowerCollectivePerTokenPerStrategy](types_Types.md#borrowercollectivepertokenperstrategy)
+- [ChainlinkInternalMap](types_Types.md#chainlinkinternalmap)
 - [CreditLineDetail](types_Types.md#creditlinedetail)
 - [CreditLineExternalData](types_Types.md#creditlineexternaldata)
 - [CreditLineGlobals](types_Types.md#creditlineglobals)
@@ -149,6 +150,12 @@ ___
 ### BorrowerCollectivePerTokenPerStrategy
 
 Re-exports [BorrowerCollectivePerTokenPerStrategy](../interfaces/types_Types.BorrowerCollectivePerTokenPerStrategy.md)
+
+___
+
+### ChainlinkInternalMap
+
+Re-exports [ChainlinkInternalMap](../interfaces/types_Types.ChainlinkInternalMap.md)
 
 ___
 

@@ -105,8 +105,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -162,8 +165,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -218,8 +224,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -263,10 +272,13 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
-          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares || '0'),
+          yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
       });
       lenderPerPoolData.push(requiredLenderPerPool);
@@ -310,8 +322,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -370,8 +385,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -429,8 +447,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -476,8 +497,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -527,8 +551,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };
@@ -578,8 +605,11 @@ export class PooledCreditLineCalls extends CreditLineCalls {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };

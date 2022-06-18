@@ -47,14 +47,15 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
       this.lenderPoolExternalData,
       {
         principal: this.pooledCreditLineState.principal,
-        status: this.getStatus(),
+        status: this.getStatusAndUpdate(),
+        endsAt: this.pooledCreditLineState.endsAt,
       },
       this.lendersPerPool
     );
   }
 
   public withdrawableCollateral(): BigNumber {
-    const _status = this.getStatus();
+    const _status = this.getStatusAndUpdate();
 
     if ([CreditLineStatus.EXPIRED, CreditLineStatus.CANCELLED, CreditLineStatus.REQUESTED].includes(_status)) {
       return new BigNumber(0);
@@ -116,6 +117,80 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return this.externalData.collateralPerStrategyToken.multipliedBy(this.pooledCreditLineState.depositedCollateralInShares);
   }
 
+  private calculateInterest(principal: BigNumber, borrowRate: BigNumber, timeElapsed: BigNumber): BigNumber {
+    return principal.multipliedBy(borrowRate).multipliedBy(timeElapsed).div(SCALING_FACTOR).div(YEAR_IN_SECONDS);
+  }
+
+  public getRequiredCollateral(_borrowTokennAmount: BigNumber): BigNumber {
+    const _collateral = this._equivalentCollateral(_borrowTokennAmount);
+    return _collateral.multipliedBy(this.pooledCreditLineState.idealCollateralRatio).div(SCALING_FACTOR);
+  }
+
+  private _equivalentCollateral(_borrowTokennAmount: BigNumber): BigNumber {
+    return _borrowTokennAmount
+      .multipliedBy(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals))
+      .div(this.externalData.ratioOfPrices);
+  }
+
+  public collateralTokensToLiquidate(_borrowTokensToLiquidate: BigNumber): BigNumber {
+    return this._equivalentCollateral(_borrowTokensToLiquidate);
+  }
+
+  public calculateBorrowableAmount(): BigNumber {
+    const _status = this.getStatusAndUpdate();
+
+    if (_status != CreditLineStatus.ACTIVE) return new BigNumber(0);
+
+    const _totalCollateralTokens = this.calculateTotalCollateralTokens();
+    const _currentDebt = this.calculateCurrentDebt();
+    const _collateralRatio = this.pooledCreditLineState.idealCollateralRatio;
+    let _maxPossible = UINT256_MAX;
+
+    if (_collateralRatio.gt(0)) {
+      _maxPossible = _totalCollateralTokens
+        .multipliedBy(this.externalData.ratioOfPrices)
+        .div(_collateralRatio)
+        .multipliedBy(SCALING_FACTOR)
+        .div(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals));
+    }
+
+    const _borrowLimit = this.pooledCreditLineState.borrowLimit;
+    const _principal = this.pooledCreditLineState.principal;
+
+    if (_maxPossible.lte(_currentDebt)) return new BigNumber(0);
+
+    return this.min(_borrowLimit.minus(_principal), _maxPossible.minus(_currentDebt));
+  }
+
+  public calculateCurrentCollateralRatio(): BigNumber {
+    const _currentDebt = this.calculateCurrentDebt();
+    let _currentCollateralRatio = UINT256_MAX;
+    if (_currentDebt.gt(0)) {
+      _currentCollateralRatio = this.calculateTotalCollateralTokens()
+        .multipliedBy(this.externalData.ratioOfPrices)
+        .div(_currentDebt)
+        .multipliedBy(SCALING_FACTOR)
+        .div(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals));
+    }
+
+    return _currentCollateralRatio;
+  }
+
+  public getStatusAndUpdate(): CreditLineStatus {
+    let currentStatus = this.pooledCreditLineState.pooledCreditLineStatus;
+    if (currentStatus == CreditLineStatus.ACTIVE && this.pooledCreditLineState.endsAt.lte(this.now())) {
+      if (this.pooledCreditLineState.principal.gt(0)) {
+        currentStatus = CreditLineStatus.EXPIRED;
+      } else {
+        currentStatus = CreditLineStatus.CLOSED;
+      }
+      this.pooledCreditLineState.pooledCreditLineStatus = currentStatus;
+    }
+    return currentStatus;
+  }
+
+  // ----------- additional calls not part of smart contract ----------//
+
   public getStatus(): CreditLineStatus {
     const currentStatus = this.pooledCreditLineState.pooledCreditLineStatus;
     const _idealCollateralRatio = this.pooledCreditLineState.idealCollateralRatio;
@@ -173,66 +248,6 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return currentStatus;
   }
 
-  private calculateInterest(principal: BigNumber, borrowRate: BigNumber, timeElapsed: BigNumber): BigNumber {
-    return principal.multipliedBy(borrowRate).multipliedBy(timeElapsed).div(SCALING_FACTOR).div(YEAR_IN_SECONDS);
-  }
-
-  public getRequiredCollateral(_borrowTokennAmount: BigNumber): BigNumber {
-    const _collateral = this._equivalentCollateral(_borrowTokennAmount);
-    return _collateral.multipliedBy(this.pooledCreditLineState.idealCollateralRatio).div(SCALING_FACTOR);
-  }
-
-  private _equivalentCollateral(_borrowTokennAmount: BigNumber): BigNumber {
-    return _borrowTokennAmount
-      .multipliedBy(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals))
-      .div(this.externalData.ratioOfPrices);
-  }
-
-  public collateralTokensToLiquidate(_borrowTokensToLiquidate: BigNumber): BigNumber {
-    return this._equivalentCollateral(_borrowTokensToLiquidate);
-  }
-
-  public calculateBorrowableAmount(): BigNumber {
-    const _status = this.getStatus();
-
-    if (_status != CreditLineStatus.ACTIVE) return new BigNumber(0);
-
-    const _totalCollateralTokens = this.calculateTotalCollateralTokens();
-    const _currentDebt = this.calculateCurrentDebt();
-    const _collateralRatio = this.pooledCreditLineState.idealCollateralRatio;
-    let _maxPossible = UINT256_MAX;
-
-    if (_collateralRatio.gt(0)) {
-      _maxPossible = _totalCollateralTokens
-        .multipliedBy(this.externalData.ratioOfPrices)
-        .div(_collateralRatio)
-        .multipliedBy(SCALING_FACTOR)
-        .div(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals));
-    }
-
-    const _borrowLimit = this.pooledCreditLineState.borrowLimit;
-    const _principal = this.pooledCreditLineState.principal;
-
-    if (_maxPossible.lte(_currentDebt)) return new BigNumber(0);
-
-    return this.min(_borrowLimit.minus(_principal), _maxPossible.minus(_currentDebt));
-  }
-
-  public calculateCurrentCollateralRatio(): BigNumber {
-    const _currentDebt = this.calculateCurrentDebt();
-    let _currentCollateralRatio = UINT256_MAX;
-    if (_currentDebt.gt(0)) {
-      _currentCollateralRatio = this.calculateTotalCollateralTokens()
-        .multipliedBy(this.externalData.ratioOfPrices)
-        .div(_currentDebt)
-        .multipliedBy(SCALING_FACTOR)
-        .div(new BigNumber(10).pow(this.externalData.ratioOfPricesDecimals));
-    }
-
-    return _currentCollateralRatio;
-  }
-
-  // ----------- additional calls not part of smart contract ----------//
   public getPrincipal(): BigNumber {
     return this.pooledCreditLineState.principal;
   }

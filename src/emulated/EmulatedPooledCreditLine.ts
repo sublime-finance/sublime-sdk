@@ -43,8 +43,11 @@ export class EmulatedPooledCreditLines extends EmulatedHelper {
       const requiredLenderPerPool: LenderPerPool[] = requiredLendersPerPool.map((a) => {
         return {
           lenderAddress: a.lenderAddress,
-          lenderBalance: new BigNumber(a.lenderBalance),
           amountLent: new BigNumber(a.amountLent),
+          amountWithdrawn: new BigNumber(a.amountWithdrawn),
+          sharesWithdrawn: new BigNumber(a.sharesWithdrawn),
+          interestWithdrawn: new BigNumber(a.interestWithdrawn),
+          lenderBalance: new BigNumber(a.lenderBalance),
           borrowerInterestSharesWithdrawn: new BigNumber(a.borrowerInterestSharesWithdrawn),
           yieldInterestWithdrawnShares: new BigNumber(a.yieldInterestWithdrawnShares),
         };

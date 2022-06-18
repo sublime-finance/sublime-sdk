@@ -201,4 +201,8 @@ export class CreditLineEmulator extends EmulatorHelper {
   public collateralAssetStrategy(): string {
     return this.creditLineState.collateralAssetStrategy;
   }
+
+  public totalInterestRepaid(): BigNumber {
+    return this.creditLineState.totalInterestRepaid;
+  }
 }

@@ -15,6 +15,7 @@
 ### Properties
 
 - [addressMapper](tokenManager.TokenManager.md#addressmapper)
+- [chainlinkFeedsAddress](tokenManager.TokenManager.md#chainlinkfeedsaddress)
 - [decimals](tokenManager.TokenManager.md#decimals)
 - [logoUrlTemplate](tokenManager.TokenManager.md#logourltemplate)
 - [logos](tokenManager.TokenManager.md#logos)
@@ -28,6 +29,7 @@
 
 ### Methods
 
+- [\_updatePricePerAsset](tokenManager.TokenManager.md#_updatepriceperasset)
 - [getAssetMeta](tokenManager.TokenManager.md#getassetmeta)
 - [getLogo](tokenManager.TokenManager.md#getlogo)
 - [getPricePerAsset](tokenManager.TokenManager.md#getpriceperasset)
@@ -54,7 +56,7 @@
 
 #### Defined in
 
-[src/tokenManager.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L67)
+[src/tokenManager.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L71)
 
 ## Properties
 
@@ -66,7 +68,17 @@
 
 #### Defined in
 
-[src/tokenManager.ts:43](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L43)
+[src/tokenManager.ts:45](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L45)
+
+___
+
+### chainlinkFeedsAddress
+
+• `Private` **chainlinkFeedsAddress**: `Record`<`string`, `string`\> = `{}`
+
+#### Defined in
+
+[src/tokenManager.ts:62](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L62)
 
 ___
 
@@ -78,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:18](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L18)
+[src/tokenManager.ts:20](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L20)
 
 ___
 
@@ -90,7 +102,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L48)
+[src/tokenManager.ts:50](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L50)
 
 ___
 
@@ -102,7 +114,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:38](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L38)
+[src/tokenManager.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L40)
 
 ___
 
@@ -114,7 +126,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L23)
+[src/tokenManager.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L25)
 
 ___
 
@@ -126,7 +138,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:33](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L33)
+[src/tokenManager.ts:35](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L35)
 
 ___
 
@@ -138,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:58](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L58)
+[src/tokenManager.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L60)
 
 ___
 
@@ -150,7 +162,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L53)
+[src/tokenManager.ts:55](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L55)
 
 ___
 
@@ -162,7 +174,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:28](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L28)
+[src/tokenManager.ts:30](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L30)
 
 ___
 
@@ -174,7 +186,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L63)
+[src/tokenManager.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L67)
 
 ___
 
@@ -184,9 +196,29 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:65](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L65)
+[src/tokenManager.ts:69](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L69)
 
 ## Methods
+
+### \_updatePricePerAsset
+
+▸ `Private` **_updatePricePerAsset**(`tokenAddress`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `tokenAddress` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[src/tokenManager.ts:152](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L152)
+
+___
 
 ### getAssetMeta
 
@@ -204,7 +236,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:218](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L218)
+[src/tokenManager.ts:257](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L257)
 
 ___
 
@@ -226,7 +258,7 @@ return url which renders the logo/pic of the token
 
 #### Defined in
 
-[src/tokenManager.ts:205](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L205)
+[src/tokenManager.ts:244](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L244)
 
 ___
 
@@ -248,7 +280,7 @@ price of asset
 
 #### Defined in
 
-[src/tokenManager.ts:191](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L191)
+[src/tokenManager.ts:230](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L230)
 
 ___
 
@@ -270,7 +302,7 @@ number of token decimals
 
 #### Defined in
 
-[src/tokenManager.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L165)
+[src/tokenManager.ts:204](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L204)
 
 ___
 
@@ -292,7 +324,7 @@ token name
 
 #### Defined in
 
-[src/tokenManager.ts:178](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L178)
+[src/tokenManager.ts:217](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L217)
 
 ___
 
@@ -314,7 +346,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:83](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L83)
+[src/tokenManager.ts:92](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L92)
 
 ___
 
@@ -336,7 +368,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:147](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L147)
+[src/tokenManager.ts:186](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L186)
 
 ___
 
@@ -358,7 +390,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:128](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L128)
+[src/tokenManager.ts:137](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L137)
 
 ___
 
@@ -380,7 +412,7 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L96)
+[src/tokenManager.ts:105](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L105)
 
 ___
 
@@ -402,4 +434,4 @@ ___
 
 #### Defined in
 
-[src/tokenManager.ts:112](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/tokenManager.ts#L112)
+[src/tokenManager.ts:121](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/tokenManager.ts#L121)

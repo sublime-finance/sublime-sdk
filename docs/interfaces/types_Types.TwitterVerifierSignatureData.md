@@ -13,6 +13,7 @@
 - [timestamp](types_Types.TwitterVerifierSignatureData.md#timestamp)
 - [tweetId](types_Types.TwitterVerifierSignatureData.md#tweetid)
 - [twitterId](types_Types.TwitterVerifierSignatureData.md#twitterid)
+- [user](types_Types.TwitterVerifierSignatureData.md#user)
 - [v](types_Types.TwitterVerifierSignatureData.md#v)
 
 ## Properties
@@ -23,7 +24,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:348](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/Types.ts#L348)
+[src/types/Types.ts:353](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/Types.ts#L353)
 
 ___
 
@@ -33,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:349](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/Types.ts#L349)
+[src/types/Types.ts:354](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/Types.ts#L354)
 
 ___
 
@@ -43,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:346](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/Types.ts#L346)
+[src/types/Types.ts:351](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/Types.ts#L351)
 
 ___
 
@@ -53,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:345](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/Types.ts#L345)
+[src/types/Types.ts:350](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/Types.ts#L350)
 
 ___
 
@@ -63,7 +64,17 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:344](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/Types.ts#L344)
+[src/types/Types.ts:349](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/Types.ts#L349)
+
+___
+
+### user
+
+• **user**: `string`
+
+#### Defined in
+
+[src/types/Types.ts:355](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/Types.ts#L355)
 
 ___
 
@@ -73,4 +84,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:347](https://github.com/sublime-finance/sublime-sdk/blob/de25f81/src/types/Types.ts#L347)
+[src/types/Types.ts:352](https://github.com/sublime-finance/sublime-sdk/blob/32dab46/src/types/Types.ts#L352)
