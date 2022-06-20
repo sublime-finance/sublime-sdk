@@ -120,27 +120,27 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     const _idealCollateralRatio = this.pooledCreditLineState.idealCollateralRatio;
 
     if (currentStatus == CreditLineStatus.ACTIVE) {
-      if (_idealCollateralRatio.gt(0)) { // PCL has non-zero collat. requirement
-        let currentCollateralRatio = this.calculateCurrentCollateralRatio();
-        if (currentCollateralRatio.lt(_idealCollateralRatio)) { // active PCL and collat ratio is below threshold
-          return CreditLineStatus.LIQUIDATE_CALLABLE;
-        }
-      }
       if (this.pooledCreditLineState.endsAt.lte(this.now())) { // normal loan duration has ended
         if (this.pooledCreditLineState.principal.gt(0)) { // PCL principal is non-zero, so goes to expired state
           if (this.pooledCreditLineState.defaultsAt.lte(this.now())) { // PCL has crossed grace period, can liquidate
-            return CreditLineStatus.LIQUIDATE_CALLABLE;
+            return CreditLineStatus.DEFAULT_LIQUIDATE_CALLABLE;
           }
           else return CreditLineStatus.EXPIRED; // PCL is in grace period and collat. ratio is OK
         } else { // PCL principal is zero, so can be closed
           return CreditLineStatus.CLOSE_CALLABLE;
         }
       }
+      if (_idealCollateralRatio.gt(0)) { // PCL has non-zero collat. requirement
+        let currentCollateralRatio = this.calculateCurrentCollateralRatio();
+        if (currentCollateralRatio.lt(_idealCollateralRatio)) { // active PCL and collat ratio is below threshold
+          return CreditLineStatus.LIQUIDATE_CALLABLE;
+        }
+      }
     } else if (currentStatus == CreditLineStatus.EXPIRED) {
       if (this.pooledCreditLineState.principal.eq(0)) { // loan has been repaid, can be closed
         return CreditLineStatus.CLOSE_CALLABLE;
       } else if (this.pooledCreditLineState.defaultsAt.lte(this.now())) { // principal not zero, & grace period is over
-        return CreditLineStatus.LIQUIDATE_CALLABLE;
+        return CreditLineStatus.DEFAULT_LIQUIDATE_CALLABLE;
       } else if (_idealCollateralRatio.gt(0)) { 
         let currentCollateralRatio = this.calculateCurrentCollateralRatio();
         if (currentCollateralRatio.lt(_idealCollateralRatio)) { // collat. ratio is not OK
