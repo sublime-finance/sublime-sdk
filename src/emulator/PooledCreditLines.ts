@@ -131,29 +131,33 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
         }
       }
       if (_idealCollateralRatio.gt(0)) { // PCL has non-zero collat. requirement
-        let currentCollateralRatio = this.calculateCurrentCollateralRatio();
+        const currentCollateralRatio = this.calculateCurrentCollateralRatio();
         if (currentCollateralRatio.lt(_idealCollateralRatio)) { // active PCL and collat ratio is below threshold
           return CreditLineStatus.LIQUIDATE_CALLABLE;
         }
       }
     } else if (currentStatus == CreditLineStatus.EXPIRED) {
-      if (this.pooledCreditLineState.principal.eq(0)) { // loan has been repaid, can be closed
+      if (this.pooledCreditLineState.principal.eq(0)) {
+        // loan has been repaid, can be closed
         return CreditLineStatus.CLOSE_CALLABLE;
       } else if (this.pooledCreditLineState.defaultsAt.lte(this.now())) { // principal not zero, & grace period is over
         return CreditLineStatus.DEFAULT_LIQUIDATE_CALLABLE;
       } else if (_idealCollateralRatio.gt(0)) { 
-        let currentCollateralRatio = this.calculateCurrentCollateralRatio();
+        const currentCollateralRatio = this.calculateCurrentCollateralRatio();
         if (currentCollateralRatio.lt(_idealCollateralRatio)) { // collat. ratio is not OK
           return CreditLineStatus.LIQUIDATE_CALLABLE;
         }
       }
     } else if (currentStatus == CreditLineStatus.REQUESTED) {
       if (this.pooledCreditLineState.startsAt.lte(this.now())) {
-        if (this.pooledCreditLineState.endsAt.lte(this.now())) { // loan not started and beyond loan end time
+        if (this.pooledCreditLineState.endsAt.lte(this.now())) {
+          // loan not started and beyond loan end time
           return CreditLineStatus.INTERMEDIATE_CANCELLED;
-        } else if (this.pooledCreditLineState.minBorrowAmount.lte(this.totalAmountLent())) { // before loan end time & min amount has been met
+        } else if (this.pooledCreditLineState.minBorrowAmount.lte(this.totalAmountLent())) {
+          // before loan end time & min amount has been met
           return CreditLineStatus.START_CALLABLE;
-        } else if (this.pooledCreditLineState.minBorrowAmount.gt(this.totalAmountLent())) { // before loan end time & min amount has not been met
+        } else if (this.pooledCreditLineState.minBorrowAmount.gt(this.totalAmountLent())) {
+          // before loan end time & min amount has not been met
           return CreditLineStatus.INTERMEDIATE_CANCELLED;
         }
       }

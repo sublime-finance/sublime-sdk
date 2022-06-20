@@ -140,10 +140,9 @@ export class CreditLineEmulator extends EmulatorHelper {
     return this.creditLineState.borrowLimit;
   }
 
-  
-  public getStatus() : CreditLineStatus{
+  public getStatus(): CreditLineStatus {
     let _currentStatus = this.creditLineState.creditLineStatus;
-    let [_currentCollateralRatio, _totalCollateralTokens] = this.calculateCurrentCollateralRatio();
+    const [_currentCollateralRatio, _totalCollateralTokens] = this.calculateCurrentCollateralRatio();
     if (_currentCollateralRatio.lt(this.idealCollateralRatio())) {
       _currentStatus = CreditLineStatus.LIQUIDATE_CALLABLE;
     }
@@ -211,5 +210,4 @@ export class CreditLineEmulator extends EmulatorHelper {
   public collateralStrategy(): string {
     return this.creditLineState.strategy;
   }
-
 }

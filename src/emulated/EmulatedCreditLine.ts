@@ -6,6 +6,7 @@ import BigNumber from 'bignumber.js';
 import { YieldAndStrategyApi } from '../api/yieldAndStrategy';
 import { SublimeConfig } from '../types/sublimeConfig';
 import { EmulatedHelper } from './Helper';
+import { CreditLineStatus } from 'types/Types';
 
 export class EmulatedCreditLines extends EmulatedHelper {
   private subgraphUrl: string;
@@ -30,6 +31,24 @@ export class EmulatedCreditLines extends EmulatedHelper {
     return this.transformToCreditLineEmulator(result, prices, collateralPerStrategyToken);
   }
 
+  private convertToCreditLineStatusEnum(stateInSubgraph: string): CreditLineStatus {
+    // enum CreditLineStatus {
+    //     NOT_CREATED,
+    //     REQUESTED,
+    //     ACTIVE
+    // }
+
+    if (stateInSubgraph == 'NOT_CREATED') {
+      return CreditLineStatus.NOT_CREATED;
+    } else if (stateInSubgraph == 'REQUESTED') {
+      return CreditLineStatus.REQUESTED;
+    } else if (stateInSubgraph == 'ACTIVE') {
+      return CreditLineStatus.ACTIVE;
+    } else {
+      return CreditLineStatus.NOT_CREATED;
+    }
+  }
+
   private transformToCreditLineEmulator(
     data: any[],
     prices: Record<string, BigNumber>,
@@ -46,7 +65,7 @@ export class EmulatedCreditLines extends EmulatedHelper {
           interestAccruedTillLastPrincipalUpdate: new BigNumber(a.interestAccruedTillLastPrincipalUpdate),
           totalInterestRepaid: new BigNumber(a.totalInterestRepaid),
           idealCollateralRatio: new BigNumber(a.idealCollateralRatio),
-          creditLineStatus: a.status,
+          creditLineStatus: this.convertToCreditLineStatusEnum(a.status),
           borrowLimit: new BigNumber(a.borrowLimit),
           createdAt: new BigNumber(a.createdAt),
           borrowAsset: a.borrowAsset,
