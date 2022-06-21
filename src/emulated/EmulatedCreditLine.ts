@@ -78,7 +78,7 @@ export class EmulatedCreditLines extends EmulatedHelper {
           collateralAssetStrategy: a.collateralAssetStrategy,
         },
         {
-          collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.strategy][a.collateralAsset]),
+          collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.collateralAssetStrategy][a.collateralAsset]),
           ratioOfPrices: new BigNumber(prices[a.borrowAsset]).dividedBy(prices[a.collateralAsset]),
           ratioOfPricesDecimals: 1,
         },

@@ -190,10 +190,6 @@ export class CreditLineEmulator extends EmulatorHelper {
     return this.creditLineState.requestByLender;
   }
 
-  public strategy(): string {
-    return this.creditLineState.borrowAssetStrategy;
-  }
-
   public borrowAssetStrategy(): string {
     return this.creditLineState.borrowAssetStrategy;
   }

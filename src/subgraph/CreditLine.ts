@@ -59,7 +59,6 @@ export class CreditLineCalls extends Base {
     //     REQUESTED,
     //     ACTIVE
     // }
-    console.log({ stateInSubgraph });
     if (stateInSubgraph == 'NOT_CREATED') {
       return CreditLineStatus.NOT_CREATED;
     } else if (stateInSubgraph == 'REQUESTED') {
@@ -115,11 +114,17 @@ export class CreditLineCalls extends Base {
         lastPrincipalUpdateTime: aNew.lastPrincipalUpdateTime().toString(),
         id: aNew.getId(),
         requestByLender: aNew.requestByLender(),
-        strategy: {
-          address: aNew.strategy(),
-          type: this.yieldApi.getStrategy(aNew.strategy()),
-          displayName: this.yieldApi.getStrategyDisplayName(aNew.strategy()),
-          logo: this.yieldApi.getStrategyLogo(aNew.strategy()),
+        borrowAssetStrategy: {
+          address: aNew.borrowAssetStrategy(),
+          type: this.yieldApi.getStrategy(aNew.borrowAssetStrategy()),
+          displayName: this.yieldApi.getStrategyDisplayName(aNew.borrowAssetStrategy()),
+          logo: this.yieldApi.getStrategyLogo(aNew.borrowAssetStrategy()),
+        },
+        collateralAssetStrategy: {
+          address: aNew.collateralAssetStrategy(),
+          type: this.yieldApi.getStrategy(aNew.collateralAssetStrategy()),
+          displayName: this.yieldApi.getStrategyDisplayName(aNew.collateralAssetStrategy()),
+          logo: this.yieldApi.getStrategyLogo(aNew.collateralAssetStrategy()),
         },
         emulator: aNew,
       };
@@ -461,7 +466,7 @@ export class CreditLineCalls extends Base {
           collateralAssetStrategy: a.collateralAssetStrategy,
         },
         {
-          collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.strategy][a.collateralAsset]),
+          collateralPerStrategyToken: new BigNumber(collateralPerStrategyToken[a.collateralAssetStrategy][a.collateralAsset]),
           ratioOfPrices: new BigNumber(prices[a.collateralAsset]).dividedBy(prices[a.borrowAsset]),
           ratioOfPricesDecimals: 0,
         },

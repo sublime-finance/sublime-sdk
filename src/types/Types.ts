@@ -253,7 +253,8 @@ export interface CreditLineDetail {
   id: string;
   requestByLender: boolean;
   createdAt: string;
-  strategy: Strategy;
+  borrowAssetStrategy: Strategy;
+  collateralAssetStrategy: Strategy;
   emulator: CreditLineEmulator;
 }
 

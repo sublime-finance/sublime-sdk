@@ -107,7 +107,11 @@ export class Base {
 
   protected async refreshStrategyData(data: any[]): Promise<Record<string, Record<string, BigNumber>>> {
     const allStrategyAndTokenPairs = data.map((a) => {
-      return { strategy: a.strategy, collateralAsset: a.collateralAsset, id: `${a.strategy}-${a.collateralAsset}` };
+      return {
+        strategy: a.collateralAssetStrategy,
+        collateralAsset: a.collateralAsset,
+        id: `${a.collateralAssetStrategy}-${a.collateralAsset}`,
+      };
     });
 
     const allIds = allStrategyAndTokenPairs.map((a) => a.id).filter((value, index, self) => self.indexOf(value) === index);
