@@ -138,6 +138,18 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return this._equivalentCollateral(_borrowTokensToLiquidate);
   }
 
+  //       uint256 _maxPossible = type(uint256).max;
+  //       if (_collateralRatio != 0) {
+  //           _maxPossible = _totalCollateral.mul(_ratioOfPrices).div(_collateralRatio).mul(SCALING_FACTOR).div(10**_decimals);
+  //       }
+
+  //       uint256 _borrowLimit = pooledCreditLineConstants[_id].borrowLimit;
+  //       uint256 _principal = pooledCreditLineVariables[_id].principal;
+
+  //       if (_maxPossible <= _currentDebt) return 0;
+
+  //       // using direct subtraction for _maxPossible because we have a check above for it being greater than _currentDebt
+  //       return Math.min(_borrowLimit.sub(_principal), _maxPossible - _currentDebt);
   public calculateBorrowableAmount(): BigNumber {
     const _status = this.getStatusAndUpdate();
 
@@ -198,6 +210,19 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     const _idealCollateralRatio = this.pooledCreditLineState.idealCollateralRatio;
 
     if (currentStatus == CreditLineStatus.ACTIVE) {
+      if (this.pooledCreditLineState.endsAt.lte(this.now())) {
+        // normal loan duration has ended
+        if (this.pooledCreditLineState.principal.gt(0)) {
+          // PCL principal is non-zero, so goes to expired state
+          if (this.pooledCreditLineState.defaultsAt.lte(this.now())) {
+            // PCL has crossed grace period, can liquidate
+            return CreditLineStatus.DEFAULT_LIQUIDATE_CALLABLE;
+          } else return CreditLineStatus.EXPIRED; // PCL is in grace period and collat. ratio is OK
+        } else {
+          // PCL principal is zero, so can be closed
+          return CreditLineStatus.CLOSE_CALLABLE;
+        }
+      }
       if (_idealCollateralRatio.gt(0)) {
         // PCL has non-zero collat. requirement
         const currentCollateralRatio = this.calculateCurrentCollateralRatio();
@@ -206,26 +231,13 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
           return CreditLineStatus.LIQUIDATE_CALLABLE;
         }
       }
-      if (this.pooledCreditLineState.endsAt.lte(this.now())) {
-        // normal loan duration has ended
-        if (this.pooledCreditLineState.principal.gt(0)) {
-          // PCL principal is non-zero, so goes to expired state
-          if (this.pooledCreditLineState.defaultsAt.lte(this.now())) {
-            // PCL has crossed grace period, can liquidate
-            return CreditLineStatus.LIQUIDATE_CALLABLE;
-          } else return CreditLineStatus.EXPIRED; // PCL is in grace period and collat. ratio is OK
-        } else {
-          // PCL principal is zero, so can be closed
-          return CreditLineStatus.CLOSE_CALLABLE;
-        }
-      }
     } else if (currentStatus == CreditLineStatus.EXPIRED) {
       if (this.pooledCreditLineState.principal.eq(0)) {
         // loan has been repaid, can be closed
         return CreditLineStatus.CLOSE_CALLABLE;
       } else if (this.pooledCreditLineState.defaultsAt.lte(this.now())) {
         // principal not zero, & grace period is over
-        return CreditLineStatus.LIQUIDATE_CALLABLE;
+        return CreditLineStatus.DEFAULT_LIQUIDATE_CALLABLE;
       } else if (_idealCollateralRatio.gt(0)) {
         const currentCollateralRatio = this.calculateCurrentCollateralRatio();
         if (currentCollateralRatio.lt(_idealCollateralRatio)) {

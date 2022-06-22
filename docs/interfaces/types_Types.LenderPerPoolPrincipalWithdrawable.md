@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/emulator/lenderPool.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/5e39a5b/src/types/emulator/lenderPool.ts#L40)
+[src/types/emulator/lenderPool.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/66e5ba9/src/types/emulator/lenderPool.ts#L40)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/types/emulator/lenderPool.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/5e39a5b/src/types/emulator/lenderPool.ts#L41)
+[src/types/emulator/lenderPool.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/66e5ba9/src/types/emulator/lenderPool.ts#L41)
