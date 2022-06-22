@@ -446,7 +446,7 @@ export class CreditLineCalls extends Base {
       return new CreditLineEmulator(
         {
           id: a.id,
-          collateralShareInStrategy: new BigNumber(1000),
+          collateralShareInStrategy: new BigNumber(a.collateralShareInStrategy),
           principal: new BigNumber(a.principal),
           lastPrincipalUpdateTime: new BigNumber(a.lastPrincipalUpdateTime),
           borrowRate: new BigNumber(a.borrowRate),

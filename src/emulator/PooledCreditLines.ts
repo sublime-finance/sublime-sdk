@@ -110,6 +110,8 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
 
   public calculateCurrentDebt(): BigNumber {
     const _interestAccrued = this.calculateInterestAccrued();
+    // console.log("_interestAccrued", _interestAccrued.toFixed());
+    // console.log("this.pooledCreditLineState.totalInterestRepaid", this.pooledCreditLineState.totalInterestRepaid.toFixed());
     return this.pooledCreditLineState.principal.plus(_interestAccrued).minus(this.pooledCreditLineState.totalInterestRepaid);
   }
 
