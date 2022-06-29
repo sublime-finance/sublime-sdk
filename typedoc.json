@@ -36,7 +36,11 @@
     "./src/subgraph/PooledCreditLinesLenderOverview.ts",
     "./src/subgraph/Pools.ts",
     "./src/subgraph/SavingsAccount.ts",
-    "./src/subgraph/UserMeta.ts"
+    "./src/subgraph/UserMeta.ts",
+    "./src/emulator/CreditLines.ts",
+    "./src/emulator/Helpers.ts",
+    "./src/emulator/LenderPool.ts",
+    "./src/emulator/PooledCreditLines.ts"
   ],
   "out": "docs"
 }
