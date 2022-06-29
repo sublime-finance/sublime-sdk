@@ -9,6 +9,7 @@ import {
 } from '../types/Types';
 import { EmulatorHelper } from './Helpers';
 
+const zero = new BigNumber(0);
 export class LenderPoolEmulator extends EmulatorHelper {
   private lenderPoolState: LenderPoolState;
   private lenderPoolExternalData: LenderPoolExternalData;
@@ -167,7 +168,6 @@ export class LenderPoolEmulator extends EmulatorHelper {
 
   public getLenderData(lenderAddress: string): LenderPerPool {
     const lenderData = this.getAllLenders().filter((a) => a.lenderAddress.toLowerCase() === lenderAddress.toLowerCase());
-    const zero = new BigNumber(0);
     if (lenderData.length == 0) {
       return {
         lenderAddress: lenderAddress,
@@ -186,5 +186,73 @@ export class LenderPoolEmulator extends EmulatorHelper {
 
   public totalPrincipalSuppliedByLender(lenderAddress: string): BigNumber {
     return this.getLenderData(lenderAddress).amountLent;
+  }
+
+  public withdrawableLiquidity(lenderAddress: string): BigNumber {
+    return this.calculateWithdrawableLiquidity(lenderAddress, false);
+  }
+
+  public withdrawableLiquidatedCollateral(lenderAddress: string): BigNumber {
+    return this.calculateWithdrawableLiquidity(lenderAddress, true);
+  }
+
+  private calculateWithdrawableLiquidity(lenderAddress: string, _isLiquidationWithdrawn: boolean): BigNumber {
+    const _liquidityProvided = this.getLenderBalance(lenderAddress);
+    if (_liquidityProvided.eq(0)) {
+      return zero;
+    }
+
+    let _status = this.dataFromPooledCreditLines.status;
+
+    // const _borrowAsset = pooledCLConstants[_id].borrowAsset;
+
+    if (_status == CreditLineStatus.REQUESTED) {
+      if (this.now().gt(this.dataFromPooledCreditLines.startTime) && this.totalSupply.lt(this.lenderPoolState.minBorrowAmount)) {
+      } else if (this.now().gte(this.dataFromPooledCreditLines.endsAt)) {
+      } else {
+        return zero;
+      }
+      _status = CreditLineStatus.CANCELLED;
+      //     delete pooledCLConstants[_id].startTime;
+    }
+
+    if (_status == CreditLineStatus.CANCELLED) {
+      return _liquidityProvided;
+    } else if (_status == CreditLineStatus.CLOSED || _status == CreditLineStatus.LIQUIDATED) {
+      if (_status == CreditLineStatus.LIQUIDATED) {
+        if (_isLiquidationWithdrawn) {
+          return zero;
+        }
+      }
+      // all other cases distribute the sharesHeld proportional to their poolToken balances
+      // address _strategy = pooledCLConstants[_id].borrowAssetStrategy;
+      const _principalWithdrawable = this.calculatePrincipalWithdrawable(lenderAddress);
+      const _interestSharesWithdrawable = this._updateInterestSharesToWithdraw(lenderAddress);
+      const _interestWithdrawable = _interestSharesWithdrawable.multipliedBy(this.lenderPoolExternalData.collateralPerStrategyToken);
+      const _amountToWithdraw = _principalWithdrawable.plus(_interestWithdrawable);
+      const _sharesToWithdraw = _amountToWithdraw.dividedBy(this.lenderPoolExternalData.collateralPerStrategyToken);
+      return _sharesToWithdraw;
+    } else {
+      return zero;
+    }
+  }
+
+  private _updateInterestSharesToWithdraw(lenderAddress: string): BigNumber {
+    const _lenderBalance = this.getLenderBalance(lenderAddress);
+    if (_lenderBalance.eq(0)) {
+      return zero;
+    }
+
+    const borrowerInterestSharesWithdrawnByLender = this.borrowerInterestSharesWithdrawnByLender(lenderAddress);
+    const yieldInterestSharesWithdrawnByLender = this.yieldInterestSharesWithdrawnByLender(lenderAddress);
+
+    const [_borrowerInterestForLender, _yieldInterestForLender] = this._calculateLenderInterest(
+      _lenderBalance,
+      this.lenderPoolState.borrowLimit,
+      borrowerInterestSharesWithdrawnByLender,
+      yieldInterestSharesWithdrawnByLender
+    );
+
+    return _yieldInterestForLender.plus(_borrowerInterestForLender);
   }
 }

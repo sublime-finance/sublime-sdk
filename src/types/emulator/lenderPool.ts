@@ -22,6 +22,7 @@ export interface DataFromPooledCreditLines {
   principal: BigNumber;
   status: CreditLineStatus;
   endsAt: BigNumber;
+  startTime: BigNumber;
 }
 
 export interface LenderPerPool {

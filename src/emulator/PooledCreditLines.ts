@@ -49,6 +49,7 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
         principal: this.pooledCreditLineState.principal,
         status: this.getStatusAndUpdate(),
         endsAt: this.pooledCreditLineState.endsAt,
+        startTime: this.pooledCreditLineState.startsAt,
       },
       this.lendersPerPool
     );
@@ -111,6 +112,7 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
   public calculateCurrentDebt(): BigNumber {
     const _interestAccrued = this.calculateInterestAccrued();
     // console.log("_interestAccrued", _interestAccrued.toFixed());
+    // console.log("this.pooledCreditLineState.principal", this.pooledCreditLineState.principal.toFixed());
     // console.log("this.pooledCreditLineState.totalInterestRepaid", this.pooledCreditLineState.totalInterestRepaid.toFixed());
     return this.pooledCreditLineState.principal.plus(_interestAccrued).minus(this.pooledCreditLineState.totalInterestRepaid);
   }
@@ -138,18 +140,6 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
     return this._equivalentCollateral(_borrowTokensToLiquidate);
   }
 
-  //       uint256 _maxPossible = type(uint256).max;
-  //       if (_collateralRatio != 0) {
-  //           _maxPossible = _totalCollateral.mul(_ratioOfPrices).div(_collateralRatio).mul(SCALING_FACTOR).div(10**_decimals);
-  //       }
-
-  //       uint256 _borrowLimit = pooledCreditLineConstants[_id].borrowLimit;
-  //       uint256 _principal = pooledCreditLineVariables[_id].principal;
-
-  //       if (_maxPossible <= _currentDebt) return 0;
-
-  //       // using direct subtraction for _maxPossible because we have a check above for it being greater than _currentDebt
-  //       return Math.min(_borrowLimit.sub(_principal), _maxPossible - _currentDebt);
   public calculateBorrowableAmount(): BigNumber {
     const _status = this.getStatusAndUpdate();
 

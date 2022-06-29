@@ -15,11 +15,11 @@ import { CreditLineEthUtils } from './api/utils/creditLineEthUtils';
 import { PoolEthUtils } from './api/utils/poolEthUtils';
 import { SavingAccountsEthUtils } from './api/utils/savingsAccountEthUtils';
 import { WrappedEth } from './api/utils/wrappedEth';
-
 import { PooledCreditLineApi } from './api/pooledCreditLines';
 import { TokenManager } from './tokenManager';
 
 import { ethers } from 'ethers';
+import { ERC1155 } from './api/erc1155';
 
 /**
  * @class SublimeConnector
@@ -95,6 +95,10 @@ export class SublimeConnector {
 
   WrappedEth(): WrappedEth {
     return new WrappedEth(this.signer);
+  }
+
+  ERC1155(): ERC1155 {
+    return new ERC1155(this.signer, this.config);
   }
 
   public async getChainId(): Promise<number> {

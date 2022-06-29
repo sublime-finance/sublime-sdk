@@ -10,6 +10,7 @@
 
 - [endsAt](types_Types.DataFromPooledCreditLines.md#endsat)
 - [principal](types_Types.DataFromPooledCreditLines.md#principal)
+- [startTime](types_Types.DataFromPooledCreditLines.md#starttime)
 - [status](types_Types.DataFromPooledCreditLines.md#status)
 
 ## Properties
@@ -20,7 +21,7 @@
 
 #### Defined in
 
-[src/types/emulator/lenderPool.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/66e5ba9/src/types/emulator/lenderPool.ts#L24)
+[src/types/emulator/lenderPool.ts:24](https://github.com/sublime-finance/sublime-sdk/blob/f037f51/src/types/emulator/lenderPool.ts#L24)
 
 ___
 
@@ -30,7 +31,17 @@ ___
 
 #### Defined in
 
-[src/types/emulator/lenderPool.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/66e5ba9/src/types/emulator/lenderPool.ts#L22)
+[src/types/emulator/lenderPool.ts:22](https://github.com/sublime-finance/sublime-sdk/blob/f037f51/src/types/emulator/lenderPool.ts#L22)
+
+___
+
+### startTime
+
+• **startTime**: `BigNumber`
+
+#### Defined in
+
+[src/types/emulator/lenderPool.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/f037f51/src/types/emulator/lenderPool.ts#L25)
 
 ___
 
@@ -40,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/types/emulator/lenderPool.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/66e5ba9/src/types/emulator/lenderPool.ts#L23)
+[src/types/emulator/lenderPool.ts:23](https://github.com/sublime-finance/sublime-sdk/blob/f037f51/src/types/emulator/lenderPool.ts#L23)
