@@ -112,6 +112,10 @@ export class PooledCreditLineApi {
     return this.lenderPool.withdrawLiquidity(_id, { ...options });
   }
 
+  public async withdrawLiquidatedCollateral(id: string, options?: Overrides): Promise<ContractTransaction> {
+    return this.lenderPool.withdrawLiquidatedCollateral(id, { ...options });
+  }
+
   /**
    * @description Withdraw Interest
    * @param _id

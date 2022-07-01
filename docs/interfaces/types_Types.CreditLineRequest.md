@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[src/types/Types.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L153)
+[src/types/Types.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L153)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L156)
+[src/types/Types.ts:156](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L156)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L158)
+[src/types/Types.ts:158](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L158)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L160)
+[src/types/Types.ts:160](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L160)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L154)
+[src/types/Types.ts:154](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L154)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L155)
+[src/types/Types.ts:155](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L155)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:159](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L159)
+[src/types/Types.ts:159](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L159)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L161)
+[src/types/Types.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L161)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[src/types/Types.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/types/Types.ts#L157)
+[src/types/Types.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/types/Types.ts#L157)

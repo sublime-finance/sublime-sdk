@@ -75,7 +75,7 @@
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L14)
+[src/emulator/CreditLines.ts:14](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L14)
 
 ## Properties
 
@@ -85,7 +85,7 @@
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L10)
+[src/emulator/CreditLines.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L10)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L11)
+[src/emulator/CreditLines.ts:11](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L11)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L12)
+[src/emulator/CreditLines.ts:12](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L12)
 
 ## Methods
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L108)
+[src/emulator/CreditLines.ts:108](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L108)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L44)
+[src/emulator/CreditLines.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L44)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L116)
+[src/emulator/CreditLines.ts:116](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L116)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L173)
+[src/emulator/CreditLines.ts:173](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L173)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L157)
+[src/emulator/CreditLines.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L157)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L193)
+[src/emulator/CreditLines.ts:193](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L193)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L165)
+[src/emulator/CreditLines.ts:165](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L165)
 
 ___
 
@@ -229,7 +229,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L96)
+[src/emulator/CreditLines.ts:96](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L96)
 
 ___
 
@@ -243,7 +243,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:181](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L181)
+[src/emulator/CreditLines.ts:181](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L181)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L67)
+[src/emulator/CreditLines.ts:67](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L67)
 
 ___
 
@@ -271,7 +271,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L120)
+[src/emulator/CreditLines.ts:120](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L120)
 
 ___
 
@@ -285,7 +285,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L48)
+[src/emulator/CreditLines.ts:48](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L48)
 
 ___
 
@@ -307,7 +307,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L63)
+[src/emulator/CreditLines.ts:63](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L63)
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L53)
+[src/emulator/CreditLines.ts:53](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L53)
 
 ___
 
@@ -335,7 +335,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L40)
+[src/emulator/CreditLines.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L40)
 
 ___
 
@@ -349,7 +349,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L161)
+[src/emulator/CreditLines.ts:161](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L161)
 
 ___
 
@@ -363,7 +363,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L197)
+[src/emulator/CreditLines.ts:197](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L197)
 
 ___
 
@@ -377,7 +377,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L153)
+[src/emulator/CreditLines.ts:153](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L153)
 
 ___
 
@@ -391,7 +391,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L138)
+[src/emulator/CreditLines.ts:138](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L138)
 
 ___
 
@@ -405,7 +405,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L21)
+[src/emulator/CreditLines.ts:21](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L21)
 
 ___
 
@@ -419,7 +419,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L134)
+[src/emulator/CreditLines.ts:134](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L134)
 
 ___
 
@@ -433,7 +433,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L142)
+[src/emulator/CreditLines.ts:142](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L142)
 
 ___
 
@@ -447,7 +447,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L169)
+[src/emulator/CreditLines.ts:169](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L169)
 
 ___
 
@@ -461,7 +461,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L185)
+[src/emulator/CreditLines.ts:185](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L185)
 
 ___
 
@@ -475,7 +475,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L177)
+[src/emulator/CreditLines.ts:177](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L177)
 
 ___
 
@@ -500,7 +500,7 @@ ___
 
 #### Defined in
 
-[src/emulator/Helpers.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/Helpers.ts#L10)
+[src/emulator/Helpers.ts:10](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/Helpers.ts#L10)
 
 ___
 
@@ -518,7 +518,7 @@ ___
 
 #### Defined in
 
-[src/emulator/Helpers.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/Helpers.ts#L6)
+[src/emulator/Helpers.ts:6](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/Helpers.ts#L6)
 
 ___
 
@@ -532,7 +532,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L189)
+[src/emulator/CreditLines.ts:189](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L189)
 
 ___
 
@@ -546,7 +546,7 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L201)
+[src/emulator/CreditLines.ts:201](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L201)
 
 ___
 
@@ -560,4 +560,4 @@ ___
 
 #### Defined in
 
-[src/emulator/CreditLines.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/34f0eee/src/emulator/CreditLines.ts#L25)
+[src/emulator/CreditLines.ts:25](https://github.com/sublime-finance/sublime-sdk/blob/c926bc1/src/emulator/CreditLines.ts#L25)
