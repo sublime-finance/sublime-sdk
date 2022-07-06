@@ -689,4 +689,8 @@ export class PooledCreditLineApi {
   public async updateProtocolFeeFraction(fee: BigNumberish, options?: Overrides): Promise<ContractTransaction> {
     return this.pooledCreditLine.updateProtocolFeeFraction(fee, { ...options });
   }
+
+  public async getStatusAndUpdate(id: string): Promise<number> {
+    return this.pooledCreditLine.callStatic.getStatusAndUpdate(id);
+  }
 }

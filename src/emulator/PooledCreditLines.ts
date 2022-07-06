@@ -142,7 +142,6 @@ export class PooledCreditLineEmulator extends EmulatorHelper {
 
   public calculateBorrowableAmount(): BigNumber {
     const _status = this.getStatusAndUpdate();
-
     if (_status != CreditLineStatus.ACTIVE) return new BigNumber(0);
 
     const _totalCollateralTokens = this.calculateTotalCollateralTokens();
