@@ -181,7 +181,7 @@ export const tokenData: InternalTokenMap[] = [
     address: '0xd9ba894e0097f8cc2bbc9d24d308b98e36dc6d02'.toLowerCase(),
     name: 'Compound USDT',
     symbol: 'USDT-Compound',
-    decimals: 8,
+    decimals: 18,
     iconMapping: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
   },
 ].map((a) => {

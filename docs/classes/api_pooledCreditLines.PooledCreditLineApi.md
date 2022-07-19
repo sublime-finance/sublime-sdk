@@ -74,7 +74,7 @@
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L44)
+[src/api/pooledCreditLines.ts:44](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L44)
 
 ## Properties
 
@@ -86,7 +86,7 @@
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L29)
+[src/api/pooledCreditLines.ts:29](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L29)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L34)
+[src/api/pooledCreditLines.ts:34](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L34)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L40)
+[src/api/pooledCreditLines.ts:40](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L40)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L39)
+[src/api/pooledCreditLines.ts:39](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L39)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L42)
+[src/api/pooledCreditLines.ts:42](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L42)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L41)
+[src/api/pooledCreditLines.ts:41](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L41)
 
 ## Methods
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L167)
+[src/api/pooledCreditLines.ts:167](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L167)
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:434](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L434)
+[src/api/pooledCreditLines.ts:434](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L434)
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:279](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L279)
+[src/api/pooledCreditLines.ts:279](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L279)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:523](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L523)
+[src/api/pooledCreditLines.ts:523](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L523)
 
 ___
 
@@ -250,7 +250,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:265](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L265)
+[src/api/pooledCreditLines.ts:265](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L265)
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L251)
+[src/api/pooledCreditLines.ts:251](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L251)
 
 ___
 
@@ -302,7 +302,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:618](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L618)
+[src/api/pooledCreditLines.ts:618](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L618)
 
 ___
 
@@ -323,7 +323,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:584](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L584)
+[src/api/pooledCreditLines.ts:584](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L584)
 
 ___
 
@@ -346,7 +346,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L91)
+[src/api/pooledCreditLines.ts:91](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L91)
 
 ___
 
@@ -368,7 +368,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:533](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L533)
+[src/api/pooledCreditLines.ts:533](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L533)
 
 ___
 
@@ -391,7 +391,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:483](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L483)
+[src/api/pooledCreditLines.ts:483](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L483)
 
 ___
 
@@ -414,7 +414,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:473](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L473)
+[src/api/pooledCreditLines.ts:473](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L473)
 
 ___
 
@@ -439,7 +439,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:404](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L404)
+[src/api/pooledCreditLines.ts:404](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L404)
 
 ___
 
@@ -461,7 +461,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L242)
+[src/api/pooledCreditLines.ts:242](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L242)
 
 ___
 
@@ -484,7 +484,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L145)
+[src/api/pooledCreditLines.ts:145](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L145)
 
 ___
 
@@ -508,7 +508,7 @@ Balance
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L157)
+[src/api/pooledCreditLines.ts:157](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L157)
 
 ___
 
@@ -528,7 +528,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:693](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L693)
+[src/api/pooledCreditLines.ts:693](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L693)
 
 ___
 
@@ -552,7 +552,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L71)
+[src/api/pooledCreditLines.ts:71](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L71)
 
 ___
 
@@ -576,7 +576,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L136)
+[src/api/pooledCreditLines.ts:136](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L136)
 
 ___
 
@@ -600,7 +600,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:454](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L454)
+[src/api/pooledCreditLines.ts:454](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L454)
 
 ___
 
@@ -635,7 +635,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L308)
+[src/api/pooledCreditLines.ts:308](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L308)
 
 ___
 
@@ -658,7 +658,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L60)
+[src/api/pooledCreditLines.ts:60](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L60)
 
 ___
 
@@ -680,7 +680,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:661](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L661)
+[src/api/pooledCreditLines.ts:661](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L661)
 
 ___
 
@@ -702,7 +702,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:669](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L669)
+[src/api/pooledCreditLines.ts:669](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L669)
 
 ___
 
@@ -724,7 +724,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:673](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L673)
+[src/api/pooledCreditLines.ts:673](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L673)
 
 ___
 
@@ -746,7 +746,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:681](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L681)
+[src/api/pooledCreditLines.ts:681](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L681)
 
 ___
 
@@ -768,7 +768,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:677](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L677)
+[src/api/pooledCreditLines.ts:677](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L677)
 
 ___
 
@@ -790,7 +790,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:685](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L685)
+[src/api/pooledCreditLines.ts:685](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L685)
 
 ___
 
@@ -812,7 +812,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:665](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L665)
+[src/api/pooledCreditLines.ts:665](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L665)
 
 ___
 
@@ -833,7 +833,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:689](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L689)
+[src/api/pooledCreditLines.ts:689](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L689)
 
 ___
 
@@ -857,7 +857,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:580](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L580)
+[src/api/pooledCreditLines.ts:580](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L580)
 
 ___
 
@@ -882,7 +882,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:549](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L549)
+[src/api/pooledCreditLines.ts:549](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L549)
 
 ___
 
@@ -905,7 +905,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L125)
+[src/api/pooledCreditLines.ts:125](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L125)
 
 ___
 
@@ -926,7 +926,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L115)
+[src/api/pooledCreditLines.ts:115](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L115)
 
 ___
 
@@ -949,7 +949,7 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L111)
+[src/api/pooledCreditLines.ts:111](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L111)
 
 ___
 
@@ -974,4 +974,4 @@ ___
 
 #### Defined in
 
-[src/api/pooledCreditLines.ts:494](https://github.com/sublime-finance/sublime-sdk/blob/0d24205/src/api/pooledCreditLines.ts#L494)
+[src/api/pooledCreditLines.ts:494](https://github.com/sublime-finance/sublime-sdk/blob/9b38dd4/src/api/pooledCreditLines.ts#L494)

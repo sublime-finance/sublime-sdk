@@ -192,7 +192,7 @@ export class LenderPoolEmulator extends EmulatorHelper {
     return this.calculateWithdrawableLiquidity(lenderAddress, false);
   }
 
-  public withdrawableLiquidatedCollateral(lenderAddress: string): BigNumber {
+  public withdrawableLiquidatedCollateral(lenderAddress?: string): BigNumber {
     return this.calculateWithdrawableLiquidity(lenderAddress, true);
   }
 

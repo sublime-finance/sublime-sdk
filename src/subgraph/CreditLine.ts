@@ -236,42 +236,65 @@ export class CreditLineCalls extends Base {
    * @param address: address of the user to query
    * @description Returns the credit lines overview of the user
    */
-  async getCreditLinesOverview(address: string): Promise<CreditLinesOverview> {
-    const creditLineAsborrower = await this.getConfirmedCreditLinesOfBorrower(address, 10, 0);
-    const creditLineAsLender = await this.getConfirmedCreditLinesOfLender(address, 10, 0);
+  async getCreditLinesOverview(address: string, count: number = 999, skip: number = 0): Promise<CreditLinesOverview> {
+    const creditLineAsborrower = await this.getConfirmedCreditLinesOfBorrower(address, count, skip);
+    const creditLineAsLender = await this.getConfirmedCreditLinesOfLender(address, count, skip);
+
+    // const creditLineAsborrower: CreditLineDetail[] = [];
+    // const creditLineAsLender: CreditLineDetail[] = [];
 
     let creditGranted = new BigNumber(0);
     let interestAccrued = new BigNumber(0);
     let activeCredit = new BigNumber(0);
     let interestRate = new BigNumber(0);
 
-    const borrowedCreditLines = creditLineAsborrower.length;
-
-    for (let i = 0; i < creditLineAsLender.length; i++) {
-      const borrowAsset = creditLineAsLender[i].borrowAsset;
-      const principal = new BigNumber(creditLineAsLender[i].principal.value.toString());
-      const assetPrice = await this.tokenManager.getPricePerAsset(borrowAsset.toString());
-      creditGranted = creditGranted.plus(principal.multipliedBy(assetPrice));
+    for (let index = 0; index < creditLineAsLender.length; index++) {
+      const element = creditLineAsLender[index];
+      const emulator = element.emulator;
+      if ([CreditLineStatus.CLOSED, CreditLineStatus.LIQUIDATED].includes(emulator.getStatus())) {
+        continue;
+      }
+      const borrowTokenDecimals = await this.tokenManager.getTokenDecimals(emulator.borrowAsset());
+      const assetPrice = await this.tokenManager.getPricePerAsset(emulator.borrowAsset());
+      const principal = emulator.getPrincipal().div(new BigNumber(10).pow(borrowTokenDecimals)).multipliedBy(assetPrice);
+      creditGranted = creditGranted.plus(principal);
     }
 
-    for (let i = 0; i < creditLineAsborrower.length; i++) {
-      const interest = creditLineAsborrower[i].interestRate;
-      const accruedInterest = creditLineAsborrower[i].interestAccrued.value;
+    // for (let i = 0; i < creditLineAsborrower.length; i++) {
+    //   const interest = creditLineAsborrower[i].interestRate;
+    //   const accruedInterest = creditLineAsborrower[i].interestAccrued.value;
 
-      if (creditLineAsborrower[i].type == 'ACTIVE') {
-        const credit = new BigNumber(creditLineAsborrower[i].principal.value.toString());
-        const price = await this.tokenManager.getPricePerAsset(creditLineAsLender[i].borrowAsset.toString());
-        activeCredit = activeCredit.plus(credit.multipliedBy(price));
+    //   if (creditLineAsborrower[i].type == 'ACTIVE') {
+    //     const credit = new BigNumber(creditLineAsborrower[i].principal.value.toString());
+    //     const price = await this.tokenManager.getPricePerAsset(creditLineAsLender[i].borrowAsset.toString());
+    //     activeCredit = activeCredit.plus(credit.multipliedBy(price));
+    //   }
+
+    //   interestAccrued = interestAccrued.plus(accruedInterest.toString());
+    //   interestRate = interestRate.plus(new BigNumber(interest.value.toString()).dividedBy('1000000000000000000'));
+    // }
+
+    let totalPrincipal = new BigNumber(0);
+
+    for (let index = 0; index < creditLineAsborrower.length; index++) {
+      const element = creditLineAsborrower[index];
+      const emulator = element.emulator;
+      const accruedInterest = emulator.calculateInterestAccrued();
+
+      const borrowTokenDecimals = await this.tokenManager.getTokenDecimals(emulator.borrowAsset());
+      const price = await this.tokenManager.getPricePerAsset(emulator.borrowAsset());
+
+      if ([CreditLineStatus.ACTIVE].includes(emulator.getStatus())) {
+        const credit = emulator.getPrincipal().div(new BigNumber(10).pow(borrowTokenDecimals)).multipliedBy(price);
+        activeCredit = activeCredit.plus(credit);
       }
 
-      interestAccrued = interestAccrued.plus(accruedInterest.toString());
-      interestRate = interestRate.plus(new BigNumber(interest.value.toString()).dividedBy('1000000000000000000'));
+      interestAccrued = interestAccrued.plus(accruedInterest.div(new BigNumber(10).pow(borrowTokenDecimals)).multipliedBy(price));
+      totalPrincipal = totalPrincipal.plus(emulator.getPrincipal().div(new BigNumber(10).pow(borrowTokenDecimals)).multipliedBy(price));
     }
 
-    if (borrowedCreditLines > 0) {
-      interestRate = interestRate.div(borrowedCreditLines);
-    } else {
-      interestRate = new BigNumber(0);
+    if (totalPrincipal.gt(0)) {
+      interestRate = interestAccrued.div(totalPrincipal).multipliedBy(100);
     }
 
     return {
